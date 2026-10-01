@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "verified_candidate_blobs": 788,
+  "verified_license_blobs": 4,
+  "source_trees_reconstructed": 3,
+  "canonical_member_keys_verified": 788,
+  "normalization_digests_verified": 788,
+  "diagnostic_permanent_exclusions_verified": 3,
+  "raw_candidate_bytes": 13869106,
+  "all_retained_acquisition_directory_bytes": 23032464,
+  "transfer_body_bytes": 13857155,
+  "transfer_metadata_allowance": 65536,
+  "no_model_admission": true,
+  "no_old_labelled_test_access": true,
+  "verification_scope": "Independent algorithmic recomputation by the acquisition worker; not an independent-person review"
+}

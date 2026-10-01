@@ -1,0 +1,45 @@
+{
+  "schema_version": "historical-blog-acquisition-provenance/1.0",
+  "created_at": "2026-10-01T20:46:57.128805+00:00",
+  "approved_frame": {
+    "source_catalogue": {
+      "sha256": "b6ea863225430cf2f37f07db13a56da1d36b115e15dd1670e2ab938e28afb0c1",
+      "bytes": 27109
+    },
+    "prior_review": {
+      "sha256": "9a7b4f206b9f22c1411e18870a75b8a3f08bf226fd9b4270792fdf2bc77af8bf",
+      "bytes": 14805
+    }
+  },
+  "scope": "Exact pinned public blog text acquisition only; no model admission, fitting, splitting, owner materials or old labelled-test text",
+  "executed_acquisition_script": {
+    "sha256": "8c5610e9ee4be939d5a6eb4c4ed091343dffe26cd748077fd36559e7679010ec",
+    "bytes": 12716
+  },
+  "published_acquisition_script": {
+    "sha256": "8c5610e9ee4be939d5a6eb4c4ed091343dffe26cd748077fd36559e7679010ec",
+    "bytes": 12716
+  },
+  "receipt": {
+    "sha256": "ca8e7bb4290a8afbc5ff97d69b7e78c53d48e857d9eba23e1de23fad565e433c",
+    "bytes": 825934
+  },
+  "diagnostic_source_receipt": {
+    "sha256": "5f1260d133331cffbb082003c8e86737cde463104715dee23a09249647d3736e",
+    "bytes": 2012
+  },
+  "candidate_files": 788,
+  "new_article_body_downloads": 785,
+  "reused_diagnostic_articles": 3,
+  "historical_license_file_downloads": 4,
+  "new_http_entity_bytes": 13857155,
+  "preliminary_metadata_entity_allowance": 65536,
+  "transfer_errors": 0,
+  "new_entity_byte_cap": 31457280,
+  "expanded_cap": 104857600,
+  "old_stage_budget_changed": false,
+  "all_original_source_and_review_files_unchanged": true,
+  "review_status": "Acquisition worker dual-algorithm verification and deterministic replay pass; independent-person review not yet performed",
+  "source_privacy": "No raw corpus, per-post locators, author fields or concrete copy families appear in public outputs",
+  "reproduction_note": "One source-independent ordering issue in raw-block group serialization was fixed before sealing; final four derived outputs reproduced byte-for-byte"
+}

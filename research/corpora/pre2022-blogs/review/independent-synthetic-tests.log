@@ -1,0 +1,15 @@
+test_duplicate_json_key_fails (test_independent_verify.IntegrityCases.test_duplicate_json_key_fails) ... ok
+test_duplicate_path_fails (test_independent_verify.IntegrityCases.test_duplicate_path_fails) ... ok
+test_nfkc_whitespace_keeps_punctuation (test_independent_verify.IntegrityCases.test_nfkc_whitespace_keeps_punctuation) ... ok
+test_nonfinite_json_fails (test_independent_verify.IntegrityCases.test_nonfinite_json_fails) ... ok
+test_path_escape_fails (test_independent_verify.IntegrityCases.test_path_escape_fails) ... ok
+test_recursive_tree_does_not_trust_request_header (test_independent_verify.IntegrityCases.test_recursive_tree_does_not_trust_request_header) ... ok
+test_tree_child_tamper_fails (test_independent_verify.IntegrityCases.test_tree_child_tamper_fails) ... ok
+test_truncated_tree_fails (test_independent_verify.IntegrityCases.test_truncated_tree_fails) ... ok
+test_unicode_version_mismatch_fails (test_independent_verify.IntegrityCases.test_unicode_version_mismatch_fails) ... ok
+test_untrusted_yaml_remains_literal (test_independent_verify.IntegrityCases.test_untrusted_yaml_remains_literal) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK

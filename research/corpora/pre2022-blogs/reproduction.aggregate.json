@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "offline_rebuilt_outputs": {
+    "post-manifest.jsonl": {
+      "sha256": "4b7bfafcbbf5a3e0906a8272371979fa49c7973a899bbb222f701d8cbff0f475",
+      "bytes": 2415494,
+      "byte_identical": true
+    },
+    "copy-groups.json": {
+      "sha256": "5351645e639bc25e7725f0a2b4fddb655938cd288f4b1956712d3fd76e70beb1",
+      "bytes": 16068,
+      "byte_identical": true
+    },
+    "lineage-hints.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3,
+      "byte_identical": true
+    },
+    "blog-acquisition.aggregate.json": {
+      "sha256": "10f19cb3f18ee36b73caded80f879d570cc11947e8c5777105ae919877642c84",
+      "bytes": 9054,
+      "byte_identical": true
+    }
+  },
+  "new_source_downloads": 0,
+  "model_admission": false
+}

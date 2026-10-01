@@ -1,0 +1,49 @@
+{
+  "schema_version": "public-file-sha256/1",
+  "files": {
+    "ACQUISITION_RESULT.zh.md": {
+      "sha256": "90d475ad9e6985d171341e40cea10be4144aa120a5690b184a1f5f97ccca1b35",
+      "bytes": 4183
+    },
+    "REPRODUCE.zh.md": {
+      "sha256": "75f565dca1a0201eb6d6aa9e18f1cf23d5d5c87f99c33dd5f056df08aab34024",
+      "bytes": 4586
+    },
+    "blog-acquisition.aggregate.json": {
+      "sha256": "10f19cb3f18ee36b73caded80f879d570cc11947e8c5777105ae919877642c84",
+      "bytes": 9054
+    },
+    "provenance.json": {
+      "sha256": "ebb303af01dd4bc332dc862137e8828e243fdfd2f22b4b8fe27b92b62d3200fc",
+      "bytes": 1957
+    },
+    "reproduction.aggregate.json": {
+      "sha256": "c8e09662c6639f7bfe30c215e694d3d2c0de3cbfc952b509fc4269f4e7105224",
+      "bytes": 804
+    },
+    "scripts/acquire_blog_texts.py": {
+      "sha256": "8c5610e9ee4be939d5a6eb4c4ed091343dffe26cd748077fd36559e7679010ec",
+      "bytes": 12716
+    },
+    "scripts/census_blog_texts.py": {
+      "sha256": "160aa498c2bed01e29ad6ca0cfbfd21720380f77558d7ac3efc9953d17df8b2c",
+      "bytes": 15767
+    },
+    "scripts/test_blog_acquisition.py": {
+      "sha256": "5c96f1faf26db05cb37485cfdeca7d276db788219ffc1ce7ca2339d0e67f24f0",
+      "bytes": 2303
+    },
+    "scripts/verify_blog_acquisition.py": {
+      "sha256": "cfc41c28ae85c86427544f6ca67945d06e54e17ba41e905ce54570176f203cb1",
+      "bytes": 5278
+    },
+    "synthetic-tests.log": {
+      "sha256": "3fd71f8a80e24bd65c80e3f67b6da17cd0046f667507cbd382529c8442f8afd6",
+      "bytes": 1169
+    },
+    "verification.aggregate.json": {
+      "sha256": "e03ca83bdbce5eb6270b3e0d4d51808c43b7398bcd7ebaa296138e1bef352f71",
+      "bytes": 615
+    }
+  }
+}
