@@ -1,0 +1,636 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:style-compiler:measurement-bundle:1.0.0",
+  "title": "Eight-measure character core output",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "measurement-bundle/1.0.0"
+    },
+    "feature_schema_version": {
+      "const": "character-core/1.0.0"
+    },
+    "document_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "text_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string",
+          "minLength": 1
+        },
+        "genre": {
+          "type": "string",
+          "minLength": 1
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "language",
+        "genre",
+        "topic",
+        "task"
+      ],
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "cohort": {
+          "enum": [
+            "H_G",
+            "A_G",
+            "A_H",
+            "A_C",
+            "unknown",
+            "synthetic_test"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rights_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rights_verified": {
+          "type": "boolean"
+        },
+        "is_synthetic": {
+          "type": "boolean"
+        },
+        "author_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generator_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance_verified": {
+          "type": "boolean"
+        },
+        "assistance_status": {
+          "enum": [
+            "unassisted",
+            "assisted",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "metadata": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "cohort",
+        "source_id",
+        "rights_basis",
+        "rights_verified",
+        "is_synthetic"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "cohort": {
+                "const": "synthetic_test"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "is_synthetic": {
+                "const": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "leakage": {
+      "type": "object",
+      "properties": {
+        "work_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lineage_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_group_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "near_duplicate_group_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt_family_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "work_id",
+        "lineage_id",
+        "content_group_id",
+        "near_duplicate_group_id"
+      ],
+      "additionalProperties": false
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "content_chars": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sentences": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "paragraphs": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "content_chars",
+        "sentences",
+        "paragraphs"
+      ],
+      "additionalProperties": false
+    },
+    "segmentation": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "punctuation-lines/1.0.0"
+        },
+        "offset_unit": {
+          "const": "unicode_codepoint"
+        },
+        "paragraph_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sentence_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normalization": {
+          "const": "none"
+        },
+        "projection": {
+          "const": "all_input_unicode_LN/1.0.0"
+        },
+        "authorial_prose_attribution": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "version",
+        "offset_unit",
+        "paragraph_rule",
+        "sentence_rule",
+        "normalization",
+        "projection",
+        "authorial_prose_attribution"
+      ],
+      "additionalProperties": false
+    },
+    "paragraphs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "content_chars": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "paragraph_index": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "sentence_count": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "index",
+          "start",
+          "end",
+          "content_chars",
+          "paragraph_index"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "sentences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "content_chars": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "paragraph_index": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "sentence_count": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "index",
+          "start",
+          "end",
+          "content_chars",
+          "paragraph_index"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "F002": {
+          "$ref": "#/$defs/measurement"
+        },
+        "F003": {
+          "$ref": "#/$defs/measurement"
+        },
+        "F013": {
+          "$ref": "#/$defs/measurement"
+        },
+        "F014": {
+          "$ref": "#/$defs/measurement"
+        },
+        "F015": {
+          "$ref": "#/$defs/measurement"
+        },
+        "F016": {
+          "$ref": "#/$defs/measurement"
+        },
+        "F024": {
+          "$ref": "#/$defs/measurement"
+        },
+        "F025": {
+          "$ref": "#/$defs/measurement"
+        }
+      },
+      "required": [
+        "F002",
+        "F003",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F024",
+        "F025"
+      ],
+      "additionalProperties": false
+    },
+    "optional_capabilities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "unavailable"
+          },
+          "value": {
+            "type": "null"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "status",
+          "value",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reference_statistics": {
+      "type": "null"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "feature_schema_version",
+    "document_id",
+    "text_sha256",
+    "context",
+    "provenance",
+    "leakage",
+    "counts",
+    "segmentation",
+    "paragraphs",
+    "sentences",
+    "features",
+    "optional_capabilities",
+    "reference_statistics",
+    "warnings"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "measurement": {
+      "type": "object",
+      "properties": {
+        "feature_id": {
+          "enum": [
+            "F002",
+            "F003",
+            "F013",
+            "F014",
+            "F015",
+            "F016",
+            "F024",
+            "F025"
+          ]
+        },
+        "schema_version": {
+          "const": "character-core/1.0.0"
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "level": {
+          "enum": [
+            "paragraph",
+            "sentence"
+          ]
+        },
+        "eligible_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "zero_observed",
+            "unavailable"
+          ]
+        },
+        "null_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "eligible_for_comparison": {
+          "type": "boolean"
+        },
+        "comparison_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_numerator": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "denominator": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "reliability_tier": {
+          "const": "raw_observed"
+        },
+        "measurement_method": {
+          "const": "deterministic_character_proxy"
+        },
+        "uncertainty": {
+          "type": "object",
+          "properties": {
+            "measurement_interval": {
+              "type": "null"
+            },
+            "reference_prediction_interval": {
+              "type": "null"
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "measurement_interval",
+            "reference_prediction_interval",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "span_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "integer"
+              },
+              "end": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "start",
+              "end"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "conditional_reference_id": {
+          "type": "null"
+        },
+        "dependencies": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "hash": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "version",
+              "hash"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "sequence_ref": {
+          "enum": [
+            "sentences",
+            "paragraphs"
+          ]
+        },
+        "reference_id": {
+          "type": "null"
+        },
+        "reference_percentile": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "feature_id",
+        "schema_version",
+        "value",
+        "unit",
+        "level",
+        "eligible_count",
+        "status",
+        "null_reason",
+        "eligible_for_comparison",
+        "comparison_reason",
+        "raw_numerator",
+        "denominator",
+        "reliability_tier",
+        "measurement_method",
+        "uncertainty",
+        "span_evidence",
+        "conditional_reference_id",
+        "dependencies",
+        "sequence_ref",
+        "reference_id",
+        "reference_percentile"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "status": {
+                "const": "unavailable"
+              },
+              "eligible_for_comparison": {
+                "const": false
+              },
+              "null_reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "zero_observed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "const": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

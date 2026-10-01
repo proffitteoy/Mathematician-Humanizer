@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "style-compiler"
+version = "0.1.0"
+description = "Experimental, provenance-aware stylometry and constrained editing experiments"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+model = ["numpy>=1.26,<3"]
+validation = ["jsonschema>=4.21,<5"]
+
+[project.scripts]
+style-compiler = "style_compiler.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
