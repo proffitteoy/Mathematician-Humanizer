@@ -1,0 +1,56 @@
+{
+  "status": "historical_fixed_six_unchanged",
+  "files": [
+    {
+      "scope": "original_snapshot",
+      "file": "run.py",
+      "sha256": "6df32db05f6d71d631609ff6f71c9b9cce73f0cf9a83c099277e21faf4ef325e"
+    },
+    {
+      "scope": "published_repository_snapshot",
+      "file": "run.py",
+      "sha256": "6df32db05f6d71d631609ff6f71c9b9cce73f0cf9a83c099277e21faf4ef325e"
+    },
+    {
+      "scope": "original_snapshot",
+      "file": "preregister.public.json",
+      "sha256": "2976004bd1edb7d30ef0228bc1489371501fe367f23d9bc505c32f099aded642"
+    },
+    {
+      "scope": "published_repository_snapshot",
+      "file": "preregister.public.json",
+      "sha256": "2976004bd1edb7d30ef0228bc1489371501fe367f23d9bc505c32f099aded642"
+    },
+    {
+      "scope": "original_snapshot",
+      "file": "results.aggregate.json",
+      "sha256": "b7b5780dc2904c5608e6883de0c57c2eb2e08e95ea8237c4b58adbaba26b2383"
+    },
+    {
+      "scope": "published_repository_snapshot",
+      "file": "results.aggregate.json",
+      "sha256": "b7b5780dc2904c5608e6883de0c57c2eb2e08e95ea8237c4b58adbaba26b2383"
+    },
+    {
+      "scope": "published_repository_snapshot",
+      "file": "INDEPENDENT_T1_REVIEW_ZH.md",
+      "sha256": "9233c3042601999c28fee23b0b2441f1847f8aa15077ffd880f6ccb40a6535f5"
+    },
+    {
+      "scope": "published_repository_snapshot",
+      "file": "review-receipt.public.json",
+      "sha256": "8eda9a864c9c69ce08d0c3dbca02d29ae4e25bedd6c84b3a497932030fa4727d"
+    },
+    {
+      "scope": "published_repository_snapshot",
+      "file": "checks.public.json",
+      "sha256": "ca21f8002f91b3ac1487ab5c6a1e6285a4df48a95ae684240df21c3be4f6a469"
+    },
+    {
+      "scope": "published_repository_snapshot",
+      "file": "README.zh.md",
+      "sha256": "e058970a463ceaf9e282e228709dba5547680c2f01669f583bb8ce5baaf69365"
+    }
+  ],
+  "old_results_not_recertified_for_new_runner": true
+}
