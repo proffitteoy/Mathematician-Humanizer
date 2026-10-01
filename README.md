@@ -32,7 +32,7 @@ style-compiler fit corpus.jsonl --partition partition.json --cohort H_G -o popul
 style-compiler plan document.json --max-sentences 4 --protect '约三人' -o plan.json
 ```
 
-`fit` returns an explicit unavailable result unless real, verified, non-personal training data and a leakage-screened partition meet the declared support policy. Install `.[model]` to enable the optional numerical dependency. No fitted artifacts are included.
+`fit` returns an explicit unavailable result unless declared non-synthetic, non-personal training data and a leakage-screened partition meet the support policy. The H_G gate checks declared metadata, including a nonempty author ID and an unassisted label. Rights/provenance flags record an external review claim; the code does not independently verify identity, production history, or the absence of assistance. Install `.[model]` to enable the optional numerical dependency. No fitted artifacts are included.
 
 `plan` proposes one paragraph break for an explicitly supplied structural constraint. It reports exact candidate deltas, never learned causal effects. Applying an inspected candidate requires a separate deliberate action:
 
@@ -77,3 +77,4 @@ These are research contracts and hypotheses, not fitted models or validated feat
 - [Dispersion and mixture composition](docs/design/dispersion-mixtures-v0.1.zh.md)
 - [Referential continuity measurement contracts](docs/design/referential-continuity-contract-v0.1.zh.md)
 - [Production provenance and reader perception](docs/design/provenance-perception-register-v0.1.zh.md)
+- [Observational references and partial identification](docs/design/observational-reference-admission-v0.1.zh.md)

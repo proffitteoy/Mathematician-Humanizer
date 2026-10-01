@@ -49,7 +49,7 @@ def eligibility_reasons(document: Document) -> list[str]:
     if not p.provenance_verified:
         reasons.append("Source/provenance has not been verified")
     if p.cohort == "H_G" and (not p.author_id or p.assistance_status != "unassisted"):
-        reasons.append("H_G needs a verified author ID and explicitly unassisted provenance")
+        reasons.append("H_G requires a nonempty caller-supplied author ID and assistance_status='unassisted'; these declarations do not authenticate a person or verify assistance history")
     if p.cohort in {"A_G", "A_H", "A_C"} and (not p.generator_id or not document.leakage.prompt_family_id):
         reasons.append("Generated cohorts need a generator snapshot ID and prompt-family ID")
     return reasons
