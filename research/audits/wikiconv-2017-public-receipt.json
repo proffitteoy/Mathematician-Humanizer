@@ -1,0 +1,264 @@
+{
+  "receipt_version": "wikiconv-2017-source-view/0.1.0",
+  "status": "acquired_structurally_censused_sample_frozen_not_linguistically_admitted",
+  "acquisition": {
+    "source_url": "https://zissou.infosci.cornell.edu/convokit/datasets/wikiconv-corpus/corpus-zipped/chinese/wikiconv-2017/full.corpus.zip",
+    "retrieved_at_utc": "2026-10-01T11:58:39.051679+00:00",
+    "bytes": 80074478,
+    "sha256": "635500ba887cef0c9d2bfaef03659de2974b5fd84b8a0cd90a9bd7bdef7f492a",
+    "etag": "\"699fb5fc-4c5d6ee\"",
+    "last_modified": "Thu, 26 Feb 2026 02:54:52 GMT",
+    "scope": "2017 annual source-view structural census and sampling-frame construction only",
+    "H_G": false,
+    "population_fit": false,
+    "license_notice": "Maintainer: metadata CC0; comment content CC BY-SA 3.0; generic Figshare badge conflict retained",
+    "source_notice_url": "https://github.com/conversationai/wikidetox/blob/main/wikiconv/README.md",
+    "raw_storage_outside_repository": true
+  },
+  "zip_metadata_probe": {
+    "url": "https://zissou.infosci.cornell.edu/convokit/datasets/wikiconv-corpus/corpus-zipped/chinese/wikiconv-2017/full.corpus.zip",
+    "checked_utc": "2026-10-01T11:55:18.018375+00:00",
+    "archive_bytes": 80074478,
+    "etag": "\"699fb5fc-4c5d6ee\"",
+    "last_modified": "Thu, 26 Feb 2026 02:54:52 GMT",
+    "range_bytes_read": 440,
+    "range_cap_bytes": 262144,
+    "directory_start": 80074038,
+    "directory_bytes": 418,
+    "members": [
+      {
+        "name": "speakers.json",
+        "compressed_bytes": 66955,
+        "uncompressed_bytes": 342446,
+        "compression_method": 8,
+        "flags": 0,
+        "crc32": "1daa6d19",
+        "local_header_offset": 0,
+        "external_attributes": 2176057344,
+        "extra_bytes": 24
+      },
+      {
+        "name": "conversations.json",
+        "compressed_bytes": 5831226,
+        "uncompressed_bytes": 40800231,
+        "compression_method": 8,
+        "flags": 0,
+        "crc32": "88a32b85",
+        "local_header_offset": 67026,
+        "external_attributes": 2176057344,
+        "extra_bytes": 24
+      },
+      {
+        "name": "utterances.jsonl",
+        "compressed_bytes": 74175283,
+        "uncompressed_bytes": 829880895,
+        "compression_method": 8,
+        "flags": 0,
+        "crc32": "068bfa65",
+        "local_header_offset": 5898328,
+        "external_attributes": 2176057344,
+        "extra_bytes": 24
+      },
+      {
+        "name": "corpus.json",
+        "compressed_bytes": 2,
+        "uncompressed_bytes": 2,
+        "compression_method": 0,
+        "flags": 0,
+        "crc32": "a3a6bf43",
+        "local_header_offset": 80073685,
+        "external_attributes": 2176057344,
+        "extra_bytes": 24
+      },
+      {
+        "name": "index.json",
+        "compressed_bytes": 214,
+        "uncompressed_bytes": 607,
+        "compression_method": 8,
+        "flags": 0,
+        "crc32": "8fb24d90",
+        "local_header_offset": 80073756,
+        "external_attributes": 2176057344,
+        "extra_bytes": 24
+      }
+    ],
+    "requests": [
+      {
+        "label": "EOCD fixed footer",
+        "range": "bytes 80074456-80074477/80074478",
+        "status": 206,
+        "bytes": 22,
+        "sha256": "f07843f2bc0174b257be9aee3c94798188c27f28cbc037c8e8251e4abbf64c66",
+        "etag": "\"699fb5fc-4c5d6ee\"",
+        "last_modified": "Thu, 26 Feb 2026 02:54:52 GMT"
+      },
+      {
+        "label": "central directory only",
+        "range": "bytes 80074038-80074455/80074478",
+        "status": 206,
+        "bytes": 418,
+        "sha256": "d101f52ae1e9d8be5a62d5f4f95afeab89e69732bb24dd46ce4219c4b7ee4e0a",
+        "etag": "\"699fb5fc-4c5d6ee\"",
+        "last_modified": "Thu, 26 Feb 2026 02:54:52 GMT"
+      }
+    ],
+    "corpus_member_content_read": false
+  },
+  "official_version_comparison": {
+    "artifact_index_version": 1,
+    "current_download_config_wikiconv_version": 3,
+    "reconciliation": "unresolved; no silent version upgrade",
+    "download_config_blob": "03c774312f63daa0ac92e4d080113e941c001d1a",
+    "download_util_blob": "46e0f67bfd5c519a4cbbc50a4637859ce8ec8f13"
+  },
+  "census": {
+    "schema_version": "wikiconv-annual-structural/0.1.0",
+    "status": "structural_census_complete",
+    "source": {
+      "sha256": "635500ba887cef0c9d2bfaef03659de2974b5fd84b8a0cd90a9bd7bdef7f492a",
+      "compressed_bytes": 80074478,
+      "declared_expanded_bytes": 871024181,
+      "actual_expanded_bytes": 871024181,
+      "member_count": 5,
+      "all_raw_sizes_and_crcs_verified": true,
+      "index_version": 1
+    },
+    "counts": {
+      "top_records": 525984,
+      "top_section_headers": 291985,
+      "top_explicit_nonheaders": 233999,
+      "top_unknown_header_status": 0,
+      "conversation_metadata": 298110,
+      "speaker_metadata": 5077,
+      "observed_conversation_ids": 298110,
+      "all_serialized_views": 687925,
+      "distinct_view_ids": 638373,
+      "view_ids_in_multiple_conversations": 0,
+      "view_ids_with_multiple_text_hashes": 40483,
+      "views_missing_speaker_metadata": 10780,
+      "top_original_speaker_key_difference": 96678,
+      "explicit_type_field": 0,
+      "nonnull_type_field": 0,
+      "top_nonempty_nonheaders": 178894,
+      "top_empty_text": 93828,
+      "top_missing_speaker_keys": 2
+    },
+    "roles": {
+      "deletion": 40490,
+      "modification": 7921,
+      "original": 112389,
+      "restoration": 1141,
+      "top_level": 525984
+    },
+    "field_forms_top": {
+      "reply_hyphen": 525984,
+      "reply_underscore": 0,
+      "speaker_string": 525982,
+      "speaker_object": 0
+    },
+    "page_type_metadata": {
+      "help_talk": 37,
+      "other_or_unknown": 46659,
+      "talk": 86750,
+      "user_talk": 161982,
+      "wikipedia_talk": 2682
+    },
+    "top_timestamp_years": {
+      "2017": 525951,
+      "2018": 33
+    },
+    "references": {
+      "top": {
+        "reply": {
+          "nonnull": 173676,
+          "missing_target": 6262,
+          "not_resolved_in_same_conversation": 6262
+        },
+        "parent": {
+          "nonnull": 0,
+          "missing_target": 0,
+          "not_resolved_in_same_conversation": 0
+        },
+        "ancestor": {
+          "nonnull": 525984,
+          "missing_target": 0,
+          "not_resolved_in_same_conversation": 0
+        }
+      },
+      "all_views": {
+        "reply": {
+          "nonnull": 252014,
+          "missing_target": 18162,
+          "not_resolved_in_same_conversation": 18162
+        },
+        "parent": {
+          "nonnull": 49552,
+          "missing_target": 3896,
+          "not_resolved_in_same_conversation": 3896
+        },
+        "ancestor": {
+          "nonnull": 687925,
+          "missing_target": 0,
+          "not_resolved_in_same_conversation": 0
+        }
+      }
+    },
+    "frame": {
+      "unit": "conversation ID represented in this annual source view",
+      "version": "annual-view-structural-frame/0.1.0",
+      "eligible": 3395,
+      "criteria": [
+        "at_least_two_nonempty_explicit_nonheader_top_records",
+        "at_least_two_distinct_nonnull_speaker_keys_in_these_records",
+        "known_header_status_for_all_serialized_views",
+        "all_nonnull_reply_parent_ancestor_links_resolve_in_same_conversation_in_source",
+        "no_serialized_source_id_is_assigned_to_multiple_conversations",
+        "conversation_root_id_present_in_source",
+        "conversation_metadata_present"
+      ],
+      "complete_historical_context": false,
+      "first_authorship_verified": false,
+      "Chinese_language_validated": false
+    },
+    "H_G_admitted": 0,
+    "linguistic_gold": false,
+    "model_fit": false,
+    "raw_text_or_identifiers_in_public_output": false,
+    "top_timestamp_date_range_utc": [
+      "2017-01-01",
+      "2018-01-01"
+    ]
+  },
+  "sampling": {
+    "frame_version": "annual-view-structural-frame/0.1.0",
+    "eligible_conversations": 3395,
+    "sampled_conversations": 24,
+    "inclusion_probability": {
+      "numerator": 24,
+      "denominator": 3395
+    },
+    "seed_hex": "7263081536c7ae633ac6ddb674e210fce187a6f25df3ec31e533508432909bd5",
+    "algorithm": "Algorithm R reservoir over lexicographically sorted source conversation IDs; Python random.Random.randrange",
+    "probability_interpretation": "simple random sampling without replacement under the pseudorandom-number design; deterministic after seed is fixed",
+    "population": "structurally eligible conversation groups within the single annual source view",
+    "historical_completeness_or_human_origin_claim": false,
+    "private_identifiers_in_output": false
+  },
+  "producer_key_coverage": {
+    "top_nonempty_nonheader_distinct_speaker_keys": 3454,
+    "speaker_keys_in_two_or_more_source_conversations": 1522,
+    "speaker_keys_in_two_or_more_known_page_type_buckets": 803,
+    "sample_top_records": 103,
+    "sample_explicit_nonheaders": 79,
+    "sample_nonempty_nonheader_distinct_speaker_keys": 54,
+    "sample_speaker_keys_in_two_or_more_conversations": 4,
+    "sample_speaker_keys_in_two_or_more_known_page_type_buckets": 2,
+    "nonheader_top_original_speaker_key_difference": 57791,
+    "interpretation": "Source keys and page-type buckets only; neither verified human producers nor semantic registers; no contrastive labels admitted"
+  },
+  "publication_scope": "original methods and aggregate diagnostics only; archive, text, source IDs, source account maps, and SQLite index excluded",
+  "new_linguistic_metrics": 0,
+  "human_gold_annotations": 0,
+  "H_G_admitted": 0,
+  "models_trained": 0
+}

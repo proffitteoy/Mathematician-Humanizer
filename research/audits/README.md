@@ -1,5 +1,33 @@
 # Offline WikiConv structural audit
 
+## 2017 annual source-view census
+
+The separately authorized Chinese-2017 source archive has now been acquired and structurally censused. See the [execution note](wikiconv-2017-execution.zh.md) and [aggregate receipt](wikiconv-2017-public-receipt.json). This is an annual source view, not a complete historical conversation corpus or an admitted human reference.
+
+`wikiconv_annual_census.py` streams an already-local archive and creates a **private** SQLite index containing source IDs and account keys. Store that database, the ZIP, and any sample records outside the repository. The command only prints predefined aggregate fields and fixed error codes. It does not download, execute archive code, install tools, compute linguistic features, or fit models.
+
+```sh
+python research/audits/wikiconv_annual_census.py census \
+  /path/to/private/full.corpus.zip /path/to/private/structural-frame.sqlite \
+  --expected-sha256 635500ba887cef0c9d2bfaef03659de2974b5fd84b8a0cd90a9bd7bdef7f492a \
+  --expected-bytes 80074478 --expected-expanded 871024181
+
+python research/audits/wikiconv_annual_census.py sample \
+  /path/to/private/structural-frame.sqlite \
+  --seed 7263081536c7ae633ac6ddb674e210fce187a6f25df3ec31e533508432909bd5
+
+python research/audits/wikiconv_annual_census.py coverage \
+  /path/to/private/structural-frame.sqlite
+
+python -m unittest discover -s research/audits -p 'test_wikiconv_annual_census.py' -v
+```
+
+The census refuses an existing output database. A failed scan leaves it marked incomplete and ineligible for sampling; investigate it before creating a separately named retry database. Sampling requires a completed census and refuses to overwrite a frozen sample. The seed was fixed before the census; 24 of 3,395 structurally eligible source-view conversation groups were sampled with inclusion probability 24/3,395 under the stated pseudorandom design. No language/origin-based replacement sampling was performed.
+
+Limits are 81,000,000 compressed bytes, 1 GiB actual expanded bytes, five exact flat member names, 16 MiB per record/value, and a 2 GiB structural database budget. Local ZIP headers, region overlap, actual stream output lengths, CRCs, UTF-8, duplicate JSON keys, and supported field shapes are checked. Metadata aliases follow the same explicit conventions as the earlier audit. Unknown history nesting or conflicting aliases fail closed. The current release has index version 1 despite the downloader configuration's version 3; that discrepancy remains unresolved.
+
+## Earlier 2002 bounded audit
+
 `wikiconv_zip_audit.py` reproduces the **mechanical portion** of the [bounded provenance pilot](../../docs/design/provenance-feasibility-v0.1.zh.md#8-有界执行结果与实际准入决定). It reads one local ConvoKit WikiConv ZIP and writes aggregate JSON to standard output. Python 3.11+ and its standard library suffice. It has no downloader, extraction step, corpus-code execution, model dependency or fitting function. Input archives remain outside this repository.
 
 ## Run

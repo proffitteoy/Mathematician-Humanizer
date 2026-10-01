@@ -8,7 +8,7 @@ The statistical core and research protocol are separate: executable code establi
 
 ## Active model and execution
 
-The final model is the learned **Sparse Multi-view Hierarchical Style Dynamics Model**: global observables, linguistic sequences and discourse graphs, with stable/context representations and conditional dynamics. The present statistical code is a baseline. See the [active execution plan](docs/EXECUTION_PLAN.zh.md). The [topology replication track](research/topology/README.md) now has a runnable H0/MST numerical component; Chinese text replication and incremental-value testing remain unperformed.
+The final model is the learned **Sparse Multi-view Hierarchical Style Dynamics Model**: global observables, linguistic sequences and discourse graphs, with stable/context representations and conditional dynamics. The present statistical code is a baseline. See the [learned-model architecture](docs/design/learned-style-dynamics-v0.1.zh.md) and [active execution plan](docs/EXECUTION_PLAN.zh.md). The [topology replication track](research/topology/README.md) now has a runnable H0/MST numerical component; Chinese text replication and incremental-value testing remain unperformed.
 
 ## Run locally
 
@@ -82,3 +82,5 @@ These are research contracts and hypotheses, not fitted models or validated feat
 - [Referential continuity measurement contracts](docs/design/referential-continuity-contract-v0.1.zh.md)
 - [Production provenance and reader perception](docs/design/provenance-perception-register-v0.1.zh.md)
 - [Observational references and partial identification](docs/design/observational-reference-admission-v0.1.zh.md)
+
+The [2017 annual-view census](research/audits/wikiconv-2017-execution.zh.md) records 525,984 source records, including 178,894 nonempty explicit nonheaders. These are structural source counts, not verified human samples or validated linguistic observations.
