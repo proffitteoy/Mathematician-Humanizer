@@ -92,3 +92,8 @@ T4：仅当新增信息稳定且可解释到具体任务，再研究它是否帮
 
 
 [真实观测序列实现](../research/observed_sequence/README.md)已通过[有界训练准入复核](../research/observed_sequence/reviews/FIT_ADMISSION_REVIEW_ZH.md)：79项合成测试、实际verify-only拒绝拟合/测试调用的检查通过。固定五臂×三种子×40epoch的train/dev实验已获准启动，测试32条仍封存；这只授权已冻结的观测预测实验，不代表任何效果或通用skill完成。
+
+
+## 开发用写作比较材料
+
+[六组同题短文](../research/evaluation/generic-round-001/BLIND_REVIEW.zh.md)和[反馈说明](../research/evaluation/generic-round-001/BUNDLE_GUIDE.zh.md)提供12篇完整原创候选及内容要求，用于之后的真实读者反馈。两组均为助手生成的开发基线，没有人类对照，也不是已训练编译器的效果；数学内容已核对。生成条件密钥、带标签记录和自评不公开，以免破坏A/B比较。尚无用户评分或阶段验收。

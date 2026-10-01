@@ -1,0 +1,124 @@
+{
+  "round_id": "generic-writing-dev-001",
+  "reviewer_id": null,
+  "started_at": null,
+  "locked_at": null,
+  "conditions_revealed_before_lock": null,
+  "instruction": "保留所有题与缺失回答。先独立评每篇，再给同题偏好；反馈锁定前不要打开条件密钥。",
+  "responses": [
+    {
+      "review_id": "R01",
+      "A": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "B": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "preference": null,
+      "quoted_evidence": null,
+      "meaning_or_math_issue": null,
+      "suggested_edit": null
+    },
+    {
+      "review_id": "R02",
+      "A": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "B": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "preference": null,
+      "quoted_evidence": null,
+      "meaning_or_math_issue": null,
+      "suggested_edit": null
+    },
+    {
+      "review_id": "R03",
+      "A": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "B": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "preference": null,
+      "quoted_evidence": null,
+      "meaning_or_math_issue": null,
+      "suggested_edit": null
+    },
+    {
+      "review_id": "R04",
+      "A": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "B": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "preference": null,
+      "quoted_evidence": null,
+      "meaning_or_math_issue": null,
+      "suggested_edit": null
+    },
+    {
+      "review_id": "R05",
+      "A": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "B": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "preference": null,
+      "quoted_evidence": null,
+      "meaning_or_math_issue": null,
+      "suggested_edit": null
+    },
+    {
+      "review_id": "R06",
+      "A": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "B": {
+        "content": null,
+        "task_fit": null,
+        "naturalness": null,
+        "uncertain": null
+      },
+      "preference": null,
+      "quoted_evidence": null,
+      "meaning_or_math_issue": null,
+      "suggested_edit": null
+    }
+  ]
+}
