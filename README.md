@@ -67,3 +67,13 @@ Personal voice compilation is deliberately disabled. Personal writings and `prof
 No raw corpus, third-party implementation, pretrained model or fitted result is committed. The repository currently makes no software-license grant; decide licensing before redistribution.
 
 Research detail: [100-candidate registry](docs/design/feature-schema-100.zh.json), [measurement conventions](docs/design/feature-schema-guide.zh.md), [proposed preregistration](docs/design/research-preregister.zh.md), [statistical design](docs/design/statistical-model.zh.md), [topology evidence](docs/topology-component.md), [corpus provenance](docs/corpus-provenance.md), and [restricted-corpus addendum](docs/corpus-admission-addendum.md). The catalogue is not an implementation checklist: only eight metrics are active.
+
+## Modeling research notes
+
+These are research contracts and hypotheses, not fitted models or validated features.
+
+- [Competing models and identifiability](docs/design/modeling-dossier-v0.1.zh.md)
+- [Chinese construct diagnostics](docs/design/diagnostic-construct-map-v0.1.zh.md)
+- [Dispersion and mixture composition](docs/design/dispersion-mixtures-v0.1.zh.md)
+- [Referential continuity measurement contracts](docs/design/referential-continuity-contract-v0.1.zh.md)
+- [Production provenance and reader perception](docs/design/provenance-perception-register-v0.1.zh.md)
