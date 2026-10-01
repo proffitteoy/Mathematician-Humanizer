@@ -8,7 +8,7 @@ The statistical core and research protocol are separate: executable code establi
 
 ## Active model and execution
 
-The final model is the learned **Sparse Multi-view Hierarchical Style Dynamics Model**: global observables, linguistic sequences and discourse graphs, with stable/context representations and conditional dynamics. The present statistical code is a baseline. See the [learned-model architecture](docs/design/learned-style-dynamics-v0.1.zh.md) and [active execution plan](docs/EXECUTION_PLAN.zh.md). The [topology replication track](research/topology/README.md) now has a runnable H0/MST numerical component; Chinese text replication and incremental-value testing remain unperformed.
+The final model is the learned **Sparse Multi-view Hierarchical Style Dynamics Model**: global observables, linguistic sequences and discourse graphs, with stable/context representations and conditional dynamics. The present statistical code is a baseline. See the [learned-model architecture](docs/design/learned-style-dynamics-v0.1.zh.md) and [active execution plan](docs/EXECUTION_PLAN.zh.md). The [trainable mechanics prototype](research/learned/README.md) now connects global, causal sequence, typed graph and optional topology branches, with synthetic-only gradient/leakage tests. The [topology replication track](research/topology/README.md) includes a pinned local encoder and reproducible synthetic Chinese extraction. Neither establishes natural-text validity or held-out incremental value.
 
 ## Run locally
 
@@ -53,11 +53,12 @@ The flag records the caller's approval; the software cannot verify that a human 
 - Hard work/lineage/content/near-duplicate grouping; explicit author/prompt/source/topic/generator holdout axes, lexical duplicate screening and infeasibility reporting
 - Experimental regularized conditional mean and pooled residual covariance code, using language/genre/topic/task strata and continuous log length, with training-only transforms and out-of-support abstention
 - An experimental paragraph-boundary plan with protected-content checks, mandatory semantic review and stale/tampered-plan rejection
+- Separate synthetic-only trainable multi-view mechanics and pinned local Chinese-encoder topology extraction; see their research READMEs for dependencies and scope
 - Synthetic unit tests that verify software behavior, **not empirical evidence about writing**
 
 ## What remains unavailable
 
-Chinese word segmentation, POS/dependency parsing, discourse and stance annotation, embeddings/topology, validated measurement error, hierarchical effects, cluster-aware intervals, calibration, learned intervention effects, and a general semantic rewrite engine. Installing a parser alone would not validate its outputs in the target genre.
+Validated Chinese word segmentation, POS/dependency parsing, discourse and stance annotation, empirical embeddings/topology validity, measurement error, fitted hierarchical effects, cluster-aware intervals, calibration, learned intervention effects, and a general semantic rewrite engine. Installing a parser alone would not validate its outputs in the target genre.
 
 Personal voice compilation is deliberately disabled. Personal writings and `proffitteoy/nothing-new` are excluded until explicit final-personalization authorization and a separately reviewed implementation. Do not use a “human style” target to overwrite individual choices.
 
