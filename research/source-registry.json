@@ -589,8 +589,12 @@
         "https://pmc.ncbi.nlm.nih.gov/tools/oai/"
       ],
       "acquisition": {
-        "status": "metadata_and_documentation_only_no_local_fulltext_pilot",
-        "report": "research/corpora/cross-genre-20261001/academic-source-evidence.json"
+        "status": "bounded_preregistered_six_work_fulltext_pilot_acquired",
+        "report": "research/corpora/academic-pmc-20261001/pmc-pilot-contract.zh.md",
+        "metadata_frame_report": "research/corpora/cross-genre-20261001/academic-source-evidence.json",
+        "works": 6,
+        "academic_transfer_bytes": 240817,
+        "scope": "same-year two-journal declared-type contract pilot; one cell underfilled; no individual authorship or human-origin admission"
       },
       "evidence": {
         "checked_on": "2026-10-01",
@@ -603,7 +607,7 @@
         ]
       },
       "admission": {
-        "measurement_validation": "candidate_pending_fixed_item_pilot",
+        "measurement_validation": "JATS_role_projection_checked_not_linguistically_validated",
         "population_fit": "not_admitted",
         "automatic_H_G_conversion": false
       }
