@@ -1,0 +1,34 @@
+{
+  "schema": "independent-v02-delta-audit-receipt/1",
+  "created_utc": "2026-10-01T21:05:36.746476+00:00",
+  "proposal": {
+    "path": "/workspace/shared/style-scale10-v04-proposal/public/PROPOSAL.v02.zh.md",
+    "bytes": 20699,
+    "sha256": "598483c49da4947f5dd0e4dd7583d4c473e255c1b2cad26b29450a4b8e7bcfe5"
+  },
+  "audit": {
+    "path": "/workspace/shared/style-scale10-v04-scientific-audit-20261001/AUDIT.v02.delta.zh.md",
+    "bytes": 10176,
+    "sha256": "e52fb9c868c8446ebf99f4be11e53cdb959903ddd2e505f612648fb4a57a12bb"
+  },
+  "original_audit_preserved": {
+    "path": "/workspace/shared/style-scale10-v04-scientific-audit-20261001/AUDIT.original.zh.md",
+    "bytes": 20346,
+    "sha256": "3a806c14c45771823ab37379e3cf8082da2862553a791556194e35b62cf140a0"
+  },
+  "original_proposal_preserved": {
+    "path": "/workspace/shared/style-scale10-v04-proposal/public/PROPOSAL.zh.md",
+    "bytes": 13758,
+    "sha256": "4d342ff86be57a8566378361a57cf5cb4fc78728c8a5635e6cd06e0e51f44018"
+  },
+  "illustrative_one_sided_95pct_zero_failure_upper_bound_for_8_independent_families": 0.31234397806636793,
+  "verdict": "direction_accepted_execution_contract_not_yet_GO",
+  "activity": {
+    "new_natural_corpus_body_reads": 0,
+    "nlp_parse_calls": 0,
+    "model_fit_calls": 0,
+    "owner_personal_data_reads": 0,
+    "remote_writes": 0,
+    "proposal_edits": 0
+  }
+}

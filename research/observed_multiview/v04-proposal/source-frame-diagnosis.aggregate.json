@@ -1,0 +1,31 @@
+{
+  "schema_version": "style-v04-source-frame-diagnosis/1",
+  "scope": "metadata_only_existing_frozen96_and_audited_source_registry",
+  "source_contract_sha256": "ea88b0398cf3d60178056b4f5ab44b7da9ec8196c7a87a2fa2c07ba20d29d1c2",
+  "input_seal_sha256": "26f40568753bece5e26197fc696c371d728efbea3ed4ce111ab0c296bb371b51",
+  "calibration_discussion_records": 32,
+  "old_structural_frame_membership": 1,
+  "record_speaker_configuration_counts": {
+    "one_record_one_speaker": 30,
+    "two_records_one_speaker": 1,
+    "two_records_two_speakers": 1
+  },
+  "old_structural_frame_rule": {
+    "min_nonheader_records": 2,
+    "min_distinct_speaker_keys": 2,
+    "unknown_headers": 0,
+    "unresolved_replies_parents_ancestors": 0,
+    "conflicting_id_conversations": 0,
+    "root_and_metadata_present": true
+  },
+  "all_conversation_groups": 298110,
+  "old_structurally_eligible_conversation_groups": 3395,
+  "old_structural_length_eligible_records": 1982,
+  "old_structural_known_components": 637,
+  "old_structural_components_after_legacy_exclusions_before_new96_closure": 436,
+  "meaning": "capacity_ceiling_not_body_admission_not_human_provenance",
+  "new_corpus_body_reads": 0,
+  "NLP_fit_calls": 0,
+  "published_individual_ids": false,
+  "diagnosis": "v03_broadened_frame_from_structural_dialogue_to_all_length_eligible_top_level_records; sampler_implemented_declared_frame_but_frame_mismatched_prose_goal"
+}

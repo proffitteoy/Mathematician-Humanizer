@@ -1,0 +1,84 @@
+{
+  "schema": "independent-scientific-audit-receipt/1",
+  "created_utc": "2026-10-01T20:52:40.105662+00:00",
+  "audited_proposal_initial_sha256": "4d342ff86be57a8566378361a57cf5cb4fc78728c8a5635e6cd06e0e51f44018",
+  "audited_proposal_final_sha256": "4d342ff86be57a8566378361a57cf5cb4fc78728c8a5635e6cd06e0e51f44018",
+  "proposal_unchanged": true,
+  "inputs_read": [
+    {
+      "path": "/workspace/shared/style-scale10-v04-proposal/public/PROPOSAL.zh.md",
+      "bytes": 13758,
+      "sha256": "4d342ff86be57a8566378361a57cf5cb4fc78728c8a5635e6cd06e0e51f44018"
+    },
+    {
+      "path": "/workspace/shared/style-scale10-v04-proposal/public/source-frame-diagnosis.aggregate.json",
+      "bytes": 1409,
+      "sha256": "fc274402d47b59930af0c2b3a6fc6c2bafb9abaed6c0e4418abad3d3b47eae16"
+    },
+    {
+      "path": "/workspace/shared/style-compiler/research/observed_sequence/contracts.py",
+      "bytes": 5323,
+      "sha256": "9637683d8195bd4ae96d91a36e0c8f98e43a6e08695f4e19259f0b84b00660c4"
+    },
+    {
+      "path": "/workspace/shared/style-compiler/research/observed_sequence/producer.py",
+      "bytes": 6213,
+      "sha256": "23372f19240ec8fbe4e53ea996c3963da208f4dd99743643689ac4db888d5d92"
+    },
+    {
+      "path": "/workspace/shared/style-compiler/research/observed_sequence/prepare.py",
+      "bytes": 6511,
+      "sha256": "97d661a84bf9e0b2c3aefb0d664d985837644fef86585f28e5be64ddebb50e8c"
+    },
+    {
+      "path": "/workspace/shared/style-compiler/research/observed_sequence/models.py",
+      "bytes": 15052,
+      "sha256": "9a21fbe48f3719b5ddb8ac91b38772305a97fc327dbf9db593f924d1106e73fd"
+    },
+    {
+      "path": "/workspace/shared/style-compiler/research/linguistic/schema.py",
+      "bytes": 9980,
+      "sha256": "505046329782ac2dbf77cfc25e2bffe6a382b8ea08a3596cfb9cfaff9d1118fa"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/workspace/shared/style-scale10-v04-scientific-audit-20261001/AUDIT.original.zh.md",
+      "bytes": 20346,
+      "sha256": "3a806c14c45771823ab37379e3cf8082da2862553a791556194e35b62cf140a0"
+    },
+    {
+      "path": "/workspace/shared/style-scale10-v04-scientific-audit-20261001/invariance_witnesses.py",
+      "bytes": 2808,
+      "sha256": "68645eefc98bbed0282f6dda9b702c89907bf82c8c4b952d6a25daeb0ecb47b4"
+    },
+    {
+      "path": "/workspace/shared/style-scale10-v04-scientific-audit-20261001/invariance_witnesses.result.json",
+      "bytes": 686,
+      "sha256": "dd4fd55674b41f235a8d21b8f696851c84afd4553db830dfef55a21db5946ff5"
+    }
+  ],
+  "activity": {
+    "new_natural_corpus_body_reads": 0,
+    "nlp_parse_calls": 0,
+    "model_fit_calls": 0,
+    "owner_personal_data_reads": 0,
+    "remote_writes": 0,
+    "original_proposal_edits": 0,
+    "synthetic_algebra_checks_passed": 9
+  },
+  "limits": [
+    "Mathematical witnesses are not production-code validation or trained-model evidence.",
+    "Original audit addresses the exact original proposal hash; any explicit later revision requires its own addendum.",
+    "Natural admission, parsing, fitting and owner-data authorization remain unchanged."
+  ],
+  "primary_sources": [
+    "https://arxiv.org/html/1909.11942v6",
+    "https://arxiv.org/html/1807.03748v2",
+    "https://aclanthology.org/C18-1238/",
+    "https://aclanthology.org/2024.tacl-1.75/",
+    "https://proceedings.mlr.press/v97/locatello19a.html",
+    "https://aclanthology.org/N19-1049/",
+    "https://aclanthology.org/2021.gem-1.6/"
+  ]
+}

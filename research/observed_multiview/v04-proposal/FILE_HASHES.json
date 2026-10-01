@@ -1,0 +1,14 @@
+{
+  "PROPOSAL.v02.zh.md": {
+    "bytes": 20699,
+    "sha256": "598483c49da4947f5dd0e4dd7583d4c473e255c1b2cad26b29450a4b8e7bcfe5"
+  },
+  "PROPOSAL.zh.md": {
+    "bytes": 13758,
+    "sha256": "4d342ff86be57a8566378361a57cf5cb4fc78728c8a5635e6cd06e0e51f44018"
+  },
+  "source-frame-diagnosis.aggregate.json": {
+    "bytes": 1409,
+    "sha256": "fc274402d47b59930af0c2b3a6fc6c2bafb9abaed6c0e4418abad3d3b47eae16"
+  }
+}
