@@ -1,0 +1,12 @@
+{
+  "status": "fit_artifact_readback_pass",
+  "weight_and_transform_hashes_checked": 17,
+  "strict_weight_shape_and_finite_models": 15,
+  "source_code_hashes_match": true,
+  "posthoc_all_target_equals_primary_comparisons": 34,
+  "main_aggregate_sha256": "a659b33493de4227dfed7aa92cd44837cd3d10f1a7fc1bfe716bdbc00192398b",
+  "selection_freeze_sha256": "0633ef57ef1228d93ac989c366a39b239315531f64a5c2ed645572a6ec709c21",
+  "endpoint_aggregate_sha256": "0b7c4487bf61e42b03a5f5bcf6679516824dc7fa7756f8f020a6c9262ff072af",
+  "new_fit_or_parser_run": false,
+  "test_evaluated": false
+}

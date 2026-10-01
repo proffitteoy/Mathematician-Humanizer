@@ -98,3 +98,8 @@ The [2017 annual-view census](research/audits/wikiconv-2017-execution.zh.md) rec
 
 
 [测量识别与联合观测模型](docs/design/measurement-identification/MEASUREMENT_IDENTIFICATION_DRAFT_ZH.md)及[独立复核](docs/design/measurement-identification/FINAL_RECHECK_ZH.md)明确区分回顾解析与前缀预测，处理相关仪器、机会、失败和桥接选择。它们是尚未拟合的数学接口；不会因架构更复杂而自动恢复真实文体。技能入口已同步现有71通道、本地解析与拓扑能力，未宣称最终编译器完成。
+
+
+## 首轮真实观测模型结果
+
+[十五次train/dev拟合与独立复核](research/observed_sequence/results/train-dev-v01/README.zh.md)已完成：固定160条来源、2480单元、68项局部输入；目标是下一操作单元的观测POS组成。顺序GRU相对DeepSets的开发收益很小且种子方向不一致，不能据此宣称稳定文体动力学。测试仍按冻结流程单独评估。该窄实验不等于完整风格模型或写作技能验收。

@@ -97,3 +97,10 @@ T4：仅当新增信息稳定且可解释到具体任务，再研究它是否帮
 ## 开发用写作比较材料
 
 [六组同题短文](../research/evaluation/generic-round-001/BLIND_REVIEW.zh.md)和[反馈说明](../research/evaluation/generic-round-001/BUNDLE_GUIDE.zh.md)提供12篇完整原创候选及内容要求，用于之后的真实读者反馈。两组均为助手生成的开发基线，没有人类对照，也不是已训练编译器的效果；数学内容已核对。生成条件密钥、带标签记录和自评不公开，以免破坏A/B比较。尚无用户评分或阶段验收。
+
+
+### 固定真实拟合已完成
+
+[开发结果](../research/observed_sequence/results/train-dev-v01/README.zh.md)及[实际结果复审](../research/observed_sequence/results/train-dev-v01/FIT_RESULT_REVIEW_ZH.md)：15次拟合、4800更新在483.7秒完成；独立重放17个实例、16626次train/dev预测。DeepSets→GRU的开发改进均值约0.005156，但一个种子反向，尚无稳定动力学结论。独立test继续按原冻结方案推进。
+
+项目所有者要求下一轮约十倍训练来源并并行寻找2022年以前的真实版本语料；当前小样本基线与测试边界保持，扩容另立协议。发布日期不等于字节版本时间，旧来源也不自动获得人类生产真值。

@@ -1,0 +1,55 @@
+{
+  "actual_readback": {
+    "development_records": 32,
+    "frozen_artifacts_hash_verified": 17,
+    "new_fits": 0,
+    "per_bin_mae_max_absolute_difference": 0.0,
+    "predictions": 16626,
+    "primary_ce_max_absolute_difference": 0.0,
+    "replayed_model_instances": 17,
+    "test_records": 0,
+    "train_records": 128
+  },
+  "authorization_scope": "train_development_readback_no_test_admission",
+  "bound_results_sha256": {
+    "endpoint-diagnostics.aggregate.json": "0b7c4487bf61e42b03a5f5bcf6679516824dc7fa7756f8f020a6c9262ff072af",
+    "model-selection-freeze.private.json": "0633ef57ef1228d93ac989c366a39b239315531f64a5c2ed645572a6ec709c21",
+    "train-dev-fit.aggregate.json": "a659b33493de4227dfed7aa92cd44837cd3d10f1a7fc1bfe716bdbc00192398b"
+  },
+  "design_sha256": {
+    "learning-plan.json": "e72d8ba86171e3ebe06440bd6a5921096b01fabbfa6bff73a3552af57321e750",
+    "protocol.zh.md": "31474b57f93067622d6821fc487c3b2876cde815aa8faf97931142df741836ab",
+    "target-eof-amendment.json": "93dfa10d803428afebb5a5732eb41ae0d2fd8b31f306059e844728ec66e860b7"
+  },
+  "evidence_limits": [
+    "optimizer updates reconciled from code/history/receipts, not independently retraced",
+    "no OS-wide test access audit",
+    "local hashes and timestamps alone are not independent chronology proof"
+  ],
+  "execution_admission_sha256": "336ae71b706ed444a51bcbab3b8caf12cbc5065e25b4778b03d14f64001a00da",
+  "prior_fit_admission_review_sha256": "337feb275b6908171b903b2088cb44130db955d8e701f28c98c6a63a173dcbcf",
+  "public_artifacts_sha256": {
+    "FIT_RESULT_REVIEW_ZH.md": "406eb45cedfb414558a4516e5bd3c412bbeecd9be099b1d009d0fca5ea1681fd",
+    "actual-result-checks.public.json": "25b41d7fbc1a9f23cd2f36766f360fdc01322f830cfd4034157c10d0ae494151",
+    "check_actual_results.py": "75677da61c7a650f8c6bd82042ea5396e5d95c6c283b42a5886e9647ea95e047"
+  },
+  "required_next_gate": "independent frozen test evaluator/extractor review and separate root GO",
+  "source_hashes": {
+    "__init__.py": "7eeadc16c032022e23de3166c91977414cbb4e19ce8ef0b135d7b05301428758",
+    "contracts.py": "9637683d8195bd4ae96d91a36e0c8f98e43a6e08695f4e19259f0b84b00660c4",
+    "diagnostics.py": "7704c69091b8bdb93080373e266e8a257ea1ed7ccb961ea5ce7f43a1fdd1239e",
+    "extract.py": "308d4dda75a43e8f53e82bd79d5d4f5900003c79fce82945828018fa1ced7025",
+    "fit.py": "9d839a463eac4331a8c1a3ee07769de94f968ea3ab5b1e00910f7dee74f1dd33",
+    "models.py": "9a21fbe48f3719b5ddb8ac91b38772305a97fc327dbf9db593f924d1106e73fd",
+    "prepare.py": "97d661a84bf9e0b2c3aefb0d664d985837644fef86585f28e5be64ddebb50e8c",
+    "producer.py": "23372f19240ec8fbe4e53ea996c3963da208f4dd99743643689ac4db888d5d92",
+    "run_fit.py": "595f57450426fcc8c7bf22741f7b980b69baec625ac49051d95fd819466b3bc5",
+    "test_diagnostics.py": "dca096861d8789b7565a95b194fab65464851929624abb21a6a12d485a4d43f0",
+    "test_fit.py": "d1e3e092f35bc06d8bb1cb6472e430b6c12a8af67dde5a75b429482bd18c359c",
+    "test_models.py": "36eec5b376c1dc058976fde9948ace96cb4a0364d52572fc7eb0df8b64c489a9",
+    "test_prepare.py": "2552822a361d51057ea9d7f9121220fde26596fbe374eb2f64781f38d568817d",
+    "test_producer.py": "6404a51b816f6efe64d99e0d98c90bdbe2a6a8da74ba26bc46b2de40699dfd19",
+    "test_run_fit.py": "3626bdb7ff0e2266b520f514fd34c48b3a3dba2fd8040f8860876f69b38f9a85"
+  },
+  "status": "pass_bounded_fit_results_and_freeze"
+}
