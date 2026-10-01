@@ -1,0 +1,37 @@
+{
+  "schema_version": "referential-annotation/0.1.1",
+  "packet_id": null,
+  "status": "blank_unannotated",
+  "study_pool": "measurement_validation_only",
+  "population_fitting_permitted": false,
+  "automatic_H_G_conversion": false,
+  "contract_reference": "docs/design/referential-continuity-contract-v0.1.zh.md",
+  "task_definition": {
+    "target_scope_profile": null,
+    "primary_resolution_level": "discourse_entity_not_civil_identity",
+    "sampling_unit": null,
+    "sampling_rule_before_reading": null,
+    "all_target_predications_required": true,
+    "naturalness_scale": {
+      "scale_id": "naturalness-0-4-provisional",
+      "anchors": {
+        "0": "完全不自然",
+        "1": "明显不自然",
+        "2": "边界或勉强",
+        "3": "基本自然",
+        "4": "完全自然"
+      },
+      "validated": false
+    }
+  },
+  "materials": [],
+  "context_views": [],
+  "annotator_runs": [],
+  "analysis_graphs": [],
+  "reader_responses": [],
+  "adjudications": [],
+  "semantic_audit_status": "not_run",
+  "notes": [
+    "Blank template only. No participant, source text, linguistic judgment, measurement, or corpus admission is represented."
+  ]
+}
