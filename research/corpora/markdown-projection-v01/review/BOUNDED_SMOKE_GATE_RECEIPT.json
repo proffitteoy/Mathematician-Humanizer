@@ -1,0 +1,14 @@
+{
+  "schema_version": "markdown-smoke-independent-gate/1",
+  "decision": "PASS_BOUNDED_THREE_DIAGNOSTIC_SMOKE",
+  "manifest_sha256": "aa40b9b3e222a5ca522ae220d6aaf238b271d091180fbeee8a3f287e3cb2345d",
+  "projector_sha256": "06da4976dfd55f48f55a23600f32561dd2325fcc1c7d3abb94b73752a9680f2a",
+  "runner_sha256": "ebb5376c543e9a17ae63a3606141b942e5d9dd9871258ebb67a49fb7b2cd9b72",
+  "manifest_checks_sha256": "12b271c6a4a425ab5b9f288f3848b4b915722f44f04f9ce608b80751488b06f6",
+  "independent_tests_sha256": "4304c8b5dfe13444e9519a148c15a0296f5dd2276cbf6dcde7e4cbd1a1abcdab",
+  "author_tests_passed": 112,
+  "independent_tests_passed": 29,
+  "natural_body_reads_by_reviewer_before_gate": 0,
+  "scope": "Only the root-authorized exact three permanently exposed diagnostics; no new candidate body, calibration, admission, NLP, fit or split",
+  "created_at": "2026-10-01T21:34:52.374178+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS_BOUNDED_THREE_DIAGNOSTIC_MANIFEST",
+  "manifest_sha256": "aa40b9b3e222a5ca522ae220d6aaf238b271d091180fbeee8a3f287e3cb2345d",
+  "code_bindings": [
+    {
+      "bytes": 36483,
+      "name": "markdown_projection.py",
+      "sha256": "06da4976dfd55f48f55a23600f32561dd2325fcc1c7d3abb94b73752a9680f2a"
+    },
+    {
+      "bytes": 13977,
+      "name": "run_diagnostic_smoke.py",
+      "sha256": "ebb5376c543e9a17ae63a3606141b942e5d9dd9871258ebb67a49fb7b2cd9b72"
+    },
+    {
+      "bytes": 13430,
+      "name": "test_markdown_projection.py",
+      "sha256": "c46730904cbb73ab908b826cd11f4872aa08927c251fc9ea75bbf3293ab172c4"
+    },
+    {
+      "bytes": 5259,
+      "name": "test_smoke_faults.py",
+      "sha256": "4bb70b5b1460e43b4fa25cb2a67b464ec07133fc86aea264ce02bd733763d957"
+    }
+  ],
+  "dependency_files_verified": 74,
+  "source_members_verified": 3,
+  "total_raw_bytes": 52679,
+  "caps": {
+    "cpu_threads": 2,
+    "derivative_bytes": 4194304,
+    "rss_bytes": 536870912,
+    "wall_seconds": 60
+  },
+  "marker_absent_at_review": true,
+  "natural_body_reads_during_manifest_review": 0,
+  "new_candidate_calibration_approved": false,
+  "corpus_projection_approved": false
+}
