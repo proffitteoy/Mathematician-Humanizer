@@ -1,0 +1,251 @@
+{
+  "schema": "controlled-fit-result-independent-audit/v1",
+  "status": "pass_observed_fit_result_no_TEST_no_inference",
+  "audited_at_utc": "2026-10-01T22:44:33.154969+00:00",
+  "checkpoint_sha256": "c2d6d4352c0209d78f221ede226301fa835fa80c679a77b6f09bd9544aabc83b",
+  "fit_receipt_sha256": "96283df19251dabc0b4e416d8745e4dd80db227be35b3982489d8f9e3eb5887b",
+  "complete_sha256": "5e3069433e398b1dc07026d2bc9b6409d18b9e0cf377bdf40ea71286c701279e",
+  "root_GO_sha256": "1bd29bad0811e9744fdc493738d97397b3b1e44849b5f4e5f624b1042304dc3d",
+  "package_manifest_sha256": "1c99373b805ca12f46ecd57362b26be376cc4a1005c01009067e8aa304f4e4f7",
+  "protocol_sha256": "b64fb0017677baa8ab4fb52ca17a07b92fac95b72c0cdf742fb7926dc61b0ed2",
+  "release_receipt_sha256": "78db8a27f466d930aa0502c8138c3a9437a8f584cd972863b8a609efaab34df6",
+  "input_file_hashes": {
+    "ROOT_GO.json": "1bd29bad0811e9744fdc493738d97397b3b1e44849b5f4e5f624b1042304dc3d",
+    "label_receipts.json": "7a5986c07bb9532e0650e3a1a0293eb5bf79579c31b5b19c583ad3d80f563a0d",
+    "labels_a.json": "99d7c501550d0b758b5d837b3871c96f33d78e82fc0a3d37770c40e298f2582b",
+    "labels_b.json": "fd35c6521370102c5e7931d2f87af3cbbd2c11790aa7dde0353c30708746b3b6",
+    "storage_receipt.json": "52098785432aaae7b58f426d97977fb1f680f84e1b86d2ed602c7a1d2d353b0a",
+    "train_dev.json": "b362c42bc208642b49afca461261d76f8bcf42d017e746f47a641d4c5b75a2c4"
+  },
+  "checks_total": 695,
+  "distinct_checks": [
+    "GO_matches_exclusive_START",
+    "actual_controlled_training_provenance",
+    "actual_run_outputs_within_one_MiB",
+    "all_class_family_support_thresholds_pass",
+    "all_frozen_package_files_unchanged",
+    "all_predictions_aggregates_and_private_family_components_recomputed",
+    "all_preference_weights_exact_zero",
+    "checkpoint_external_hash_match",
+    "checkpoint_wrapper_provenance_bindings",
+    "complete_binds_exact_checkpoint_and_receipt",
+    "complete_external_hash_match",
+    "condition_weights_finite_and_nonzero",
+    "exact_six_sanitized_files_and_no_extras",
+    "excluded_slot_counts_match",
+    "family_support_recomputed_matches_receipt",
+    "final_combined_root_bound_arithmetic_matches_under_cap",
+    "fit_receipt_binds_GO_and_package",
+    "fit_receipt_binds_all_five_inputs",
+    "fit_receipt_external_hash_match",
+    "fit_receipt_fixed_budget_metadata",
+    "fit_receipt_resource_limit_metadata",
+    "fixed_training_metadata",
+    "frozen_dual_review_label_recomputed",
+    "frozen_package_unchanged_after_result_audit",
+    "independent_12_features_match",
+    "independent_frozen_gradient_recurrence_matches_checkpoint",
+    "independent_train_only_scaler_matches_checkpoint",
+    "internal_family_component_set_matches",
+    "labels_bind_dataset_file",
+    "labels_bind_subset_review_files",
+    "manifest_external_hash_match",
+    "model_content_hash_matches_receipt",
+    "new_audit_full_one_MiB_reservation_fits_root_bound",
+    "only_checkpoint_and_fit_receipt_in_run",
+    "package_final_bytes_including_markers_recomputed",
+    "protocol_external_hash_match",
+    "receipt_single_fit_no_TEST_no_candidates",
+    "release_binds_exact_final_artifacts",
+    "release_external_bound_matches_root_storage_receipt",
+    "root_attests_release_and_unscored_TEST",
+    "rule_comparator_metadata_matches",
+    "run_identity_matches",
+    "six_regular_nonsymlink_files",
+    "slot_partition_train_or_dev_only",
+    "storage_receipt_fresh_at_actual_start",
+    "timestamp_order_storage_GO_START_release",
+    "training_dataset_digest_matches_validated_train_rows",
+    "training_labels_and_authorization_digest_reconstructed",
+    "training_row_and_family_metadata",
+    "valid_UTC_timestamp"
+  ],
+  "eligible_class_counts": {
+    "train": {
+      "short_early": 61,
+      "short_late": 59,
+      "mixed_early": 62,
+      "mixed_late": 56
+    },
+    "dev": {
+      "short_late": 15,
+      "mixed_late": 16,
+      "short_early": 16,
+      "mixed_early": 16
+    }
+  },
+  "family_support": {
+    "train": {
+      "short_early": 32,
+      "short_late": 31,
+      "mixed_early": 32,
+      "mixed_late": 31
+    },
+    "dev": {
+      "short_early": 8,
+      "short_late": 8,
+      "mixed_early": 8,
+      "mixed_late": 8
+    }
+  },
+  "exclusions": {
+    "dual_review_or_support_excluded": 19
+  },
+  "metrics": {
+    "train": {
+      "all_families": 32,
+      "all_slots": 256,
+      "eligible_families": 32,
+      "eligible_rows": 238,
+      "family_macro_accuracy_on_eligible": 1.0,
+      "family_macro_cross_entropy_on_eligible": 0.09674540935729924,
+      "family_macro_coverage_over_all_original_slots": 0.9296875,
+      "exact_threshold_rule": {
+        "family_macro_accuracy_on_eligible": 1.0,
+        "family_macro_cross_entropy_on_eligible": 3.108624468950444e-15,
+        "coverage_is_shared_dual_review_filter": true,
+        "interpretation": "tautological_class_definition_comparator_not_human_style"
+      }
+    },
+    "dev": {
+      "all_families": 8,
+      "all_slots": 64,
+      "eligible_families": 8,
+      "eligible_rows": 63,
+      "family_macro_accuracy_on_eligible": 1.0,
+      "family_macro_cross_entropy_on_eligible": 0.09671150034285926,
+      "family_macro_coverage_over_all_original_slots": 0.984375,
+      "exact_threshold_rule": {
+        "family_macro_accuracy_on_eligible": 1.0,
+        "family_macro_cross_entropy_on_eligible": 3.108624468950444e-15,
+        "coverage_is_shared_dual_review_filter": true,
+        "interpretation": "tautological_class_definition_comparator_not_human_style"
+      }
+    }
+  },
+  "confusion_matrices": {
+    "class_order": [
+      "short_early",
+      "short_late",
+      "mixed_early",
+      "mixed_late"
+    ],
+    "train": [
+      [
+        61,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        59,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        62,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        56
+      ]
+    ],
+    "dev": [
+      [
+        16,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        15,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        16
+      ]
+    ]
+  },
+  "recomputation_max_abs_errors": {
+    "features": 0.0,
+    "scaler": 5.551115123125783e-17,
+    "probabilities": 2.220446049250313e-16,
+    "aggregate_metrics": 1.3877787807814457e-17,
+    "private_family_components": 5.551115123125783e-16
+  },
+  "gradient_recurrence_verification": {
+    "first_gradient_l2": 1.499298624794417,
+    "max_abs_checkpoint_weight_error": 1.1102230246251565e-16,
+    "steps": 150,
+    "learning_rate": 0.05,
+    "verification_only": true,
+    "fit_function_calls": 0,
+    "checkpoint_writes": 0
+  },
+  "resources_for_this_audit": {
+    "cpu_affinity": [
+      0,
+      1
+    ],
+    "address_space_limit_bytes": 536870912,
+    "cpu_limit_seconds": 60,
+    "cpu_seconds": 0.402233638,
+    "wall_seconds": 0.40483864200359676,
+    "peak_rss_bytes": 18460672
+  },
+  "budget": {
+    "actual_package_including_markers_bytes": 103117,
+    "actual_run_output_bytes": 10942,
+    "root_attested_external_upper_bound_bytes": 7865826,
+    "root_release_allowance_bytes": 4096,
+    "root_combined_bound_before_new_audit_bytes": 7973039,
+    "reserved_new_audit_bytes": 1048576,
+    "cap_bytes": 33554432,
+    "external_directories_independently_counted": false
+  },
+  "scope": {
+    "fit_api_calls": 0,
+    "wrapper_run_calls": 0,
+    "new_empirical_checkpoints": 0,
+    "TEST_reads": 0,
+    "TEST_scores": 0,
+    "real_inference_candidates": 0,
+    "original_384_review_file_reads": 0,
+    "private_family_plans_read": 0,
+    "remote_writes": 0,
+    "raw_rows_or_family_ids_in_report": false
+  },
+  "limits_of_evidence": [
+    "External disk total relies on root receipt; prohibited trees were not scanned.",
+    "Original 384-row review projection and reviewer independence remain root attestations.",
+    "The ledger and recurrence validate this checkpoint; they are not a process-history attestation beyond observed frozen code and markers.",
+    "Condition accuracy is on eligible rows only, and the exact rule comparator is definitional."
+  ]
+}
