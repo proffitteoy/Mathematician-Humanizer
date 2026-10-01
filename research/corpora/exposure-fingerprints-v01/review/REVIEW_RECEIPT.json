@@ -1,0 +1,18 @@
+{
+  "schema_version": "exposure-fingerprint-independent-review-receipt/1",
+  "decision": "PASS_EXISTING_SOURCE_VIEW_PACKAGE_ONLY",
+  "G2_status": "BLOCKED",
+  "review_sha256": "681e6c5dab511db88a081ce3e6a4826466e745b0bd242354f7093aa7a3af3877",
+  "aggregate_sha256": "3d929e84240f3cc97bf396bfa69f7f0bf15655b44ab9559c8ba64a13f9192d52",
+  "audit_code_sha256": "207062f054fc9af2f2eb364ee85fb960d05839399ac87786ba86ca1b8859e3de",
+  "audited_public_manifest_sha256": "1240262aa08bfcbd09b2072e1c99d4f0aee8cd0447019229523f9bb646fbba5f",
+  "audited_database_sha256": "0ca3ca3eec71b88498ed70990804a7dc72d33dc736a0174edd3fdce5e258c3f5",
+  "raw_text_or_old_test_bodies_read": false,
+  "fingerprint_generator_rerun": false,
+  "metadata_and_fingerprint_only": true,
+  "read_only": true,
+  "missing_new3_blog_diagnostics": true,
+  "future_projection_compatibility_unverified": true,
+  "new_graph_and_split_gate_unexecuted": true,
+  "remote_writes": false
+}

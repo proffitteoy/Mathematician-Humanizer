@@ -1,0 +1,38 @@
+{
+  "REVISION.json": {
+    "bytes": 696,
+    "sha256": "f2253eba8183845a26c3f5137a56b220dff8fd5145d7c45a3e6764f79eaa5008"
+  },
+  "admission-spec.zh.md": {
+    "bytes": 10179,
+    "sha256": "6a09ffcd51e92f7041910ad622344cc1dc461e1c579975f7e0181ae3828a2bff"
+  },
+  "experiment-proposal.json": {
+    "bytes": 10657,
+    "sha256": "4072cefb21bb98a6e3f7166869bc5180ff147be8bd76ff424238e030e5570200"
+  },
+  "plan-checks.aggregate.json": {
+    "bytes": 530,
+    "sha256": "5e5c6ac6e02d06697d1afdec15ca69dd710c4f73532c20a8ee1f5f26c91c5b19"
+  },
+  "protocol.zh.md": {
+    "bytes": 23497,
+    "sha256": "3c059fcfefd0c286527064893876274d38eb86099216765d956ad463e2b46896"
+  },
+  "sample_metadata.py": {
+    "bytes": 6810,
+    "sha256": "2aabab330821a7daca9953dd4339ff46bc1cac618588b16596384b75de9a3c08"
+  },
+  "source-evidence.snapshot.json": {
+    "bytes": 4635,
+    "sha256": "723d083858122e23c18670c6b825b309d2543b858ca3fb5d6ee87e03494c2546"
+  },
+  "synthetic-tests.log": {
+    "bytes": 2377,
+    "sha256": "f74565113102c0551ade4e171a5dc982f0b69fcbccb55cdd0c2904f2c9dc46e3"
+  },
+  "test_sample_metadata.py": {
+    "bytes": 6309,
+    "sha256": "8e883c9f37ce0a440957e6336d0856c34d2e9a5e7350af2fa61e95e88349ef5c"
+  }
+}

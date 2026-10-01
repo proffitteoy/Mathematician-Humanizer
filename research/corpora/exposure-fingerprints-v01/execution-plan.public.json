@@ -1,0 +1,34 @@
+{
+  "schema_version": "exclusion-fingerprint-execution/1",
+  "purpose": "one-time offline exclusion only",
+  "root_authorization_received": true,
+  "algorithm": "exposure-copy-signatures/1.0.0",
+  "algorithm_sha256": "68fddc44760002012078dca52915f6230f6e407d303808c3cbba0ad6a9292704",
+  "allowlist_sha256": "c6a121bf83ad6908ff1306c35b148b11727a1644944a36ccb9f072ff037d0af3",
+  "segmentation_sha256": "be78057bc27f9d8480c37c1e6160b5cc466385803fb094e1e0878e1171a288e8",
+  "caps": {
+    "wall_seconds": 1800,
+    "rss_bytes": 3221225472,
+    "derivative_bytes": 1073741824,
+    "source_view_utf8_bytes": 268435456,
+    "source_views": 400000,
+    "unique_texts": 150000,
+    "unique_grams": 8000000
+  },
+  "format": "private SQLite; shared full-SHA256 gram dictionary, per-text sorted delta-varint compressed sets; no plaintext grams/text",
+  "source_scope": {
+    "blogs": 39,
+    "pmc": 6,
+    "2017_views": 323777,
+    "2017_top_rows": 198421,
+    "old_components_union": 667,
+    "old_pages": 5780,
+    "2002": "all prior format-pilot views"
+  },
+  "source_hash_before_read": true,
+  "raw_models_targets_predictions_read": false,
+  "new_source_projection_calibration": false,
+  "missing_new_three_blog_representative_fingerprints": true,
+  "clean_prose_projection_equivalence": "not established; audit blocker remains where no compatible source/target view comparison is available",
+  "synthetic_tests": 8
+}

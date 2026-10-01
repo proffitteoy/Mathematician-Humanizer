@@ -1,0 +1,13 @@
+{
+  "schema_version": "scale10-plan-static-checks/3",
+  "status": "proposal_only_G2_blocked_pending_fingerprint_execution_and_audit",
+  "synthetic_allocator_tests": 20,
+  "synthetic_allocator_tests_passed": 20,
+  "new_natural_text_read": false,
+  "new_parsing_or_fits": false,
+  "new_source_calibration_authorized": false,
+  "separate_old_source_fingerprint_authorized": true,
+  "source_review_hashes_unchanged": true,
+  "generator_exclusion_bug_fixed": true,
+  "layout_neutral_invariance": "specification_only_not_implemented"
+}
