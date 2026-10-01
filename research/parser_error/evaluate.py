@@ -239,14 +239,27 @@ def evaluate(raw,selection,parser):
     for i,r in enumerate(records):r['record_index']=i
     chosen=select_records(records)
     if [x['meta']['sent_id'] for x in chosen]!=[x['sent_id'] for x in selection['selection']]:raise ValueError('selection_changed')
-    coverage=Counter({k:0 for k in ('excluded_reference_integer_rows','reference_failed_records','production_failed_source_units','production_pos_only_source_units')});coverage['selected_records']=len(chosen);by_stratum={s:Counter() for s in ('news','wiki')}
+    coverage=Counter({k:0 for k in ('excluded_reference_integer_rows','reference_failed_records','production_failed_source_units','production_pos_only_source_units','source_text_unavailable_records','boundary_not_evaluable_records','production_not_attempted_missing_text_records','control_not_attempted_missing_text_records')});coverage['selected_records']=len(chosen);by_stratum={s:Counter() for s in ('news','wiki')}
     reference_fail=Counter();production_fail=Counter();control_fail=Counter();boundaries=Counter();private=[];common=[]
     unsupported={'upos':Counter(),'deprel':Counter(),'deprel_base':Counter()}
     supported_bases={x.split(':')[0] for x in parser.vocabulary['depparse']['deprel']}
     for i,record in enumerate(chosen):
         stratum='news' if record['meta']['sent_id'][0]=='n' else 'wiki';by_stratum[stratum]['selected']+=1
         rowcount=sum(x[0].isdigit() for x in record['rows']);coverage['selected_reference_integer_rows']+=rowcount
-        spans=segment(record['meta']['text'])[1]
+        text=record['meta'].get('text')
+        if text is None:
+            coverage['source_text_unavailable_records']+=1
+            coverage['boundary_not_evaluable_records']+=1
+            coverage['reference_failed_records']+=1
+            coverage['production_not_attempted_missing_text_records']+=1
+            coverage['control_not_attempted_missing_text_records']+=1
+            coverage['excluded_reference_integer_rows']+=rowcount
+            reference_fail['missing_text']+=1
+            private.append({'record_index':record['record_index'],'stratum':stratum,
+                'boundary_exact':None,'reference_integer_rows':rowcount,
+                'source_text_failure':'missing_text','reference_failure':'missing_text'})
+            continue
+        spans=segment(text)[1]
         boundary_ok=len(spans)==1 and spans[0].start==0 and spans[0].end==len(record['meta']['text'])
         boundaries[str(len(spans))]+=1
         coverage['boundary_exact_records']+=boundary_ok;coverage['boundary_mismatch_records']+=not boundary_ok

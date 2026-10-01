@@ -1,0 +1,38 @@
+{
+  "status": "v011_patch_checks_passed",
+  "source_sha256": {
+    "evaluate.py": "9bb5645316f7228c399e062c9da5197a7ed0590e53b8c87264e7545cf7bb9ecc",
+    "freeze_selection.py": "2497225d40dfc4feacbea62195ea94b8c8a94958cb04ab4b6b3cdb6344a039b0",
+    "test_evaluate.py": "873559f2ede9cebbd86ec3c7f1ff6638e8e6bae22cc7de5a3dbb69221ef55ffa",
+    "test_missing_text.py": "e6b2fd7ea4788035019de42151a72c0b1750c47c11bade7749fd1e3b94a7ba5f",
+    "verify_aggregate.py": "bfb9c6a7542e8ea4c72fd155d5a36978e1fd1a05542db615bff946c582e82fcf",
+    "preregister.public.json": "95d9dc22d87fc22c9d3c4a8b014ef8796eb815e51e1d7220ac2095dadcad237e",
+    "pud64.aggregate.json": "54992cb1445321b98428f2fb95f628bcc0588234b474dfadab5f7c8bff530a9f",
+    "source-receipt.public.json": "d1ac9aab360479b56a420292667709eb17b9d27472992e415ae40a98432f26c0",
+    "verification-receipt.public.json": "ffd50606e6bd9069977795b5eda4ab4c7f974c3845eb742ff5677a384ac879be"
+  },
+  "backup_sha256_matches_original_receipt": {
+    "evaluate.py": "add6c269342e31404981dea09917a4df1e1126cac41033120c2e154960c4388b",
+    "freeze_selection.py": "e45b1185593fcde575df196e42369a41db5cd50b7f797b4d41b15ec1f1f49ec4",
+    "test_evaluate.py": "873559f2ede9cebbd86ec3c7f1ff6638e8e6bae22cc7de5a3dbb69221ef55ffa"
+  },
+  "original_result_preregister_receipts_unchanged": true,
+  "legacy_manifest_exact_bytes_verified": true,
+  "new_manifest_retains_all_legacy_information": true,
+  "freeze_cli_checks_passed": 5,
+  "cached_fixed64_production_and_control_records_replayed": 64,
+  "cached_private_annotations_unchanged": true,
+  "all_scientific_aggregate_fields_unchanged": true,
+  "only_added_coverage_fields": [
+    "boundary_not_evaluable_records",
+    "control_not_attempted_missing_text_records",
+    "production_not_attempted_missing_text_records",
+    "source_text_unavailable_records"
+  ],
+  "added_coverage_values_all_zero": true,
+  "all64_missing_synthetic_no_segment_or_parse_and_accounting_preserved": true,
+  "real_model_inference_reexecuted": false,
+  "source_files_unchanged_during_review": true,
+  "natural_text_or_per_record_locators_written_to_review": false,
+  "new_natural_samples": 0
+}
