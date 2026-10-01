@@ -1,0 +1,25 @@
+test_bad_budget_types_fail (__main__.Independent.test_bad_budget_types_fail) ... ok
+test_budget_full_does_not_mutate (__main__.Independent.test_budget_full_does_not_mutate) ... ok
+test_completed_delta_chain_must_match (__main__.Independent.test_completed_delta_chain_must_match) ... ok
+test_cross_source_union_is_underfilled_even_when_each_has32 (__main__.Independent.test_cross_source_union_is_underfilled_even_when_each_has32) ... ERROR
+test_json_duplicate_and_nonfinite_rejected (__main__.Independent.test_json_duplicate_and_nonfinite_rejected) ... ok
+test_namespaces_do_not_union_same_numeric_page (__main__.Independent.test_namespaces_do_not_union_same_numeric_page) ... ok
+test_verifier_charges_before_shared_structure_update (__main__.Independent.test_verifier_charges_before_shared_structure_update) ... ok
+
+======================================================================
+ERROR: test_cross_source_union_is_underfilled_even_when_each_has32 (__main__.Independent.test_cross_source_union_is_underfilled_even_when_each_has32)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/shared/style-scale10-copy-gate-review-v01/public/test_independent_gate.py", line 50, in test_cross_source_union_is_underfilled_even_when_each_has32
+    d.union(rows[0]['member_key'],rows[32]['member_key'],'synthetic_copy')
+  File "/workspace/shared/style-scale10-source-v01/public/registry.py", line 118, in union
+    require(kind in ('old_component','exact_normalized','long_raw_block','direct_section','known_reprint','known_translation','concrete_unresolved','common_version','copy_edge'),'unknown_lineage_kind')
+  File "/workspace/shared/style-scale10-source-v01/public/registry.py", line 57, in require
+    if not ok: raise GateError(code)
+               ^^^^^^^^^^^^^^^^^^^^^
+registry.GateError: unknown_lineage_kind
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.021s
+
+FAILED (errors=1)

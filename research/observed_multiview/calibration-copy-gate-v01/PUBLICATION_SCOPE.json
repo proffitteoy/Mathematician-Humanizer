@@ -1,0 +1,16 @@
+{
+  "code_and_pre_execution_contract": "independently_reviewed",
+  "terminal_result": "author_execution_and_signature_only_readback; independent final closure certification still pending",
+  "result": "calibration_underfilled",
+  "records": 96,
+  "known_components": 60,
+  "source_component_counts": {
+    "discussion": 2,
+    "news": 30,
+    "guide": 28
+  },
+  "records_connected_to_old_exclusions": 31,
+  "role_admission_remains_failed": true,
+  "new6000_or_model_training_authorized": false,
+  "no_raw_records_or_individual_ids_published": true
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "independent-copy-gate-manifest-review/1",
+  "manifest_sha256": "1d403ebea3f3913ef5761e5d9f6161c9232fe2498d7965c88d15dd73250e17ac",
+  "bound_file_entries_verified": 241,
+  "code_files": 23,
+  "sealed_cache_files": 96,
+  "natural_cache_decompressions": 0,
+  "natural_signature_comparisons": 0,
+  "shared_comparison_prior": 251617,
+  "shared_comparison_cap": 300000000,
+  "shared_prior_wall_seconds": 408.573487283999,
+  "charged_private_bytes_at_review": 848712457,
+  "shared_exact96_growth_including_audit_reserve": 4929527,
+  "audit_actual_bytes": 1149748,
+  "audit_reserved_bytes": 4194304,
+  "audit_allowance_inside_80MiB_and_1GiB": true,
+  "author_tests": 43,
+  "independent_fault_tests": 7,
+  "source_admission_approved": false,
+  "root_GO_created": false
+}

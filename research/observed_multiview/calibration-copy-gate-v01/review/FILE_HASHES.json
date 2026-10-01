@@ -1,0 +1,38 @@
+{
+  "INDEPENDENT_REVIEW.zh.md": {
+    "bytes": 4291,
+    "sha256": "a58bf040e20752d32dc5d51931acdf7acae3624ef1a7629f3e27fd0c0ddf5f73"
+  },
+  "REVIEW_RECEIPT.json": {
+    "bytes": 687,
+    "sha256": "affff59219c9126c60c4257b62d7d54259d35af4b46e2547d5403a251286b980"
+  },
+  "author-tests.log": {
+    "bytes": 4502,
+    "sha256": "822cbeb76589c77c41db3f8ec7a7fb71250e2ed5bfb6cbd89a852945cc6cdc83"
+  },
+  "final-author-tests.log": {
+    "bytes": 5618,
+    "sha256": "d6eb932de361c196b57452334e4a8ab052b2c565e4a25ea210582f353f8fedba"
+  },
+  "independent-test-fixture-correction.log": {
+    "bytes": 1998,
+    "sha256": "60cdc19b0bdb530afc94123e5e5a3f648fae4ee64945fe75d1cacddc112993d8"
+  },
+  "independent-tests.log": {
+    "bytes": 910,
+    "sha256": "86e03b6258a3b3bc244ad93605c1ba11af3dbcfd1d103c35b7e247507564b611"
+  },
+  "manifest-checks.aggregate.json": {
+    "bytes": 785,
+    "sha256": "4f22f5e83958726788b11d3119e64f806b6b52736bec9b6cf315438c11a99be9"
+  },
+  "test_independent_gate.py": {
+    "bytes": 3621,
+    "sha256": "d9597f4b140ad7427b621f149ef74f9a687d9fa6c115441b7dfcdeff06a10008"
+  },
+  "verify_manifest.py": {
+    "bytes": 3803,
+    "sha256": "74a73f48157ada909f169581d7150245711c04c018aac73ab26c438b20ea6d82"
+  }
+}

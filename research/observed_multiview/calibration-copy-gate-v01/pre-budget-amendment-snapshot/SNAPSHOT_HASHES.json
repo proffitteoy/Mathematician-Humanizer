@@ -1,0 +1,30 @@
+{
+  "calibration_gate.py": {
+    "bytes": 32521,
+    "sha256": "85d58a5846ac8ab2777dc545655257481f2b4c46a9b985d0d7e0c54d49e5580a"
+  },
+  "verify_gate.py": {
+    "bytes": 14873,
+    "sha256": "71b056c78a811929d2c7cb8a56d32d58a005aa70162ec8bc9b72be28c391ac3d"
+  },
+  "test_calibration_gate.py": {
+    "bytes": 21242,
+    "sha256": "d6086a6790c30c748e2e26d08d3faf0f8dd3125267ceb5e565f6aef9b0396369"
+  },
+  "EXECUTION_CONTRACT.md": {
+    "bytes": 10220,
+    "sha256": "bd0b3e37b95edf9c7d1cd043f601e93ab70da7da2aeddc2db58ff1e6257e39dc"
+  },
+  "FILE_HASHES.json": {
+    "bytes": 669,
+    "sha256": "cc938fa07ace9db6675d9076e3007bb50a54351519152818c92504ea91405d1e"
+  },
+  "readiness.aggregate.json": {
+    "bytes": 1481,
+    "sha256": "07645848311339bd4f7a749995cbd8b41efdad7ac6cffdc71f93edbfb09a41c5"
+  },
+  "synthetic-tests.log": {
+    "bytes": 4502,
+    "sha256": "c40e5a9b958851c5ad6c43bfe82ac792368ee42d0a6ca8a4b3fb39ded64773c7"
+  }
+}
