@@ -1,0 +1,64 @@
+{
+  "audited_catalogue_sha256": "bccfbab8f2198753f17738c398c47603d45fed5c4e079ed259fbba55faab97dc",
+  "proposed_only_not_applied": false,
+  "tree_field_replacements": [
+    {
+      "source_id": "xuanwo",
+      "field": "version.git_tree_sha1",
+      "old": "f4c2b946ac7f4d5c977f45fb5ed5f7d91bcf5a91",
+      "correct": "b28db63413be063b725579056782c14c1461ea5c"
+    },
+    {
+      "source_id": "ddadaal",
+      "field": "version.git_tree_sha1",
+      "old": "92be42e96af71699b7f8d7ef08b21b2f37092836",
+      "correct": "32c37d3c28d4d5252b1b0aeefde40e9e6d5a2c19"
+    },
+    {
+      "source_id": "harttle-land",
+      "field": "version.git_tree_sha1",
+      "old": "f08a4c0e4525c985a1e091f860524a794ce134b6",
+      "correct": "f9aaf055e6610c82c93517ffaf24fc0ea2a83067"
+    },
+    {
+      "source_id": "ruanyf-weekly",
+      "field": "version.git_tree_sha1",
+      "old": "02b029b018ec1221be64b374009e48d5c5167252",
+      "correct": "145ee57af754d7582ddbb6cf5dcd779fc9e6532b"
+    },
+    {
+      "source_id": "wu-kan",
+      "field": "version.git_tree_sha1",
+      "old": "96cc63b0569f82ceb7fb991b8846369267d9ebe4",
+      "correct": "64dfb3257279d5e496e3b8d2eff2581946dfb8c2"
+    },
+    {
+      "source_id": "yihui",
+      "field": "version.git_tree_sha1",
+      "old": "017635f6514ab5f7ed0cabd1ceab9701c49002a6",
+      "correct": "8120b26c581a32205c3f6f95eb1b16c2f3aaff66"
+    }
+  ],
+  "role_count_fix_choices": [
+    {
+      "field": "source_role_markup_flags.original_reporting_category_or_template",
+      "old": 662,
+      "correct": 667,
+      "condition": "Original template OR 原创/原創 category"
+    },
+    {
+      "alternative": "retain 662, rename to original_reporting_template and update report wording"
+    }
+  ],
+  "regeneration_requirements": [
+    "fix catalogue builder, not only JSON",
+    "persist source_role_markup_flags construction and rules",
+    "persist WikiConv capacity SQL and metadata mapping entrypoint",
+    "regenerate hashes after any edit"
+  ],
+  "no_model_or_split_changes": true,
+  "applied": true,
+  "chosen_role_count_fix": "union=667",
+  "corrected_public_file_hashes_sha256": "11aef0e63e7004638844fc92835dce9597170fbf4c17536820e9deffe79da60e",
+  "revision_log_sha256": "775ed81f8940182fe0a054fa57fe2dd667567eb53a2f0d7f0814a19826def7c6"
+}

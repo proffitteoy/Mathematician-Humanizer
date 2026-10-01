@@ -1,0 +1,14 @@
+{
+  "wikinews": {
+    "revision_id": 170522,
+    "revision_timestamp": "2020-07-26T14:04:32Z",
+    "source_url": "https://zh.wikinews.org/w/index.php?oldid=170522",
+    "metadata_response_sha256": "a6d81950a1bcfc34b424a492c0e8f6503de008e38981170a988ca2610ea34abe"
+  },
+  "wikivoyage": {
+    "revision_id": 160013,
+    "revision_timestamp": "2020-05-12T01:27:12Z",
+    "source_url": "https://zh.wikivoyage.org/w/index.php?oldid=160013",
+    "metadata_response_sha256": "d95c72b4219201d46f575c4e82d5de02cd53035d572a16dcc86d494ee8f35cdb"
+  }
+}

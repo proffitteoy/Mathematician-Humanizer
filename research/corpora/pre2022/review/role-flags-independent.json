@@ -1,0 +1,41 @@
+{
+  "zhwikinews-20211020": {
+    "recomputed": {
+      "headline_roundup_template": 6422,
+      "voa_template": 1136,
+      "original_reporting_category_or_template": 667,
+      "outline_template": 0,
+      "guide_or_star_template": 0,
+      "has_listing_template": 0,
+      "raw_ge200_han_half_without_headline_template": 4868
+    },
+    "published_differences": {
+      "original_reporting_category_or_template": [
+        667,
+        662
+      ]
+    }
+  },
+  "zhwikivoyage-20211020": {
+    "recomputed": {
+      "headline_roundup_template": 0,
+      "voa_template": 0,
+      "original_reporting_category_or_template": 0,
+      "outline_template": 4249,
+      "guide_or_star_template": 185,
+      "has_listing_template": 2289,
+      "raw_ge200_han_half_without_headline_template": 1991
+    },
+    "published_differences": {}
+  },
+  "definitions": {
+    "eligible": "namespace 0 and not redirect",
+    "headline_roundup_template": "lower(template_name) equals headline item/header",
+    "voa_template": "lower(template_name) equals voa; VOA-部分 not included",
+    "original_reporting_category_or_template": "lower(template_name) equals original OR category contains 原創 or 原创",
+    "outline_template": "lower(template_name) starts with outline",
+    "guide_or_star_template": "lower(template_name) starts with guide or star",
+    "has_listing_template": "lower(template_name) in listing, see, do, eat, drink, sleep, buy",
+    "raw_ge200_han_half_without_headline_template": "raw chars>=200; basic+Extension A Han/Unicode letter-or-number>=0.5; no headline template"
+  }
+}

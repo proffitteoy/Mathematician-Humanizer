@@ -1,0 +1,190 @@
+{
+  "checked_at": "2026-10-01T17:29:50.930815+00:00",
+  "public_inputs": [
+    {
+      "file": "ACQUISITION_PLAN.zh.md",
+      "sha256": "7cb370e7a3775db116ab4fc5684577b50949662406376d5aa2528e1200b780a9",
+      "bytes": 13980,
+      "manifest_match": true
+    },
+    {
+      "file": "acquisition-budget.json",
+      "sha256": "aa2b3312df139edad3da849db7fc3b04ba9651c0ae1ad4bc7287b9e3a9eaf051",
+      "bytes": 893,
+      "manifest_match": true
+    },
+    {
+      "file": "catalogue.json",
+      "sha256": "bccfbab8f2198753f17738c398c47603d45fed5c4e079ed259fbba55faab97dc",
+      "bytes": 27057,
+      "manifest_match": true
+    },
+    {
+      "file": "historical-license-evidence.json",
+      "sha256": "fd230d240f58549433835c5d4c9349c72e8bde8d16cea6080455be6a9df822cc",
+      "bytes": 541,
+      "manifest_match": true
+    },
+    {
+      "file": "wiki-census.aggregate.json",
+      "sha256": "614a10e875124b6103adee1b45fed30dcf7476ddce86150cb7017b7a46590be1",
+      "bytes": 8076,
+      "manifest_match": true
+    },
+    {
+      "file": "wikiconv-metadata-capacity.json",
+      "sha256": "0de032d753cbe33afc307619a47369436cc619b219222a4aa15bd69ca1077a4d",
+      "bytes": 1203,
+      "manifest_match": true
+    }
+  ],
+  "archives": [
+    {
+      "source_id": "zhwikinews-20211020",
+      "bytes": 21498368,
+      "expanded_bytes": 125037224,
+      "expanded_sha256": "38cd30c2dc0118f50a77cbca311963efb868cb5f5f5dd61a6170f1274a9fa23b",
+      "md5": "3d11fbea67c43ccc4b76ed63fca46b43",
+      "sha1": "78166407d73b8885d23cb32bc34d34bacb12581c",
+      "sha256": "156623daa4e5bb59121db738e2271e709dcb70937d2b473072b1837be9ad1def",
+      "archive_manifest_matches": true,
+      "receipt_matches": true,
+      "archive_file_mtime": "2021-12-29T10:24:34+00:00",
+      "namespace_counts": {
+        "0": 16582,
+        "4": 6457,
+        "10": 1524,
+        "14": 7708,
+        "100": 113,
+        "8": 909,
+        "6": 41,
+        "12": 8,
+        "828": 119
+      },
+      "counts": {
+        "revisions_all_namespaces": 33461,
+        "pages_with_revision_count_not_one": 0,
+        "text_nodes_all_namespaces": 33461,
+        "nonempty_texts_all_namespaces": 33451,
+        "main_revisions": 16582,
+        "main_redirects": 1272,
+        "main_nonredirects": 15310,
+        "main_nonredirect_nonempty": 15310,
+        "main_text_utf8_bytes": 92048332,
+        "main_text_codepoints": 61069472,
+        "main_revisions_missing_timestamp": 0,
+        "main_revisions_on_or_after_2022": 0,
+        "main_latest_editor_bot_name_heuristic": 12321,
+        "main_latest_editor_is_ip": 4,
+        "main_with_category_markup": 8530,
+        "main_with_template_markup": 15309,
+        "main_nonredirect_wikitext_ge200chars": 15300,
+        "main_nonredirect_wikitext_ge200chars_han_ln_ge_half": 5406
+      },
+      "main_timestamp_min": "2006-03-14T15:41:21Z",
+      "main_timestamp_max": "2021-10-20T05:25:19Z",
+      "all_namespaces_timestamp_max": "2021-10-20T05:25:19Z",
+      "license_revision_in_archive": {
+        "revision_id": 170522,
+        "namespace": "4",
+        "timestamp": "2020-07-26T14:04:32Z",
+        "body_sha256": "f4a575308020578b2e50030dc67bff2360b9d9eade1883111e51af7e50dea54b",
+        "matches_saved_official_api_text": true,
+        "matches_api_timestamp": true
+      },
+      "published_census_count_differences": {},
+      "published_namespace_counts_match": true
+    },
+    {
+      "source_id": "zhwikivoyage-20211020",
+      "bytes": 11103655,
+      "expanded_bytes": 48482416,
+      "expanded_sha256": "f1827966385bd6ef84df05e48b66a3ffa615bf31cedf0e56009542b640d7ed4e",
+      "md5": "b1ee46a1c9c219dd982fd1da834c6441",
+      "sha1": "ebcae2be5bfa4b62e9af6935ec39b88de55510d3",
+      "sha256": "1372fc86b61e83e33f991c1e494bf9b24c29294ab1f95e77f51a155adff3cc7a",
+      "archive_manifest_matches": true,
+      "receipt_matches": true,
+      "archive_file_mtime": "2021-12-31T22:50:17+00:00",
+      "namespace_counts": {
+        "0": 7864,
+        "8": 2688,
+        "828": 157,
+        "10": 1964,
+        "4": 874,
+        "14": 1287,
+        "12": 12,
+        "6": 164
+      },
+      "counts": {
+        "revisions_all_namespaces": 15010,
+        "pages_with_revision_count_not_one": 0,
+        "text_nodes_all_namespaces": 15010,
+        "nonempty_texts_all_namespaces": 15005,
+        "main_revisions": 7864,
+        "main_redirects": 2753,
+        "main_nonredirects": 5111,
+        "main_nonredirect_nonempty": 5111,
+        "main_text_utf8_bytes": 28424526,
+        "main_text_codepoints": 16557609,
+        "main_revisions_missing_timestamp": 0,
+        "main_revisions_on_or_after_2022": 0,
+        "main_latest_editor_bot_name_heuristic": 63,
+        "main_latest_editor_is_ip": 164,
+        "main_with_category_markup": 3,
+        "main_with_template_markup": 5101,
+        "main_nonredirect_wikitext_ge200chars": 4849,
+        "main_nonredirect_wikitext_ge200chars_han_ln_ge_half": 1991
+      },
+      "main_timestamp_min": "2014-01-14T23:54:29Z",
+      "main_timestamp_max": "2021-10-19T16:56:16Z",
+      "all_namespaces_timestamp_max": "2021-10-19T17:03:01Z",
+      "license_revision_in_archive": {
+        "revision_id": 160013,
+        "namespace": "4",
+        "timestamp": "2020-05-12T01:27:12Z",
+        "body_sha256": "e1caef6cab952eff0902a4a241861db2cea2767a4a3743a777cb364ca7b5503c",
+        "matches_saved_official_api_text": true,
+        "matches_api_timestamp": true
+      },
+      "published_census_count_differences": {},
+      "published_namespace_counts_match": true
+    }
+  ],
+  "blogs": [
+    {
+      "repository": "harttle/harttle.github.io",
+      "sample_bytes": 4356,
+      "sample_sha256": "2cebfeb477dd399c67e2b7f787aa08192c9742850453c19bd772ff792c801fc5",
+      "sample_git_blob_sha1": "756ad6b33583396c9c6b39f715f0f9ba4ffdd000",
+      "matches_receipt_and_tree": true,
+      "tree_manifest_complete": true,
+      "diagnostic_only": true
+    },
+    {
+      "repository": "wu-kan/wu-kan.github.io",
+      "sample_bytes": 32540,
+      "sample_sha256": "8712cbc5295aa2d63b9bc8b3381cb0ceabff0c48e218939ce9280d69604d69a3",
+      "sample_git_blob_sha1": "a54d7485fe1cd649d4e83d73b279be2f59166c16",
+      "matches_receipt_and_tree": true,
+      "tree_manifest_complete": true,
+      "diagnostic_only": true
+    },
+    {
+      "repository": "ddadaal/ddadaal.me",
+      "sample_bytes": 15783,
+      "sample_sha256": "d5599ba6f07d1510a670550f431fac1a8b224a7f768982da5e2268b545e77447",
+      "sample_git_blob_sha1": "7b383e84767fd3697d2c8837d84734c9209e898b",
+      "matches_receipt_and_tree": true,
+      "tree_manifest_complete": true,
+      "diagnostic_only": true
+    }
+  ],
+  "old_sealed_bodies_read": false,
+  "training_run": false,
+  "copy_checks": {
+    "exact_normalized_groups": 0,
+    "shared_long_blocks": 128,
+    "pages_with_shared_long_blocks": 410
+  }
+}

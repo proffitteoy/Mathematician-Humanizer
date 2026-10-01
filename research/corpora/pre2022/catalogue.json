@@ -1,0 +1,687 @@
+{
+  "schema_version": "style-pre2022-source-catalogue/1.0",
+  "created_at": "2026-10-01T17:15:44.068396+00:00",
+  "cutoff_exclusive": "2022-01-01T00:00:00Z",
+  "target_training_records": 1280,
+  "proposed_total_candidate_components_before_new_splits": [
+    1800,
+    2000
+  ],
+  "acquisition_caps": {
+    "new_download_bytes": 100000000,
+    "expanded_bytes": 500000000
+  },
+  "model_fit_performed": false,
+  "old_sealed_test_text_read": false,
+  "personal_author_stage_accessed": false,
+  "public_safe": true,
+  "sources": [
+    {
+      "source_id": "zhwikinews-20211020",
+      "priority": 1,
+      "status": "acquired_and_structurally_censused_not_admitted",
+      "source_family": "wikimedia",
+      "genre": [
+        "citizen_news",
+        "translated_news",
+        "news_synthesis"
+      ],
+      "source_urls": [
+        "https://archive.org/metadata/zhwikinews-20211020",
+        "https://archive.org/download/zhwikinews-20211020/zhwikinews-20211020-pages-articles.xml.bz2"
+      ],
+      "version": {
+        "snapshot_date": "2021-10-20",
+        "archive_publicdate": "2021-12-29 10:22:31",
+        "historical_license_revision": 170522,
+        "historical_license_url": "https://zh.wikinews.org/w/index.php?oldid=170522",
+        "sha256": "156623daa4e5bb59121db738e2271e709dcb70937d2b473072b1837be9ad1def",
+        "sha1": "78166407d73b8885d23cb32bc34d34bacb12581c",
+        "md5": "3d11fbea67c43ccc4b76ed63fca46b43",
+        "temporal_evidence": "dated_Wikimedia_dump_and_pre2022_Internet_Archive_presence_plus_revision_timestamps"
+      },
+      "rights": {
+        "text_license": "CC-BY-2.5",
+        "scope": "text-specific historical official policy; per-item exceptions and third-party quotations remain",
+        "commercial_reuse_license_candidate": true,
+        "attribution_required": true,
+        "share_alike_required": false
+      },
+      "format": "MediaWiki XML in bzip2",
+      "size": {
+        "compressed_bytes": 21498368,
+        "expanded_bytes": 125037224
+      },
+      "counts": {
+        "revisions_all_namespaces": 33461,
+        "text_nodes_all_namespaces": 33461,
+        "nonempty_texts_all_namespaces": 33451,
+        "main_revisions": 16582,
+        "main_redirects": 1272,
+        "main_nonredirects": 15310,
+        "main_nonredirect_nonempty": 15310,
+        "main_text_utf8_bytes": 92048332,
+        "main_text_codepoints": 61069472,
+        "main_revisions_missing_timestamp": 0,
+        "main_revisions_on_or_after_2022": 0,
+        "main_latest_editor_bot_name_heuristic": 12321,
+        "main_latest_editor_is_ip": 4,
+        "main_with_category_markup": 8530,
+        "main_with_template_markup": 15309,
+        "main_nonredirect_wikitext_ge200chars": 15300,
+        "main_nonredirect_wikitext_ge200chars_han_ln_ge_half": 5406
+      },
+      "count_scope": "structural page/revision counts; not independently eligible model records",
+      "unit": "main-namespace nonredirect page revision, grouped by event/work/copy lineage",
+      "author_role": "collective authorship; dump contributor is latest editor only",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "unexpanded templates and source markup",
+        "translated and quoted material",
+        "same-event or geographic hierarchy dependence",
+        "near-copy and cross-source lineage audit pending",
+        "privacy and third-party rights screening pending"
+      ]
+    },
+    {
+      "source_id": "zhwikivoyage-20211020",
+      "priority": 1,
+      "status": "acquired_and_structurally_censused_not_admitted",
+      "source_family": "wikimedia",
+      "genre": [
+        "travel_guide",
+        "instructional_reference"
+      ],
+      "source_urls": [
+        "https://archive.org/metadata/zhwikivoyage-20211020",
+        "https://archive.org/download/zhwikivoyage-20211020/zhwikivoyage-20211020-pages-articles.xml.bz2"
+      ],
+      "version": {
+        "snapshot_date": "2021-10-20",
+        "archive_publicdate": "2021-12-31 22:48:15",
+        "historical_license_revision": 160013,
+        "historical_license_url": "https://zh.wikivoyage.org/w/index.php?oldid=160013",
+        "sha256": "1372fc86b61e83e33f991c1e494bf9b24c29294ab1f95e77f51a155adff3cc7a",
+        "sha1": "ebcae2be5bfa4b62e9af6935ec39b88de55510d3",
+        "md5": "b1ee46a1c9c219dd982fd1da834c6441",
+        "temporal_evidence": "dated_Wikimedia_dump_and_pre2022_Internet_Archive_presence_plus_revision_timestamps"
+      },
+      "rights": {
+        "text_license": "CC-BY-SA-3.0",
+        "scope": "text-specific historical official policy; per-item exceptions and third-party quotations remain",
+        "commercial_reuse_license_candidate": true,
+        "attribution_required": true,
+        "share_alike_required": true
+      },
+      "format": "MediaWiki XML in bzip2",
+      "size": {
+        "compressed_bytes": 11103655,
+        "expanded_bytes": 48482416
+      },
+      "counts": {
+        "revisions_all_namespaces": 15010,
+        "text_nodes_all_namespaces": 15010,
+        "nonempty_texts_all_namespaces": 15005,
+        "main_revisions": 7864,
+        "main_redirects": 2753,
+        "main_nonredirects": 5111,
+        "main_nonredirect_nonempty": 5111,
+        "main_text_utf8_bytes": 28424526,
+        "main_text_codepoints": 16557609,
+        "main_revisions_missing_timestamp": 0,
+        "main_revisions_on_or_after_2022": 0,
+        "main_latest_editor_bot_name_heuristic": 63,
+        "main_latest_editor_is_ip": 164,
+        "main_with_category_markup": 3,
+        "main_with_template_markup": 5101,
+        "main_nonredirect_wikitext_ge200chars": 4849,
+        "main_nonredirect_wikitext_ge200chars_han_ln_ge_half": 1991
+      },
+      "count_scope": "structural page/revision counts; not independently eligible model records",
+      "unit": "main-namespace nonredirect page revision, grouped by event/work/copy lineage",
+      "author_role": "collective authorship; dump contributor is latest editor only",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "unexpanded templates and source markup",
+        "translated and quoted material",
+        "same-event or geographic hierarchy dependence",
+        "near-copy and cross-source lineage audit pending",
+        "privacy and third-party rights screening pending"
+      ]
+    },
+    {
+      "source_id": "harttle-land",
+      "priority": 2,
+      "status": "metadata_verified_three_representatives_exposed_diagnostic",
+      "source_family": "independently_licensed_author_blog",
+      "genre": [
+        "technical_blog",
+        "personal_essay_candidate",
+        "retrospective_candidate"
+      ],
+      "source_urls": [
+        "https://github.com/harttle/harttle.github.io/tree/f08a4c0e4525c985a1e091f860524a794ce134b6"
+      ],
+      "version": {
+        "git_commit": "f08a4c0e4525c985a1e091f860524a794ce134b6",
+        "git_committer_timestamp": "2021-07-17T06:42:38Z",
+        "git_tree_sha1": "f9aaf055e6610c82c93517ffaf24fc0ea2a83067",
+        "manifest_sha256": "87ed3e27a57c1ab38bc41b545682c87b308afc8e44d8d054be66c00ce7edb9a3",
+        "temporal_evidence": "maintainer_git_history_claim_and_content_addressed_objects; unsigned_commit_is_not_independent_timestamp"
+      },
+      "rights": {
+        "text_license": "CC-BY-4.0",
+        "license_notice_url": "https://github.com/harttle/harttle.github.io/blob/f08a4c0e4525c985a1e091f860524a794ce134b6/README.md",
+        "scope": "explicit prose notice",
+        "commercial_reuse_license_candidate": true,
+        "third_party_exceptions": true
+      },
+      "format": "Markdown/RMarkdown source",
+      "size": {
+        "candidate_source_bytes": 2185086
+      },
+      "counts": {
+        "candidate_files": 375,
+        "path_stems": 375,
+        "unique_git_blobs": 375,
+        "path_year_histogram": {
+          "2013": 14,
+          "2014": 47,
+          "2015": 136,
+          "2016": 90,
+          "2017": 36,
+          "2018": 22,
+          "2019": 22,
+          "2020": 8
+        }
+      },
+      "count_scope": "candidate files, not admitted Chinese prose or independent authors/works",
+      "unit": "one original post/work; Rmd/rendered versions and translations share lineage",
+      "author_role": "site author attribution, not per-passage verified composition",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "code, homework, quoted texts, translations and tutorial series",
+        "one author per site and source-author confounding",
+        "individual original-prose and privacy screening pending",
+        "no proof of unaided human production"
+      ]
+    },
+    {
+      "source_id": "wu-kan",
+      "priority": 2,
+      "status": "metadata_verified_three_representatives_exposed_diagnostic",
+      "source_family": "independently_licensed_author_blog",
+      "genre": [
+        "technical_blog",
+        "personal_essay_candidate",
+        "retrospective_candidate"
+      ],
+      "source_urls": [
+        "https://github.com/wu-kan/wu-kan.github.io/tree/96cc63b0569f82ceb7fb991b8846369267d9ebe4"
+      ],
+      "version": {
+        "git_commit": "96cc63b0569f82ceb7fb991b8846369267d9ebe4",
+        "git_committer_timestamp": "2021-12-25T11:25:56Z",
+        "git_tree_sha1": "64dfb3257279d5e496e3b8d2eff2581946dfb8c2",
+        "manifest_sha256": "3e1dd9cd542f18ee0bca25cbc25381f3bfac5b8c74966d6e55e103583b7473af",
+        "temporal_evidence": "maintainer_git_history_claim_and_content_addressed_objects; unsigned_commit_is_not_independent_timestamp"
+      },
+      "rights": {
+        "text_license": "CC-BY-4.0",
+        "license_notice_url": "https://github.com/wu-kan/wu-kan.github.io/blob/96cc63b0569f82ceb7fb991b8846369267d9ebe4/_config.yml",
+        "scope": "explicit prose notice",
+        "commercial_reuse_license_candidate": true,
+        "third_party_exceptions": true
+      },
+      "format": "Markdown/RMarkdown source",
+      "size": {
+        "candidate_source_bytes": 11282913
+      },
+      "counts": {
+        "candidate_files": 388,
+        "path_stems": 388,
+        "unique_git_blobs": 388,
+        "path_year_histogram": {
+          "1999": 5,
+          "2017": 11,
+          "2018": 71,
+          "2019": 229,
+          "2020": 54,
+          "2021": 18
+        }
+      },
+      "count_scope": "candidate files, not admitted Chinese prose or independent authors/works",
+      "unit": "one original post/work; Rmd/rendered versions and translations share lineage",
+      "author_role": "site author attribution, not per-passage verified composition",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "code, homework, quoted texts, translations and tutorial series",
+        "one author per site and source-author confounding",
+        "individual original-prose and privacy screening pending",
+        "no proof of unaided human production"
+      ]
+    },
+    {
+      "source_id": "ddadaal",
+      "priority": 2,
+      "status": "metadata_verified_three_representatives_exposed_diagnostic",
+      "source_family": "independently_licensed_author_blog",
+      "genre": [
+        "technical_blog",
+        "personal_essay_candidate",
+        "retrospective_candidate"
+      ],
+      "source_urls": [
+        "https://github.com/ddadaal/ddadaal.me/tree/92be42e96af71699b7f8d7ef08b21b2f37092836"
+      ],
+      "version": {
+        "git_commit": "92be42e96af71699b7f8d7ef08b21b2f37092836",
+        "git_committer_timestamp": "2021-12-31T09:55:40Z",
+        "git_tree_sha1": "32c37d3c28d4d5252b1b0aeefde40e9e6d5a2c19",
+        "manifest_sha256": "be0ef4782b96951dbecba917a92d181bb46a7a5788615bd4fe242fed709aca0f",
+        "temporal_evidence": "maintainer_git_history_claim_and_content_addressed_objects; unsigned_commit_is_not_independent_timestamp"
+      },
+      "rights": {
+        "text_license": "CC-BY-SA-4.0",
+        "license_notice_url": "https://github.com/ddadaal/ddadaal.me/blob/92be42e96af71699b7f8d7ef08b21b2f37092836/src/components/Footer/Brief.tsx",
+        "scope": "explicit prose notice",
+        "commercial_reuse_license_candidate": true,
+        "third_party_exceptions": true
+      },
+      "format": "Markdown/RMarkdown source",
+      "size": {
+        "candidate_source_bytes": 401107
+      },
+      "counts": {
+        "candidate_files": 25,
+        "path_stems": 25,
+        "unique_git_blobs": 25,
+        "path_year_histogram": {
+          "2019": 11,
+          "2020": 8,
+          "2021": 6
+        }
+      },
+      "count_scope": "candidate files, not admitted Chinese prose or independent authors/works",
+      "unit": "one original post/work; Rmd/rendered versions and translations share lineage",
+      "author_role": "site author attribution, not per-passage verified composition",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "code, homework, quoted texts, translations and tutorial series",
+        "one author per site and source-author confounding",
+        "individual original-prose and privacy screening pending",
+        "no proof of unaided human production"
+      ]
+    },
+    {
+      "source_id": "yihui",
+      "priority": 5,
+      "status": "noncommercial_only_candidate",
+      "source_family": "independently_licensed_author_blog",
+      "genre": [
+        "technical_blog",
+        "personal_essay_candidate",
+        "retrospective_candidate"
+      ],
+      "source_urls": [
+        "https://github.com/yihui/yihui.org/tree/017635f6514ab5f7ed0cabd1ceab9701c49002a6"
+      ],
+      "version": {
+        "git_commit": "017635f6514ab5f7ed0cabd1ceab9701c49002a6",
+        "git_committer_timestamp": "2021-12-25T05:57:49Z",
+        "git_tree_sha1": "8120b26c581a32205c3f6f95eb1b16c2f3aaff66",
+        "manifest_sha256": "51bc2b35dd40549a9313f1685bf8de416fcbc7302ba4dfe0f4dbfb63821e632b",
+        "temporal_evidence": "maintainer_git_history_claim_and_content_addressed_objects; unsigned_commit_is_not_independent_timestamp"
+      },
+      "rights": {
+        "text_license": "CC-BY-NC-SA-4.0",
+        "license_notice_url": "https://github.com/yihui/yihui.org/blob/017635f6514ab5f7ed0cabd1ceab9701c49002a6/README.md",
+        "scope": "explicit prose notice",
+        "commercial_reuse_license_candidate": false,
+        "third_party_exceptions": true
+      },
+      "format": "Markdown/RMarkdown source",
+      "size": {
+        "candidate_source_bytes": 3602536
+      },
+      "counts": {
+        "candidate_files": 1274,
+        "path_stems": 1271,
+        "unique_git_blobs": 1274,
+        "path_year_histogram": {
+          "2001": 1,
+          "2005": 115,
+          "2006": 79,
+          "2007": 173,
+          "2008": 137,
+          "2009": 78,
+          "2010": 60,
+          "2011": 51,
+          "2012": 10,
+          "2013": 4,
+          "2014": 26,
+          "2015": 10,
+          "2016": 10,
+          "2017": 169,
+          "2018": 207,
+          "2019": 91,
+          "2020": 29,
+          "2021": 22,
+          "unresolved_from_path": 2
+        }
+      },
+      "count_scope": "candidate files, not admitted Chinese prose or independent authors/works",
+      "unit": "one original post/work; Rmd/rendered versions and translations share lineage",
+      "author_role": "site author attribution, not per-passage verified composition",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "code, homework, quoted texts, translations and tutorial series",
+        "one author per site and source-author confounding",
+        "individual original-prose and privacy screening pending",
+        "no proof of unaided human production"
+      ]
+    },
+    {
+      "source_id": "ruanyf-weekly",
+      "priority": 6,
+      "status": "quarantined_unresolved_text_license",
+      "source_family": "independently_licensed_author_blog",
+      "genre": [
+        "curated_newsletter"
+      ],
+      "source_urls": [
+        "https://github.com/ruanyf/weekly/tree/02b029b018ec1221be64b374009e48d5c5167252"
+      ],
+      "version": {
+        "git_commit": "02b029b018ec1221be64b374009e48d5c5167252",
+        "git_committer_timestamp": "2021-12-31T01:09:24Z",
+        "git_tree_sha1": "145ee57af754d7582ddbb6cf5dcd779fc9e6532b",
+        "manifest_sha256": "6db2f6b695ab83eed23b9fd48bbd28b70eb3b0fbb3fabf30a3759d038a13b4a6",
+        "temporal_evidence": "maintainer_git_history_claim_and_content_addressed_objects; unsigned_commit_is_not_independent_timestamp"
+      },
+      "rights": {
+        "text_license": null,
+        "license_notice_url": null,
+        "scope": "not established",
+        "commercial_reuse_license_candidate": false,
+        "third_party_exceptions": true
+      },
+      "format": "Markdown/RMarkdown source",
+      "size": {
+        "candidate_source_bytes": 4562079
+      },
+      "counts": {
+        "candidate_files": 190,
+        "path_stems": 190,
+        "unique_git_blobs": 190,
+        "path_year_histogram": {
+          "unresolved_from_path": 190
+        }
+      },
+      "count_scope": "candidate files, not admitted Chinese prose or independent authors/works",
+      "unit": "one original post/work; Rmd/rendered versions and translations share lineage",
+      "author_role": "site author attribution, not per-passage verified composition",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "code, homework, quoted texts, translations and tutorial series",
+        "one author per site and source-author confounding",
+        "individual original-prose and privacy screening pending",
+        "no proof of unaided human production"
+      ]
+    },
+    {
+      "source_id": "xuanwo",
+      "priority": 6,
+      "status": "quarantined_unresolved_text_license",
+      "source_family": "independently_licensed_author_blog",
+      "genre": [
+        "technical_blog",
+        "personal_essay_candidate",
+        "retrospective_candidate"
+      ],
+      "source_urls": [
+        "https://github.com/Xuanwo/blog/tree/f4c2b946ac7f4d5c977f45fb5ed5f7d91bcf5a91"
+      ],
+      "version": {
+        "git_commit": "f4c2b946ac7f4d5c977f45fb5ed5f7d91bcf5a91",
+        "git_committer_timestamp": "2021-12-31T11:56:21Z",
+        "git_tree_sha1": "b28db63413be063b725579056782c14c1461ea5c",
+        "manifest_sha256": "4d85592851da39853bcaaba2f373d9019c40051f4beb407ddbe3e27629534ba2",
+        "temporal_evidence": "maintainer_git_history_claim_and_content_addressed_objects; unsigned_commit_is_not_independent_timestamp"
+      },
+      "rights": {
+        "text_license": null,
+        "license_notice_url": null,
+        "scope": "not established",
+        "commercial_reuse_license_candidate": false,
+        "third_party_exceptions": true
+      },
+      "format": "Markdown/RMarkdown source",
+      "size": {
+        "candidate_source_bytes": 1752036
+      },
+      "counts": {
+        "candidate_files": 519,
+        "path_stems": 519,
+        "unique_git_blobs": 519,
+        "path_year_histogram": {
+          "2014": 335,
+          "2015": 40,
+          "2016": 22,
+          "2017": 4,
+          "2018": 20,
+          "2019": 28,
+          "2020": 21,
+          "2021": 37,
+          "unresolved_from_path": 12
+        }
+      },
+      "count_scope": "candidate files, not admitted Chinese prose or independent authors/works",
+      "unit": "one original post/work; Rmd/rendered versions and translations share lineage",
+      "author_role": "site author attribution, not per-passage verified composition",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "code, homework, quoted texts, translations and tutorial series",
+        "one author per site and source-author confounding",
+        "individual original-prose and privacy screening pending",
+        "no proof of unaided human production"
+      ]
+    },
+    {
+      "source_id": "wikiconv-2017-expanded-frame",
+      "priority": 2,
+      "status": "existing_archive_metadata_capacity_only_new_protocol_required",
+      "source_family": "wikimedia_discussion",
+      "genre": [
+        "internet_discussion"
+      ],
+      "source_urls": [
+        "https://figshare.com/articles/dataset/WikiConv_-_Chinese/7376012",
+        "https://github.com/conversationai/wikidetox/tree/main/wikiconv"
+      ],
+      "version": {
+        "archive_sha256": "635500ba887cef0c9d2bfaef03659de2974b5fd84b8a0cd90a9bd7bdef7f492a"
+      },
+      "rights": {
+        "text_license": "CC-BY-SA-3.0",
+        "metadata_license": "CC0",
+        "scope": "maintainer content-specific notice; generic repository/release badge not controlling"
+      },
+      "format": "annual JSONL in ZIP",
+      "size": {
+        "existing_compressed_bytes": 80074478,
+        "existing_expanded_bytes": 871024181,
+        "new_download_bytes": 0
+      },
+      "counts": {
+        "nonempty": {
+          "source_records": 178894,
+          "pages": 90116,
+          "known_components_before_exclusions": 84754,
+          "known_components_after_old192_and_exposed_exclusions": 84366
+        },
+        "size_200_20000": {
+          "source_records": 117266,
+          "pages": 71930,
+          "known_components_before_exclusions": 66651,
+          "known_components_after_old192_and_exposed_exclusions": 66298
+        }
+      },
+      "count_scope": "known-component ceilings before new unit/language/role/near-copy eligibility",
+      "unit": "one within-record source view per merged lineage component",
+      "author_role": "speaker metadata may not be original or sole author",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "new protocol needed for wider within-record frame",
+        "all old192 plus exposed groups and future connecting edges excluded; old32 is a consumed benchmark, not a fresh holdout",
+        "cross-year annual views and edit/restoration families are dependent"
+      ]
+    },
+    {
+      "source_id": "pmc-zh-published-through-2021",
+      "priority": 3,
+      "status": "metadata_only_historical_bytes_unverified",
+      "source_family": "academic_publisher_deposits",
+      "genre": [
+        "research_article",
+        "review_article"
+      ],
+      "source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/",
+        "https://pmc.ncbi.nlm.nih.gov/tools/oai/"
+      ],
+      "version": {
+        "query_checked_on": "2026-10-01",
+        "query_result_sha256": "662550507a5666bbf0b4c9d9fc731d7d68a121818307ffe1621b00a639bea969",
+        "historical_archive_id": null,
+        "historical_text_sha256": null
+      },
+      "rights": {
+        "text_license": "article-level CC-BY candidates; exact URI and exceptions required",
+        "scope": "per article/version"
+      },
+      "format": "JATS XML, PDF, JSON metadata",
+      "size": null,
+      "counts": {
+        "current_query_records": 2074,
+        "verified_pre2022_text_versions_this_round": 0
+      },
+      "count_scope": "current ESearch metadata, neither immutable historic texts nor independent usable works",
+      "query": "chi[la] AND \"cc by license\"[filter] AND (\"1900/01/01\"[dp] : \"2021/12/31\"[dp]) NOT \"pmc embargo\"[filter]",
+      "unit": "DOI/PMCID work family, not abstract/paragraph/translation",
+      "author_role": "coauthor team, editors/translators distinct; no first-author prose attribution",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "PMC content can update without version bump",
+        "S3 LastModified can reflect metadata reprocessing",
+        "legacy oa.fcgi and bulk FTP/Cloud paths retired in August2026",
+        "clinical privacy, retractions and third-party content",
+        "biomedical selection limits broad academic genre claim"
+      ]
+    },
+    {
+      "source_id": "gutenberg-modern-essays",
+      "priority": 4,
+      "status": "catalogue_leads_historical_digital_version_pending",
+      "source_family": "public_domain_literary_editions",
+      "genre": [
+        "literary_essay",
+        "prose_poem"
+      ],
+      "source_urls": [
+        "https://www.gutenberg.org/ebooks/25271",
+        "https://www.gutenberg.org/ebooks/25242",
+        "https://www.gutenberg.org/policy/robot_access.html"
+      ],
+      "version": {
+        "ebook_ids": [
+          25271,
+          25242
+        ],
+        "maintainer_release_year": 2008,
+        "maintainer_last_update": "2021-01-03",
+        "historical_text_sha256": null
+      },
+      "rights": {
+        "text_license": "item-level public-domain assertion, jurisdiction and edition rights must be checked",
+        "scope": "PG metadata license does not confer text license"
+      },
+      "format": "source plain text/HTML; avoid treating periodically regenerated cache as historical bytes",
+      "size": null,
+      "counts": {
+        "identified_ebooks": 2,
+        "verified_independent_essay_units": 0
+      },
+      "unit": "bibliographically independent work, chapters/volumes not automatically independent",
+      "author_role": "original author versus transcriber/editor/translator",
+      "assistance_status": "unknown",
+      "model_admitted": false,
+      "risks": [
+        "generated formats rebuilt monthly",
+        "book-versus-essay lineage and duplicate editions",
+        "historical script/typography and modern editing confounds",
+        "use supported robot/mirror channels; no ordinary-site bulk crawler"
+      ]
+    },
+    {
+      "source_id": "zhwiki-20211120",
+      "priority": 5,
+      "status": "metadata_only_over_acquisition_cap",
+      "source_urls": [
+        "https://archive.org/metadata/zhwiki-20211120"
+      ],
+      "version": {
+        "snapshot_date": "2021-11-20",
+        "archive_publicdate": "2022-01-01 21:23:20",
+        "sha1": "8bdc4a00bae17cd435624ecc313bea7ea3366b69",
+        "md5": "1cdb6be95099e759dadf936271376b6b",
+        "sha256": null
+      },
+      "rights": {
+        "text_license": "CC-BY-SA-3.0 historical Wikipedia; Wikisource requires per-work public-domain/license verification",
+        "scope": "not a blanket license for all historical source editions"
+      },
+      "format": "MediaWiki XML.bz2",
+      "size": {
+        "compressed_bytes": 2296371453
+      },
+      "counts": null,
+      "model_admitted": false
+    },
+    {
+      "source_id": "zhwikisource-20211220",
+      "priority": 5,
+      "status": "metadata_only_over_acquisition_cap",
+      "source_urls": [
+        "https://archive.org/metadata/zhwikisource-20211220"
+      ],
+      "version": {
+        "snapshot_date": "2021-12-20",
+        "archive_publicdate": "2021-12-28 19:52:12",
+        "sha1": "9887df9fff9c20fc633d80e7eadccfaf3b2c91e9",
+        "md5": "27d070f858b13a68fd142e06bd718a34",
+        "sha256": null
+      },
+      "rights": {
+        "text_license": "CC-BY-SA-3.0 historical Wikipedia; Wikisource requires per-work public-domain/license verification",
+        "scope": "not a blanket license for all historical source editions"
+      },
+      "format": "MediaWiki XML.bz2",
+      "size": {
+        "compressed_bytes": 1917755878
+      },
+      "counts": null,
+      "model_admitted": false
+    }
+  ]
+}

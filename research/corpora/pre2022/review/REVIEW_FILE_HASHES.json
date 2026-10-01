@@ -1,0 +1,42 @@
+[
+  {
+    "file": "CORRECTION_RECEIPT.json",
+    "bytes": 1453,
+    "sha256": "89b64268a01efd28ac1ca760745b87c14c9016bc46d98552b0e09f80d2752e60"
+  },
+  {
+    "file": "INDEPENDENT_REVIEW.zh.md",
+    "bytes": 14805,
+    "sha256": "9a7b4f206b9f22c1411e18870a75b8a3f08bf226fd9b4270792fdf2bc77af8bf"
+  },
+  {
+    "file": "REVIEW_FIXES.json",
+    "bytes": 2279,
+    "sha256": "3d500dfeb8cd4bc74f17cadc21b0dacc2b59632fb0ad2681334602c28a782dc1"
+  },
+  {
+    "file": "git-tree-checks.json",
+    "bytes": 1547,
+    "sha256": "8e1dcc81c32d369d83fbf47d774471e2cf67433a1c6ba7fc01ba3aea1615cabd"
+  },
+  {
+    "file": "independent-checks.json",
+    "bytes": 6820,
+    "sha256": "d33a9fc8291bc121ac03a8dcc0ccec1e342e50e9388f6158be00137a41ce5c2e"
+  },
+  {
+    "file": "primary-metadata-independent.json",
+    "bytes": 1860,
+    "sha256": "9264a9323e1cc2970cf6723dd927aa58fe5ef858587c4af96668853b1fdf2572"
+  },
+  {
+    "file": "role-flags-independent.json",
+    "bytes": 1584,
+    "sha256": "f787affaeeb45ef5d5f15a8292afe004f1cf8b1a400bf754863c6b720a6aaac8"
+  },
+  {
+    "file": "wikiconv-capacity-independent.json",
+    "bytes": 996,
+    "sha256": "9c94caea56e415b65612b1a9de3f28c1fcd7e8d1ecb485a507432a4cb93e7ce5"
+  }
+]

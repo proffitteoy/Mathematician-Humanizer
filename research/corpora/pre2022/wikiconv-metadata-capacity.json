@@ -1,0 +1,27 @@
+{
+  "schema_version": "style-pre2022-metadata-capacity/1",
+  "raw_text_read": false,
+  "parser_run": false,
+  "train_admission": false,
+  "old_selection_sha256": "ddbe04ae3a3a1d289fbb53e35872b2eb9df27407d92f6002066c992c1580b0b8",
+  "counts": {
+    "nonempty": {
+      "source_records": 178894,
+      "pages": 90116,
+      "known_components_before_exclusions": 84754,
+      "known_components_after_old192_and_exposed_exclusions": 84366
+    },
+    "size_200_20000": {
+      "source_records": 117266,
+      "pages": 71930,
+      "known_components_before_exclusions": 66651,
+      "known_components_after_old192_and_exposed_exclusions": 66298
+    }
+  },
+  "limitations": [
+    "Only metadata size checks; unit count, Han fraction, role projection, quote or bot filtering and causal boundary eligibility not evaluated.",
+    "Prior copy graph includes complete annual long exact views but near-duplicate edges only prior candidate/exposure texts; all new candidates need a new cross-frame near-copy audit.",
+    "Counts are ceilings under known dependencies, not guarantees of independent usable records.",
+    "Old selected192 and all475 known exposed components excluded. Old32 test is a consumed benchmark and remains excluded as full components; this metadata-only census reads no test bodies. New generalization claims require a separate fresh holdout."
+  ]
+}
