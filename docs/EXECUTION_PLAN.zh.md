@@ -89,3 +89,6 @@ T4：仅当新增信息稳定且可解释到具体任务，再研究它是否帮
 [独立缓存复核](../research/observed_sequence/protocol/REAL_CACHE_REVIEW_ZH.md)确认160条、2480个操作单元及四个解析失败屏障，实际可评分755/223个目标、117/31条有效记录，12条保留覆盖-only。首8独立复核在批量提取已经完成后形成；未追称事前独立通过，缓存随后经完整复核解除隔离。模型fit和test仍未因此自动放行。
 
 [EOF语义修订](../research/observed_sequence/protocol/target-eof-amendment.json)公开记录：此前“完整下一单元”的措辞过强。实际目标为固定来源视图定义的下一操作单元，包含74个源末单元（其中68个可被普通字符继续延长）；不是完整自然句或真实停止事件。修订发生在提取后、任何真实变换/模型拟合前，保留原755/223账本与所有旧摘要。严格闭合要求仍适用于输入，目标端点标记不进入输入或选模；仅在选定模型后做预声明诊断。
+
+
+[真实观测序列实现](../research/observed_sequence/README.md)已通过[有界训练准入复核](../research/observed_sequence/reviews/FIT_ADMISSION_REVIEW_ZH.md)：79项合成测试、实际verify-only拒绝拟合/测试调用的检查通过。固定五臂×三种子×40epoch的train/dev实验已获准启动，测试32条仍封存；这只授权已冻结的观测预测实验，不代表任何效果或通用skill完成。
