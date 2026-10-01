@@ -1,0 +1,127 @@
+{
+  "review_date_utc": "2026-10-01",
+  "status": "accepted_as_unfitted_research_proposal_and_current_capability_router",
+  "sources": {
+    "modeling_addendum": {
+      "sha256": "85706af6090a20e5d23284b718ca7d78678d675ef52914631083aae2302a9638",
+      "bytes": 19902
+    },
+    "skill_entrypoint": {
+      "sha256": "e01370090326a03c1a6f2d58deac86f136c51f2454272a7197aae22dec4970bf",
+      "bytes": 3924
+    },
+    "acceptance_protocol": {
+      "sha256": "f0921efd6f58c2632eeba7e1fba31368bdf6626afc6488344afe54a815881617",
+      "bytes": 2378
+    },
+    "root_readme": {
+      "sha256": "69c0a5ee272b2ff5d6f931a5852598890e3ce1b257fb57d80b9ed6f9d4f50ad1",
+      "bytes": 8348
+    },
+    "pud_publication_status": {
+      "sha256": "039e1e966efcb00c519cca636478678556fde8e3bafc2a66ce405737d07c3430",
+      "bytes": 1810
+    },
+    "core_cli": {
+      "sha256": "a48bd114ddec0380b86f3278f2f882391bcd5045cd16921a765f0588c462f591",
+      "bytes": 3588
+    },
+    "core_features": {
+      "sha256": "4c595ae4883dea30a3137c2152535052807db26a54a0680ed70e16678ad1f9c6",
+      "bytes": 8211
+    },
+    "core_planner": {
+      "sha256": "22208d339aa87ac7118d855699b10b2cd9cceeda1febe90666afebbb969117b6",
+      "bytes": 8110
+    },
+    "linguistic_schema": {
+      "sha256": "505046329782ac2dbf77cfc25e2bffe6a382b8ea08a3596cfb9cfaff9d1118fa",
+      "bytes": 9980
+    },
+    "linguistic_adapter": {
+      "sha256": "0b7422e896acae703bc896cb9731d7462489bea91d50bcf88ff37ab7519da556",
+      "bytes": 17019
+    },
+    "local_stanza": {
+      "sha256": "7d7e089d346043c2182c44e7ed9ca57be04ed3a21d802052dc0357e3a8349102",
+      "bytes": 6064
+    },
+    "learned_contracts": {
+      "sha256": "5fbfe78722f809ac4ef10c5bd11fb672aed91afcdae4bf21a5d0cd6828f45541",
+      "bytes": 11722
+    },
+    "learned_readme": {
+      "sha256": "ee47f5f80c93b2cff18f71a39b29f3b8a32e4949749e17e3fdd844120010bb79",
+      "bytes": 9704
+    },
+    "encoder": {
+      "sha256": "ed29a303783cdbf16c1426807014850960970315907ae6286f30f784bae7c783",
+      "bytes": 10159
+    },
+    "encoder_profile": {
+      "sha256": "0250576a0cf872ea57115fce0f2663ebaf2a2976a349b35b5d5e1352c7d8d29f",
+      "bytes": 2436
+    },
+    "phd": {
+      "sha256": "44b8a8fcf9f4e1c14c6473aa610f423fe28b8a67f4fbf4e6de208e46c0ad4bd8",
+      "bytes": 7807
+    },
+    "parent_design": {
+      "sha256": "d0ac9300f82bb5e85561eb95a8858fc1bde5b1b01b6a0b36087273e6f4beb492",
+      "bytes": 52408
+    }
+  },
+  "artifacts": {
+    "FINAL_RECHECK_ZH.md": {
+      "sha256": "21981f07311bf811c2e834014fc99838b32e56c779c52c9d3eabb75cc5597d9c",
+      "bytes": 8133
+    },
+    "SELECTION_CONDITION_CORRECTION_ZH.md": {
+      "sha256": "06c2c6151f07faff8ee9bd030bbdfe78cff5f7c4f20f00251d47075ba53699cc",
+      "bytes": 2276
+    },
+    "selection_algebra_check.py": {
+      "sha256": "d3ab85558b813ef631f062f7115efee5ec75779d8f3ab70f54e6e83eb693f37b",
+      "bytes": 1642
+    },
+    "selection-algebra.public.json": {
+      "sha256": "6774aa60e5bb1d2d2a6e4707e09637237daa139916055db05f53ee1b80666c5a",
+      "bytes": 462
+    },
+    "skill-topology-tests.log": {
+      "sha256": "5d68a14f22ed6fb845b9cc1dbb9db037a8fbb771c9e90fe7c82ddcff3da74921",
+      "bytes": 3505
+    },
+    "skill-learned-tests.log": {
+      "sha256": "272996806eab1aa44f7a496c20b9bcff1889beb4b7ee10c5cf732f46eb4e97a0",
+      "bytes": 5074
+    },
+    "skill-core-tests.log": {
+      "sha256": "935a435776940a8cf8254492c087f890a187e51bf2ba1c495bdb867339494280",
+      "bytes": 159
+    }
+  },
+  "checks": {
+    "topology_tests_passed": 38,
+    "learned_synthetic_tests_passed": 39,
+    "core_tests_passed": 60,
+    "linguistic_channels": 71,
+    "local_stanza_model_hash_verified": true,
+    "local_topology_model_files_hash_verified": 6,
+    "selection_counterexample_exact_arithmetic_passed": true,
+    "new_topology_real_inference_run": false
+  },
+  "supersedes_selection_condition_in_suggestion_sha256": "b159a6084b05cbdc7c281dfa41deaa27909c735a4673491a913091916fe8e6e3",
+  "original_frozen_files_modified": false,
+  "natural_samples_added": 0,
+  "empirical_models_fitted": 0,
+  "downloads": 0,
+  "remote_writes": 0,
+  "personal_material_read": false,
+  "limitations": [
+    "No identified observation channel claim",
+    "No empirical style-model or editing benefit claim",
+    "Not final writing-skill completion or owner acceptance",
+    "Final proposal tests remain implementation requirements"
+  ]
+}

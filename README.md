@@ -95,3 +95,6 @@ The [2017 annual-view census](research/audits/wikiconv-2017-execution.zh.md) rec
 [两阶段验收条件](docs/ACCEPTANCE.zh.md)由项目所有者最终判断，模型分数不能代替验收；个人阶段按该文档的条件授权启动。
 
 [固定PUD64解析测量试点](research/parser_error/PUBLICATION_STATUS.zh.md)已独立复算；生产分词及标注约定造成明显的测量差异。请同时阅读冻结方法、复审和已知缺字段健壮性缺陷，不将本次结果当作通用文体模型验证。
+
+
+[测量识别与联合观测模型](docs/design/measurement-identification/MEASUREMENT_IDENTIFICATION_DRAFT_ZH.md)及[独立复核](docs/design/measurement-identification/FINAL_RECHECK_ZH.md)明确区分回顾解析与前缀预测，处理相关仪器、机会、失败和桥接选择。它们是尚未拟合的数学接口；不会因架构更复杂而自动恢复真实文体。技能入口已同步现有71通道、本地解析与拓扑能力，未宣称最终编译器完成。

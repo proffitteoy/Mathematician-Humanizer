@@ -1,16 +1,27 @@
 ---
 name: style-compiler
-description: Run the local Style Compiler's character-level writing measurements and propose review-gated paragraph-boundary edits. Use for Chinese-first stylometry research or an explicitly requested structural editing experiment; it does not identify authors, detect AI, or supply a personal voice model.
+description: Measure Chinese writing with the local Style Compiler research modules and inspect constrained editing candidates. Use for stylometry research, sentence/paragraph diagnostics, or testing this project's writing skill; no validated human/AI detector or personal voice model is currently supplied.
 ---
 
 # Style Compiler
 
-This repository is an experimental research core. Read `README.md` and `docs/architecture.md` from its root for current commands, projections and limits. Do not represent implemented arithmetic as construct validation or completed empirical research.
+Read the repository's `README.md` for current implementation status and `docs/ACCEPTANCE.zh.md` for the two-stage, owner-judged acceptance target. Distinguish executable measurements, empirical measurement checks, trained models and demonstrated writing benefit; none substitutes for another.
 
-Accept only a local document satisfying `schemas/document.schema.json`. Use `style-compiler extract` (or `PYTHONPATH=src python -m style_compiler extract`) and report raw measures with sentence/paragraph evidence, comparison eligibility and missing reasons. Character counts are not Chinese word tokens. Optional parser, embedding, reference and personal-style capabilities are unavailable.
+## Choose the implemented path
 
-When the user supplies a paragraph sentence-count constraint, `plan --max-sentences N` can propose one newline insertion. Describe it as experimental, inspect the exact candidate and preserve protected strings. Measured candidate deltas do not predict writing benefit. Only use `apply --semantic-review-approved` after the caller explicitly approves the candidate's meaning and task fit. Preserve the original for rollback.
+- For the standard-library core, accept the local document contract in `schemas/document.schema.json`; run `style-compiler extract` or `PYTHONPATH=src python -m style_compiler extract`. Return measures, opportunities, evidence, missing reasons and comparison eligibility. Character counts are not Chinese word tokens.
+- For POS, dependency and lexical measurements, read `research/linguistic/README.zh.md`. The separate71-channel module and pinned local Stanza path exist; no download or installation is implicit. Exact source spans, discontinuities, parser/profile identity and per-channel opportunities are mandatory. Do not promote parser-derived counts to validated style constructs. Read `research/parser_error/PUBLICATION_STATUS.zh.md` when interpreting their reliability.
+- For topology, read `research/topology/README.md`. Use the existing pinned local encoder and stated numerical profile only when available. Short-text abstention, duplicate points, truncation and sampling are part of the result. PHD is neither a writing-quality target nor evidence of human origin. Full-text contextual embeddings are not valid prefix observations.
+- The learned multi-view prototype in `research/learned/README.md` remains synthetic-only unless a separately reviewed real-data protocol and release explicitly changes that status. Do not feed real observations by relabeling them as synthetic fixtures or advertise unfitted weights as a learned style distribution.
 
-For a research design, read `docs/research-protocol.md`. Fit only a provenance/rights-reviewed real non-personal corpus with a validated leakage-safe split; the tool abstains when support is absent. Never fabricate fitted distributions, percentiles, probabilities, author profiles or intervention effects. No source detector or detector-evasion objective exists.
+## Editing experiments
 
-Personalization remains disabled. Do not inspect personal writings or `proffitteoy/nothing-new` until explicit final-personalization authorization; that future authorization also requires a separately reviewed implementation. Do not download unverified-license corpora, install models, spend on external generation, or mutate a remote repository as a side effect of invoking this skill.
+The implemented core planner can propose a single newline insertion when a paragraph sentence-count constraint is supplied: `plan --max-sentences N`. Inspect its exact candidate, protect the document's invariant strings and preserve rollback. Use `apply --semantic-review-approved` only after the caller's explicit approval of that candidate's meaning and task fit. A measured delta does not predict better prose.
+
+For an ordinary rewrite or generation request beyond that operation, disclose that the current compiled rewrite policy is not yet empirically learned. An independently generated baseline draft can be useful for testing, but label it accordingly; do not claim an unavailable compiler/ranker produced it. Never invent fitted percentiles, human probabilities, author profiles, reference bands or a successful meaning check.
+
+## Research and personal stage
+
+Use `docs/research-protocol.md` and the current learned-model design for real-data admission, lawful source use, work/lineage splits and held-out evaluation. Do not silently tune on a published diagnostic slice. No external generation spend, model download, raw-text upload or remote repository mutation occurs as a side effect of invoking this skill.
+
+The project owner has conditionally authorized personal-stage work once the generic stage is defensibly ready for acceptance; the exact current condition is in `docs/ACCEPTANCE.zh.md`. This does not itself assert that the condition has been met or that a personal implementation exists. Before reading the owner's writings, check the recorded stage decision and a reviewed personal-data implementation. Preserve unknowns and content, including mathematical hypotheses and logical scope. Final acceptance remains the owner's decision.
