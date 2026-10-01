@@ -1,0 +1,291 @@
+{
+  "schema_version": "fixed96-character-qualification-diagnostics/1",
+  "frozen_input_seal_sha256": "26f40568753bece5e26197fc696c371d728efbea3ed4ce111ab0c296bb371b51",
+  "denominator": 96,
+  "NLP_calls": 0,
+  "fit_calls": 0,
+  "rules_changed": false,
+  "new_candidates_read": 0,
+  "definitions": {
+    "rejection_counts": "按输出片段计，多原因重叠，不能相加作记录数",
+    "cumulative_survival": "同一片段依次满足单位数、单单位长度、Han比例、闭合点；不能把不同片段的优点拼合",
+    "closed_point_checks": "冻结候选target=4至min(32,units)-1；统计真实空白/原文空白/稳定前缀的现有检查，不增改阈值",
+    "projection_retention": "原始字符包括大量模板/网址/列表，保留率不等于有效散文损失率"
+  },
+  "by_source": {
+    "discussion": {
+      "counts": {
+        "fixed_records": 32,
+        "source_codepoints": 14183,
+        "raw_source_length_200_20000_pass": 32,
+        "no_projected_segments": 0,
+        "records_with_segments": 32,
+        "preparse_eligible_records": 0,
+        "projected_codepoints": 5597,
+        "segments": 61,
+        "confirmed_closed_points_all_segments": 0,
+        "candidate_closed_point_checks": 20,
+        "records_any_segment_pass_units_8_64": 2,
+        "records_any_segment_pass_unit_length_le512": 32,
+        "records_any_segment_pass_Han_fraction_ge_half": 32,
+        "records_any_segment_pass_closed_points_ge4": 0,
+        "same_segment_cumulative_survival_units_8_64": 2,
+        "same_segment_cumulative_survival_unit_length_le512": 2,
+        "same_segment_cumulative_survival_Han_fraction_ge_half": 2,
+        "same_segment_cumulative_survival_closed_points_ge4": 0
+      },
+      "segment_rejection_counts_overlapping": {
+        "fewer_than4_closed_points": 61,
+        "han_LN_fraction_under_half": 1,
+        "unit_count_outside_8_64": 59
+      },
+      "closed_point_rejection_counts": {
+        "projected_whitespace_boundary_unconfirmed": 20
+      },
+      "all_segment_unit_count_histogram": {
+        "1": 2,
+        "2": 1,
+        "3": 28,
+        "4": 28,
+        "14": 2
+      },
+      "all_segment_closed_points_histogram": {
+        "0": 61
+      },
+      "per_record_max_units_histogram_including_zero_output": {
+        "1": 1,
+        "2": 1,
+        "4": 28,
+        "14": 2
+      },
+      "per_record_max_closed_points_histogram_including_zero_output": {
+        "0": 32
+      },
+      "per_record_max_segment_codepoints_sorted": [
+        45,
+        52,
+        93,
+        93,
+        93,
+        93,
+        94,
+        94,
+        94,
+        94,
+        94,
+        94,
+        94,
+        95,
+        95,
+        96,
+        97,
+        97,
+        98,
+        98,
+        99,
+        100,
+        100,
+        101,
+        101,
+        101,
+        101,
+        103,
+        105,
+        105,
+        521,
+        521
+      ]
+    },
+    "news_prose": {
+      "counts": {
+        "fixed_records": 32,
+        "source_codepoints": 72768,
+        "raw_source_length_200_20000_pass": 32,
+        "no_projected_segments": 25,
+        "records_with_segments": 7,
+        "preparse_eligible_records": 0,
+        "projected_codepoints": 1606,
+        "segments": 14,
+        "records_any_segment_pass_units_8_64": 1,
+        "records_any_segment_pass_unit_length_le512": 7,
+        "records_any_segment_pass_Han_fraction_ge_half": 7,
+        "records_any_segment_pass_closed_points_ge4": 0,
+        "same_segment_cumulative_survival_units_8_64": 1,
+        "same_segment_cumulative_survival_unit_length_le512": 1,
+        "same_segment_cumulative_survival_Han_fraction_ge_half": 1,
+        "same_segment_cumulative_survival_closed_points_ge4": 0,
+        "confirmed_closed_points_all_segments": 5,
+        "candidate_closed_point_checks": 16
+      },
+      "segment_rejection_counts_overlapping": {
+        "fewer_than4_closed_points": 14,
+        "han_LN_fraction_under_half": 3,
+        "unit_count_outside_8_64": 13
+      },
+      "closed_point_rejection_counts": {
+        "projected_whitespace_boundary_unconfirmed": 6,
+        "raw_whitespace_boundary_unconfirmed": 5
+      },
+      "all_segment_unit_count_histogram": {
+        "1": 6,
+        "2": 2,
+        "3": 2,
+        "5": 2,
+        "7": 1,
+        "15": 1
+      },
+      "all_segment_closed_points_histogram": {
+        "0": 10,
+        "1": 3,
+        "2": 1
+      },
+      "per_record_max_units_histogram_including_zero_output": {
+        "0": 25,
+        "1": 1,
+        "3": 2,
+        "5": 2,
+        "7": 1,
+        "15": 1
+      },
+      "per_record_max_closed_points_histogram_including_zero_output": {
+        "0": 28,
+        "1": 3,
+        "2": 1
+      },
+      "per_record_max_segment_codepoints_sorted": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        46,
+        97,
+        102,
+        172,
+        212,
+        301,
+        361
+      ]
+    },
+    "guide_prose": {
+      "counts": {
+        "fixed_records": 32,
+        "source_codepoints": 57752,
+        "raw_source_length_200_20000_pass": 32,
+        "no_projected_segments": 4,
+        "records_with_segments": 28,
+        "preparse_eligible_records": 1,
+        "projected_codepoints": 10907,
+        "segments": 90,
+        "confirmed_closed_points_all_segments": 19,
+        "candidate_closed_point_checks": 61,
+        "records_any_segment_pass_units_8_64": 2,
+        "records_any_segment_pass_unit_length_le512": 28,
+        "records_any_segment_pass_Han_fraction_ge_half": 27,
+        "records_any_segment_pass_closed_points_ge4": 1,
+        "same_segment_cumulative_survival_units_8_64": 2,
+        "same_segment_cumulative_survival_unit_length_le512": 2,
+        "same_segment_cumulative_survival_Han_fraction_ge_half": 2,
+        "same_segment_cumulative_survival_closed_points_ge4": 1
+      },
+      "segment_rejection_counts_overlapping": {
+        "fewer_than4_closed_points": 88,
+        "han_LN_fraction_under_half": 3,
+        "unit_count_outside_8_64": 86
+      },
+      "closed_point_rejection_counts": {
+        "projected_whitespace_boundary_unconfirmed": 41,
+        "raw_whitespace_boundary_unconfirmed": 1
+      },
+      "all_segment_unit_count_histogram": {
+        "1": 33,
+        "2": 22,
+        "3": 11,
+        "4": 3,
+        "5": 8,
+        "6": 5,
+        "7": 4,
+        "9": 1,
+        "10": 1,
+        "13": 1,
+        "15": 1
+      },
+      "all_segment_closed_points_histogram": {
+        "0": 79,
+        "1": 9,
+        "5": 2
+      },
+      "per_record_max_units_histogram_including_zero_output": {
+        "0": 4,
+        "1": 10,
+        "2": 10,
+        "3": 1,
+        "4": 1,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "10": 1,
+        "15": 1
+      },
+      "per_record_max_closed_points_histogram_including_zero_output": {
+        "0": 28,
+        "1": 3,
+        "5": 1
+      },
+      "per_record_max_segment_codepoints_sorted": [
+        0,
+        0,
+        0,
+        0,
+        12,
+        12,
+        15,
+        17,
+        26,
+        32,
+        35,
+        39,
+        41,
+        44,
+        52,
+        53,
+        58,
+        58,
+        62,
+        64,
+        67,
+        70,
+        72,
+        73,
+        73,
+        121,
+        156,
+        240,
+        317,
+        380,
+        423,
+        832
+      ]
+    }
+  }
+}

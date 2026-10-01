@@ -1,0 +1,23 @@
+{
+  "schema_version": "fixed96-independent-results-review-receipt/1",
+  "decision": "BLOCK_SOURCE_ADMISSION_ROLE_FAILURE",
+  "execution_integrity": "PASS_EXACT96",
+  "blinded_reviewers": 2,
+  "reviewed_records_each": 96,
+  "normalized_role_agreements": 94,
+  "original_disagreements": 2,
+  "character_eligible": 1,
+  "adjudicated_character_and_role_pass": 0,
+  "admitted_records": 0,
+  "original_A_labels_sha256": "567ca63802543b8e6cdc1682ccfeb9e99d3208f84851f227b42ffe68d194d4a5",
+  "original_B_labels_sha256": "36887220588145e70adfe5f681b62b6a5f65c26b4c832afc59fea3e4d85ae02a",
+  "contract_sha256": "ea88b0398cf3d60178056b4f5ab44b7da9ec8196c7a87a2fa2c07ba20d29d1c2",
+  "sealed_inputs_sha256": "26f40568753bece5e26197fc696c371d728efbea3ed4ce111ab0c296bb371b51",
+  "NLP_calls": 0,
+  "fit_calls": 0,
+  "candidate6000_reads": 0,
+  "copy_lineage_gate_run": false,
+  "replacement_records": 0,
+  "human_gold": false,
+  "remote_writes": false
+}
