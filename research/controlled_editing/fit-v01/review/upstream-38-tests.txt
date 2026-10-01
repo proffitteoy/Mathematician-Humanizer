@@ -1,0 +1,43 @@
+test_altered_weights_fail_replay (test_fit_wrapper.CheckpointTests.test_altered_weights_fail_replay) ... ok
+test_dev_extremes_never_affect_scaler (test_fit_wrapper.CheckpointTests.test_dev_extremes_never_affect_scaler) ... ok
+test_family_macro_is_not_pooled_rows (test_fit_wrapper.CheckpointTests.test_family_macro_is_not_pooled_rows) ... ok
+test_metrics_family_macro_and_coverage (test_fit_wrapper.CheckpointTests.test_metrics_family_macro_and_coverage) ... ok
+test_nonboolean_constant_mask_rejected (test_fit_wrapper.CheckpointTests.test_nonboolean_constant_mask_rejected) ... ok
+test_one_actual_fit_gradient_replay_u_zero (test_fit_wrapper.CheckpointTests.test_one_actual_fit_gradient_replay_u_zero) ... ok
+test_saved_checkpoint_drives_edit_and_strict_candidate_schema (test_fit_wrapper.CheckpointTests.test_saved_checkpoint_drives_edit_and_strict_candidate_schema) ... ok
+test_synthetic_checkpoint_empirical_edit_abstains (test_fit_wrapper.CheckpointTests.test_synthetic_checkpoint_empirical_edit_abstains) ... ok
+test_threshold_comparator_recomputes_text_not_provided_label (test_fit_wrapper.CheckpointTests.test_threshold_comparator_recomputes_text_not_provided_label) ... ok
+test_checkpoint_and_marker_cannot_overwrite (test_fit_wrapper.WrapperTests.test_checkpoint_and_marker_cannot_overwrite) ... ok
+test_complete_support_and_denominators (test_fit_wrapper.WrapperTests.test_complete_support_and_denominators) ... ok
+test_disagreement_is_excluded_not_relabelled (test_fit_wrapper.WrapperTests.test_disagreement_is_excluded_not_relabelled) ... ok
+test_failure_retains_slot_denominator (test_fit_wrapper.WrapperTests.test_failure_retains_slot_denominator) ... ok
+test_family_leakage_rejected (test_fit_wrapper.WrapperTests.test_family_leakage_rejected) ... ok
+test_fixed_input_hash_checked_before_json_or_corpus (test_fit_wrapper.WrapperTests.test_fixed_input_hash_checked_before_json_or_corpus) ... ok
+test_json_duplicate_nonfinite_rejected (test_fit_wrapper.WrapperTests.test_json_duplicate_nonfinite_rejected) ... ok
+test_minimum_dev_support_fail_closed (test_fit_wrapper.WrapperTests.test_minimum_dev_support_fail_closed) ... ok
+test_minimum_train_support_fail_closed (test_fit_wrapper.WrapperTests.test_minimum_train_support_fail_closed) ... ok
+test_missing_original_slot_rejected (test_fit_wrapper.WrapperTests.test_missing_original_slot_rejected) ... ok
+test_missing_review_rejected (test_fit_wrapper.WrapperTests.test_missing_review_rejected) ... ok
+test_no_root_hash_no_input_read (test_fit_wrapper.WrapperTests.test_no_root_hash_no_input_read) ... ok
+test_nominal_target_cannot_enter_export (test_fit_wrapper.WrapperTests.test_nominal_target_cannot_enter_export) ... ok
+test_nonblind_receipt_rejected (test_fit_wrapper.WrapperTests.test_nonblind_receipt_rejected) ... ok
+test_original_review_paths_cannot_enter_projection (test_fit_wrapper.WrapperTests.test_original_review_paths_cannot_enter_projection) ... ok
+test_projection_exact_subset_ids_required (test_fit_wrapper.WrapperTests.test_projection_exact_subset_ids_required) ... ok
+test_projection_rejects_exported_test_rows (test_fit_wrapper.WrapperTests.test_projection_rejects_exported_test_rows) ... ok
+test_projection_subset_hash_binding (test_fit_wrapper.WrapperTests.test_projection_subset_hash_binding) ... ok
+test_realized_condition_is_not_nominal_request (test_fit_wrapper.WrapperTests.test_realized_condition_is_not_nominal_request) ... ok
+test_same_rater_rejected (test_fit_wrapper.WrapperTests.test_same_rater_rejected) ... ok
+test_semantic_failure_is_excluded (test_fit_wrapper.WrapperTests.test_semantic_failure_is_excluded) ... ok
+test_shared_review_context_rejected (test_fit_wrapper.WrapperTests.test_shared_review_context_rejected) ... ok
+test_stale_budget_receipt_fails_closed (test_fit_wrapper.WrapperTests.test_stale_budget_receipt_fails_closed) ... ok
+test_storage_cap_is_enforced_without_private_reads (test_fit_wrapper.WrapperTests.test_storage_cap_is_enforced_without_private_reads) ... ok
+test_symlink_input_rejected (test_fit_wrapper.WrapperTests.test_symlink_input_rejected) ... ok
+test_synthetic_provenance_rejected_by_empirical_validation (test_fit_wrapper.WrapperTests.test_synthetic_provenance_rejected_by_empirical_validation) ... ok
+test_test_partition_rejected (test_fit_wrapper.WrapperTests.test_test_partition_rejected) ... ok
+test_text_tamper_rejected (test_fit_wrapper.WrapperTests.test_text_tamper_rejected) ... ok
+test_wrong_actual_label_rejected (test_fit_wrapper.WrapperTests.test_wrong_actual_label_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 1.989s
+
+OK

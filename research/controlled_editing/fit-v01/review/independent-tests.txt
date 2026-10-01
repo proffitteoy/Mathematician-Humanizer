@@ -1,0 +1,35 @@
+test_15_support_exact_boundary_16_and_4 (__main__.DataIndependent.test_15_support_exact_boundary_16_and_4) ... ok
+test_16_zero_eligible_families_remain_coverage_denominator (__main__.DataIndependent.test_16_zero_eligible_families_remain_coverage_denominator) ... ok
+test_17_extra_review_rows_fail_instead_of_reading_originals (__main__.DataIndependent.test_17_extra_review_rows_fail_instead_of_reading_originals) ... ok
+test_18_projection_disallows_original_paths_and_nonzero_or_bool_test_count (__main__.DataIndependent.test_18_projection_disallows_original_paths_and_nonzero_or_bool_test_count) ... ok
+test_19_review_unknown_fields_rejected (__main__.DataIndependent.test_19_review_unknown_fields_rejected) ... ok
+test_20_validation_does_no_file_io (__main__.DataIndependent.test_20_validation_does_no_file_io) ... ok
+test_21_strict_top_level_and_slot_keys (__main__.DataIndependent.test_21_strict_top_level_and_slot_keys) ... ok
+test_22_family_genre_balance_enforced (__main__.DataIndependent.test_22_family_genre_balance_enforced) ... ok
+test_23_absent_hash_prevents_any_read (__main__.FailClosedIndependent.test_23_absent_hash_prevents_any_read) ... ok
+test_24_exclusive_synthetic_marker_cannot_overwrite (__main__.FailClosedIndependent.test_24_exclusive_synthetic_marker_cannot_overwrite) ... ok
+test_25_symlink_and_file_size_rejected (__main__.FailClosedIndependent.test_25_symlink_and_file_size_rejected) ... ok
+test_26_duplicate_nan_infinity_json_rejected (__main__.FailClosedIndependent.test_26_duplicate_nan_infinity_json_rejected) ... ok
+test_27_fresh_exclusive_storage_and_exact_boundary (__main__.FailClosedIndependent.test_27_fresh_exclusive_storage_and_exact_boundary) ... ok
+test_28_resource_limits_are_applied_for_this_synthetic_review (__main__.FailClosedIndependent.test_28_resource_limits_are_applied_for_this_synthetic_review) ... ok
+test_29_start_is_global_and_exclusive_before_fit (__main__.FailClosedIndependent.test_29_start_is_global_and_exclusive_before_fit) ... ok
+test_30_completion_after_replay_roundtrip_receipt_and_budget (__main__.FailClosedIndependent.test_30_completion_after_replay_roundtrip_receipt_and_budget) ... ok
+test_01_manifest_and_protocol_exact (__main__.FrozenPackage.test_01_manifest_and_protocol_exact) ... ok
+test_02_all_manifest_entries_and_dependency_hashes (__main__.FrozenPackage.test_02_all_manifest_entries_and_dependency_hashes) ... ok
+test_03_only_three_v03_changes (__main__.FrozenPackage.test_03_only_three_v03_changes) ... ok
+test_04_orchestration_has_one_fixed_fit_and_no_edit (__main__.FrozenPackage.test_04_orchestration_has_one_fixed_fit_and_no_edit) ... ok
+test_05_public_limits_and_claim_boundaries (__main__.FrozenPackage.test_05_public_limits_and_claim_boundaries) ... ok
+test_06_no_empirical_artifacts_present (__main__.FrozenPackage.test_06_no_empirical_artifacts_present) ... ok
+test_07_independent_150_step_recurrence (__main__.NumericalIndependent.test_07_independent_150_step_recurrence) ... ok
+test_08_family_weighting_differs_from_row_pooling (__main__.NumericalIndependent.test_08_family_weighting_differs_from_row_pooling) ... ok
+test_09_zero_preferences_and_wrapper_replay (__main__.NumericalIndependent.test_09_zero_preferences_and_wrapper_replay) ... ok
+test_10_replication_inside_family_preserves_loss (__main__.NumericalIndependent.test_10_replication_inside_family_preserves_loss) ... ok
+test_11_dev_rows_cannot_be_fitted (__main__.NumericalIndependent.test_11_dev_rows_cannot_be_fitted) ... ok
+test_12_model_roundtrip_and_hash_tamper (__main__.NumericalIndependent.test_12_model_roundtrip_and_hash_tamper) ... ok
+test_13_all_nonbool_constant_masks_rejected (__main__.NumericalIndependent.test_13_all_nonbool_constant_masks_rejected) ... ok
+test_14_receipt_six_keys_exact_even_if_hash_approved (__main__.NumericalIndependent.test_14_receipt_six_keys_exact_even_if_hash_approved) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.746s
+
+OK

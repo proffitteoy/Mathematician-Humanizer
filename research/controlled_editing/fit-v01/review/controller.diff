@@ -1,0 +1,29 @@
+--- /workspace/shared/style-edit-controller-v02/controller.py	2026-10-02 06:29:15.885653422 +0900
++++ /workspace/shared/style-controlled-fit-v01/controller_v03.py	2026-10-02 07:12:11.759220324 +0900
+@@ -9,7 +9,7 @@
+ from dataclasses import dataclass
+ from pathlib import Path
+ 
+-VERSION='bounded-structural-edit-controller/0.2'
++VERSION='bounded-structural-edit-controller/0.3'
+ CONDITIONS=('short_early','short_late','mixed_early','mixed_late')
+ GENRES=('general_explanation','process_description','event_summary','reflective_commentary')
+ FEATURES=('log_chars','log_sentences','mean_sentence_chars','sd_sentence_chars','sentence_cv','short_sentence_fraction','long_sentence_fraction','adjacent_length_change','log_paragraphs','punctuation_fraction','mainpoint_start_fraction','mainpoint_end_fraction')
+@@ -63,7 +63,7 @@
+ 
+ 
+ def semantic_receipt_ok(source,candidate,receipt,approved_hashes):
+-    if not isinstance(receipt,dict) or digest(receipt) not in approved_hashes:return False
++    if not isinstance(receipt,dict) or set(receipt)!={'source_sha256','candidate_sha256','decision','reviewer_profile','review_id','checks'} or digest(receipt) not in approved_hashes:return False
+     return (receipt.get('source_sha256')==text_hash(source) and receipt.get('candidate_sha256')==text_hash(candidate)
+             and receipt.get('decision')=='pass' and receipt.get('reviewer_profile')=='independent_preservation_review/v1'
+             and bool(receipt.get('review_id')) and receipt.get('checks')==['facts','negation','modality','quantifiers','scope'])
+@@ -157,7 +157,7 @@
+     require(m.get('training',{}).get('status')=='completed_actual_gradient_fit' and m['training'].get('training_only') is True,'trained_checkpoint_required')
+     d=len(FEATURES)+1
+     require(all(len(m[k])==4 and all(len(v)==d and finite(v) for v in m[k]) for k in ('condition_weights','preference_weights')),'checkpoint_tensor_invalid')
+-    t=m['transform'];require(t.get('fit_partition')=='train' and all(len(t[k])==len(FEATURES) for k in ('center','scale','constant')) and finite(t['center']+t['scale']) and all(x>0 for x in t['scale']),'checkpoint_transform_invalid')
++    t=m['transform'];require(t.get('fit_partition')=='train' and all(len(t[k])==len(FEATURES) for k in ('center','scale','constant')) and finite(t['center']+t['scale']) and all(x>0 for x in t['scale']) and all(type(x) is bool for x in t['constant']),'checkpoint_transform_invalid')
+     return m
+ 
+ 

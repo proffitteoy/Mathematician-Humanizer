@@ -1,0 +1,84 @@
+{
+  "schema": "controlled-fit-review-source-provenance/v1",
+  "checked_at_utc": "2026-10-01T22:32:01.464198+00:00",
+  "all_manifest_entries_verified": true,
+  "frozen_package_unchanged": true,
+  "approved_source_files": [
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/FILE_HASHES.json",
+      "bytes": 1750,
+      "sha256": "1c99373b805ca12f46ecd57362b26be376cc4a1005c01009067e8aa304f4e4f7"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/PROTOCOL.md",
+      "bytes": 16367,
+      "sha256": "38c02ff1de304b7e4be26d171449845bac2148769e516b5dbf5bde0e4ae4c4a8"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/protocol.json",
+      "bytes": 2056,
+      "sha256": "b64fb0017677baa8ab4fb52ca17a07b92fac95b72c0cdf742fb7926dc61b0ed2"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/fit_wrapper.py",
+      "bytes": 23384,
+      "sha256": "ca61453c36ec4888c4a720c601f448ec7d832e629563a6b1b2ce11c922d78df1"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/controller_v03.py",
+      "bytes": 17163,
+      "sha256": "af2b6ec09ff1ee41c71185c3c4bb36a8a35dedd05283a4336c1363254661f5a1"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/labels_v02.py",
+      "bytes": 4611,
+      "sha256": "4160778e11a16c79b58349ceeadf36c0e633474a9f39f16191211cacade9d1f8"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/test_fit_wrapper.py",
+      "bytes": 17981,
+      "sha256": "a9e1126fac3b4ee74d9dc8ed054243883e06086ef6406e2b12c0b397a3b29d59"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/synthetic-tests.txt",
+      "bytes": 4630,
+      "sha256": "83141dfb03d7df2bc525ba307d055c9302c33d06b56ace734b5bf779dc53709b"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/synthetic-only.weights.json",
+      "bytes": 3019,
+      "sha256": "9292deb13550283b5926c7075d22dd6f6f3b94eaf28dab1249d296f75488d5b9"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/synthetic-evidence.json",
+      "bytes": 799,
+      "sha256": "a3e77fd37c02aaa590d4f2acde3aef94e06c1cc66ab034cb34741f068038ba0d"
+    },
+    {
+      "path": "/workspace/shared/style-edit-controller-v02/controller.py",
+      "bytes": 17010,
+      "sha256": "f69a127b7e729770535501ea39374fa57e74f2ad3af62cf3ededb03dbab628ac"
+    },
+    {
+      "path": "/workspace/shared/style-edit-controller-v02/README.zh.md",
+      "bytes": 2332,
+      "sha256": "cabfb83ab453411e03c4c204b20b64fc0a6d0300d32d5eb61cb053eec9fb19f1"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-authoring-v02/public/labels.py",
+      "bytes": 4611,
+      "sha256": "4160778e11a16c79b58349ceeadf36c0e633474a9f39f16191211cacade9d1f8"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-authoring-v02/public/authoring.contract.json",
+      "bytes": 1862,
+      "sha256": "bb48ab8a20d4a02571c25fcecf65d2d81831ef86d5eee9d018427b8969207c42"
+    }
+  ],
+  "read_private_controlled_content": false,
+  "read_test_plans_or_labels": false,
+  "original_384_review_hashes_verified": false,
+  "original_384_projection_independence": "root_custody_and_attestation_not_independently_observable",
+  "outputs_directory": "/workspace/shared/style-controlled-fit-review-v01",
+  "remote_writes": false
+}

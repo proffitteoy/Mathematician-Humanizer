@@ -1,0 +1,56 @@
+{
+  "schema": "controlled-fit-package/v1",
+  "files": [
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 16367,
+      "sha256": "38c02ff1de304b7e4be26d171449845bac2148769e516b5dbf5bde0e4ae4c4a8"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 2056,
+      "sha256": "b64fb0017677baa8ab4fb52ca17a07b92fac95b72c0cdf742fb7926dc61b0ed2"
+    },
+    {
+      "path": "fit_wrapper.py",
+      "bytes": 23384,
+      "sha256": "ca61453c36ec4888c4a720c601f448ec7d832e629563a6b1b2ce11c922d78df1"
+    },
+    {
+      "path": "controller_v03.py",
+      "bytes": 17163,
+      "sha256": "af2b6ec09ff1ee41c71185c3c4bb36a8a35dedd05283a4336c1363254661f5a1"
+    },
+    {
+      "path": "labels_v02.py",
+      "bytes": 4611,
+      "sha256": "4160778e11a16c79b58349ceeadf36c0e633474a9f39f16191211cacade9d1f8"
+    },
+    {
+      "path": "test_fit_wrapper.py",
+      "bytes": 17981,
+      "sha256": "a9e1126fac3b4ee74d9dc8ed054243883e06086ef6406e2b12c0b397a3b29d59"
+    },
+    {
+      "path": "synthetic-tests.txt",
+      "bytes": 4630,
+      "sha256": "83141dfb03d7df2bc525ba307d055c9302c33d06b56ace734b5bf779dc53709b"
+    },
+    {
+      "path": "synthetic-only.weights.json",
+      "bytes": 3019,
+      "sha256": "9292deb13550283b5926c7075d22dd6f6f3b94eaf28dab1249d296f75488d5b9"
+    },
+    {
+      "path": "synthetic-evidence.json",
+      "bytes": 799,
+      "sha256": "a3e77fd37c02aaa590d4f2acde3aef94e06c1cc66ab034cb34741f068038ba0d"
+    }
+  ],
+  "frozen_dependencies": {
+    "controller_v02_sha256": "f69a127b7e729770535501ea39374fa57e74f2ad3af62cf3ededb03dbab628ac",
+    "public_labels_v02_sha256": "4160778e11a16c79b58349ceeadf36c0e633474a9f39f16191211cacade9d1f8",
+    "original_controller_changed": false,
+    "original_public_labels_changed": false
+  }
+}

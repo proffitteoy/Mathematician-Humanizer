@@ -1,0 +1,45 @@
+{
+  "schema": "controlled-fit-independent-review-package/v1",
+  "files": [
+    {
+      "path": "AUDIT.zh.md",
+      "bytes": 10160,
+      "sha256": "e76ef155d47e2071cdc892e6feae0d4616cfe65144ba03f67e6e29775c27750a"
+    },
+    {
+      "path": "audit-result.json",
+      "bytes": 697,
+      "sha256": "bcd9327342c0df48f96185f263300aff0c163b1adc61c7dca9f1b471e87fc38d"
+    },
+    {
+      "path": "controller.diff",
+      "bytes": 2452,
+      "sha256": "02fb75dfd9a146454cb616635d097f73353341ed477dfa58c0eae5ddc4ec552d"
+    },
+    {
+      "path": "independent-tests.txt",
+      "bytes": 3971,
+      "sha256": "7aeab4c640ff84414762326166c908df4dda3cc2728612a6b3aa73112feabe4f"
+    },
+    {
+      "path": "independent_tests.py",
+      "bytes": 18933,
+      "sha256": "48cb31c331a7051ca6a9dd888fe0dd5d7af57698c817bc77d720e20847b52c19"
+    },
+    {
+      "path": "numerical-evidence.json",
+      "bytes": 1072,
+      "sha256": "9fae427d7b3cdc4036b4e3122a60574e370794d64df7d0fa4e858392ec19b3f8"
+    },
+    {
+      "path": "source-hash-provenance.json",
+      "bytes": 3315,
+      "sha256": "49168a44973acd532ee99f0caa36f17c8fc0dac6d18f0cf50d121caa492a79e8"
+    },
+    {
+      "path": "upstream-38-tests.txt",
+      "bytes": 4630,
+      "sha256": "446140c6e9ff00bf84280a68ad96cfcdf21b04c051069bc6c68dea400aa295ee"
+    }
+  ]
+}
