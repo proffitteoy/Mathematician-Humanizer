@@ -1,0 +1,20 @@
+{
+  "schema_version": "v021-readback-prefreeze/1",
+  "private_contract_sha256": "a2db0fe7b7efc7e81319f0c3a4a040fc2f3572d5121e30e77ce9cf815d4c7f73",
+  "script_sha256": "0f16a27d2f600cfb5ae8346eebf4a9baefff27a35f163a3190103ff949054ac2",
+  "written_contract_sha256": "a2dcb5cdb9fa211684e0cab2386d2b67385b357415b1635157993422bac16e18",
+  "preflight_synthetic_tests": 10,
+  "no_body_reads_before_freeze": true,
+  "marker_created": false,
+  "execution_manifest_sha256": "9f565d98c5689db39aa23cb3d47600d5a530a1515eaacbdcb8151ea9ce6513b6",
+  "sources": 3,
+  "raw_bytes": 52679,
+  "caps": {
+    "seconds": 30,
+    "address_space_bytes": 536870912,
+    "cpu_threads": 2,
+    "charged_bytes": 4194304,
+    "terminal_reserve_bytes": 65536
+  },
+  "created_at": "2026-10-01T22:23:53.102902+00:00"
+}

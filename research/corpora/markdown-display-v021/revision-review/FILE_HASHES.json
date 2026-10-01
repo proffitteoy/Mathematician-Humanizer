@@ -1,0 +1,21 @@
+{
+  "schema_version": "public-file-sha256/1",
+  "files": {
+    "INDEPENDENT_REVIEW_AND_SELF_AUTHORED_FIX.zh.md": {
+      "sha256": "2eb4f4416f90b28e34ed81e04f0079898483ee025db2058924e67e26ae963cfd",
+      "bytes": 6092
+    },
+    "REVIEW_RECEIPT.json": {
+      "sha256": "e0c37a837627474ffd6e5715e54837d6a4f8ffddd426dffb941a66da4608e32a",
+      "bytes": 1283
+    },
+    "corrected-adversaries.log": {
+      "sha256": "e3d5ed5bf7f20ee74ee83e55ce42f78031d25c6d2e3f435b5cf8eeb6d107af05",
+      "bytes": 4248
+    },
+    "test_independent_continuity.py": {
+      "sha256": "3c2c7d31546d03487dfaad29a5873a190c0f2e877689b022c7a29ae6534bb234",
+      "bytes": 6871
+    }
+  }
+}

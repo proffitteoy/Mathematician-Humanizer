@@ -1,0 +1,15 @@
+test_duplicate_json_rejected (test_readback_invariants.ReadbackCases.test_duplicate_json_rejected) ... ok
+test_emphasis_and_link_proofs (test_readback_invariants.ReadbackCases.test_emphasis_and_link_proofs) ... ok
+test_empty_source (test_readback_invariants.ReadbackCases.test_empty_source) ... ok
+test_false_boundary_rejected (test_readback_invariants.ReadbackCases.test_false_boundary_rejected) ... ok
+test_false_character_map_rejected (test_readback_invariants.ReadbackCases.test_false_character_map_rejected) ... ok
+test_hard_gap_and_unicode (test_readback_invariants.ReadbackCases.test_hard_gap_and_unicode) ... ok
+test_missing_partition_rejected (test_readback_invariants.ReadbackCases.test_missing_partition_rejected) ... ok
+test_nonfinite_json_rejected (test_readback_invariants.ReadbackCases.test_nonfinite_json_rejected) ... ok
+test_proof_gap_rejected (test_readback_invariants.ReadbackCases.test_proof_gap_rejected) ... ok
+test_table_scope (test_readback_invariants.ReadbackCases.test_table_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.017s
+
+OK

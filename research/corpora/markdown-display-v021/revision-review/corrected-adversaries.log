@@ -1,0 +1,38 @@
+test_drop_content_boundary (test_independent_continuity.ForgedProofCases.test_drop_content_boundary) ... ok
+test_false_context_role (test_independent_continuity.ForgedProofCases.test_false_context_role) ... ok
+test_false_elision_edge (test_independent_continuity.ForgedProofCases.test_false_elision_edge) ... ok
+test_false_old_certificate_compatibility (test_independent_continuity.ForgedProofCases.test_false_old_certificate_compatibility) ... ok
+test_false_proof_kind (test_independent_continuity.ForgedProofCases.test_false_proof_kind) ... ok
+test_false_proof_span (test_independent_continuity.ForgedProofCases.test_false_proof_span) ... ok
+test_annotated_second_table_is_barrier (test_independent_continuity.IndependentContinuity.test_annotated_second_table_is_barrier) ... ok
+test_autolink_does_not_gain_continuity (test_independent_continuity.IndependentContinuity.test_autolink_does_not_gain_continuity) ... ok
+test_caption_with_links_not_recovered (test_independent_continuity.IndependentContinuity.test_caption_with_links_not_recovered) ... ok
+test_combining_astral_raw_map (test_independent_continuity.IndependentContinuity.test_combining_astral_raw_map) ... ok
+test_destination_title_not_visible (test_independent_continuity.IndependentContinuity.test_destination_title_not_visible) ... ok
+test_emphasis_across_line_break (test_independent_continuity.IndependentContinuity.test_emphasis_across_line_break) ... ok
+test_empty_visible_link_label (test_independent_continuity.IndependentContinuity.test_empty_visible_link_label) ... ok
+test_image_in_label_not_recovered (test_independent_continuity.IndependentContinuity.test_image_in_label_not_recovered) ... ok
+test_label_encoded_quotes_quarantine (test_independent_continuity.IndependentContinuity.test_label_encoded_quotes_quarantine) ... ok
+test_label_entity_is_barrier (test_independent_continuity.IndependentContinuity.test_label_entity_is_barrier) ... ok
+test_label_escape_is_barrier (test_independent_continuity.IndependentContinuity.test_label_escape_is_barrier) ... ok
+test_label_footnote_is_barrier (test_independent_continuity.IndependentContinuity.test_label_footnote_is_barrier) ... ok
+test_label_inline_code_is_barrier (test_independent_continuity.IndependentContinuity.test_label_inline_code_is_barrier) ... ok
+test_label_math_is_barrier (test_independent_continuity.IndependentContinuity.test_label_math_is_barrier) ... ok
+test_label_quote_is_barrier (test_independent_continuity.IndependentContinuity.test_label_quote_is_barrier) ... ok
+test_label_unbalanced_quote_quarantine (test_independent_continuity.IndependentContinuity.test_label_unbalanced_quote_quarantine) ... ok
+test_nested_emphasis_inside_link (test_independent_continuity.IndependentContinuity.test_nested_emphasis_inside_link) ... ok
+test_nested_thematic_break_cannot_close_root_scope (test_independent_continuity.IndependentContinuity.test_nested_thematic_break_cannot_close_root_scope) ... ok
+test_repeated_text_has_distinct_provenance (test_independent_continuity.IndependentContinuity.test_repeated_text_has_distinct_provenance) ... ok
+test_same_item_heading_can_end_scope (test_independent_continuity.IndependentContinuity.test_same_item_heading_can_end_scope) ... ok
+test_same_root_heading_can_end_scope (test_independent_continuity.IndependentContinuity.test_same_root_heading_can_end_scope) ... ok
+test_separate_list_cannot_close_table_scope (test_independent_continuity.IndependentContinuity.test_separate_list_cannot_close_table_scope) ... ok
+test_separate_quote_cannot_close_table_scope (test_independent_continuity.IndependentContinuity.test_separate_quote_cannot_close_table_scope) ... ok
+test_sibling_item_cannot_close_table_scope (test_independent_continuity.IndependentContinuity.test_sibling_item_cannot_close_table_scope) ... ok
+test_visible_label_newline_is_barrier (test_independent_continuity.IndependentContinuity.test_visible_label_newline_is_barrier) ... ok
+test_visible_link_label (test_independent_continuity.IndependentContinuity.test_visible_link_label) ... ok
+test_visible_spaces_preserved (test_independent_continuity.IndependentContinuity.test_visible_spaces_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.130s
+
+OK

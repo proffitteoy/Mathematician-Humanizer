@@ -1,0 +1,29 @@
+test_exclusive_marker_survives_second_write (test_runner_faults.SmokeFaultTests.test_exclusive_marker_survives_second_write) ... ok
+test_fsync_failure_is_not_success (test_runner_faults.SmokeFaultTests.test_fsync_failure_is_not_success) ... ok
+test_hash_failure_is_completed_exposure (test_runner_faults.SmokeFaultTests.test_hash_failure_is_completed_exposure) ... ok
+test_nonpython_dependency_hash_checked (test_runner_faults.SmokeFaultTests.test_nonpython_dependency_hash_checked) ... ok
+test_open_failure_not_completed_read (test_runner_faults.SmokeFaultTests.test_open_failure_not_completed_read) ... ok
+test_postread_persistence_failure_counts_exposure (test_runner_faults.SmokeFaultTests.test_postread_persistence_failure_counts_exposure) ... ok
+test_preledger_failure_prevents_open_attempt (test_runner_faults.SmokeFaultTests.test_preledger_failure_prevents_open_attempt) ... ok
+test_size_failure_prevents_open_attempt (test_runner_faults.SmokeFaultTests.test_size_failure_prevents_open_attempt) ... ok
+test_success_has_pre_and_post_events (test_runner_faults.SmokeFaultTests.test_success_has_pre_and_post_events) ... ok
+test_symlink_rejected (test_runner_faults.SmokeFaultTests.test_symlink_rejected) ... ok
+test_terminal_reserve_usable (test_runner_faults.SmokeFaultTests.test_terminal_reserve_usable) ... ok
+test_terminal_still_capped (test_runner_faults.SmokeFaultTests.test_terminal_still_capped) ... ok
+test_accounting_charges_all_roots (test_preflight_bindings.BindingTests.test_accounting_charges_all_roots) ... ok
+test_budget_roots_include_audit (test_preflight_bindings.BindingTests.test_budget_roots_include_audit) ... ok
+test_exact_go (test_preflight_bindings.BindingTests.test_exact_go) ... ok
+test_extra_go_field (test_preflight_bindings.BindingTests.test_extra_go_field) ... ok
+test_extra_stage (test_preflight_bindings.BindingTests.test_extra_stage) ... ok
+test_no_go (test_preflight_bindings.BindingTests.test_no_go) ... ok
+test_nonboolean_authorization (test_preflight_bindings.BindingTests.test_nonboolean_authorization) ... ok
+test_prior_markers_distinct (test_preflight_bindings.BindingTests.test_prior_markers_distinct) ... ok
+test_wrong_contract (test_preflight_bindings.BindingTests.test_wrong_contract) ... ok
+test_wrong_go_digest (test_preflight_bindings.BindingTests.test_wrong_go_digest) ... ok
+test_wrong_manifest (test_preflight_bindings.BindingTests.test_wrong_manifest) ... ok
+test_wrong_profile (test_preflight_bindings.BindingTests.test_wrong_profile) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.005s
+
+OK

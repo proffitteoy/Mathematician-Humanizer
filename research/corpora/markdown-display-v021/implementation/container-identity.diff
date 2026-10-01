@@ -1,0 +1,60 @@
+--- v0.2/continuity_projection.py
++++ v0.2.1/continuity_projection.py
+@@ -13,8 +13,8 @@
+ 
+ BASE_PATH=Path('/workspace/shared/style-markdown-projection-v01/public/markdown_projection.py')
+ BASE_SHA='06da4976dfd55f48f55a23600f32561dd2325fcc1c7d3abb94b73752a9680f2a'
+-PROFILE='historical-blog-markdown-display-continuity/0.2.0'
+-SCHEMA='markdown-display-continuity/2.0'
++PROFILE='historical-blog-markdown-display-continuity/0.2.1'
++SCHEMA='markdown-display-continuity/2.1'
+ 
+ def sha(data):return hashlib.sha256(data).hexdigest()
+ def canonical(x):return json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
+@@ -123,9 +123,9 @@
+                 mark(offsets[end:b],'syntax_only','link_wrapper',pid,proof)
+                 inline(content[a+1:end],offsets[a+1:end],pid,False,depth+1,True)
+ 
+-        stack=[];pid=0;previous_image=False;table_after=None;table_context=None
++        stack=[];container_path=[];pid=0;previous_image=False;table_after=None;table_context=None
+         prior_paragraph_blocks=[];list_blocks=[]
+-        for token in tokens:
++        for token_index,token in enumerate(tokens):
+             if token.type=='paragraph_open':prior_paragraph_blocks.append(base.block_bounds(token,starts,len(src)))
+             elif token.type in {'bullet_list_open','ordered_list_open'}:list_blocks.append(base.block_bounds(token,starts,len(src)))
+             if token.type=='table_open':
+@@ -137,10 +137,12 @@
+                     if containing:a,b=min(containing,key=lambda pair:pair[0])
+                     table_caption_scopes.append([mapping[a][0],mapping[b][0] if b<len(mapping) else n])
+                 if table_after is None:
+-                    table_after=table_end;table_context=tuple(stack)
++                    # Token types alone alias sibling containers. The complete
++                    # path of opener indices identifies this actual AST container.
++                    table_after=table_end;table_context=tuple(container_path)
+                 previous_image=False
+             elif token.type in {'heading_open','hr'}:
+-                if table_after is not None and tuple(stack)==table_context:
++                if table_after is not None and tuple(container_path)==table_context:
+                     end=base.block_bounds(token,starts,len(src))[0]
+                     if table_after<end:table_scopes.append([mapping[table_after][0] if table_after<len(mapping) else n,mapping[end][0] if end<len(mapping) else n])
+                     table_after=None
+@@ -149,7 +151,7 @@
+             elif token.type in {'fence','code_block','html_block','definition'}:previous_image=False
+             if token.nesting==-1:
+                 if not stack:raise ProjectionError('ast_stack_underflow')
+-                stack.pop();continue
++                stack.pop();container_path.pop();continue
+             ancestors=tuple(stack)
+             if token.type=='inline':
+                 if not ancestors or ancestors[-1]!='paragraph_open' or any(x in ancestors for x in ('blockquote_open','heading_open','table_open')):
+@@ -165,7 +167,9 @@
+                         paragraph_context[pid]='list_prose_candidate' if 'list_item_open' in ancestors else 'body_prose_candidate'
+                         inline(token.content,token.meta['source_offsets'],pid,'list_item_open' in ancestors)
+                         pid+=1
+-            if token.nesting==1:stack.append(token.type)
++            if token.nesting==1:
++                stack.append(token.type)
++                container_path.append((token.type,token_index))
+         if table_after is not None and table_after<len(mapping):table_scopes.append([mapping[table_after][0],n])
+         for a,b in table_scopes:
+             for i in range(a,b):

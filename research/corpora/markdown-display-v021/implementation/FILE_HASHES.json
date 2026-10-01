@@ -1,0 +1,45 @@
+{
+  "schema_version": "file-inventory/1",
+  "files": {
+    "BOUNDED_DIAGNOSTIC_CONTRACT_PROPOSAL.zh.md": {
+      "sha256": "7b9d180f58bc74befc88d40ee27fb1176ec65f711c0466028309981325869e09",
+      "bytes": 2736
+    },
+    "CONTINUITY_CONTRACT.md": {
+      "sha256": "5a1fd7b0bcf2e909d732236eaa4a7c26d62c0fc6c1992def888483e2fa944cbf",
+      "bytes": 9598
+    },
+    "IMPLEMENTATION_FREEZE.json": {
+      "sha256": "c92d393a3c7184a5ed5d2f0be4759e6cd1d40533c51a1bc6c4f309b6342f5f0f",
+      "bytes": 1092
+    },
+    "THIRD_PARTY_LICENSES.txt": {
+      "sha256": "ee3424a840a38ca3f4294fe27d19bb53f905e84eedbf4d7b2c4772b867979e36",
+      "bytes": 3685
+    },
+    "container-identity.diff": {
+      "sha256": "1ff29887ae360cc9f0318674c4f11572544266e69b899abb400da0fe35a977cb",
+      "bytes": 3733
+    },
+    "continuity_projection.py": {
+      "sha256": "7b9330df302fa3272617667662879a31cec13c323904b5f91715126704345688",
+      "bytes": 19323
+    },
+    "dependencies.json": {
+      "sha256": "9c2a2b02c7db994039aa6102334d992f2644004b71b038373b43d7f17a5f74bf",
+      "bytes": 423
+    },
+    "synthetic-tests.log": {
+      "sha256": "6d1fc37607342e4313d501db179fb0954c79d8112a88eb1f6df05469304d359f",
+      "bytes": 8115
+    },
+    "test_container_identity.py": {
+      "sha256": "dee94b969de2ea14ff2c3a35cdc8859effb262291d457c5bdfc71a613684ab54",
+      "bytes": 2186
+    },
+    "test_continuity_projection.py": {
+      "sha256": "5613d3286e22c50f5b26d27d1bd3ad4ac900702013d725246f677f0f7924306b",
+      "bytes": 9894
+    }
+  }
+}
