@@ -1,0 +1,51 @@
+{
+  "repository": "proffitteoy/style-compiler",
+  "commit": "bd2e471bb58e3615fdd7b8f167912d85bef7f29a",
+  "files": [
+    {
+      "path": "research/observed_sequence/protocol/test-evaluation-plan.json",
+      "sha256": "427e39afabbdd21793459a7eb2e1368d480dc1af9a46ed73c7104a3d7dde8cb8",
+      "git_blob_sha1": "700b820840885349bd86aa24f5fa97da6d8549df",
+      "url": "https://github.com/proffitteoy/style-compiler/blob/bd2e471bb58e3615fdd7b8f167912d85bef7f29a/research/observed_sequence/protocol/test-evaluation-plan.json"
+    },
+    {
+      "path": "research/observed_sequence/run_test.py",
+      "sha256": "7e9de68ed681e58fc2696b0f0b3aef3f153d918871c95942df129e8b4e9c6711",
+      "git_blob_sha1": "b35d3530b87d81c5bdbc8772301aac67cfe9c235",
+      "url": "https://github.com/proffitteoy/style-compiler/blob/bd2e471bb58e3615fdd7b8f167912d85bef7f29a/research/observed_sequence/run_test.py"
+    },
+    {
+      "path": "research/observed_sequence/sealed_extract.py",
+      "sha256": "89476ad55f7f30e8ab08660815f9389cf24a49757244f2822eae883d2571331e",
+      "git_blob_sha1": "fb8545b05a8481ef90e0a52eec76efb9d023358b",
+      "url": "https://github.com/proffitteoy/style-compiler/blob/bd2e471bb58e3615fdd7b8f167912d85bef7f29a/research/observed_sequence/sealed_extract.py"
+    },
+    {
+      "path": "research/observed_sequence/evaluation.py",
+      "sha256": "0c1d8eb95da7da31478ace776e18d1ff8705ce9853169e2d173923a26c301c6d",
+      "git_blob_sha1": "2439dd0ef09678f58491409594f7e4857411c0f0",
+      "url": "https://github.com/proffitteoy/style-compiler/blob/bd2e471bb58e3615fdd7b8f167912d85bef7f29a/research/observed_sequence/evaluation.py"
+    },
+    {
+      "path": "research/observed_sequence/protocol/test-implementation-receipt.public.json",
+      "sha256": "a7b32894f66249d4bef4c9386fad7444497a054210ab9d3fc5847ef2426ab38a",
+      "git_blob_sha1": "c31181e9e8f5dc77a33f3b6bf53ccfac5614f390",
+      "url": "https://github.com/proffitteoy/style-compiler/blob/bd2e471bb58e3615fdd7b8f167912d85bef7f29a/research/observed_sequence/protocol/test-implementation-receipt.public.json"
+    },
+    {
+      "path": "research/observed_sequence/reviews/TEST_ADMISSION_REVIEW_ZH.md",
+      "sha256": "a24b09ab678d88366232512385a9cac4853ac568b73211b5e8aa7177e6c21ac0",
+      "git_blob_sha1": "f735a108c627a62ed6c1a5d6c75ee0f7a9df99ac",
+      "url": "https://github.com/proffitteoy/style-compiler/blob/bd2e471bb58e3615fdd7b8f167912d85bef7f29a/research/observed_sequence/reviews/TEST_ADMISSION_REVIEW_ZH.md"
+    },
+    {
+      "path": "research/observed_sequence/reviews/test-admission-review-receipt.public.json",
+      "sha256": "e9c16fc908fa5cebac930e433423cc3f47e82d47f9d6d723fb4bc42355270902",
+      "git_blob_sha1": "b3977ab0bd9b0194dfd597787986f551bf9c0657",
+      "url": "https://github.com/proffitteoy/style-compiler/blob/bd2e471bb58e3615fdd7b8f167912d85bef7f29a/research/observed_sequence/reviews/test-admission-review-receipt.public.json"
+    }
+  ],
+  "all_seven_remote_files_match_local_bound_artifacts": true,
+  "commit_metadata_created_at": "2026-10-01T17:23:25Z",
+  "chronology_limit": "Commit timestamp is commit metadata; external publication before root GO is based on the root execution timeline, not inferred from hashes alone."
+}
