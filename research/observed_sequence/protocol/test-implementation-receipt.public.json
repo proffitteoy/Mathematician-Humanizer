@@ -1,0 +1,41 @@
+{
+  "status": "test_implementation_frozen_pending_one_time_root_TEST_GO",
+  "evaluation_plan_sha256": "427e39afabbdd21793459a7eb2e1368d480dc1af9a46ed73c7104a3d7dde8cb8",
+  "files": {
+    "run_test.py": {
+      "bytes": 11557,
+      "sha256": "7e9de68ed681e58fc2696b0f0b3aef3f153d918871c95942df129e8b4e9c6711"
+    },
+    "sealed_extract.py": {
+      "bytes": 4704,
+      "sha256": "89476ad55f7f30e8ab08660815f9389cf24a49757244f2822eae883d2571331e"
+    },
+    "evaluation.py": {
+      "bytes": 31771,
+      "sha256": "0c1d8eb95da7da31478ace776e18d1ff8705ce9853169e2d173923a26c301c6d"
+    },
+    "test_evaluation.py": {
+      "bytes": 27789,
+      "sha256": "70c09c1797d29dcd70f9ff540ce0b2c420112c8280c03c73f1d7741a401fbdcf"
+    },
+    "test_run_test.py": {
+      "bytes": 2947,
+      "sha256": "9f2f286d093e41bf7cf8f93f49f75affb3fe921eae9081c3d650d1e3c72747c2"
+    },
+    "test_test_extract_guard.py": {
+      "bytes": 684,
+      "sha256": "f1fe8d47905f5198eef4a1459bc23833a96f21e399211d7dc70054aad62461a1"
+    }
+  },
+  "original_synthetic_module_tests_passed": 112,
+  "new_evaluation_tests": 26,
+  "all_previously_fitted_source_hashes_unchanged": true,
+  "natural_test_records_opened": 0,
+  "natural_test_parser_units": 0,
+  "new_fit": false,
+  "schema_or_gate_parameters_changed": false,
+  "test_control_file": "style-compiler-data/learning-pilot-test-v01/control.json",
+  "output_scope": "Raw/cache/predictions/paired losses/bootstrap replicates/weights remain private outside repo; public_report only for publication",
+  "dependency": "Independent code review and root one-timeTESTGO still required",
+  "pre_unseal_review_fix": "Explicit pre-unseal and pre-report original extraction dependency and archive-reader implementation hash checks, with two synthetic tamper tests; no source/sample/model/statistical change; both torch thread pools fixed to2 before model load/parse, metadata timing documentation clarified"
+}
