@@ -1,0 +1,41 @@
+{
+  "schema_version": "scale10-recovery-independent-checks/1",
+  "verified_manifest_entries": 26,
+  "manifests": [
+    {
+      "directory": "/workspace/shared/style-scale10-plan-review/public",
+      "entries": 6,
+      "sha256": "12d7f548b25e6f2f79946fea73329a3d250db3141231ecbd2cace25acfee996a"
+    },
+    {
+      "directory": "/workspace/shared/style-fingerprint-review/public",
+      "entries": 3,
+      "sha256": "65fd5ae9c4bbbeeab8b65b20191fe24b3c39a5497f0f93cb7a53909b64279987"
+    },
+    {
+      "directory": "/workspace/shared/style-learning-pilot/scale10-plan-v03",
+      "entries": 9,
+      "sha256": "1cb73781835dc453eda8740f3fe2b847ea841b6a584d3c8d7369e812e3b8b2d1"
+    },
+    {
+      "directory": "/workspace/shared/style-learning-pilot/exposure-fingerprints-v01",
+      "entries": 8,
+      "sha256": "1240262aa08bfcbd09b2072e1c99d4f0aee8cd0447019229523f9bb646fbba5f"
+    }
+  ],
+  "independent_graph_trials": 300,
+  "iterable_variants_per_graph": 3,
+  "independent_graph_calls": 900,
+  "graph_failures": 0,
+  "alias_namespace_changed_component_id_and_multihop_checks": "pass",
+  "missing_excluded_ancestor_rejected": true,
+  "exact_protocol_version": "observed-multiview-scale10-proposal/0.3",
+  "proposal_sha256": "4072cefb21bb98a6e3f7166869bc5180ff147be8bd76ff424238e030e5570200",
+  "protocol_sha256": "3c059fcfefd0c286527064893876274d38eb86099216765d956ad463e2b46896",
+  "fixed_training_record_target": 1280,
+  "quota_guaranteed": false,
+  "source_body_reads": 0,
+  "parser_calls": 0,
+  "fits": 0,
+  "remote_writes": 0
+}

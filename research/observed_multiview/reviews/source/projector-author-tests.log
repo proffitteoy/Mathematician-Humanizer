@@ -1,0 +1,36 @@
+test_arbitrary_character_deletion_rejected (test_projection.ProjectionTests.test_arbitrary_character_deletion_rejected) ... ok
+test_barrier_bridge_rejected (test_projection.ProjectionTests.test_barrier_bridge_rejected) ... ok
+test_decoded_role_markers_cannot_bypass_barriers (test_projection.ProjectionTests.test_decoded_role_markers_cannot_bypass_barriers) ... ok
+test_empty_input (test_projection.ProjectionTests.test_empty_input) ... ok
+test_entity_multiline_scope_quarantines_record (test_projection.ProjectionTests.test_entity_multiline_scope_quarantines_record) ... ok
+test_entity_one_to_many (test_projection.ProjectionTests.test_entity_one_to_many) ... ok
+test_exclusion_never_windows_large_unclosed_construct (test_projection.ProjectionTests.test_exclusion_never_windows_large_unclosed_construct) ... ok
+test_exclusion_same_transformation_bounded_full_view (test_projection.ProjectionTests.test_exclusion_same_transformation_bounded_full_view) ... ok
+test_identity_and_mixed_newlines (test_projection.ProjectionTests.test_identity_and_mixed_newlines) ... ok
+test_inline_template_reject_whole_line (test_projection.ProjectionTests.test_inline_template_reject_whole_line) ... ok
+test_link_with_template_and_unknown_markers (test_projection.ProjectionTests.test_link_with_template_and_unknown_markers) ... ok
+test_list_heading_indentation_category_file (test_projection.ProjectionTests.test_list_heading_indentation_category_file) ... ok
+test_literal_links_and_emphasis (test_projection.ProjectionTests.test_literal_links_and_emphasis) ... ok
+test_multiline_comment_barrier (test_projection.ProjectionTests.test_multiline_comment_barrier) ... ok
+test_multiline_quote_and_code_barriers (test_projection.ProjectionTests.test_multiline_quote_and_code_barriers) ... ok
+test_nested_html_no_inner_leak (test_projection.ProjectionTests.test_nested_html_no_inner_leak) ... ok
+test_nested_templates_barrier (test_projection.ProjectionTests.test_nested_templates_barrier) ... ok
+test_nested_unclosed_mixed_quote_scopes_quarantine (test_projection.ProjectionTests.test_nested_unclosed_mixed_quote_scopes_quarantine) ... ok
+test_no_network_or_external_expansion (test_projection.ProjectionTests.test_no_network_or_external_expansion) ... ok
+test_no_truth_promotion (test_projection.ProjectionTests.test_no_truth_promotion) ... ok
+test_no_zero_emission_pure_style_segment (test_projection.ProjectionTests.test_no_zero_emission_pure_style_segment) ... ok
+test_numeric_entities (test_projection.ProjectionTests.test_numeric_entities) ... ok
+test_projector_deterministic (test_projection.ProjectionTests.test_projector_deterministic) ... ok
+test_pure_markup_emits_nothing (test_projection.ProjectionTests.test_pure_markup_emits_nothing) ... ok
+test_raw_translation_template_without_metadata_quarantines_record (test_projection.ProjectionTests.test_raw_translation_template_without_metadata_quarantines_record) ... ok
+test_record_role_quarantine (test_projection.ProjectionTests.test_record_role_quarantine) ... ok
+test_size_cap (test_projection.ProjectionTests.test_size_cap) ... ok
+test_source_hash_change_refuses_cache (test_projection.ProjectionTests.test_source_hash_change_refuses_cache) ... ok
+test_source_map_tampering_and_empty_range_rejected (test_projection.ProjectionTests.test_source_map_tampering_and_empty_range_rejected) ... ok
+test_unclosed_template_no_later_leak (test_projection.ProjectionTests.test_unclosed_template_no_later_leak) ... ok
+test_unknown_entities_fail_closed (test_projection.ProjectionTests.test_unknown_entities_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.094s
+
+OK

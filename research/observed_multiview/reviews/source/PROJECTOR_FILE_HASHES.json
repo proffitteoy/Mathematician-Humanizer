@@ -1,0 +1,27 @@
+[
+  {
+    "file": "PROJECTOR_FOCUSED_REVIEW.zh.md",
+    "bytes": 2907,
+    "sha256": "012200e1ad19e2fdb6ce9dfa38bd709be736fb5b082b4fafa72e9949b54e92eb"
+  },
+  {
+    "file": "PROJECTOR_REVIEW_RECEIPT.json",
+    "bytes": 1101,
+    "sha256": "13b5e80eedd76602f3bb9958a1f5944af87ca65ca41546454f66ca1371770b4b"
+  },
+  {
+    "file": "projector-author-tests.log",
+    "bytes": 3656,
+    "sha256": "8701666ae4da38df8cadee5fe14bbc53d733754c5f54f173797cd370db666cfa"
+  },
+  {
+    "file": "projector-independent-tests.log",
+    "bytes": 1824,
+    "sha256": "32468123646f61dec856809f2b4681eeecfdf9204f6ae753c0ac392cc7e9fa38"
+  },
+  {
+    "file": "test_independent_projection.py",
+    "bytes": 2978,
+    "sha256": "d0cf0588941808a5621fb1b6612fee64490968d4f1a0ad3e0cf19ea508212717"
+  }
+]

@@ -1,0 +1,20 @@
+test_bad_cache_hash_rejected (__main__.IndependentProjectionTests.test_bad_cache_hash_rejected) ... ok
+test_harmless_entity_kept_with_complete_source_map (__main__.IndependentProjectionTests.test_harmless_entity_kept_with_complete_source_map) ... ok
+test_markup_entity_not_executed (__main__.IndependentProjectionTests.test_markup_entity_not_executed) ... ok
+test_mixed_entity_raw_quote_scope (__main__.IndependentProjectionTests.test_mixed_entity_raw_quote_scope) ... ok
+test_mixed_raw_entity_quote_scope (__main__.IndependentProjectionTests.test_mixed_raw_entity_quote_scope) ... ok
+test_named_multiline_quote_scope (__main__.IndependentProjectionTests.test_named_multiline_quote_scope) ... ok
+test_nested_same_quote_fail_closed (__main__.IndependentProjectionTests.test_nested_same_quote_fail_closed) ... ok
+test_numeric_entity_contact (__main__.IndependentProjectionTests.test_numeric_entity_contact) ... ok
+test_numeric_entity_quote (__main__.IndependentProjectionTests.test_numeric_entity_quote) ... ok
+test_numeric_multiline_quote_scope (__main__.IndependentProjectionTests.test_numeric_multiline_quote_scope) ... ok
+test_plain_narrative_identity (__main__.IndependentProjectionTests.test_plain_narrative_identity) ... ok
+test_raw_translation_marker_without_metadata (__main__.IndependentProjectionTests.test_raw_translation_marker_without_metadata) ... ok
+test_template_barrier_never_bridged (__main__.IndependentProjectionTests.test_template_barrier_never_bridged) ... ok
+test_unclosed_ascii_quote_fail_closed (__main__.IndependentProjectionTests.test_unclosed_ascii_quote_fail_closed) ... ok
+test_unclosed_entity_quote_fail_closed (__main__.IndependentProjectionTests.test_unclosed_entity_quote_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.006s
+
+OK

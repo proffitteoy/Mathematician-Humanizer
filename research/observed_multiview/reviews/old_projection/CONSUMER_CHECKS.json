@@ -1,0 +1,13 @@
+{
+  "schema_version": "bounded-compatibility-consumer-checks/1",
+  "compatibility_code_sha256": "61fd039ca983a9ef4a2de0a79beca6cac748072ce3c9b046fdeff3a16efc1e3a",
+  "compatibility_tests_passed": 22,
+  "direct_fanout_late_bound_defect_fixed": true,
+  "duplicate_traversals_are_bounded": true,
+  "global_stop_blockers_explicit": true,
+  "real_nine_artifact_certificate_load": "passed",
+  "certificate_sha256": "bcd447e5bdcefa3db6d980d100ddc44ce1c49c8a560fd8d84870ddb379685768",
+  "source_bodies_read": 0,
+  "fit_or_parser_calls": 0,
+  "natural_calibration_or_G2_authorized": false
+}

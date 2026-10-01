@@ -1,0 +1,109 @@
+{
+  "schema_version": "scale10-source-evidence/1",
+  "status": "metadata_only_not_training_admission",
+  "source_public_hashes": {
+    "FILE_HASHES.json": "11aef0e63e7004638844fc92835dce9597170fbf4c17536820e9deffe79da60e",
+    "catalogue.json": "b6ea863225430cf2f37f07db13a56da1d36b115e15dd1670e2ab938e28afb0c1",
+    "wiki-census.aggregate.json": "d36661d6c3f0eac1d89cf94dc9feb18d011499a94e9fcecf0b11619d68189c53",
+    "wikiconv-metadata-capacity.json": "7371b6dce5f0a6bcd9a91b8df05b39660bdcc71b3cc85b513c3520340feb5cfb",
+    "ACQUISITION_PLAN.zh.md": "67f2705ff7d1a4b4e5472b78c43f0934597caf166b2a1783e5754aa6f30726e4"
+  },
+  "independent_source_review_sha256": "9a7b4f206b9f22c1411e18870a75b8a3f08bf226fd9b4270792fdf2bc77af8bf",
+  "raw_text_read_by_this_plan": false,
+  "prior_experiment_manifest_sha256": "ddbe04ae3a3a1d289fbb53e35872b2eb9df27407d92f6002066c992c1580b0b8",
+  "old_all192_components_excluded": true,
+  "old_test_consumed": true,
+  "wikiconv_capacity": {
+    "nonempty": {
+      "source_records": 178894,
+      "pages": 90116,
+      "known_components_before_exclusions": 84754,
+      "known_components_after_old192_and_exposed_exclusions": 84366
+    },
+    "size_200_20000": {
+      "source_records": 117266,
+      "pages": 71930,
+      "known_components_before_exclusions": 66651,
+      "known_components_after_old192_and_exposed_exclusions": 66298
+    }
+  },
+  "wikimedia_census": [
+    {
+      "source_id": "zhwikinews-20211020",
+      "counts": {
+        "revisions_all_namespaces": 33461,
+        "text_nodes_all_namespaces": 33461,
+        "nonempty_texts_all_namespaces": 33451,
+        "main_revisions": 16582,
+        "main_redirects": 1272,
+        "main_nonredirects": 15310,
+        "main_nonredirect_nonempty": 15310,
+        "main_text_utf8_bytes": 92048332,
+        "main_text_codepoints": 61069472,
+        "main_revisions_missing_timestamp": 0,
+        "main_revisions_on_or_after_2022": 0,
+        "main_latest_editor_bot_name_heuristic": 12321,
+        "main_latest_editor_is_ip": 4,
+        "main_with_category_markup": 8530,
+        "main_with_template_markup": 15309,
+        "main_nonredirect_wikitext_ge200chars": 15300,
+        "main_nonredirect_wikitext_ge200chars_han_ln_ge_half": 5406
+      },
+      "source_role_markup_flags": {
+        "headline_roundup_template": 6422,
+        "voa_template": 1136,
+        "original_reporting_category_or_template": 667,
+        "outline_template": 0,
+        "guide_or_star_template": 0,
+        "has_listing_template": 0,
+        "raw_ge200_han_half_without_headline_template": 4868
+      },
+      "archive_sha256": "156623daa4e5bb59121db738e2271e709dcb70937d2b473072b1837be9ad1def",
+      "license": "CC-BY-2.5"
+    },
+    {
+      "source_id": "zhwikivoyage-20211020",
+      "counts": {
+        "revisions_all_namespaces": 15010,
+        "text_nodes_all_namespaces": 15010,
+        "nonempty_texts_all_namespaces": 15005,
+        "main_revisions": 7864,
+        "main_redirects": 2753,
+        "main_nonredirects": 5111,
+        "main_nonredirect_nonempty": 5111,
+        "main_text_utf8_bytes": 28424526,
+        "main_text_codepoints": 16557609,
+        "main_revisions_missing_timestamp": 0,
+        "main_revisions_on_or_after_2022": 0,
+        "main_latest_editor_bot_name_heuristic": 63,
+        "main_latest_editor_is_ip": 164,
+        "main_with_category_markup": 3,
+        "main_with_template_markup": 5101,
+        "main_nonredirect_wikitext_ge200chars": 4849,
+        "main_nonredirect_wikitext_ge200chars_han_ln_ge_half": 1991
+      },
+      "source_role_markup_flags": {
+        "headline_roundup_template": 0,
+        "voa_template": 0,
+        "original_reporting_category_or_template": 0,
+        "outline_template": 4249,
+        "guide_or_star_template": 185,
+        "has_listing_template": 2289,
+        "raw_ge200_han_half_without_headline_template": 1991
+      },
+      "archive_sha256": "1372fc86b61e83e33f991c1e494bf9b24c29294ab1f95e77f51a155adff3cc7a",
+      "license": "CC-BY-SA-3.0"
+    }
+  ],
+  "source_urls": {
+    "zhwikinews-20211020": [
+      "https://archive.org/metadata/zhwikinews-20211020",
+      "https://archive.org/download/zhwikinews-20211020/zhwikinews-20211020-pages-articles.xml.bz2"
+    ],
+    "zhwikivoyage-20211020": [
+      "https://archive.org/metadata/zhwikivoyage-20211020",
+      "https://archive.org/download/zhwikivoyage-20211020/zhwikivoyage-20211020-pages-articles.xml.bz2"
+    ]
+  },
+  "language_filter_caveat": "Published new-source rough counts use basic/Extension-A Han. New admission must use frozen Unicode Script Han over L/N, not re-use rough flag as validated language measurement."
+}

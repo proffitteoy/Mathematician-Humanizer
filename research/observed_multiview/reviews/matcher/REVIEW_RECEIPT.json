@@ -1,0 +1,19 @@
+{
+  "schema_version": "scale10-exclusion-matcher-independent-review/1",
+  "decision": "PASS_MATCHER_EXCLUSION_AND_EXACT3_RAW_PACKAGE_ONLY",
+  "matcher_sha256": "ae9bed1b9b2bed4ec56647791bd459a9cb4787fb1c91ac8837ec97eb58d9ccb8",
+  "incremental_public_manifest_sha256": "cb593ff9f2261b90fdc082f86bfd8e502f94b6dad041589d5c3324e4ce496f43",
+  "incremental_database_sha256": "225d002fa7dc3436cb50075e712bff8d263fbf1bc802823fe43ef76a925c5a08",
+  "pair_increment_bug_fixed": true,
+  "cross_projection_certified": false,
+  "G2_admitted": false,
+  "author_tests_passed": 28,
+  "independent_tests_passed": 6,
+  "random_segmenter_comparisons": 200,
+  "source_body_reads": 0,
+  "derivation_rerun": false,
+  "fits": 0,
+  "remote_writes": false,
+  "review_sha256": "972f289ba77555861fddbf466c078d23cc686bc8169e614754f19ebc469b0040",
+  "readback_aggregate_sha256": "3e24173dacf4d95aba995540fd07ace1605c03a98f768c66dec8865627bd35a3"
+}

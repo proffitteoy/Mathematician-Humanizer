@@ -1,0 +1,11 @@
+test_all_unseen_grams_still_deny_containment (__main__.IndependentMatcherTests.test_all_unseen_grams_still_deny_containment) ... ok
+test_clean_candidate_different_old_markup_stays_quarantined (__main__.IndependentMatcherTests.test_clean_candidate_different_old_markup_stays_quarantined) ... ok
+test_cross_dictionary_reverse_insertion_does_not_change_matches (__main__.IndependentMatcherTests.test_cross_dictionary_reverse_insertion_does_not_change_matches) ... ok
+test_every_postings_increment_is_charged_before_execution (__main__.IndependentMatcherTests.test_every_postings_increment_is_charged_before_execution) ... ok
+test_final_callback_runs_even_on_tiny_package (__main__.IndependentMatcherTests.test_final_callback_runs_even_on_tiny_package) ... ok
+test_long_blocks_equal_actual_frozen_segmenter_on200random_cases (__main__.IndependentMatcherTests.test_long_blocks_equal_actual_frozen_segmenter_on200random_cases) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.137s
+
+OK

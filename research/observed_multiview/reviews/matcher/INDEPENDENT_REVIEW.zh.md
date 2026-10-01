@@ -1,0 +1,27 @@
+# 排除比较器与3篇诊断增量独立审查
+
+日期：2026-10-01。裁决：**PASS_MATCHER_EXCLUSION_ONLY / PASS_EXACT3_RAW_SIGNATURE_PACKAGE_ONLY**。完整clean-prose兼容证书和G2仍未通过。
+
+比较器精确SHA256：ae9bed1b9b2bed4ec56647791bd459a9cb4787fb1c91ac8837ec97eb58d9ccb8。增量公开清单：cb593ff9f2261b90fdc082f86bfd8e502f94b6dad041589d5c3324e4ce496f43。数据库：225d002fa7dc3436cb50075e712bff8d263fbf1bc802823fe43ef76a925c5a08。
+
+## 发现并修复的计数错误
+
+原实现给每个reference text只按不同candidate pair数计费，内层实际共享gram计数可多得多，不能落实300M pair increments合同。修订后每次posting累加前按真实posting数量收费，并在长gram循环、text/block/binding扫描及最终返回检查资源。独立反例中一对记录有100个共同gram、预算50，第51次尝试前停止，没有先执行100次再报一个pair。
+
+另一个必要区分已落实：全部已声明视图扫描完成不等于跨投影覆盖完整。独立例把同一100字内容分别写成旧逐字模板标记和新纯文本；raw签名无命中时明确quarantine，cross_projection_coverage_certified始终false，不能用成功扫描填matching_coverage_complete。
+
+28项作者合成测试与6项另写独立测试通过；后者包含200组随机文本的长块算法与实际冻结punctuation-lines/1.0.0逐项一致、不同字典整数ID、完整未命中gram分母、预算反例和最终resource callback。未重新打开自然来源。
+
+## 3篇增量核验
+
+公开清单5项长度/摘要一致。预读allowlist、实施代码、计划、one-time marker、预读测试、完成标记与aggregate/private coverage摘要链一致。许可证据元数据绑定检查通过；未打开任何来源正文。
+
+独立有界zlib/varint解码3个文本集合、18678个gram成员，检查18637个连续字典ID和32字节摘要、197个长块、3个canonical来源绑定。每个原始SHA与预先允许的3项源元数据一致；SQLite integrity_check为ok。数据库1658880字节。原旧包再次SHA256核对不变。
+
+3项完整raw exact自排除均有收据；每项对100541个旧唯一文本的完整扫描数核对一致。149个诊断投影片段中92个能匹配现存raw签名，149个映射raw span中109个能匹配。此缺口真实存在，不能因“新增3篇已有raw指纹”声称完成clean-prose覆盖。诊断Markdown删除探针不是新自然校准或训练角色资格。
+
+此复核重算了签名包编码、绑定和聚合，不是重新从原文生成全部摘要；3项来源内容正确性依赖已固定代码/预读绑定，不夸称全原文第二次复算。独立原文读取、派生器重跑、解析/目标/预测读取、拟合、下载和远端写入均为0。
+
+## 后续门
+
+可用此包排除已知诊断来源及其命中连通分量。新/旧视图的兼容投影增量须另立冻结对象和覆盖审查；不能修改此raw包或用阴性结果宣称无复制。实际新候选硬边、成员污染、校准/旧暴露完整分量排除和最终配额分割仍须独立G2收据。原段落/quote屏障、无法投影内容、短片段、未知外部谱系及语义改写限制继续保留。

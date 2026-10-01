@@ -1,0 +1,9 @@
+{
+  "natural_calibration_executed": false,
+  "new_proposal_pending": true,
+  "old_GO_created": false,
+  "reason": "Stricter risk quarantine and earlier durable SAX source-read accounting; exact96 metadata selection unchanged.",
+  "schema_version": "source-execution-contract-supersession/1",
+  "status": "superseded_unexecuted_preserved",
+  "superseded_contract_sha256": "7e4f1669e6c73f274118e29c0e5a480a580941222b0634f4dd7890eb8e32afe5"
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "file": "BOUNDED_COMPATIBILITY_CERTIFICATE.json",
+    "bytes": 3147,
+    "sha256": "bcd447e5bdcefa3db6d980d100ddc44ce1c49c8a560fd8d84870ddb379685768"
+  },
+  {
+    "file": "CONSUMER_CHECKS.json",
+    "bytes": 582,
+    "sha256": "f3d753d9d2075afe19f1cdce4f79a51e1e23fda72a1ecfc8dbc27e9ae0cc19fd"
+  },
+  {
+    "file": "INDEPENDENT_REVIEW.zh.md",
+    "bytes": 3980,
+    "sha256": "6c81ab4b8c74787deb49e2443c287a6028b855a97b34d1629f0c56ca0de63d21"
+  },
+  {
+    "file": "REVIEW_RECEIPT.json",
+    "bytes": 1262,
+    "sha256": "037a4e98e9335527c1a5dba4026ebfccd616f218b0e85652f6d439d57c1959e3"
+  },
+  {
+    "file": "compatibility-tests.log",
+    "bytes": 2786,
+    "sha256": "99e5acb9086dd8b85cfe412b41bb951be3fa0e5b3e1a193f9d0b9616777f9cbc"
+  },
+  {
+    "file": "readback.aggregate.json",
+    "bytes": 1619,
+    "sha256": "0a9921d892f336e7a59e44b11f70157ed2fbb16e5b21498d483387e89bf54a6d"
+  },
+  {
+    "file": "verify_projected_package.py",
+    "bytes": 7804,
+    "sha256": "57522b8c2ed1bf032380b840ff24d578a07d9b465426465b6585b8f082ed75b9"
+  }
+]

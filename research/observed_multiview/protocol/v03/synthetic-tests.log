@@ -1,0 +1,25 @@
+test_cross_source_component_single_owner (test_sample_metadata.AllocationTests.test_cross_source_component_single_owner) ... ok
+test_duplicate_record_rejected (test_sample_metadata.AllocationTests.test_duplicate_record_rejected) ... ok
+test_exclude_full_group (test_sample_metadata.AllocationTests.test_exclude_full_group) ... ok
+test_exclusion_follows_member_when_component_hash_changes (test_sample_metadata.AllocationTests.test_exclusion_follows_member_when_component_hash_changes) ... ok
+test_flag_not_truthiness (test_sample_metadata.AllocationTests.test_flag_not_truthiness) ... ok
+test_generator_exclusion_equals_list_and_set (test_sample_metadata.AllocationTests.test_generator_exclusion_equals_list_and_set) ... ok
+test_hash_rejected (test_sample_metadata.AllocationTests.test_hash_rejected) ... ok
+test_ineligible_preserved_count (test_sample_metadata.AllocationTests.test_ineligible_preserved_count) ... ok
+test_missing_excluded_ancestor_stops (test_sample_metadata.AllocationTests.test_missing_excluded_ancestor_stops) ... ok
+test_no_mutation (test_sample_metadata.AllocationTests.test_no_mutation) ... ok
+test_no_source_relabel (test_sample_metadata.AllocationTests.test_no_source_relabel) ... ok
+test_order_invariant (test_sample_metadata.AllocationTests.test_order_invariant) ... ok
+test_order_invariant_multihop_exposure (test_sample_metadata.AllocationTests.test_order_invariant_multihop_exposure) ... ok
+test_parser_fields_rejected (test_sample_metadata.AllocationTests.test_parser_fields_rejected) ... ok
+test_quota_counts (test_sample_metadata.AllocationTests.test_quota_counts) ... ok
+test_same_integer_page_in_distinct_wikis_not_unioned (test_sample_metadata.AllocationTests.test_same_integer_page_in_distinct_wikis_not_unioned) ... ok
+test_source_alias_registry_canonicalizes_same_page (test_sample_metadata.AllocationTests.test_source_alias_registry_canonicalizes_same_page) ... ok
+test_specific_unresolved_edge_cannot_cross_splits (test_sample_metadata.AllocationTests.test_specific_unresolved_edge_cannot_cross_splits) ... ok
+test_underfill_not_cross_source_filled (test_sample_metadata.AllocationTests.test_underfill_not_cross_source_filled) ... ok
+test_unknown_alias_rejected (test_sample_metadata.AllocationTests.test_unknown_alias_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.003s
+
+OK

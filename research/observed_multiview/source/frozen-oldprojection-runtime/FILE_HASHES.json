@@ -1,0 +1,32 @@
+{
+  "old_projection_exclusion.py": {
+    "bytes": 18021,
+    "sha256": "bb84ebbec46b286c7ff9c7f8fdf5b936ec125b189a1076c51d7163aa6c92271a",
+    "original_bound_path": "/workspace/shared/style-scale10-source-v01/public/old_projection_exclusion.py"
+  },
+  "matcher.py": {
+    "bytes": 30776,
+    "sha256": "ae9bed1b9b2bed4ec56647791bd459a9cb4787fb1c91ac8837ec97eb58d9ccb8",
+    "original_bound_path": "/workspace/shared/style-scale10-source-v01/public/matcher.py"
+  },
+  "project_wikitext.py": {
+    "bytes": 13553,
+    "sha256": "387a8a82eb4024ac2c324b841f0ebbc090818f2d81a364113881b9ae0b954da0",
+    "original_bound_path": "/workspace/shared/style-scale10-source-v01/public/project_wikitext.py"
+  },
+  "projection_contract.py": {
+    "bytes": 3122,
+    "sha256": "e508374e28bc2390da33aabd95bf6d89bac9c84181a8a6447d0407b7c88976a2",
+    "original_bound_path": "/workspace/shared/style-scale10-source-v01/public/projection_contract.py"
+  },
+  "registry.py": {
+    "bytes": 24129,
+    "sha256": "62f35bc593b047eada9d856701e36b0648f1be0fbcb3411c8b0b2afc1f1433db",
+    "original_bound_path": "/workspace/shared/style-scale10-source-v01/public/registry.py"
+  },
+  "runner.py": {
+    "bytes": 25426,
+    "sha256": "728483bcd93c2572430641b35d86035bb6085a97312fb2f9f1e0713b086d0aeb",
+    "original_bound_path": "/workspace/shared/style-scale10-source-v01/public/runner.py"
+  }
+}

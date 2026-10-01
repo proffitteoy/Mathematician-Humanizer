@@ -1,0 +1,13 @@
+test_empty_id_set (test_fingerprint.Tests.test_empty_id_set) ... ok
+test_full_and_gram_domains_differ (test_fingerprint.Tests.test_full_and_gram_domains_differ) ... ok
+test_id_order_invariance (test_fingerprint.Tests.test_id_order_invariance) ... ok
+test_id_roundtrip (test_fingerprint.Tests.test_id_roundtrip) ... ok
+test_invalid_id (test_fingerprint.Tests.test_invalid_id) ... ok
+test_normalization (test_fingerprint.Tests.test_normalization) ... ok
+test_wiki_namespace (test_fingerprint.Tests.test_wiki_namespace) ... ok
+test_wiki_normalization (test_fingerprint.Tests.test_wiki_normalization) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK

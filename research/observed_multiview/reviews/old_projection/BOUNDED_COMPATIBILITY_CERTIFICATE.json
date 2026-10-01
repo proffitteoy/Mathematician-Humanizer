@@ -1,0 +1,94 @@
+{
+  "schema_version": "bounded-old-projection-exclusion-review/1",
+  "decision": "PASS_BOUNDED_OLD_PROJECTED_EXCLUSION_PACKAGE",
+  "independent_review": true,
+  "artifacts": {
+    "old_raw_database": {
+      "sha256": "0ca3ca3eec71b88498ed70990804a7dc72d33dc736a0174edd3fdce5e258c3f5",
+      "bytes": 449417216
+    },
+    "three_blog_raw_database": {
+      "sha256": "225d002fa7dc3436cb50075e712bff8d263fbf1bc802823fe43ef76a925c5a08",
+      "bytes": 1658880
+    },
+    "projected_database": {
+      "sha256": "9c802097e6ba890147cabebb9d8cedc82f6bebbdcebf1d28e2d2557f44e5593a",
+      "bytes": 85508096
+    },
+    "coverage_database": {
+      "sha256": "5af40ff6f792f0714f2c84f6ef6f77374131c14932572fca348fb5d79002cb75",
+      "bytes": 44888064
+    },
+    "derivation_receipt": {
+      "sha256": "739b204594be6ba5e14cd41f7f2a3519ce554d24bdd847c3a8e4b48a1a166e9b",
+      "bytes": 1689
+    },
+    "derivation_plan": {
+      "sha256": "a7192181abb1aba7fd9ecb263abbbb5e3769f45ac32aaae852e3247beee0c1be",
+      "bytes": 20927
+    },
+    "projector": {
+      "sha256": "387a8a82eb4024ac2c324b841f0ebbc090818f2d81a364113881b9ae0b954da0",
+      "bytes": 13553
+    },
+    "validator": {
+      "sha256": "e508374e28bc2390da33aabd95bf6d89bac9c84181a8a6447d0407b7c88976a2",
+      "bytes": 3122
+    },
+    "independent_review_report": {
+      "sha256": "6c81ab4b8c74787deb49e2443c287a6028b855a97b34d1629f0c56ca0de63d21",
+      "bytes": 3980
+    }
+  },
+  "package_names": {
+    "old_raw_database": "old_exposure_v01",
+    "three_blog_raw_database": "incremental_blog_diagnostic3",
+    "projected_database": "old_projected_exclusion"
+  },
+  "projection_profile": "historical-wikitext-conservative-prose/0.1.0",
+  "candidate_source_frames": [
+    "discussion",
+    "news_prose",
+    "guide_prose"
+  ],
+  "signature_contract": {
+    "algorithm": "exposure-copy-signatures/1.0.0",
+    "unicode_version": "15.0.0",
+    "normalized_domain": "nfkc-no-ws/v1",
+    "gram_domain": "char5-nfkc-no-ws/v1",
+    "min_shared": 40,
+    "containment_numerator": 4,
+    "containment_denominator": 5
+  },
+  "coverage": {
+    "old_source_view_bindings": 324320,
+    "old_unique_raw_texts": 100541,
+    "new_blog_source_view_bindings": 3,
+    "new_blog_unique_raw_texts": 3,
+    "old_missing_source_views": 0,
+    "coverage_rows": 100544,
+    "segment_rows": 62099,
+    "zero_segment_views": 46092,
+    "quarantined_views": 1303,
+    "all_source_bindings_verified": true,
+    "all_segment_references_verified": true
+  },
+  "limits": {
+    "historical_view_codepoints": 200000,
+    "candidate_view_codepoints": 20000,
+    "total_private_bytes": 1073741824,
+    "peak_rss_bytes": 3221225472,
+    "shared_gram_pair_increments": 300000000
+  },
+  "restrictions": {
+    "purpose": "exclusion_only",
+    "omitted_role_policy": "raw_only_never_prose_admitted",
+    "unsupported_candidate_policy": "quarantine",
+    "negative_match_policy": "separate_G2_review_required",
+    "universal_clean_prose_coverage": false,
+    "semantic_copy_absence": false,
+    "unknown_external_lineage_absence": false,
+    "source_admission_authorized": false,
+    "body_role_eligibility_certified": false
+  }
+}

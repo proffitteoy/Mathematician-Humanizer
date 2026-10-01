@@ -1,0 +1,37 @@
+[
+  {
+    "file": "INDEPENDENT_REVIEW.zh.md",
+    "bytes": 3221,
+    "sha256": "972f289ba77555861fddbf466c078d23cc686bc8169e614754f19ebc469b0040"
+  },
+  {
+    "file": "REVIEW_RECEIPT.json",
+    "bytes": 918,
+    "sha256": "a2e40e2943a14ce861bcb0dc4e09f63f29c10439248f9aefb3526e98561d13c7"
+  },
+  {
+    "file": "author-tests.log",
+    "bytes": 3011,
+    "sha256": "73ffbaa8f9781075e05646eb1b8c0a138f2cf45ca88eef1171979173c0d347c2"
+  },
+  {
+    "file": "increment-readback.aggregate.json",
+    "bytes": 980,
+    "sha256": "3e24173dacf4d95aba995540fd07ace1605c03a98f768c66dec8865627bd35a3"
+  },
+  {
+    "file": "independent-tests.log",
+    "bytes": 1026,
+    "sha256": "e8942683a70d229383f67bf6d7f74a6bceb98509b35b88b37abdd2c97f2751ff"
+  },
+  {
+    "file": "test_independent_matcher.py",
+    "bytes": 3631,
+    "sha256": "4c58f7bf26a6708914ec5ed10fd83d77cf9d83c88b3cb42378715e0dc11aa961"
+  },
+  {
+    "file": "verify_increment.py",
+    "bytes": 6705,
+    "sha256": "f91e6d00bf3d436ddd348d4e60b101a9db5239e47b8617f73e7790d735ec5725"
+  }
+]
