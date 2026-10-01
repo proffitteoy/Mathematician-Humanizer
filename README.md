@@ -2,7 +2,7 @@
 
 把可测量的写作选择，转成受语义约束、可复测、可回退的编辑操作。
 
-**当前状态：研究原型，不是经过验证的风格模型。** 已实现八个字级/句段序列指标、可追溯数据契约、泄漏分组、真实数据门控的条件总体模型，以及一种需要语义复核的段落边界操作。没有导入真实语料，没有拟合任何总体或作者分布，没有“人类概率”、校准百分位或干预效果结论。
+**当前状态：研究原型，不是经过验证的风格模型。** 已实现八个字级/句段序列指标、可追溯数据契约、泄漏分组、真实数据门控的条件总体模型，以及一种需要语义复核的段落边界操作。研究侧已对一个22,364字节的官方历史对话派生包做[本地来源/格式审计](docs/design/provenance-feasibility-v0.1.zh.md)，发现版本与上下文限制；原文不入仓库，H_G准入为零。没有拟合任何总体或作者分布，没有“人类概率”、校准百分位或干预效果结论。
 
 The statistical core and research protocol are separate: executable code establishes reproducible measurements and explicit failure states; only future, rights-checked experiments can establish construct validity or writing benefits.
 
