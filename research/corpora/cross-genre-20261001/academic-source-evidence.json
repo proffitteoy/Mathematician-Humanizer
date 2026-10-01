@@ -1,0 +1,83 @@
+{
+  "schema_version": "cross-genre-source-evidence/0.1",
+  "checked_on": "2026-10-01",
+  "source_id": "pmc-chinese-ccby",
+  "status": "metadata_and_primary_documentation_verified_no_local_fulltext_acquisition",
+  "population_fit": "not_admitted",
+  "generation_origin": "unknown",
+  "assistance_status": "unknown",
+  "natural_person_authorship_verified": false,
+  "official_sources": [
+    "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/",
+    "https://pmc.ncbi.nlm.nih.gov/tools/oai/",
+    "https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/",
+    "https://pmc-oa-opendata.s3.amazonaws.com/README.txt",
+    "https://pmc.ncbi.nlm.nih.gov/tools/oa-service/",
+    "https://pmc.ncbi.nlm.nih.gov/about/userguide/"
+  ],
+  "live_search_counts": [
+    {"query": "chi[la] AND \"cc by license\"[filter] NOT \"pmc embargo\"[filter]", "count": 4146},
+    {"query": "chi[la] AND \"cc by license\"[filter] AND \"Se Pu\"[journal] NOT \"pmc embargo\"[filter]", "count": 785},
+    {"query": "chi[la] AND \"cc by license\"[filter] AND \"Zhongguo Fei Ai Za Zhi\"[journal] NOT \"pmc embargo\"[filter]", "count": 2276}
+  ],
+  "count_scope": "Live Entrez search result counts; not a frozen census, downloaded works, independent authors, suitable text count, or human-origin labels. Journal counts are subsets of total, not additive to it.",
+  "metadata_examples": [
+    {
+      "pmcid": "PMC10398827",
+      "pmcid_version": "PMC10398827.1",
+      "doi": "10.3724/SP.J.1123.2022.12004",
+      "journal": "Chinese Journal of Chromatography",
+      "journal_abbreviation": "Se Pu",
+      "nlm_journal_id": "9424804",
+      "article_type": "review-article",
+      "xml_lang": "zh",
+      "subject_labels": ["Reviews", "O658", "a"],
+      "license": "CC BY 4.0",
+      "license_uri": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_uri": "https://pmc.ncbi.nlm.nih.gov/api/oai/v1/mh/?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:10398827&metadataPrefix=pmc_fm",
+      "fulltext_page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10398827/",
+      "access_notes": "Search renderer exposed full Chinese article; direct article-page openings returned a browser-check page. The official OAI metadata endpoint returned publisher-deposited JATS front matter without authentication. No CAPTCHA solved or page restriction bypassed. Machine full-text retrieval is supported via documented APIs, not ordinary-page scraping."
+    },
+    {
+      "pmcid": "PMC5972941",
+      "pmcid_version": "PMC5972941.1",
+      "doi": "10.3779/j.issn.1009-3419.2017.07.05",
+      "journal": "Chinese Journal of Lung Cancer",
+      "journal_abbreviation": "Zhongguo Fei Ai Za Zhi",
+      "subject_labels": ["临床研究", "Clinical Research"],
+      "license": "CC BY 3.0",
+      "license_uri": "https://creativecommons.org/licenses/by/3.0/",
+      "author_contribution_count": 6,
+      "name_alternatives": "Chinese and romanized names belong to the same contrib node, not independent authors",
+      "metadata_uri": "https://pmc.ncbi.nlm.nih.gov/api/oai/v1/mh/?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:5972941&metadataPrefix=pmc_fm",
+      "fulltext_page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5972941/",
+      "access_notes": "Official OAI front matter returned successfully. Specific machine-readable CC BY 3.0 and text-mining license references coexist with generic all-rights-reserved notice. Preserve both rather than dropping the specific open-license declaration."
+    }
+  ],
+  "access_contract": {
+    "public_no_auth_no_fee": true,
+    "approved_automated_retrieval_services": ["PMC Cloud Service", "PMC OAI-PMH", "E-Utilities", "BioC"],
+    "ordinary_webpage_bulk_scraping": "prohibited",
+    "oa_web_service_status": "retired 2026-08-25; do not use old oa.fcgi workflows",
+    "legacy_ftp_cloud_objects": "removed in week of 2026-08-24",
+    "oai_constraints": "No concurrent requests; at most 3 requests per second; >100 requests outside weekday 05:00-21:00 US Eastern; Accept-Encoding gzip, deflate",
+    "s3_access": "Anonymous HTTPS or --no-sign-request, no AWS account or payment needed",
+    "s3_terms": "Read README before use: NLM acknowledgement, no implied endorsement/logo use, redistributed data must be current or conspicuously dated; article-level licenses still control"
+  },
+  "identity_contract": {
+    "work_group": "PMCID plus DOI/preprint/correction relationships where established",
+    "representation": "publisher version vs author manuscript recorded separately",
+    "immutable_observation": "PMCID + source version + exact object URL + retrieval timestamp + source MD5/ETag + locally computed SHA-256",
+    "warning": "PMC version numbers reflect deposit processing, not every update or version preference. Content/metadata may change without version increment. Higher version is not automatically final/newest."
+  },
+  "admission_cautions": [
+    "Check article-level license URI, terms and third-party exceptions before body acquisition",
+    "Keep Chinese body, Chinese abstract and English translated abstract distinct; never count translations as independent works",
+    "Byline coauthors, corresponding authors, investigators, translators and editors are different roles; do not assign entire prose to first/corresponding author",
+    "Same romanized name is not verified same natural person; use ORCID/affiliation/explicit disambiguation where available",
+    "Medical case reports and identifiable patient narratives need privacy screening; prefer aggregate experimental/method/review strata initially",
+    "Journal, field, period, task, team and publication templates are confounded; a biomedical archive is not general Chinese academic prose",
+    "Split by work/version/translation family and near-duplicate cluster before evaluating author/team or topic transfer",
+    "No historical date, peer review or CC license proves unassisted human production"
+  ]
+}
