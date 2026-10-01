@@ -1,0 +1,48 @@
+{
+  "review_date_utc": "2026-10-01",
+  "status": "completed_current_snapshot_review",
+  "files": {
+    "INDEPENDENT_REVIEW_ZH.md": {
+      "sha256": "8dfdbc6011241ffe4364b0ba738ec03693757bf1180838ccbafdc8be27ebafbc",
+      "bytes": 14492
+    },
+    "review_checks.py": {
+      "sha256": "09fdd6dbf6fe0eba8053f82425079ffb48a108f5764aa1407f9ea96ed889e9fc",
+      "bytes": 12004
+    },
+    "checks.public.json": {
+      "sha256": "643909f6e6e2d0ea6f79e124574167a3d16fa1709f490681c7ff11f5ee1663d8",
+      "bytes": 5000
+    },
+    "full-tests-with-unicode.log": {
+      "sha256": "6e6e6b4b95fccf6eae828e9fcc7947ae49232134e567862e2b564373fa922069",
+      "bytes": 10243
+    },
+    "core-tests.log": {
+      "sha256": "1a1a4a132fddd4866c01a627c4a8726a1d659cad9ac6f1a9a276a8d4bbea6fd6",
+      "bytes": 159
+    },
+    "PATCH_RECOMMENDATION_ZH.md": {
+      "sha256": "005d9ae24d07b567c4304ad9ef1997535eda5a82372caef62901ffeb0a85d3a7",
+      "bytes": 4569
+    }
+  },
+  "test_counts": {
+    "related_tests": 75,
+    "related_passed": 75,
+    "related_skipped": 0,
+    "core_passed": 60
+  },
+  "current_pilot_numerical_errors_found": 0,
+  "required_disclosures": [
+    "missing_text_batch_abort_vs_record_coverage_commitment",
+    "local_timestamp_not_independent_historical_preregistration_proof"
+  ],
+  "no_remote_writes": true,
+  "cross_arm_verb_root_pair_support": {
+    "production": 46,
+    "control": 46,
+    "intersection": 45,
+    "symmetric_difference": 2
+  }
+}

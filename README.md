@@ -74,7 +74,7 @@ Personal voice compilation is deliberately disabled. Personal writings and `prof
 
 No raw corpus, third-party implementation, pretrained model or fitted result is committed. The repository currently makes no software-license grant; decide licensing before redistribution.
 
-Research detail: [100-candidate registry](docs/design/feature-schema-100.zh.json), [measurement conventions](docs/design/feature-schema-guide.zh.md), [proposed preregistration](docs/design/research-preregister.zh.md), [statistical design](docs/design/statistical-model.zh.md), [topology evidence](docs/topology-component.md), [corpus provenance](docs/corpus-provenance.md), and [restricted-corpus addendum](docs/corpus-admission-addendum.md). The catalogue is not an implementation checklist: only eight metrics are active.
+Research detail: [100-candidate registry](docs/design/feature-schema-100.zh.json), [measurement conventions](docs/design/feature-schema-guide.zh.md), [proposed preregistration](docs/design/research-preregister.zh.md), [statistical design](docs/design/statistical-model.zh.md), [topology evidence](docs/topology-component.md), [corpus provenance](docs/corpus-provenance.md), and [restricted-corpus addendum](docs/corpus-admission-addendum.md). The catalogue is not an implementation checklist: the legacy core exposes eight metrics, and the separate research module implements 71 candidate channels; neither count establishes validated style dimensions.
 
 ## Modeling research notes
 
@@ -88,3 +88,10 @@ These are research contracts and hypotheses, not fitted models or validated feat
 - [Observational references and partial identification](docs/design/observational-reference-admission-v0.1.zh.md)
 
 The [2017 annual-view census](research/audits/wikiconv-2017-execution.zh.md) records 525,984 source records, including 178,894 nonempty explicit nonheaders. These are structural source counts, not verified human samples or validated linguistic observations.
+
+
+## 当前验收与测量证据
+
+[两阶段验收条件](docs/ACCEPTANCE.zh.md)由项目所有者最终判断，模型分数不能代替验收；个人阶段按该文档的条件授权启动。
+
+[固定PUD64解析测量试点](research/parser_error/PUBLICATION_STATUS.zh.md)已独立复算；生产分词及标注约定造成明显的测量差异。请同时阅读冻结方法、复审和已知缺字段健壮性缺陷，不将本次结果当作通用文体模型验证。

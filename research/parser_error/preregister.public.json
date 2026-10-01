@@ -1,0 +1,58 @@
+{
+  "schema_version": "pud-parser-measurement-audit/0.1.0",
+  "frozen_at_utc": "2026-10-01T15:08:36Z",
+  "purpose": "Bounded descriptive parser-induced measurement discrepancy against a converted-manual treebank reference; no author, human-origin or style model.",
+  "evaluation_data": {
+    "repository": "https://github.com/UniversalDependencies/UD_Chinese-PUD",
+    "release": "r2.15",
+    "commit": "0fac7efa55abcb79e07ba1ceefe1139f9f0c58b9",
+    "file": "zh_pud-ud-test.conllu",
+    "sha256": "d3393dd44eb9ae71a6eaa626581c1f760db6148f0d2c6378c2200835e2ede37a",
+    "license": "CC BY-SA 3.0",
+    "acquisition_cap_bytes": 5000000,
+    "raw_data_outside_repository": true
+  },
+  "selection": {
+    "unit": "one treebank sentence-level record, not a verified independent original work",
+    "strata": {"news": 32, "wiki": 32},
+    "rule": "Within each n/w sent_id prefix, sort ascending by SHA256(UTF8(seed + sent_id)), tie break exact sent_id; take first 32 without replacement or outcome-based exclusions.",
+    "seed": "style-compiler/pud-parser-error/v0.1/",
+    "replacement_for_failed_alignment_or_parse": false,
+    "private_manifest": "IDs, byte spans, exact texts and selected-unit hashes remain outside repository; only manifest digest published.",
+    "independence": "No author/work independence is inferred from sentence IDs or newdoc labels. No sentence-IID confidence intervals."
+  },
+  "reference_policy": {
+    "source": "Exact UTF-8 decoded # text field; LF container framing removed, content unchanged; no NFC, whitespace, simplified/traditional or punctuation normalization.",
+    "token_alignment": "Integer rows aligned sequentially to exact FORM; skip only existing whitespace between tokens. No fuzzy alignment or text reconstruction. Any unmatched nonwhitespace, MWT, empty-node, invalid tree or absent field makes reference unavailable for that record, retained in coverage.",
+    "offsets": "Unicode codepoint half-open offsets into exact # text, plus private original file byte location.",
+    "reference_status": "converted_manual_treebank_reference in a separate evaluator dataclass; never synthetic_fixture or automatic_unvalidated.",
+    "relations": "Basic HEAD and DEPREL; enhanced DEPS not evaluated. Full subtype and base relation agreement reported separately. No convention remapping."
+  },
+  "arms": {
+    "production": "Unmodified LocalStanza raw-text path with punctuation-lines/1.0.0, Stanza1.10.1 zh-hans GSDSimp nocharlm/resources1.10.0, CPU2 threads. Each selected record independently.",
+    "reference_token_control": "Same loaded POS/lemma/depparse weights, original text and exact reference token offsets, tokenizer bypassed. Supply only token IDs, FORM and offsets, never reference POS, HEAD, DEPREL, FEATS or lemma. Descriptive oracle-tokenization diagnostic, not production accuracy.",
+    "common_gate": "Reference exact-text alignment and legal tree, exactly one production source segment covering entire text, successful production parse, successful reference-token control. All other selected records retained in coverage with reasons."
+  },
+  "metrics": {
+    "tokenization": "Exact token span equality, all tokens including punctuation; micro precision, recall and F1, unmatched counts; lexical reference stratum additionally reported.",
+    "upos": "UPOS accuracy conditional on exact-span-aligned dependent tokens, plus correct-UPOS/reference-token recall so unmatched reference tokens count against recall.",
+    "dependency": "Head correctness compares exact original head spans or explicit root sentinel; correct dependent token and head span required. UAS, full LAS and base LAS conditional on aligned dependents, plus corresponding recall over all reference tokens. Punctuation-inclusive and reference-lexical strata. No custom score is called CoNLL official LAS.",
+    "coverage": "Every selected record/reference integer row enters accounting before gates. Report reference alignment failure, operational boundary mismatch, parse failures, scoring cohort, reference/model tokens and edge endpoint opportunity counts.",
+    "features": "Use frozen 71-channel _aggregate arithmetic separately on model/control/reference analyses for each common-gate record, without production provenance certification. Per-channel paired count, missing counts/reasons, denominator sums, event support, signed bias, MAE, maximum absolute discrepancy, and same-support aggregate discrepancy. Never combine unlike channel scales into a score.",
+    "history": "content_overlap, trigram_reuse and initial_pos_reuse are unavailable: corpus records lack verified contiguous prior context; do not report first-record zero as validated reuse.",
+    "short_windows": "MATTR100, lexical entropy100 and POS bigram entropy100 only if genuine within-record 100-token windows exist on both sides; never concatenate randomly sampled records or shrink windows. Missing support is unvalidated, not zero.",
+    "zero_events": "Zero is observed only for positive opportunity; channels with no reference/model events are marked no-positive-event evidence, not validated detectors.",
+    "uncertainty": "Finite benchmark descriptive counts only. No calibrated parser probabilities or author/work population confidence claims.",
+    "conventions": "Report documented GSDSimp/PUD differences, unsupported label inventories and aligned POS/dependency confusion aggregates separately; do not causally assign all disagreements to parser errors or erase them with remapping."
+  },
+  "restrictions": {
+    "no_model_downloads": true,
+    "no_downloaded_script_execution": true,
+    "no_fitting_or_threshold_tuning": true,
+    "no_personal_user_writings": true,
+    "no_remote_writes": true,
+    "publication": "Methods, aggregate errors and coverage, corpus/model identity and source links only. No raw texts, sentence IDs, per-record offsets, per-record hashes or reconstructable parses.",
+    "module_frozen": "No changes to research/linguistic files, original schema or parser."
+  },
+  "overlap_status": "PUD is a separate named treebank from pinned GSDSimp supervised metadata. Actual training-text overlap, prior PUD exposure and fastText Common Crawl/Wikipedia overlap not audited; not a truly-unseen generalization claim."
+}
