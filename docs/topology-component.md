@@ -2,6 +2,8 @@
 
 Checked 1 October 2026. Primary source evidence and proposed modeling choices are separated below. This document does not define an AI-percentage score.
 
+**Execution update (2026-10-01):** this is now an active parallel workstream, with an independent [numerical H0/MST implementation and tests](../research/topology/README.md). The [execution plan](EXECUTION_PLAN.zh.md) includes Chinese encoder replication, stability controls, and added-value tests in the learned multi-view/dynamics model; those text experiments have not run.
+
 ## 1. Classical primary literature and exact measured objects
 
 ### A. Attention-graph topology: Kushnareva et al., EMNLP 2021
@@ -77,7 +79,7 @@ Primary targets: blinded reader judgments of coherence, precision, voice consist
 
 Negative controls:
 
-- Same embeddings permuted: cloud geometry must be unchanged
+- Same embeddings permuted: exact cloud geometry must be unchanged; match transformed subset schedules or compare Monte Carlo distributions, since the same seed on permuted rows chooses different points
 - Sentence-shuffled text re-encoded: tests sensitivity to coherence disruptions, with content held fixed
 - Duplicate sentences, boilerplate insertion and formatting changes: tests shortcuts
 - Random tokens and repetitive nonsense: can alter dimension without improving quality; must never receive a quality reward

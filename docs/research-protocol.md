@@ -1,6 +1,6 @@
 # Research protocol: measure first, validate before intervention
 
-Status: proposed design, 2026-10-01. No admitted corpus, completed pilot, preregistration registration, fitted reference, measured author tendency, or validated intervention exists. The eight implemented dimensions are candidates for the first preregistered study, not eight established style constructs. A wider candidate catalogue, if present, is a design inventory only.
+Status: evolving design, 2026-10-01. Bounded provenance and annotation-contract probes have been executed; no empirical reference, author model, validated linguistic measurement or writing intervention has been fitted/validated. The eight implemented dimensions are baseline candidates, not the final representation. The learned multi-view/hierarchical/dynamic model and the active topology replication follow the [execution plan](EXECUTION_PLAN.zh.md). Earlier endpoints below describe baseline substudies, not a substitute for that main model.
 
 ## Questions and falsifiable hypotheses
 

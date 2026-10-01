@@ -6,6 +6,10 @@
 
 The statistical core and research protocol are separate: executable code establishes reproducible measurements and explicit failure states; only future, rights-checked experiments can establish construct validity or writing benefits.
 
+## Active model and execution
+
+The final model is the learned **Sparse Multi-view Hierarchical Style Dynamics Model**: global observables, linguistic sequences and discourse graphs, with stable/context representations and conditional dynamics. The present statistical code is a baseline. See the [active execution plan](docs/EXECUTION_PLAN.zh.md). The [topology replication track](research/topology/README.md) now has a runnable H0/MST numerical component; Chinese text replication and incremental-value testing remain unperformed.
+
 ## Run locally
 
 Python 3.11+. Extraction, partitioning and constrained editing use only the standard library. NumPy is optional and used only for the experimental model.
