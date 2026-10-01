@@ -1,0 +1,39 @@
+test_actual_disagreement_excluded_no_nominal_relabel (__main__.IndependentFaultTests.test_actual_disagreement_excluded_no_nominal_relabel) ... ok
+test_all64_before_review_or_diagnostics (__main__.IndependentFaultTests.test_all64_before_review_or_diagnostics) ... ok
+test_all_ineligible_still64_and8 (__main__.IndependentFaultTests.test_all_ineligible_still64_and8) ... ok
+test_cap_includes_current_package_and_full_output_reservation (__main__.IndependentFaultTests.test_cap_includes_current_package_and_full_output_reservation) ... ok
+test_checkpoint_and_completion_hash_binding (__main__.IndependentFaultTests.test_checkpoint_and_completion_hash_binding) ... ok
+test_duplicate_keys_and_explicit_nonfinite_refused (__main__.IndependentFaultTests.test_duplicate_keys_and_explicit_nonfinite_refused) ... ok
+test_existing_marker_blocks_even_new_go_without_read (__main__.IndependentFaultTests.test_existing_marker_blocks_even_new_go_without_read) ... ok
+test_feature_ast_identical_to_frozen_fit (__main__.IndependentFaultTests.test_feature_ast_identical_to_frozen_fit) ... ok
+test_future_and_stale_storage_receipts_rejected (__main__.IndependentFaultTests.test_future_and_stale_storage_receipts_rejected) ... ok
+test_macro_weighting_not_row_pooling (__main__.IndependentFaultTests.test_macro_weighting_not_row_pooling) ... ok
+test_manifest_exact_bytes (__main__.IndependentFaultTests.test_manifest_exact_bytes) ... FAIL
+test_marker_binding_mismatch_no_test_read (__main__.IndependentFaultTests.test_marker_binding_mismatch_no_test_read) ... ok
+test_missing_extra_review_and_original_paths_refused (__main__.IndependentFaultTests.test_missing_extra_review_and_original_paths_refused) ... ok
+test_no_fit_edit_generate_import_or_call (__main__.IndependentFaultTests.test_no_fit_edit_generate_import_or_call) ... ok
+test_no_label_or_source_path_channel (__main__.IndependentFaultTests.test_no_label_or_source_path_channel) ... ok
+test_outside_support_still_predicted (__main__.IndependentFaultTests.test_outside_support_still_predicted) ... ok
+test_parent_and_leaf_symlink_rejected (__main__.IndependentFaultTests.test_parent_and_leaf_symlink_rejected) ... ok
+test_readonly_freeze_fsync_file_and_parent (__main__.IndependentFaultTests.test_readonly_freeze_fsync_file_and_parent) ... ok
+test_semantic_fail_excluded_only_after_predictions (__main__.IndependentFaultTests.test_semantic_fail_excluded_only_after_predictions) ... ok
+test_terminal_writes_in_cumulative_output_budget (__main__.IndependentFaultTests.test_terminal_writes_in_cumulative_output_budget) ... ok
+test_training_scaler_and_constant_mask_only (__main__.IndependentFaultTests.test_training_scaler_and_constant_mask_only) ... ok
+test_unapproved_input_name_never_opened (__main__.IndependentFaultTests.test_unapproved_input_name_never_opened) ... ok
+test_uncertain_fact_excluded (__main__.IndependentFaultTests.test_uncertain_fact_excluded) ... ok
+test_wrong_bound_input_hash_fails_before_parse (__main__.IndependentFaultTests.test_wrong_bound_input_hash_fails_before_parse) ... ok
+test_zero_eligible_family_whole_denominator (__main__.IndependentFaultTests.test_zero_eligible_family_whole_denominator) ... ok
+
+======================================================================
+FAIL: test_manifest_exact_bytes (__main__.IndependentFaultTests.test_manifest_exact_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/shared/style-controlled-test-review-v01/test_independent_faults.py", line 95, in test_manifest_exact_bytes
+    self.assertEqual(len(raw),item['bytes']);self.assertEqual(hashlib.sha256(raw).hexdigest(),item['sha256'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 16712 != 16499
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.146s
+
+FAILED (failures=1)

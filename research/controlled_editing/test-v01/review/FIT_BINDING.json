@@ -1,0 +1,52 @@
+{
+  "schema": "independent-controlled-test-review-fit-binding/v1",
+  "files": [
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/controller_v03.py",
+      "bytes": 17163,
+      "sha256": "af2b6ec09ff1ee41c71185c3c4bb36a8a35dedd05283a4336c1363254661f5a1"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/fit_wrapper.py",
+      "bytes": 23384,
+      "sha256": "ca61453c36ec4888c4a720c601f448ec7d832e629563a6b1b2ce11c922d78df1"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/labels_v02.py",
+      "bytes": 4611,
+      "sha256": "4160778e11a16c79b58349ceeadf36c0e633474a9f39f16191211cacade9d1f8"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/protocol.json",
+      "bytes": 2056,
+      "sha256": "b64fb0017677baa8ab4fb52ca17a07b92fac95b72c0cdf742fb7926dc61b0ed2"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/PROTOCOL.md",
+      "bytes": 16367,
+      "sha256": "38c02ff1de304b7e4be26d171449845bac2148769e516b5dbf5bde0e4ae4c4a8"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/FILE_HASHES.json",
+      "bytes": 1750,
+      "sha256": "1c99373b805ca12f46ecd57362b26be376cc4a1005c01009067e8aa304f4e4f7"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/runs/controlled_v1_20261001/condition-only.weights.json",
+      "bytes": 3453,
+      "sha256": "c2d6d4352c0209d78f221ede226301fa835fa80c679a77b6f09bd9544aabc83b"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/runs/controlled_v1_20261001/FIT_RECEIPT.json",
+      "bytes": 7489,
+      "sha256": "96283df19251dabc0b4e416d8745e4dd80db227be35b3982489d8f9e3eb5887b"
+    },
+    {
+      "path": "/workspace/shared/style-controlled-fit-v01/run_state/EMPIRICAL_COMPLETE.json",
+      "bytes": 207,
+      "sha256": "5e3069433e398b1dc07026d2bc9b6409d18b9e0cf377bdf40ea71286c701279e"
+    }
+  ],
+  "empirical_test_read": false,
+  "new_fit_performed": false
+}

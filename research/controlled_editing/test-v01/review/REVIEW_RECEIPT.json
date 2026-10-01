@@ -1,0 +1,99 @@
+{
+  "schema": "independent-controlled-test-review/v1",
+  "reviewed_at_utc": "2026-10-01T23:32:30.847292+00:00",
+  "decision": "approved_frozen_preparation_only_separate_root_TEST_GO_required",
+  "package_root": "/workspace/shared/style-controlled-test-v01",
+  "package_manifest": {
+    "path": "FILE_HASHES.json",
+    "bytes": 1788,
+    "sha256": "11d6e1e8e7251e8fc7d884ab1defce2f2b7618f8550cfc745889d77350984e4d"
+  },
+  "frozen_files": [
+    {
+      "path": "test_evaluator.py",
+      "bytes": 31541,
+      "sha256": "0fa01328dc0df91b1c00ae18bd61839511c3c8b6c74bf56b81b4db26a8c7522a"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 2414,
+      "sha256": "25d68451a217d1500ba38b89336fc93def2c49526a801aaa5398bb10519c68c9"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 17061,
+      "sha256": "bdfa2abc376fd971dbb415f5d05d4bfcf6f6eac70daedf2a483d460ac88615c3"
+    },
+    {
+      "path": "inference_core.py",
+      "bytes": 2760,
+      "sha256": "902cfa829557c602d8ed78e764ce143fe664daac1d3a490e0c5cf240832bd9b7"
+    },
+    {
+      "path": "labels_v02.py",
+      "bytes": 4611,
+      "sha256": "4160778e11a16c79b58349ceeadf36c0e633474a9f39f16191211cacade9d1f8"
+    },
+    {
+      "path": "test_test_evaluator.py",
+      "bytes": 24315,
+      "sha256": "83becc0f73b614499d76927c728681ceb32fe1419ba284ad268b08dba2b421ab"
+    }
+  ],
+  "fixed_fit_hashes": {
+    "EMPIRICAL_COMPLETE_sha256": "5e3069433e398b1dc07026d2bc9b6409d18b9e0cf377bdf40ea71286c701279e",
+    "FIT_RECEIPT_sha256": "96283df19251dabc0b4e416d8745e4dd80db227be35b3982489d8f9e3eb5887b",
+    "checkpoint_sha256": "c2d6d4352c0209d78f221ede226301fa835fa80c679a77b6f09bd9544aabc83b",
+    "controller_v03_sha256": "af2b6ec09ff1ee41c71185c3c4bb36a8a35dedd05283a4336c1363254661f5a1",
+    "labels_v02_sha256": "4160778e11a16c79b58349ceeadf36c0e633474a9f39f16191211cacade9d1f8"
+  },
+  "synthetic_tests": {
+    "author_tests": 49,
+    "independent_tests": 31,
+    "total": 80,
+    "failures": 0,
+    "errors": 0,
+    "wall_seconds": 0.531,
+    "actual_resources": {
+      "cpu_affinity": [
+        0,
+        1
+      ],
+      "address_space_bytes": 536870912,
+      "cpu_seconds": 60,
+      "wall_seconds": 60,
+      "outer_wall_timeout_seconds": 60
+    }
+  },
+  "resolved_blockers": [
+    "new_directory_parent_entry_durability",
+    "terminal_completion_failure_disambiguation"
+  ],
+  "empirical_TEST_read": false,
+  "empirical_TEST_executed": false,
+  "new_FIT_executed": false,
+  "empirical_ROOT_GO_created": false,
+  "empirical_TEST_START_created": false,
+  "evidence": [
+    {
+      "path": "AUDIT_ZH.md",
+      "bytes": 8066,
+      "sha256": "871e548322777ff8dea7d2ecfddf512a7ed10e574936eb79c6f15beacc9ea338"
+    },
+    {
+      "path": "test_independent_faults.py",
+      "bytes": 21112,
+      "sha256": "f12340013e32f0b690093926c9edbb250e0e742d98cd8c71197ebecf3cafb830"
+    },
+    {
+      "path": "final-synthetic-tests.txt",
+      "bytes": 10875,
+      "sha256": "3c71d0adf64618f7538dfe367152867f13b560ea076191315b19e70cd496161c"
+    },
+    {
+      "path": "FIT_BINDING.json",
+      "bytes": 1967,
+      "sha256": "24e1085b6e5e8ed83a505e27de4f5439b42beac5d05794e9a6933907f99563f8"
+    }
+  ]
+}

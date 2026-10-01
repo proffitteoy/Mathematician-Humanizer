@@ -1,0 +1,52 @@
+{
+  "files": [
+    {
+      "bytes": 17061,
+      "path": "PROTOCOL.md",
+      "sha256": "bdfa2abc376fd971dbb415f5d05d4bfcf6f6eac70daedf2a483d460ac88615c3"
+    },
+    {
+      "bytes": 2414,
+      "path": "protocol.json",
+      "sha256": "25d68451a217d1500ba38b89336fc93def2c49526a801aaa5398bb10519c68c9"
+    },
+    {
+      "bytes": 31541,
+      "path": "test_evaluator.py",
+      "sha256": "0fa01328dc0df91b1c00ae18bd61839511c3c8b6c74bf56b81b4db26a8c7522a"
+    },
+    {
+      "bytes": 2760,
+      "path": "inference_core.py",
+      "sha256": "902cfa829557c602d8ed78e764ce143fe664daac1d3a490e0c5cf240832bd9b7"
+    },
+    {
+      "bytes": 4611,
+      "path": "labels_v02.py",
+      "sha256": "4160778e11a16c79b58349ceeadf36c0e633474a9f39f16191211cacade9d1f8"
+    },
+    {
+      "bytes": 24315,
+      "path": "test_test_evaluator.py",
+      "sha256": "83becc0f73b614499d76927c728681ceb32fe1419ba284ad268b08dba2b421ab"
+    },
+    {
+      "bytes": 6473,
+      "path": "synthetic-tests.txt",
+      "sha256": "9995b1e1dd73b7fdf043031a54c8e99a310c82db756a1ba4b819c374192bec3c"
+    },
+    {
+      "bytes": 713,
+      "path": "synthetic-evidence.json",
+      "sha256": "702b97dbcc035d9c5f29b6fdca3337c5865f656c36f25241c7d64a99062e1fc4"
+    }
+  ],
+  "frozen_dependencies": {
+    "EMPIRICAL_COMPLETE_sha256": "5e3069433e398b1dc07026d2bc9b6409d18b9e0cf377bdf40ea71286c701279e",
+    "FIT_RECEIPT_sha256": "96283df19251dabc0b4e416d8745e4dd80db227be35b3982489d8f9e3eb5887b",
+    "checkpoint_sha256": "c2d6d4352c0209d78f221ede226301fa835fa80c679a77b6f09bd9544aabc83b",
+    "controller_v03_sha256": "af2b6ec09ff1ee41c71185c3c4bb36a8a35dedd05283a4336c1363254661f5a1",
+    "labels_v02_sha256": "4160778e11a16c79b58349ceeadf36c0e633474a9f39f16191211cacade9d1f8"
+  },
+  "schema": "controlled-test-package/v1"
+}
