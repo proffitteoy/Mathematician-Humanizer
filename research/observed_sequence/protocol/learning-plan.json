@@ -1,0 +1,147 @@
+{
+  "schema_version": "observed-sequence-proposal/0.1",
+  "status": "requires_root_review_no_fit",
+  "selected_manifest_sha256": "ddbe04ae3a3a1d289fbb53e35872b2eb9df27407d92f6002066c992c1580b0b8",
+  "input": {
+    "base_schema": "zh-linguistic-sensors/0.1.0",
+    "local_channel_count": 68,
+    "excluded_history_channels": [
+      "zh:lexical.content_overlap",
+      "zh:lexical.trigram_reuse",
+      "zh:syntax.initial_pos_reuse"
+    ],
+    "per_channel_encoding": [
+      "train_scaled_value",
+      "presence",
+      "train_scaled_log1p_opportunity",
+      "opportunity_known"
+    ],
+    "width": 272,
+    "global_prefix_inputs": [
+      "log1p_contiguous_observed_units",
+      "log1p_contiguous_observed_source_codepoints"
+    ],
+    "source_ids_authors_page_types_offsets_or_final_length_as_inputs": false,
+    "comparison_eligible_promoted": false,
+    "per_unit_map": "GELU(Linear(272,16)); independently fitted parameters per arm",
+    "deepsets_head": "Linear(18,48), GELU, Linear(48,14)",
+    "constant_or_unsupported_training_channels": "Encode value and log-opportunity as frozen zero in every split; retain presence/known and record/observation support counts"
+  },
+  "target": {
+    "kind": "next_contiguous_complete_unit_observed_lexical_UPOS_composition",
+    "bins": [
+      "ADJ",
+      "ADP",
+      "ADV",
+      "AUX",
+      "CCONJ",
+      "DET",
+      "NOUN",
+      "NUM",
+      "PART",
+      "PRON",
+      "PROPN",
+      "SCONJ",
+      "VERB",
+      "OTHER"
+    ],
+    "other": "All remaining legal lexical token UPOS, including INTJ,SYM,X",
+    "loss": "negative_sum((count_k/T)*log_softmax(logit)_k)",
+    "average": "Conditional macro: equal over eligible targets within each record, then equal over records having >=1 eligible target",
+    "multiply_by_target_T_again": false,
+    "target_T_or_missingness_in_input": false,
+    "joint_text_or_length_likelihood": false,
+    "zero_eligible_records": "coverage_only; never assigned zero CE or included as zero-loss records"
+  },
+  "optimization": {
+    "seeds": [
+      1729,
+      2718,
+      3141
+    ],
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_norm_clip": 1.0,
+    "epochs": 40,
+    "batch_records": 16,
+    "checkpoint": "lowest development record-equal target loss; ties earliest epoch",
+    "other_hyperparameter_search": false,
+    "fit_arms": 5,
+    "fits": 15,
+    "maximum_optimizer_updates": 4800
+  },
+  "constant_prior": {
+    "unit": "source-record mean of target compositions, then sum record means",
+    "smoothing": "add total uniform pseudocount1 across14bins; (sum_record_mean_q+1/14)/(number_eligible_train_records+1)",
+    "latest_state_mixture": [
+      0.9,
+      0.1
+    ]
+  },
+  "parameter_counts_from_shapes_not_instantiated_models": {
+    "mask_length_mlp": 6134,
+    "pooled_raw_mlp": 4638,
+    "deepsets": 5966,
+    "gru": 6266,
+    "shuffled_gru": 6266
+  },
+  "budgets": {
+    "new_download_bytes": 0,
+    "cpu_threads": 2,
+    "process_rss_mib": 3072,
+    "gpu": false,
+    "primary_parse_units_max": 2965,
+    "prefix_cache_check_train_records": 8,
+    "parse_and_measure_wall_seconds": 5400,
+    "fit_wall_seconds_total": 3600,
+    "evaluation_wall_seconds": 1800,
+    "new_private_derivatives_bytes": 250000000,
+    "public_raw_outputs": false
+  },
+  "pre_fit_requirements": [
+    "Root review of plan and observed-parser-only use",
+    "Root reconcile all known prior qualitative exposure",
+    "Strict prefix and suffix-invariance contract tests",
+    "Same target-ledger across all comparators",
+    "Frozen train-only transforms and code/profile/source hashes",
+    "No cross-partition known page/copy edge",
+    "Coverage ledger retains all selected units and failures"
+  ],
+  "stop_on": [
+    "source_or_profile_hash_change",
+    "prefix_leakage",
+    "known_cross_split_dependency",
+    "resource_cap",
+    "any_partition_zero_valid_source_records"
+  ],
+  "evaluation": [
+    "paired record losses",
+    "three_seed_distribution",
+    "per_bin_absolute_error",
+    "source_page_type_strata",
+    "known_component_bootstrap_descriptive",
+    "declared_top_speaker_key_cluster_sensitivity",
+    "full_missingness_and_failure_coverage"
+  ],
+  "not_claimed": [
+    "latent_validated_syntax",
+    "individual_author_style",
+    "human_origin",
+    "generalized_cross_genre_performance",
+    "full_multiview_or_topology_gate_pass"
+  ],
+  "prefix_profile": "observed-whitespace-closed-prefix/0.1",
+  "preparse_boundary_closed_pairs": {
+    "train": 766,
+    "development": 223,
+    "test": 163
+  },
+  "preparse_records_with_closed_pairs": {
+    "train": 117,
+    "development": 31,
+    "test": 30
+  },
+  "model_dropout": 0,
+  "protocol_sha256": "0a01f8fc628525512a52a808286d26ee29e93f049e20f7871277bed3baeff42d"
+}

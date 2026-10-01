@@ -1,0 +1,64 @@
+{
+  "status": "local_selection_and_pre_fit_design_reviewed_not_model_admission",
+  "original_synthetic_sampler_tests": 10,
+  "conformance_fixes": [
+    "normalized_fulltext_copy_no_undeclared_length_gate",
+    "Han_numerator_intersect_L_N"
+  ],
+  "exposure_extension": "All39blog and6PMC sources added to copy pool before any parser inference",
+  "selected_records_and_partitions_unchanged_after_fixes": true,
+  "candidate_frame_unchanged_after_fixes": true,
+  "known_split_contract": {
+    "unique_selected_component_ids": 192,
+    "unique_selected_pages": 192,
+    "unique_selected_record_ids": 192,
+    "exposure_component_overlap": 0
+  },
+  "speaker_key_dependence": {
+    "distinct_top_level_keys": 85,
+    "repeated_keys": 23,
+    "keys_crossing_partitions": 13,
+    "maximum_selected_records_per_key": 49,
+    "authorship_inference": false,
+    "model_input": false
+  },
+  "archive_passes": 4,
+  "additional_pass_reason": "two pre_fit correction passes plus one strict_prefix_boundary_audit, no reselection, old_manifests_retained",
+  "sampler_final_peak_rss_kib": 225796,
+  "sampler_final_wall_seconds": 22.806,
+  "total_private_selection_output_bytes": 17738480,
+  "new_download_bytes": 0,
+  "new_parser_inference_units": 0,
+  "model_fits": 0,
+  "private_manifest_sha256": "ddbe04ae3a3a1d289fbb53e35872b2eb9df27407d92f6002066c992c1580b0b8",
+  "selection_sha256": "c53790a4a2aa1d0ca59088ad0e134531cd1a967f2e93f9c9830ed954ce0dbff4",
+  "review_limits": [
+    "Root confirmation of other known exposures remains pending",
+    "No raw heldout text was displayed; copy/length algorithms read it privately",
+    "Known components do not prove absence of external or edited copies",
+    "Resource monitoring is not an OS preventive memory sandbox",
+    "Independent code review is assistant review, not human annotation"
+  ],
+  "producer_code_readback_matches": true,
+  "safe_current_files": [
+    "protocol.zh.md",
+    "selection-preregister.json",
+    "exposure-addendum-v0.2.json",
+    "eligibility.v0.2.aggregate.json",
+    "learning-plan.json",
+    "sampler.py",
+    "test_sampler.py",
+    "review-receipt.json",
+    "prefix-boundary-rule.json",
+    "audit_boundaries.py",
+    "boundary.aggregate.json"
+  ],
+  "boundary_check": {
+    "closed_prefixes": 1152,
+    "suffix_checks": 5760,
+    "all_exact_source_prefix_spans_matched": true,
+    "target_characters_as_lookahead": false,
+    "new_parser_inference": false
+  },
+  "independent_assistant_review": "Checked10tests,code and addendum hashes,private selection membership equality,aggregate SQL speaker counts,parameter/update arithmetic; incorporated both prefix closure and nonlinear DeepSets clarifications"
+}

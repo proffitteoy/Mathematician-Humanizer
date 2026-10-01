@@ -72,3 +72,10 @@ T4：仅当新增信息稳定且可解释到具体任务，再研究它是否帮
 ## 联合测量模型接口
 
 [修订接口](design/measurement-identification/MEASUREMENT_IDENTIFICATION_DRAFT_ZH.md)与[复核](design/measurement-identification/FINAL_RECHECK_ZH.md)替代主设计第4.2节对仪器的无条件独立乘积。结构支持不得读取真实未来；稳健目标使用训练兼容联合分布，内层选参，最终测试仅报告。桥接抽样还须控制选择与仪器输出/失败的关系，仅选择独立于潜标签不足以迁移整个误差通道。此阶段没有真实风格识别或误差模型拟合。
+
+
+## 首个真实来源观测动力学试点
+
+[冻结协议](../research/observed_sequence/protocol/protocol.zh.md)及[有条件提取门](../research/observed_sequence/protocol/EXTRACTION_GATE_REVIEW_ZH.md)：192个已知页面/复制分量按128/32/32分区，原2197个候选时点经严格前缀闭合后保留1152个，另报全入选覆盖。用68项局部仪器观测预测下一单元14格POS组成，比较近容量DeepSets/GRU及基线；这不等于潜在句法、作者文体或人类来源模型。
+
+当前仅批准先核验固定8条训练记录的prefix/cache一致性，再提取train/dev；测试仍封存，模型fit须通过实现与泄漏检查后另行启动。冻结协议不等于实验结果，个人阶段没有因此启动。

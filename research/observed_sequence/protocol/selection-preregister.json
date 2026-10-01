@@ -1,0 +1,60 @@
+{
+  "schema_version": "observed-sequence-selection/0.1",
+  "status": "selection_rules_frozen_before_sequence_census_or_parser_outputs",
+  "seed": "style-observed-sequence-wikiconv-2017-v1-20261001",
+  "source_archive_sha256": "635500ba887cef0c9d2bfaef03659de2974b5fd84b8a0cd90a9bd7bdef7f492a",
+  "frame": "Existing 3395 eligible annual-view conversation groups; top-level nonempty explicit nonheader views only",
+  "prior_exposure": "Exclude the entire known page/copy component of all 24 old diagnostic conversation groups. All 39 blogs and six PMC works are development-only and never untouched test works.",
+  "candidate_rules": {
+    "source_codepoints_min": 200,
+    "source_codepoints_max": 20000,
+    "punctuation_lines_units_min": 8,
+    "punctuation_lines_units_max": 64,
+    "each_unit_codepoints_max": 512,
+    "han_fraction_of_letter_number_codepoints_min": 0.5,
+    "han_test": "Unicode Script Han from frozen linguistic table; this is a script filter, not validated Chinese language"
+  },
+  "hard_components": [
+    "All conversations with the same source page_id",
+    "All source views and versions of a record/conversation remain together through page membership",
+    "Any exact nonheader text hash shared across any annual-file views of at least 200 codepoints joins their pages",
+    "Equal NFKC-without-whitespace candidate full-text hashes join pages; normalization is used for copy detection only",
+    "Any normalized punctuation-unit hash of at least 64 codepoints shared by candidates or exposed records joins pages",
+    "Candidate/exposed-record pairs with normalized 5-codepoint shingle containment >=0.8 of the smaller set and >=40 shared distinct shingles join pages; evaluate all pairs, not approximate retrieval"
+  ],
+  "known_exposure_texts": "All nonheader serialized views in the original 24-group private sample; no test text displayed to the assistant",
+  "ranking": "SHA256 UTF-8 seed + '|' + purpose + '|' + source-key; sort ascending with source-key tie break",
+  "sample": {
+    "work_per_component": 1,
+    "representative": "minimum purpose=record rank among eligible top-level records in the component",
+    "desired_components": 192,
+    "train": 128,
+    "development": 32,
+    "test": 32,
+    "allocation": "Sort components by purpose=component rank; first 128 train, next 32 development, next 32 sealed test; if fewer than192, preserve underfill and report design infeasible, do not relax rules or fit",
+    "group_key": "lexicographically minimum source page_id in full known-edge component; no author key used as input"
+  },
+  "sequence": {
+    "unit": "punctuation-lines/1.0.0 operational text unit within one exact source view, never a historical conversation turn",
+    "max_prefix_units": 32,
+    "first_target_index_zero_based": 4,
+    "max_prediction_pairs_per_record": 28,
+    "gaps_or_parse_failures": "keep coverage; do not bridge missing units; no stop labels from truncation or archive boundary"
+  },
+  "no_fit_until_root_review": true,
+  "no_parser_run_in_selection": true,
+  "budgets": {
+    "new_download_bytes": 0,
+    "archive_stream_passes_max": 2,
+    "existing_utterances_member_bytes_per_pass": 829880895,
+    "sampler_wall_seconds_max": 900,
+    "sampler_rss_mib_max": 1024,
+    "new_private_output_bytes_max": 20000000
+  },
+  "limits": [
+    "Known-group split is not proof that all undocumented copying or external lineage is resolved",
+    "No author, natural-person, human-origin, clinical, or rhetorical ground-truth label",
+    "Selection counts and unit boundaries are design variables; held-out linguistic target values remain uncomputed and sealed",
+    "Prior structural census of the archive is disclosed; held-out means not previously substantively inspected or used for linguistic diagnostics"
+  ]
+}
