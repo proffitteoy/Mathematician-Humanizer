@@ -1,0 +1,19 @@
+{
+  "decision": "APPROVE_AUTHORING_ONLY_PENDING_ROOT_GO",
+  "contract_sha256": "bb48ab8a20d4a02571c25fcecf65d2d81831ef86d5eee9d018427b8969207c42",
+  "manifest_sha256": "4867cd9f3c0dd6deb5d095d8ee0ca36aa7cbbccbd9dd8e147aadc31126252dcd",
+  "tests": 30,
+  "independent_checks": [
+    "all manifest bytes",
+    "48 families and384 exact jobs",
+    "wholefamily partition andfullpass/template crossing",
+    "sanitized192 prompts perpass",
+    "prompt hashes",
+    "no startedmarkers",
+    "120–400 pre-generation support amendment"
+  ],
+  "scope": "root independent of author inspected protocol,labelcode,one-shotIO and reran tests; no empirical drafts or fit; not full security or semantic guarantee",
+  "unknown_generator_fields_remain_null": true,
+  "future_inference_candidates_authorized": false,
+  "empirical_fit_authorized": false
+}

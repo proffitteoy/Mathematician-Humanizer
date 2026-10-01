@@ -1,0 +1,35 @@
+test_adjudication_never_uses_nominal (test_contract.ContractTests.test_adjudication_never_uses_nominal) ... ok
+test_author_does_not_receive_split (test_contract.ContractTests.test_author_does_not_receive_split) ... ok
+test_complete_cross_balance (test_contract.ContractTests.test_complete_cross_balance) ... ok
+test_disjoint_short_mixed (test_contract.ContractTests.test_disjoint_short_mixed) ... ok
+test_duplicate_mainpoint_unsupported (test_contract.ContractTests.test_duplicate_mainpoint_unsupported) ... ok
+test_every_cell_both_templates_passes (test_contract.ContractTests.test_every_cell_both_templates_passes) ... ok
+test_exact_counts (test_contract.ContractTests.test_exact_counts) ... ok
+test_family_wide_split (test_contract.ContractTests.test_family_wide_split) ... ok
+test_formal_math_and_headings_unsupported (test_contract.ContractTests.test_formal_math_and_headings_unsupported) ... ok
+test_hash_binding (test_contract.ContractTests.test_hash_binding) ... ok
+test_no_generated_prose (test_contract.ContractTests.test_no_generated_prose) ... ok
+test_no_training_inference_or_natural_permissions (test_contract.ContractTests.test_no_training_inference_or_natural_permissions) ... ok
+test_punctuation_and_final_fragment (test_contract.ContractTests.test_punctuation_and_final_fragment) ... ok
+test_same_rater_rejected (test_contract.ContractTests.test_same_rater_rejected) ... ok
+test_unique_deterministic_order_and_review_ids (test_contract.ContractTests.test_unique_deterministic_order_and_review_ids) ... ok
+test_v02_prompt_bounds (test_contract.ContractTests.test_v02_prompt_bounds) ... ok
+test_v02_supported_length_boundaries (test_contract.ContractTests.test_v02_supported_length_boundaries) ... ok
+test_whitespace_cannot_move_mainpoint (test_contract.ContractTests.test_whitespace_cannot_move_mainpoint) ... ok
+test_GO_required (test_authoring_io.IOTests.test_GO_required) ... ok
+test_all_started_before_exposure_and_no_repeat (test_authoring_io.IOTests.test_all_started_before_exposure_and_no_repeat) ... ok
+test_changed_binding_rejects (test_authoring_io.IOTests.test_changed_binding_rejects) ... ok
+test_cumulative_start_reservation_cap (test_authoring_io.IOTests.test_cumulative_start_reservation_cap) ... ok
+test_fixed_single_terminal_attempt (test_authoring_io.IOTests.test_fixed_single_terminal_attempt) ... ok
+test_large_provenance_rejected_before_slot (test_authoring_io.IOTests.test_large_provenance_rejected_before_slot) ... ok
+test_malformed_and_oversize_consumed_as_failures (test_authoring_io.IOTests.test_malformed_and_oversize_consumed_as_failures) ... ok
+test_no_worker_can_receive_other_pass (test_authoring_io.IOTests.test_no_worker_can_receive_other_pass) ... ok
+test_sanitized_inputs (test_authoring_io.IOTests.test_sanitized_inputs) ... ok
+test_short_draft_not_admitted (test_authoring_io.IOTests.test_short_draft_not_admitted) ... ok
+test_unknown_task_not_substituted (test_authoring_io.IOTests.test_unknown_task_not_substituted) ... ok
+test_wrong_context_rejected (test_authoring_io.IOTests.test_wrong_context_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.217s
+
+OK
