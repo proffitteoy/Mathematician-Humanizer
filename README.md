@@ -2,7 +2,9 @@
 
 把可测量的写作选择，转成受语义约束、可复测、可回退的编辑操作。
 
-**当前状态：研究原型，不是经过验证的风格模型。** 已实现八个字级/句段序列指标、可追溯数据契约、泄漏分组、真实数据门控的条件总体模型，以及一种需要语义复核的段落边界操作。研究侧已对一个22,364字节的官方历史对话派生包做[本地来源/格式审计](docs/design/provenance-feasibility-v0.1.zh.md)，发现版本与上下文限制；原文不入仓库，H_G准入为零。没有拟合任何总体或作者分布，没有“人类概率”、校准百分位或干预效果结论。
+**当前状态：研究原型，尚未经文体效果验证。** 已有八个字级/句段序列指标，另有[71维语言学候选模块](research/linguistic/README.zh.md)与实际可运行的本地中文解析。学习型多视图原型和拓扑分支已完成合成机制测试；尚无真实总体/作者模型拟合、校准概率或改写效果结论。
+
+[来源登记](research/source-registry.json)现涵盖WikiConv年度快照、39个固定版本开放许可博客文件及6份学术全文试点。版本、内容角色、辅助生产证据和测量覆盖分别审计；这些数量不等同独立作者或已验证人类参考，原文不入仓库。
 
 The statistical core and research protocol are separate: executable code establishes reproducible measurements and explicit failure states; only future, rights-checked experiments can establish construct validity or writing benefits.
 
@@ -48,17 +50,18 @@ The flag records the caller's approval; the software cannot verify that a human 
 
 ## What exists
 
-- Eight operational metrics: paragraph density, single-sentence paragraph share, sentence-length median/IQR/p90/normalized MAD, adjacent length change, and lag-1 rank correlation
+- Eight legacy operational metrics: paragraph density, single-sentence paragraph share, sentence-length median/IQR/p90/normalized MAD, adjacent length change, and lag-1 rank correlation
 - Unchanged-input offsets and ordered sentence/paragraph sequences; empty, short, constant and dependency-missing cases remain distinguishable
 - Hard work/lineage/content/near-duplicate grouping; explicit author/prompt/source/topic/generator holdout axes, lexical duplicate screening and infeasibility reporting
 - Experimental regularized conditional mean and pooled residual covariance code, using language/genre/topic/task strata and continuous log length, with training-only transforms and out-of-support abstention
 - An experimental paragraph-boundary plan with protected-content checks, mandatory semantic review and stale/tampered-plan rejection
+- A separate 71-channel POS/dependency/lexical candidate vector, sentence sequences and typed syntax graph; these are correlated sensors, not a validated combined79-channel model
 - Separate synthetic-only trainable multi-view mechanics and pinned local Chinese-encoder topology extraction; see their research READMEs for dependencies and scope
 - Synthetic unit tests that verify software behavior, **not empirical evidence about writing**
 
 ## What remains unavailable
 
-Validated Chinese word segmentation, POS/dependency parsing, discourse and stance annotation, empirical embeddings/topology validity, measurement error, fitted hierarchical effects, cluster-aware intervals, calibration, learned intervention effects, and a general semantic rewrite engine. Installing a parser alone would not validate its outputs in the target genre.
+Validated Chinese segmentation and POS/dependency accuracy, discourse and stance annotation, empirical embeddings/topology validity, measurement error, fitted hierarchical effects, cluster-aware intervals, calibration, learned intervention effects, and a general semantic rewrite engine. Installing a parser alone would not validate its outputs in the target genre.
 
 Personal voice compilation is deliberately disabled. Personal writings and `proffitteoy/nothing-new` are excluded until explicit final-personalization authorization and a separately reviewed implementation. Do not use a “human style” target to overwrite individual choices.
 

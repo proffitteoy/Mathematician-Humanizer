@@ -1,0 +1,503 @@
+{
+  "schema_version": "zh-parser-source-audit/1.0.0",
+  "audited_at_utc": "2026-10-01",
+  "purpose": "Reproducible source and license audit for automatic Chinese linguistic measurement; not parser accuracy or construct validation.",
+  "verification_scope": {
+    "upstream_metadata_and_documentation_verified": true,
+    "natural_corpus_files_fetched": false,
+    "models_downloaded_by_this_audit": false,
+    "models_executed_by_this_audit": false,
+    "local_model_verification": "Separate installer/runtime audit; these are expected upstream hashes."
+  },
+  "parser": {
+    "name": "stanza",
+    "version": "1.10.1",
+    "resources_version": "1.10.0",
+    "language": "zh-hans",
+    "treebank": "UD_Chinese-GSDSimp",
+    "treebank_release": "r2.15",
+    "resources_version_source": "https://raw.githubusercontent.com/stanfordnlp/stanza/v1.10.1/stanza/_version.py",
+    "release_source": "https://stanfordnlp.github.io/stanza/release_history.html",
+    "processors": {
+      "tokenize": "gsdsimp",
+      "pos": "gsdsimp_nocharlm",
+      "lemma": "gsdsimp_nocharlm",
+      "depparse": "gsdsimp_nocharlm"
+    },
+    "model_dependency": {
+      "pretrain": "fasttext157"
+    },
+    "package": null,
+    "use_gpu": false,
+    "exclude_automatic_downloads": [
+      "default.zip",
+      "ner",
+      "sentiment",
+      "constituency",
+      "charlm",
+      "transformers"
+    ]
+  },
+  "model_repository": {
+    "id": "stanfordnlp/stanza-zh-hans",
+    "revision": "v1.10.0",
+    "commit": "82f2856d1cf4f933738a8a84b5ad959d156040a0",
+    "public": true,
+    "gated": false,
+    "metadata_url": "https://huggingface.co/api/models/stanfordnlp/stanza-zh-hans/revision/v1.10.0",
+    "file_inventory_url": "https://huggingface.co/api/models/stanfordnlp/stanza-zh-hans/tree/v1.10.0/models?recursive=true&expand=false"
+  },
+  "models": [
+    {
+      "path": "tokenize/gsdsimp.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/tokenize/gsdsimp.pt",
+      "bytes": 1383326,
+      "sha256": "962f2578e2a3dabeb4671053372eb1bd092357921904233556c8d77a46440882"
+    },
+    {
+      "path": "pos/gsdsimp_nocharlm.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/pos/gsdsimp_nocharlm.pt",
+      "bytes": 21285503,
+      "sha256": "0dea6b43c267b408fc7c353e41b449a06bff309a93ba75fa63db32bf9f388cb7"
+    },
+    {
+      "path": "lemma/gsdsimp_nocharlm.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/lemma/gsdsimp_nocharlm.pt",
+      "bytes": 6592066,
+      "sha256": "8fe38f6b081d939662a4e78a4350a2253f879c41004327ac6fb78d7078bdeea2"
+    },
+    {
+      "path": "depparse/gsdsimp_nocharlm.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/depparse/gsdsimp_nocharlm.pt",
+      "bytes": 103928202,
+      "sha256": "7a3f038233a772c50372a58b58a05ca0c3b0be9c88d6ed7b2664373c0ef741f6"
+    },
+    {
+      "path": "pretrain/fasttext157.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/pretrain/fasttext157.pt",
+      "bytes": 306614467,
+      "sha256": "630daf461d1dc6f49642ee534102bf08783866949f7f046cf2df3667dcc5e112"
+    }
+  ],
+  "resources_manifest": {
+    "url": "https://raw.githubusercontent.com/stanfordnlp/stanza-resources/main/resources_1.10.0.json",
+    "bytes": 434061,
+    "sha256": "3efb2833a67c0184fac2ea9986c04f9585bfb89fb943a4ab1a6bcbed641d6be0",
+    "note": "URL contains a moving main branch; require this content digest or an independently verified immutable equivalent."
+  },
+  "software_downloads_for_budget": [
+    {
+      "name": "stanza",
+      "version": "1.10.1",
+      "filename": "stanza-1.10.1-py3-none-any.whl",
+      "metadata_url": "https://pypi.org/pypi/stanza/1.10.1/json",
+      "url": "https://files.pythonhosted.org/packages/ac/f6/c50d0ee85e40687a81a95d90d426938d0d83ac0683efa2b87fa4110b665c/stanza-1.10.1-py3-none-any.whl",
+      "bytes": 1112060,
+      "sha256": "d0ebc22c7e7a201077e0ed88d2450e654acadb4ea0d8584d5a5eb2ae1e65c060",
+      "role": "parser",
+      "license_metadata": "Apache License 2.0"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "filename": "requests-2.34.2-py3-none-any.whl",
+      "metadata_url": "https://pypi.org/pypi/requests/2.34.2/json",
+      "url": "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl",
+      "bytes": 73075,
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0",
+      "role": "budget_snapshot_dependency",
+      "license_metadata": "Apache-2.0"
+    },
+    {
+      "name": "emoji",
+      "version": "2.16.0",
+      "filename": "emoji-2.16.0-py3-none-any.whl",
+      "metadata_url": "https://pypi.org/pypi/emoji/2.16.0/json",
+      "url": "https://files.pythonhosted.org/packages/fd/8a/75e3177f374877b19dd3112820b071836ad1100f9f58424630b4783519bc/emoji-2.16.0-py3-none-any.whl",
+      "bytes": 610912,
+      "sha256": "c4230d80640def9071599ff56b1b5950fe13a2a94c0da98c5deab12431b24330",
+      "role": "budget_snapshot_dependency",
+      "license_metadata": null
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "filename": "protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl",
+      "metadata_url": "https://pypi.org/pypi/protobuf/7.36.2/json",
+      "url": "https://files.pythonhosted.org/packages/db/f3/3996583dd2906297a637af12114deddf7658af6e683fedb83be061983fb5/protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl",
+      "bytes": 343223,
+      "sha256": "89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2",
+      "role": "budget_snapshot_dependency",
+      "license_metadata": "3-Clause BSD License"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "filename": "urllib3-2.8.0-py3-none-any.whl",
+      "metadata_url": "https://pypi.org/pypi/urllib3/2.8.0/json",
+      "url": "https://files.pythonhosted.org/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl",
+      "bytes": 135717,
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3",
+      "role": "budget_snapshot_dependency",
+      "license_metadata": "MIT"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "filename": "certifi-2026.7.22-py3-none-any.whl",
+      "metadata_url": "https://pypi.org/pypi/certifi/2026.7.22/json",
+      "url": "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl",
+      "bytes": 136983,
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+      "role": "budget_snapshot_dependency",
+      "license_metadata": "MPL-2.0"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "filename": "charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "metadata_url": "https://pypi.org/pypi/charset-normalizer/3.5.2/json",
+      "url": "https://files.pythonhosted.org/packages/7f/c5/38806a25ab5e65fc178f39affeda20858efafede2fce1ffc2556cfc9fe73/charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 257601,
+      "sha256": "3d31298449090ab8d47b7b1b2a555ff73cac7ed438a08b7ac160980c7ebed649",
+      "role": "budget_snapshot_dependency",
+      "license_metadata": "MIT"
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "filename": "idna-3.20-py3-none-any.whl",
+      "metadata_url": "https://pypi.org/pypi/idna/3.20/json",
+      "url": "https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl",
+      "bytes": 69583,
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "role": "budget_snapshot_dependency",
+      "license_metadata": "BSD-3-Clause"
+    }
+  ],
+  "download_budget": {
+    "limit_bytes": 1000000000,
+    "model_bytes": 439803564,
+    "resources_bytes": 434061,
+    "software_wheel_bytes": 2739154,
+    "total_bytes": 442976779,
+    "scope": "Compressed/distributed file bytes for these five models, one resources manifest, parser wheel and all missing dependency wheels. Excludes already installed Torch, NumPy, NetworkX and tqdm; not an installed footprint or runtime-memory bound. Dependency versions are a registry budget snapshot, not a tested environment lock."
+  },
+  "licenses": [
+    {
+      "component": "Stanza software",
+      "license": "Apache-2.0",
+      "url": "https://github.com/stanfordnlp/stanza/blob/v1.10.1/LICENSE"
+    },
+    {
+      "component": "HF model card declaration",
+      "license": "Apache-2.0",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/blob/v1.10.0/README.md",
+      "caveat": "Do not use this card label as a blanket license for all upstream data and vectors."
+    },
+    {
+      "component": "Stanford-held model-pack rights",
+      "license": "ODC-By-1.0",
+      "url": "https://stanfordnlp.github.io/stanza/performance.html",
+      "caveat": "Official page explicitly notes uncertainty in licenses for models built from UD data and scopes its grant to Stanford-held rights."
+    },
+    {
+      "component": "UD Chinese-GSDSimp annotations",
+      "license": "CC-BY-SA-4.0",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-GSDSimp/r2.15/README.md",
+      "caveat": "README scopes removal of the historical NC restriction to UD annotations, not underlying content Google does not own."
+    },
+    {
+      "component": "Upstream fastText 157-language vectors",
+      "license": "CC-BY-SA-3.0",
+      "url": "https://fasttext.cc/docs/en/crawl-vectors",
+      "caveat": "Preserve attribution and upstream provenance for pretrain/fasttext157.pt; no uniformly Apache/permissive claim."
+    }
+  ],
+  "treebank_inventory": {
+    "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-GSDSimp/r2.15/stats.xml",
+    "bytes": 5780,
+    "sha256": "1068efc41fcdc7ac86daa57502b3d76e89ff7e8fc50faff0cec89926e5867005",
+    "scope": "Full r2.15 treebank, not guaranteed model output vocabulary or train-only support. Freeze actual loaded vocabulary separately.",
+    "upos_counts": {
+      "ADJ": 3030,
+      "ADP": 5629,
+      "ADV": 3081,
+      "AUX": 3892,
+      "CCONJ": 1740,
+      "DET": 1329,
+      "NOUN": 34046,
+      "NUM": 6660,
+      "PART": 9882,
+      "PRON": 1776,
+      "PROPN": 10740,
+      "PUNCT": 17088,
+      "SCONJ": 5202,
+      "SYM": 14,
+      "VERB": 18219,
+      "X": 963
+    },
+    "dependency_counts": {
+      "acl": 777,
+      "acl:relcl": 1777,
+      "advcl": 4022,
+      "advmod": 3185,
+      "amod": 2045,
+      "appos": 1353,
+      "aux": 1827,
+      "aux:pass": 425,
+      "case": 9068,
+      "cc": 1746,
+      "ccomp": 2160,
+      "clf": 2247,
+      "compound": 5565,
+      "compound:ext": 25,
+      "conj": 3228,
+      "cop": 1630,
+      "csubj": 374,
+      "csubj:pass": 6,
+      "det": 1509,
+      "discourse": 189,
+      "discourse:sp": 8,
+      "dislocated": 62,
+      "flat:foreign": 325,
+      "flat:name": 1216,
+      "iobj": 77,
+      "mark": 4550,
+      "mark:adv": 104,
+      "mark:rel": 2427,
+      "nmod": 16211,
+      "nmod:tmod": 1615,
+      "nsubj": 9426,
+      "nsubj:pass": 275,
+      "nummod": 6243,
+      "obj": 7748,
+      "obl": 3315,
+      "obl:patient": 196,
+      "orphan": 2,
+      "parataxis": 2322,
+      "punct": 17088,
+      "reparandum": 1,
+      "root": 4997,
+      "vocative": 1,
+      "xcomp": 1924
+    },
+    "base_relations": [
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "appos",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "clf",
+      "compound",
+      "conj",
+      "cop",
+      "csubj",
+      "det",
+      "discourse",
+      "dislocated",
+      "flat",
+      "iobj",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "orphan",
+      "parataxis",
+      "punct",
+      "reparandum",
+      "root",
+      "vocative",
+      "xcomp"
+    ],
+    "nonpunct_upos_count": 15,
+    "full_dependency_label_count": 43,
+    "base_relation_count": 32
+  },
+  "measurement_subset": {
+    "status": "Implementation design supplied by implementer, not empirical validation",
+    "upos_components": [
+      "ADJ",
+      "ADP",
+      "ADV",
+      "AUX",
+      "CCONJ",
+      "DET",
+      "NOUN",
+      "NUM",
+      "PART",
+      "PRON",
+      "PROPN",
+      "SCONJ",
+      "VERB"
+    ],
+    "quality_only_upos": [
+      "SYM",
+      "X"
+    ],
+    "excluded_punctuation_upos": [
+      "PUNCT"
+    ],
+    "base_relation_components": [
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "appos",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "clf",
+      "compound",
+      "conj",
+      "cop",
+      "csubj",
+      "det",
+      "discourse",
+      "dislocated",
+      "flat",
+      "iobj",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "parataxis",
+      "xcomp"
+    ],
+    "graph_retained_noncomponent_relations": [
+      "punct",
+      "root",
+      "orphan",
+      "reparandum",
+      "vocative"
+    ],
+    "preserve_full_relation_subtypes": true,
+    "unobserved_universal_labels": "Not supported merely because universally legal; do not fabricate model outputs or interpret missing model support as observed zero."
+  },
+  "pinned_de_cue_evidence": {
+    "docs_release": "r2.15",
+    "docs_commit": "930595812fe33764cc2625ec9b7b36f7136b05db",
+    "docs": [
+      {
+        "name": "zh_gsdsimp-pos-PART.md",
+        "url": "https://raw.githubusercontent.com/UniversalDependencies/docs/r2.15/treebanks/zh_gsdsimp/zh_gsdsimp-pos-PART.md",
+        "bytes": 16719,
+        "sha256": "a6fda790f7cd146205e1f45236844fa4f43ec895238683170024afa893a406db"
+      },
+      {
+        "name": "zh_gsdsimp-pos-SCONJ.md",
+        "url": "https://raw.githubusercontent.com/UniversalDependencies/docs/r2.15/treebanks/zh_gsdsimp/zh_gsdsimp-pos-SCONJ.md",
+        "bytes": 10825,
+        "sha256": "53b6000720f5748a437769258f868fa6e53d906a86fe3d34bdc94c7f1a0a90da"
+      },
+      {
+        "name": "zh_gsdsimp-dep-mark-rel.md",
+        "url": "https://raw.githubusercontent.com/UniversalDependencies/docs/r2.15/treebanks/zh_gsdsimp/zh_gsdsimp-dep-mark-rel.md",
+        "bytes": 6935,
+        "sha256": "6b765b60e7322b0e948565c21bb95416e21b549eee508fa0be441fb1dca9f4ed"
+      },
+      {
+        "name": "zh_gsdsimp-dep-mark-adv.md",
+        "url": "https://raw.githubusercontent.com/UniversalDependencies/docs/r2.15/treebanks/zh_gsdsimp/zh_gsdsimp-dep-mark-adv.md",
+        "bytes": 6195,
+        "sha256": "0a064659484334d474d6fc8ad968336ea9bdc638b0700cdd851f83aa33884e1e"
+      },
+      {
+        "name": "zh_gsdsimp-dep-compound-ext.md",
+        "url": "https://raw.githubusercontent.com/UniversalDependencies/docs/r2.15/treebanks/zh_gsdsimp/zh_gsdsimp-dep-compound-ext.md",
+        "bytes": 7532,
+        "sha256": "0ef78c87e8941dc4dc6051f8e8d9abe62caae346fdc6d09aa6160bd92da2f860"
+      },
+      {
+        "name": "zh_gsdsimp-dep-case.md",
+        "url": "https://raw.githubusercontent.com/UniversalDependencies/docs/r2.15/treebanks/zh_gsdsimp/zh_gsdsimp-dep-case.md",
+        "bytes": 8174,
+        "sha256": "993bebe5ea72daaa5b70d213f0a6e3bd13b97ffda4e0315680754776bf565c35"
+      }
+    ],
+    "de_associative": {
+      "form": "的",
+      "surface_pos_gate": [
+        "PART",
+        "SCONJ"
+      ],
+      "full_treebank_form_pos_counts": {
+        "PART": 3232,
+        "SCONJ": 2405
+      },
+      "evidence": "r2.15 PART statistics; mark:rel documentation has SCONJ dependents throughout. PART/case and SCONJ/mark:rel are distinct, and some 的 tokens realize mark:adv.",
+      "limit": "Combined surface+POS count does not isolate genitive, relative, nominalization, or discourse functions."
+    },
+    "de_adverbial": {
+      "form": "地",
+      "surface_pos_gate": [
+        "SCONJ"
+      ],
+      "pinned_attested_manner_upos": "SCONJ",
+      "relation": "mark:adv",
+      "relation_total": 104,
+      "all_relation_dependents_upos": "SCONJ",
+      "evidence": "r2.15 mark:adv example explicitly tags 地 SCONJ; all 104 relation dependents are SCONJ. Some are spelled 的.",
+      "limit": "PART is a broad/legacy compatibility allowance, not verified here as manner 地 in r2.15; exact 地 count misses alternative spelling and is not construction coverage."
+    },
+    "de_extent": {
+      "form": "得",
+      "surface_pos_gate": [
+        "PART"
+      ],
+      "pinned_attested_marker_upos": "PART",
+      "relation": "compound:ext",
+      "relation_total": 25,
+      "all_relation_dependents_upos": "PART",
+      "evidence": "r2.15 compound:ext examples explicitly tag 得 PART; 24 VERB-to-PART and 1 ADJ-to-PART relations.",
+      "limit": "This documents marker usage; it is not an exhaustive inventory of every lexical/modal 得 use."
+    }
+  },
+  "cue_limits": [
+    "All ten cues are incomplete exact-surface-plus-POS proxies, not grammatical roles, complete constructions, speaker identity, stylistic validity, or author evidence.",
+    "First/second/third-person form lists gated by PRON cover only listed overt forms; they do not resolve omitted subjects, referents, roles, quotation voice, or coreference.",
+    "Negator forms gated by ADV exclude other negation tagged AUX/VERB/PART and segmentation-dependent combinations; label as listed ADV-negator token share.",
+    "Aspect-like forms 了/着/著/过/過 gated by AUX do not count sentence-final PART uses and do not guarantee aspect semantics, completeness, or correct parsing.",
+    "Traditional-form entries in a simplified-Chinese model do not establish traditional-Chinese accuracy; do not normalize source text silently.",
+    "Same orthography can have multiple POS and relations; retain exact token spans, full relations, and observed denominator, with missing and unsupported values distinct from zero.",
+    "Treebank PART also covers many affix-like units, so PART frequency is not equivalent to a closed-class functional-particle frequency."
+  ],
+  "runtime_caveats": [
+    "Stanza1.10.1 POS/depparse loaders explicitly request weights_only=True; historical pretrain loading can fall back to weights_only=False. Only load these official hash-verified artifacts.",
+    "No runtime smoke test or observed model-vocabulary audit was performed by this source audit.",
+    "Published Stanza performance table describes v1.5.1/UD2.12 charlm models; do not transfer those accuracy numbers to this v1.10.0 nocharlm profile."
+  ],
+  "alternative": {
+    "parser": "ufal.udpipe",
+    "version": "1.4.0.1",
+    "code_license": "MPL-2.0",
+    "model": "Chinese-GSDSimp UD2.5 191206",
+    "model_license": "CC-BY-NC-SA",
+    "source": "https://ufal.mff.cuni.cz/udpipe/1/models",
+    "status": "Not selected; official individual-file size/download not verified in this audit. No third-party mirror endorsed."
+  },
+  "papers": [
+    {
+      "citation": "Qi, Peng, Yuhao Zhang, Yuhui Zhang, Jason Bolton, and Christopher D. Manning. 2020. Stanza: A Python Natural Language Processing Toolkit for Many Human Languages. ACL System Demonstrations.",
+      "url": "https://aclanthology.org/2020.acl-demos.14/"
+    },
+    {
+      "citation": "Nivre, Joakim, et al. 2020. Universal Dependencies v2: An Evergrowing Multilingual Treebank Collection. LREC.",
+      "url": "https://aclanthology.org/2020.lrec-1.497/"
+    }
+  ],
+  "runtime_source_urls": {
+    "pos_loader": "https://raw.githubusercontent.com/stanfordnlp/stanza/v1.10.1/stanza/models/pos/trainer.py",
+    "depparse_loader": "https://raw.githubusercontent.com/stanfordnlp/stanza/v1.10.1/stanza/models/depparse/trainer.py",
+    "pretrain_loader": "https://raw.githubusercontent.com/stanfordnlp/stanza/v1.10.1/stanza/models/common/pretrain.py"
+  }
+}
