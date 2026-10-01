@@ -1,0 +1,57 @@
+{
+  "review_date_utc": "2026-10-01",
+  "status": "real_train_dev_cache_verified_after_extraction_fit_gate_still_separate",
+  "gate_private_receipt_sha256": "36e706314d09ddd84bddb00b9f70caa470e3b7f4aec8f101294d69edb740da3e",
+  "train_dev_private_receipt_sha256": "b36572cbff861fb84675e50f8dd8dcc4344825205c88ce122fc66accd401a786",
+  "module_hashes": {
+    "research/observed_sequence/contracts.py": "9637683d8195bd4ae96d91a36e0c8f98e43a6e08695f4e19259f0b84b00660c4",
+    "research/observed_sequence/prepare.py": "97d661a84bf9e0b2c3aefb0d664d985837644fef86585f28e5be64ddebb50e8c",
+    "research/observed_sequence/producer.py": "23372f19240ec8fbe4e53ea996c3963da208f4dd99743643689ac4db888d5d92",
+    "research/observed_sequence/extract.py": "308d4dda75a43e8f53e82bd79d5d4f5900003c79fce82945828018fa1ced7025",
+    "research/linguistic/adapter.py": "0b7422e896acae703bc896cb9731d7462489bea91d50bcf88ff37ab7519da556",
+    "research/linguistic/contracts.py": "79691f63e81ac384ab8ff47e1c7b6b7765394653825efbd55d8f221ef09bee7c",
+    "research/linguistic/schema.py": "505046329782ac2dbf77cfc25e2bffe6a382b8ea08a3596cfb9cfaff9d1118fa",
+    "research/linguistic/stanza_local.py": "7d7e089d346043c2182c44e7ed9ca57be04ed3a21d802052dc0357e3a8349102",
+    "research/linguistic/unicode_scripts.py": "2da9eb8e6162e67c3b4b468c538e0a75251feb6f2bc6f9c9d446969e80c309a4",
+    "src/style_compiler/segmentation.py": "be78057bc27f9d8480c37c1e6160b5cc466385803fb094e1e0878e1171a288e8"
+  },
+  "artifacts": {
+    "REAL_CACHE_REVIEW_ZH.md": {
+      "sha256": "e315c2fafaa31bb76d7f62774dd6ca98d383d6d3b810b03cda7ef67a7d641257",
+      "bytes": 5689
+    },
+    "check_first8.py": {
+      "sha256": "4d12645941e46563ba41afc51ffdeb2f91842d50feae508670d1de2538c7c3d3",
+      "bytes": 9269
+    },
+    "first8-checks.public.json": {
+      "sha256": "b4a5482e30f49bb6c2076811c39e39b48ce1a10b1b8dbad62c0ad529f8dee4d0",
+      "bytes": 2693
+    },
+    "check_train_dev.py": {
+      "sha256": "8e0715e4b3e525dd6fdab55479ef33afe52d5c1e7dc20ad8cea8fa38352ce796",
+      "bytes": 8596
+    },
+    "train-dev-checks.public.json": {
+      "sha256": "32ca013097b39262af756a64565cfc9ce49390507084e261fae73ed9580256c2",
+      "bytes": 2895
+    }
+  },
+  "records": 160,
+  "units": 2480,
+  "parse_failures": 4,
+  "eligible_pairs": {
+    "train": 755,
+    "development": 223
+  },
+  "eligible_records": {
+    "train": 117,
+    "development": 31
+  },
+  "first8_verified_after_expanded_extraction_completed": true,
+  "no_backdated_approval_or_successful_pause_claim": true,
+  "eof_target_semantics": "Pending pre-fit frozen clarification: observed source-defined operational targets include EOF/censored final units; input closure only.",
+  "fits_authorized_by_this_cache_review": 0,
+  "test_targets_accessed": 0,
+  "raw_text_or_private_locators_published": false
+}

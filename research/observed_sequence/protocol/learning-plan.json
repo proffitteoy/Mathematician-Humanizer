@@ -28,7 +28,7 @@
     "constant_or_unsupported_training_channels": "Encode value and log-opportunity as frozen zero in every split; retain presence/known and record/observation support counts"
   },
   "target": {
-    "kind": "next_contiguous_complete_unit_observed_lexical_UPOS_composition",
+    "kind": "next_operational_unit_in_frozen_source_view_observed_lexical_UPOS_composition",
     "bins": [
       "ADJ",
       "ADP",
@@ -51,7 +51,9 @@
     "multiply_by_target_T_again": false,
     "target_T_or_missingness_in_input": false,
     "joint_text_or_length_likelihood": false,
-    "zero_eligible_records": "coverage_only; never assigned zero CE or included as zero-loss records"
+    "zero_eligible_records": "coverage_only; never assigned zero CE or included as zero-loss records",
+    "source_terminal_or_censored_target_allowed": true,
+    "completed_natural_sentence_or_true_stop_claim": false
   },
   "optimization": {
     "seeds": [
@@ -143,5 +145,14 @@
     "test": 30
   },
   "model_dropout": 0,
-  "protocol_sha256": "0a01f8fc628525512a52a808286d26ee29e93f049e20f7871277bed3baeff42d"
+  "protocol_sha256": "31474b57f93067622d6821fc487c3b2876cde815aa8faf97931142df741836ab",
+  "extraction_plan_sha256": "32d081061bd905dbcfa1f0d26a9d15aed3d44d1514585e5ef1df80ae292c14cc",
+  "prefit_eof_amendment_sha256": "93dfa10d803428afebb5a5732eb41ae0d2fd8b31f306059e844728ec66e860b7",
+  "post_checkpoint_diagnostics": {
+    "interior_vs_terminal_source_unit": true,
+    "ordinary_character_extensible_subset": true,
+    "endpoint_flags_in_model_input": false,
+    "endpoint_flags_change_primary_loss_or_checkpoint_metric": false,
+    "test_endpoint_counts": "sealed_until_final_evaluation"
+  }
 }

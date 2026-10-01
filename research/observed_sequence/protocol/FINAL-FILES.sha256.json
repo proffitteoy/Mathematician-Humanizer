@@ -1,7 +1,7 @@
 {
   "protocol.zh.md": {
-    "bytes": 14566,
-    "sha256": "0a01f8fc628525512a52a808286d26ee29e93f049e20f7871277bed3baeff42d"
+    "bytes": 15965,
+    "sha256": "31474b57f93067622d6821fc487c3b2876cde815aa8faf97931142df741836ab"
   },
   "selection-preregister.json": {
     "bytes": 3785,
@@ -16,8 +16,8 @@
     "sha256": "e1aa32938665064850e32cbeaddf10890b31ee66a6c1e958e83bd5a85be5a687"
   },
   "learning-plan.json": {
-    "bytes": 4777,
-    "sha256": "32d081061bd905dbcfa1f0d26a9d15aed3d44d1514585e5ef1df80ae292c14cc"
+    "bytes": 5414,
+    "sha256": "e72d8ba86171e3ebe06440bd6a5921096b01fabbfa6bff73a3552af57321e750"
   },
   "sampler.py": {
     "bytes": 14758,
@@ -42,5 +42,17 @@
   "boundary.aggregate.json": {
     "bytes": 1401,
     "sha256": "eb829985a62df355f52d4d2becbaeb505db6a34c0c3fd4acd803bd6a895cc35d"
+  },
+  "target-eof-amendment.json": {
+    "bytes": 2646,
+    "sha256": "93dfa10d803428afebb5a5732eb41ae0d2fd8b31f306059e844728ec66e860b7"
+  },
+  "extraction-gate.aggregate.json": {
+    "bytes": 2571,
+    "sha256": "5805be08f181d9487873a1a5e310d4877377f222c3c195312c29707a5f65a2a0"
+  },
+  "extraction-train-dev.aggregate.json": {
+    "bytes": 2793,
+    "sha256": "59072b64d073fc30a7f55622d1e549dfef37d438466b24e59d8d26120e6fe4d6"
   }
 }

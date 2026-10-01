@@ -1,0 +1,45 @@
+{
+  "schema_version": "observed-target-semantics-amendment/0.1",
+  "stage": "after_train_dev_extraction_before_any_transform_or_model_fit",
+  "old_protocol_sha256": "0a01f8fc628525512a52a808286d26ee29e93f049e20f7871277bed3baeff42d",
+  "old_learning_plan_sha256": "32d081061bd905dbcfa1f0d26a9d15aed3d44d1514585e5ef1df80ae292c14cc",
+  "unchanged_private_selection_manifest_sha256": "ddbe04ae3a3a1d289fbb53e35872b2eb9df27407d92f6002066c992c1580b0b8",
+  "unchanged_train_dev_cache_receipt_sha256": "b36572cbff861fb84675e50f8dd8dcc4344825205c88ce122fc66accd401a786",
+  "reason": "Independent review found earlier complete-next-unit wording too strong and not unambiguous. Some target units exist only because the fixed source view ends. This is a disclosed semantic amendment, not an assertion that old wording already said it.",
+  "target_definition": "Next operational unit defined by the immutable source view, including source-EOF-ended/censored units; not a completed natural sentence or true author stopping event",
+  "input_definition_unchanged": "Only whitespace-closed, source-aligned visible prefixes; no unfinished input fragment, target character, future denominator or future endpoint flag",
+  "primary_ledger_unchanged": {
+    "train_pairs": 755,
+    "development_pairs": 223,
+    "train_records_with_pairs": 117,
+    "development_records_with_pairs": 31,
+    "all_selected_train_records": 128,
+    "all_selected_development_records": 32,
+    "records_replaced": 0
+  },
+  "independent_endpoint_metadata_audit": {
+    "terminal_source_unit_targets": {
+      "train": 56,
+      "development": 18,
+      "total": 74
+    },
+    "plain_character_extensible_terminal_subset": {
+      "train": 52,
+      "development": 16,
+      "total": 68
+    },
+    "other_terminal_targets": {
+      "train": 4,
+      "development": 2,
+      "total": 6
+    },
+    "other_subset_note": "Stable to an ordinary-character probe but extensible by at least a tested closer/terminal continuation",
+    "counts_are": "Operational source-boundary diagnostics, not proof of semantic completeness or cognitive stopping"
+  },
+  "post_prediction_diagnostic": "After all checkpoints are selected using the unchanged all-target development CE, report interior-vs-terminal conditional record-macro CE and coverage; also identify the ordinary-character-extensible subset. No endpoint flag enters model inputs, training loss weighting or checkpoint selection.",
+  "test_endpoint_counts": "remain_sealed_until_final_evaluation",
+  "performance_results_seen": false,
+  "transform_fit_at_amendment": false,
+  "model_fit_at_amendment": false,
+  "hyperparameters_changed": false
+}
