@@ -1,0 +1,398 @@
+{
+  "repo": "proffitteoy/style-compiler",
+  "revision": "2c3eeb0bcf3020fcba36f13b2bc6bab490b3f1ae",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b2fe27df2dc2be92574fd5b94be371c57be5478",
+      "size": 9303,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/0b2fe27df2dc2be92574fd5b94be371c57be5478"
+    },
+    {
+      "path": "docs/ACCEPTANCE.zh.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d47ac6e47dd69581407b8d9aaf1d3744bb76d5ac",
+      "size": 2378,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/d47ac6e47dd69581407b8d9aaf1d3744bb76d5ac"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bb5bc167ba80dbf9476cc54e68665458b189e14",
+      "size": 485,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/8bb5bc167ba80dbf9476cc54e68665458b189e14"
+    },
+    {
+      "path": "research/linguistic/README.zh.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29bff43722f356116ef5db1d74a7f23749a4c801",
+      "size": 12338,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/29bff43722f356116ef5db1d74a7f23749a4c801"
+    },
+    {
+      "path": "research/linguistic/UNICODE-LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56da58912807030b451a4700687d5bd02c72d6ed",
+      "size": 1995,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/56da58912807030b451a4700687d5bd02c72d6ed"
+    },
+    {
+      "path": "research/linguistic/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "526d516707a621344333d73c336d85ace69e7331",
+      "size": 79,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/526d516707a621344333d73c336d85ace69e7331"
+    },
+    {
+      "path": "research/linguistic/adapter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a75cabeed388e9af6cd9c36bb4ee0037c78d0d7a",
+      "size": 17019,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/a75cabeed388e9af6cd9c36bb4ee0037c78d0d7a"
+    },
+    {
+      "path": "research/linguistic/build_schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42cc6d7ccde06b79776302c0343d28ebe292f009",
+      "size": 3134,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/42cc6d7ccde06b79776302c0343d28ebe292f009"
+    },
+    {
+      "path": "research/linguistic/catalog-crosswalk.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60a582a85b3d26ef4755dc8dd9db2cbaae2f3212",
+      "size": 21696,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/60a582a85b3d26ef4755dc8dd9db2cbaae2f3212"
+    },
+    {
+      "path": "research/linguistic/contracts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d804a73113d37d807fc766fe30510c807dc1ca7f",
+      "size": 6829,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/d804a73113d37d807fc766fe30510c807dc1ca7f"
+    },
+    {
+      "path": "research/linguistic/execution-environment.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25205f1834359b0fbc455c01ea3f06e5760a0e15",
+      "size": 4081,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/25205f1834359b0fbc455c01ea3f06e5760a0e15"
+    },
+    {
+      "path": "research/linguistic/feature-schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9d7d35a999f8438b683e6aa31f14ce52e80b54e",
+      "size": 45210,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/d9d7d35a999f8438b683e6aa31f14ce52e80b54e"
+    },
+    {
+      "path": "research/linguistic/fixtures.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bca59955db782719aa445df60db9c86de7ab772",
+      "size": 1950,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/4bca59955db782719aa445df60db9c86de7ab772"
+    },
+    {
+      "path": "research/linguistic/independent_checks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "626457a3ebf6e8c70e4fd5fa5e40d7b435406929",
+      "size": 16417,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/626457a3ebf6e8c70e4fd5fa5e40d7b435406929"
+    },
+    {
+      "path": "research/linguistic/parser-profile.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a518f86481396f9ebc79bdff328e37eb6225ae04",
+      "size": 19940,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/a518f86481396f9ebc79bdff328e37eb6225ae04"
+    },
+    {
+      "path": "research/linguistic/schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11855a6407537655bf8d491427d6c8323f42f148",
+      "size": 9980,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/11855a6407537655bf8d491427d6c8323f42f148"
+    },
+    {
+      "path": "research/linguistic/smoke-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7dd410362150f836d954741e306bdff0555f3c5",
+      "size": 5277,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/b7dd410362150f836d954741e306bdff0555f3c5"
+    },
+    {
+      "path": "research/linguistic/smoke.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1e91ba473b4ea3a8b1fac7e790aa35483a43ec8",
+      "size": 3649,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/f1e91ba473b4ea3a8b1fac7e790aa35483a43ec8"
+    },
+    {
+      "path": "research/linguistic/sources.zh.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0270988a07a8080338ab45e57ba00b96050825f7",
+      "size": 9461,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/0270988a07a8080338ab45e57ba00b96050825f7"
+    },
+    {
+      "path": "research/linguistic/stanza_local.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42326a89f5272852c6a2a90c8ca3b49da3e43f79",
+      "size": 6064,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/42326a89f5272852c6a2a90c8ca3b49da3e43f79"
+    },
+    {
+      "path": "research/linguistic/test_adapter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e6bf348f2576f54ba7644344f87ac212a7c2e09",
+      "size": 14799,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/2e6bf348f2576f54ba7644344f87ac212a7c2e09"
+    },
+    {
+      "path": "research/linguistic/test_stanza_local.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb4e142e99b2b341e83ce180fd1c4e773671ba4b",
+      "size": 3113,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/bb4e142e99b2b341e83ce180fd1c4e773671ba4b"
+    },
+    {
+      "path": "research/linguistic/unicode_scripts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2830d51aaf03ff018898bd86b3e3c826eed8c9ca",
+      "size": 1896,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/2830d51aaf03ff018898bd86b3e3c826eed8c9ca"
+    },
+    {
+      "path": "research/linguistic/verification-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb26b8b9d56c06bfe095e7c4db7d0e4c81a57a83",
+      "size": 1651,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/eb26b8b9d56c06bfe095e7c4db7d0e4c81a57a83"
+    },
+    {
+      "path": "research/surface/README.zh.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2635036afb50aa0323acd5fb81baccc9e27aa240",
+      "size": 12810,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/2635036afb50aa0323acd5fb81baccc9e27aa240"
+    },
+    {
+      "path": "research/surface/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5364f2d3ff426c67959645499d79d2db9dbfb9db",
+      "size": 76,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/5364f2d3ff426c67959645499d79d2db9dbfb9db"
+    },
+    {
+      "path": "research/surface/adapter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b8a196a11d5f5b20d5e8e04e3985267ec70ca65",
+      "size": 19824,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/6b8a196a11d5f5b20d5e8e04e3985267ec70ca65"
+    },
+    {
+      "path": "research/surface/frozen12-coverage.aggregate.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b0875085ac35b800e317ef8bf4870bc024f0326",
+      "size": 19680,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/3b0875085ac35b800e317ef8bf4870bc024f0326"
+    },
+    {
+      "path": "research/surface/frozen12-coverage.zh.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2e84cb0da4cfffd7d70b43e3816e67232fc1fcd",
+      "size": 9510,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/e2e84cb0da4cfffd7d70b43e3816e67232fc1fcd"
+    },
+    {
+      "path": "research/surface/independent_checks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7ad5cc5cc0b0c75d400f61b34dbba7c8e6fde1b",
+      "size": 7980,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/e7ad5cc5cc0b0c75d400f61b34dbba7c8e6fde1b"
+    },
+    {
+      "path": "research/surface/test_adapter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adb211d00899bc03ebb5e2eae843f2d03453a5a8",
+      "size": 24250,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/adb211d00899bc03ebb5e2eae843f2d03453a5a8"
+    },
+    {
+      "path": "schemas/document.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8539ffc2f389c17f45797499caef791e6746426",
+      "size": 3445,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/c8539ffc2f389c17f45797499caef791e6746426"
+    },
+    {
+      "path": "schemas/measurement-bundle.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9afd00138176fe0314c10fdf2cd02be97a99fa9",
+      "size": 13649,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/b9afd00138176fe0314c10fdf2cd02be97a99fa9"
+    },
+    {
+      "path": "src/style_compiler/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "221e4d419f4eba05d928b6fe29d7fe3ca9e2ca5b",
+      "size": 107,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/221e4d419f4eba05d928b6fe29d7fe3ca9e2ca5b"
+    },
+    {
+      "path": "src/style_compiler/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13be635566e79adccc98892cc67a44e636908b35",
+      "size": 47,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/13be635566e79adccc98892cc67a44e636908b35"
+    },
+    {
+      "path": "src/style_compiler/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd5161cb147c464bbe24c5deafc7b3063f3bc17c",
+      "size": 3588,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/bd5161cb147c464bbe24c5deafc7b3063f3bc17c"
+    },
+    {
+      "path": "src/style_compiler/contracts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d580e934ef98cdf9b8939f7c9a33b62edfeb432",
+      "size": 6056,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/6d580e934ef98cdf9b8939f7c9a33b62edfeb432"
+    },
+    {
+      "path": "src/style_compiler/features.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a96f750c15a6b86e8844b4f5911bb1e0f27bff89",
+      "size": 8211,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/a96f750c15a6b86e8844b4f5911bb1e0f27bff89"
+    },
+    {
+      "path": "src/style_compiler/leakage.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e533213ace35f892faa0d99580a0632fae419709",
+      "size": 6498,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/e533213ace35f892faa0d99580a0632fae419709"
+    },
+    {
+      "path": "src/style_compiler/model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5116895a9a1743b1464e685d0beac67dc2ed0d2",
+      "size": 15677,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/a5116895a9a1743b1464e685d0beac67dc2ed0d2"
+    },
+    {
+      "path": "src/style_compiler/planner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc906354c9a13f0cf7ce8441d1cac27efec677a0",
+      "size": 8110,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/cc906354c9a13f0cf7ce8441d1cac27efec677a0"
+    },
+    {
+      "path": "src/style_compiler/segmentation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19237e24fee5a9cf216dd9123e78fa885b9196a3",
+      "size": 3033,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/19237e24fee5a9cf216dd9123e78fa885b9196a3"
+    },
+    {
+      "path": "tests/helpers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66623b2f7476e0c147de2329b7b48b6a7723ad8e",
+      "size": 881,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/66623b2f7476e0c147de2329b7b48b6a7723ad8e"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "beec83a12aa41dbb6fab803b9d342febf63d1986",
+      "size": 2591,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/beec83a12aa41dbb6fab803b9d342febf63d1986"
+    },
+    {
+      "path": "tests/test_core.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a19fd51a347a55614e95de9830ad245dad847ce6",
+      "size": 5278,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/a19fd51a347a55614e95de9830ad245dad847ce6"
+    },
+    {
+      "path": "tests/test_leakage_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bae117205bb415ef7a1125f6d74b7835703052e8",
+      "size": 5162,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/bae117205bb415ef7a1125f6d74b7835703052e8"
+    },
+    {
+      "path": "tests/test_planner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "086865a93cef91654f2c8d3621d5638eacb54e5d",
+      "size": 3118,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/086865a93cef91654f2c8d3621d5638eacb54e5d"
+    },
+    {
+      "path": "tests/test_regressions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "138c6fc95d514fa1c3c82a795d6b6e9c212cc97b",
+      "size": 5132,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/138c6fc95d514fa1c3c82a795d6b6e9c212cc97b"
+    },
+    {
+      "path": "docs/design/feature-schema-100.zh.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa4352a731bc5101ef08c6e5b98a03004183338f",
+      "size": 180775,
+      "url": "https://api.github.com/repos/proffitteoy/style-compiler/git/blobs/aa4352a731bc5101ef08c6e5b98a03004183338f"
+    }
+  ]
+}

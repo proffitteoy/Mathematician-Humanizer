@@ -1,0 +1,55 @@
+{
+  "status": "verified_synthetic_parser_only",
+  "synthetic_units": 2,
+  "channels": 71,
+  "parser_profile": {
+    "parser_name": "stanza",
+    "parser_version": "1.10.1",
+    "model_id": "stanfordnlp/stanza-zh-hans@82f2856d1cf4f933738a8a84b5ad959d156040a0;nocharlm;resources1.10.0",
+    "model_sha256": "e668fc75e6ff6bb4a8b488f482bcb986ff0e8df1a9cf749599b430b2cea4325f",
+    "scope": "each_original_source_sentence_independently",
+    "normalization": "none",
+    "segmenter_version": "punctuation-lines/1.0.0",
+    "version": "zh-source-sentence-local/0.1.0",
+    "runtime": [
+      [
+        "python",
+        "3.12.14"
+      ],
+      [
+        "torch",
+        "2.3.1+cpu"
+      ],
+      [
+        "numpy",
+        "1.26.4"
+      ],
+      [
+        "threads",
+        "2"
+      ],
+      [
+        "device",
+        "cpu"
+      ],
+      [
+        "tokenize_no_ssplit",
+        "true"
+      ],
+      [
+        "download_method",
+        "none"
+      ]
+    ]
+  },
+  "measurement_profile_sha256": "221323897ea20205d0801383537558b4411cb47eb945c2deac51e24ccb2549a3",
+  "historical_measurement_profile_sha256": "221323897ea20205d0801383537558b4411cb47eb945c2deac51e24ccb2549a3",
+  "profile_matches_historical": true,
+  "historical_entire_environment_byte_identity_claimed": false,
+  "model_load_seconds": 3.1837981339999715,
+  "total_wall_seconds": 3.2601548649997767,
+  "peak_rss_kib": 881532,
+  "corpus_bodies_read_for_parser_smoke": 0,
+  "network_connections_allowed": false,
+  "reference_distributions_fitted": false
+}

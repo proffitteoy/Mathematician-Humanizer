@@ -1,0 +1,83 @@
+{
+  "purpose": "Model-free schema test dependencies; Torch CPU / NumPy unchanged",
+  "pins": {
+    "jsonschema": "4.25.1",
+    "attrs": "25.3.0",
+    "referencing": "0.36.2",
+    "jsonschema-specifications": "2025.9.1",
+    "rpds-py": "0.27.1"
+  },
+  "packages": [
+    {
+      "name": "jsonschema",
+      "version": "4.25.1",
+      "url": "https://files.pythonhosted.org/packages/bf/9c/8c95d856233c1f82500c2450b8c68576b4cf1c871db3afac5c34ff84e6fd/jsonschema-4.25.1-py3-none-any.whl",
+      "bytes": 90040,
+      "sha256": "3fba0169e345c7175110351d456342c364814cfcf3b964ba4587f22915230a63",
+      "file": "jsonschema-4.25.1-py3-none-any.whl"
+    },
+    {
+      "name": "attrs",
+      "version": "25.3.0",
+      "url": "https://files.pythonhosted.org/packages/77/06/bb80f5f86020c4551da315d78b3ab75e8228f89f0162f2c3a819e407941a/attrs-25.3.0-py3-none-any.whl",
+      "bytes": 63815,
+      "sha256": "427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3",
+      "file": "attrs-25.3.0-py3-none-any.whl"
+    },
+    {
+      "name": "referencing",
+      "version": "0.36.2",
+      "url": "https://files.pythonhosted.org/packages/c1/b1/3baf80dc6d2b7bc27a95a67752d0208e410351e3feb4eb78de5f77454d8d/referencing-0.36.2-py3-none-any.whl",
+      "bytes": 26775,
+      "sha256": "e8699adbbf8b5c7de96d8ffa0eb5c158b3beafce084968e2ea8bb08c6794dcd0",
+      "file": "referencing-0.36.2-py3-none-any.whl"
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "url": "https://files.pythonhosted.org/packages/41/45/1a4ed80516f02155c51f51e8cedb3c1902296743db0bbc66608a0db2814f/jsonschema_specifications-2025.9.1-py3-none-any.whl",
+      "bytes": 18437,
+      "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe",
+      "file": "jsonschema_specifications-2025.9.1-py3-none-any.whl"
+    },
+    {
+      "name": "rpds-py",
+      "version": "0.27.1",
+      "url": "https://files.pythonhosted.org/packages/ed/7b/8f4fee9ba1fb5ec856eb22d725a4efa3deb47f769597c809e03578b0f9d9/rpds_py-0.27.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 386883,
+      "sha256": "466bfe65bd932da36ff279ddd92de56b042f2266d752719beb97b08526268ec5",
+      "file": "rpds_py-0.27.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+    }
+  ],
+  "download_bytes": 757868,
+  "status": "verified",
+  "verified": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "packages": {
+      "fsspec": "2024.6.1",
+      "certifi": "2025.8.3",
+      "charset-normalizer": "3.4.3",
+      "mpmath": "1.3.0",
+      "numpy": "1.26.4",
+      "Jinja2": "3.1.6",
+      "idna": "3.10",
+      "emoji": "2.14.1",
+      "jsonschema-specifications": "2025.9.1",
+      "filelock": "3.16.1",
+      "sympy": "1.12.1",
+      "typing_extensions": "4.12.2",
+      "MarkupSafe": "2.1.5",
+      "jsonschema": "4.25.1",
+      "referencing": "0.36.2",
+      "networkx": "3.3",
+      "urllib3": "2.5.0",
+      "requests": "2.32.5",
+      "rpds-py": "0.27.1",
+      "torch": "2.3.1+cpu",
+      "attrs": "25.3.0",
+      "stanza": "1.10.1",
+      "tqdm": "4.67.1",
+      "protobuf": "6.32.1"
+    }
+  }
+}

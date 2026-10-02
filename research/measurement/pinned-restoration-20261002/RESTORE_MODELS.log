@@ -1,0 +1,11 @@
+Downloading pinned model depparse/gsdsimp_nocharlm.pt 103928202
+Verified pinned model depparse/gsdsimp_nocharlm.pt
+Downloading pinned model lemma/gsdsimp_nocharlm.pt 6592066
+Verified pinned model lemma/gsdsimp_nocharlm.pt
+Downloading pinned model pos/gsdsimp_nocharlm.pt 21285503
+Verified pinned model pos/gsdsimp_nocharlm.pt
+Downloading pinned model pretrain/fasttext157.pt 306614467
+Verified pinned model pretrain/fasttext157.pt
+Downloading pinned model tokenize/gsdsimp.pt 1383326
+Verified pinned model tokenize/gsdsimp.pt
+{"status": "verified", "download_bytes": 439803564, "wall_seconds": 63.582050596000045}

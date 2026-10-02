@@ -1,0 +1,128 @@
+{
+  "purpose": "Publication-safe code, protocols and aggregate verification only",
+  "release_boundary": "No raw corpus, private record identities, raw locators, source text hashes, per-sample observations, parser outputs or caches",
+  "inventory_caveat": "49 pinned instrument/test source files form a functional recovery inventory; lost original48-file inventory identity is not certified",
+  "body_read_boundary": "Original cohort preparation/integrity scripts reread TEST/davinci bytes only for original metadata restoration; no71-channel parsing, outcome analysis, fitting or tuning",
+  "files": [
+    {
+      "path": "MODEL_FREE_TESTS.log",
+      "bytes": 1661,
+      "sha256": "061acc5f1d32956ec216f38440c7484a3021f87e770c340c4b31e422991a5a6d"
+    },
+    {
+      "path": "PARSER_SMOKE.log",
+      "bytes": 1521,
+      "sha256": "28885fb586be6ed5814177c3ad44e8c3028ba772c851bd319f0c96b2316f1df7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5405,
+      "sha256": "fb13ae3c0e785053dcb1112fef2c56849e8d60a65d23a3d6c253190b49e40ed7"
+    },
+    {
+      "path": "RESTORATION_RECEIPT.json",
+      "bytes": 22840,
+      "sha256": "2790ce37c80104c4c56fb41c2ee8f9082f9662b88313ce414efa54f96f5cb229"
+    },
+    {
+      "path": "RESTORE_MODELS.log",
+      "bytes": 614,
+      "sha256": "d8d787364e9ffbf2145e3fc25cc16206d26faa5bdfadad71a338382fb7903220"
+    },
+    {
+      "path": "RESTORE_SCHEMA_RUNTIME.log",
+      "bytes": 764,
+      "sha256": "8bf071307cd7d22262c945a9ad43ae88de9dc5e5fef5ea7c691e16b4d2e7a105"
+    },
+    {
+      "path": "RESTORE_STANZA_RUNTIME.log",
+      "bytes": 707,
+      "sha256": "aad37453c9ecf165ed5b7df0754d5eec7f40d0ea1b59d93b7e71d97f41be6135"
+    },
+    {
+      "path": "SCHEMA_INSTALL.log",
+      "bytes": 749,
+      "sha256": "53d0ff6137d2c2dd217b1891463d2085f31cd6339e06db922d1ff79d7fa4aaae"
+    },
+    {
+      "path": "STANZA_INSTALL.log",
+      "bytes": 1188,
+      "sha256": "b2e85e191155c6fe277d0353ea3147f0c2198dab560293a1e9d175e93fb4ac98"
+    },
+    {
+      "path": "current_channel_schema.json",
+      "bytes": 45210,
+      "sha256": "e331e222e8f6e26eefc7a71c623121baa44c3fe6f9217a78c537db3458157610"
+    },
+    {
+      "path": "model_download_receipt.json",
+      "bytes": 1982,
+      "sha256": "8649bc7fa611bf2af353d0b2dae9e5ff494bcc8063b72ddec5dc74a4ea9737d8"
+    },
+    {
+      "path": "parser_smoke_receipt.json",
+      "bytes": 1521,
+      "sha256": "28885fb586be6ed5814177c3ad44e8c3028ba772c851bd319f0c96b2316f1df7"
+    },
+    {
+      "path": "restore_exposure_prefixes.py",
+      "bytes": 1087,
+      "sha256": "607c4c8bd3adea317c9d40362f562087068bdc581fda4e3eb44cae0b1f54be4b"
+    },
+    {
+      "path": "restore_models.py",
+      "bytes": 2310,
+      "sha256": "83e2168634726ee53aa81c9a6d7eebeb9520dcf0fcae8896712974a60c939ddd"
+    },
+    {
+      "path": "restore_schema_runtime.py",
+      "bytes": 2590,
+      "sha256": "5df3c2c1a73f5bf9183193d92bb5fbe5b45aaa9e1b1e16a13c02d13bd11177d2"
+    },
+    {
+      "path": "restore_sources.py",
+      "bytes": 1335,
+      "sha256": "087b44fa70b4ebd6f3bbe5ca852302a3b32f7a8698383c6675b81fe517d54fb6"
+    },
+    {
+      "path": "restore_stanza_runtime.py",
+      "bytes": 2652,
+      "sha256": "67e26359d82b4d806cceeb5a57b82af82a40cef20d7e23133a8c40c5043aa9ca"
+    },
+    {
+      "path": "restored_sources.json",
+      "bytes": 18889,
+      "sha256": "d2569d717c42575d0ba3015719e13aa43a7dc95885a5a32e32293f4eb72f0b19"
+    },
+    {
+      "path": "schema_runtime_receipt.json",
+      "bytes": 3147,
+      "sha256": "048478724cf2321b538d34b11af38d7a2371101efdc35fd7d03929dce951f863"
+    },
+    {
+      "path": "seal_public.py",
+      "bytes": 2054,
+      "sha256": "e85b60dc714e1792311985fc180d3a0deb55689428f80918725da647de39630b"
+    },
+    {
+      "path": "source_plan.json",
+      "bytes": 15186,
+      "sha256": "e699cefc70ff9d193fa6878e6ed6126f921ff7b0cd4014267c1995195531d780"
+    },
+    {
+      "path": "stanza_runtime_receipt.json",
+      "bytes": 4587,
+      "sha256": "629582da3fa636eac8571d2ea9898fe55f2c160e757cb48509eb1b7f76f68bac"
+    },
+    {
+      "path": "verify_restoration.py",
+      "bytes": 6639,
+      "sha256": "e7f242ab4e3011642eda5f723810d74b66da36fbeaa98fe15a23aa74af60e9f7"
+    },
+    {
+      "path": "verify_synthetic_parser.py",
+      "bytes": 1793,
+      "sha256": "c155ba94bdd61c7819e04c127710dfef4a40ee23844e9bb407acec6418f3c916"
+    }
+  ]
+}
