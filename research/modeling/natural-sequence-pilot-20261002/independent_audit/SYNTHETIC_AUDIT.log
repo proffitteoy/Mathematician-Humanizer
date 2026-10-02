@@ -1,0 +1,48 @@
+test_constant_large_values_have_exact_zero_covariance (__main__.IndependentAudit.test_constant_large_values_have_exact_zero_covariance) ... ok
+test_contract_identity (__main__.IndependentAudit.test_contract_identity) ... ok
+test_covariance_against_direct_centered_reference (__main__.IndependentAudit.test_covariance_against_direct_centered_reference) ... ok
+test_covariance_only_adds_values_not_support (__main__.IndependentAudit.test_covariance_only_adds_values_not_support) ... ok
+test_dev_test_davinci_normalizer_firewall (__main__.IndependentAudit.test_dev_test_davinci_normalizer_firewall) ... ok
+test_empty_arm_keeps_fixed_slot_without_reallocation (__main__.IndependentAudit.test_empty_arm_keeps_fixed_slot_without_reallocation) ... ok
+test_exact_fifty_independent_components_gate (__main__.IndependentAudit.test_exact_fifty_independent_components_gate) ... ok
+test_finite_failure_cannot_become_missing (__main__.IndependentAudit.test_finite_failure_cannot_become_missing) ... ok
+test_independent_family_and_ablation_no_value_backdoor (__main__.IndependentAudit.test_independent_family_and_ablation_no_value_backdoor) ... ok
+test_interrupted_cpu_accounting_blocks_next_attempt (__main__.IndependentAudit.test_interrupted_cpu_accounting_blocks_next_attempt) ... ok
+test_joint_support_removes_missing_arm_answer_only (__main__.IndependentAudit.test_joint_support_removes_missing_arm_answer_only) ... ok
+test_last_preserving_shuffle_retains_all_packet_channels (__main__.IndependentAudit.test_last_preserving_shuffle_retains_all_packet_channels) ... ok
+test_pruned_outputs_and_value_paths_preserve_packet (__main__.IndependentAudit.test_pruned_outputs_and_value_paths_preserve_packet) ... ok
+test_question_cannot_move_components_or_sources (__main__.IndependentAudit.test_question_cannot_move_components_or_sources) ... ok
+test_repeated_units_do_not_reweight_document_transform (__main__.IndependentAudit.test_repeated_units_do_not_reweight_document_transform) ... ok
+test_same_component_many_questions_keeps_equal_question_point (__main__.IndependentAudit.test_same_component_many_questions_keeps_equal_question_point) ... ok
+test_same_means_different_covariance (__main__.IndependentAudit.test_same_means_different_covariance) ... ok
+test_shuffle_averages_losses_not_predictions (__main__.IndependentAudit.test_shuffle_averages_losses_not_predictions) ... ok
+test_synthetic_training_reproduces_checkpoint (__main__.IndependentAudit.test_synthetic_training_reproduces_checkpoint) ... ok
+test_unknown_opportunity_does_not_change_value_covariance (__main__.IndependentAudit.test_unknown_opportunity_does_not_change_value_covariance) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.218s
+
+OK
+{
+  "kind": "independent_synthetic_audit_after_reconstruction",
+  "tests_run": 20,
+  "failures": 0,
+  "errors": 0,
+  "success": true,
+  "natural_record_bodies_read": 0,
+  "natural_fits": 0,
+  "synthetic_optimizer_test": "Two tiny synthetic runs attempted by checkpoint test",
+  "test_or_davinci_bodies_read": 0,
+  "sources": {
+    "experimental_natural/__init__.py": "9253808fd5b70f9cb40a95eee77a7987313567c275ff7ddb7b76bf830898ecc4",
+    "experimental_natural/cache_adapter.py": "c590f2ea2431322a9258643bdb155fe8af5abebe425eba0f5a4e33f5068e6dc1",
+    "experimental_natural/freeze.py": "e5ac8aeda11000c35ed78941085742a8026dcf3a80622650cee99d72280c5aa8",
+    "experimental_natural/models.py": "dd786d61e75015f2cd2853e616a41d04eecba87ad742803aa25885fa112bbb7c",
+    "experimental_natural/objectives.py": "b5b48f4db0b364d8c9e3b50eeb2300a3a44adab1c9322d3f6362c611c2372457",
+    "experimental_natural/plan.py": "cf13a53c5dde58cfcc239cd713901d47c3293bce78b12bd0fe7f82c04960fb8b",
+    "experimental_natural/report.py": "571f90d792fdfc43dba20e307108546c4ae56555fd6cf4843be5e1841c52dfb8",
+    "experimental_natural/schema.py": "37be0508a729cf37084217f3c246b0457abb18f53d5a92a0d5da8a62eca1c6e2",
+    "experimental_natural/train.py": "cfc3782be21a71518f0b322d258e4e7a75f5a5710a2648bb7e92fbf50dff66d4",
+    "experimental_natural/transforms.py": "9e95ce514a9e2ae0f03d9f8946347470e5b8a27b879023ba7639b2f90462c9e7"
+  }
+}

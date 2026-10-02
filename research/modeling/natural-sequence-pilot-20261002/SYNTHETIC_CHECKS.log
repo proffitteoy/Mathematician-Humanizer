@@ -1,0 +1,60 @@
+test_batch_invariance (test_core.ArchitectureTests.test_batch_invariance) ... ok
+test_capacity_match_uses_all_parameters (test_core.ArchitectureTests.test_capacity_match_uses_all_parameters) ... ok
+test_centered_covariance_stable_for_huge_constant_prefix (test_core.ArchitectureTests.test_centered_covariance_stable_for_huge_constant_prefix) ... ok
+test_covariance_missing_one_joint_observation (test_core.ArchitectureTests.test_covariance_missing_one_joint_observation) ... ok
+test_family_ablation_removes_every_path (test_core.ArchitectureTests.test_family_ablation_removes_every_path) ... ok
+test_independent_family_cannot_see_other_values (test_core.ArchitectureTests.test_independent_family_cannot_see_other_values) ... ok
+test_independent_random_order_target_expectation (test_core.ArchitectureTests.test_independent_random_order_target_expectation) ... ok
+test_joint_pair_means_and_covariance (test_core.ArchitectureTests.test_joint_pair_means_and_covariance) ... ok
+test_length_only_removes_other_values_masks_and_opportunities (test_core.ArchitectureTests.test_length_only_removes_other_values_masks_and_opportunities) ... ok
+test_masks_only_remove_value_paths (test_core.ArchitectureTests.test_masks_only_remove_value_paths) ... ok
+test_order_model_can_change (test_core.ArchitectureTests.test_order_model_can_change) ... ok
+test_pure_mask_removes_opportunity_magnitude (test_core.ArchitectureTests.test_pure_mask_removes_opportunity_magnitude) ... ok
+test_registered_summary_widths (test_core.ArchitectureTests.test_registered_summary_widths) ... ok
+test_set_and_moment_permutation_invariance (test_core.ArchitectureTests.test_set_and_moment_permutation_invariance) ... ok
+test_adapter_missing_sensor_and_unknown_opportunity_stay_missing (test_core.CacheAdapterTests.test_adapter_missing_sensor_and_unknown_opportunity_stay_missing) ... ok
+test_adapter_synthetic_exact_schema_and_no_structural_opportunity (test_core.CacheAdapterTests.test_adapter_synthetic_exact_schema_and_no_structural_opportunity) ... ok
+test_frozen_identity_mismatch_rejected (test_core.CacheAdapterTests.test_frozen_identity_mismatch_rejected) ... ok
+test_test_and_davinci_blocked_before_file_open (test_core.CacheAdapterTests.test_test_and_davinci_blocked_before_file_open) ... ok
+test_whole_source_failure_retains_lengths_missing_sensors (test_core.CacheAdapterTests.test_whole_source_failure_retains_lengths_missing_sensors) ... ok
+test_component_split_leak (test_core.FirewallTests.test_component_split_leak) ... ok
+test_duplicate_human_rejected (test_core.FirewallTests.test_duplicate_human_rejected) ... ok
+test_exact_catalog (test_core.FirewallTests.test_exact_catalog) ... ok
+test_exposed_test_rejected (test_core.FirewallTests.test_exposed_test_rejected) ... ok
+test_future_values_masks_and_final_lengths_hidden (test_core.FirewallTests.test_future_values_masks_and_final_lengths_hidden) ... ok
+test_labels_hashes_and_source_cannot_enter_forward (test_core.FirewallTests.test_labels_hashes_and_source_cannot_enter_forward) ... ok
+test_missing_never_becomes_observed_zero (test_core.FirewallTests.test_missing_never_becomes_observed_zero) ... ok
+test_natural_fitting_needs_approval (test_core.FirewallTests.test_natural_fitting_needs_approval) ... ok
+test_no_retrospective_bag_in_prefix_api (test_core.FirewallTests.test_no_retrospective_bag_in_prefix_api) ... ok
+test_padding_rejected (test_core.FirewallTests.test_padding_rejected) ... ok
+test_slice_backing_storage_rejected (test_core.FirewallTests.test_slice_backing_storage_rejected) ... ok
+test_source_scope_rejected (test_core.FirewallTests.test_source_scope_rejected) ... ok
+test_test_and_davinci_fit_rejected (test_core.FirewallTests.test_test_and_davinci_fit_rejected) ... ok
+test_unaudited_zero_rejected (test_core.FirewallTests.test_unaudited_zero_rejected) ... ok
+test_unknown_opportunities_remain_unknown (test_core.FirewallTests.test_unknown_opportunities_remain_unknown) ... ok
+test_aggregate_ratio_not_mean_document_percentage (test_core.ObjectiveTests.test_aggregate_ratio_not_mean_document_percentage) ... ok
+test_failed_attempts_count_and_block_freeze (test_core.ObjectiveTests.test_failed_attempts_count_and_block_freeze) ... ok
+test_family_balance_hand_calculation (test_core.ObjectiveTests.test_family_balance_hand_calculation) ... ok
+test_joint_answer_weighting_and_lengths (test_core.ObjectiveTests.test_joint_answer_weighting_and_lengths) ... ok
+test_no_row_omission_or_duplicates (test_core.ObjectiveTests.test_no_row_omission_or_duplicates) ... ok
+test_numeric_failure_not_deleted (test_core.ObjectiveTests.test_numeric_failure_not_deleted) ... ok
+test_seed_omission_rejected (test_core.ObjectiveTests.test_seed_omission_rejected) ... ok
+test_singletons_remain_but_not_transitions (test_core.ObjectiveTests.test_singletons_remain_but_not_transitions) ... ok
+test_72_run_grid (test_core.RevisedAuditTests.test_72_run_grid) ... ok
+test_direct_structural_count_zero_has_no_fake_opportunity (test_core.RevisedAuditTests.test_direct_structural_count_zero_has_no_fake_opportunity) ... ok
+test_frozen_value_paths_and_unscored_outputs_have_no_parameters (test_core.RevisedAuditTests.test_frozen_value_paths_and_unscored_outputs_have_no_parameters) ... ok
+test_interrupted_fit_blocks_restart_and_preserves_cpu (test_core.RevisedAuditTests.test_interrupted_fit_blocks_restart_and_preserves_cpu) ... ok
+test_public_export_rejects_private_records (test_core.RevisedAuditTests.test_public_export_rejects_private_records) ... ok
+test_question_maps_to_one_component_and_source (test_core.RevisedAuditTests.test_question_maps_to_one_component_and_source) ... ok
+test_blank_arm_keeps_fixed_half_slot (test_core.TransformTests.test_blank_arm_keeps_fixed_half_slot) ... ok
+test_constant_unseen_variation_is_frozen_zero (test_core.TransformTests.test_constant_unseen_variation_is_frozen_zero) ... ok
+test_hierarchical_unit_mass (test_core.TransformTests.test_hierarchical_unit_mass) ... ok
+test_no_test_clipping (test_core.TransformTests.test_no_test_clipping) ... ok
+test_per_component_not_rows_eligibility (test_core.TransformTests.test_per_component_not_rows_eligibility) ... ok
+test_roundtrip_transform (test_core.TransformTests.test_roundtrip_transform) ... ok
+
+----------------------------------------------------------------------
+Ran 54 tests in 0.135s
+
+OK
+{"kind": "post_reset_reconstructed_synthetic_implementation_replay", "tests_run": 54, "failures": 0, "errors": 0, "success": true, "natural_cache_bodies_read": 0, "raw_test_bodies_read": 0, "davinci_bodies_read": 0, "empirical_optimizer_fits": 0, "wall_seconds": 0.14726590600002964, "scope": "fixed candidate instrument prediction; no style, author or discourse model"}

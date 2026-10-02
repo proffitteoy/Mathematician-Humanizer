@@ -1,0 +1,14 @@
+test_exact_history_filter_and_lengths (__main__.CacheAudit.test_exact_history_filter_and_lengths) ... ok
+test_hash_bound_loader_preserves_natural_kind (__main__.CacheAudit.test_hash_bound_loader_preserves_natural_kind) ... ok
+test_instrument_cannot_be_promoted (__main__.CacheAudit.test_instrument_cannot_be_promoted) ... ok
+test_join_cannot_silently_use_row_order (__main__.CacheAudit.test_join_cannot_silently_use_row_order) ... ok
+test_missing_approval_denied_before_open (__main__.CacheAudit.test_missing_approval_denied_before_open) ... ok
+test_nonfinite_and_unaudited_zero_rejected (__main__.CacheAudit.test_nonfinite_and_unaudited_zero_rejected) ... ok
+test_source_failure_preserves_span_length (__main__.CacheAudit.test_source_failure_preserves_span_length) ... ok
+test_test_davinci_denied_before_open (__main__.CacheAudit.test_test_davinci_denied_before_open) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.010s
+
+OK
+{"kind": "synthetic_cache_audit_after_reconstruction", "tests_run": 8, "failures": 0, "errors": 0, "success": true, "natural_record_bodies_read": 0, "test_or_davinci_bodies_read": 0, "empirical_fits": 0, "cache_adapter_sha256": "c590f2ea2431322a9258643bdb155fe8af5abebe425eba0f5a4e33f5068e6dc1"}

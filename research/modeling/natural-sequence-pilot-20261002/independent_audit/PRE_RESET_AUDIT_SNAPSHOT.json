@@ -1,0 +1,58 @@
+{
+  "status": "blocked_executor_replacement_gate_closed",
+  "observed_at_utc": "2026-10-02T03:40:21Z",
+  "scope": "Independent synthetic/code audit for bounded nonoptimizing natural TRAIN/DEV throughput; not empirical-fit or test approval",
+  "contract_sha256": "2729b1608397be1d45e3620c86ec7b3ae1f21fdc9e28c70bc942c41b0a122444",
+  "completed_checks_before_reset": {
+    "implementation_tests": {"passed": 52, "failed": 0},
+    "independent_core_checks": {"passed": 19, "failed": 0},
+    "independent_synthetic_cache_adapter_checks": {"passed": 8, "failed": 0},
+    "independent_synthetic_profile_gate_checks": {"passed": 2, "failed": 0},
+    "tiny_synthetic_adam_runs_in_latest_core_check": 2,
+    "synthetic_repeatability": "Selected epoch, development score and restored checkpoint tensors matched exactly",
+    "natural_record_bodies_read_by_auditor": 0,
+    "test_or_davinci_bodies_read_by_auditor": 0,
+    "natural_optimizer_fits_by_auditor": 0
+  },
+  "verified_repairs": [
+    "TRAIN-ineligible outputs and unscored independent-family branches removed from capacity counts",
+    "TRAIN-frozen-zero value and covariance paths removed internally while fixed packet/nuisance semantics retained",
+    "Question identity constrained to one copy component and source",
+    "Interrupted attempts block restart and retain recorded CPU",
+    "Stable explicit joint-centered covariance replaces cancellation-prone product-minus-mean-product formula",
+    "Natural profile retains all32 forward graphs for one backward to match trainer memory pattern",
+    "Natural profile includes CPU and wall projections for72 fits, shuffled development multiplier10 and1.5 safety factor"
+  ],
+  "unresolved_before_any_profile": [
+    "Restore and verify the exact missing source/runtime and feature-cache artifacts",
+    "Complete full extraction and integrity verification; extractor last confirmed4338 of4814 arm caches and no completion/verification receipts",
+    "Apply coordinator-approved fixed-slot transform weighting patch; attempted patch did not apply before reset",
+    "Rerun all affected tests and collect current complete source hashes",
+    "Use existing bounded_run process-tree2GiB and20minute CPU/wall watchdog"
+  ],
+  "approved_weighting_interpretation_to_implement": "Keep all declared question/answer/H+ChatGPT slots; an empty arm has zero unit mass without reallocating its weight; normalize observed mass per channel afterward",
+  "weighting_regression": "q0 H=10/GPT empty, q1 H=0/GPT=0: q0H mass0.25, total unit mass0.75, fitted mean10/3",
+  "historical_source_hashes_from_2026_10_02_033242_utc_test_receipt_not_final": {
+    "experimental_natural/__init__.py": "fdc1e8a599ed26a505d313b695e52d42fd85981b51ccb4a8d1a19e02931853de",
+    "experimental_natural/cache_adapter.py": "ad5ba607267ded102d63fca9a399d6ae256e7dcf95ceacbe3124ae0c4d9afdcf",
+    "experimental_natural/freeze.py": "1ce18cf2c15833d98f773f160f4d85877cc769fbb2a2bd4b21b748a8ed9daff6",
+    "experimental_natural/models.py": "9422a71924182ff4ea0f4c63d7f9d4697d6549cd705855325431734db6430642",
+    "experimental_natural/objectives.py": "39848229d2892ce4a3c8de9170fb28d9bb99fd25d201b89de502f8812c1a9957",
+    "experimental_natural/plan.py": "a6a23e42c461904f0bb2d831a60ffc08faa18d14485b9b3665f975e1328be227",
+    "experimental_natural/report.py": "dcaae25824009c33c953c080921d5827983289e0d5a66fe02d7032ae3327738e",
+    "experimental_natural/schema.py": "c65cf6542763a164408b04da18b559a41222b612840d73658f46f3344aef5f93",
+    "experimental_natural/train.py": "c46f63950c757e71b6627defc0e67afd9988545ff31ae6d6f61d32e89d368293",
+    "experimental_natural/transforms.py": "6e3de582acc3d15fbc4f2d3ce5627b0b77bed857f2cef22425a0ca95e7999351"
+  },
+  "hash_warning": "plan.py and train.py were subsequently changed for transform signatures and fixed-seed registered factories; profile_natural.py also changed. Final current hashes could not be obtained after executor replacement. These historical hashes do not approve a future reconstruction.",
+  "lost_runnable_check_paths": [
+    "independent_audit/audit_synthetic_checks.py",
+    "independent_audit/audit_cache_adapter.py",
+    "independent_audit/audit_profile_gate.py"
+  ],
+  "other_future_study_gates": [
+    "Freeze evaluator must compare checkpoint hashes/metadata to successful ledger records, not merely hash current files",
+    "Independent-family explicit nuisance summaries differ from sharedF4 all-pair support summary; disclose or align before unqualified cross-family attribution",
+    "Common support, all registered controls, completed3seed fits and final test evaluation remain unrun"
+  ]
+}
