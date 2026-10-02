@@ -1,0 +1,83 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2541,
+      "sha256": "1043e4364588f658dfc8503e2e7fed51e8164f2397862e3fd6b4c6e74b231188"
+    },
+    {
+      "path": "PAIRED_PILOT_REPORT.md",
+      "bytes": 11818,
+      "sha256": "a333e60097ea7d290dfca3b372e2cb2555a6db6b5331ceda19b53ec2e71d5724"
+    },
+    {
+      "path": "PILOT_PROTOCOL.md",
+      "bytes": 5777,
+      "sha256": "f6ad8bf911233ca1a467ebfde696a045a566c5207f99b4f51c3b05b2df60146c"
+    },
+    {
+      "path": "selection-manifest.json",
+      "bytes": 11333,
+      "sha256": "a4b31b5982c5107adab88a2fca25989c19df4e3b193ceedea50ba946cce5f1b5"
+    },
+    {
+      "path": "model-manifest.json",
+      "bytes": 2093,
+      "sha256": "3c1759cab6469339e344ad38e8d2de1e8d1f2ebcda59417d39728fd6d6bb3f36"
+    },
+    {
+      "path": "run_paired_pilot.py",
+      "bytes": 6190,
+      "sha256": "75247246c6f9426a42680eca3df5cdbd7f7eca3ef70952216de58fd48924947e"
+    },
+    {
+      "path": "analyze_paired_pilot.py",
+      "bytes": 5544,
+      "sha256": "66c881ccd6613499c4f3ba68221abe858d8965c0d9453aef7f89188ae8e3b771"
+    },
+    {
+      "path": "audit_unguarded.py",
+      "bytes": 1295,
+      "sha256": "3e5d8087c0741aa6176e732c8691009059cc4ac9741ad14ba17f47dd94e1f2bd"
+    },
+    {
+      "path": "paired-pilot-summary.json",
+      "bytes": 16032,
+      "sha256": "92bdb17ef55d712f91cf414e8287d5482745274dcf9a70906ed7132d73735ed3"
+    },
+    {
+      "path": "unguarded-method-audit.json",
+      "bytes": 4922,
+      "sha256": "831bfa26cc9e749d0d1784d0d6b95b4d25da6d7f20296ae56e5e11d2bf46bc7f"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 2976,
+      "sha256": "8b315471f670292e8dda6e939e15b8429a0cba9077161009df3795dafd9094e6"
+    },
+    {
+      "path": "execution-manifest.json",
+      "bytes": 3219,
+      "sha256": "b9ec7ed6fba1dce3663adbbbbb0b6ba5b7cd86937b232396b2e6c881723a74d4"
+    },
+    {
+      "path": "recovered/phd.py",
+      "bytes": 7807,
+      "sha256": "44b8a8fcf9f4e1c14c6473aa610f423fe28b8a67f4fbf4e6de208e46c0ad4bd8"
+    }
+  ],
+  "raw_text_included": false,
+  "weights_or_embeddings_included": false,
+  "minimal_release_bytes": 81547,
+  "review_status": "independent replay passed all320 estimator reports, both summaries,32 selections and64 tokenizer equivalences; substantive caveats incorporated; separate full review supplied by auditor",
+  "frozen_run_artifacts_unchanged": true,
+  "raw_numeric_results_sha256": "fe28433fbb84c13d195a41365a5e0022f33995a9c553d7f76858bbe13f90b16d",
+  "numeric_results_release": "retained locally; full3.3MB diagnostic JSON contains hashes/indices and numeric energies/slopes only; root decides reviewed publication separately",
+  "explicit_excluded_directories": [
+    "private-inputs/",
+    "runtime/",
+    "roberta-base/",
+    "local-hf-cache/",
+    "upstream-read-only/"
+  ]
+}

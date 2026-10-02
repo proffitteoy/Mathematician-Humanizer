@@ -1,0 +1,132 @@
+{
+  "tokenizer_equivalence": 64,
+  "unique_prompt_hashes": 32,
+  "unique_human_hashes": 32,
+  "unique_ai_hashes": 32,
+  "matched_lengths": [
+    190,
+    80,
+    256,
+    124,
+    56,
+    164,
+    62,
+    150,
+    95,
+    132,
+    115,
+    256,
+    101,
+    72,
+    109,
+    55,
+    55,
+    256,
+    256,
+    127,
+    136,
+    155,
+    63,
+    256,
+    118,
+    151,
+    136,
+    66,
+    256,
+    87,
+    99,
+    115
+  ],
+  "saved_report_failures": [
+    {
+      "domain": "wikip",
+      "index": 302,
+      "label": "ai",
+      "condition": "original_window",
+      "profile": "notebook_seed_20261002",
+      "reason": "a_rerun_outside_stable_profile",
+      "mean_slope": 0.9371743021302512,
+      "slopes": [
+        0.9258674014172694,
+        1.0215377022832486,
+        0.8641178026902355
+      ],
+      "unguarded_algebraic_dimension": 15.917053592834186
+    },
+    {
+      "domain": "wikip",
+      "index": 302,
+      "label": "ai",
+      "condition": "matched_reencoded",
+      "profile": "notebook_seed_20261002",
+      "reason": "a_rerun_outside_stable_profile",
+      "mean_slope": 0.9371743021302512,
+      "slopes": [
+        0.9258674014172694,
+        1.0215377022832486,
+        0.8641178026902355
+      ],
+      "unguarded_algebraic_dimension": 15.917053592834186
+    },
+    {
+      "domain": "wikip",
+      "index": 653,
+      "label": "ai",
+      "condition": "original_window",
+      "profile": "notebook_seed_20261002",
+      "reason": "a_rerun_outside_stable_profile",
+      "mean_slope": 0.9506526077752536,
+      "slopes": [
+        0.9030373738425941,
+        0.9304982422874126,
+        1.0184222071957545
+      ],
+      "unguarded_algebraic_dimension": 20.26449534446781
+    },
+    {
+      "domain": "wikip",
+      "index": 653,
+      "label": "ai",
+      "condition": "matched_reencoded",
+      "profile": "notebook_seed_20261002",
+      "reason": "a_rerun_outside_stable_profile",
+      "mean_slope": 0.9506526077752536,
+      "slopes": [
+        0.9030373738425941,
+        0.9304982422874126,
+        1.0184222071957545
+      ],
+      "unguarded_algebraic_dimension": 20.26449534446781
+    },
+    {
+      "domain": "reddit",
+      "index": 1500,
+      "label": "human",
+      "condition": "original_window",
+      "profile": "notebook_seed_20261002",
+      "reason": "a_rerun_outside_stable_profile",
+      "mean_slope": 0.9734429964387009,
+      "slopes": [
+        0.9692731049506674,
+        0.9304947774731883,
+        1.020561106892247
+      ],
+      "unguarded_algebraic_dimension": 37.654850544105706
+    },
+    {
+      "domain": "reddit",
+      "index": 1500,
+      "label": "human",
+      "condition": "matched_reencoded",
+      "profile": "notebook_seed_20261002",
+      "reason": "a_rerun_outside_stable_profile",
+      "mean_slope": 0.9734429964387009,
+      "slopes": [
+        0.9692731049506674,
+        0.9304947774731883,
+        1.020561106892247
+      ],
+      "unguarded_algebraic_dimension": 37.654850544105706
+    }
+  ]
+}

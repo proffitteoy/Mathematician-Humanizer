@@ -1,0 +1,22 @@
+{
+  "audit_date": "2026-10-02",
+  "files": [
+    {
+      "path": "INDEPENDENT_AUDIT.md",
+      "bytes": 11920,
+      "sha256": "08d737bfdbc3fcccc196d60b36e2047c54cd6455a420f9c390cc62b990b2d402"
+    },
+    {
+      "path": "replay_paired_numeric_audit.py",
+      "bytes": 12357,
+      "sha256": "2bd0fd070616ae1d7abb10a0ede23628fcea2ce0093fc7c4def0ccadede8c22e"
+    },
+    {
+      "path": "aggregate_numeric_audit.json",
+      "bytes": 24078,
+      "sha256": "0c4efd461cf2ce08079d78a87b58cd1519d6ed77b380cc25a14df07a7fa346dd"
+    }
+  ],
+  "release_scope": "Aggregate audit only; no per-document identifiers or corpus/model payloads",
+  "checks": "320 saved reports and all recorded summary metrics/intervals replayed; 64 tokenizer inputs and 32 selected pair identities independently verified in separate local-only check"
+}
