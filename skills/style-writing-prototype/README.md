@@ -1,3 +1,9 @@
+# Research status correction — 2026-10-02
+
+本目录仅保留一次现成语言模型改写演示，已停止扩展。它没有使用本项目学得的风格表示或动力学，不能作为通用 Skill 阶段的核心进展或验收证据。分析器的事后测量不能建立改写策略的研究依据。
+
+当前主线依次是语料分层与测量有效性、多视图表示和动力学学习、跨作者/主题/体裁验证，最后才从稳定证据推导写作干预。前两步尚未完成。保留此目录用于追踪失败与范围纠正，不代表这些前置工作已完成。
+
 # Testable generic writing prototype v0.1
 
 A usable host-LLM writing skill plus executable local diagnosis/checking workflow, four original Chinese demonstrations, every full candidate (including failures), and actual local analyzer outputs. It is not the final learned multi-view Style Compiler, a human/AI detector, or evidence that stage one has passed.

@@ -2,7 +2,7 @@
   "schema_version": "writing-prototype-publication/0.1",
   "destination": "skills/style-writing-prototype",
   "file_count": 34,
-  "total_bytes": 1476955,
+  "total_bytes": 1477550,
   "files": [
     {
       "source_relative_path": "SKILL.md",
@@ -13,8 +13,8 @@
     {
       "source_relative_path": "README.md",
       "destination_relative_path": "skills/style-writing-prototype/README.md",
-      "bytes": 4571,
-      "sha256": "1e2f98f2b7c0ba7f8a03953cfe2cc1aa1c5bc9fd4844a5bce4b70a51b2e61136"
+      "bytes": 5166,
+      "sha256": "34c364a8d682fbbfeeb48ca5f663035b7553fdc42403068e273e41afdbc98988"
     },
     {
       "source_relative_path": "EXAMPLES.zh.md",
