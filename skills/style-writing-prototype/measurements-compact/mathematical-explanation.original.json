@@ -1,0 +1,2191 @@
+{
+  "text_sha256": "8e712d5bab30ed1fc9f59a28f403e67ecf5600a342f26ff13c41613acd8e3bb3",
+  "summary": {
+    "counts": {
+      "source_codepoints": 323,
+      "source_content_chars": 239,
+      "target_codepoints": 323,
+      "excluded_codepoints": 0,
+      "target_content_chars": 239,
+      "excluded_content_chars": 0,
+      "target_interval_count": 1,
+      "target_connected_components": 1,
+      "source_paragraphs": 1,
+      "source_sentences": 9,
+      "complete_target_paragraphs": 1,
+      "clipped_target_paragraphs": 0,
+      "complete_target_sentences": 9,
+      "clipped_target_sentences": 0,
+      "source_adjacent_pairs": 8,
+      "source_pairs_with_complete_target_endpoints": 8,
+      "eligible_adjacent_pairs": 8,
+      "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+      "source_pairs_without_complete_target_endpoints": 0
+    },
+    "sentence_content_lengths": [
+      15,
+      30,
+      9,
+      28,
+      43,
+      21,
+      24,
+      44,
+      25
+    ],
+    "surface_values": {
+      "F002": 4.184100418410042,
+      "F003": 0.0,
+      "F013": 25.0,
+      "F014": 9.0,
+      "F015": 43.2,
+      "F016": 0.2,
+      "F024": 0.67,
+      "F025": -0.40476190476190477
+    },
+    "linguistic_status": "measured_unvalidated",
+    "linguistic_values": {
+      "zh:upos.ADJ": 0.03496503496503497,
+      "zh:upos.ADP": 0.07692307692307693,
+      "zh:upos.ADV": 0.06993006993006994,
+      "zh:upos.AUX": 0.04195804195804196,
+      "zh:upos.CCONJ": 0.006993006993006993,
+      "zh:upos.DET": 0.04195804195804196,
+      "zh:upos.NOUN": 0.20279720279720279,
+      "zh:upos.NUM": 0.02097902097902098,
+      "zh:upos.PART": 0.07692307692307693,
+      "zh:upos.PRON": 0.06293706293706294,
+      "zh:upos.PROPN": 0.0,
+      "zh:upos.SCONJ": 0.03496503496503497,
+      "zh:upos.VERB": 0.2097902097902098,
+      "zh:word_length.mean": 1.7832167832167831,
+      "zh:word_length.ge4": 0.04195804195804196,
+      "zh:word.single_han": 0.36363636363636365,
+      "zh:word.latin": 0.13286713286713286,
+      "zh:word.decimal_digit": 0.02097902097902098,
+      "zh:cue.pronoun_first": 0.006993006993006993,
+      "zh:cue.pronoun_second": 0.0,
+      "zh:cue.pronoun_third": 0.02097902097902098,
+      "zh:cue.negator": 0.013986013986013986,
+      "zh:cue.de_function_form": 0.06993006993006994,
+      "zh:cue.di_subordinator_form": 0.0,
+      "zh:cue.de_extent_form": 0.0,
+      "zh:cue.le_auxiliary_form": 0.0,
+      "zh:cue.zhe_auxiliary_form": 0.0,
+      "zh:cue.guo_auxiliary_form": 0.0,
+      "zh:lexical.mattr100": 0.7356818181818181,
+      "zh:lexical.entropy100": 0.9022779627890336,
+      "zh:upos.bigram_entropy100": 0.6878342554530128,
+      "zh:lexical.content_overlap": 0.04791666666666666,
+      "zh:lexical.trigram_reuse": 0.0,
+      "zh:syntax.initial_pos_reuse": 0.125,
+      "zh:deprel.acl": 0.014925373134328358,
+      "zh:deprel.advcl": 0.014925373134328358,
+      "zh:deprel.advmod": 0.07462686567164178,
+      "zh:deprel.amod": 0.022388059701492536,
+      "zh:deprel.appos": 0.007462686567164179,
+      "zh:deprel.aux": 0.029850746268656716,
+      "zh:deprel.case": 0.1417910447761194,
+      "zh:deprel.cc": 0.007462686567164179,
+      "zh:deprel.ccomp": 0.06716417910447761,
+      "zh:deprel.clf": 0.022388059701492536,
+      "zh:deprel.compound": 0.014925373134328358,
+      "zh:deprel.conj": 0.007462686567164179,
+      "zh:deprel.cop": 0.014925373134328358,
+      "zh:deprel.csubj": 0.007462686567164179,
+      "zh:deprel.det": 0.06716417910447761,
+      "zh:deprel.discourse": 0.0,
+      "zh:deprel.dislocated": 0.0,
+      "zh:deprel.flat": 0.029850746268656716,
+      "zh:deprel.iobj": 0.0,
+      "zh:deprel.mark": 0.05223880597014925,
+      "zh:deprel.nmod": 0.07462686567164178,
+      "zh:deprel.nsubj": 0.09701492537313433,
+      "zh:deprel.nummod": 0.022388059701492536,
+      "zh:deprel.obj": 0.1044776119402985,
+      "zh:deprel.obl": 0.03731343283582089,
+      "zh:deprel.parataxis": 0.03731343283582089,
+      "zh:deprel.xcomp": 0.029850746268656716,
+      "zh:dependency.span_mean": 2.8805970149253732,
+      "zh:dependency.span_normalized": 0.1679481329726554,
+      "zh:dependency.depth_mean": 2.1818181818181817,
+      "zh:dependency.maxdepth_median": 4,
+      "zh:syntax.predicate_heads": 3.2222222222222223,
+      "zh:syntax.subordinate_arcs": 188.88888888888889,
+      "zh:syntax.predicate_conj_share": 0.034482758620689655,
+      "zh:syntax.nominal_modifier_size": 0.8275862068965517,
+      "zh:syntax.verb_root_without_subject": 0.625,
+      "zh:syntax.preposed_modifiers": 1.0
+    },
+    "missing": {},
+    "observed_channels": 71,
+    "total_channels": 71,
+    "parsed_sentences": 9,
+    "failed_sentences": 0
+  },
+  "quality_score": null,
+  "human_probability": null,
+  "learned_multiview_ranker": "unavailable",
+  "schema_version": "writing-analysis-compact/0.1",
+  "artifact_form": "compact_measurement_summary_not_full_analysis",
+  "full_bundle": {
+    "local_filename": "mathematical-explanation.original.json",
+    "sha256": "c86e032dd5ff359716a78ef9609a5112c93dabe303b17ed196c9bf03ab19d564",
+    "bytes": 682418,
+    "included_in_publication": false
+  },
+  "omitted": [
+    "raw token/POS/dependency graph and node/edge records",
+    "full 71-channel sentence vectors except five disclosed diagnostic channels",
+    "duplicated raw-source surface view"
+  ],
+  "surface": {
+    "measurement_profile": {
+      "version": "source-units-gap-safe/0.1.0",
+      "segmenter_version": "punctuation-lines/1.0.0",
+      "operational_feature_version": "character-core/1.0.0",
+      "unicode_version": "15.0.0",
+      "offset_unit": "unicode_codepoint",
+      "normalization": "none",
+      "unit_policy": "segment_full_source_then_select_complete_units",
+      "pair_policy": "original_consecutive_sentences_in_one_target_component"
+    },
+    "measurement_profile_sha256": "6b520a4fe678d9d4336efa3046d6e2174306062eb40cd04791b62944c2b8a270",
+    "target_projection": {
+      "observation_name": "declared_target_source_units",
+      "counts": {
+        "source_codepoints": 323,
+        "source_content_chars": 239,
+        "target_codepoints": 323,
+        "excluded_codepoints": 0,
+        "target_content_chars": 239,
+        "excluded_content_chars": 0,
+        "target_interval_count": 1,
+        "target_connected_components": 1,
+        "source_paragraphs": 1,
+        "source_sentences": 9,
+        "complete_target_paragraphs": 1,
+        "clipped_target_paragraphs": 0,
+        "complete_target_sentences": 9,
+        "clipped_target_sentences": 0,
+        "source_adjacent_pairs": 8,
+        "source_pairs_with_complete_target_endpoints": 8,
+        "eligible_adjacent_pairs": 8,
+        "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+        "source_pairs_without_complete_target_endpoints": 0
+      },
+      "paragraphs": [
+        {
+          "index": 0,
+          "start": 0,
+          "end": 323,
+          "content_chars": 239,
+          "paragraph_index": null
+        }
+      ],
+      "sentences": [
+        {
+          "index": 0,
+          "start": 0,
+          "end": 21,
+          "content_chars": 15,
+          "paragraph_index": 0
+        },
+        {
+          "index": 1,
+          "start": 21,
+          "end": 53,
+          "content_chars": 30,
+          "paragraph_index": 0
+        },
+        {
+          "index": 2,
+          "start": 53,
+          "end": 70,
+          "content_chars": 9,
+          "paragraph_index": 0
+        },
+        {
+          "index": 3,
+          "start": 70,
+          "end": 110,
+          "content_chars": 28,
+          "paragraph_index": 0
+        },
+        {
+          "index": 4,
+          "start": 110,
+          "end": 163,
+          "content_chars": 43,
+          "paragraph_index": 0
+        },
+        {
+          "index": 5,
+          "start": 163,
+          "end": 197,
+          "content_chars": 21,
+          "paragraph_index": 0
+        },
+        {
+          "index": 6,
+          "start": 197,
+          "end": 237,
+          "content_chars": 24,
+          "paragraph_index": 0
+        },
+        {
+          "index": 7,
+          "start": 237,
+          "end": 287,
+          "content_chars": 44,
+          "paragraph_index": 0
+        },
+        {
+          "index": 8,
+          "start": 287,
+          "end": 323,
+          "content_chars": 25,
+          "paragraph_index": 0
+        }
+      ],
+      "clipped_paragraph_indices": [],
+      "clipped_sentence_indices": [],
+      "adjacent_pairs": [
+        {
+          "left_source_sentence_index": 0,
+          "right_source_sentence_index": 1
+        },
+        {
+          "left_source_sentence_index": 1,
+          "right_source_sentence_index": 2
+        },
+        {
+          "left_source_sentence_index": 2,
+          "right_source_sentence_index": 3
+        },
+        {
+          "left_source_sentence_index": 3,
+          "right_source_sentence_index": 4
+        },
+        {
+          "left_source_sentence_index": 4,
+          "right_source_sentence_index": 5
+        },
+        {
+          "left_source_sentence_index": 5,
+          "right_source_sentence_index": 6
+        },
+        {
+          "left_source_sentence_index": 6,
+          "right_source_sentence_index": 7
+        },
+        {
+          "left_source_sentence_index": 7,
+          "right_source_sentence_index": 8
+        }
+      ],
+      "pair_absolute_difference_sum": 134,
+      "features": {
+        "F002": {
+          "feature_id": "F002",
+          "operational_feature_version": "character-core/1.0.0",
+          "measurement_profile_version": "source-units-gap-safe/0.1.0",
+          "value": 4.184100418410042,
+          "unit": "paragraphs_per_1000_content_chars",
+          "status": "observed",
+          "applicability": "applicable",
+          "missing_reason": null,
+          "opportunity": {
+            "unit": "target_content_codepoints",
+            "observed_count": 239,
+            "completeness": "complete_for_declared_projection",
+            "clipped_unit_count": 0
+          },
+          "raw_numerator": 1,
+          "denominator": 239,
+          "eligible_for_comparison": false,
+          "comparison_reason": "Research projection; no matched reference or validated support policy",
+          "measurement_error_interval": null
+        },
+        "F003": {
+          "feature_id": "F003",
+          "operational_feature_version": "character-core/1.0.0",
+          "measurement_profile_version": "source-units-gap-safe/0.1.0",
+          "value": 0.0,
+          "unit": "share",
+          "status": "zero_observed",
+          "applicability": "applicable",
+          "missing_reason": null,
+          "opportunity": {
+            "unit": "complete_source_paragraphs",
+            "observed_count": 1,
+            "completeness": "complete_for_declared_projection",
+            "clipped_unit_count": 0
+          },
+          "raw_numerator": 0,
+          "denominator": 1,
+          "eligible_for_comparison": false,
+          "comparison_reason": "Research projection; no matched reference or validated support policy",
+          "measurement_error_interval": null
+        },
+        "F013": {
+          "feature_id": "F013",
+          "operational_feature_version": "character-core/1.0.0",
+          "measurement_profile_version": "source-units-gap-safe/0.1.0",
+          "value": 25.0,
+          "unit": "content_chars",
+          "status": "observed",
+          "applicability": "applicable",
+          "missing_reason": null,
+          "opportunity": {
+            "unit": "complete_source_sentences",
+            "observed_count": 9,
+            "completeness": "complete_for_declared_projection",
+            "clipped_unit_count": 0
+          },
+          "raw_numerator": null,
+          "denominator": null,
+          "eligible_for_comparison": false,
+          "comparison_reason": "Research projection; no matched reference or validated support policy",
+          "measurement_error_interval": null
+        },
+        "F014": {
+          "feature_id": "F014",
+          "operational_feature_version": "character-core/1.0.0",
+          "measurement_profile_version": "source-units-gap-safe/0.1.0",
+          "value": 9.0,
+          "unit": "content_chars",
+          "status": "observed",
+          "applicability": "applicable",
+          "missing_reason": null,
+          "opportunity": {
+            "unit": "complete_source_sentences",
+            "observed_count": 9,
+            "completeness": "complete_for_declared_projection",
+            "clipped_unit_count": 0
+          },
+          "raw_numerator": null,
+          "denominator": null,
+          "eligible_for_comparison": false,
+          "comparison_reason": "Research projection; no matched reference or validated support policy",
+          "measurement_error_interval": null
+        },
+        "F015": {
+          "feature_id": "F015",
+          "operational_feature_version": "character-core/1.0.0",
+          "measurement_profile_version": "source-units-gap-safe/0.1.0",
+          "value": 43.2,
+          "unit": "content_chars",
+          "status": "observed",
+          "applicability": "applicable",
+          "missing_reason": null,
+          "opportunity": {
+            "unit": "complete_source_sentences",
+            "observed_count": 9,
+            "completeness": "complete_for_declared_projection",
+            "clipped_unit_count": 0
+          },
+          "raw_numerator": null,
+          "denominator": null,
+          "eligible_for_comparison": false,
+          "comparison_reason": "Research projection; no matched reference or validated support policy",
+          "measurement_error_interval": null
+        },
+        "F016": {
+          "feature_id": "F016",
+          "operational_feature_version": "character-core/1.0.0",
+          "measurement_profile_version": "source-units-gap-safe/0.1.0",
+          "value": 0.2,
+          "unit": "ratio",
+          "status": "observed",
+          "applicability": "applicable",
+          "missing_reason": null,
+          "opportunity": {
+            "unit": "complete_source_sentences",
+            "observed_count": 9,
+            "completeness": "complete_for_declared_projection",
+            "clipped_unit_count": 0
+          },
+          "raw_numerator": 5.0,
+          "denominator": 25.0,
+          "eligible_for_comparison": false,
+          "comparison_reason": "Research projection; no matched reference or validated support policy",
+          "measurement_error_interval": null
+        },
+        "F024": {
+          "feature_id": "F024",
+          "operational_feature_version": "character-core/1.0.0",
+          "measurement_profile_version": "source-units-gap-safe/0.1.0",
+          "value": 0.67,
+          "unit": "ratio",
+          "status": "observed",
+          "applicability": "applicable",
+          "missing_reason": null,
+          "opportunity": {
+            "unit": "source_contiguous_sentence_pairs",
+            "observed_count": 8,
+            "completeness": "complete_for_declared_projection",
+            "clipped_unit_count": 0
+          },
+          "raw_numerator": 16.75,
+          "denominator": 25.0,
+          "eligible_for_comparison": false,
+          "comparison_reason": "Research projection; no matched reference or validated support policy",
+          "measurement_error_interval": null
+        },
+        "F025": {
+          "feature_id": "F025",
+          "operational_feature_version": "character-core/1.0.0",
+          "measurement_profile_version": "source-units-gap-safe/0.1.0",
+          "value": -0.40476190476190477,
+          "unit": "spearman_rho",
+          "status": "observed",
+          "applicability": "applicable",
+          "missing_reason": null,
+          "opportunity": {
+            "unit": "source_contiguous_sentence_pairs",
+            "observed_count": 8,
+            "completeness": "complete_for_declared_projection",
+            "clipped_unit_count": 0
+          },
+          "raw_numerator": -17.0,
+          "denominator": 42.0,
+          "eligible_for_comparison": false,
+          "comparison_reason": "Research projection; no matched reference or validated support policy",
+          "measurement_error_interval": null
+        }
+      }
+    }
+  },
+  "linguistic": {
+    "status": "measured_unvalidated",
+    "parsed_sentences": 9,
+    "failed_sentences": 0,
+    "bundle": {
+      "target": {
+        "global_measurements": {
+          "zh:upos.ADJ": {
+            "value": 0.03496503496503497,
+            "numerator": 5,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.ADP": {
+            "value": 0.07692307692307693,
+            "numerator": 11,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.ADV": {
+            "value": 0.06993006993006994,
+            "numerator": 10,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.AUX": {
+            "value": 0.04195804195804196,
+            "numerator": 6,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.CCONJ": {
+            "value": 0.006993006993006993,
+            "numerator": 1,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.DET": {
+            "value": 0.04195804195804196,
+            "numerator": 6,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.NOUN": {
+            "value": 0.20279720279720279,
+            "numerator": 29,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.NUM": {
+            "value": 0.02097902097902098,
+            "numerator": 3,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.PART": {
+            "value": 0.07692307692307693,
+            "numerator": 11,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.PRON": {
+            "value": 0.06293706293706294,
+            "numerator": 9,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.PROPN": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.SCONJ": {
+            "value": 0.03496503496503497,
+            "numerator": 5,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:upos.VERB": {
+            "value": 0.2097902097902098,
+            "numerator": 30,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "nonpunctuation nonwhitespace model tokens T"
+          },
+          "zh:word_length.mean": {
+            "value": 1.7832167832167831,
+            "numerator": 255,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:word_length.ge4": {
+            "value": 0.04195804195804196,
+            "numerator": 6,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:word.single_han": {
+            "value": 0.36363636363636365,
+            "numerator": 52,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:word.latin": {
+            "value": 0.13286713286713286,
+            "numerator": 19,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:word.decimal_digit": {
+            "value": 0.02097902097902098,
+            "numerator": 3,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.pronoun_first": {
+            "value": 0.006993006993006993,
+            "numerator": 1,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.pronoun_second": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.pronoun_third": {
+            "value": 0.02097902097902098,
+            "numerator": 3,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.negator": {
+            "value": 0.013986013986013986,
+            "numerator": 2,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.de_function_form": {
+            "value": 0.06993006993006994,
+            "numerator": 10,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.di_subordinator_form": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.de_extent_form": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.le_auxiliary_form": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.zhe_auxiliary_form": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:cue.guo_auxiliary_form": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T"
+          },
+          "zh:lexical.mattr100": {
+            "value": 0.7356818181818181,
+            "numerator": 32.37,
+            "denominator": 44,
+            "opportunities": 44,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "length100 token windows"
+          },
+          "zh:lexical.entropy100": {
+            "value": 0.9022779627890336,
+            "numerator": 39.70023036271748,
+            "denominator": 44,
+            "opportunities": 44,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "length100 token windows"
+          },
+          "zh:upos.bigram_entropy100": {
+            "value": 0.6878342554530128,
+            "numerator": 30.264707239932562,
+            "denominator": 44,
+            "opportunities": 44,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "length100 token windows"
+          },
+          "zh:lexical.content_overlap": {
+            "value": 0.04791666666666666,
+            "numerator": 0.3833333333333333,
+            "denominator": 8,
+            "opportunities": 8,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+          },
+          "zh:lexical.trigram_reuse": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 125,
+            "opportunities": 125,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "within-sentence token trigram positions"
+          },
+          "zh:syntax.initial_pos_reuse": {
+            "value": 0.125,
+            "numerator": 1,
+            "denominator": 8,
+            "opportunities": 8,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+          },
+          "zh:deprel.acl": {
+            "value": 0.014925373134328358,
+            "numerator": 2,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.advcl": {
+            "value": 0.014925373134328358,
+            "numerator": 2,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.advmod": {
+            "value": 0.07462686567164178,
+            "numerator": 10,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.amod": {
+            "value": 0.022388059701492536,
+            "numerator": 3,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.appos": {
+            "value": 0.007462686567164179,
+            "numerator": 1,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.aux": {
+            "value": 0.029850746268656716,
+            "numerator": 4,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.case": {
+            "value": 0.1417910447761194,
+            "numerator": 19,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.cc": {
+            "value": 0.007462686567164179,
+            "numerator": 1,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.ccomp": {
+            "value": 0.06716417910447761,
+            "numerator": 9,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.clf": {
+            "value": 0.022388059701492536,
+            "numerator": 3,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.compound": {
+            "value": 0.014925373134328358,
+            "numerator": 2,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.conj": {
+            "value": 0.007462686567164179,
+            "numerator": 1,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.cop": {
+            "value": 0.014925373134328358,
+            "numerator": 2,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.csubj": {
+            "value": 0.007462686567164179,
+            "numerator": 1,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.det": {
+            "value": 0.06716417910447761,
+            "numerator": 9,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.discourse": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.dislocated": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.flat": {
+            "value": 0.029850746268656716,
+            "numerator": 4,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.iobj": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "zero_observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.mark": {
+            "value": 0.05223880597014925,
+            "numerator": 7,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.nmod": {
+            "value": 0.07462686567164178,
+            "numerator": 10,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.nsubj": {
+            "value": 0.09701492537313433,
+            "numerator": 13,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.nummod": {
+            "value": 0.022388059701492536,
+            "numerator": 3,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.obj": {
+            "value": 0.1044776119402985,
+            "numerator": 14,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.obl": {
+            "value": 0.03731343283582089,
+            "numerator": 5,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.parataxis": {
+            "value": 0.03731343283582089,
+            "numerator": 5,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:deprel.xcomp": {
+            "value": 0.029850746268656716,
+            "numerator": 4,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "basic nonroot nonpunct arcs with both endpoints in T, A"
+          },
+          "zh:dependency.span_mean": {
+            "value": 2.8805970149253732,
+            "numerator": 386,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "A"
+          },
+          "zh:dependency.span_normalized": {
+            "value": 0.1679481329726554,
+            "numerator": 22.505049818335824,
+            "denominator": 134,
+            "opportunities": 134,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "A"
+          },
+          "zh:dependency.depth_mean": {
+            "value": 2.1818181818181817,
+            "numerator": 312,
+            "denominator": 143,
+            "opportunities": 143,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "T in legal rooted trees"
+          },
+          "zh:dependency.maxdepth_median": {
+            "value": 4,
+            "numerator": null,
+            "denominator": null,
+            "opportunities": 9,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "legal sentences with tokens in T"
+          },
+          "zh:syntax.predicate_heads": {
+            "value": 3.2222222222222223,
+            "numerator": 29,
+            "denominator": 9,
+            "opportunities": 9,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "legal parsed sentences S"
+          },
+          "zh:syntax.subordinate_arcs": {
+            "value": 188.88888888888889,
+            "numerator": 1700,
+            "denominator": 9,
+            "opportunities": 9,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "legal parsed sentences S"
+          },
+          "zh:syntax.predicate_conj_share": {
+            "value": 0.034482758620689655,
+            "numerator": 1,
+            "denominator": 29,
+            "opportunities": 29,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "candidate predicate heads"
+          },
+          "zh:syntax.nominal_modifier_size": {
+            "value": 0.8275862068965517,
+            "numerator": 24,
+            "denominator": 29,
+            "opportunities": 29,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "NOUN/PROPN heads"
+          },
+          "zh:syntax.verb_root_without_subject": {
+            "value": 0.625,
+            "numerator": 5,
+            "denominator": 8,
+            "opportunities": 8,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "VERB-root sentences; NOT referential subject sites"
+          },
+          "zh:syntax.preposed_modifiers": {
+            "value": 1.0,
+            "numerator": 25,
+            "denominator": 25,
+            "opportunities": 25,
+            "missing_reason": null,
+            "status": "observed",
+            "comparison_eligible": false,
+            "uncertainty_interval": null,
+            "opportunity_type": "amod/nmod/acl/advmod arcs"
+          }
+        },
+        "sequence": [
+          {
+            "source_sentence_index": 0,
+            "source_span": [
+              0,
+              21
+            ],
+            "component_index": 0,
+            "available_after_codepoint": 21,
+            "parse_status": "ok",
+            "parse_reason": null,
+            "analysis_status": "automatic_unvalidated",
+            "warnings": [
+              "ambiguity_not_estimated"
+            ],
+            "cue_evidence": {
+              "pronoun_first": [],
+              "pronoun_second": [],
+              "pronoun_third": [],
+              "negator": [],
+              "de_function_form": [],
+              "di_subordinator_form": [],
+              "de_extent_form": [],
+              "le_auxiliary_form": [],
+              "zhe_auxiliary_form": [],
+              "guo_auxiliary_form": []
+            },
+            "subset_only_if_global_ineligible": false,
+            "measurements": {
+              "zh:dependency.span_mean": {
+                "value": 2.5714285714285716,
+                "numerator": 18,
+                "denominator": 7,
+                "opportunities": 7,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "A"
+              },
+              "zh:syntax.subordinate_arcs": {
+                "value": 100.0,
+                "numerator": 100,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "legal parsed sentences S"
+              },
+              "zh:syntax.nominal_modifier_size": {
+                "value": 2.0,
+                "numerator": 6,
+                "denominator": 3,
+                "opportunities": 3,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "NOUN/PROPN heads"
+              },
+              "zh:lexical.content_overlap": {
+                "value": null,
+                "numerator": null,
+                "denominator": 0,
+                "opportunities": 0,
+                "missing_reason": "zero_denominator",
+                "status": "unavailable",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+              },
+              "zh:syntax.initial_pos_reuse": {
+                "value": null,
+                "numerator": null,
+                "denominator": 0,
+                "opportunities": 0,
+                "missing_reason": "zero_denominator",
+                "status": "unavailable",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+              }
+            }
+          },
+          {
+            "source_sentence_index": 1,
+            "source_span": [
+              21,
+              53
+            ],
+            "component_index": 0,
+            "available_after_codepoint": 53,
+            "parse_status": "ok",
+            "parse_reason": null,
+            "analysis_status": "automatic_unvalidated",
+            "warnings": [
+              "ambiguity_not_estimated"
+            ],
+            "cue_evidence": {
+              "pronoun_first": [
+                {
+                  "span": [
+                    21,
+                    23
+                  ],
+                  "upos": "PRON"
+                }
+              ],
+              "pronoun_second": [],
+              "pronoun_third": [
+                {
+                  "span": [
+                    29,
+                    30
+                  ],
+                  "upos": "PRON"
+                },
+                {
+                  "span": [
+                    42,
+                    43
+                  ],
+                  "upos": "PRON"
+                }
+              ],
+              "negator": [],
+              "de_function_form": [
+                {
+                  "span": [
+                    23,
+                    24
+                  ],
+                  "upos": "PART"
+                },
+                {
+                  "span": [
+                    43,
+                    44
+                  ],
+                  "upos": "PART"
+                }
+              ],
+              "di_subordinator_form": [],
+              "de_extent_form": [],
+              "le_auxiliary_form": [],
+              "zhe_auxiliary_form": [],
+              "guo_auxiliary_form": []
+            },
+            "subset_only_if_global_ineligible": false,
+            "measurements": {
+              "zh:dependency.span_mean": {
+                "value": 2.2941176470588234,
+                "numerator": 39,
+                "denominator": 17,
+                "opportunities": 17,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "A"
+              },
+              "zh:syntax.subordinate_arcs": {
+                "value": 300.0,
+                "numerator": 300,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "legal parsed sentences S"
+              },
+              "zh:syntax.nominal_modifier_size": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 2,
+                "opportunities": 2,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "NOUN/PROPN heads"
+              },
+              "zh:lexical.content_overlap": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+              },
+              "zh:syntax.initial_pos_reuse": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+              }
+            }
+          },
+          {
+            "source_sentence_index": 2,
+            "source_span": [
+              53,
+              70
+            ],
+            "component_index": 0,
+            "available_after_codepoint": 70,
+            "parse_status": "ok",
+            "parse_reason": null,
+            "analysis_status": "automatic_unvalidated",
+            "warnings": [
+              "ambiguity_not_estimated"
+            ],
+            "cue_evidence": {
+              "pronoun_first": [],
+              "pronoun_second": [],
+              "pronoun_third": [],
+              "negator": [],
+              "de_function_form": [],
+              "di_subordinator_form": [],
+              "de_extent_form": [],
+              "le_auxiliary_form": [],
+              "zhe_auxiliary_form": [],
+              "guo_auxiliary_form": []
+            },
+            "subset_only_if_global_ineligible": false,
+            "measurements": {
+              "zh:dependency.span_mean": {
+                "value": 1.0,
+                "numerator": 2,
+                "denominator": 2,
+                "opportunities": 2,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "A"
+              },
+              "zh:syntax.subordinate_arcs": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "legal parsed sentences S"
+              },
+              "zh:syntax.nominal_modifier_size": {
+                "value": null,
+                "numerator": null,
+                "denominator": 0,
+                "opportunities": 0,
+                "missing_reason": "zero_denominator",
+                "status": "unavailable",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "NOUN/PROPN heads"
+              },
+              "zh:lexical.content_overlap": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+              },
+              "zh:syntax.initial_pos_reuse": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+              }
+            }
+          },
+          {
+            "source_sentence_index": 3,
+            "source_span": [
+              70,
+              110
+            ],
+            "component_index": 0,
+            "available_after_codepoint": 110,
+            "parse_status": "ok",
+            "parse_reason": null,
+            "analysis_status": "automatic_unvalidated",
+            "warnings": [
+              "ambiguity_not_estimated"
+            ],
+            "cue_evidence": {
+              "pronoun_first": [],
+              "pronoun_second": [],
+              "pronoun_third": [],
+              "negator": [],
+              "de_function_form": [
+                {
+                  "span": [
+                    75,
+                    76
+                  ],
+                  "upos": "PART"
+                }
+              ],
+              "di_subordinator_form": [],
+              "de_extent_form": [],
+              "le_auxiliary_form": [],
+              "zhe_auxiliary_form": [],
+              "guo_auxiliary_form": []
+            },
+            "subset_only_if_global_ineligible": false,
+            "measurements": {
+              "zh:dependency.span_mean": {
+                "value": 2.6,
+                "numerator": 39,
+                "denominator": 15,
+                "opportunities": 15,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "A"
+              },
+              "zh:syntax.subordinate_arcs": {
+                "value": 100.0,
+                "numerator": 100,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "legal parsed sentences S"
+              },
+              "zh:syntax.nominal_modifier_size": {
+                "value": 0.8,
+                "numerator": 4,
+                "denominator": 5,
+                "opportunities": 5,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "NOUN/PROPN heads"
+              },
+              "zh:lexical.content_overlap": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+              },
+              "zh:syntax.initial_pos_reuse": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+              }
+            }
+          },
+          {
+            "source_sentence_index": 4,
+            "source_span": [
+              110,
+              163
+            ],
+            "component_index": 0,
+            "available_after_codepoint": 163,
+            "parse_status": "ok",
+            "parse_reason": null,
+            "analysis_status": "automatic_unvalidated",
+            "warnings": [
+              "ambiguity_not_estimated"
+            ],
+            "cue_evidence": {
+              "pronoun_first": [],
+              "pronoun_second": [],
+              "pronoun_third": [],
+              "negator": [
+                {
+                  "span": [
+                    120,
+                    121
+                  ],
+                  "upos": "ADV"
+                }
+              ],
+              "de_function_form": [
+                {
+                  "span": [
+                    112,
+                    113
+                  ],
+                  "upos": "PART"
+                },
+                {
+                  "span": [
+                    125,
+                    126
+                  ],
+                  "upos": "PART"
+                },
+                {
+                  "span": [
+                    144,
+                    145
+                  ],
+                  "upos": "PART"
+                }
+              ],
+              "di_subordinator_form": [],
+              "de_extent_form": [],
+              "le_auxiliary_form": [],
+              "zhe_auxiliary_form": [],
+              "guo_auxiliary_form": []
+            },
+            "subset_only_if_global_ineligible": false,
+            "measurements": {
+              "zh:dependency.span_mean": {
+                "value": 3.586206896551724,
+                "numerator": 104,
+                "denominator": 29,
+                "opportunities": 29,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "A"
+              },
+              "zh:syntax.subordinate_arcs": {
+                "value": 200.0,
+                "numerator": 200,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "legal parsed sentences S"
+              },
+              "zh:syntax.nominal_modifier_size": {
+                "value": 1.0,
+                "numerator": 8,
+                "denominator": 8,
+                "opportunities": 8,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "NOUN/PROPN heads"
+              },
+              "zh:lexical.content_overlap": {
+                "value": 0.26666666666666666,
+                "numerator": 0.26666666666666666,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+              },
+              "zh:syntax.initial_pos_reuse": {
+                "value": 1.0,
+                "numerator": 1,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+              }
+            }
+          },
+          {
+            "source_sentence_index": 5,
+            "source_span": [
+              163,
+              197
+            ],
+            "component_index": 0,
+            "available_after_codepoint": 197,
+            "parse_status": "ok",
+            "parse_reason": null,
+            "analysis_status": "automatic_unvalidated",
+            "warnings": [
+              "ambiguity_not_estimated"
+            ],
+            "cue_evidence": {
+              "pronoun_first": [],
+              "pronoun_second": [],
+              "pronoun_third": [],
+              "negator": [],
+              "de_function_form": [],
+              "di_subordinator_form": [],
+              "de_extent_form": [],
+              "le_auxiliary_form": [],
+              "zhe_auxiliary_form": [],
+              "guo_auxiliary_form": []
+            },
+            "subset_only_if_global_ineligible": false,
+            "measurements": {
+              "zh:dependency.span_mean": {
+                "value": 2.0,
+                "numerator": 20,
+                "denominator": 10,
+                "opportunities": 10,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "A"
+              },
+              "zh:syntax.subordinate_arcs": {
+                "value": 300.0,
+                "numerator": 300,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "legal parsed sentences S"
+              },
+              "zh:syntax.nominal_modifier_size": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "NOUN/PROPN heads"
+              },
+              "zh:lexical.content_overlap": {
+                "value": 0.06666666666666667,
+                "numerator": 0.06666666666666667,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+              },
+              "zh:syntax.initial_pos_reuse": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+              }
+            }
+          },
+          {
+            "source_sentence_index": 6,
+            "source_span": [
+              197,
+              237
+            ],
+            "component_index": 0,
+            "available_after_codepoint": 237,
+            "parse_status": "ok",
+            "parse_reason": null,
+            "analysis_status": "automatic_unvalidated",
+            "warnings": [
+              "ambiguity_not_estimated"
+            ],
+            "cue_evidence": {
+              "pronoun_first": [],
+              "pronoun_second": [],
+              "pronoun_third": [],
+              "negator": [],
+              "de_function_form": [
+                {
+                  "span": [
+                    233,
+                    234
+                  ],
+                  "upos": "PART"
+                }
+              ],
+              "di_subordinator_form": [],
+              "de_extent_form": [],
+              "le_auxiliary_form": [],
+              "zhe_auxiliary_form": [],
+              "guo_auxiliary_form": []
+            },
+            "subset_only_if_global_ineligible": false,
+            "measurements": {
+              "zh:dependency.span_mean": {
+                "value": 2.4615384615384617,
+                "numerator": 32,
+                "denominator": 13,
+                "opportunities": 13,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "A"
+              },
+              "zh:syntax.subordinate_arcs": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "legal parsed sentences S"
+              },
+              "zh:syntax.nominal_modifier_size": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "NOUN/PROPN heads"
+              },
+              "zh:lexical.content_overlap": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+              },
+              "zh:syntax.initial_pos_reuse": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+              }
+            }
+          },
+          {
+            "source_sentence_index": 7,
+            "source_span": [
+              237,
+              287
+            ],
+            "component_index": 0,
+            "available_after_codepoint": 287,
+            "parse_status": "ok",
+            "parse_reason": null,
+            "analysis_status": "automatic_unvalidated",
+            "warnings": [
+              "ambiguity_not_estimated"
+            ],
+            "cue_evidence": {
+              "pronoun_first": [],
+              "pronoun_second": [],
+              "pronoun_third": [
+                {
+                  "span": [
+                    258,
+                    259
+                  ],
+                  "upos": "PRON"
+                }
+              ],
+              "negator": [],
+              "de_function_form": [
+                {
+                  "span": [
+                    241,
+                    242
+                  ],
+                  "upos": "SCONJ"
+                },
+                {
+                  "span": [
+                    272,
+                    273
+                  ],
+                  "upos": "SCONJ"
+                },
+                {
+                  "span": [
+                    278,
+                    279
+                  ],
+                  "upos": "PART"
+                }
+              ],
+              "di_subordinator_form": [],
+              "de_extent_form": [],
+              "le_auxiliary_form": [],
+              "zhe_auxiliary_form": [],
+              "guo_auxiliary_form": []
+            },
+            "subset_only_if_global_ineligible": false,
+            "measurements": {
+              "zh:dependency.span_mean": {
+                "value": 3.607142857142857,
+                "numerator": 101,
+                "denominator": 28,
+                "opportunities": 28,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "A"
+              },
+              "zh:syntax.subordinate_arcs": {
+                "value": 400.0,
+                "numerator": 400,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "legal parsed sentences S"
+              },
+              "zh:syntax.nominal_modifier_size": {
+                "value": 0.8571428571428571,
+                "numerator": 6,
+                "denominator": 7,
+                "opportunities": 7,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "NOUN/PROPN heads"
+              },
+              "zh:lexical.content_overlap": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+              },
+              "zh:syntax.initial_pos_reuse": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+              }
+            }
+          },
+          {
+            "source_sentence_index": 8,
+            "source_span": [
+              287,
+              323
+            ],
+            "component_index": 0,
+            "available_after_codepoint": 323,
+            "parse_status": "ok",
+            "parse_reason": null,
+            "analysis_status": "automatic_unvalidated",
+            "warnings": [
+              "ambiguity_not_estimated"
+            ],
+            "cue_evidence": {
+              "pronoun_first": [],
+              "pronoun_second": [],
+              "pronoun_third": [],
+              "negator": [
+                {
+                  "span": [
+                    319,
+                    320
+                  ],
+                  "upos": "ADV"
+                }
+              ],
+              "de_function_form": [],
+              "di_subordinator_form": [],
+              "de_extent_form": [],
+              "le_auxiliary_form": [],
+              "zhe_auxiliary_form": [],
+              "guo_auxiliary_form": []
+            },
+            "subset_only_if_global_ineligible": false,
+            "measurements": {
+              "zh:dependency.span_mean": {
+                "value": 2.3846153846153846,
+                "numerator": 31,
+                "denominator": 13,
+                "opportunities": 13,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "A"
+              },
+              "zh:syntax.subordinate_arcs": {
+                "value": 300.0,
+                "numerator": 300,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "legal parsed sentences S"
+              },
+              "zh:syntax.nominal_modifier_size": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 2,
+                "opportunities": 2,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "NOUN/PROPN heads"
+              },
+              "zh:lexical.content_overlap": {
+                "value": 0.05,
+                "numerator": 0.05,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "original adjacent target sentence pairs with nonempty union"
+              },
+              "zh:syntax.initial_pos_reuse": {
+                "value": 0.0,
+                "numerator": 0,
+                "denominator": 1,
+                "opportunities": 1,
+                "missing_reason": null,
+                "status": "zero_observed",
+                "comparison_eligible": false,
+                "uncertainty_interval": null,
+                "opportunity_type": "sentences with >=3 tokens after first qualifying same-component sentence"
+              }
+            }
+          }
+        ]
+      },
+      "profile": {
+        "schema_version": "zh-linguistic-sensors/0.1.0",
+        "parser": {
+          "parser_name": "stanza",
+          "parser_version": "1.10.1",
+          "model_id": "stanfordnlp/stanza-zh-hans@82f2856d1cf4f933738a8a84b5ad959d156040a0;nocharlm;resources1.10.0",
+          "model_sha256": "e668fc75e6ff6bb4a8b488f482bcb986ff0e8df1a9cf749599b430b2cea4325f",
+          "scope": "each_original_source_sentence_independently",
+          "normalization": "none",
+          "segmenter_version": "punctuation-lines/1.0.0",
+          "version": "zh-source-sentence-local/0.1.0",
+          "runtime": [
+            [
+              "python",
+              "3.12.14"
+            ],
+            [
+              "torch",
+              "2.14.1+cpu"
+            ],
+            [
+              "numpy",
+              "2.3.5"
+            ],
+            [
+              "threads",
+              "2"
+            ],
+            [
+              "device",
+              "cpu"
+            ],
+            [
+              "tokenize_no_ssplit",
+              "true"
+            ],
+            [
+              "download_method",
+              "none"
+            ]
+          ]
+        },
+        "unicode_version": "15.0.0",
+        "normalization": "none",
+        "token_denominator": "model tokens except PUNCT and all-punctuation/whitespace tokens",
+        "gap_policy": "no windows, history or adjacency across target components",
+        "clipped_policy": "global abstention; complete local units diagnostic only",
+        "unicode_script_property_version": "15.0.0",
+        "unicode_scripts_sha256": "cca85d830f46aece2e7c1459ef1249993dca8f2e46d51e869255be140d7ea4b0"
+      }
+    }
+  }
+}

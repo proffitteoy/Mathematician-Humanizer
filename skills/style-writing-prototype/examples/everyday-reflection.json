@@ -1,0 +1,486 @@
+{
+  "id": "everyday-reflection",
+  "genre": "everyday_reflection",
+  "original": "待办清单越写越长时，人很容易把没有完成的项目都理解成自己不够自律。但清单里可能混着不同的东西：已经答应别人的事、确实想做但尚未安排的事，还有只是觉得应该做的事。它们都被写成一个方框，看起来便像拥有同样的优先级。每天重新抄一遍清单，也许能暂时带来掌控感，却不会自动增加可用的时间。因此，整理清单时，除了决定先做什么，也可以检查每一项是否仍然值得保留。对于已经答应别人的事，若确实无法按时完成，应当沟通，而不是直接删掉。对于没有向别人作出承诺、如今也不再想做的事，则可以允许自己把它划去。这样做不等于所有拖延都合理，也不能保证剩下的任务会更快完成。它只是让清单更接近现在愿意承担的事情，而不是继续保存过去每一个念头。",
+  "candidates": [
+    {
+      "id": "light",
+      "text": "清单越写越长，未完成的方框很容易变成“不够自律”的证据。可里面往往混着几种事：答应别人的、想做却没安排的，以及只是觉得应该做的。方框一样，事情的分量未必一样。\n\n每天重抄清单，也许让人暂时觉得一切还在掌控中，时间却不会跟着变多。整理时，除了排先后，也可以问一句：这一项还要留吗？答应别人的事，来不及做就需要沟通，不能悄悄删掉。没有对别人作出承诺、如今也不再想做的，可以划去。\n\n这不是说拖延都合理，也不保证余下的事会做得更快。只是让清单贴近现在愿意承担的事，不必把过去的每个念头都存下来。",
+      "intent": "以清单的具体呈现承接分类；保留责任边界和效果限制",
+      "review": {
+        "candidate_id": "light",
+        "candidate_text": "清单越写越长，未完成的方框很容易变成“不够自律”的证据。可里面往往混着几种事：答应别人的、想做却没安排的，以及只是觉得应该做的。方框一样，事情的分量未必一样。\n\n每天重抄清单，也许让人暂时觉得一切还在掌控中，时间却不会跟着变多。整理时，除了排先后，也可以问一句：这一项还要留吗？答应别人的事，来不及做就需要沟通，不能悄悄删掉。没有对别人作出承诺、如今也不再想做的，可以划去。\n\n这不是说拖延都合理，也不保证余下的事会做得更快。只是让清单贴近现在愿意承担的事，不必把过去的每个念头都存下来。",
+        "added_claims": [
+          {
+            "id": "frequent_mixture",
+            "candidate_evidence": [
+              "往往混着几种事"
+            ],
+            "support": "unsupported_strengthening",
+            "explanation": "原文只允许可能出现混合事项，没有提供这种情况经常发生的频率依据；这是加强原有主张而非全新话题。",
+            "related_claim_ids": [
+              "mixed"
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "id": "possibility_to_frequency",
+            "severity": "medium",
+            "kind": "quantifier_strengthening",
+            "candidate_evidence": [
+              "可里面往往混着几种事"
+            ],
+            "explanation": "“可能”允许发生，“往往”声称经常发生；风格改写不应默默补入这一频率判断。",
+            "blocking": true
+          },
+          {
+            "id": "priority_appearance_compressed",
+            "severity": "low",
+            "kind": "explanatory_compression",
+            "candidate_evidence": [
+              "方框一样，事情的分量未必一样。"
+            ],
+            "explanation": "保留不同事项不应因同样方框而等同处理的意思，但弱化了原文“看起来拥有相同优先级”的心理表象解释。",
+            "blocking": false
+          }
+        ],
+        "verdict": "fail",
+        "completeness_assessment": "责任界线、两条件删项和效果限制保留得较好；事项混合的频率被无依据加强。",
+        "technical_or_mathematical_accuracy": "没有虚构作者个人经历或承诺效率收益，但“往往”引入了原文没有的经验频率断言。",
+        "reviewer_type": "independent_language_model",
+        "claims": [
+          {
+            "source_commitment": "清单可能混有承诺、未安排的愿望和应该做的事，呈现相同优先级",
+            "source_evidence": "清单里可能混着不同的东西：已经答应别人的事、确实想做但尚未安排的事，还有只是觉得应该做的事",
+            "status": "changed",
+            "candidate_evidence": [
+              "可里面往往混着几种事：答应别人的、想做却没安排的，以及只是觉得应该做的。",
+              "方框一样，事情的分量未必一样。"
+            ],
+            "explanation": "三类事项保留，但原文“可能混着”变成“往往混着”，把可能性加强为常见频率。原文还明确说相同方框造成相同优先级的表象；候选用分量未必一样表达反思，保留反对等同处理的意图但不再明说该表象。",
+            "id": "mixed"
+          },
+          {
+            "source_commitment": "变长的清单容易让人把未完成归咎于不自律",
+            "source_evidence": "人很容易把没有完成的项目都理解成自己不够自律",
+            "status": "preserved",
+            "candidate_evidence": [
+              "清单越写越长，未完成的方框很容易变成“不够自律”的证据。"
+            ],
+            "explanation": "这里的“证据”是对人如何自责的修辞描写，结合下文并非宣称未完成客观证明不自律。增长与容易自责的关系保留。",
+            "id": "blame"
+          },
+          {
+            "source_commitment": "重抄也许提供暂时掌控感，不自动增加时间",
+            "source_evidence": "每天重新抄一遍清单，也许能暂时带来掌控感，却不会自动增加可用的时间",
+            "status": "preserved",
+            "candidate_evidence": [
+              "每天重抄清单，也许让人暂时觉得一切还在掌控中，时间却不会跟着变多。"
+            ],
+            "explanation": "保留每天重抄、也许、暂时及不会因此增加时间；没有保证心理效果。",
+            "id": "recopy"
+          },
+          {
+            "source_commitment": "整理可以检查是否保留而不仅是排序",
+            "source_evidence": "除了决定先做什么，也可以检查每一项是否仍然值得保留",
+            "status": "preserved",
+            "candidate_evidence": [
+              "整理时，除了排先后，也可以问一句：这一项还要留吗？"
+            ],
+            "explanation": "既检查优先顺序也检查保留必要性，允许性未强化成唯一方法。",
+            "id": "keep"
+          },
+          {
+            "source_commitment": "不能按时完成已承诺事项须沟通，不能直接删",
+            "source_evidence": "对于已经答应别人的事，若确实无法按时完成，应当沟通，而不是直接删掉",
+            "status": "preserved",
+            "candidate_evidence": [
+              "答应别人的事，来不及做就需要沟通，不能悄悄删掉。"
+            ],
+            "explanation": "“来不及”保留无法按时的触发条件；仍要求沟通而非自行删除。“悄悄”凸显沟通责任，没有明确授权沟通后自动免除承诺。",
+            "id": "promise"
+          },
+          {
+            "source_commitment": "同时满足没有对外承诺、现在不想做的事情可以划掉",
+            "source_evidence": "对于没有向别人作出承诺、如今也不再想做的事，则可以允许自己把它划去",
+            "status": "preserved",
+            "candidate_evidence": [
+              "没有对别人作出承诺、如今也不再想做的，可以划去。"
+            ],
+            "explanation": "未对外承诺和如今不想做仍是同时满足的两个条件。",
+            "id": "unpromised"
+          },
+          {
+            "source_commitment": "不为所有拖延辩护，不保证提速，只让清单接近现在愿承担事项",
+            "source_evidence": "这样做不等于所有拖延都合理，也不能保证剩下的任务会更快完成。它只是让清单更接近现在愿意承担的事情，而不是继续保存过去每一个念头",
+            "status": "preserved",
+            "candidate_evidence": [
+              "这不是说拖延都合理，也不保证余下的事会做得更快。只是让清单贴近现在愿意承担的事，不必把过去的每个念头都存下来。"
+            ],
+            "explanation": "不普遍辩护拖延、不保证提速、贴近当前愿意承担事项三层限制均保留。",
+            "id": "limits"
+          }
+        ],
+        "binding_sha256": "47034a6debcc3bf6fba39b7f999b3ef99f8df4d000468671c571a417b1c60dd5"
+      }
+    },
+    {
+      "id": "structural",
+      "text": "同样一个待办方框，装的可能是完全不同的事。有人在等一个已经答应的结果；有些事还想做，只是没安排；另一些，当初写下是因为觉得自己应该做。排在一起，看上去就有了同样的优先级。\n\n清单越来越长，容易让人把没做完都归咎于不自律。于是再抄一遍，暂时找回一点掌控感。但一天可用的时间并没有因此增加。\n\n整理清单，也可以从“这一项还留不留”开始。答应了别人的，做不完要沟通，不能一删了之。没向别人承诺、现在又不想做的，划掉也可以。\n\n这当然不能替所有拖延开脱，更不保证留下来的事会做得更快。清单只是少背了一点旧念头，多留了一点现在愿意承担的事。",
+      "intent": "从方框的等权视觉进入责任分类；不加入作者生活经历；末段保留双重限制",
+      "review": {
+        "candidate_id": "structural",
+        "candidate_text": "同样一个待办方框，装的可能是完全不同的事。有人在等一个已经答应的结果；有些事还想做，只是没安排；另一些，当初写下是因为觉得自己应该做。排在一起，看上去就有了同样的优先级。\n\n清单越来越长，容易让人把没做完都归咎于不自律。于是再抄一遍，暂时找回一点掌控感。但一天可用的时间并没有因此增加。\n\n整理清单，也可以从“这一项还留不留”开始。答应了别人的，做不完要沟通，不能一删了之。没向别人承诺、现在又不想做的，划掉也可以。\n\n这当然不能替所有拖延开脱，更不保证留下来的事会做得更快。清单只是少背了一点旧念头，多留了一点现在愿意承担的事。",
+        "added_claims": [
+          {
+            "id": "recopy_restores_control",
+            "candidate_evidence": [
+              "暂时找回一点掌控感"
+            ],
+            "support": "unsupported_strengthening",
+            "explanation": "把可能出现的主观效果写成会发生的效果，原文不支持这一确定性。",
+            "related_claim_ids": [
+              "recopy"
+            ]
+          },
+          {
+            "id": "blame_causes_recopy",
+            "candidate_evidence": [
+              "清单越来越长，容易让人把没做完都归咎于不自律。于是再抄一遍"
+            ],
+            "support": "unsupported_causal_link",
+            "explanation": "“于是”新增自责导致重抄的叙事因果或动机连接；原文将两点相邻讨论，但没有声明该因果关系。",
+            "related_claim_ids": [
+              "blame",
+              "recopy"
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "id": "possible_effect_to_asserted",
+            "severity": "medium",
+            "kind": "modality_strengthening",
+            "candidate_evidence": [
+              "于是再抄一遍，暂时找回一点掌控感。"
+            ],
+            "explanation": "没有“也许”，暂时感到掌控被写成确定结果；“暂时”和“一点”降低持续时间与程度，却不恢复可能性限定。",
+            "blocking": true
+          },
+          {
+            "id": "added_causal_transition",
+            "severity": "medium",
+            "kind": "causality_added",
+            "candidate_evidence": [
+              "于是再抄一遍"
+            ],
+            "explanation": "原文没有承诺自责会引出重新抄清单。",
+            "blocking": true
+          },
+          {
+            "id": "deadline_trigger_weakened",
+            "severity": "medium",
+            "kind": "scope_uncertainty",
+            "candidate_evidence": [
+              "做不完要沟通"
+            ],
+            "explanation": "未明确保留无法按时完成这一触发条件，可能被读成只有完全做不完才须沟通。",
+            "blocking": true
+          }
+        ],
+        "verdict": "fail",
+        "completeness_assessment": "分类和双重效果限制保留，但重抄的模态与因果关系发生实质变化，按时履约的责任触发条件也变得含糊。",
+        "technical_or_mathematical_accuracy": "没有新增作者生活经历；对掌控感的确定效果和自责到重抄的因果连接都缺少原文支持。",
+        "reviewer_type": "independent_language_model",
+        "claims": [
+          {
+            "source_commitment": "清单可能混有承诺、未安排的愿望和应该做的事，呈现相同优先级",
+            "source_evidence": "清单里可能混着不同的东西：已经答应别人的事、确实想做但尚未安排的事，还有只是觉得应该做的事",
+            "status": "preserved",
+            "candidate_evidence": [
+              "同样一个待办方框，装的可能是完全不同的事。",
+              "有人在等一个已经答应的结果；有些事还想做，只是没安排；另一些，当初写下是因为觉得自己应该做。",
+              "排在一起，看上去就有了同样的优先级。"
+            ],
+            "explanation": "以“可能”统领三类事项，保留相同优先级的表象。“有人在等”可作已承诺事项的泛指说明，不应被当成作者现实中确有某位等待者的事实；这一展开不是本次失败依据。",
+            "id": "mixed"
+          },
+          {
+            "source_commitment": "变长的清单容易让人把未完成归咎于不自律",
+            "source_evidence": "人很容易把没有完成的项目都理解成自己不够自律",
+            "status": "preserved",
+            "candidate_evidence": [
+              "清单越来越长，容易让人把没做完都归咎于不自律。"
+            ],
+            "explanation": "增长、自责倾向及未完成项目的范围保留。",
+            "id": "blame"
+          },
+          {
+            "source_commitment": "重抄也许提供暂时掌控感，不自动增加时间",
+            "source_evidence": "每天重新抄一遍清单，也许能暂时带来掌控感，却不会自动增加可用的时间",
+            "status": "changed",
+            "candidate_evidence": [
+              "于是再抄一遍，暂时找回一点掌控感。但一天可用的时间并没有因此增加。"
+            ],
+            "explanation": "原文只说重抄也许暂时带来掌控感；候选删去“也许”，把效果写成已然获得。“于是”还把自责到重新抄写接成因果或动机链，原文没有作此断言。时间不增加的限制保留。",
+            "id": "recopy"
+          },
+          {
+            "source_commitment": "整理可以检查是否保留而不仅是排序",
+            "source_evidence": "除了决定先做什么，也可以检查每一项是否仍然值得保留",
+            "status": "preserved",
+            "candidate_evidence": [
+              "整理清单，也可以从“这一项还留不留”开始。"
+            ],
+            "explanation": "保留可选择检查保留必要性的建议；排序没有明说，但并未被否定或替换成唯一整理方式。",
+            "id": "keep"
+          },
+          {
+            "source_commitment": "不能按时完成已承诺事项须沟通，不能直接删",
+            "source_evidence": "对于已经答应别人的事，若确实无法按时完成，应当沟通，而不是直接删掉",
+            "status": "uncertain",
+            "candidate_evidence": [
+              "答应了别人的，做不完要沟通，不能一删了之。"
+            ],
+            "explanation": "沟通责任和不能直接删除都保留，但“做不完”省去“按时”。可自然理解为来不及完成，也可理解为根本无法完成；对虽能完成但会延期的情形，原文义务更明确。",
+            "id": "promise"
+          },
+          {
+            "source_commitment": "同时满足没有对外承诺、现在不想做的事情可以划掉",
+            "source_evidence": "对于没有向别人作出承诺、如今也不再想做的事，则可以允许自己把它划去",
+            "status": "preserved",
+            "candidate_evidence": [
+              "没向别人承诺、现在又不想做的，划掉也可以。"
+            ],
+            "explanation": "“又”保留两个必要条件的合取，仍只是允许划去。",
+            "id": "unpromised"
+          },
+          {
+            "source_commitment": "不为所有拖延辩护，不保证提速，只让清单接近现在愿承担事项",
+            "source_evidence": "这样做不等于所有拖延都合理，也不能保证剩下的任务会更快完成。它只是让清单更接近现在愿意承担的事情，而不是继续保存过去每一个念头",
+            "status": "preserved",
+            "candidate_evidence": [
+              "这当然不能替所有拖延开脱，更不保证留下来的事会做得更快。清单只是少背了一点旧念头，多留了一点现在愿意承担的事。"
+            ],
+            "explanation": "保留不为所有拖延开脱及不保证速度的明确限制。末句比喻表达清单朝当前愿承担事项倾斜，没有声称添加新任务或保证效率。",
+            "id": "limits"
+          }
+        ],
+        "binding_sha256": "099f8b3e76d1b36a9f290ab7692a64a0e6a281be946dc83832008ef8f105e45e"
+      }
+    },
+    {
+      "id": "repaired",
+      "text": "清单越写越长，没做完的事很容易都被归到“不够自律”上。可同样一个方框里，可能放着很不一样的事：答应别人的、想做却没安排的，以及只是觉得应该做的。方框一样，看起来就有了同样的优先级。\n\n每天重抄一遍清单，也许能暂时找回一点掌控感，可用的时间却不会自动变多。整理时，除了排先后，也可以问一句：这一项还要留吗？\n\n答应别人的事，来不及做就需要沟通，不能直接删掉。没向别人作出承诺、现在又不想做的，划去也可以。\n\n这不等于所有拖延都合理，也不能保证余下的事会做得更快。只是让清单贴近现在愿意承担的事，不必把过去的每个念头都存下来。",
+      "intent": "保留方框这一已给对象作为衔接点；相邻安排有承诺须沟通、无承诺且不再想做可删的两种情形；结尾紧接限制。",
+      "stage": "after_actual_measurements_and_independent_failure_report",
+      "review": {
+        "candidate_id": "repaired",
+        "candidate_text": "清单越写越长，没做完的事很容易都被归到“不够自律”上。可同样一个方框里，可能放着很不一样的事：答应别人的、想做却没安排的，以及只是觉得应该做的。方框一样，看起来就有了同样的优先级。\n\n每天重抄一遍清单，也许能暂时找回一点掌控感，可用的时间却不会自动变多。整理时，除了排先后，也可以问一句：这一项还要留吗？\n\n答应别人的事，来不及做就需要沟通，不能直接删掉。没向别人作出承诺、现在又不想做的，划去也可以。\n\n这不等于所有拖延都合理，也不能保证余下的事会做得更快。只是让清单贴近现在愿意承担的事，不必把过去的每个念头都存下来。",
+        "reviewer_type": "independent_language_model",
+        "claims": [
+          {
+            "id": "mixed",
+            "source_commitment": "清单可能混有承诺、未安排的愿望和应该做的事，呈现相同优先级",
+            "source_evidence": "清单里可能混着不同的东西：已经答应别人的事、确实想做但尚未安排的事，还有只是觉得应该做的事",
+            "status": "preserved",
+            "candidate_evidence": [
+              "可同样一个方框里，可能放着很不一样的事：答应别人的、想做却没安排的，以及只是觉得应该做的。",
+              "方框一样，看起来就有了同样的优先级。"
+            ],
+            "explanation": "恢复“可能”，未再宣称这种混合经常发生；三类事项和相同方框导致优先级相同表象也明确保留。"
+          },
+          {
+            "id": "blame",
+            "source_commitment": "变长的清单容易让人把未完成归咎于不自律",
+            "source_evidence": "人很容易把没有完成的项目都理解成自己不够自律",
+            "status": "preserved",
+            "candidate_evidence": [
+              "清单越写越长，没做完的事很容易都被归到“不够自律”上。"
+            ],
+            "explanation": "清单增长、容易自责及未完成项目的范围均保留。"
+          },
+          {
+            "id": "recopy",
+            "source_commitment": "重抄也许提供暂时掌控感，不自动增加时间",
+            "source_evidence": "每天重新抄一遍清单，也许能暂时带来掌控感，却不会自动增加可用的时间",
+            "status": "preserved",
+            "candidate_evidence": [
+              "每天重抄一遍清单，也许能暂时找回一点掌控感，可用的时间却不会自动变多。"
+            ],
+            "explanation": "明确恢复每天、也许、暂时与不会自动增加时间；没有“于是”把自责到重抄接成必然或已然因果。"
+          },
+          {
+            "id": "keep",
+            "source_commitment": "整理可以检查是否保留而不仅是排序",
+            "source_evidence": "除了决定先做什么，也可以检查每一项是否仍然值得保留",
+            "status": "preserved",
+            "candidate_evidence": [
+              "整理时，除了排先后，也可以问一句：这一项还要留吗？"
+            ],
+            "explanation": "排序之外还可检查是否保留，保留建议的可选性。"
+          },
+          {
+            "id": "promise",
+            "source_commitment": "不能按时完成已承诺事项须沟通，不能直接删",
+            "source_evidence": "对于已经答应别人的事，若确实无法按时完成，应当沟通，而不是直接删掉",
+            "status": "preserved",
+            "candidate_evidence": [
+              "答应别人的事，来不及做就需要沟通，不能直接删掉。"
+            ],
+            "explanation": "“来不及”明确包含不能按时完成的触发条件，沟通义务与不能直接删项均保留。"
+          },
+          {
+            "id": "unpromised",
+            "source_commitment": "同时满足没有对外承诺、现在不想做的事情可以划掉",
+            "source_evidence": "对于没有向别人作出承诺、如今也不再想做的事，则可以允许自己把它划去",
+            "status": "preserved",
+            "candidate_evidence": [
+              "没向别人作出承诺、现在又不想做的，划去也可以。"
+            ],
+            "explanation": "“又”保留未对外承诺和现在不再想做两个条件同时满足，且仍为允许而非必须删除。"
+          },
+          {
+            "id": "limits",
+            "source_commitment": "不为所有拖延辩护，不保证提速，只让清单接近现在愿承担事项",
+            "source_evidence": "这样做不等于所有拖延都合理，也不能保证剩下的任务会更快完成。它只是让清单更接近现在愿意承担的事情，而不是继续保存过去每一个念头",
+            "status": "preserved",
+            "candidate_evidence": [
+              "这不等于所有拖延都合理，也不能保证余下的事会做得更快。只是让清单贴近现在愿意承担的事，不必把过去的每个念头都存下来。"
+            ],
+            "explanation": "不为全部拖延辩护、不保证提速和贴近现在愿意承担事项三个边界完整。"
+          }
+        ],
+        "added_claims": [],
+        "issues": [
+          {
+            "id": "regain_metaphor",
+            "severity": "low",
+            "kind": "minor_presupposition_risk",
+            "candidate_evidence": [
+              "找回一点掌控感"
+            ],
+            "explanation": "“找回”比原文“带来”稍多一种曾有掌控感的修辞预设，但“也许”保留不确定性，全文没有声称某人真实经历，核心效果范围没有扩张。本条不是阻断项。",
+            "blocking": false
+          }
+        ],
+        "verdict": "pass",
+        "repairs_verified": [
+          {
+            "prior_issue": "possibility_to_frequency",
+            "status": "fixed",
+            "candidate_evidence": [
+              "可能放着很不一样的事"
+            ],
+            "explanation": "用可能性替代“往往”的频率加强。"
+          },
+          {
+            "prior_issue": "priority_appearance_compressed",
+            "status": "fixed",
+            "candidate_evidence": [
+              "方框一样，看起来就有了同样的优先级。"
+            ],
+            "explanation": "恢复相同优先级表象的明确陈述。"
+          },
+          {
+            "prior_issue": "possible_effect_to_asserted",
+            "status": "fixed",
+            "candidate_evidence": [
+              "也许能暂时找回一点掌控感"
+            ],
+            "explanation": "恢复可能性限定，并保留暂时性。"
+          },
+          {
+            "prior_issue": "added_causal_transition",
+            "status": "fixed",
+            "candidate_evidence": [
+              "每天重抄一遍清单，也许能暂时找回一点掌控感，可用的时间却不会自动变多。"
+            ],
+            "explanation": "重抄作为独立讨论出现，不再由“于是”将自责与重抄连接。"
+          },
+          {
+            "prior_issue": "deadline_trigger_weakened",
+            "status": "fixed",
+            "candidate_evidence": [
+              "来不及做就需要沟通"
+            ],
+            "explanation": "来不及明确涉及时间期限，不只是最终完全无法完成。"
+          }
+        ],
+        "completeness_assessment": "七项承诺、三类事项、按时责任与双重效果限制均保留，先前两版的阻断问题已修复。",
+        "technical_or_mathematical_accuracy": "没有提出保证改善情绪或效率的心理学结论，也没有虚构作者生活经历。找回的细微预设可由人类编辑进一步取舍。",
+        "binding_sha256": "5f643f4f7a8589c617b020136aabf3e58fdaf9dfeeed23b135c4a5a12fcba22b"
+      }
+    }
+  ],
+  "protected": [],
+  "claims": [
+    {
+      "id": "mixed",
+      "commitment": "清单可能混有承诺、未安排的愿望和应该做的事，呈现相同优先级",
+      "source_evidence": "清单里可能混着不同的东西：已经答应别人的事、确实想做但尚未安排的事，还有只是觉得应该做的事"
+    },
+    {
+      "id": "blame",
+      "commitment": "变长的清单容易让人把未完成归咎于不自律",
+      "source_evidence": "人很容易把没有完成的项目都理解成自己不够自律"
+    },
+    {
+      "id": "recopy",
+      "commitment": "重抄也许提供暂时掌控感，不自动增加时间",
+      "source_evidence": "每天重新抄一遍清单，也许能暂时带来掌控感，却不会自动增加可用的时间"
+    },
+    {
+      "id": "keep",
+      "commitment": "整理可以检查是否保留而不仅是排序",
+      "source_evidence": "除了决定先做什么，也可以检查每一项是否仍然值得保留"
+    },
+    {
+      "id": "promise",
+      "commitment": "不能按时完成已承诺事项须沟通，不能直接删",
+      "source_evidence": "对于已经答应别人的事，若确实无法按时完成，应当沟通，而不是直接删掉"
+    },
+    {
+      "id": "unpromised",
+      "commitment": "同时满足没有对外承诺、现在不想做的事情可以划掉",
+      "source_evidence": "对于没有向别人作出承诺、如今也不再想做的事，则可以允许自己把它划去"
+    },
+    {
+      "id": "limits",
+      "commitment": "不为所有拖延辩护，不保证提速，只让清单接近现在愿承担事项",
+      "source_evidence": "这样做不等于所有拖延都合理，也不能保证剩下的任务会更快完成。它只是让清单更接近现在愿意承担的事情，而不是继续保存过去每一个念头"
+    }
+  ],
+  "limitations": [
+    "原文属于抽象反思，没有个人经验；不能为增加质感虚构作者经历",
+    "“方框装事情”“背旧念头”可能仍显修辞设计过强",
+    "没有心理学实证主张，也没有证实整理清单能改善情绪或效率",
+    "全局与句级指标是描述性传感量，没有人类参考带或已估计的干预收益。"
+  ],
+  "schema_version": "writing-job/0.1",
+  "source_declaration": "original_demo_authored_by_assistant_not_human_reference_not_controlled_test",
+  "length_ratio_bounds": [
+    0.55,
+    1.5
+  ],
+  "candidate_producer": "current_language_model_provisional_edit_planner_not_trained_style_policy",
+  "selection_preference": [
+    "repaired",
+    "structural",
+    "light"
+  ],
+  "intervention_plan": {
+    "source_units": [
+      1,
+      5,
+      6,
+      7
+    ],
+    "source_observation": "原序列长度多数约28–32；分类句43个内容字符，平均内容重合约0.037。文本本已均匀，不能把均匀当缺陷。",
+    "intervention": "保留方框这一已给对象作为衔接点；相邻安排有承诺须沟通、无承诺且不再想做可删的两种情形；结尾紧接限制。",
+    "hypothesis": "围绕同一对象区分责任，可能比抽象连接词更清楚；低词面重合不等于语义断裂。",
+    "semantic_risk": "将“可能混着”升级成“往往混着”，将“也许有掌控感”升级成确定因果或习惯。"
+  },
+  "selection_rationale": "首选修订版：根据具体源句的逻辑负担与独立语义复核修正；仅在全部约束与语义复核通过时选出，不按指标增减排序。"
+}
