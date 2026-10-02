@@ -1,0 +1,93 @@
+{
+  "artifact": "Typed identity-bridge discourse quotient and model-facing measurement contract",
+  "date_utc": "2026-10-02",
+  "status": "Local public-safe candidate artifacts; no remote write performed",
+  "scope": "Retrospective theory/development and aggregate calibration on the same ten already exposed documents",
+  "dataset_commit": "6846a7e21a3a91f29e1376fe4a0f27c4810f2f51",
+  "prior_published_evidence": "https://github.com/proffitteoy/style-compiler/tree/2c3eeb0bcf3020fcba36f13b2bc6bab490b3f1ae/research/discourse/measurement-validation-20261002",
+  "files": [
+    {
+      "path": "CALIBRATION_REPORT.md",
+      "bytes": 9424,
+      "sha256": "3e4f09752be25f4e783fb254146ba51ebb5a851d603e54c20307c191fb0e47f3"
+    },
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "bytes": 5350,
+      "sha256": "337e7f7683288852dd7ab193dcd99447c6bb7c1babbf3003db046a0adea3885f"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 7593,
+      "sha256": "2f055f74b978b38ee198f3b4c456df9fd61df8e8c175367dd95b021effc6bcb9"
+    },
+    {
+      "path": "PROTOCOL_PRE_REPLAY.md",
+      "bytes": 6283,
+      "sha256": "6b5e0f43cc816b22b4255e73f30f507e1614369cd5a04d32bd4187ae8843c098"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1935,
+      "sha256": "2fc4e3530caacd2f06b9d2904712b2d8b5b3aede096e17d3e1fe34f6ae3a122b"
+    },
+    {
+      "path": "THEORY_AND_MODEL.md",
+      "bytes": 20672,
+      "sha256": "21c99a58b58f30eef0f9ced69753885ffa76d47d344302f7ae9c9c298093f169"
+    },
+    {
+      "path": "aggregate_results.json",
+      "bytes": 9712,
+      "sha256": "07a71f3757413fa9d9fcb9c8dc0d132bcc2a350bd28bba5c07d3266dbe7ae3b5"
+    },
+    {
+      "path": "independent_randomized_review.py",
+      "bytes": 7863,
+      "sha256": "a8de574769bb6800ca9ebe5daaa6b30a8527359e3bd3d93d843cb319ca9d6eca"
+    },
+    {
+      "path": "independent_randomized_review_results.json",
+      "bytes": 1752,
+      "sha256": "e65a1830b2fd5292ea14c989f1af649733984120d0903bbaeb49d1e25df51100"
+    },
+    {
+      "path": "typed_quotient.py",
+      "bytes": 31088,
+      "sha256": "64fd823720b63b8939e54c2fde1fc10b97ba3e34a286e7fc7d02ec777c926d37"
+    }
+  ],
+  "publication_boundary": {
+    "included": [
+      "theory",
+      "code",
+      "protocol and clarification history",
+      "synthetic cases/code",
+      "aggregate calibration and synthetic outcomes"
+    ],
+    "excluded": [
+      "raw source text",
+      "full annotations",
+      "per-document numeric rows",
+      "sentence hashes",
+      "paragraph vectors",
+      "private source cache"
+    ]
+  },
+  "verification": {
+    "current_code_matches_independent_review_hash": true,
+    "synthetic_unit_tests": 13,
+    "seeded_synthetic_cases": 2000,
+    "calibration_graphs": 15,
+    "documents": 10,
+    "paired_documents": 5,
+    "prior_frozen_artifacts_unchanged": true
+  },
+  "limitations": [
+    "No new held-out validation",
+    "No parser or model fitting",
+    "No human/AI, coherence or quality result",
+    "E1 invariance conditional on explicitly declared identity-bridge convention",
+    "Residual annotation plus unremoved encoding sensitivity remains"
+  ]
+}

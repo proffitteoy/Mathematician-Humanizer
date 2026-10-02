@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "scope": "Synthetic implementation review only; no corpus replay or held-out validation",
+  "seed": 9127,
+  "requested_cases": 2000,
+  "reviewed_module": "typed_quotient.py",
+  "reviewed_module_sha256": "64fd823720b63b8939e54c2fde1fc10b97ba3e34a286e7fc7d02ec777c926d37",
+  "coverage": {
+    "synthetic_cases": 2000,
+    "contracted_vertices": 1096,
+    "cases_with_discontinuous_yields": 1327,
+    "cases_with_extra_node_attributes": 563,
+    "cases_with_anchored_internal_vertices": 1485
+  },
+  "checks_passed": {
+    "independent_eligibility_agreement": 2000,
+    "random_sequential_reduction_agreement": 2000,
+    "idempotence": 2000,
+    "double_wrapper_invariance": 2000,
+    "id_and_declaration_invariance": 2000,
+    "retained_anchors_yields_arity_and_attributes": 2000,
+    "nonspan_labels_roles_and_projected_endpoints": 2000,
+    "input_anchor_layer_and_inventory_retention": 2000
+  },
+  "reviewed_module_synthetic_tests_passed": 13,
+  "resources": {
+    "processes": 1,
+    "external_libraries": 0,
+    "external_models": 0,
+    "address_space_limit_bytes": 536870912,
+    "cpu_limit_seconds": 600,
+    "wall_seconds": 2.0309208350081462,
+    "cpu_seconds": 2.029650331,
+    "peak_rss_KiB": 17520
+  },
+  "privacy": "Only synthetic inputs and aggregate outcomes; no cache access, corpus rows, source annotations, or network",
+  "limitations": [
+    "Randomized checks are finite tests, not a proof or estimate of generalization",
+    "Canonical comparison and structural validation reuse the reviewed module",
+    "Sequential reduction uses a separately implemented eligibility rule and edge rewrite",
+    "Seeded tree generation is deterministic; extra checks do not select features or tune rank sensitivity"
+  ]
+}

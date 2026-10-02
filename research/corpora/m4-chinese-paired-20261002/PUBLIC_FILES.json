@@ -1,0 +1,50 @@
+{
+  "ADMISSION_ADDENDUM.md": {
+    "bytes": 720,
+    "sha256": "3b3dfb8aae71b64275e835630dbdb82753ae232a2cc763cf7e16fac5f2a20b2f"
+  },
+  "REPORT.md": {
+    "bytes": 10095,
+    "sha256": "0ef7147b0865ee9f6490be74de09ca560bedfad85bf9f32f99a2755efb54653e"
+  },
+  "SCHEMA_AMENDMENT_1.md": {
+    "bytes": 2186,
+    "sha256": "8f6232926a8ce84839aa1214372a241b3cfa85198818d8d681e9db09961ee593"
+  },
+  "acquire.py": {
+    "bytes": 2926,
+    "sha256": "cd648e465b7c78b0bcd85b0468c88f6fba65f460acd75563c7a005c7f3efd536"
+  },
+  "aggregate_audit.json": {
+    "bytes": 85382,
+    "sha256": "db5caac60fd225a29694338ff7cee4f5181ba88c8e886554ad19bdbf573c104b"
+  },
+  "freeze_aggregate.json": {
+    "bytes": 884,
+    "sha256": "10a79dbca2c9e4fa732c69a9257c4ea009f2d8575e951d03a5aefa50f75e826a"
+  },
+  "predeclared_protocol.json": {
+    "bytes": 5439,
+    "sha256": "7aa6f9cc0806b25b72022349aaa71007847b8c1efce538a16fc1c98122d9828e"
+  },
+  "prepare_cohort.py": {
+    "bytes": 22977,
+    "sha256": "7a1368a7ee76e3a61d8453c36d389c368b54734a01a1cfc1707f5d4a12ec1dad"
+  },
+  "schema_initial.json": {
+    "bytes": 1735,
+    "sha256": "21ddff6941398590840983cfc5c4e8362861dd72cdbc623e2be8b4b9cf0ef396"
+  },
+  "support_before_split.json": {
+    "bytes": 8811,
+    "sha256": "d3ed705c7d71f91f81b5407168284b25b302d93a4873d51b76653bb826644e99"
+  },
+  "verification_receipt.json": {
+    "bytes": 1348,
+    "sha256": "2193e5b04e896d47a50b27d4a0f8c128ff12d9cc83dffcd7abcdd61db7923de9"
+  },
+  "verify_preparation.py": {
+    "bytes": 5260,
+    "sha256": "41a7b41ea972ef74a85b24ce2385bcbcbee4b6b1382aa53e72e4c62b3a1f564e"
+  }
+}

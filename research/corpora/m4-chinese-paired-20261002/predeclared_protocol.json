@@ -1,0 +1,31 @@
+{
+  "protocol_version":"m4-zh-paired-prepare-v1",
+  "declared_before_full_acquisition":true,
+  "revision":"628bf0fcb2e8c6b7ffa71fd1af6be413aced8f7d",
+  "purpose":"Private scientific research, preparation only; no fitting, rewriting, raw redistribution, paid APIs, or remote writes",
+  "raw_transfer_cap_bytes":20971520,
+  "files":[{"name":"qazh_chatgpt.jsonl","bytes":7025906,"git_blob_sha1":"be87e80335e8c1baa494d5272cbee1d5b2dfff3d"},{"name":"qazh_davinci.jsonl","bytes":11276490,"git_blob_sha1":"4e43837e0a16ea357d835839918c9ba97a8c19a6"}],
+  "acquisition":"Exactly pinned raw.githubusercontent.com URLs; binary streams; one same-URL retry only on timeout if total actual payload budget permits. No substitution, redirects, compression, or downloaded executable code",
+  "limits":{"max_processes":1,"max_cpu_seconds":840,"max_address_space_bytes":1073741824,"derived_disk_cap_bytes":157286400},
+  "schema":"Retain raw files. Join by source_ID, never source order. Audit missing/duplicate IDs, source/model fields, cross-file ID sets, exact prompt and human equality, null/non-string/empty/whitespace arms. Stop before split on unresolved ambiguous IDs or unequal shared content",
+  "human_arm":"One logical human observation per unique source_ID; two stored releases are provenance, not two humans",
+  "grouping_normalization":"NFKC, casefold, remove all Unicode whitespace. Grouping view only; raw and decoded original text are never rewritten",
+  "grouping_edges":[
+    "Same source_ID is one family",
+    "Exact normalized prompt equality links families; nonempty only",
+    "Exact normalized whole-answer equality across every arm links families; nonempty only",
+    "Exact normalized original blank-line block equality across every arm links families when block has at least 80 normalized Unicode characters",
+    "Near question: normalized prompt >=12 characters, character 3-gram set Jaccard >=0.80",
+    "Near answer: normalized answer >=50 characters, character 5-gram set Jaccard >=0.80"
+  ],
+  "near_copy_algorithm":"Exact prefix-filter set-similarity join at threshold 0.80, with global gram frequency order, set-size bound and exact verification; not approximate LSH. Grams represented by 64-bit BLAKE2b values; candidate positives reverified on original string-gram sets to eliminate hash-collision false positives. No arbitrary candidate cap; if resource limit reached, no frozen split",
+  "near_copy_limitations":"Operational lexical-copy audit, not semantic equivalence or a proof of absence of paraphrase/short substring overlap. Does not claim exhaustive arbitrary-substring containment detection",
+  "contamination":"Verify both old 128-row file prefixes against old manifest hashes and exact bytes. Mark their union of IDs and every connected component touching them development-exposed; train/dev only, never fresh test",
+  "structural_support":{"sentence_proxy":"Nonempty spans ending at Chinese/Latin sentence punctuation or final text tail; punctuation retained with original offsets; proxy not linguistic gold","line":"At least two nonempty CR/LF-separated original lines","paragraph":"At least two nonempty original blank-line-separated blocks; proxy not rhetorical gold","retrospective_discourse":"At least two sentence-proxy units supports ordered-prose inspection, not validated rhetorical labels; no strict 8-unit gate or online-forecast claim","missingness":"Null/empty arm is missing. Unavailable paragraph/order views are missing, not zero measurements; no synthetic paragraph reconstruction"},
+  "split_seed":"m4-zh-paired-v1-2026-10-02-before-full-audit",
+  "split":"Deterministic SHA-256 order of component membership ID digest plus fixed seed. Strata by maximum human original character length in component: <200, 200-499, >=500. In each stratum, targets are rounded 20% test, rounded 20% dev, remainder train by COMPONENT COUNT; only unexposed groups eligible for test. Allocate test first, dev from remaining hash order, train remainder. If support/constraints prevent target, report actual counts, never tune seed or threshold. Family counts may deviate from 60/20/20",
+  "test_panels":"After full component split, hash-order test components within each length stratum and alternate seen-generator and generator-transfer panels. Primary fitting/tuning protocol may use only human+ChatGPT from train/dev. Davinci excluded from all model/measurement fitting and tuning; transfer panel uses unseen families. Both test panels are family-disjoint. Descriptive preparation/support audits are not outcome fitting; test texts must not be used to tune definitions",
+  "scope":"Single broad Baike/Web QA domain and two early generator labels, one human answer per question. Author, per-row dates, exact generator snapshots and topic labels unknown. No author-voice, contemporary-model, topic-transfer, domain-transfer or causal generator-effect claims",
+  "rights":"M4 authors' source table attributes Chinese source data to MIT; this is not a verified per-answer rights chain. No root release license observed in pinned tree. Preserve original source/model fields, dataset and paper attribution, unknown upstream author/date/rights; no blanket commercial-training clearance",
+  "public_outputs":"Own code/protocol plus aggregates and whole-file hashes only. No raw text, examples, source_ID lists, per-sample values, individual text hashes, split/identity/edge manifests or numeric per-sample uploads"
+}

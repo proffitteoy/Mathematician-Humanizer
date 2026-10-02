@@ -1,0 +1,2327 @@
+{
+  "files": {
+    "qazh_chatgpt.jsonl": {
+      "rows": 3000,
+      "distinct_ids": 2987,
+      "duplicate_id_occurrences_beyond_first": 13,
+      "id_types": {
+        "str": 1500,
+        "int": 1500
+      },
+      "field_counts": {
+        "prompt": 3000,
+        "human_text": 3000,
+        "machine_text": 3000,
+        "model": 3000,
+        "source": 3000,
+        "source_ID": 3000
+      },
+      "sources": {
+        "baike": 1500,
+        "web": 1500
+      },
+      "model_labels": {
+        "chatgpt": 3000
+      },
+      "bytes": 7025906,
+      "sha256": "cc2fb0d6c2e63f507717835cd20f992a513d098af6259ce888552ddeca79cfee",
+      "git_blob_sha1": "be87e80335e8c1baa494d5272cbee1d5b2dfff3d",
+      "file_CR": 0,
+      "file_LF": 3000,
+      "file_CRLF": 0
+    },
+    "qazh_davinci.jsonl": {
+      "rows": 3000,
+      "distinct_ids": 2987,
+      "duplicate_id_occurrences_beyond_first": 13,
+      "id_types": {
+        "str": 1500,
+        "int": 1500
+      },
+      "field_counts": {
+        "prompt": 3000,
+        "human_text": 3000,
+        "machine_text": 3000,
+        "model": 3000,
+        "source": 3000,
+        "source_ID": 3000
+      },
+      "sources": {
+        "baike": 1500,
+        "web": 1500
+      },
+      "model_labels": {
+        "davinci": 3000
+      },
+      "bytes": 11276490,
+      "sha256": "3619629c800dd42b4a64e3c7425554069fe0be1ad5b263533807d63fff8158c4",
+      "git_blob_sha1": "4e43837e0a16ea357d835839918c9ba97a8c19a6",
+      "file_CR": 0,
+      "file_LF": 3000,
+      "file_CRLF": 0
+    }
+  },
+  "alignment": {
+    "shared_paired_answer_records": 3000,
+    "distinct_question_families": 2987,
+    "question_ids_with_multiple_human_answers": 12,
+    "id_sets_equal": true,
+    "prompt_exact_equal": 3000,
+    "human_exact_equal": 3000,
+    "source_exact_equal": 3000,
+    "logical_human_observations": 3000,
+    "total_logical_answers": 9000,
+    "original_human_stored_occurrences": 6000
+  },
+  "prior_audit": {
+    "verified_files": [
+      {
+        "file": "m4_qazh_chatgpt.jsonl",
+        "rows": 128,
+        "hash_verified": true,
+        "exact_full_file_prefix_verified": true
+      },
+      {
+        "file": "m4_qazh_davinci.jsonl",
+        "rows": 128,
+        "hash_verified": true,
+        "exact_full_file_prefix_verified": true
+      }
+    ],
+    "unique_previously_audited_families": 128,
+    "exposed_components": 128,
+    "paired_answer_records_in_exposed_components": 129,
+    "question_families_in_exposed_components": 129,
+    "additional_connected_question_families_blocked_from_test": 1,
+    "test_exposed_components": 0
+  },
+  "copy_graph": {
+    "edges_by_reason": {
+      "exact_answer": 65,
+      "exact_blank_line_block": 36,
+      "same_source_question_id": 13,
+      "exact_question": 13
+    },
+    "distinct_cross_record_pairs_linked": 49,
+    "components": 2951,
+    "component_paired_record_size_distribution": {
+      "1": 2933,
+      "2": 15,
+      "3": 1,
+      "4": 1,
+      "30": 1
+    },
+    "component_question_family_size_distribution": {
+      "1": 2944,
+      "2": 5,
+      "3": 1,
+      "30": 1
+    },
+    "largest_component_paired_records": 30,
+    "largest_component_question_families": 30,
+    "near_question": {
+      "documents_eligible": 3000,
+      "distinct_texts_joined": 2987,
+      "gram_n": 3,
+      "threshold": 0.8,
+      "candidate_pairs_exactly_checked": 0,
+      "hash_positive_pairs_reverified_on_original_grams": 0,
+      "near_pairs": 0,
+      "max_prefix_bucket": 1,
+      "all_candidates_completed": true
+    },
+    "near_answer": {
+      "documents_eligible": 8831,
+      "distinct_texts_joined": 8771,
+      "gram_n": 5,
+      "threshold": 0.8,
+      "candidate_pairs_exactly_checked": 0,
+      "hash_positive_pairs_reverified_on_original_grams": 0,
+      "near_pairs": 0,
+      "max_prefix_bucket": 1,
+      "all_candidates_completed": true
+    },
+    "exact_answer_duplicate_groups": 8,
+    "exact_answer_duplicate_occurrences_beyond_first": 65,
+    "cross_arm_exact_duplicate_groups": 0,
+    "cross_family_exact_duplicate_groups": 8,
+    "cross_split_graph_edges": 0
+  },
+  "full_support": {
+    "paired_answer_records": 3000,
+    "question_families": 2987,
+    "arms": {
+      "human": {
+        "count": 3000,
+        "status": {
+          "present": 3000
+        },
+        "view_support": {
+          "lexical": 3000,
+          "sentence": 3000,
+          "ordered_prose": 2732,
+          "multiline": 1147,
+          "paragraph": 609
+        },
+        "chars_min": 101,
+        "chars_median": 199.0,
+        "chars_max": 9705,
+        "chars_ge500": 308,
+        "literal_backslash_n_texts": 1,
+        "with_CR": 1114,
+        "with_LF": 882,
+        "with_CRLF": 810
+      },
+      "chatgpt": {
+        "count": 3000,
+        "status": {
+          "present": 3000
+        },
+        "view_support": {
+          "lexical": 3000,
+          "sentence": 3000,
+          "ordered_prose": 2979,
+          "multiline": 2221,
+          "paragraph": 2205
+        },
+        "chars_min": 11,
+        "chars_median": 292.0,
+        "chars_max": 1945,
+        "chars_ge500": 265,
+        "literal_backslash_n_texts": 0,
+        "with_CR": 2,
+        "with_LF": 2221,
+        "with_CRLF": 2
+      },
+      "davinci": {
+        "count": 3000,
+        "status": {
+          "present": 2998,
+          "whitespace_only": 2
+        },
+        "view_support": {
+          "lexical": 2998,
+          "sentence": 2988,
+          "ordered_prose": 2598,
+          "multiline": 1670,
+          "paragraph": 1606
+        },
+        "chars_min": 1,
+        "chars_median": 168.0,
+        "chars_max": 2048,
+        "chars_ge500": 46,
+        "literal_backslash_n_texts": 6,
+        "with_CR": 50,
+        "with_LF": 2736,
+        "with_CRLF": 41
+      }
+    },
+    "paired_support": {
+      "human+chatgpt": {
+        "lexical": 3000,
+        "sentence": 3000,
+        "ordered_prose": 2716,
+        "multiline": 757,
+        "paragraph": 392
+      },
+      "human+davinci": {
+        "lexical": 2998,
+        "sentence": 2988,
+        "ordered_prose": 2376,
+        "multiline": 583,
+        "paragraph": 312
+      },
+      "human+chatgpt+davinci": {
+        "lexical": 2998,
+        "sentence": 2988,
+        "ordered_prose": 2370,
+        "multiline": 479,
+        "paragraph": 244
+      }
+    },
+    "equal_question_family_support": {
+      "human": {
+        "lexical": {
+          "question_families_any_answer_supported": 2987,
+          "question_families_all_answers_supported": 2987,
+          "equal_question_mean_fraction_of_supported_answers": 1.0
+        },
+        "sentence": {
+          "question_families_any_answer_supported": 2987,
+          "question_families_all_answers_supported": 2987,
+          "equal_question_mean_fraction_of_supported_answers": 1.0
+        },
+        "ordered_prose": {
+          "question_families_any_answer_supported": 2722,
+          "question_families_all_answers_supported": 2719,
+          "equal_question_mean_fraction_of_supported_answers": 0.910780046869769
+        },
+        "multiline": {
+          "question_families_any_answer_supported": 1147,
+          "question_families_all_answers_supported": 1147,
+          "equal_question_mean_fraction_of_supported_answers": 0.3839973217274858
+        },
+        "paragraph": {
+          "question_families_any_answer_supported": 609,
+          "question_families_all_answers_supported": 609,
+          "equal_question_mean_fraction_of_supported_answers": 0.20388349514563106
+        }
+      },
+      "chatgpt": {
+        "lexical": {
+          "question_families_any_answer_supported": 2987,
+          "question_families_all_answers_supported": 2987,
+          "equal_question_mean_fraction_of_supported_answers": 1.0
+        },
+        "sentence": {
+          "question_families_any_answer_supported": 2987,
+          "question_families_all_answers_supported": 2987,
+          "equal_question_mean_fraction_of_supported_answers": 1.0
+        },
+        "ordered_prose": {
+          "question_families_any_answer_supported": 2966,
+          "question_families_all_answers_supported": 2966,
+          "equal_question_mean_fraction_of_supported_answers": 0.9929695346501507
+        },
+        "multiline": {
+          "question_families_any_answer_supported": 2210,
+          "question_families_all_answers_supported": 2208,
+          "equal_question_mean_fraction_of_supported_answers": 0.7395379979912956
+        },
+        "paragraph": {
+          "question_families_any_answer_supported": 2194,
+          "question_families_all_answers_supported": 2192,
+          "equal_question_mean_fraction_of_supported_answers": 0.734181452962839
+        }
+      },
+      "davinci": {
+        "lexical": {
+          "question_families_any_answer_supported": 2985,
+          "question_families_all_answers_supported": 2985,
+          "equal_question_mean_fraction_of_supported_answers": 0.9993304318714429
+        },
+        "sentence": {
+          "question_families_any_answer_supported": 2976,
+          "question_families_all_answers_supported": 2975,
+          "equal_question_mean_fraction_of_supported_answers": 0.9961499832607967
+        },
+        "ordered_prose": {
+          "question_families_any_answer_supported": 2586,
+          "question_families_all_answers_supported": 2585,
+          "equal_question_mean_fraction_of_supported_answers": 0.865584198192166
+        },
+        "multiline": {
+          "question_families_any_answer_supported": 1666,
+          "question_families_all_answers_supported": 1658,
+          "equal_question_mean_fraction_of_supported_answers": 0.5564669121749805
+        },
+        "paragraph": {
+          "question_families_any_answer_supported": 1602,
+          "question_families_all_answers_supported": 1594,
+          "equal_question_mean_fraction_of_supported_answers": 0.5350407320611539
+        }
+      },
+      "human+chatgpt": {
+        "lexical": {
+          "question_families_any_answer_supported": 2987,
+          "question_families_all_answers_supported": 2987,
+          "equal_question_mean_fraction_of_supported_answers": 1.0
+        },
+        "sentence": {
+          "question_families_any_answer_supported": 2987,
+          "question_families_all_answers_supported": 2987,
+          "equal_question_mean_fraction_of_supported_answers": 1.0
+        },
+        "ordered_prose": {
+          "question_families_any_answer_supported": 2706,
+          "question_families_all_answers_supported": 2703,
+          "equal_question_mean_fraction_of_supported_answers": 0.9054235018413124
+        },
+        "multiline": {
+          "question_families_any_answer_supported": 757,
+          "question_families_all_answers_supported": 757,
+          "equal_question_mean_fraction_of_supported_answers": 0.25343153665885504
+        },
+        "paragraph": {
+          "question_families_any_answer_supported": 392,
+          "question_families_all_answers_supported": 392,
+          "equal_question_mean_fraction_of_supported_answers": 0.13123535319718782
+        }
+      },
+      "human+davinci": {
+        "lexical": {
+          "question_families_any_answer_supported": 2985,
+          "question_families_all_answers_supported": 2985,
+          "equal_question_mean_fraction_of_supported_answers": 0.9993304318714429
+        },
+        "sentence": {
+          "question_families_any_answer_supported": 2976,
+          "question_families_all_answers_supported": 2975,
+          "equal_question_mean_fraction_of_supported_answers": 0.9961499832607967
+        },
+        "ordered_prose": {
+          "question_families_any_answer_supported": 2366,
+          "question_families_all_answers_supported": 2364,
+          "equal_question_mean_fraction_of_supported_answers": 0.7917643120187479
+        },
+        "multiline": {
+          "question_families_any_answer_supported": 583,
+          "question_families_all_answers_supported": 583,
+          "equal_question_mean_fraction_of_supported_answers": 0.19517910947438902
+        },
+        "paragraph": {
+          "question_families_any_answer_supported": 312,
+          "question_families_all_answers_supported": 312,
+          "equal_question_mean_fraction_of_supported_answers": 0.10445262805490459
+        }
+      },
+      "human+chatgpt+davinci": {
+        "lexical": {
+          "question_families_any_answer_supported": 2985,
+          "question_families_all_answers_supported": 2985,
+          "equal_question_mean_fraction_of_supported_answers": 0.9993304318714429
+        },
+        "sentence": {
+          "question_families_any_answer_supported": 2976,
+          "question_families_all_answers_supported": 2975,
+          "equal_question_mean_fraction_of_supported_answers": 0.9961499832607967
+        },
+        "ordered_prose": {
+          "question_families_any_answer_supported": 2360,
+          "question_families_all_answers_supported": 2358,
+          "equal_question_mean_fraction_of_supported_answers": 0.7897556076330766
+        },
+        "multiline": {
+          "question_families_any_answer_supported": 479,
+          "question_families_all_answers_supported": 479,
+          "equal_question_mean_fraction_of_supported_answers": 0.16036156678942082
+        },
+        "paragraph": {
+          "question_families_any_answer_supported": 244,
+          "question_families_all_answers_supported": 244,
+          "equal_question_mean_fraction_of_supported_answers": 0.08168731168396384
+        }
+      }
+    }
+  },
+  "support_by_source": {
+    "baike": {
+      "paired_answer_records": 1500,
+      "question_families": 1500,
+      "arms": {
+        "human": {
+          "count": 1500,
+          "status": {
+            "present": 1500
+          },
+          "view_support": {
+            "lexical": 1500,
+            "sentence": 1500,
+            "ordered_prose": 1313,
+            "multiline": 1147,
+            "paragraph": 609
+          },
+          "chars_min": 101,
+          "chars_median": 242.5,
+          "chars_max": 9705,
+          "chars_ge500": 308,
+          "literal_backslash_n_texts": 1,
+          "with_CR": 1114,
+          "with_LF": 882,
+          "with_CRLF": 810
+        },
+        "chatgpt": {
+          "count": 1500,
+          "status": {
+            "present": 1500
+          },
+          "view_support": {
+            "lexical": 1500,
+            "sentence": 1500,
+            "ordered_prose": 1481,
+            "multiline": 980,
+            "paragraph": 967
+          },
+          "chars_min": 11,
+          "chars_median": 245.0,
+          "chars_max": 1850,
+          "chars_ge500": 72,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 2,
+          "with_LF": 980,
+          "with_CRLF": 2
+        },
+        "davinci": {
+          "count": 1500,
+          "status": {
+            "present": 1498,
+            "whitespace_only": 2
+          },
+          "view_support": {
+            "lexical": 1498,
+            "sentence": 1494,
+            "ordered_prose": 1229,
+            "multiline": 770,
+            "paragraph": 731
+          },
+          "chars_min": 1,
+          "chars_median": 139.0,
+          "chars_max": 1174,
+          "chars_ge500": 11,
+          "literal_backslash_n_texts": 6,
+          "with_CR": 50,
+          "with_LF": 1393,
+          "with_CRLF": 41
+        }
+      },
+      "paired_support": {
+        "human+chatgpt": {
+          "lexical": 1500,
+          "sentence": 1500,
+          "ordered_prose": 1299,
+          "multiline": 757,
+          "paragraph": 392
+        },
+        "human+davinci": {
+          "lexical": 1498,
+          "sentence": 1494,
+          "ordered_prose": 1079,
+          "multiline": 583,
+          "paragraph": 312
+        },
+        "human+chatgpt+davinci": {
+          "lexical": 1498,
+          "sentence": 1494,
+          "ordered_prose": 1074,
+          "multiline": 479,
+          "paragraph": 244
+        }
+      },
+      "equal_question_family_support": {
+        "human": {
+          "lexical": {
+            "question_families_any_answer_supported": 1500,
+            "question_families_all_answers_supported": 1500,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1500,
+            "question_families_all_answers_supported": 1500,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1313,
+            "question_families_all_answers_supported": 1313,
+            "equal_question_mean_fraction_of_supported_answers": 0.8753333333333333
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 1147,
+            "question_families_all_answers_supported": 1147,
+            "equal_question_mean_fraction_of_supported_answers": 0.7646666666666667
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 609,
+            "question_families_all_answers_supported": 609,
+            "equal_question_mean_fraction_of_supported_answers": 0.406
+          }
+        },
+        "chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 1500,
+            "question_families_all_answers_supported": 1500,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1500,
+            "question_families_all_answers_supported": 1500,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1481,
+            "question_families_all_answers_supported": 1481,
+            "equal_question_mean_fraction_of_supported_answers": 0.9873333333333333
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 980,
+            "question_families_all_answers_supported": 980,
+            "equal_question_mean_fraction_of_supported_answers": 0.6533333333333333
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 967,
+            "question_families_all_answers_supported": 967,
+            "equal_question_mean_fraction_of_supported_answers": 0.6446666666666667
+          }
+        },
+        "davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 1498,
+            "question_families_all_answers_supported": 1498,
+            "equal_question_mean_fraction_of_supported_answers": 0.9986666666666667
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1494,
+            "question_families_all_answers_supported": 1494,
+            "equal_question_mean_fraction_of_supported_answers": 0.996
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1229,
+            "question_families_all_answers_supported": 1229,
+            "equal_question_mean_fraction_of_supported_answers": 0.8193333333333334
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 770,
+            "question_families_all_answers_supported": 770,
+            "equal_question_mean_fraction_of_supported_answers": 0.5133333333333333
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 731,
+            "question_families_all_answers_supported": 731,
+            "equal_question_mean_fraction_of_supported_answers": 0.48733333333333334
+          }
+        },
+        "human+chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 1500,
+            "question_families_all_answers_supported": 1500,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1500,
+            "question_families_all_answers_supported": 1500,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1299,
+            "question_families_all_answers_supported": 1299,
+            "equal_question_mean_fraction_of_supported_answers": 0.866
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 757,
+            "question_families_all_answers_supported": 757,
+            "equal_question_mean_fraction_of_supported_answers": 0.5046666666666667
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 392,
+            "question_families_all_answers_supported": 392,
+            "equal_question_mean_fraction_of_supported_answers": 0.2613333333333333
+          }
+        },
+        "human+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 1498,
+            "question_families_all_answers_supported": 1498,
+            "equal_question_mean_fraction_of_supported_answers": 0.9986666666666667
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1494,
+            "question_families_all_answers_supported": 1494,
+            "equal_question_mean_fraction_of_supported_answers": 0.996
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1079,
+            "question_families_all_answers_supported": 1079,
+            "equal_question_mean_fraction_of_supported_answers": 0.7193333333333334
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 583,
+            "question_families_all_answers_supported": 583,
+            "equal_question_mean_fraction_of_supported_answers": 0.38866666666666666
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 312,
+            "question_families_all_answers_supported": 312,
+            "equal_question_mean_fraction_of_supported_answers": 0.208
+          }
+        },
+        "human+chatgpt+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 1498,
+            "question_families_all_answers_supported": 1498,
+            "equal_question_mean_fraction_of_supported_answers": 0.9986666666666667
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1494,
+            "question_families_all_answers_supported": 1494,
+            "equal_question_mean_fraction_of_supported_answers": 0.996
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1074,
+            "question_families_all_answers_supported": 1074,
+            "equal_question_mean_fraction_of_supported_answers": 0.716
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 479,
+            "question_families_all_answers_supported": 479,
+            "equal_question_mean_fraction_of_supported_answers": 0.31933333333333336
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 244,
+            "question_families_all_answers_supported": 244,
+            "equal_question_mean_fraction_of_supported_answers": 0.16266666666666665
+          }
+        }
+      }
+    },
+    "web": {
+      "paired_answer_records": 1500,
+      "question_families": 1487,
+      "arms": {
+        "human": {
+          "count": 1500,
+          "status": {
+            "present": 1500
+          },
+          "view_support": {
+            "lexical": 1500,
+            "sentence": 1500,
+            "ordered_prose": 1419,
+            "multiline": 0,
+            "paragraph": 0
+          },
+          "chars_min": 101,
+          "chars_median": 198.0,
+          "chars_max": 394,
+          "chars_ge500": 0,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 0,
+          "with_LF": 0,
+          "with_CRLF": 0
+        },
+        "chatgpt": {
+          "count": 1500,
+          "status": {
+            "present": 1500
+          },
+          "view_support": {
+            "lexical": 1500,
+            "sentence": 1500,
+            "ordered_prose": 1498,
+            "multiline": 1241,
+            "paragraph": 1238
+          },
+          "chars_min": 35,
+          "chars_median": 339.0,
+          "chars_max": 1945,
+          "chars_ge500": 193,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 0,
+          "with_LF": 1241,
+          "with_CRLF": 0
+        },
+        "davinci": {
+          "count": 1500,
+          "status": {
+            "present": 1500
+          },
+          "view_support": {
+            "lexical": 1500,
+            "sentence": 1494,
+            "ordered_prose": 1369,
+            "multiline": 900,
+            "paragraph": 875
+          },
+          "chars_min": 1,
+          "chars_median": 195.0,
+          "chars_max": 2048,
+          "chars_ge500": 35,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 0,
+          "with_LF": 1343,
+          "with_CRLF": 0
+        }
+      },
+      "paired_support": {
+        "human+chatgpt": {
+          "lexical": 1500,
+          "sentence": 1500,
+          "ordered_prose": 1417,
+          "multiline": 0,
+          "paragraph": 0
+        },
+        "human+davinci": {
+          "lexical": 1500,
+          "sentence": 1494,
+          "ordered_prose": 1297,
+          "multiline": 0,
+          "paragraph": 0
+        },
+        "human+chatgpt+davinci": {
+          "lexical": 1500,
+          "sentence": 1494,
+          "ordered_prose": 1296,
+          "multiline": 0,
+          "paragraph": 0
+        }
+      },
+      "equal_question_family_support": {
+        "human": {
+          "lexical": {
+            "question_families_any_answer_supported": 1487,
+            "question_families_all_answers_supported": 1487,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1487,
+            "question_families_all_answers_supported": 1487,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1409,
+            "question_families_all_answers_supported": 1406,
+            "equal_question_mean_fraction_of_supported_answers": 0.9465366509751176
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 0,
+            "question_families_all_answers_supported": 0,
+            "equal_question_mean_fraction_of_supported_answers": 0.0
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 0,
+            "question_families_all_answers_supported": 0,
+            "equal_question_mean_fraction_of_supported_answers": 0.0
+          }
+        },
+        "chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 1487,
+            "question_families_all_answers_supported": 1487,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1487,
+            "question_families_all_answers_supported": 1487,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1485,
+            "question_families_all_answers_supported": 1485,
+            "equal_question_mean_fraction_of_supported_answers": 0.9986550100874243
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 1230,
+            "question_families_all_answers_supported": 1228,
+            "equal_question_mean_fraction_of_supported_answers": 0.8264963012777404
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 1227,
+            "question_families_all_answers_supported": 1225,
+            "equal_question_mean_fraction_of_supported_answers": 0.8244788164088769
+          }
+        },
+        "davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 1487,
+            "question_families_all_answers_supported": 1487,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1482,
+            "question_families_all_answers_supported": 1481,
+            "equal_question_mean_fraction_of_supported_answers": 0.996301277740417
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1357,
+            "question_families_all_answers_supported": 1356,
+            "equal_question_mean_fraction_of_supported_answers": 0.9122394082044385
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 896,
+            "question_families_all_answers_supported": 888,
+            "equal_question_mean_fraction_of_supported_answers": 0.599977583501457
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 871,
+            "question_families_all_answers_supported": 863,
+            "equal_question_mean_fraction_of_supported_answers": 0.5831652095942613
+          }
+        },
+        "human+chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 1487,
+            "question_families_all_answers_supported": 1487,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1487,
+            "question_families_all_answers_supported": 1487,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1407,
+            "question_families_all_answers_supported": 1404,
+            "equal_question_mean_fraction_of_supported_answers": 0.945191661062542
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 0,
+            "question_families_all_answers_supported": 0,
+            "equal_question_mean_fraction_of_supported_answers": 0.0
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 0,
+            "question_families_all_answers_supported": 0,
+            "equal_question_mean_fraction_of_supported_answers": 0.0
+          }
+        },
+        "human+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 1487,
+            "question_families_all_answers_supported": 1487,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1482,
+            "question_families_all_answers_supported": 1481,
+            "equal_question_mean_fraction_of_supported_answers": 0.996301277740417
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1287,
+            "question_families_all_answers_supported": 1285,
+            "equal_question_mean_fraction_of_supported_answers": 0.8648285137861466
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 0,
+            "question_families_all_answers_supported": 0,
+            "equal_question_mean_fraction_of_supported_answers": 0.0
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 0,
+            "question_families_all_answers_supported": 0,
+            "equal_question_mean_fraction_of_supported_answers": 0.0
+          }
+        },
+        "human+chatgpt+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 1487,
+            "question_families_all_answers_supported": 1487,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1482,
+            "question_families_all_answers_supported": 1481,
+            "equal_question_mean_fraction_of_supported_answers": 0.996301277740417
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1286,
+            "question_families_all_answers_supported": 1284,
+            "equal_question_mean_fraction_of_supported_answers": 0.8641560188298588
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 0,
+            "question_families_all_answers_supported": 0,
+            "equal_question_mean_fraction_of_supported_answers": 0.0
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 0,
+            "question_families_all_answers_supported": 0,
+            "equal_question_mean_fraction_of_supported_answers": 0.0
+          }
+        }
+      }
+    }
+  },
+  "allocation": [
+    {
+      "stratum": "baike+web|200_499",
+      "total_components": 1,
+      "test_target": 0,
+      "dev_target": 0,
+      "train_target": 1,
+      "test_eligible": 0,
+      "actual_component_counts": {
+        "train": 1
+      }
+    },
+    {
+      "stratum": "baike|200_499",
+      "total_components": 561,
+      "test_target": 112,
+      "dev_target": 112,
+      "train_target": 337,
+      "test_eligible": 512,
+      "actual_component_counts": {
+        "test": 112,
+        "dev": 112,
+        "train": 337
+      }
+    },
+    {
+      "stratum": "baike|ge500",
+      "total_components": 302,
+      "test_target": 60,
+      "dev_target": 60,
+      "train_target": 182,
+      "test_eligible": 275,
+      "actual_component_counts": {
+        "test": 60,
+        "dev": 60,
+        "train": 182
+      }
+    },
+    {
+      "stratum": "baike|lt200",
+      "total_components": 604,
+      "test_target": 121,
+      "dev_target": 121,
+      "train_target": 362,
+      "test_eligible": 553,
+      "actual_component_counts": {
+        "test": 121,
+        "dev": 121,
+        "train": 362
+      }
+    },
+    {
+      "stratum": "web|200_499",
+      "total_components": 608,
+      "test_target": 122,
+      "dev_target": 122,
+      "train_target": 364,
+      "test_eligible": 608,
+      "actual_component_counts": {
+        "test": 122,
+        "dev": 122,
+        "train": 364
+      }
+    },
+    {
+      "stratum": "web|lt200",
+      "total_components": 875,
+      "test_target": 175,
+      "dev_target": 175,
+      "train_target": 525,
+      "test_eligible": 875,
+      "actual_component_counts": {
+        "test": 175,
+        "dev": 175,
+        "train": 525
+      }
+    }
+  ],
+  "split_component_counts": {
+    "train": 1771,
+    "test": 590,
+    "dev": 590
+  },
+  "split_support": {
+    "train": {
+      "paired_answer_records": 1816,
+      "question_families": 1806,
+      "arms": {
+        "human": {
+          "count": 1816,
+          "status": {
+            "present": 1816
+          },
+          "view_support": {
+            "lexical": 1816,
+            "sentence": 1816,
+            "ordered_prose": 1654,
+            "multiline": 693,
+            "paragraph": 357
+          },
+          "chars_min": 101,
+          "chars_median": 199.5,
+          "chars_max": 9705,
+          "chars_ge500": 188,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 672,
+          "with_LF": 531,
+          "with_CRLF": 487
+        },
+        "chatgpt": {
+          "count": 1816,
+          "status": {
+            "present": 1816
+          },
+          "view_support": {
+            "lexical": 1816,
+            "sentence": 1816,
+            "ordered_prose": 1805,
+            "multiline": 1348,
+            "paragraph": 1337
+          },
+          "chars_min": 14,
+          "chars_median": 295.0,
+          "chars_max": 1945,
+          "chars_ge500": 159,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 0,
+          "with_LF": 1348,
+          "with_CRLF": 0
+        },
+        "davinci": {
+          "count": 1816,
+          "status": {
+            "present": 1816
+          },
+          "view_support": {
+            "lexical": 1816,
+            "sentence": 1808,
+            "ordered_prose": 1597,
+            "multiline": 1018,
+            "paragraph": 979
+          },
+          "chars_min": 1,
+          "chars_median": 171.0,
+          "chars_max": 2048,
+          "chars_ge500": 27,
+          "literal_backslash_n_texts": 3,
+          "with_CR": 24,
+          "with_LF": 1659,
+          "with_CRLF": 18
+        }
+      },
+      "paired_support": {
+        "human+chatgpt": {
+          "lexical": 1816,
+          "sentence": 1816,
+          "ordered_prose": 1645,
+          "multiline": 449,
+          "paragraph": 229
+        },
+        "human+davinci": {
+          "lexical": 1816,
+          "sentence": 1808,
+          "ordered_prose": 1461,
+          "multiline": 355,
+          "paragraph": 187
+        },
+        "human+chatgpt+davinci": {
+          "lexical": 1816,
+          "sentence": 1808,
+          "ordered_prose": 1457,
+          "multiline": 293,
+          "paragraph": 145
+        }
+      },
+      "equal_question_family_support": {
+        "human": {
+          "lexical": {
+            "question_families_any_answer_supported": 1806,
+            "question_families_all_answers_supported": 1806,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1806,
+            "question_families_all_answers_supported": 1806,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1646,
+            "question_families_all_answers_supported": 1644,
+            "equal_question_mean_fraction_of_supported_answers": 0.9108527131782945
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 693,
+            "question_families_all_answers_supported": 693,
+            "equal_question_mean_fraction_of_supported_answers": 0.38372093023255816
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 357,
+            "question_families_all_answers_supported": 357,
+            "equal_question_mean_fraction_of_supported_answers": 0.19767441860465115
+          }
+        },
+        "chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 1806,
+            "question_families_all_answers_supported": 1806,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1806,
+            "question_families_all_answers_supported": 1806,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1795,
+            "question_families_all_answers_supported": 1795,
+            "equal_question_mean_fraction_of_supported_answers": 0.9939091915836102
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 1340,
+            "question_families_all_answers_supported": 1338,
+            "equal_question_mean_fraction_of_supported_answers": 0.7414174972314507
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 1329,
+            "question_families_all_answers_supported": 1327,
+            "equal_question_mean_fraction_of_supported_answers": 0.7353266888150609
+          }
+        },
+        "davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 1806,
+            "question_families_all_answers_supported": 1806,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1799,
+            "question_families_all_answers_supported": 1798,
+            "equal_question_mean_fraction_of_supported_answers": 0.9958471760797342
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1588,
+            "question_families_all_answers_supported": 1587,
+            "equal_question_mean_fraction_of_supported_answers": 0.8790143964562569
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 1015,
+            "question_families_all_answers_supported": 1009,
+            "equal_question_mean_fraction_of_supported_answers": 0.5604466592838686
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 976,
+            "question_families_all_answers_supported": 970,
+            "equal_question_mean_fraction_of_supported_answers": 0.5388519748984865
+          }
+        },
+        "human+chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 1806,
+            "question_families_all_answers_supported": 1806,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1806,
+            "question_families_all_answers_supported": 1806,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1637,
+            "question_families_all_answers_supported": 1635,
+            "equal_question_mean_fraction_of_supported_answers": 0.9058693244739756
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 449,
+            "question_families_all_answers_supported": 449,
+            "equal_question_mean_fraction_of_supported_answers": 0.24861572535991142
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 229,
+            "question_families_all_answers_supported": 229,
+            "equal_question_mean_fraction_of_supported_answers": 0.12679955703211518
+          }
+        },
+        "human+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 1806,
+            "question_families_all_answers_supported": 1806,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1799,
+            "question_families_all_answers_supported": 1798,
+            "equal_question_mean_fraction_of_supported_answers": 0.9958471760797342
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1453,
+            "question_families_all_answers_supported": 1452,
+            "equal_question_mean_fraction_of_supported_answers": 0.8042635658914729
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 355,
+            "question_families_all_answers_supported": 355,
+            "equal_question_mean_fraction_of_supported_answers": 0.19656699889258028
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 187,
+            "question_families_all_answers_supported": 187,
+            "equal_question_mean_fraction_of_supported_answers": 0.1035437430786268
+          }
+        },
+        "human+chatgpt+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 1806,
+            "question_families_all_answers_supported": 1806,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 1799,
+            "question_families_all_answers_supported": 1798,
+            "equal_question_mean_fraction_of_supported_answers": 0.9958471760797342
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 1449,
+            "question_families_all_answers_supported": 1448,
+            "equal_question_mean_fraction_of_supported_answers": 0.8020487264673312
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 293,
+            "question_families_all_answers_supported": 293,
+            "equal_question_mean_fraction_of_supported_answers": 0.16223698781838317
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 145,
+            "question_families_all_answers_supported": 145,
+            "equal_question_mean_fraction_of_supported_answers": 0.08028792912513842
+          }
+        }
+      }
+    },
+    "dev": {
+      "paired_answer_records": 591,
+      "question_families": 590,
+      "arms": {
+        "human": {
+          "count": 591,
+          "status": {
+            "present": 591
+          },
+          "view_support": {
+            "lexical": 591,
+            "sentence": 591,
+            "ordered_prose": 540,
+            "multiline": 223,
+            "paragraph": 141
+          },
+          "chars_min": 101,
+          "chars_median": 199.0,
+          "chars_max": 5809,
+          "chars_ge500": 60,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 221,
+          "with_LF": 172,
+          "with_CRLF": 161
+        },
+        "chatgpt": {
+          "count": 591,
+          "status": {
+            "present": 591
+          },
+          "view_support": {
+            "lexical": 591,
+            "sentence": 591,
+            "ordered_prose": 588,
+            "multiline": 438,
+            "paragraph": 435
+          },
+          "chars_min": 11,
+          "chars_median": 288.0,
+          "chars_max": 1387,
+          "chars_ge500": 63,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 1,
+          "with_LF": 438,
+          "with_CRLF": 1
+        },
+        "davinci": {
+          "count": 591,
+          "status": {
+            "present": 589,
+            "whitespace_only": 2
+          },
+          "view_support": {
+            "lexical": 589,
+            "sentence": 588,
+            "ordered_prose": 513,
+            "multiline": 331,
+            "paragraph": 321
+          },
+          "chars_min": 1,
+          "chars_median": 166.0,
+          "chars_max": 1037,
+          "chars_ge500": 10,
+          "literal_backslash_n_texts": 2,
+          "with_CR": 14,
+          "with_LF": 537,
+          "with_CRLF": 11
+        }
+      },
+      "paired_support": {
+        "human+chatgpt": {
+          "lexical": 591,
+          "sentence": 591,
+          "ordered_prose": 538,
+          "multiline": 158,
+          "paragraph": 97
+        },
+        "human+davinci": {
+          "lexical": 589,
+          "sentence": 588,
+          "ordered_prose": 469,
+          "multiline": 111,
+          "paragraph": 69
+        },
+        "human+chatgpt+davinci": {
+          "lexical": 589,
+          "sentence": 588,
+          "ordered_prose": 468,
+          "multiline": 94,
+          "paragraph": 60
+        }
+      },
+      "equal_question_family_support": {
+        "human": {
+          "lexical": {
+            "question_families_any_answer_supported": 590,
+            "question_families_all_answers_supported": 590,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 590,
+            "question_families_all_answers_supported": 590,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 539,
+            "question_families_all_answers_supported": 539,
+            "equal_question_mean_fraction_of_supported_answers": 0.9135593220338983
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 223,
+            "question_families_all_answers_supported": 223,
+            "equal_question_mean_fraction_of_supported_answers": 0.37796610169491524
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 141,
+            "question_families_all_answers_supported": 141,
+            "equal_question_mean_fraction_of_supported_answers": 0.23898305084745763
+          }
+        },
+        "chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 590,
+            "question_families_all_answers_supported": 590,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 590,
+            "question_families_all_answers_supported": 590,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 587,
+            "question_families_all_answers_supported": 587,
+            "equal_question_mean_fraction_of_supported_answers": 0.9949152542372881
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 437,
+            "question_families_all_answers_supported": 437,
+            "equal_question_mean_fraction_of_supported_answers": 0.7406779661016949
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 434,
+            "question_families_all_answers_supported": 434,
+            "equal_question_mean_fraction_of_supported_answers": 0.735593220338983
+          }
+        },
+        "davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 588,
+            "question_families_all_answers_supported": 588,
+            "equal_question_mean_fraction_of_supported_answers": 0.9966101694915255
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 587,
+            "question_families_all_answers_supported": 587,
+            "equal_question_mean_fraction_of_supported_answers": 0.9949152542372881
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 512,
+            "question_families_all_answers_supported": 512,
+            "equal_question_mean_fraction_of_supported_answers": 0.8677966101694915
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 331,
+            "question_families_all_answers_supported": 330,
+            "equal_question_mean_fraction_of_supported_answers": 0.5601694915254237
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 321,
+            "question_families_all_answers_supported": 320,
+            "equal_question_mean_fraction_of_supported_answers": 0.5432203389830509
+          }
+        },
+        "human+chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 590,
+            "question_families_all_answers_supported": 590,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 590,
+            "question_families_all_answers_supported": 590,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 537,
+            "question_families_all_answers_supported": 537,
+            "equal_question_mean_fraction_of_supported_answers": 0.9101694915254237
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 158,
+            "question_families_all_answers_supported": 158,
+            "equal_question_mean_fraction_of_supported_answers": 0.2677966101694915
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 97,
+            "question_families_all_answers_supported": 97,
+            "equal_question_mean_fraction_of_supported_answers": 0.16440677966101694
+          }
+        },
+        "human+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 588,
+            "question_families_all_answers_supported": 588,
+            "equal_question_mean_fraction_of_supported_answers": 0.9966101694915255
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 587,
+            "question_families_all_answers_supported": 587,
+            "equal_question_mean_fraction_of_supported_answers": 0.9949152542372881
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 468,
+            "question_families_all_answers_supported": 468,
+            "equal_question_mean_fraction_of_supported_answers": 0.7932203389830509
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 111,
+            "question_families_all_answers_supported": 111,
+            "equal_question_mean_fraction_of_supported_answers": 0.188135593220339
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 69,
+            "question_families_all_answers_supported": 69,
+            "equal_question_mean_fraction_of_supported_answers": 0.11694915254237288
+          }
+        },
+        "human+chatgpt+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 588,
+            "question_families_all_answers_supported": 588,
+            "equal_question_mean_fraction_of_supported_answers": 0.9966101694915255
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 587,
+            "question_families_all_answers_supported": 587,
+            "equal_question_mean_fraction_of_supported_answers": 0.9949152542372881
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 467,
+            "question_families_all_answers_supported": 467,
+            "equal_question_mean_fraction_of_supported_answers": 0.7915254237288135
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 94,
+            "question_families_all_answers_supported": 94,
+            "equal_question_mean_fraction_of_supported_answers": 0.15932203389830507
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 60,
+            "question_families_all_answers_supported": 60,
+            "equal_question_mean_fraction_of_supported_answers": 0.1016949152542373
+          }
+        }
+      }
+    },
+    "test": {
+      "paired_answer_records": 593,
+      "question_families": 591,
+      "arms": {
+        "human": {
+          "count": 593,
+          "status": {
+            "present": 593
+          },
+          "view_support": {
+            "lexical": 593,
+            "sentence": 593,
+            "ordered_prose": 538,
+            "multiline": 231,
+            "paragraph": 111
+          },
+          "chars_min": 101,
+          "chars_median": 199.0,
+          "chars_max": 6417,
+          "chars_ge500": 60,
+          "literal_backslash_n_texts": 1,
+          "with_CR": 221,
+          "with_LF": 179,
+          "with_CRLF": 162
+        },
+        "chatgpt": {
+          "count": 593,
+          "status": {
+            "present": 593
+          },
+          "view_support": {
+            "lexical": 593,
+            "sentence": 593,
+            "ordered_prose": 586,
+            "multiline": 435,
+            "paragraph": 433
+          },
+          "chars_min": 14,
+          "chars_median": 289.0,
+          "chars_max": 1205,
+          "chars_ge500": 43,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 1,
+          "with_LF": 435,
+          "with_CRLF": 1
+        },
+        "davinci": {
+          "count": 593,
+          "status": {
+            "present": 593
+          },
+          "view_support": {
+            "lexical": 593,
+            "sentence": 592,
+            "ordered_prose": 488,
+            "multiline": 321,
+            "paragraph": 306
+          },
+          "chars_min": 1,
+          "chars_median": 161.0,
+          "chars_max": 1174,
+          "chars_ge500": 9,
+          "literal_backslash_n_texts": 1,
+          "with_CR": 12,
+          "with_LF": 540,
+          "with_CRLF": 12
+        }
+      },
+      "paired_support": {
+        "human+chatgpt": {
+          "lexical": 593,
+          "sentence": 593,
+          "ordered_prose": 533,
+          "multiline": 150,
+          "paragraph": 66
+        },
+        "human+davinci": {
+          "lexical": 593,
+          "sentence": 592,
+          "ordered_prose": 446,
+          "multiline": 117,
+          "paragraph": 56
+        },
+        "human+chatgpt+davinci": {
+          "lexical": 593,
+          "sentence": 592,
+          "ordered_prose": 445,
+          "multiline": 92,
+          "paragraph": 39
+        }
+      },
+      "equal_question_family_support": {
+        "human": {
+          "lexical": {
+            "question_families_any_answer_supported": 591,
+            "question_families_all_answers_supported": 591,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 591,
+            "question_families_all_answers_supported": 591,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 537,
+            "question_families_all_answers_supported": 536,
+            "equal_question_mean_fraction_of_supported_answers": 0.9077834179357022
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 231,
+            "question_families_all_answers_supported": 231,
+            "equal_question_mean_fraction_of_supported_answers": 0.39086294416243655
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 111,
+            "question_families_all_answers_supported": 111,
+            "equal_question_mean_fraction_of_supported_answers": 0.18781725888324874
+          }
+        },
+        "chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 591,
+            "question_families_all_answers_supported": 591,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 591,
+            "question_families_all_answers_supported": 591,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 584,
+            "question_families_all_answers_supported": 584,
+            "equal_question_mean_fraction_of_supported_answers": 0.988155668358714
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 433,
+            "question_families_all_answers_supported": 433,
+            "equal_question_mean_fraction_of_supported_answers": 0.7326565143824028
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 431,
+            "question_families_all_answers_supported": 431,
+            "equal_question_mean_fraction_of_supported_answers": 0.7292724196277496
+          }
+        },
+        "davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 591,
+            "question_families_all_answers_supported": 591,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 590,
+            "question_families_all_answers_supported": 590,
+            "equal_question_mean_fraction_of_supported_answers": 0.9983079526226735
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 486,
+            "question_families_all_answers_supported": 486,
+            "equal_question_mean_fraction_of_supported_answers": 0.8223350253807107
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 320,
+            "question_families_all_answers_supported": 319,
+            "equal_question_mean_fraction_of_supported_answers": 0.5406091370558376
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 305,
+            "question_families_all_answers_supported": 304,
+            "equal_question_mean_fraction_of_supported_answers": 0.5152284263959391
+          }
+        },
+        "human+chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 591,
+            "question_families_all_answers_supported": 591,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 591,
+            "question_families_all_answers_supported": 591,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 532,
+            "question_families_all_answers_supported": 531,
+            "equal_question_mean_fraction_of_supported_answers": 0.8993231810490694
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 150,
+            "question_families_all_answers_supported": 150,
+            "equal_question_mean_fraction_of_supported_answers": 0.25380710659898476
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 66,
+            "question_families_all_answers_supported": 66,
+            "equal_question_mean_fraction_of_supported_answers": 0.1116751269035533
+          }
+        },
+        "human+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 591,
+            "question_families_all_answers_supported": 591,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 590,
+            "question_families_all_answers_supported": 590,
+            "equal_question_mean_fraction_of_supported_answers": 0.9983079526226735
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 445,
+            "question_families_all_answers_supported": 444,
+            "equal_question_mean_fraction_of_supported_answers": 0.7521150592216582
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 117,
+            "question_families_all_answers_supported": 117,
+            "equal_question_mean_fraction_of_supported_answers": 0.19796954314720813
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 56,
+            "question_families_all_answers_supported": 56,
+            "equal_question_mean_fraction_of_supported_answers": 0.09475465313028765
+          }
+        },
+        "human+chatgpt+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 591,
+            "question_families_all_answers_supported": 591,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 590,
+            "question_families_all_answers_supported": 590,
+            "equal_question_mean_fraction_of_supported_answers": 0.9983079526226735
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 444,
+            "question_families_all_answers_supported": 443,
+            "equal_question_mean_fraction_of_supported_answers": 0.7504230118443317
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 92,
+            "question_families_all_answers_supported": 92,
+            "equal_question_mean_fraction_of_supported_answers": 0.155668358714044
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 39,
+            "question_families_all_answers_supported": 39,
+            "equal_question_mean_fraction_of_supported_answers": 0.06598984771573604
+          }
+        }
+      }
+    }
+  },
+  "test_panel_component_counts": {
+    "generator_transfer": 294,
+    "seen_generator": 296
+  },
+  "test_panel_support": {
+    "seen_generator": {
+      "paired_answer_records": 297,
+      "question_families": 296,
+      "arms": {
+        "human": {
+          "count": 297,
+          "status": {
+            "present": 297
+          },
+          "view_support": {
+            "lexical": 297,
+            "sentence": 297,
+            "ordered_prose": 267,
+            "multiline": 117,
+            "paragraph": 57
+          },
+          "chars_min": 102,
+          "chars_median": 199.0,
+          "chars_max": 6417,
+          "chars_ge500": 30,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 119,
+          "with_LF": 93,
+          "with_CRLF": 88
+        },
+        "chatgpt": {
+          "count": 297,
+          "status": {
+            "present": 297
+          },
+          "view_support": {
+            "lexical": 297,
+            "sentence": 297,
+            "ordered_prose": 293,
+            "multiline": 219,
+            "paragraph": 218
+          },
+          "chars_min": 14,
+          "chars_median": 287.0,
+          "chars_max": 1205,
+          "chars_ge500": 23,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 1,
+          "with_LF": 219,
+          "with_CRLF": 1
+        },
+        "davinci": {
+          "count": 297,
+          "status": {
+            "present": 297
+          },
+          "view_support": {
+            "lexical": 297,
+            "sentence": 297,
+            "ordered_prose": 248,
+            "multiline": 159,
+            "paragraph": 151
+          },
+          "chars_min": 7,
+          "chars_median": 153.0,
+          "chars_max": 1055,
+          "chars_ge500": 5,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 5,
+          "with_LF": 271,
+          "with_CRLF": 5
+        }
+      },
+      "paired_support": {
+        "human+chatgpt": {
+          "lexical": 297,
+          "sentence": 297,
+          "ordered_prose": 264,
+          "multiline": 76,
+          "paragraph": 35
+        },
+        "human+davinci": {
+          "lexical": 297,
+          "sentence": 297,
+          "ordered_prose": 225,
+          "multiline": 60,
+          "paragraph": 31
+        },
+        "human+chatgpt+davinci": {
+          "lexical": 297,
+          "sentence": 297,
+          "ordered_prose": 225,
+          "multiline": 46,
+          "paragraph": 22
+        }
+      },
+      "equal_question_family_support": {
+        "human": {
+          "lexical": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 266,
+            "question_families_all_answers_supported": 266,
+            "equal_question_mean_fraction_of_supported_answers": 0.8986486486486487
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 117,
+            "question_families_all_answers_supported": 117,
+            "equal_question_mean_fraction_of_supported_answers": 0.3952702702702703
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 57,
+            "question_families_all_answers_supported": 57,
+            "equal_question_mean_fraction_of_supported_answers": 0.19256756756756757
+          }
+        },
+        "chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 292,
+            "question_families_all_answers_supported": 292,
+            "equal_question_mean_fraction_of_supported_answers": 0.9864864864864865
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 218,
+            "question_families_all_answers_supported": 218,
+            "equal_question_mean_fraction_of_supported_answers": 0.7364864864864865
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 217,
+            "question_families_all_answers_supported": 217,
+            "equal_question_mean_fraction_of_supported_answers": 0.7331081081081081
+          }
+        },
+        "davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 247,
+            "question_families_all_answers_supported": 247,
+            "equal_question_mean_fraction_of_supported_answers": 0.8344594594594594
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 159,
+            "question_families_all_answers_supported": 158,
+            "equal_question_mean_fraction_of_supported_answers": 0.535472972972973
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 151,
+            "question_families_all_answers_supported": 150,
+            "equal_question_mean_fraction_of_supported_answers": 0.5084459459459459
+          }
+        },
+        "human+chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 263,
+            "question_families_all_answers_supported": 263,
+            "equal_question_mean_fraction_of_supported_answers": 0.8885135135135135
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 76,
+            "question_families_all_answers_supported": 76,
+            "equal_question_mean_fraction_of_supported_answers": 0.25675675675675674
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 35,
+            "question_families_all_answers_supported": 35,
+            "equal_question_mean_fraction_of_supported_answers": 0.11824324324324324
+          }
+        },
+        "human+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 224,
+            "question_families_all_answers_supported": 224,
+            "equal_question_mean_fraction_of_supported_answers": 0.7567567567567568
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 60,
+            "question_families_all_answers_supported": 60,
+            "equal_question_mean_fraction_of_supported_answers": 0.20270270270270271
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 31,
+            "question_families_all_answers_supported": 31,
+            "equal_question_mean_fraction_of_supported_answers": 0.10472972972972973
+          }
+        },
+        "human+chatgpt+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 296,
+            "question_families_all_answers_supported": 296,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 224,
+            "question_families_all_answers_supported": 224,
+            "equal_question_mean_fraction_of_supported_answers": 0.7567567567567568
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 46,
+            "question_families_all_answers_supported": 46,
+            "equal_question_mean_fraction_of_supported_answers": 0.1554054054054054
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 22,
+            "question_families_all_answers_supported": 22,
+            "equal_question_mean_fraction_of_supported_answers": 0.07432432432432433
+          }
+        }
+      }
+    },
+    "generator_transfer": {
+      "paired_answer_records": 296,
+      "question_families": 295,
+      "arms": {
+        "human": {
+          "count": 296,
+          "status": {
+            "present": 296
+          },
+          "view_support": {
+            "lexical": 296,
+            "sentence": 296,
+            "ordered_prose": 271,
+            "multiline": 114,
+            "paragraph": 54
+          },
+          "chars_min": 101,
+          "chars_median": 199.5,
+          "chars_max": 4765,
+          "chars_ge500": 30,
+          "literal_backslash_n_texts": 1,
+          "with_CR": 102,
+          "with_LF": 86,
+          "with_CRLF": 74
+        },
+        "chatgpt": {
+          "count": 296,
+          "status": {
+            "present": 296
+          },
+          "view_support": {
+            "lexical": 296,
+            "sentence": 296,
+            "ordered_prose": 293,
+            "multiline": 216,
+            "paragraph": 215
+          },
+          "chars_min": 34,
+          "chars_median": 294.0,
+          "chars_max": 1177,
+          "chars_ge500": 20,
+          "literal_backslash_n_texts": 0,
+          "with_CR": 0,
+          "with_LF": 216,
+          "with_CRLF": 0
+        },
+        "davinci": {
+          "count": 296,
+          "status": {
+            "present": 296
+          },
+          "view_support": {
+            "lexical": 296,
+            "sentence": 295,
+            "ordered_prose": 240,
+            "multiline": 162,
+            "paragraph": 155
+          },
+          "chars_min": 1,
+          "chars_median": 168.0,
+          "chars_max": 1174,
+          "chars_ge500": 4,
+          "literal_backslash_n_texts": 1,
+          "with_CR": 7,
+          "with_LF": 269,
+          "with_CRLF": 7
+        }
+      },
+      "paired_support": {
+        "human+chatgpt": {
+          "lexical": 296,
+          "sentence": 296,
+          "ordered_prose": 269,
+          "multiline": 74,
+          "paragraph": 31
+        },
+        "human+davinci": {
+          "lexical": 296,
+          "sentence": 295,
+          "ordered_prose": 221,
+          "multiline": 57,
+          "paragraph": 25
+        },
+        "human+chatgpt+davinci": {
+          "lexical": 296,
+          "sentence": 295,
+          "ordered_prose": 220,
+          "multiline": 46,
+          "paragraph": 17
+        }
+      },
+      "equal_question_family_support": {
+        "human": {
+          "lexical": {
+            "question_families_any_answer_supported": 295,
+            "question_families_all_answers_supported": 295,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 295,
+            "question_families_all_answers_supported": 295,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 271,
+            "question_families_all_answers_supported": 270,
+            "equal_question_mean_fraction_of_supported_answers": 0.9169491525423729
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 114,
+            "question_families_all_answers_supported": 114,
+            "equal_question_mean_fraction_of_supported_answers": 0.3864406779661017
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 54,
+            "question_families_all_answers_supported": 54,
+            "equal_question_mean_fraction_of_supported_answers": 0.18305084745762712
+          }
+        },
+        "chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 295,
+            "question_families_all_answers_supported": 295,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 295,
+            "question_families_all_answers_supported": 295,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 292,
+            "question_families_all_answers_supported": 292,
+            "equal_question_mean_fraction_of_supported_answers": 0.9898305084745763
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 215,
+            "question_families_all_answers_supported": 215,
+            "equal_question_mean_fraction_of_supported_answers": 0.7288135593220338
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 214,
+            "question_families_all_answers_supported": 214,
+            "equal_question_mean_fraction_of_supported_answers": 0.7254237288135593
+          }
+        },
+        "davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 295,
+            "question_families_all_answers_supported": 295,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 294,
+            "question_families_all_answers_supported": 294,
+            "equal_question_mean_fraction_of_supported_answers": 0.9966101694915255
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 239,
+            "question_families_all_answers_supported": 239,
+            "equal_question_mean_fraction_of_supported_answers": 0.8101694915254237
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 161,
+            "question_families_all_answers_supported": 161,
+            "equal_question_mean_fraction_of_supported_answers": 0.5457627118644067
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 154,
+            "question_families_all_answers_supported": 154,
+            "equal_question_mean_fraction_of_supported_answers": 0.5220338983050847
+          }
+        },
+        "human+chatgpt": {
+          "lexical": {
+            "question_families_any_answer_supported": 295,
+            "question_families_all_answers_supported": 295,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 295,
+            "question_families_all_answers_supported": 295,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 269,
+            "question_families_all_answers_supported": 268,
+            "equal_question_mean_fraction_of_supported_answers": 0.9101694915254237
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 74,
+            "question_families_all_answers_supported": 74,
+            "equal_question_mean_fraction_of_supported_answers": 0.25084745762711863
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 31,
+            "question_families_all_answers_supported": 31,
+            "equal_question_mean_fraction_of_supported_answers": 0.10508474576271186
+          }
+        },
+        "human+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 295,
+            "question_families_all_answers_supported": 295,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 294,
+            "question_families_all_answers_supported": 294,
+            "equal_question_mean_fraction_of_supported_answers": 0.9966101694915255
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 221,
+            "question_families_all_answers_supported": 220,
+            "equal_question_mean_fraction_of_supported_answers": 0.747457627118644
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 57,
+            "question_families_all_answers_supported": 57,
+            "equal_question_mean_fraction_of_supported_answers": 0.19322033898305085
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 25,
+            "question_families_all_answers_supported": 25,
+            "equal_question_mean_fraction_of_supported_answers": 0.0847457627118644
+          }
+        },
+        "human+chatgpt+davinci": {
+          "lexical": {
+            "question_families_any_answer_supported": 295,
+            "question_families_all_answers_supported": 295,
+            "equal_question_mean_fraction_of_supported_answers": 1.0
+          },
+          "sentence": {
+            "question_families_any_answer_supported": 294,
+            "question_families_all_answers_supported": 294,
+            "equal_question_mean_fraction_of_supported_answers": 0.9966101694915255
+          },
+          "ordered_prose": {
+            "question_families_any_answer_supported": 220,
+            "question_families_all_answers_supported": 219,
+            "equal_question_mean_fraction_of_supported_answers": 0.7440677966101695
+          },
+          "multiline": {
+            "question_families_any_answer_supported": 46,
+            "question_families_all_answers_supported": 46,
+            "equal_question_mean_fraction_of_supported_answers": 0.15593220338983052
+          },
+          "paragraph": {
+            "question_families_any_answer_supported": 17,
+            "question_families_all_answers_supported": 17,
+            "equal_question_mean_fraction_of_supported_answers": 0.0576271186440678
+          }
+        }
+      }
+    }
+  },
+  "unsupported_panels": {
+    "author_holdout": "No author identities",
+    "chronological_or_epoch_holdout": "No per-row dates or epochs",
+    "held_out_topic": "No verified topic labels; no topic generalization claim",
+    "held_out_domain": "Baike/Web source subdomains are observed and stratified; no source-disjoint/domain-transfer panel frozen",
+    "held_out_domain_and_generator": "No domain-disjoint crossing panel; both observed source labels are broad Chinese QA"
+  },
+  "format_interpretation": {
+    "web_human": "All 1500 released human strings are single-line; original writer paragraph/layout is unsupported/unknown. This alone does not prove deliberate stripping or that writers used one paragraph. Retain lexical/sentence views.",
+    "baike_paragraph_subset": "Conditional joint-support subset, subject to selection bias; does not represent the full cohort or universal writer structure.",
+    "ordered_prose": "A two-unit sentence-proxy inspection flag, not validated rhetorical/discourse annotation."
+  },
+  "scope_notes": [
+    "Operational original-benchmark labels; wholly unaided human provenance not independently proved",
+    "Two early generator labels, one broad QA domain",
+    "No model fit, no detector accuracy, no synthetic rewrites",
+    "Paragraph/order support is a proxy and missingness is view-specific",
+    "Near-copy threshold is lexical; paraphrases and arbitrary partial substring copies can remain",
+    "Grouping and structural support audited across corpus before splitting; no test-outcome-based threshold/seed selection"
+  ],
+  "weighting": {
+    "unit": "source-aware question family",
+    "multiple_answer_weight": "1 / answer count within question family, once per human arm",
+    "view_specific_analysis": "Within-family means among available paired answers, followed by equal question weighting; missing answer/view denominators reported",
+    "uncertainty_cluster": "question/exact/near-copy connected component",
+    "no_sentence_or_repeated_human_pseudoreplication": true
+  },
+  "resources": {
+    "wall_seconds": 6.00658266802202,
+    "cpu_seconds": 6.003051939,
+    "max_rss_kib": 479204,
+    "one_process": true
+  }
+}

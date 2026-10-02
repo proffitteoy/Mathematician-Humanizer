@@ -1,0 +1,72 @@
+{
+  "files": {
+    "qazh_chatgpt.jsonl": {
+      "rows": 3000,
+      "distinct_ids": 2987,
+      "duplicate_id_occurrences_beyond_first": 13,
+      "id_types": {
+        "str": 1500,
+        "int": 1500
+      },
+      "field_counts": {
+        "prompt": 3000,
+        "human_text": 3000,
+        "machine_text": 3000,
+        "model": 3000,
+        "source": 3000,
+        "source_ID": 3000
+      },
+      "sources": {
+        "baike": 1500,
+        "web": 1500
+      },
+      "model_labels": {
+        "chatgpt": 3000
+      },
+      "bytes": 7025906,
+      "sha256": "cc2fb0d6c2e63f507717835cd20f992a513d098af6259ce888552ddeca79cfee",
+      "git_blob_sha1": "be87e80335e8c1baa494d5272cbee1d5b2dfff3d",
+      "file_CR": 0,
+      "file_LF": 3000,
+      "file_CRLF": 0
+    },
+    "qazh_davinci.jsonl": {
+      "rows": 3000,
+      "distinct_ids": 2987,
+      "duplicate_id_occurrences_beyond_first": 13,
+      "id_types": {
+        "str": 1500,
+        "int": 1500
+      },
+      "field_counts": {
+        "prompt": 3000,
+        "human_text": 3000,
+        "machine_text": 3000,
+        "model": 3000,
+        "source": 3000,
+        "source_ID": 3000
+      },
+      "sources": {
+        "baike": 1500,
+        "web": 1500
+      },
+      "model_labels": {
+        "davinci": 3000
+      },
+      "bytes": 11276490,
+      "sha256": "3619629c800dd42b4a64e3c7425554069fe0be1ad5b263533807d63fff8158c4",
+      "git_blob_sha1": "4e43837e0a16ea357d835839918c9ba97a8c19a6",
+      "file_CR": 0,
+      "file_LF": 3000,
+      "file_CRLF": 0
+    }
+  },
+  "shared_composite_answer_ids": 3000,
+  "only_chatgpt_composites": 0,
+  "only_davinci_composites": 0,
+  "exact_equal_fields": {
+    "prompt": 3000,
+    "human_text": 3000,
+    "source": 3000
+  }
+}

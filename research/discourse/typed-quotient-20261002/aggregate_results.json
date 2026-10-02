@@ -1,0 +1,373 @@
+{
+  "scope": "Retrospective definition development on 10 already exposed documents; no held-out, quality, parser, or human/AI claim",
+  "version": "typed-identity-bridge-quotient-v1",
+  "dataset_commit": "6846a7e21a3a91f29e1376fe4a0f27c4810f2f51",
+  "totals": {
+    "documents": 10,
+    "sentences": 666,
+    "source_blocks": 275,
+    "primary_edus": 2237,
+    "unknown_role_edges": 0,
+    "graphs": 15,
+    "native_vertices": 6351,
+    "quotient_vertices": 4941,
+    "removed_identity_bridges": 1410,
+    "paired_documents": 5
+  },
+  "verification": {
+    "synthetic_tests_passed": 13,
+    "cached_input_hashes_verified": 45,
+    "original_recorded_frozen_hashes_verified": 4,
+    "original_artifact_hashes_unchanged": true,
+    "all_graph_checks": {
+      "idempotence": 15,
+      "id_and_declaration_order": 15,
+      "double_wrapper_expansion": 15,
+      "complete_source_retention": 15,
+      "nonspan_label_and_role_retention": 15,
+      "features_and_scope_signatures": 15,
+      "surviving_yield_retention": 15
+    }
+  },
+  "primary_quotient_denominators": {
+    "nodes": 3312,
+    "groups": 1075,
+    "nonspan_known_type_edges": 2913,
+    "unknown_role_edges": 0,
+    "block_boundaries": 265,
+    "aligned_block_boundaries": 265,
+    "straddled_block_boundaries": 0
+  },
+  "paired_quotient_denominators": {
+    "primary": {
+      "nodes": 1607,
+      "groups": 515,
+      "nonspan_known_type_edges": 1436,
+      "unknown_role_edges": 0,
+      "block_boundaries": 143,
+      "aligned_block_boundaries": 143,
+      "straddled_block_boundaries": 0,
+      "removed_identity_bridges": 466
+    },
+    "alternate": {
+      "nodes": 1629,
+      "groups": 537,
+      "nonspan_known_type_edges": 1440,
+      "unknown_role_edges": 0,
+      "block_boundaries": 143,
+      "aligned_block_boundaries": 143,
+      "straddled_block_boundaries": 0,
+      "removed_identity_bridges": 459
+    }
+  },
+  "paired_canonical_tree_equal_count": 0,
+  "paired_sensitivity": {
+    "mean_edu_attachment_depth": {
+      "paired_documents": 5,
+      "macro_absolute_difference": 0.5313725608486639,
+      "maximum_absolute_difference": 1.0142857142857142,
+      "flips": 2,
+      "tie_changes": 0,
+      "unchanged": 8
+    },
+    "mean_block_boundary_lca_depth": {
+      "paired_documents": 5,
+      "macro_absolute_difference": 0.49095398482405556,
+      "maximum_absolute_difference": 0.8378378378378377,
+      "flips": 1,
+      "tie_changes": 0,
+      "unchanged": 9
+    },
+    "group_source_block_crossing_fraction": {
+      "paired_documents": 5,
+      "macro_absolute_difference": 0.02411423143192387,
+      "maximum_absolute_difference": 0.04628865979381444,
+      "flips": 3,
+      "tie_changes": 0,
+      "unchanged": 7
+    },
+    "mean_block_boundary_lca_yield_fraction": {
+      "paired_documents": 5,
+      "macro_absolute_difference": 0.03418467822036676,
+      "maximum_absolute_difference": 0.08578431372549022,
+      "flips": 2,
+      "tie_changes": 0,
+      "unchanged": 8
+    },
+    "labelled_attachment_satellite_share": {
+      "paired_documents": 5,
+      "macro_absolute_difference": 0.030079878636868708,
+      "maximum_absolute_difference": 0.06849680170575695,
+      "flips": 0,
+      "tie_changes": 0,
+      "unchanged": 10
+    }
+  },
+  "paired_signature_overlap": {
+    "typed_carrier": {
+      "paired_documents": 5,
+      "macro_f1": 0.7524484972224253,
+      "pooled_f1": 0.7552533992583437,
+      "reference_count": 1607,
+      "alternate_count": 1629,
+      "matched": 1222
+    },
+    "relation_scope": {
+      "paired_documents": 5,
+      "macro_f1": 0.3440600726219604,
+      "pooled_f1": 0.3463143254520167,
+      "reference_count": 1436,
+      "alternate_count": 1440,
+      "matched": 498
+    }
+  },
+  "nonspan_label_distribution_total_variation": {
+    "paired_documents": 5,
+    "macro": 0.2712817925823583,
+    "maximum": 0.3410872638478345
+  },
+  "primary_macro_summaries": {
+    "mean_edu_attachment_depth": {
+      "documents": 10,
+      "mean": 7.479303302365497,
+      "minimum": 6.58984375,
+      "maximum": 8.475675675675676
+    },
+    "mean_block_boundary_lca_depth": {
+      "documents": 10,
+      "mean": 2.778756656190933,
+      "minimum": 1.6538461538461537,
+      "maximum": 3.5652173913043477
+    },
+    "group_source_block_crossing_fraction": {
+      "documents": 10,
+      "mean": 0.15768438230545573,
+      "minimum": 0.08270676691729323,
+      "maximum": 0.2
+    },
+    "mean_block_boundary_lca_yield_fraction": {
+      "documents": 10,
+      "mean": 0.3798633230390149,
+      "minimum": 0.26049741602067183,
+      "maximum": 0.4791666666666667
+    },
+    "labelled_attachment_satellite_share": {
+      "documents": 10,
+      "mean": 0.4625121701447766,
+      "minimum": 0.4059701492537313,
+      "maximum": 0.5521628498727735
+    }
+  },
+  "primary_nonspan_relation_events": [
+    {
+      "label": "adversative-antithesis",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 22
+    },
+    {
+      "label": "adversative-concession",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 55
+    },
+    {
+      "label": "adversative-contrast",
+      "inventory_type": "multinuc",
+      "derived_role": "N",
+      "events": 94
+    },
+    {
+      "label": "attribution-negative",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 6
+    },
+    {
+      "label": "attribution-positive",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 114
+    },
+    {
+      "label": "causal-cause",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 55
+    },
+    {
+      "label": "causal-result",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 39
+    },
+    {
+      "label": "context-background",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 89
+    },
+    {
+      "label": "context-circumstance",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 91
+    },
+    {
+      "label": "contingency-condition",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 53
+    },
+    {
+      "label": "elaboration-additional",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 117
+    },
+    {
+      "label": "elaboration-attribute",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 234
+    },
+    {
+      "label": "evaluation-comment",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 26
+    },
+    {
+      "label": "explanation-evidence",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 115
+    },
+    {
+      "label": "explanation-justify",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 36
+    },
+    {
+      "label": "explanation-motivation",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 14
+    },
+    {
+      "label": "joint-disjunction",
+      "inventory_type": "multinuc",
+      "derived_role": "N",
+      "events": 16
+    },
+    {
+      "label": "joint-list",
+      "inventory_type": "multinuc",
+      "derived_role": "N",
+      "events": 681
+    },
+    {
+      "label": "joint-other",
+      "inventory_type": "multinuc",
+      "derived_role": "N",
+      "events": 117
+    },
+    {
+      "label": "joint-sequence",
+      "inventory_type": "multinuc",
+      "derived_role": "N",
+      "events": 150
+    },
+    {
+      "label": "mode-manner",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 10
+    },
+    {
+      "label": "mode-means",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 34
+    },
+    {
+      "label": "organization-heading",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 69
+    },
+    {
+      "label": "organization-phatic",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 2
+    },
+    {
+      "label": "organization-preparation",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 71
+    },
+    {
+      "label": "purpose-attribute",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 6
+    },
+    {
+      "label": "purpose-goal",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 46
+    },
+    {
+      "label": "restatement-partial",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 26
+    },
+    {
+      "label": "restatement-repetition",
+      "inventory_type": "multinuc",
+      "derived_role": "N",
+      "events": 6
+    },
+    {
+      "label": "same-unit",
+      "inventory_type": "multinuc",
+      "derived_role": "N",
+      "events": 509
+    },
+    {
+      "label": "topic-question",
+      "inventory_type": "rst",
+      "derived_role": "S",
+      "events": 10
+    }
+  ],
+  "source_xml_tag_totals": {
+    "section": 29,
+    "subsection": 25,
+    "subsubsection": 6,
+    "speaker": 17,
+    "block": 1,
+    "list": 15
+  },
+  "resources": {
+    "wall_seconds": 1.1134633829933591,
+    "cpu_seconds": 1.111758129,
+    "peak_rss_KiB": 29568,
+    "processes": 1,
+    "external_models": 0
+  },
+  "limitations": [
+    "Only five paired documents; ten rank comparisons are dependent",
+    "Contraction justified only under declared identity-bridge convention",
+    "Remaining variation includes annotation and unremoved encoding choices",
+    "Relation scope signature overlap is not graph-isomorphism or Parseval",
+    "Source blocks and tags are not validated semantic paragraph types",
+    "Released paired segmentation is common; zero source-layer difference is not segmenter accuracy"
+  ],
+  "privacy": "Aggregate-only; no per-document rows, source text, sentence hashes, full annotations, or paragraph vectors"
+}
