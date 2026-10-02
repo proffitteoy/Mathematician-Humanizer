@@ -1,0 +1,24 @@
+{
+  "language": "zh",
+  "topics": [
+    "社区图书馆与日常阅读",
+    "在熟悉的街区散步时重新发现日常环境",
+    "修理日常小物件与直接更换之间的选择",
+    "公共长椅怎样影响人们使用公共空间",
+    "用时令食材安排一顿家常饭",
+    "如何看待排队、候车等日常等待时间"
+  ],
+  "genre_templates": {
+    "essay": "请用中文写一篇600至900字的随笔。主题：{topic}。围绕主题展开观察与思考。可以使用虚构的日常场景。只写正文，不加标题，也不解释写作过程。",
+    "explanation": "请用中文写一篇600至900字的说明文。主题：{topic}。向普通读者解释主题涉及的日常现象与实际考虑。只写正文，不加标题，也不解释写作过程。"
+  },
+  "request_conditions": {
+    "default": "Use the genre template without an added style sentence.",
+    "natural": {
+      "append_exactly": "语言自然、贴近日常表达。"
+    }
+  },
+  "crossing": "Each of the six topics is requested in both genres and both conditions, giving 24 content requests.",
+  "target_length_instruction": "600至900字",
+  "scope": "Content-level requests only. Full platform context and generation settings are not specified by these templates."
+}

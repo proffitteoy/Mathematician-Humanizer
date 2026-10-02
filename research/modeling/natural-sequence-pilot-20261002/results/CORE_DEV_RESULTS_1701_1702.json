@@ -1,0 +1,181 @@
+{
+  "study": "experimental_chinese_next_unit_measurement_prediction",
+  "reported_seeds": [
+    1701,
+    1702
+  ],
+  "prespecified_seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "outcome": "selected_DEV_family_balanced_mean_squared_error",
+  "lower_is_better": true,
+  "scores_are_fresh_test_estimates": false,
+  "data": {
+    "release": "M4",
+    "source_file": "data/qazh_chatgpt.jsonl",
+    "source_domains": [
+      "baike",
+      "web"
+    ],
+    "AI_release_label": "chatgpt",
+    "exact_AI_model_snapshot": "not_established",
+    "new_text_generated_for_this_table": false,
+    "TRAIN_human_answers": 1816,
+    "TRAIN_AI_answers": 1816,
+    "DEV_human_answers": 591,
+    "DEV_AI_answers": 591
+  },
+  "prediction": {
+    "input_coordinates": 70,
+    "local_linguistic_measurements": 68,
+    "structural_length_coordinates": 2,
+    "score_eligible_target_coordinates": 67,
+    "TRAIN_joint_questions": 1686,
+    "DEV_joint_questions": 559,
+    "DEV_scored_documents": 1120,
+    "DEV_scored_next_unit_targets": 10348,
+    "minimum_TRAIN_component_support_for_targets": 50,
+    "target_support_excludes_first_units": true,
+    "normalization_fitted_on_TRAIN_only": true,
+    "human_AI_label_is_model_input": false,
+    "human_AI_label_is_prediction_target": false
+  },
+  "fixed_training_definition": {
+    "maximum_epochs": 100,
+    "DEV_early_stopping_patience": 10
+  },
+  "analytic_F0_DEV_loss": 1.1170967398312224,
+  "results": [
+    {
+      "model": "F1",
+      "seed": 1701,
+      "trainable_parameters_after_target_pruning": 493891,
+      "selected_epoch": 20,
+      "selected_DEV_loss": 1.0583186313224555
+    },
+    {
+      "model": "Fcov",
+      "seed": 1701,
+      "trainable_parameters_after_target_pruning": 573411,
+      "selected_epoch": 15,
+      "selected_DEV_loss": 1.0401525833842211
+    },
+    {
+      "model": "F2",
+      "seed": 1701,
+      "trainable_parameters_after_target_pruning": 585507,
+      "selected_epoch": 9,
+      "selected_DEV_loss": 1.0415955878012146
+    },
+    {
+      "model": "F3",
+      "seed": 1701,
+      "trainable_parameters_after_target_pruning": 594467,
+      "selected_epoch": 20,
+      "selected_DEV_loss": 1.0354738608617882
+    },
+    {
+      "model": "F4",
+      "seed": 1701,
+      "trainable_parameters_after_target_pruning": 616675,
+      "selected_epoch": 12,
+      "selected_DEV_loss": 1.037625253147841
+    },
+    {
+      "model": "F1_wide",
+      "seed": 1701,
+      "trainable_parameters_after_target_pruning": 586711,
+      "selected_epoch": 15,
+      "selected_DEV_loss": 1.0441923425869701
+    },
+    {
+      "model": "F2_wide",
+      "seed": 1701,
+      "trainable_parameters_after_target_pruning": 622369,
+      "selected_epoch": 14,
+      "selected_DEV_loss": 1.0607055894548443
+    },
+    {
+      "model": "F1",
+      "seed": 1702,
+      "trainable_parameters_after_target_pruning": 493891,
+      "selected_epoch": 26,
+      "selected_DEV_loss": 1.0652992831363592
+    },
+    {
+      "model": "Fcov",
+      "seed": 1702,
+      "trainable_parameters_after_target_pruning": 573411,
+      "selected_epoch": 13,
+      "selected_DEV_loss": 1.0573395403459391
+    },
+    {
+      "model": "F2",
+      "seed": 1702,
+      "trainable_parameters_after_target_pruning": 585507,
+      "selected_epoch": 5,
+      "selected_DEV_loss": 1.0893592475499405
+    },
+    {
+      "model": "F3",
+      "seed": 1702,
+      "trainable_parameters_after_target_pruning": 594467,
+      "selected_epoch": 37,
+      "selected_DEV_loss": 1.0420563839762393
+    },
+    {
+      "model": "F4",
+      "seed": 1702,
+      "trainable_parameters_after_target_pruning": 616675,
+      "selected_epoch": 38,
+      "selected_DEV_loss": 1.0289221020907084
+    },
+    {
+      "model": "F1_wide",
+      "seed": 1702,
+      "trainable_parameters_after_target_pruning": 586711,
+      "selected_epoch": 14,
+      "selected_DEV_loss": 1.0523189886713609
+    },
+    {
+      "model": "F2_wide",
+      "seed": 1702,
+      "trainable_parameters_after_target_pruning": 622369,
+      "selected_epoch": 12,
+      "selected_DEV_loss": 1.0517344842592273
+    }
+  ],
+  "two_seed_descriptive_mean_DEV_loss": {
+    "F1": 1.0618089572294074,
+    "Fcov": 1.0487460618650801,
+    "F2": 1.0654774176755777,
+    "F3": 1.0387651224190138,
+    "F4": 1.0332736776192748,
+    "F1_wide": 1.0482556656291655,
+    "F2_wide": 1.0562200368570358
+  },
+  "coverage": {
+    "complete_seed_batches_reported": 2,
+    "third_seed_core_results_included": false,
+    "additional_registered_control_fits": 51,
+    "controls_by_category": {
+      "mask_and_opportunity": 9,
+      "pure_mask": 9,
+      "length": 9,
+      "shuffled_training": 3,
+      "independent_linguistic_families": 3,
+      "source_specific": 18
+    },
+    "TEST_model_evaluation_completed": false,
+    "davinci_model_evaluation_completed": false
+  },
+  "limitations": [
+    "DEV is used for epoch selection; these values are not unbiased held-out test evidence.",
+    "Two seeds do not establish stability or uncertainty bounds.",
+    "The complete registered controls have not yet been completed.",
+    "The measurement instrument remains experimental and does not establish construct validity for full style, authorship or discourse.",
+    "Only the original M4 Chinese question-answer setting is represented here."
+  ]
+}
