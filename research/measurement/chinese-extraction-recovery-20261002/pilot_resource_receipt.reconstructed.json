@@ -1,0 +1,1 @@
+{"affinity_cores":[0,1],"cpu_seconds_sampled":35.730000000000004,"derived_bytes_sampled":1044979,"elapsed_seconds":20.703769221989205,"exit_code":0,"peak_process_tree_rss_bytes_sampled_100ms":991932416,"phase":"pilot","rss_limit_bytes":2147483648,"stopped_reason":null,"wall_limit_seconds":1200.0}

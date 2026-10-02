@@ -1,0 +1,64 @@
+{
+  "status": "public_source_and_aggregate_recovery_only",
+  "raw_or_per_sample_files": 0,
+  "recoverable_private_cache_count": 0,
+  "exact_recovered_source_sha256": "617c3b1ebc88f623e7de9930aad873d00a48a06ee41e4e7c5e9eabd6ffd4aec1",
+  "files": {
+    "RECOVERY_REPORT.md": {
+      "bytes": 6567,
+      "sha256": "89207334d818d19b7a2fc84f9ed6df81b9fc1f40efbbcda9720743619a9a7765"
+    },
+    "bounded.py": {
+      "bytes": 2052,
+      "sha256": "321626ddfe7ba3cd36078137ffa5407783d5fb7f8d18be5b85538b2e60fa0924"
+    },
+    "cache_schema_reconstructed.json": {
+      "bytes": 11438,
+      "sha256": "2a89962e30bd5f81c321033825f16220a0d533faea8113b26999c93660380d41"
+    },
+    "checkpoint_2025_arms.reconstructed.json": {
+      "bytes": 1184,
+      "sha256": "a5af4fcc9c5f7099383ef59bc264b8d3b3bd3089326d069e58a3cd329078c1d2"
+    },
+    "continuity_incident.json": {
+      "bytes": 1163,
+      "sha256": "b05c9faa424d18ab4909d6251fdabfb5a3f0c3387864d67d201f0f3862c51ccd"
+    },
+    "extract.py": {
+      "bytes": 21443,
+      "sha256": "617c3b1ebc88f623e7de9930aad873d00a48a06ee41e4e7c5e9eabd6ffd4aec1"
+    },
+    "extraction_protocol.json": {
+      "bytes": 3703,
+      "sha256": "b486e053da073fbf415222337b0bcff3d803b530df3911e61bca4edf69c12c61"
+    },
+    "input_pins.json": {
+      "bytes": 2511,
+      "sha256": "dc9f0d9cb6dfdec314c68b9d36dc957af4b60edaed53d954095a7ddd8669366e"
+    },
+    "model_free_receipt.reconstructed.json": {
+      "bytes": 443,
+      "sha256": "60b7f67ad135db574056073826c519e0b4bd3034ad50dd67438df1a249e52d94"
+    },
+    "pilot_resource_receipt.reconstructed.json": {
+      "bytes": 298,
+      "sha256": "978af38bdec4e0bb224e3486fc09923b41ee9ebb60c506b0bb1b9e2f1618d0ab"
+    },
+    "pilot_summary.reconstructed.json": {
+      "bytes": 1085,
+      "sha256": "7f0fe064d42ce8cb5c644d71e194da77657872c20549e990a5e640b43c15fd4d"
+    },
+    "predeclaration_receipt.reconstructed.json": {
+      "bytes": 437,
+      "sha256": "914e16f6e35e56bf46ad88e7ba46fbe89513967c4597e6c625128a66de41caa1"
+    },
+    "reconstruct_public_evidence.py": {
+      "bytes": 12961,
+      "sha256": "51827bce4f749cbaff13118dd8557ff622a2790f6276814081e460ab167dacb7"
+    },
+    "run_tests.py": {
+      "bytes": 6417,
+      "sha256": "1b03aa04e8cf44ada252615461fe03100066f18de9aace377d4aad94765ce844"
+    }
+  }
+}
