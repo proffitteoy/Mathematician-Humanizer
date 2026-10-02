@@ -1,6 +1,6 @@
 {
   "kind": "post_reset_reconstructed_synthetic_implementation_replay",
-  "tests_run": 63,
+  "tests_run": 66,
   "failures": 0,
   "errors": 0,
   "success": true,
@@ -8,6 +8,6 @@
   "raw_test_bodies_read": 0,
   "davinci_bodies_read": 0,
   "empirical_optimizer_fits": 0,
-  "wall_seconds": 0.8709333040001184,
+  "wall_seconds": 0.9562091520001559,
   "scope": "fixed candidate instrument prediction; no style, author or discourse model"
 }

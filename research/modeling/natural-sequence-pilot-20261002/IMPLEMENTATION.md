@@ -8,7 +8,7 @@ The replacement runtime uses Torch2.3.1+cpu and NumPy1.26.4. Run:
 
     runtime/venv/bin/python run_synthetic_checks.py
 
-Fresh checks:63 primary implementation/watchdog/freeze tests,23 independent math/trainer checks,8 independent cache-adapter checks, and2 profile-prerequisite checks pass. No natural cache, prospective TEST body or davinci body was read. Primary tests perform no optimizer fit. Independent trainer checks use two tiny synthetic Adam fits in temporary directories to verify deterministic checkpoint restoration; these are not natural empirical fits.
+Fresh checks:66 primary implementation/watchdog/freeze/profile-count tests,23 independent math/trainer checks,8 independent cache-adapter checks, and2 profile-prerequisite checks pass. No natural cache, prospective TEST body or davinci body was read. Primary tests perform no optimizer fit. Independent trainer checks use two tiny synthetic Adam fits in temporary directories to verify deterministic checkpoint restoration; these are not natural empirical fits.
 
 ## Modules
 
@@ -43,3 +43,5 @@ Natural optimizer fitting and prospective evaluation remain unrun. The lost part
 Input normalization still uses every declared TRAIN unit with the fixed hierarchy. Output eligibility now counts only components with observed next-unit targets at index1 or later; first units cannot satisfy the50-component target gate. All-unit input support and next-unit target support are reported separately. This coordinator-approved clarification predates all natural fitting/test access and includes first-unit-only and49-versus50 boundary regressions. Actual active parameter counts must be recalculated after this gate.
 
 Target-component counts also use the trainer’s exact jointly supported HUMAN/ChatGPT answer population. A monotone fixed-point application of the same eligibility rule removes any output whose apparent support disappears after paired-variant restrictions; no threshold or population is selected from outcomes. Unpaired or blank counterpart arms cannot create supervised target support.
+
+Cost forecasts explicitly expose training question/prefix draws, available training prefixes, jointly scored DEV prefixes and forward-call counts (including10shuffle calls). DEV counts can be exact from independently verified commit-unit metadata when the direct span target is TRAIN-eligible; otherwise they are labeled upper bounds. Additional DEV bodies are not read for this computation. No speculative compute optimization is applied before profiling.

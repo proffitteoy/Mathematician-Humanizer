@@ -2,7 +2,7 @@
 
 ## Implementation checkpoint
 
-A new experimental package implements the v1.1 fixed-instrument ladder, covariance controls, strict data boundary, TRAIN-only transformations, paired hierarchical objectives, fixed-seed early stopping, permanent failure accounting and evaluator hash handoff. It does not bypass the restored synthetic-only interface. After workspace reconstruction,63 primary implementation/watchdog/freeze checks pass; independent review is being replayed after the target-support clarification; see current receipts rather than historical counts.
+A new experimental package implements the v1.1 fixed-instrument ladder, covariance controls, strict data boundary, TRAIN-only transformations, paired hierarchical objectives, fixed-seed early stopping, permanent failure accounting and evaluator hash handoff. It does not bypass the restored synthetic-only interface. After workspace reconstruction,66 primary implementation/watchdog/freeze/profile-count checks pass; independent review is being replayed after the target-support clarification; see current receipts rather than historical counts.
 
 All70-active architecture counts before natural target selection are: F1 493,990; Fcov 573,510; F2 585,606; F3 594,566; F4 616,774; F1-wide(width38)586,828; F2-wide(width34)622,474; independent-family(width33)621,922. Actual TRAIN-eligible output heads and frozen-zero value paths are pruned, then brackets recalculated. These are not yet natural active counts.
 
@@ -43,3 +43,5 @@ Input normalization still uses every declared TRAIN unit with the fixed hierarch
 Target-component counts also use the trainer’s exact jointly supported HUMAN/ChatGPT answer population. A monotone fixed-point application of the same eligibility rule removes any output whose apparent support disappears after paired-variant restrictions; no threshold or population is selected from outcomes. Unpaired or blank counterpart arms cannot create supervised target support.
 
 The explicit extraction-root option locates the verified recovery output after workspace replacement. It does not relax any receipt, cohort, protocol, content-hash, arm or split check.
+
+Cost forecasts explicitly expose training question/prefix draws, available training prefixes, jointly scored DEV prefixes and forward-call counts (including10shuffle calls). DEV counts can be exact from independently verified commit-unit metadata when the direct span target is TRAIN-eligible; otherwise they are labeled upper bounds. Additional DEV bodies are not read for this computation. No speculative compute optimization is applied before profiling.

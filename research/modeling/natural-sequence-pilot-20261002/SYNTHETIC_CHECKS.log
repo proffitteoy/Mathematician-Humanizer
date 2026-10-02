@@ -58,12 +58,15 @@ test_unpaired_target_components_do_not_enable_output (test_core.TransformTests.t
 test_arbitrary_existing_checkpoint_is_not_accepted (test_freeze.FreezeTests.test_arbitrary_existing_checkpoint_is_not_accepted) ... ok
 test_missing_completed_identity_cannot_hide_behind_ledger_helper (test_freeze.FreezeTests.test_missing_completed_identity_cannot_hide_behind_ledger_helper) ... ok
 test_post_freeze_ledger_mutation_is_rejected (test_freeze.FreezeTests.test_post_freeze_ledger_mutation_is_rejected) ... ok
+test_joint_prefix_counts_not_all_documents (test_profile_counts.ProfileCountsTests.test_joint_prefix_counts_not_all_documents) ... ok
+test_no_active_span_target_labels_upper_bound (test_profile_counts.ProfileCountsTests.test_no_active_span_target_labels_upper_bound) ... ok
+test_unverified_count_metadata_fails_before_read (test_profile_counts.ProfileCountsTests.test_unverified_count_metadata_fails_before_read) ... ok
 test_cpu_limit_terminates_owned_subprocess (test_watchdog.WatchdogTests.test_cpu_limit_terminates_owned_subprocess) ... ok
 test_process_tree_counts_cpu_child (test_watchdog.WatchdogTests.test_process_tree_counts_cpu_child) ... ok
 test_rss_limit_terminates_owned_subprocess (test_watchdog.WatchdogTests.test_rss_limit_terminates_owned_subprocess) ... ok
 
 ----------------------------------------------------------------------
-Ran 63 tests in 0.860s
+Ran 66 tests in 0.941s
 
 OK
-{"kind": "post_reset_reconstructed_synthetic_implementation_replay", "tests_run": 63, "failures": 0, "errors": 0, "success": true, "natural_cache_bodies_read": 0, "raw_test_bodies_read": 0, "davinci_bodies_read": 0, "empirical_optimizer_fits": 0, "wall_seconds": 0.8709333040001184, "scope": "fixed candidate instrument prediction; no style, author or discourse model"}
+{"kind": "post_reset_reconstructed_synthetic_implementation_replay", "tests_run": 66, "failures": 0, "errors": 0, "success": true, "natural_cache_bodies_read": 0, "raw_test_bodies_read": 0, "davinci_bodies_read": 0, "empirical_optimizer_fits": 0, "wall_seconds": 0.9562091520001559, "scope": "fixed candidate instrument prediction; no style, author or discourse model"}
