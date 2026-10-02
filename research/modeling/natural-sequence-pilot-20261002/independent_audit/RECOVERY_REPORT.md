@@ -1,10 +1,12 @@
+Latest status: see FINAL_AUDIT_REPORT.md and FINAL_AUDIT_MANIFEST.json for the final fresh63/23/8/2 test results, applied target-support corrections and current hashes. This document retains the recovery chronology.
+
 # Independent audit recovery report
 
 ## Current decision: all execution gates remain closed
 
 The executor was replaced at approximately 03:39 UTC on 2026-10-02. The study sources, measurement caches, restored runtime, and audit scripts disappeared. The extractor last confirmed 4,338 of 4,814 arm caches. No complete extraction or integrity-verification receipt was available. No natural resource profile or empirical optimizer fit was approved by this audit.
 
-The scripts in this directory were reconstructed from the auditor's retained context after the replacement. Fresh replay after reconstruction now passes all 20 independent core tests and all eight cache-adapter tests on the restored Torch 2.3.1+cpu / NumPy 1.26.4 runtime. The fixed-slot correction and repeated synthetic checkpoints pass. Profile-gate tests and the implementation test replay still await reconstruction of their entrypoints. Historical results below remain separate from these new receipts; natural execution gates stay closed.
+The scripts in this directory were reconstructed from the auditor's retained context after the replacement. Fresh replay after reconstruction now passes all 20 independent core tests and all eight cache-adapter tests on the restored Torch 2.3.1+cpu / NumPy 1.26.4 runtime. The fixed-slot correction and repeated synthetic checkpoints pass. All 54 reconstructed implementation tests also passed in an independent replay. Profile-gate tests await reconstruction of their entrypoint. Historical results below remain separate from these new receipts; natural execution gates stay closed.
 
 ## Historical results before replacement
 

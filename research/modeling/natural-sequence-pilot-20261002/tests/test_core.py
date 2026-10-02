@@ -73,7 +73,30 @@ class TransformTests(unittest.TestCase):
         tr=fit_transform([record(values=torch.tensor([[2.,1.,float('nan'),4.],[2.,3.,float('nan'),7.]]))],tiny_catalog(),min_components=1)
         x=tr.apply(torch.tensor([100.,5.,9.,8.]));self.assertEqual(float(x[0]),0);self.assertEqual(float(x[2]),0);self.assertFalse(tr.score_eligible[0]);self.assertFalse(tr.score_eligible[2])
     def test_per_component_not_rows_eligibility(self):
-        tr=fit_transform([record(values=torch.rand(300,4)+1)],tiny_catalog(),min_components=2);self.assertFalse(tr.score_eligible.any());self.assertEqual(tr.component_support,(1,1,1,1))
+        tr=fit_transform([record(values=torch.rand(300,4)+1)],tiny_catalog(),min_components=2);self.assertFalse(tr.score_eligible.any());self.assertEqual(tr.input_component_support,(1,1,1,1));self.assertEqual(tr.component_support,(0,0,0,0))
+    def test_first_unit_only_support_never_enables_output(self):
+        rs=[]
+        for q in range(55):
+            for arm in ('human','chatgpt'):
+                rs.append(record(q=str(q),arm=arm,values=torch.tensor([[q+1.,1.,2.,3.],[float('nan'),2.,3.,4.]])))
+        tr=fit_transform(rs,tiny_catalog())
+        self.assertTrue(tr.active_values[0]);self.assertEqual(tr.input_component_support[0],55)
+        self.assertEqual(tr.component_support[0],0);self.assertFalse(tr.score_eligible[0])
+    def test_target_component_boundary_49_vs_50(self):
+        for n,expected in ((49,False),(50,True)):
+            rs=[]
+            for q in range(55):
+                for arm in ('human','chatgpt'):
+                    value=q+2. if q<n else float('nan')
+                    rs.append(record(q=str(q),arm=arm,values=torch.tensor([[q+1.,1.,2.,3.],[value,2.,3.,4.]])))
+            tr=fit_transform(rs,tiny_catalog());self.assertEqual(tr.component_support[0],n);self.assertEqual(bool(tr.score_eligible[0]),expected)
+    def test_unpaired_target_components_do_not_enable_output(self):
+        rs=[]
+        for q in range(55):
+            rs.append(record(q=str(q),values=torch.tensor([[q+1.,1.,2.,3.],[q+2.,2.,3.,4.]])))
+            rs.append(record(q=str(q),arm='chatgpt',values=torch.empty(0,4)))
+        tr=fit_transform(rs,tiny_catalog());self.assertEqual(tr.input_component_support[0],55)
+        self.assertEqual(tr.component_support[0],0);self.assertFalse(tr.score_eligible.any())
     def test_no_test_clipping(self):
         _,_,tr=fixture();self.assertGreater(float(tr.apply(torch.ones(4)*1000).max()),100)
     def test_roundtrip_transform(self):

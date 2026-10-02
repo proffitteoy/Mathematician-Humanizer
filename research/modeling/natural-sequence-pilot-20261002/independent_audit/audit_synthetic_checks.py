@@ -114,12 +114,57 @@ class IndependentAudit(unittest.TestCase):
         self.assertTrue(torch.equal(view.summarize(a, True)[start:start + 3], view.summarize(b, True)[start:start + 3]))
 
     def test_exact_fifty_independent_components_gate(self):
-        records = [record(q=f'q{i}', component=f'c{i}', offset=i) for i in range(49)]
+        records = [record(q=f'q{i}', component=f'c{i}', offset=i, arm=arm)
+                   for i in range(49) for arm in ('human', 'chatgpt')]
         self.assertFalse(fit_transform(records, tiny_catalog()).score_eligible.any())
-        records += [record(q='q49', component='c49', offset=49)]
+        records += [record(q='q49', component='c49', offset=49, arm=arm) for arm in ('human', 'chatgpt')]
         self.assertTrue(fit_transform(records, tiny_catalog()).score_eligible.all())
-        duplicates = [record(q=f'q{i}', component='same', offset=i) for i in range(60)]
+        duplicates = [record(q=f'q{i}', component='same', offset=i, arm=arm)
+                      for i in range(60) for arm in ('human', 'chatgpt')]
         self.assertFalse(fit_transform(duplicates, tiny_catalog()).score_eligible.any())
+
+    def test_first_unit_observations_cannot_qualify_prediction_targets(self):
+        records = []
+        for i in range(50):
+            values = torch.tensor([[float(i + 1), 1., 1., 1.], [float('nan'), 2., 3., 4.]])
+            for arm in ('human', 'chatgpt'):
+                records.append(record(q=f'q{i}', component=f'component{i}', arm=arm, values=values))
+        transform = fit_transform(records, tiny_catalog())
+        self.assertTrue(transform.active_values[0])  # All units still normalize input values.
+        self.assertFalse(transform.score_eligible[0])
+        self.assertEqual(transform.component_support[0], 0)
+
+    def test_unpaired_answers_cannot_qualify_prediction_targets(self):
+        records = []
+        for i in range(50):
+            unpaired = torch.tensor([[float(i + 1), 1., 1., 1.], [float(i + 2), 2., 3., 4.]])
+            records.append(record(q=f'unpaired{i}', arm='human', values=unpaired))
+            records.append(record(q=f'unpaired{i}', arm='chatgpt', values=torch.empty(0, 4)))
+            paired = torch.tensor([[float('nan'), 1., 1., 1.], [float('nan'), 2., 3., 4.]])
+            for arm in ('human', 'chatgpt'):
+                records.append(record(q=f'paired{i}', arm=arm, values=paired))
+        transform = fit_transform(records, tiny_catalog())
+        self.assertTrue(transform.active_values[0])
+        self.assertFalse(transform.score_eligible[0])
+        self.assertEqual(transform.component_support[0], 0)
+
+    def test_target_gate_reaches_joint_support_fixed_point(self):
+        records = []
+        for i in range(50):
+            human = torch.tensor([[0., 0., 1., 1.],
+                                  [float(i + 1), 2. if i < 47 else float('nan'), 1., 1.]])
+            chatbot = torch.tensor([[0., 0., 1., 1.],
+                                    [float(i + 2) if i < 48 else float('nan'),
+                                     2. if i >= 48 else float('nan'), 1., 1.]])
+            records.extend([record(q=f'q{i}', arm='human', values=human),
+                            record(q=f'q{i}', arm='chatgpt', values=chatbot)])
+        # A starts with50 target components, B only49. Removing B drops the
+        # two paired variants that rely on it; A then has48 and must also drop.
+        transform = fit_transform(records, tiny_catalog())
+        self.assertTrue(transform.active_values[0])
+        self.assertEqual(transform.input_component_support[0], 50)
+        self.assertFalse(transform.score_eligible.any())
+        self.assertEqual(transform.component_support[0], 0)
 
     def test_repeated_units_do_not_reweight_document_transform(self):
         catalog, records, transform = fixture()

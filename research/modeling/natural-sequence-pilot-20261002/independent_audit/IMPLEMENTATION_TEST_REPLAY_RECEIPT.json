@@ -1,0 +1,13 @@
+{
+  "status": "fresh_reconstruction_tests_passed",
+  "tests_run": 63,
+  "failures": 0,
+  "errors": 0,
+  "natural_bodies_read": 0,
+  "natural_fits": 0,
+  "test_source_sha256": {
+    "tests/test_core.py": "bda8f0a1cf53466ac4ebeef38f667a78ad914da28db51c236914909d946f00de",
+    "tests/test_freeze.py": "766d9b97d05d83726ee9aab6b834c128fd64b63fe809abda786aafc4cc23b9fb",
+    "tests/test_watchdog.py": "f37d10973711c7b26000e7062d60168c944962c2fba07e37cd93902b11c691e8"
+  }
+}

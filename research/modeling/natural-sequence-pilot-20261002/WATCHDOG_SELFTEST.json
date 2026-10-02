@@ -1,0 +1,19 @@
+{
+  "command": [
+    "natural-text-learning-pilot-20261002/runtime/venv/bin/python",
+    "-c",
+    "import os,subprocess,sys; assert len(os.sched_getaffinity(0))<=2; subprocess.run([sys.executable,'-c','import time; end=time.monotonic()+0.4\\nwhile time.monotonic()<end: pass'],check=True)"
+  ],
+  "affinity_cores": [
+    0,
+    1
+  ],
+  "elapsed_seconds": 0.45523403199990753,
+  "peak_process_tree_rss_bytes_sampled_50ms": 15118336,
+  "cpu_seconds_sampled": 0.39,
+  "exit_code": 0,
+  "stopped_reason": null,
+  "rss_limit_bytes": 2147483648,
+  "cpu_limit_seconds": 1200,
+  "wall_limit_seconds": 1200
+}

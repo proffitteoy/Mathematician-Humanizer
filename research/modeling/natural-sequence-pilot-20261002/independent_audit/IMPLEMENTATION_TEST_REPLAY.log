@@ -63,7 +63,6 @@ test_process_tree_counts_cpu_child (test_watchdog.WatchdogTests.test_process_tre
 test_rss_limit_terminates_owned_subprocess (test_watchdog.WatchdogTests.test_rss_limit_terminates_owned_subprocess) ... ok
 
 ----------------------------------------------------------------------
-Ran 63 tests in 0.860s
+Ran 63 tests in 0.929s
 
 OK
-{"kind": "post_reset_reconstructed_synthetic_implementation_replay", "tests_run": 63, "failures": 0, "errors": 0, "success": true, "natural_cache_bodies_read": 0, "raw_test_bodies_read": 0, "davinci_bodies_read": 0, "empirical_optimizer_fits": 0, "wall_seconds": 0.8709333040001184, "scope": "fixed candidate instrument prediction; no style, author or discourse model"}

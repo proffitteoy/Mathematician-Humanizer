@@ -1,0 +1,20 @@
+{
+  "synthetic_only": true,
+  "unit_tests": 10,
+  "failures": 0,
+  "actual_tool_store_roundtrip_records": 32,
+  "source_archive_unavailable_restoration_passed": true,
+  "failed_candidate_preserved_previous_verified_generation": true,
+  "different_gzip_header_same_JSON_test_passed": true,
+  "synthetic_archive_sha256": "fe58469f88624bf04186338d956c7b107b905c283367eadc8df8b4865d67a93b",
+  "compressed_bytes": 187692,
+  "chunk_count": 3,
+  "secondary_store_durability_guaranteed": false,
+  "source_sha256": {
+    "secondary_cache.py": "764b339e2dfcd1436fa4acf6486c0dc3ca43574ba3914305d9d2ba8dd37bd8c7",
+    "test_secondary_cache.py": "605547bfa3bf286e0f75e0340f9fe31503c620f44604c311c5831da676f4911d",
+    "secondary_store_bridge.js": "df49871d6cda1b098ea62ed0ff93eb4bf68ac276b82e83b4e7e948c86ab17780",
+    "secondary_store_restore.js": "0d2d8d6f9c505bcbe7aad7bffa589fec47dd64e20615cb57b619336218780958",
+    "supervise_extraction.py": "d7ad84f5433846122ec72f8b422f8818256eb089e315a7734aa7308ca7e2f27a"
+  }
+}

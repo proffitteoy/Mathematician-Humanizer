@@ -33,6 +33,7 @@ class FrozenTransform:
     training_sources:tuple
     fit_question_count:int
     min_components:int
+    input_component_support:tuple=()
     def pretransform(self,raw):
         if raw.shape[-1]!=len(self.ids):raise ValueError('Channel width mismatch')
         x=raw.to(torch.float64).clone()
@@ -50,8 +51,8 @@ class FrozenTransform:
     def to_dict(self):return {k:(v.tolist() if isinstance(v,torch.Tensor) else v) for k,v in self.__dict__.items()}
     @classmethod
     def from_dict(cls,d):
-        d=dict(d)
-        for k in ('ids','families','transforms','structural_indices','component_support','training_sources'):d[k]=tuple(d[k])
+        d=dict(d);d.setdefault('input_component_support',d.get('component_support',()))
+        for k in ('ids','families','transforms','structural_indices','component_support','training_sources','input_component_support'):d[k]=tuple(d[k])
         for k in ('mean','scale'):d[k]=torch.tensor(d[k],dtype=torch.float64)
         for k in ('active_values','score_eligible'):d[k]=torch.tensor(d[k],dtype=torch.bool)
         obj=cls(**d)
@@ -69,10 +70,11 @@ def fit_transform(records,catalog,*,source=None,min_components=50,authorization=
         torch.zeros(D,dtype=torch.float64),torch.ones(D,dtype=torch.float64),torch.ones(D,dtype=torch.bool),
         torch.ones(D,dtype=torch.bool),tuple([0]*D),source,tuple(sorted({r.source for r in records})),len({r.question for r in records}),min_components)
     arrays=[blank.pretransform(r.values) for r in records];weights=hierarchical_unit_weights(records)
-    mass=torch.zeros(D,dtype=torch.float64);sums=mass.clone();support=[set() for _ in range(D)]
+    mass=torch.zeros(D,dtype=torch.float64);sums=mass.clone();support=[set() for _ in range(D)];target_support=[set() for _ in range(D)]
     for r,x,w in zip(records,arrays,weights):
         obs=~torch.isnan(x);mass+=(obs*w[:,None]).sum(0);sums+=(torch.nan_to_num(x)*w[:,None]).sum(0)
         for j in torch.where(obs.any(0))[0].tolist():support[j].add(r.component)
+        for j in torch.where(obs[1:].any(0))[0].tolist():target_support[j].add(r.component)
     mean=torch.where(mass>0,sums/mass.clamp_min(1e-300),torch.zeros_like(sums));variance=torch.zeros(D,dtype=torch.float64)
     minimum=torch.full((D,),float('inf'),dtype=torch.float64);maximum=torch.full((D,),float('-inf'),dtype=torch.float64)
     for x,w in zip(arrays,weights):
@@ -82,9 +84,24 @@ def fit_transform(records,catalog,*,source=None,min_components=50,authorization=
             maximum=torch.maximum(maximum,torch.where(obs,x,float('-inf')).max(0).values)
     variance/=mass.clamp_min(1e-300);active=(mass>0)&(maximum>minimum)&(variance>0)
     # 1 is solely an internal divisor on a frozen-zero path, not a fitted scale.
-    scale=torch.where(active,torch.sqrt(variance),torch.ones_like(variance));counts=tuple(len(s) for s in support)
+    scale=torch.where(active,torch.sqrt(variance),torch.ones_like(variance));input_counts=tuple(len(s) for s in support);counts=tuple(len(s) for s in target_support)
     eligible=active&(torch.tensor(counts)>=min_components)
-    return FrozenTransform(catalog.ids,catalog.families,catalog.transforms,catalog.structural_indices,mean,scale,active,eligible,counts,source,blank.training_sources,blank.fit_question_count,min_components)
+    # Reuse the trainer's exact jointly supported answer/arm population. Removing
+    # unsupported targets may remove a paired variant; monotonically iterate to
+    # the fixed population so every retained output has actual supervision.
+    from .objectives import BalancedPlan
+    for _ in range(D+1):
+        provisional=FrozenTransform(catalog.ids,catalog.families,catalog.transforms,catalog.structural_indices,mean,scale,active,eligible,counts,source,blank.training_sources,blank.fit_question_count,min_components,input_counts)
+        plan=BalancedPlan(records,provisional);joint_support=[set() for _ in range(D)]
+        for i in plan.record_indices:
+            observed=~torch.isnan(records[i].values[list(plan.positions[i])])
+            for j in torch.where(observed.any(0))[0].tolist():joint_support[j].add(records[i].component)
+        counts=tuple(len(s) for s in joint_support)
+        updated=eligible&(torch.tensor(counts)>=min_components)
+        if torch.equal(updated,eligible):break
+        eligible=updated
+    else:raise AssertionError('Monotone target-support selection did not converge')
+    return FrozenTransform(catalog.ids,catalog.families,catalog.transforms,catalog.structural_indices,mean,scale,active,eligible,counts,source,blank.training_sources,blank.fit_question_count,min_components,input_counts)
 
 def common_support_channels(records,catalog,threshold=.9):
     assert_fit_scope(records,'train')

@@ -1,0 +1,11 @@
+{
+  "kind": "synthetic_first_unit_only_target_support_reproducer",
+  "issue_reproduced": false,
+  "channel0_recorded_component_support": 0,
+  "channel0_score_eligible": false,
+  "channel0_observed_supervised_targets": 0,
+  "channel0_output_weight_absolute_gradient": 0.0,
+  "natural_bodies_read": 0,
+  "optimizer_steps": 0,
+  "transform_source_sha256": "8a738da3205af47ef0245a157eea73d96b076fb3895716dba8912b4bbad1837e"
+}
