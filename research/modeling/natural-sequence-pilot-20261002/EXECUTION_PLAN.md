@@ -22,7 +22,7 @@ The timing sample never replaces the scientific population, truncates a text or 
 
 Run the profile through the2CPU/2GiB/20-minute process-tree watchdog:
 
-    runtime/venv/bin/python bounded_profile.py --metrics PROFILE_RESOURCES.json -- runtime/venv/bin/python profile_natural.py --approval private/throughput_approval.json
+    runtime/venv/bin/python bounded_profile.py --metrics PROFILE_RESOURCES.json -- runtime/venv/bin/python profile_natural.py --approval private/throughput_approval.json --extraction-root ../chinese-extraction-recovery-20261002
 
 `profile_natural.py` still refuses to run unless both completed extraction receipts and all approval gates pass. Private selections/transforms stay in private/; aggregate timing/support only goes to NATURAL_THROUGHPUT.json.
 
@@ -41,3 +41,5 @@ After complete authorized fitting, freeze code/config/transforms/targets/checkpo
 Input normalization still uses every declared TRAIN unit with the fixed hierarchy. Output eligibility now counts only components with observed next-unit targets at index1 or later; first units cannot satisfy the50-component target gate. All-unit input support and next-unit target support are reported separately. This coordinator-approved clarification predates all natural fitting/test access and includes first-unit-only and49-versus50 boundary regressions. Actual active parameter counts must be recalculated after this gate.
 
 Target-component counts also use the trainer’s exact jointly supported HUMAN/ChatGPT answer population. A monotone fixed-point application of the same eligibility rule removes any output whose apparent support disappears after paired-variant restrictions; no threshold or population is selected from outcomes. Unpaired or blank counterpart arms cannot create supervised target support.
+
+The explicit extraction-root option locates the verified recovery output after workspace replacement. It does not relax any receipt, cohort, protocol, content-hash, arm or split check.

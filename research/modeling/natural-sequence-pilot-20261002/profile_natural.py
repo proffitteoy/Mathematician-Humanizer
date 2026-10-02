@@ -64,10 +64,10 @@ def distribution(pairs,records=None):
         'bins':{label:sum(lo<=x<=hi for x in lengths) for label,lo,hi in [('1',1,1),('2-4',2,4),('5-16',5,16),('17-64',17,64),('65+',65,10**9)]}}
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--approval',required=True);args=ap.parse_args();start=time.monotonic();cpu=time.process_time()
+    ap=argparse.ArgumentParser();ap.add_argument('--approval',required=True);ap.add_argument('--extraction-root',type=Path,default=BASE/'chinese-train-dev-measurement-20261002');args=ap.parse_args();start=time.monotonic();cpu=time.process_time()
     torch.set_num_threads(2);torch.set_num_interop_threads(2);os.sched_setaffinity(0,sorted(os.sched_getaffinity(0))[:2])
     socket.socket.connect=deny;socket.socket.connect_ex=deny;socket.create_connection=deny
-    extraction=BASE/'chinese-train-dev-measurement-20261002';approval,verification,protocol_hash=prerequisites(extraction,args.approval)
+    extraction=args.extraction_root.resolve();approval,verification,protocol_hash=prerequisites(extraction,args.approval)
     auth=FitAuthorization(True,approval['receipt'],('read_train_dev_features','fit_transform'));desc=descriptors(extraction,protocol_hash)
     train_components=choose_components(desc,'train',32);dev_components=choose_components(desc,'dev',16)
     selected=[d for d in desc if d.split=='train' or (d.split=='dev' and d.component in dev_components)];private=ROOT/'private';private.mkdir(exist_ok=True)
