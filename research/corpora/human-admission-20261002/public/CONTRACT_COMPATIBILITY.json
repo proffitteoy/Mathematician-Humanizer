@@ -1,0 +1,30 @@
+{
+  "repository": "proffitteoy/style-compiler",
+  "source_commit": "e1119c802ac0c6e42a8e2a0c243ed6b9e3598027",
+  "core_files": [
+    {
+      "source_commit": "e1119c802ac0c6e42a8e2a0c243ed6b9e3598027",
+      "path": "schemas/document.schema.json",
+      "git_blob_sha": "c8539ffc2f389c17f45797499caef791e6746426",
+      "local_matches": true
+    },
+    {
+      "source_commit": "e1119c802ac0c6e42a8e2a0c243ed6b9e3598027",
+      "path": "src/style_compiler/contracts.py",
+      "git_blob_sha": "6d580e934ef98cdf9b8939f7c9a33b62edfeb432",
+      "local_matches": true
+    },
+    {
+      "source_commit": "e1119c802ac0c6e42a8e2a0c243ed6b9e3598027",
+      "path": "src/style_compiler/segmentation.py",
+      "git_blob_sha": "19237e24fee5a9cf216dd9123e78fa885b9196a3",
+      "local_matches": true
+    },
+    {
+      "source_commit": "e1119c802ac0c6e42a8e2a0c243ed6b9e3598027",
+      "path": "src/style_compiler/model.py",
+      "git_blob_sha": "a5116895a9a1743b1464e685d0beac67dc2ed0d2",
+      "local_matches": true
+    }
+  ]
+}

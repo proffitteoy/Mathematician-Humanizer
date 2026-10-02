@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:style-compiler:human-corpus-registry:1.0.0",
+  "title": "human-corpus-registry/1.0.0",
+  "type": "object",
+  "properties": {
+    "admitted_on_utc": {
+      "type": "string"
+    },
+    "benchmark_effect": {
+      "type": "string"
+    },
+    "catalog": {
+      "type": "object",
+      "properties": {
+        "bytes": {
+          "type": "integer"
+        },
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "bytes",
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "assistance_status": {
+          "type": "object",
+          "properties": {
+            "unknown": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "unknown"
+          ],
+          "additionalProperties": false
+        },
+        "by_genre": {
+          "type": "object",
+          "properties": {
+            "ethnographic_field_or_travel_essay": {
+              "type": "integer"
+            },
+            "film_book_performance_review": {
+              "type": "integer"
+            },
+            "personal_or_research_reflection": {
+              "type": "integer"
+            },
+            "public_social_commentary": {
+              "type": "integer"
+            },
+            "reported_environment_news": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ethnographic_field_or_travel_essay",
+            "film_book_performance_review",
+            "personal_or_research_reflection",
+            "public_social_commentary",
+            "reported_environment_news"
+          ],
+          "additionalProperties": false
+        },
+        "by_source": {
+          "type": "object",
+          "properties": {
+            "einfo": {
+              "type": "integer"
+            },
+            "guava": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "einfo",
+            "guava"
+          ],
+          "additionalProperties": false
+        },
+        "coauthored_general_human_documents": {
+          "type": "integer"
+        },
+        "general_human_documents": {
+          "type": "integer"
+        },
+        "repeated_named_author_trajectories": {
+          "type": "integer"
+        },
+        "single_author_documents": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "assistance_status",
+        "by_genre",
+        "by_source",
+        "coauthored_general_human_documents",
+        "general_human_documents",
+        "repeated_named_author_trajectories",
+        "single_author_documents"
+      ],
+      "additionalProperties": false
+    },
+    "date_cutoff": {
+      "type": "null"
+    },
+    "default_analysis_policy": {
+      "type": "string"
+    },
+    "experiment_assignment": {
+      "type": "null"
+    },
+    "optional_stricter_policy": {
+      "type": "string"
+    },
+    "private_body_distribution": {
+      "type": "string"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "requires_pre2022_snapshot": {
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": "human-corpus-registry/1.0.0"
+    },
+    "source_lineage": {
+      "type": "object",
+      "properties": {
+        "catalogs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "bytes": {
+                "type": "integer"
+              },
+              "path": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "bytes",
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "commit": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "catalogs",
+        "commit",
+        "repository"
+      ],
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "admitted_on_utc",
+    "benchmark_effect",
+    "catalog",
+    "counts",
+    "date_cutoff",
+    "default_analysis_policy",
+    "experiment_assignment",
+    "optional_stricter_policy",
+    "private_body_distribution",
+    "release_id",
+    "requires_pre2022_snapshot",
+    "schema_version",
+    "source_lineage",
+    "status"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "human-corpus-admission-verification/1.0.0",
+  "checks": {
+    "exact_47_operational_human_inputs": true,
+    "all_47_assistance_unknown_without_rejection": true,
+    "46_single_byline_inputs": true,
+    "one_four_person_coauthor_unit": true,
+    "coauthor_individual_author_id_null": true,
+    "ten_guava_trajectories_four_each": true,
+    "two_einfo_reporters_three_each": true,
+    "strict_unassisted_distinct_empty_estimand": true,
+    "registry_and_record_schemas_pass": true,
+    "all_47_existing_document_contracts_pass": true,
+    "all_referenced_cache_hashes_pass": true,
+    "body_exact_offset_reconstruction": true,
+    "ordered_source_blocks_never_reflowed": true,
+    "native_boundary_mode_default": true,
+    "no_legacy_paragraph_compatibility_claim": true,
+    "no_fit_or_frozen_experiment_assignment": true,
+    "no_date_or_snapshot_gate": true,
+    "unique_ids_canonical_urls_and_body_hashes": true,
+    "rights_restrictions_retained": true,
+    "exact_catalog_rebuild_reproducible": true,
+    "registry_rebuild_reproducible": true,
+    "frozen_experiment_files_unchanged": true
+  },
+  "passed": true,
+  "check_count": 22,
+  "counts": {
+    "general_human_documents": 47,
+    "single_author_documents": 46,
+    "coauthored_general_human_documents": 1,
+    "repeated_named_author_trajectories": 12,
+    "by_source": {
+      "einfo": 6,
+      "guava": 41
+    },
+    "by_genre": {
+      "ethnographic_field_or_travel_essay": 12,
+      "film_book_performance_review": 8,
+      "personal_or_research_reflection": 6,
+      "public_social_commentary": 15,
+      "reported_environment_news": 6
+    },
+    "assistance_status": {
+      "unknown": 47
+    }
+  },
+  "body_text_codepoints": 182610,
+  "native_source_structural_blocks": 1136,
+  "documents_with_unmapped_source_text": 3,
+  "unmapped_source_text_codepoints_preserved": 855,
+  "frozen_files_compared": 87,
+  "scope": "Source integrity, admission and adapter verification only; no style features measured, model fit or empirical performance inference"
+}

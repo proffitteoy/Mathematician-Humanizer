@@ -1,8 +1,8 @@
 {
-  "schema_version": "source-registry/1.1.0",
-  "status": "source_research_with_bounded_observational_pilots",
-  "updated_on": "2026-10-01",
-  "purpose": "Source-specific evidence, bounded acquisition and measurement feasibility; no verified human-reference or population fit admission",
+  "schema_version": "source-registry/1.2.0",
+  "status": "source_research_with_explicit_general_human_admission",
+  "updated_on": "2026-10-02",
+  "purpose": "Source-specific research records plus explicitly admitted human-publication strata; earlier source decisions retained unchanged",
   "policy": {
     "raw_text_in_registry": false,
     "automatic_human_labeling": false,
@@ -10,7 +10,16 @@
     "external_generation_spend": false,
     "account_agreements_accepted": false,
     "unreviewed_bulk_downloads": false,
-    "bounded_pilots": "source-specific rights, byte caps and immutable provenance required"
+    "bounded_pilots": "source-specific rights, byte caps and checksummed acquisition provenance required; historical bytes only when required by a specific historical estimand",
+    "general_human_admission": {
+      "policy_id": "operational-human-publication/1.0.0",
+      "date_cutoff": null,
+      "historical_snapshot_required": false,
+      "assistance_unknown_is_not_blanket_exclusion": true,
+      "basis": "Reviewed named-human byline, publishing source, rights and preserved source lineage",
+      "optional_strict_estimand": "confirmed-unassisted/1.0.0",
+      "previous_source_decisions": "retained; no automatic retrospective reclassification"
+    }
   },
   "sources": [
     {
@@ -610,6 +619,76 @@
         "measurement_validation": "JATS_role_projection_checked_not_linguistically_validated",
         "population_fit": "not_admitted",
         "automatic_H_G_conversion": false
+      }
+    },
+    {
+      "source_id": "guava",
+      "name": "芭樂人類學 / Guava Anthropology",
+      "research_domain": "public_humanities",
+      "primary_urls": [
+        "https://guavanthropology.tw"
+      ],
+      "record_unit": "bylined published article, with quotations and other contribution roles retained",
+      "acquisition": {
+        "status": "bounded_acquired_local",
+        "works": 41,
+        "report": "research/corpora/author-genre-expansion-20261002/public/REPORT.md"
+      },
+      "provenance": {
+        "generation_origin": "supported_human_publication",
+        "assistance_status": "unknown",
+        "historical_snapshot_required": false
+      },
+      "rights": {
+        "license_claim": "CC BY-NC-ND 3.0 Taiwan",
+        "intended_use_review": "bounded private noncommercial research",
+        "raw_text_redistribution": "not_authorized_by_this_registry"
+      },
+      "admission": {
+        "general_human_corpus": "admitted",
+        "cohort": "H_G",
+        "analysis_policy": "operational-human-publication/1.0.0",
+        "works": 41,
+        "single_author_documents": 40,
+        "repeated_author_trajectories": 10,
+        "measurement_validation": "not_claimed",
+        "population_fit": "not_run_or_authorized",
+        "registry": "research/corpora/human-admission-20261002/public/REGISTRY.json"
+      }
+    },
+    {
+      "source_id": "einfo",
+      "name": "環境資訊中心 / Environmental Information Center",
+      "research_domain": "environmental_journalism",
+      "primary_urls": [
+        "https://e-info.org.tw"
+      ],
+      "record_unit": "bylined published article, with quotations and other contribution roles retained",
+      "acquisition": {
+        "status": "bounded_acquired_local",
+        "works": 6,
+        "report": "research/corpora/author-genre-expansion-20261002/public/REPORT.md"
+      },
+      "provenance": {
+        "generation_origin": "supported_human_publication",
+        "assistance_status": "unknown",
+        "historical_snapshot_required": false
+      },
+      "rights": {
+        "license_claim": "CC BY-NC-ND 4.0 with site exceptions",
+        "intended_use_review": "bounded private noncommercial research",
+        "raw_text_redistribution": "not_authorized_by_this_registry"
+      },
+      "admission": {
+        "general_human_corpus": "admitted",
+        "cohort": "H_G",
+        "analysis_policy": "operational-human-publication/1.0.0",
+        "works": 6,
+        "single_author_documents": 6,
+        "repeated_author_trajectories": 2,
+        "measurement_validation": "not_claimed",
+        "population_fit": "not_run_or_authorized",
+        "registry": "research/corpora/human-admission-20261002/public/REGISTRY.json"
       }
     }
   ]
