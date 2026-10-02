@@ -1,0 +1,21 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "scikit_learn": "1.8.0",
+  "files": {
+    "synthetic_identifiability_tests.py": "e10fcdf86fcf923cec324177737ff354348331ff4784d543b4d37ae939662733",
+    "RESEARCH_NOTE_ZH.md": "c1d79236a7db41ed71ba5889926e45da3991251fe10162f985a0a49fbc295c80",
+    "results.json": "52bd0310f0e44ba96e051e07bbad6f8199d76588cdb9b3bd41fe3e1086ef03d9"
+  },
+  "verified": {
+    "unit_tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "syntax_compilation": true,
+    "natural_text_training": false,
+    "source_corpus_download": false,
+    "rewriting": false,
+    "remote_writes": false
+  }
+}

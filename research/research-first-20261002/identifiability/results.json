@@ -1,0 +1,150 @@
+{
+  "exact_confounding": {
+    "design_columns": 3,
+    "rank": 2,
+    "observed_predictions_identical": true,
+    "unseen_crossed_cell_author_world": 1,
+    "unseen_crossed_cell_source_world": -1,
+    "conclusion": "Observations cannot choose author vs source explanation."
+  },
+  "invariance_tradeoff": [
+    {
+      "author_source_disagreement": 0.0,
+      "best_source_invariant_author_accuracy": 0.5,
+      "unrestricted_author_accuracy": 1.0
+    },
+    {
+      "author_source_disagreement": 0.05,
+      "best_source_invariant_author_accuracy": 0.55,
+      "unrestricted_author_accuracy": 1.0
+    },
+    {
+      "author_source_disagreement": 0.1,
+      "best_source_invariant_author_accuracy": 0.6,
+      "unrestricted_author_accuracy": 1.0
+    },
+    {
+      "author_source_disagreement": 0.25,
+      "best_source_invariant_author_accuracy": 0.75,
+      "unrestricted_author_accuracy": 1.0
+    },
+    {
+      "author_source_disagreement": 0.5,
+      "best_source_invariant_author_accuracy": 1.0,
+      "unrestricted_author_accuracy": 1.0
+    }
+  ],
+  "sampling_design": {
+    "crossed_2x2_additive_rank": 3,
+    "crossed_2x2_recovered_coefficients": [
+      0.2999999999999999,
+      1.6999999999999997,
+      -0.8
+    ],
+    "connected_tree_interaction_check_degrees_of_freedom": 0,
+    "crossed_cycle_interaction_check_degrees_of_freedom": 1,
+    "all_pairwise_connected_3factor_counterexample_cells": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "counterexample_rank": 3,
+    "counterexample_columns": 4,
+    "counterexample_null_direction": [
+      -1,
+      1,
+      1,
+      1
+    ]
+  },
+  "contrastive_shortcut": {
+    "all_observed_pairwise_similarities_identical": true,
+    "source_only_observed_author_accuracy": 1.0,
+    "source_only_counterfactual_crossed_accuracy": 0.0,
+    "conclusion": "Any objective using these labels and similarities cannot prefer author geometry."
+  },
+  "correlated_observables": {
+    "observed_channels": 71,
+    "synthetic_signal_rank": 3,
+    "conclusion": "Channel count alone neither identifies latent dimension nor independent evidence."
+  },
+  "conditional_dynamics": {
+    "seed": 20261002,
+    "train_documents": 480,
+    "test_documents": 320,
+    "sequence_length": 32,
+    "ones_in_every_document": 16,
+    "generating_stay_probabilities": [
+      0.8,
+      0.2
+    ],
+    "fitted_stay_probabilities": [
+      0.7951133479803025,
+      0.19841065698115082
+    ],
+    "fitted_shared_stay_probability": 0.4967708330564837,
+    "exact_same_bag_accuracy": 0.5,
+    "conditional_markov_accuracy": 1.0,
+    "paired_order_destroyed_accuracy": 0.5,
+    "conditional_vs_shared_loglik_gain_bits_per_transition": 0.2676068424605762,
+    "conditional_vs_uniform_loglik_gain_bits_per_transition": 0.26748285891023926,
+    "exchangeable_negative_control_gain_bits_per_transition": -1.5980507059291462e-05,
+    "train_source_levels": [
+      0,
+      1
+    ],
+    "test_source_levels": [
+      2
+    ],
+    "train_topic_levels": [
+      0,
+      1,
+      2
+    ],
+    "test_topic_levels": [
+      3
+    ],
+    "limitation": "Metadata are balanced placeholders, not realistic source perturbations. Known synthetic classes only; no unseen-author or natural-text conclusion."
+  },
+  "topology_ablation": {
+    "nodes": 6,
+    "edges_in_each_graph": 6,
+    "degree_multisets_identical": true,
+    "connected_components_cycle": 1,
+    "connected_components_two_triangles": 2,
+    "conclusion": "Topology can add information beyond local degree bags; this provides no causal effect of a text edit."
+  },
+  "stable_context_gauge": {
+    "observed_values_identical_after_author_specific_shift": true,
+    "centering_under_declared_context_distribution_recovers_defined_mean": true,
+    "conclusion": "Stable must be defined relative to a context reference distribution; unrestricted decomposition is nonunique."
+  },
+  "multiscale_order": {
+    "identical_sentence_length_bags": true,
+    "identical_paragraph_mean_bags": true,
+    "block_paragraph_mean_absolute_jump": 3.3333333333333335,
+    "alternating_paragraph_mean_absolute_jump": 10.0,
+    "original_within_paragraph_mean_absolute_jump": 2.0,
+    "reordered_within_paragraph_mean_absolute_jump": 3.0,
+    "paragraph_means_unchanged_by_within_paragraph_permutation": true,
+    "conclusion": "Within-paragraph rhythm and between-paragraph ordering need separate views; global histograms identify neither."
+  },
+  "test_summary": {
+    "run": 9,
+    "failures": 0,
+    "errors": 0,
+    "scope": "Mathematical counterexamples and synthetic estimator checks only."
+  }
+}
