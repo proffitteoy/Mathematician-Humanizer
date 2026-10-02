@@ -1,0 +1,87 @@
+{
+  "body_LN_by_role": {
+    "atomic_entity": 0,
+    "caption": 3908,
+    "figure_text_unclassified": 0,
+    "heading": 311,
+    "inline_gap": 6289,
+    "marked_quotation": 4576,
+    "paragraph_mixed_attribution": 146149,
+    "source_separator": 0
+  },
+  "body_codepoints_by_role": {
+    "atomic_entity": 17,
+    "caption": 4693,
+    "figure_text_unclassified": 280,
+    "heading": 372,
+    "inline_gap": 6942,
+    "marked_quotation": 5331,
+    "paragraph_mixed_attribution": 162102,
+    "source_separator": 2873
+  },
+  "checks": {
+    "exact_body_partition_documents": 47,
+    "html_wrapper_invariance_documents": 41,
+    "role_sensitive_denominator_documents": 47
+  },
+  "counts": {
+    "body_LN": 161233,
+    "body_codepoints": 182610,
+    "documents": 47,
+    "eligible_paragraphs": 896,
+    "empty_native_paragraph_nodes": 43,
+    "excluded_LN": 15084,
+    "explicit_heading_nodes": 29,
+    "explicit_list_item_nodes": 0,
+    "legacy_native_nonempty_blocks": 1136,
+    "native_paragraph_nodes_including_excluded_or_empty": 1107,
+    "out_of_body_caption_blocks": 15,
+    "out_of_body_entity_texts": 17,
+    "out_of_body_unclassified_descriptions": 2,
+    "punctuation_units": 3098,
+    "selected_LN": 146149,
+    "source_units_with_LN_inline_gaps": 37,
+    "within_paragraph_pairs": 2202
+  },
+  "coverage_limits": {
+    "comparison_design_not_assessed_documents": 47,
+    "documents_with_fewer_than_five_selected_paragraphs": 1,
+    "documents_with_under_half_body_LN_in_primary_projection": 1,
+    "meaning": "Audit diagnostics, not validated sample support thresholds"
+  },
+  "fit_performed": false,
+  "formats": {
+    "draftjs": 6,
+    "html": 41
+  },
+  "frozen_experiment_touched": false,
+  "independent_audit_receipt": "INDEPENDENT_AUDIT.json",
+  "library_versions": {
+    "libxml": "2.14.6",
+    "lxml": "6.1.1.0"
+  },
+  "limits": [
+    "Operational source-boundary measurement only",
+    "No human-feature stability or authorship conclusion",
+    "Source layout is not discourse syntax",
+    "All 47 retain assistance unknown operational-human admission"
+  ],
+  "list_validation_scope": "synthetic fixtures only; no list items observed in this release",
+  "measurement_missingness": {
+    "NP024:no_within_paragraph_pairs": 1,
+    "NP025:fewer_than_three_pairs": 2
+  },
+  "new_downloads": false,
+  "observed_list_items": 0,
+  "parser_models_loaded": false,
+  "schema_version": "native-source-validation/1.0.0",
+  "status": "structural_and_markup_validation_passed",
+  "subset_selection": {
+    "gold_annotation": false,
+    "method": "minimum SHA256 per source x genre plus structural challenge stratum; union, deterministic",
+    "review_receipt": "HANDCHECK_AGGREGATE.json",
+    "review_status": "completed_saved_source_markup_inspection",
+    "seed": "native-source-handcheck/1.0.0",
+    "selected_documents": 9
+  }
+}

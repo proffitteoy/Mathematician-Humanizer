@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "synthetic_matching_operand_cases": 100,
+  "features_per_case": 8,
+  "claim": "Exact formula equivalence only when native and legacy boundaries/operands match; no general legacy instrument equivalence",
+  "unicode_LN_equivalence": true,
+  "rank_and_linear_quantile_equivalence": true,
+  "instrument_files": [
+    {
+      "path": "src/style_compiler/segmentation.py",
+      "sha256": "be78057bc27f9d8480c37c1e6160b5cc466385803fb094e1e0878e1171a288e8"
+    },
+    {
+      "path": "src/style_compiler/features.py",
+      "sha256": "4c595ae4883dea30a3137c2152535052807db26a54a0680ed70e16678ad1f9c6"
+    },
+    {
+      "path": "research/surface/adapter.py",
+      "sha256": "f10676ad4aa3d9503275443a311749050f55e9ee90369d21a0e87dbd2930e20a"
+    }
+  ],
+  "instrument_local_snapshot_revision": "2c3eeb0bcf3020fcba36f13b2bc6bab490b3f1ae",
+  "requested_repository_base": "9539f5da7ed7546d9888bc596fef39d2662f32ad",
+  "newer_remote_instrument_equivalence_checked": false,
+  "protected_M4_artifacts": [
+    {
+      "logical_artifact": "qazh_chatgpt.jsonl",
+      "sha256": "cc2fb0d6c2e63f507717835cd20f992a513d098af6259ce888552ddeca79cfee",
+      "unchanged": true
+    },
+    {
+      "logical_artifact": "qazh_davinci.jsonl",
+      "sha256": "3619629c800dd42b4a64e3c7425554069fe0be1ad5b263533807d63fff8158c4",
+      "unchanged": true
+    },
+    {
+      "logical_artifact": "predeclared_protocol.json",
+      "sha256": "7aa6f9cc0806b25b72022349aaa71007847b8c1efce538a16fc1c98122d9828e",
+      "unchanged": true
+    },
+    {
+      "logical_artifact": "SCHEMA_AMENDMENT_1.md",
+      "sha256": "8f6232926a8ce84839aa1214372a241b3cfa85198818d8d681e9db09961ee593",
+      "unchanged": true
+    },
+    {
+      "logical_artifact": "freeze_manifest.json",
+      "sha256": "2895fce811c01ffaf4cbcd8b7773700b6b17b62e9e1ab316eb36b2a18af65732",
+      "unchanged": true
+    },
+    {
+      "logical_artifact": "components_and_splits.json",
+      "sha256": "835e6521559b29349570d99b25bc96d353837d8383e002e0b3dadf507a3579b0",
+      "unchanged": true
+    },
+    {
+      "logical_artifact": "cohort_identity_views.jsonl",
+      "sha256": "caab83530f309622cbafe95b92e648fc59936435b170f7ef3f38abf23cf3a1ca",
+      "unchanged": true
+    }
+  ],
+  "protected_M4_artifact_count": 7,
+  "protected_scope": "Existing raw bodies, protocol/amendment, frozen manifest, cohort identities and split assignment; not a claim about unrelated concurrently produced files",
+  "model_fitting": false,
+  "parser_models_loaded": false
+}

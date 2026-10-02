@@ -1,0 +1,24 @@
+test_deterministic_wrapping_property (test_native_adapter.NativeTests.test_deterministic_wrapping_property) ... ok
+test_draft_caption_not_injected_or_duplicated (test_native_adapter.NativeTests.test_draft_caption_not_injected_or_duplicated) ... ok
+test_empty_nodes_and_zero_width_br_retained (test_native_adapter.NativeTests.test_empty_nodes_and_zero_width_br_retained) ... ok
+test_formula_hand_calculation (test_native_adapter.NativeTests.test_formula_hand_calculation) ... ok
+test_generic_wrapper_invariance_and_typed_quote_containment (test_native_adapter.NativeTests.test_generic_wrapper_invariance_and_typed_quote_containment) ... ok
+test_html_draftjs_equivalence_on_matching_source_roles (test_native_adapter.NativeTests.test_html_draftjs_equivalence_on_matching_source_roles) ... ok
+test_line_wrap_and_whitespace_invariance_all_features (test_native_adapter.NativeTests.test_line_wrap_and_whitespace_invariance_all_features) ... ok
+test_lossless_body_partition_includes_all_inline_gaps_and_repeated_text (test_native_adapter.NativeTests.test_lossless_body_partition_includes_all_inline_gaps_and_repeated_text) ... ok
+test_mutated_native_view_rejected (test_native_adapter.NativeTests.test_mutated_native_view_rejected) ... ok
+test_native_boundaries_stay_distinct_without_newlines (test_native_adapter.NativeTests.test_native_boundaries_stay_distinct_without_newlines) ... ok
+test_nested_list_no_double_count (test_native_adapter.NativeTests.test_nested_list_no_double_count) ... ok
+test_no_paragraph_evidence_typed_missing_not_zero (test_native_adapter.NativeTests.test_no_paragraph_evidence_typed_missing_not_zero) ... ok
+test_noncontiguous_overlapping_or_changed_partition_rejected (test_native_adapter.NativeTests.test_noncontiguous_overlapping_or_changed_partition_rejected) ... ok
+test_role_sensitive_denominators (test_native_adapter.NativeTests.test_role_sensitive_denominators) ... ok
+test_saved_body_mismatch_rejected (test_native_adapter.NativeTests.test_saved_body_mismatch_rejected) ... ok
+test_semantic_hierarchy_not_fabricated (test_native_adapter.NativeTests.test_semantic_hierarchy_not_fabricated) ... ok
+test_sentence_pairs_never_cross_paragraph_or_excluded_context (test_native_adapter.NativeTests.test_sentence_pairs_never_cross_paragraph_or_excluded_context) ... ok
+test_unknown_draft_types_not_silently_paragraphs (test_native_adapter.NativeTests.test_unknown_draft_types_not_silently_paragraphs) ... ok
+test_utf16_ranges_converted_without_surrogate_splitting (test_native_adapter.NativeTests.test_utf16_ranges_converted_without_surrogate_splitting) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.053s
+
+OK

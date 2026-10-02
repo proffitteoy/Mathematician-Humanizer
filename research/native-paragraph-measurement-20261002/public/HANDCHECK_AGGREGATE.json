@@ -1,0 +1,27 @@
+{
+  "status": "passed_with_explicit_scope_limits",
+  "reviewed_documents": 9,
+  "html_documents": 8,
+  "draftjs_documents": 1,
+  "source_genre_strata": 5,
+  "structural_challenge_strata": 9,
+  "review_method": "Assistant manual inspection of preserved source markup, node roles and ordered body offsets; no browser-rendered visual inspection",
+  "selection": "REVIEW_SELECTION.json",
+  "observed_contract_discrepancies": 0,
+  "checks": [
+    "Opening/middle/final selected paragraph boundaries",
+    "All selected challenge roles inspected in saved source",
+    "Inline gap and generic division retention",
+    "Quote-container versus paragraph boundary distinction",
+    "Caption/body separation",
+    "Explicit heading levels without section meaning",
+    "Empty/native-whitespace nodes excluded from content denominator"
+  ],
+  "limitations": [
+    "Not human gold annotation",
+    "No rendered-page visual audit",
+    "No empirical linguistic-sentence accuracy measurement",
+    "Paragraph labels may be heading-like and heading tags may be related links",
+    "Only literal source-paragraph projection is supported; low coverage does not exclude corpus admission"
+  ]
+}

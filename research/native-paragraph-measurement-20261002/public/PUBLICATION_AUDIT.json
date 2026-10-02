@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "public_scope": "code, synthetic tests, source metadata, aggregate validation only",
+  "allowlisted_files": 17,
+  "files_source_window_scanned": 15,
+  "source_text_windows_checked": 141618,
+  "source_window_codepoints": 40,
+  "source_window_minimum_LN": 20,
+  "source_text_matches": 0,
+  "shorter_text_review": "Human-readable source metadata and synthetic-fixture/code allowlist inspected; window scan is not a proof against every short fragment",
+  "excluded_categories": [
+    "raw prose",
+    "per-document measurements",
+    "native views",
+    "body offsets",
+    "private review packets",
+    "model state"
+  ],
+  "private_inputs_distributed": false,
+  "comparison_populations_changed": false,
+  "fit_performed": false
+}
