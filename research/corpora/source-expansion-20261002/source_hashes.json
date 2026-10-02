@@ -1,0 +1,134 @@
+{
+  "downloaded_payload_bytes": 3766105,
+  "scope": "Payload files downloaded by audit script; browser/tool metadata overhead excluded; no raw corpus accompanies deliverables.",
+  "records": [
+    {
+      "file": "lccc_readme.md",
+      "source": "https://raw.githubusercontent.com/thu-coai/CDial-GPT/master/README.md",
+      "bytes": 34570,
+      "sha256": "bcdf73e3d7164c68539d305837cfe85b59f56586b7c0f1b546a4b52d77b4ef0b"
+    },
+    {
+      "file": "chiphell_readme.md",
+      "source": "https://raw.githubusercontent.com/JaniceZhao/Chinese-Forum-Corpus/master/README.md",
+      "bytes": 2063,
+      "sha256": "31c5ccfed6bdc123e39ef58c170b734bf2c113d00fbb15f39423fbc4f3b5bce7"
+    },
+    {
+      "file": "csl_dev.tsv",
+      "source": "https://raw.githubusercontent.com/ydli-ai/CSL/master/benchmark/cls_dcp/dev.tsv",
+      "bytes": 589765,
+      "sha256": "b266f09821c73fafd91eaa1b6e9fdf1805405f1266dee468426c4ec165eb9c4d"
+    },
+    {
+      "file": "nus_paper.pdf",
+      "source": "https://arxiv.org/pdf/1112.2468",
+      "bytes": 788116,
+      "sha256": "fdd7f7d66abf673745d9080cb7b4da66784b62160b38c971c089659bd414bcfa"
+    },
+    {
+      "file": "csl_paper.pdf",
+      "source": "https://aclanthology.org/2022.coling-1.344.pdf",
+      "bytes": 473128,
+      "sha256": "1b13f77fb48460da47835f544747206a4b571b4ac4de259b2bb53821db5e6bc6"
+    },
+    {
+      "file": "nus_readme.md",
+      "source": "https://raw.githubusercontent.com/WING-NUS/nus-sms-corpus/master/README.md",
+      "bytes": 1865,
+      "sha256": "9c0e649652546ed0dc29073ad7770efda065a6baecfacae037ce48b791f2cdca"
+    },
+    {
+      "file": "lccc_license.txt",
+      "source": "https://raw.githubusercontent.com/thu-coai/CDial-GPT/master/LICENSE",
+      "bytes": 1068,
+      "sha256": "03da0dd5f60f263f146b6e9c8922ddbce716ffb1ddb8cbceacb0a76f1940b366"
+    },
+    {
+      "file": "mpwac_zenodo.json",
+      "source": "https://zenodo.org/api/records/3242512",
+      "bytes": 7850,
+      "sha256": "02ca7157e31cfaf8cad2fa6b19da76e320ab27017e88ce9dce094847f6d0a820"
+    },
+    {
+      "file": "blog1k_zenodo.json",
+      "source": "https://zenodo.org/api/records/7455623",
+      "bytes": 6227,
+      "sha256": "6fff6ca4b3fdb86df83513c4e4870f602f6ec077b599e56d6301ce5fe3748c54"
+    },
+    {
+      "file": "torch2014_page.html",
+      "source": "https://corpus.bfsu.edu.cn/info/1070/1387.htm",
+      "bytes": 12459,
+      "sha256": "fc0d4819f1922437880c806e3b006d5e64e921d2e63b012471fba0ce31c11a4f"
+    },
+    {
+      "file": "lcmc_license.html",
+      "source": "https://www.lancaster.ac.uk/fass/projects/corpus/LCMC/lcmc/LCMCorder.asp",
+      "bytes": 22393,
+      "sha256": "a0ca422952f008bc2c1d092fc9737af51080af28b379a3c9eedac16ad3dcb24d"
+    },
+    {
+      "file": "douban_readme.md",
+      "source": "https://raw.githubusercontent.com/JaniceZhao/Douban-Dushu-Dataset/master/README.md",
+      "bytes": 3064,
+      "sha256": "0fbc589dc55b39427546945844ca7d011dc4c5e19a875561370a23e3d765316a"
+    },
+    {
+      "file": "naturalconv_license.txt",
+      "source": "https://huggingface.co/datasets/xywang1/NaturalConv/raw/main/LICENSE",
+      "bytes": 3634,
+      "sha256": "b51724699c7602950328471609ef586995eb7ecb870a93bc45eea79cd1a9946e"
+    },
+    {
+      "file": "naturalconv_readme.md",
+      "source": "https://raw.githubusercontent.com/naturalconv/NaturalConvDataSet/main/README.md",
+      "bytes": 1787,
+      "sha256": "d437956ddfd7ee8d9d2f3e7262b679eecf9f28ade89c5089a2dd4256b4559c2c"
+    },
+    {
+      "file": "cluecorpus_readme.md",
+      "source": "https://raw.githubusercontent.com/CLUEbenchmark/CLUECorpus2020/master/README.md",
+      "bytes": 5582,
+      "sha256": "095ecdf8b92c979db71228cd894c8e42b94f0207a5fe01bb8b4c1a835e02a66d"
+    },
+    {
+      "file": "thucnews_readme.md",
+      "source": "https://raw.githubusercontent.com/thunlp/THUCTC/master/README.md",
+      "bytes": 10368,
+      "sha256": "5c38ddeefc97df33ab9533d911e552df4962b5b6ed45e86ae6a9c24ba191a5fb"
+    },
+    {
+      "file": "blog_original_page.html",
+      "source": "https://u.cs.biu.ac.il/~koppel/BlogCorpus.htm",
+      "bytes": 6779,
+      "sha256": "62a10832b3bbd3bd3561103fda778227435ae355b8ba1bd1215420358a2303bb"
+    },
+    {
+      "file": "cctaa_paper.pdf",
+      "source": "https://aclanthology.org/2022.lrec-1.633.pdf",
+      "bytes": 401745,
+      "sha256": "bb9121aeded741fdf5ae5a34f85dfcdfbb90e60c6a01027d0f943cbbade0a06e"
+    },
+    {
+      "file": "lsicc_paper.pdf",
+      "source": "https://arxiv.org/pdf/1811.10167",
+      "bytes": 174457,
+      "sha256": "b22c0c5b04240ad50d53f6cc5cb363dd8c1004c604dbe7083a8fd3121ad41709"
+    },
+    {
+      "file": "research_human_source_expansion/nus_zh_official_2015.zip",
+      "source": "https://raw.githubusercontent.com/WING-NUS/nus-sms-corpus/master/smsCorpus_zh_xml_2015.03.09.zip",
+      "bytes": 1209377,
+      "sha256": "15c17989610dc2d2658f5d5a9de5b84aa35445c4479164478125d6f33f1aecfe",
+      "git_blob_sha1_expected": "04d83d35b277d1f672a8f9613c038d8ddf28a784",
+      "git_blob_sha1_actual": "04d83d35b277d1f672a8f9613c038d8ddf28a784"
+    },
+    {
+      "file": "csl_readme_en.md",
+      "source": "https://raw.githubusercontent.com/ydli-ai/CSL/master/readme_en.md",
+      "bytes": 9808,
+      "sha256": "0342f7766b164932d88e0a6a891c0f70a04c188037fee3fa10dd91aa62daccb8"
+    }
+  ]
+}

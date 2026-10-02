@@ -1,0 +1,73 @@
+{
+  "corpus_rows": 31465,
+  "unique_exact_texts": 28421,
+  "exact_duplicate_excess_rows": 3044,
+  "distinct_nonmissing_userID": 594,
+  "userID_missing_rows": 0,
+  "distinct_nonmissing_srcNumber_tokens": 594,
+  "srcNumber_missing_rows": 0,
+  "messages_per_userID": {
+    "min": 2,
+    "median": 20.0,
+    "max": 2104,
+    "at_least_20": 457,
+    "at_least_100": 49,
+    "top1_share": 0.06686794851422215,
+    "top10_share": 0.35922453519783887
+  },
+  "text_chars": {
+    "min": 0,
+    "median": 11,
+    "mean": 14.456793262354998,
+    "max": 207
+  },
+  "length_counts": {
+    "under20": 24464,
+    "at_least100": 64,
+    "at_least200": 1
+  },
+  "message_year_counts": {
+    "missing_or_unknown": 19039,
+    "2009": 2933,
+    "2008": 1218,
+    "2005": 12,
+    "2010": 2513,
+    "2011": 5540,
+    "2012": 210
+  },
+  "collection_year_counts": {
+    "2010": 55,
+    "2011": 29317,
+    "2012": 1833,
+    "2015": 260
+  },
+  "collection_methods": {
+    "Web-based Transcription": 17533,
+    "SMS Export": 12940,
+    "SMS Upload": 992
+  },
+  "age_eligibility_aggregate": {
+    "unknown_age": 1972,
+    "known_older_than_18": 27628,
+    "age_interval_includes_18_or_younger": 1845,
+    "known_18_or_younger": 20
+  },
+  "known_older_than_18_rows": 27628,
+  "known_older_than_18_userIDs": 478,
+  "known_older_than_18_authors_atleast20": 383,
+  "mask_placeholder_counts": {
+    "DATE": 1,
+    "DECIMAL": 69,
+    "TIME": 47,
+    "EMAIL": 13,
+    "URL": 2
+  },
+  "privacy_note": "No contents, contributor IDs or src/dest tokens are emitted. Dataset preserves personal names; further de-identification and age exclusions needed before any corpus use. userID is contributor pseudonym, not verified real-world identity.",
+  "raw_message_weight_effective_authors_hhi_inverse": 56.953,
+  "adult_after_within_author_exact_dedup": {
+    "rows": 25921,
+    "contributors": 478,
+    "contributors_atleast20_distinct_messages": 366,
+    "contributors_atleast100_distinct_messages": 37
+  }
+}

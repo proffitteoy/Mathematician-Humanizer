@@ -1,0 +1,551 @@
+{
+  "checked_at_utc": "2026-10-02",
+  "scope": "Chinese-primary source expansion; metadata and bounded public sample audits only",
+  "warning": "Counts marked publisher_reported are not measured. No source is admitted by size or age alone. This is research triage, not legal advice. No raw corpus redistribution.",
+  "sources": [
+    {
+      "id": "csl_original",
+      "priority": 1,
+      "roles": [
+        "human_ai_group_comparison_academic"
+      ],
+      "status": "bounded_pilot_verified",
+      "counts": {
+        "release_reported_documents": 396209,
+        "release_reported_categories": 13,
+        "release_reported_disciplines": 67,
+        "sample_measured_documents": 1000,
+        "sample_measured_unique_abstracts": 1000,
+        "authors": "not provided"
+      },
+      "provenance_dates": "Source papers 2010–2020; dataset paper 2022. These dates do not identify individual generation histories.",
+      "genres": [
+        "scientific_abstract"
+      ],
+      "metadata": [
+        "title/abstract/keywords/category/discipline in original release; sampled task file has only prompt, abstract, discipline"
+      ],
+      "rights": "README declares Apache-2.0 using software boilerplate; paper explicitly states permission for metadata NLP research. Do not silently equate this with unrestricted downstream commercial text rights.",
+      "limitations": [
+        "Not full papers or general human language",
+        "Sample median 193.5 characters; no author/date/paragraph structure",
+        "Same 10,000 documents reused across four task views; never count views as new texts",
+        "Disciplines reflect single-field journals, not independent genres"
+      ],
+      "next_step": "Use original abstract text once, matched by discipline/length. Expand only task rows needed; do not fetch 1.83GB reformatted pretraining mirror.",
+      "sources": [
+        "https://github.com/ydli-ai/CSL",
+        "https://aclanthology.org/2022.coling-1.344/"
+      ],
+      "known_transfer_bytes": {
+        "inspected_dev_tsv": 589765,
+        "additional_train_tsv": 4698735,
+        "additional_test_tsv": 586515
+      }
+    },
+    {
+      "id": "nus_chinese_sms_2015",
+      "priority": 2,
+      "roles": [
+        "human_ai_group_comparison_microtext",
+        "author_microtext_exploration",
+        "measurement_domain_stress_test"
+      ],
+      "status": "bounded_archive_verified_requires_privacy_filter",
+      "counts": {
+        "measured_messages": 31465,
+        "measured_contributor_pseudonyms": 594,
+        "measured_unique_exact_texts": 28421,
+        "known_over18_messages": 27628,
+        "known_over18_contributors": 478,
+        "adult_contributors_with_20_distinct_messages": 366
+      },
+      "provenance_dates": "Official 2015-03-09 snapshot; collections 2010–2012/2015. 19,039 message timestamps missing; available years 2005 and 2008–2012.",
+      "genres": [
+        "personal_sms"
+      ],
+      "metadata": [
+        "contributor pseudonym, collection method/time, some send timestamps, demographics; do not export identifiers/demographics"
+      ],
+      "rights": "Creator paper states open-license/public-domain methodology, intended unrestricted access/use and informed voluntary contribution of personally sent texts. No SPDX/CC0 file in repository; do not relabel as CC0.",
+      "limitations": [
+        "Median 11 characters; only 64 messages reach 100 characters",
+        "Raw weighted effective author count 56.953; top ten supply 35.9%",
+        "Names were not scrubbed; age<=18/ambiguous/unknown records require exclusion",
+        "Not natural conversations or gold discourse labels; topic labels absent"
+      ],
+      "next_step": "Retain only privacy-screened known-over18 records; balance contributors, deduplicate globally and by author, manually label topic before author-held-topic testing. Never expose messages or pseudonyms.",
+      "sources": [
+        "https://github.com/WING-NUS/nus-sms-corpus",
+        "https://arxiv.org/abs/1112.2468"
+      ],
+      "known_transfer_bytes": {
+        "inspected_official_zip": 1209377,
+        "xml_uncompressed": 23304862
+      }
+    },
+    {
+      "id": "lsicc_douban",
+      "priority": 3,
+      "roles": [
+        "author_cross_topic_candidate",
+        "human_ai_group_comparison_book_reviews"
+      ],
+      "status": "rights_conflict_and_size_gate",
+      "counts": {
+        "publisher_reported_short_reviews": 37000000,
+        "publisher_reported_users_approx": 1000000,
+        "publisher_reported_books_approx": 18000,
+        "measured": "not downloaded"
+      },
+      "provenance_dates": "2018 corpus/paper; individual dates reportedly retained. Snapshot does not rule out spam/bots/copied text.",
+      "genres": [
+        "book_short_review"
+      ],
+      "metadata": [
+        "anonymized user, book, tag, date, rating, likes"
+      ],
+      "rights": "README claims CC BY-NC-SA 4.0 but also prohibits redistribution, requires takedown on owner request, and assigns underlying copyright to reviewers/Douban. Scope conflict and source permissions unresolved.",
+      "limitations": [
+        "Many users and books are not proof of broad genre coverage",
+        "Book/topic/author correlations; syndicated comments and coordinated reviewing",
+        "Width/special-symbol/script normalization alters style"
+      ],
+      "next_step": "Resolve dataset terms and original rights first; then inspect a bounded author-by-book sample and cross-book/genre splits. No corpus transfer yet.",
+      "sources": [
+        "https://github.com/JaniceZhao/Douban-Dushu-Dataset",
+        "https://arxiv.org/abs/1811.10167"
+      ],
+      "known_transfer_bytes": null
+    },
+    {
+      "id": "lsicc_chiphell",
+      "priority": 4,
+      "roles": [
+        "human_ai_group_comparison_online_discussion",
+        "author_cross_topic_candidate"
+      ],
+      "status": "research_only_candidate_metadata_verified",
+      "counts": {
+        "publisher_reported_discussions_more_than": 50000,
+        "unique_authors": "unverified"
+      },
+      "provenance_dates": "2018 release; per-post dates and author IDs still unverified.",
+      "genres": [
+        "forum_discussion"
+      ],
+      "metadata": [
+        "subject directory, topic JSON file; row schema not yet inspected"
+      ],
+      "rights": "Creator README allows study/research, excludes unauthorized commercial use and all redistribution, preserves original owners and takedowns; contains Douban wording even for Chiphell.",
+      "limitations": [
+        "Hardware/motors/clothes/news are topics within forum register",
+        "Thread-level records contain multiple speakers; never assign whole thread to one author",
+        "Rights/author IDs/date quality not established"
+      ],
+      "next_step": "First shard is exact 15,665,368 bytes. Before its acquisition, settle research-only fit and rights wording; inspect thread/speaker/date schema and duplicates, not a giant unstratified merge.",
+      "sources": [
+        "https://github.com/JaniceZhao/Chinese-Forum-Corpus",
+        "https://arxiv.org/abs/1811.10167"
+      ],
+      "known_transfer_bytes": {
+        "first_shard": 15665368,
+        "all_four_shards": 152657594
+      }
+    },
+    {
+      "id": "hans_pre2022_articles",
+      "priority": 4,
+      "roles": [
+        "human_ai_group_comparison_full_academic_papers"
+      ],
+      "status": "per_article_license_acquisition_candidate",
+      "counts": {
+        "verified_admissible_documents": "not enumerated in this task",
+        "unique_individual_authors": "not verified; usually coauthored"
+      },
+      "provenance_dates": "Select publication <=2021 and verify PDF publication dates per item.",
+      "genres": [
+        "full_scientific_paper"
+      ],
+      "metadata": [
+        "DOI/title, date, authors, journal, section headings, article-specific CC notice"
+      ],
+      "rights": "Publisher states authors can select CC BY or CC BY-NC; verify individual PDF. Site-wide open-access label alone is insufficient.",
+      "limitations": [
+        "Not single-author voice; coauthor/editor effects",
+        "Same source appears in GCDT academic validation, requiring document-level exclusion",
+        "Scientific fields still one broad register"
+      ],
+      "next_step": "Coordinate gold-corpus exclusion with discourse worker; next bounded acquisition should sample <=20 pre-2022 papers across fields after article-license checks.",
+      "sources": [
+        "https://www.hanspub.org/AboutUs/Index"
+      ],
+      "known_transfer_bytes": null
+    },
+    {
+      "id": "torch2014",
+      "priority": 5,
+      "roles": [
+        "genre_measurement_validation",
+        "human_ai_group_comparison_multigenre"
+      ],
+      "status": "license_not_found_on_release_page",
+      "counts": {
+        "publisher_reported_files": 657,
+        "publisher_reported_tokens": 1029385,
+        "publisher_reported_genres": 15,
+        "unique_authors": "unverified; 45 named collectors are not authors"
+      },
+      "provenance_dates": "Mostly 2014 publications; built 2015–2017. Companion ToRCH2009 has no overlapping files according to creator.",
+      "genres": [
+        "press_reportage",
+        "editorial",
+        "review",
+        "religion",
+        "skills_hobbies",
+        "popular_lore",
+        "biography_memoir",
+        "institutional_document",
+        "academic",
+        "general_fiction",
+        "detective",
+        "science_fiction",
+        "adventure",
+        "romance",
+        "humour"
+      ],
+      "metadata": [
+        "genre codes A–R, collection documentation; author/date completeness not checked"
+      ],
+      "rights": "Institution offers direct full-text ZIP but page supplies no explicit reuse license. Public download is not a clear training/republication grant.",
+      "limitations": [
+        "Genre-balanced sampling is useful; does not imply author balancing",
+        "No discourse gold annotations established",
+        "Literary editions/translation/source integrity need checking"
+      ],
+      "next_step": "Inspect accompanying documentation/rights through permitted source; confirm reuse grant before corpus admission. Valuable genre frame even if raw access stays gated.",
+      "sources": [
+        "https://corpus.bfsu.edu.cn/info/1070/1387.htm"
+      ],
+      "known_transfer_bytes": null
+    },
+    {
+      "id": "cctaa",
+      "priority": 6,
+      "roles": [
+        "author_cross_topic_validation"
+      ],
+      "status": "licensed_upstream_access_required",
+      "counts": {
+        "publisher_reported_authors": 500,
+        "topics": 6,
+        "train_passages_per_author_approx": 11,
+        "validation_per_author": 1,
+        "test_per_author": 1
+      },
+      "provenance_dates": "Extracted from Chinese Gigaword Second Edition (2005); corpus methodology published 2022.",
+      "genres": [
+        "xinhua_newswire"
+      ],
+      "metadata": [
+        "author, topic, fixed split, Gigaword source ID; same author across held-out topics"
+      ],
+      "rights": "Public construction code is not a text license. Raw Xinhua is from licensed LDC Gigaword; no access obtained.",
+      "limitations": [
+        "Best relevant cross-topic design, yet newswire only",
+        "Editorial/institutional voice and reporter geography remain considerations",
+        "Do not call downloadable reconstruction scripts an open raw corpus"
+      ],
+      "next_step": "Use as methodological target. Acquire raw texts only if user already has the appropriate license; no payment/account action in this pass.",
+      "sources": [
+        "https://aclanthology.org/2022.lrec-1.633/",
+        "https://codeberg.org/haining/cctaa"
+      ],
+      "known_transfer_bytes": null
+    },
+    {
+      "id": "naturalconv",
+      "priority": 7,
+      "roles": [
+        "human_ai_group_comparison_elicited_dialogue",
+        "topic_transition_measurement_stress_test"
+      ],
+      "status": "noncommercial_terms_and_official_access_gate",
+      "counts": {
+        "publisher_reported_dialogues": 19919,
+        "publisher_reported_utterances_approx": 400000,
+        "domains": 6,
+        "unique_people": "unverified"
+      },
+      "provenance_dates": "AAAI 2021; human-created elicited conversations, not unprompted internet writing.",
+      "genres": [
+        "elicited_news_grounded_dialogue"
+      ],
+      "metadata": [
+        "dialogue turns and grounding article URLs; cross-dialogue stable speaker IDs unverified"
+      ],
+      "rights": "Tencent-specific noncommercial scientific use license. Restricts redistribution and download from non-Tencent sources; HF license copy inspected but corpus not downloaded.",
+      "limitations": [
+        "Prompt/article/topic confounding",
+        "Human dialogues and grounding news need distinct text roles",
+        "Primary Tencent download page returned 502 in this pass"
+      ],
+      "next_step": "Resolve official Tencent access and applicable terms, inspect stable speaker IDs, then sample domains separately. Do not use convenient mirrors against stated source restriction.",
+      "sources": [
+        "https://github.com/naturalconv/NaturalConvDataSet",
+        "https://arxiv.org/abs/2103.02548",
+        "https://huggingface.co/datasets/xywang1/NaturalConv/blob/main/LICENSE"
+      ],
+      "known_transfer_bytes": null
+    },
+    {
+      "id": "lcmc",
+      "priority": 8,
+      "roles": [
+        "genre_measurement_validation",
+        "human_ai_group_comparison_multigenre"
+      ],
+      "status": "registration_and_restricted_license",
+      "counts": {
+        "publisher_reported_samples": 500,
+        "publisher_reported_words_approx": 1000000,
+        "genres": 15,
+        "unique_authors": "unverified"
+      },
+      "provenance_dates": "1991 +/-3 years; documentation 2004.",
+      "genres": [
+        "brown_family_15_written_genres"
+      ],
+      "metadata": [
+        "bibliography, genre, source; author metadata needs inspection"
+      ],
+      "rights": "Explicit university license supports linguistic research/language-product development, free nonprofit research; raw sharing restricted to licensed research group. End-user name/affiliation/email form.",
+      "limitations": [
+        "Free does not mean unrestricted",
+        "Historical register differs from current Chinese",
+        "No registration, identity submission or raw download attempted"
+      ],
+      "next_step": "Prefer as documented genre reference; only proceed if license/registration fits authorized research and user approves required transmission.",
+      "sources": [
+        "https://www.lancaster.ac.uk/fass/projects/corpus/LCMC/default.htm",
+        "https://www.lancaster.ac.uk/fass/projects/corpus/LCMC/lcmc/LCMCorder.asp"
+      ],
+      "known_transfer_bytes": null
+    },
+    {
+      "id": "thucnews",
+      "priority": 9,
+      "roles": [
+        "human_ai_group_comparison_news"
+      ],
+      "status": "primary_download_personal_information_gate",
+      "counts": {
+        "publisher_reported_news_documents": 740000,
+        "topics": 14,
+        "publisher_reported_gb": 2.19,
+        "authors": "not verified"
+      },
+      "provenance_dates": "Sina RSS 2005–2011.",
+      "genres": [
+        "news_article"
+      ],
+      "metadata": [
+        "UTF-8 topic folders; dates/bylines may be embedded but not verified"
+      ],
+      "rights": "THUCTC software terms are not a verified THUCNews/Sina text license. Official repository directs users to fill personal information to download.",
+      "limitations": [
+        "14 topics are not 14 genres",
+        "Wire republication/bylines/boilerplate may cause duplicates",
+        "Third-party mirrors cannot substitute for upstream permission"
+      ],
+      "next_step": "Obtain exact dataset grant and approved access before sampling; separate headline/title derivatives from articles.",
+      "sources": [
+        "https://github.com/thunlp/THUCTC"
+      ],
+      "known_transfer_bytes": null
+    },
+    {
+      "id": "mpwac2019",
+      "priority": 10,
+      "roles": [
+        "large_web_candidate_pool"
+      ],
+      "status": "metadata_only_not_admitted",
+      "counts": {
+        "publisher_reported_web_articles": 10000000,
+        "publisher_reported_words_more_than": 10000000000,
+        "author_count": "unknown"
+      },
+      "provenance_dates": "Extracted May 2019; Zenodo release June 2019.",
+      "genres": [
+        "unclassified_web_article"
+      ],
+      "metadata": [
+        "URL and text; author/date/genre not documented"
+      ],
+      "rights": "Zenodo dataset explicitly tagged CC BY 4.0. Per-source copyright chain and source license distinctions not documented in the release.",
+      "limitations": [
+        "Broad crawl is not a human-origin or representative-genre certificate",
+        "Scraped websites may copy news, include boilerplate/spam or automated text",
+        "No dedup or privacy audit yet"
+      ],
+      "next_step": "Do not bulk download. First establish licensed source/domain strata and a small range-sampled audit; classify genre and obtain per-record provenance before any admission.",
+      "sources": [
+        "https://zenodo.org/records/3242512"
+      ],
+      "known_transfer_bytes": {
+        "full_compressed": 26211046534,
+        "first_split_gzip_part": 2000000000
+      }
+    },
+    {
+      "id": "lccc",
+      "priority": 11,
+      "roles": [
+        "possible_filtered_dialogue_stress_test"
+      ],
+      "status": "exclude_as_clean_human_gold",
+      "counts": {
+        "publisher_reported_base_approx": 6800000,
+        "publisher_reported_large_sessions": 12007759,
+        "authors": "not retained/verified"
+      },
+      "provenance_dates": "2020 release; pre-2022 alone cannot prove human authorship.",
+      "genres": [
+        "weibo_dialogue",
+        "forum",
+        "subtitles",
+        "customer_service",
+        "chatbot_related_mixes"
+      ],
+      "metadata": [
+        "utterance lists; stable author/date/source mapping unverified"
+      ],
+      "rights": "MIT repository file coexists with README research-only dataset/model restriction; software license cannot erase it.",
+      "limitations": [
+        "Large mixes Xiaohuangji/Qingyun/subtitles and other sources, blocking clean human assumption",
+        "Cleaning removes emojis/symbols/ungrammatical language central to informal style",
+        "Chinese and English README base-count tables disagree slightly"
+      ],
+      "next_step": "Do not count 12M as human gold or genre coverage. If needed later, isolate verifiable source-specific natural-human records and retain an explicit preprocessing-bias label.",
+      "sources": [
+        "https://github.com/thu-coai/CDial-GPT"
+      ],
+      "known_transfer_bytes": null
+    },
+    {
+      "id": "blog_authorship_and_blog1k_english",
+      "priority": 12,
+      "roles": [
+        "english_author_method_control"
+      ],
+      "status": "language_mismatch_upstream_rights_conflict",
+      "counts": {
+        "original_reported_authors": 19320,
+        "original_reported_posts": 681288,
+        "blog1k_reported_authors": 1000,
+        "blog1k_total_posts_calculated_from_splits": 20166
+      },
+      "provenance_dates": "Original Blogger collection August 2004; Blog-1K curated release December 2022.",
+      "genres": [
+        "personal_blog_english"
+      ],
+      "metadata": [
+        "original author/date/self-reported age; Blog-1K id/text/split only"
+      ],
+      "rights": "Original permits noncommercial research. Blog-1K claims ISC; derivation does not by itself prove upstream restrictions removed.",
+      "limitations": [
+        "Not Chinese coverage",
+        "Original includes 8,240 authors aged 13–17; do not silently ingest",
+        "Blog-1K random fixed split is not established cross-topic validation"
+      ],
+      "next_step": "Optional adult-only English methodology comparison after license clarification; not recommended for this Chinese corpus expansion.",
+      "sources": [
+        "https://u.cs.biu.ac.il/~koppel/BlogCorpus.htm",
+        "https://zenodo.org/records/7455623"
+      ],
+      "known_transfer_bytes": {
+        "blog1k_compressed": 15561948
+      }
+    },
+    {
+      "id": "cluecorpus2020",
+      "priority": 13,
+      "roles": [
+        "large_web_candidate_pool"
+      ],
+      "status": "gated_unclassified_not_admitted",
+      "counts": {
+        "publisher_reported_gb": 100,
+        "document_author_counts": "unknown"
+      },
+      "provenance_dates": "2020 Common Crawl-derived release; exact document dates not established.",
+      "genres": [
+        "unclassified_web"
+      ],
+      "metadata": [
+        "pretraining lines/document boundaries; author/genre/date completeness unverified"
+      ],
+      "rights": "Repository MIT is not universal rights to crawled pages. Current acquisition requires email with purpose/plan/institution/applicant information and commitment not to share.",
+      "limitations": [
+        "No author-cross-topic labels",
+        "100GB is not an independent sample of human styles",
+        "CLUE explicitly advises original licenses for component tasks"
+      ],
+      "next_step": "Do not use mirrors to bypass application. Prefer smaller documented sources; no email/contact or identity submission attempted.",
+      "sources": [
+        "https://github.com/CLUEbenchmark/CLUECorpus2020"
+      ],
+      "known_transfer_bytes": null
+    },
+    {
+      "id": "segmentfault",
+      "priority": 99,
+      "roles": [],
+      "status": "excluded_acquisition_restriction",
+      "counts": {
+        "documents": "not acquired"
+      },
+      "provenance_dates": "Current terms effective 2025-03-16; historical content not thereby cleared.",
+      "genres": [
+        "technical_question_answer",
+        "technical_blog",
+        "comments"
+      ],
+      "metadata": [
+        "author/date/role potentially available"
+      ],
+      "rights": "CC BY-NC-SA text banner coexists with a restriction on scraping/AI/algorithm research without written permission.",
+      "limitations": [
+        "Cannot treat a broad CC banner as permission for the requested acquisition workflow"
+      ],
+      "next_step": "No corpus crawling. Do not route via mirrors to evade the stated restriction.",
+      "sources": [
+        "https://segmentfault.com/tos"
+      ],
+      "known_transfer_bytes": null
+    }
+  ],
+  "role_rankings": {
+    "group_comparison": [
+      "csl_original: academic abstracts only",
+      "nus_chinese_sms_2015: adult/privacy-screened microtext only",
+      "hans_pre2022_articles: acquire article-licensed full-paper sample",
+      "lsicc_chiphell: rights/schema checks needed",
+      "torch2014: license needed"
+    ],
+    "author_cross_topic": [
+      "cctaa: strongest design but LDC license gate",
+      "lsicc_douban: potentially large author/book matrix but rights conflict",
+      "nus_chinese_sms_2015: bounded contributor test, too short for long-form author claims",
+      "blog_authorship_and_blog1k_english: methodological control only"
+    ],
+    "discourse_measurement_validation": [
+      "Use gold-annotation corpus worker for primary validation",
+      "torch2014/lcmc: genre transfer once licensed, not gold discourse",
+      "hans full papers: document structure transfer, not gold labels",
+      "NUS/CSL: microtext/short-abstract failure-case stress tests"
+    ]
+  }
+}
