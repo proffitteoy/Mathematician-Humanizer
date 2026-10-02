@@ -1,0 +1,84 @@
+{
+  "status": "SCIENTIFIC_RELEASE_CANDIDATE",
+  "files": [
+    {
+      "path": "CHINESE_PILOT_REPORT.md",
+      "bytes": 9909,
+      "sha256": "4bc0ee2b6f5e6feb5fa0fce7b4985ba76a9fe8ee528c06626ebf9b2798d4590b"
+    },
+    {
+      "path": "METHODS.md",
+      "bytes": 13091,
+      "sha256": "10929f39c2a3edfa41fb4276fb09f16c2a878d88d11895ed5780ef72ae383b35"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2007,
+      "sha256": "b95d493d25e62649482db55b7f0e9cbc279e1166dff710ce5787e37833eb4306"
+    },
+    {
+      "path": "results/DEV_AGGREGATE.json",
+      "bytes": 4607,
+      "sha256": "3c2987f11f53f2e44b290981da15f358067597ce09c8a4d6dce0bdc7f5bc0cb9"
+    },
+    {
+      "path": "results/DEV_MEASUREMENT.json",
+      "bytes": 5069,
+      "sha256": "5dab2a9061cdeca8a98949a90632f4628b45ed4a0b0536fee7823084aa495ae0"
+    },
+    {
+      "path": "results/SELECTION_AGGREGATE.json",
+      "bytes": 190,
+      "sha256": "5934218b6e4c875f6fa986dd83f59c2ac8638f6318372d5383f0a837d70cf93f"
+    },
+    {
+      "path": "results/TRAIN_MEASUREMENT.json",
+      "bytes": 5219,
+      "sha256": "acfb848bdaf5252fcc7927bbb0f244e99a0806ad4ff2999e361790519d19dfb6"
+    },
+    {
+      "path": "source/DEPENDENCY_LOCK.json",
+      "bytes": 5123,
+      "sha256": "366e53caa8c5a5e68b85302b9d268d6640b0524029c4c338b3787e9a568cbfe1"
+    },
+    {
+      "path": "source/INSTRUMENT_LOCK.json",
+      "bytes": 5585,
+      "sha256": "c358b899b98167fd544e51e941c37b12ed3b0732a21c410780af448ae16e79c8"
+    },
+    {
+      "path": "source/MODEL_LOCK.json",
+      "bytes": 1758,
+      "sha256": "8241b3b803c4b59ffb8879f5b4878063ab5e903921856993a89428a6bfad213e"
+    },
+    {
+      "path": "source/pilot_core.py",
+      "bytes": 13339,
+      "sha256": "15bf4d2f99417844f12350bea5987853bf5b0b1ae185835d74aa3f8de05e659c"
+    },
+    {
+      "path": "source/pilot_evaluation.py",
+      "bytes": 7293,
+      "sha256": "c956c32401534ce532baddd8cbb8086b05b05278253bf05f0c639c7e910ae8ae"
+    },
+    {
+      "path": "source/pilot_measure.py",
+      "bytes": 7405,
+      "sha256": "6a9060bff251b16f8c3ade911759e65a63f0daaf64bd840993bb6ab96bd60144"
+    },
+    {
+      "path": "source/test_scientific.py",
+      "bytes": 14205,
+      "sha256": "be91a003010d52881d0bd060f046cfeb91b952a1c042034d50f26c0336cd69a1"
+    },
+    {
+      "path": "verify_aggregate_release.py",
+      "bytes": 6199,
+      "sha256": "3b8a9daedfeea2b48f885dce5efaeb3f72c7ef76b97b3bada5dbd6f16ee4fff3"
+    }
+  ],
+  "result_scope": "Fixed 32 TRAIN / 16 DEV Chinese development origin diagnostic; inconclusive incremental slope gain",
+  "source_scope": "Three unchanged scientific modules and model/instrument pins; dependency declaration retains scientific pins with installer details removed; synthetic scientific test subset",
+  "excluded": "Actual runtime, resource, acquisition, approval, execution and internal review records; raw text, per-sample data, coefficients, weights and caches",
+  "verification_scope": "Public checker verifies release integrity and aggregate arithmetic, not private measurement reconstruction"
+}

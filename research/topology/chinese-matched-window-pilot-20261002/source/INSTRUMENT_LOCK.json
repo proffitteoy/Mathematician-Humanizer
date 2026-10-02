@@ -1,0 +1,175 @@
+{
+  "files": [
+    {
+      "path": "src/style_compiler/__init__.py",
+      "sha256": "3abca6126fe4bf76145bfa1cd2da5b48cde44735affb2335c07a87223f139aa9"
+    },
+    {
+      "path": "src/style_compiler/__main__.py",
+      "sha256": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4"
+    },
+    {
+      "path": "src/style_compiler/cli.py",
+      "sha256": "a48bd114ddec0380b86f3278f2f882391bcd5045cd16921a765f0588c462f591"
+    },
+    {
+      "path": "src/style_compiler/contracts.py",
+      "sha256": "db0a61250becd56e2834eb71a81b93e32b93376d5d8896b4b74fabbbfad3a2c5"
+    },
+    {
+      "path": "src/style_compiler/features.py",
+      "sha256": "4c595ae4883dea30a3137c2152535052807db26a54a0680ed70e16678ad1f9c6"
+    },
+    {
+      "path": "src/style_compiler/leakage.py",
+      "sha256": "1081c5cef6a3afc97ce216787bae1ece2455dd0a113493798f3c2ea64803e647"
+    },
+    {
+      "path": "src/style_compiler/model.py",
+      "sha256": "f594d98f6ef9db32d378059533ff48ce803275003b773a1a0d1e76bcb2c655c1"
+    },
+    {
+      "path": "src/style_compiler/planner.py",
+      "sha256": "22208d339aa87ac7118d855699b10b2cd9cceeda1febe90666afebbb969117b6"
+    },
+    {
+      "path": "src/style_compiler/segmentation.py",
+      "sha256": "be78057bc27f9d8480c37c1e6160b5cc466385803fb094e1e0878e1171a288e8"
+    },
+    {
+      "path": "research/surface/__init__.py",
+      "sha256": "309ce741571dd193a528d5910a8e0d2403ade832e2cff5b5d12afb81b2d27f99"
+    },
+    {
+      "path": "research/surface/adapter.py",
+      "sha256": "f10676ad4aa3d9503275443a311749050f55e9ee90369d21a0e87dbd2930e20a"
+    },
+    {
+      "path": "research/surface/independent_checks.py",
+      "sha256": "93be858e221ef71983e118bd92c0ea3ce733f8ead397ace590297fcb89486b58"
+    },
+    {
+      "path": "research/surface/test_adapter.py",
+      "sha256": "1b7c15a9979096245e9cf129a6cd7837910bf86b0d08e86e46eaa53487b8c2bb"
+    },
+    {
+      "path": "research/linguistic/__init__.py",
+      "sha256": "96093de1d5099c93edfee1307b396fc63a98932836d818e09631b196594b485e"
+    },
+    {
+      "path": "research/linguistic/adapter.py",
+      "sha256": "0b7422e896acae703bc896cb9731d7462489bea91d50bcf88ff37ab7519da556"
+    },
+    {
+      "path": "research/linguistic/build_schema.py",
+      "sha256": "cb7a2ff4198b572064102b4b32a841f227e273d24093f74745c3ac9be88e9a78"
+    },
+    {
+      "path": "research/linguistic/contracts.py",
+      "sha256": "79691f63e81ac384ab8ff47e1c7b6b7765394653825efbd55d8f221ef09bee7c"
+    },
+    {
+      "path": "research/linguistic/fixtures.py",
+      "sha256": "cc2430feb71e7670cd2dff2090581e33a1321068aa1d060b797058033e83c727"
+    },
+    {
+      "path": "research/linguistic/independent_checks.py",
+      "sha256": "9caf0702eebe6201226dd37729fc7eee9e5183d74374557f71612f5d0c9fafa9"
+    },
+    {
+      "path": "research/linguistic/schema.py",
+      "sha256": "505046329782ac2dbf77cfc25e2bffe6a382b8ea08a3596cfb9cfaff9d1118fa"
+    },
+    {
+      "path": "research/linguistic/smoke.py",
+      "sha256": "478ad3ccb8ad86ca795d3bcb1eeaf45ed38b954629664ef5886a6b6f868f1ef0"
+    },
+    {
+      "path": "research/linguistic/stanza_local.py",
+      "sha256": "7d7e089d346043c2182c44e7ed9ca57be04ed3a21d802052dc0357e3a8349102"
+    },
+    {
+      "path": "research/linguistic/test_adapter.py",
+      "sha256": "4212ae4ade1e682eb41b3f254c5148de3bc8a73bc08016a5587da06dab849ccd"
+    },
+    {
+      "path": "research/linguistic/test_stanza_local.py",
+      "sha256": "ec1a209cd97b2a0cf7362d8a917e28cbb667acd686aea1d90f10d4b7201196ec"
+    },
+    {
+      "path": "research/linguistic/unicode_scripts.py",
+      "sha256": "2da9eb8e6162e67c3b4b468c538e0a75251feb6f2bc6f9c9d446969e80c309a4"
+    }
+  ],
+  "channel_ids_68": [
+    "zh:upos.ADJ",
+    "zh:upos.ADP",
+    "zh:upos.ADV",
+    "zh:upos.AUX",
+    "zh:upos.CCONJ",
+    "zh:upos.DET",
+    "zh:upos.NOUN",
+    "zh:upos.NUM",
+    "zh:upos.PART",
+    "zh:upos.PRON",
+    "zh:upos.PROPN",
+    "zh:upos.SCONJ",
+    "zh:upos.VERB",
+    "zh:deprel.acl",
+    "zh:deprel.advcl",
+    "zh:deprel.advmod",
+    "zh:deprel.amod",
+    "zh:deprel.appos",
+    "zh:deprel.aux",
+    "zh:deprel.case",
+    "zh:deprel.cc",
+    "zh:deprel.ccomp",
+    "zh:deprel.clf",
+    "zh:deprel.compound",
+    "zh:deprel.conj",
+    "zh:deprel.cop",
+    "zh:deprel.csubj",
+    "zh:deprel.det",
+    "zh:deprel.discourse",
+    "zh:deprel.dislocated",
+    "zh:deprel.flat",
+    "zh:deprel.iobj",
+    "zh:deprel.mark",
+    "zh:deprel.nmod",
+    "zh:deprel.nsubj",
+    "zh:deprel.nummod",
+    "zh:deprel.obj",
+    "zh:deprel.obl",
+    "zh:deprel.parataxis",
+    "zh:deprel.xcomp",
+    "zh:word_length.mean",
+    "zh:word_length.ge4",
+    "zh:word.single_han",
+    "zh:word.latin",
+    "zh:word.decimal_digit",
+    "zh:lexical.mattr100",
+    "zh:lexical.entropy100",
+    "zh:upos.bigram_entropy100",
+    "zh:dependency.span_mean",
+    "zh:dependency.span_normalized",
+    "zh:dependency.depth_mean",
+    "zh:dependency.maxdepth_median",
+    "zh:syntax.predicate_heads",
+    "zh:syntax.subordinate_arcs",
+    "zh:syntax.predicate_conj_share",
+    "zh:syntax.nominal_modifier_size",
+    "zh:syntax.verb_root_without_subject",
+    "zh:syntax.preposed_modifiers",
+    "zh:cue.pronoun_first",
+    "zh:cue.pronoun_second",
+    "zh:cue.pronoun_third",
+    "zh:cue.negator",
+    "zh:cue.de_function_form",
+    "zh:cue.di_subordinator_form",
+    "zh:cue.de_extent_form",
+    "zh:cue.le_auxiliary_form",
+    "zh:cue.zhe_auxiliary_form",
+    "zh:cue.guo_auxiliary_form"
+  ],
+  "scope": "Read-only existing instrument, source hashes checked before import; Stanza adapter independently checks its official model hashes"
+}

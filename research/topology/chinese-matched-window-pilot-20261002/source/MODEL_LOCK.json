@@ -1,0 +1,42 @@
+{
+  "model": "google-bert/bert-base-chinese",
+  "revision": "84b432f646e4047ce1b5db001d43a348cd3f6bd0",
+  "metadata_source": "https://huggingface.co/api/models/google-bert/bert-base-chinese/revision/84b432f646e4047ce1b5db001d43a348cd3f6bd0?blobs=true",
+  "files": [
+    {
+      "name": "model.safetensors",
+      "bytes": 411553788,
+      "hash_kind": "sha256",
+      "hash": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/84b432f646e4047ce1b5db001d43a348cd3f6bd0/model.safetensors"
+    },
+    {
+      "name": "config.json",
+      "bytes": 624,
+      "hash_kind": "git_blob_sha1",
+      "hash": "a521dc2845bdddbe822864290c6b928396fc5ee8",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/84b432f646e4047ce1b5db001d43a348cd3f6bd0/config.json"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 268943,
+      "hash_kind": "git_blob_sha1",
+      "hash": "dd9401af0a4713df0e75066ae78d5bf6fa6c7116",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/84b432f646e4047ce1b5db001d43a348cd3f6bd0/tokenizer.json"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 29,
+      "hash_kind": "git_blob_sha1",
+      "hash": "e3c6d456fb2616f01a9a6cd01a1be1a36353ed22",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/84b432f646e4047ce1b5db001d43a348cd3f6bd0/tokenizer_config.json"
+    },
+    {
+      "name": "vocab.txt",
+      "bytes": 109540,
+      "hash_kind": "git_blob_sha1",
+      "hash": "ca4f9781030019ab9b253c6dcb8c7878b6dc87a5",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/84b432f646e4047ce1b5db001d43a348cd3f6bd0/vocab.txt"
+    }
+  ]
+}

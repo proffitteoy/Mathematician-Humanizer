@@ -1,0 +1,219 @@
+{
+  "all_alignment_verified": true,
+  "all_topology_finite": false,
+  "groups": {
+    "train|baike|chatgpt": {
+      "alignment_available_arms": 16,
+      "alignment_verified_arms": 16,
+      "distinct_scale_count_distribution": {
+        "7": 16
+      },
+      "han_count": {
+        "max": 235.0,
+        "mean": 138.125,
+        "median": 136.0,
+        "min": 19.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "repeated_vector_fraction": {
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "selected_arms": 16,
+      "token_count": {
+        "max": 256.0,
+        "mean": 159.3125,
+        "median": 148.5,
+        "min": 23.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "topology_available_arms": 15,
+      "topology_reasons": {
+        "available": 15,
+        "operational_N_or_grid_gate": 1
+      },
+      "typed_missing_linguistic_values": 33,
+      "unknown_token_rate": {
+        "max": 0.06569343065693431,
+        "mean": 0.00895788321388763,
+        "median": 0.0,
+        "min": 0.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      }
+    },
+    "train|baike|human": {
+      "alignment_available_arms": 16,
+      "alignment_verified_arms": 16,
+      "distinct_scale_count_distribution": {
+        "7": 16
+      },
+      "han_count": {
+        "max": 231.0,
+        "mean": 133.5,
+        "median": 131.0,
+        "min": 19.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "repeated_vector_fraction": {
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "selected_arms": 16,
+      "token_count": {
+        "max": 256.0,
+        "mean": 159.3125,
+        "median": 148.5,
+        "min": 23.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "topology_available_arms": 15,
+      "topology_reasons": {
+        "available": 15,
+        "operational_N_or_grid_gate": 1
+      },
+      "typed_missing_linguistic_values": 28,
+      "unknown_token_rate": {
+        "max": 0.08029197080291971,
+        "mean": 0.013348501596435724,
+        "median": 0.0,
+        "min": 0.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      }
+    },
+    "train|web|chatgpt": {
+      "alignment_available_arms": 16,
+      "alignment_verified_arms": 16,
+      "distinct_scale_count_distribution": {
+        "7": 16
+      },
+      "han_count": {
+        "max": 183.0,
+        "mean": 168.5,
+        "median": 175.5,
+        "min": 112.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "repeated_vector_fraction": {
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "selected_arms": 16,
+      "token_count": {
+        "max": 200.0,
+        "mean": 187.25,
+        "median": 195.5,
+        "min": 127.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "topology_available_arms": 16,
+      "topology_reasons": {
+        "available": 16
+      },
+      "typed_missing_linguistic_values": 9,
+      "unknown_token_rate": {
+        "max": 0.023622047244094488,
+        "mean": 0.0030661273663076666,
+        "median": 0.0,
+        "min": 0.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      }
+    },
+    "train|web|human": {
+      "alignment_available_arms": 16,
+      "alignment_verified_arms": 16,
+      "distinct_scale_count_distribution": {
+        "7": 16
+      },
+      "han_count": {
+        "max": 183.0,
+        "mean": 166.3125,
+        "median": 174.0,
+        "min": 119.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "repeated_vector_fraction": {
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "selected_arms": 16,
+      "token_count": {
+        "max": 200.0,
+        "mean": 187.25,
+        "median": 195.5,
+        "min": 127.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      },
+      "topology_available_arms": 16,
+      "topology_reasons": {
+        "available": 16
+      },
+      "typed_missing_linguistic_values": 6,
+      "unknown_token_rate": {
+        "max": 0.02617801047120419,
+        "mean": 0.004791282504086807,
+        "median": 0.0,
+        "min": 0.0,
+        "n_finite": 16,
+        "n_total": 16,
+        "n_unavailable": 0
+      }
+    }
+  },
+  "paired_coverage": {
+    "train|baike": {
+      "finite_topology_pairs": 15,
+      "selected_pairs": 16,
+      "verified_alignment_pairs": 16
+    },
+    "train|web": {
+      "finite_topology_pairs": 16,
+      "selected_pairs": 16,
+      "verified_alignment_pairs": 16
+    }
+  },
+  "phase": "train",
+  "records": 64,
+  "selected_pairs": 32
+}
