@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "audit_scope": "Read-only saved-energy/formula/provenance/statistical checks, no estimator rerun",
+  "original_pilot_files_verified_unchanged": 47,
+  "all_128_cloud_hashes_match_pilot": true,
+  "saved_rerun_slopes_audited": 7680,
+  "saved_dimensions_audited": 2560,
+  "negative_dimensions_retained": 0,
+  "undefined_dimensions_retained": 0,
+  "dimensions_outside_2_18_retained": 22,
+  "maximum_independent_centered_slope_absolute_error": 1.2752021660844548e-12,
+  "all_cohort_means_and_mc_variances_reproduced": true,
+  "variance_decompositions_sum_to_total": true
+}

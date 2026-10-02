@@ -1,0 +1,344 @@
+{
+  "release_type": "aggregate_only_public_derivative",
+  "dataset_pin": "6846a7e21a3a91f29e1376fe4a0f27c4810f2f51",
+  "definition_version": "native-rs3-view-v1",
+  "scope": {
+    "development_documents": 5,
+    "one_time_test_documents": 5,
+    "exposed_documents": 10,
+    "primary_edus": 2237,
+    "primary_sentences": 666,
+    "primary_source_paragraphs": 275,
+    "download_bytes": 835362,
+    "download_files": 45,
+    "all_blobs_verified": true
+  },
+  "synthetic_tests": {
+    "tests_run": 12,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "note": "All examples invented; structural controls imply no perceptual quality judgement."
+  },
+  "frozen_test_panel_summary": {
+    "documents_requested": 5,
+    "documents_ok": 5,
+    "failed_documents": [],
+    "total_primary_edus": 1092,
+    "total_primary_paragraphs": 148,
+    "measurement_sensitivity": {
+      "native_mean_edu_depth": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.48874339938678196,
+        "min_absolute_difference": 0.019607843137254832,
+        "max_absolute_difference": 1.3285714285714292,
+        "document_rank_pair_flips": 2,
+        "document_rank_tie_changes": 0,
+        "unchanged_order_pairs": 8
+      },
+      "native_max_edu_depth": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.8,
+        "min_absolute_difference": 0,
+        "max_absolute_difference": 2,
+        "document_rank_pair_flips": 0,
+        "document_rank_tie_changes": 0,
+        "unchanged_order_pairs": 10
+      },
+      "normalized_max_depth": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.00339505343507458,
+        "min_absolute_difference": 0.0,
+        "max_absolute_difference": 0.00956937799043063,
+        "document_rank_pair_flips": 1,
+        "document_rank_tie_changes": 0,
+        "unchanged_order_pairs": 9
+      },
+      "group_branch_gt2_fraction": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.017433528962606793,
+        "min_absolute_difference": 0.011183673469387756,
+        "max_absolute_difference": 0.02606018283392586,
+        "document_rank_pair_flips": 3,
+        "document_rank_tie_changes": 0,
+        "unchanged_order_pairs": 7
+      },
+      "cross_paragraph_group_fraction": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.026310391418833293,
+        "min_absolute_difference": 0.00046620046620046707,
+        "max_absolute_difference": 0.04847003555104114,
+        "document_rank_pair_flips": 7,
+        "document_rank_tie_changes": 0,
+        "unchanged_order_pairs": 3
+      },
+      "satellite_edge_fraction": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.014384277206737272,
+        "min_absolute_difference": 0.0019194073408912438,
+        "max_absolute_difference": 0.03125950252387033,
+        "document_rank_pair_flips": 0,
+        "document_rank_tie_changes": 0,
+        "unchanged_order_pairs": 10
+      },
+      "paragraph_boundary_lca_mean_depth": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.3684828154747265,
+        "min_absolute_difference": 0.08108108108108159,
+        "max_absolute_difference": 0.6666666666666661,
+        "document_rank_pair_flips": 1,
+        "document_rank_tie_changes": 0,
+        "unchanged_order_pairs": 9
+      }
+    },
+    "agreement_macro": {
+      "annotation_agreement/group_yield": {
+        "n": 5,
+        "mean_f1": 0.7126474617042934,
+        "min_f1": 0.647887323943662,
+        "max_f1": 0.8
+      },
+      "annotation_agreement/native_edge_span": {
+        "n": 5,
+        "mean_f1": 0.5228507096545381,
+        "min_f1": 0.4562268803945746,
+        "max_f1": 0.6267539756782039
+      },
+      "annotation_agreement/native_edge_nuclearity": {
+        "n": 5,
+        "mean_f1": 0.49342698154348535,
+        "min_f1": 0.4217016029593095,
+        "max_f1": 0.5968194574368568
+      },
+      "annotation_agreement/native_edge_full": {
+        "n": 5,
+        "mean_f1": 0.40899190207295166,
+        "min_f1": 0.33648790746582546,
+        "max_f1": 0.5144995322731525
+      },
+      "double_rst_segmentation": {
+        "n": 5,
+        "mean_f1": 1.0,
+        "min_f1": 1.0,
+        "max_f1": 1.0
+      },
+      "pre_adjudication_segmentation": {
+        "n": 5,
+        "mean_f1": 0.9158540625614492,
+        "min_f1": 0.8976897689768977,
+        "max_f1": 0.9302325581395349
+      }
+    }
+  },
+  "original_evaluator_resources": {
+    "dev": {
+      "wall_seconds": 0.0709614219958894,
+      "cpu_seconds": 0.071027645,
+      "peak_rss_KiB": 17792,
+      "processes": 1,
+      "external_models": 0
+    },
+    "test": {
+      "wall_seconds": 0.15496725200500805,
+      "cpu_seconds": 0.155925262,
+      "peak_rss_KiB": 18432,
+      "processes": 1,
+      "external_models": 0
+    }
+  },
+  "independent_audit": {
+    "scope": "Independent read-only replay of exposed inputs; post-hoc diagnostic, not new held-out evaluation",
+    "checks": {
+      "frozen_hashes_match": true,
+      "downloaded_bytes_hashes_match": true,
+      "stored_feature_agreement_fields_match": 185,
+      "independently_checked_retention_graphs": 15,
+      "all_primary_and_alternate_streams_align": true,
+      "all_released_rs3_and_adjudicated_boundaries_equal": true,
+      "all_original_artifact_hashes_unchanged": true,
+      "synthetic_tests_passed": 12
+    },
+    "totals": {
+      "documents": 10,
+      "primary_paragraphs": 275,
+      "primary_sentences": 666,
+      "primary_edus": 2237,
+      "graphs": 15,
+      "native_vertices": 6351,
+      "native_edges": 6336
+    },
+    "agreement": {
+      "group_yield": {
+        "macro_f1": 0.7126474617042934,
+        "micro_f1": 0.7152250885179565,
+        "reference_count": 981,
+        "alternate_count": 996,
+        "matched": 707
+      },
+      "native_edge_span": {
+        "macro_f1": 0.5228507096545381,
+        "micro_f1": 0.5266200915442062,
+        "reference_count": 2068,
+        "alternate_count": 2083,
+        "matched": 1093
+      },
+      "native_edge_nuclearity": {
+        "macro_f1": 0.49342698154348535,
+        "micro_f1": 0.4967477716212961,
+        "reference_count": 2068,
+        "alternate_count": 2083,
+        "matched": 1031
+      },
+      "native_edge_full": {
+        "macro_f1": 0.40899190207295166,
+        "micro_f1": 0.4109853047458444,
+        "reference_count": 2068,
+        "alternate_count": 2083,
+        "matched": 853
+      },
+      "pre_adjudication_segmentation": {
+        "macro_f1": 0.9158540625614492,
+        "micro_f1": 0.9176800748362957,
+        "reference_count": 1087,
+        "alternate_count": 1051,
+        "matched": 981
+      }
+    },
+    "sensitivity": {
+      "native_mean_edu_depth": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.48874339938678196,
+        "max_absolute_difference": 1.3285714285714292,
+        "flips": 2,
+        "tie_changes": 0,
+        "unchanged": 8
+      },
+      "native_max_edu_depth": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.8,
+        "max_absolute_difference": 2,
+        "flips": 0,
+        "tie_changes": 0,
+        "unchanged": 10
+      },
+      "normalized_max_depth": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.00339505343507458,
+        "max_absolute_difference": 0.00956937799043063,
+        "flips": 1,
+        "tie_changes": 0,
+        "unchanged": 9
+      },
+      "group_branch_gt2_fraction": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.017433528962606793,
+        "max_absolute_difference": 0.02606018283392586,
+        "flips": 3,
+        "tie_changes": 0,
+        "unchanged": 7
+      },
+      "cross_paragraph_group_fraction": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.026310391418833293,
+        "max_absolute_difference": 0.04847003555104114,
+        "flips": 7,
+        "tie_changes": 0,
+        "unchanged": 3
+      },
+      "satellite_edge_fraction": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.014384277206737272,
+        "max_absolute_difference": 0.03125950252387033,
+        "flips": 0,
+        "tie_changes": 0,
+        "unchanged": 10
+      },
+      "paragraph_boundary_lca_mean_depth": {
+        "n_documents": 5,
+        "mean_absolute_difference": 0.3684828154747265,
+        "max_absolute_difference": 0.6666666666666661,
+        "flips": 1,
+        "tie_changes": 0,
+        "unchanged": 9
+      }
+    },
+    "encoding_diagnostic": {
+      "paired_group_aggregates": {
+        "primary": {
+          "groups": 981,
+          "crossing_groups": 131,
+          "unary_span_groups": 466,
+          "unary_crossing_groups": 50,
+          "duplicate_group_yields": 210,
+          "group_yield_equals_segment_yield": 256
+        },
+        "alternate": {
+          "groups": 996,
+          "crossing_groups": 150,
+          "unary_span_groups": 459,
+          "unary_crossing_groups": 58,
+          "duplicate_group_yields": 228,
+          "group_yield_equals_segment_yield": 231
+        }
+      },
+      "crossing_fraction_variants": {
+        "native_group_fraction": {
+          "macro_absolute_difference": 0.026310391418833293,
+          "flips": 7,
+          "tie_changes": 0,
+          "unchanged": 3
+        },
+        "deduplicated_group_yield_fraction": {
+          "macro_absolute_difference": 0.02174716950479213,
+          "flips": 6,
+          "tie_changes": 0,
+          "unchanged": 4
+        },
+        "all_nontrivial_unique_yield_fraction": {
+          "macro_absolute_difference": 0.02055133879069472,
+          "flips": 6,
+          "tie_changes": 0,
+          "unchanged": 4
+        },
+        "contracted_nonunary_group_fraction": {
+          "macro_absolute_difference": 0.02411423143192387,
+          "flips": 3,
+          "tie_changes": 0,
+          "unchanged": 7
+        }
+      },
+      "contracted_native_full_edge_macro_f1": 0.35426383329861044,
+      "interpretation": "Unary span-group contraction is an audit diagnostic, not canonical RST Parseval or a new selected metric. Raw differences combine rhetorical annotation and native encoding. Every contracted group had exactly one span-linked child; contraction retains all non-span relation labels. No attribution percentage is justified."
+    },
+    "layout_tag_counts": {
+      "section": 29,
+      "subsection": 25,
+      "subsubsection": 6,
+      "speaker": 17,
+      "block": 1,
+      "list": 15
+    },
+    "chronology": {
+      "freeze_clock_utc": "2026-10-02T01:55:15Z",
+      "freeze_executor_utc": "2026-10-02T01:55:29Z",
+      "first_logged_test_download_utc": "2026-10-02T01:55:35Z",
+      "limitation": "Local hashes and chronology are internally consistent; audit alone cannot attest absence of earlier unlogged body access or reruns."
+    },
+    "privacy": "Aggregate-only output; no source text, per-document scores, sentence hashes, full graphs, paragraph vectors, or source annotation bytes"
+  },
+  "exposure": {
+    "consumed_documents": 10,
+    "all_exposed": true,
+    "future_heldout_claim_permitted": false
+  },
+  "interpretation": "Frozen native representation retention passes. Report native annotation-plus-encoding sensitivity, not isolated semantic disagreement. Exploratory grouping checks do not replace the frozen result. No predictive parser or quality validation.",
+  "publication_exclusions": [
+    "source_text",
+    "annotated_source",
+    "full_graphs",
+    "per_document_numeric_records",
+    "per_paragraph_vectors",
+    "sentence_identity_hashes"
+  ],
+  "measurement_rerun_or_retuning_for_this_derivative": false
+}

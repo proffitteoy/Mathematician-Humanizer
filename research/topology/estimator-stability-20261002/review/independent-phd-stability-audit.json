@@ -1,0 +1,374 @@
+{
+  "status": "passed",
+  "scope": "Independent local saved-number/provenance replay; aggregate-only output",
+  "new_encoder_or_estimator_measurements": 0,
+  "remote_writes": 0,
+  "audit_script_sha256": "98cf95f6941327bf02a2ce6dc3efb3a6899b4030340dffa00cbafc9d6df39b3e",
+  "frozen_protocol_and_two_script_hashes_match": true,
+  "baseline_pilot_files_reverified_unchanged": 47,
+  "complete_cells": 128,
+  "unique_clouds": 102,
+  "identical_window_reuses": 26,
+  "seed_count": 20,
+  "saved_three_rerun_estimates_audited": 2560,
+  "saved_individual_slopes_audited": 7680,
+  "subset_plan_hashes_independently_replayed": 1060,
+  "all_same_n_same_seed_plan_hashes_agree": true,
+  "all_saved_cloud_hashes_match_pilot": true,
+  "maximum_centered_vs_saved_slope_absolute_error": 1.2754242106893798e-12,
+  "all_per_text_distributions_and_csv_reproduced": true,
+  "all_12_cohort_metric_domain_covariance_and_composition_tables_reproduced": true,
+  "release_allowlist_files_verified": 11,
+  "release_aggregate_schema_and_no_private_rows_verified": true,
+  "all_outcomes": {
+    "condition_cells": 128,
+    "distinct_clouds": 102,
+    "seeds_per_cell": 20,
+    "final_mean_slopes": 2560,
+    "individual_rerun_slopes": 7680,
+    "nonfinite_or_undefined_mean_slopes": 0,
+    "nonfinite_or_undefined_individual_slopes": 0,
+    "mean_slopes_below_zero": 0,
+    "mean_slopes_at_or_above_one": 0,
+    "individual_slopes_below_zero": 0,
+    "individual_slopes_at_or_above_one": 20,
+    "nonfinite_or_undefined_final_dimensions": 0,
+    "negative_final_dimensions": 0,
+    "final_dimensions_below_two": 0,
+    "final_dimensions_above_eighteen": 22,
+    "nonfinite_or_undefined_individual_transforms": 0,
+    "negative_individual_transforms": 20,
+    "condition_counts_include_26_identical_window_reuses": true
+  },
+  "distinct_cloud_outcomes": {
+    "clouds": 102,
+    "seed_reports": 2040,
+    "individual_reruns": 6120,
+    "individual_rerun_slopes_outside_0_1": 12,
+    "individual_rerun_negative_transforms": 12,
+    "final_dimensions_outside_2_18": 13,
+    "final_negative_dimensions": 0,
+    "final_undefined_dimensions": 0
+  },
+  "aggregate_results": {
+    "original_window": {
+      "mean_slope": {
+        "pooled": {
+          "mean_gap": 0.025597564386777683,
+          "seed_sd": 0.003168307461994847,
+          "full_seed_range": [
+            0.01989926598652919,
+            0.0333172633346076
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 11,
+          "single_schedule_mc_variance": 1.0038172173732229e-05,
+          "hypothetical_independent_pair_mc_variance": 6.106763262116181e-06,
+          "cross_pair_covariance_variance_contribution": 3.931408911616048e-06,
+          "variance_ratio_covariance_aware_to_independent": 1.6437794856081738,
+          "finite_mc_heterogeneity_correction": 9.567909791689578e-06,
+          "corrected_fixed_pair_heterogeneity_variance": 0.0008136728929960512,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 2.4380806952599675e-05,
+            "seed_main": 9.530668310873246e-06,
+            "interaction": 5.345333342635528e-06,
+            "total": 3.925680860610868e-05
+          }
+        },
+        "wikip": {
+          "mean_gap": 0.028796850387978072,
+          "seed_sd": 0.0038212145222876084,
+          "full_seed_range": [
+            0.024567536902711178,
+            0.04127744784683585
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 6,
+          "single_schedule_mc_variance": 1.4601680425341712e-05,
+          "hypothetical_independent_pair_mc_variance": 1.5190529848842246e-05,
+          "cross_pair_covariance_variance_contribution": -5.888494235005334e-07,
+          "variance_ratio_covariance_aware_to_independent": 0.9612357548182947,
+          "finite_mc_heterogeneity_correction": 1.218382918166049e-05,
+          "corrected_fixed_pair_heterogeneity_variance": 0.001047346521194448,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 6.234528397668044e-05,
+            "seed_main": 1.3894552261015147e-05,
+            "interaction": 1.3622772303985735e-05,
+            "total": 8.986260854168105e-05
+          }
+        },
+        "reddit": {
+          "mean_gap": 0.02239827838557729,
+          "seed_sd": 0.003858087628530168,
+          "full_seed_range": [
+            0.014331200191150029,
+            0.02753642418155567
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 5,
+          "single_schedule_mc_variance": 1.4884840149417536e-05,
+          "hypothetical_independent_pair_mc_variance": 9.236523199622479e-06,
+          "cross_pair_covariance_variance_contribution": 5.6483169497950575e-06,
+          "variance_ratio_covariance_aware_to_independent": 1.6115198140817661,
+          "finite_mc_heterogeneity_correction": 7.087974989042247e-06,
+          "corrected_fixed_pair_heterogeneity_variance": 0.0006129104144388967,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 3.568023055883257e-05,
+            "seed_main": 1.4100803650678276e-05,
+            "interaction": 7.87775940668357e-06,
+            "total": 5.765879361619439e-05
+          }
+        }
+      },
+      "dimension": {
+        "pooled": {
+          "mean_gap": 1.587708969574118,
+          "seed_sd": 0.3577477396732222,
+          "full_seed_range": [
+            0.990200112887371,
+            2.1681667714360118
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 11,
+          "single_schedule_mc_variance": 0.12798344524129965,
+          "hypothetical_independent_pair_mc_variance": 0.09118818492955875,
+          "cross_pair_covariance_variance_contribution": 0.03679526031174089,
+          "variance_ratio_covariance_aware_to_independent": 1.4035090767533598,
+          "finite_mc_heterogeneity_correction": 0.1440019856776558,
+          "corrected_fixed_pair_heterogeneity_variance": 3.7953502069313916,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 0.11764698607299504,
+            "seed_main": 0.12149668645446192,
+            "interaction": 0.08036587091571891,
+            "total": 0.31950954344317556
+          }
+        },
+        "wikip": {
+          "mean_gap": 1.468289727892974,
+          "seed_sd": 0.4754530949514036,
+          "full_seed_range": [
+            0.3121863322123115,
+            2.472805562156867
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 6,
+          "single_schedule_mc_variance": 0.22605564549886836,
+          "hypothetical_independent_pair_mc_variance": 0.26575907993947073,
+          "cross_pair_covariance_variance_contribution": -0.03970343444060237,
+          "variance_ratio_covariance_aware_to_independent": 0.8506036578330824,
+          "finite_mc_heterogeneity_correction": 0.2147247804550754,
+          "corrected_fixed_pair_heterogeneity_variance": 5.18031195129157,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 0.31664156680668265,
+            "seed_main": 0.21582957639849046,
+            "interaction": 0.24035721208710759,
+            "total": 0.7728283552922836
+          }
+        },
+        "reddit": {
+          "mean_gap": 1.707128211255262,
+          "seed_sd": 0.3886438240723351,
+          "full_seed_range": [
+            1.0604784776177596,
+            2.3207577702956947
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 5,
+          "single_schedule_mc_variance": 0.15104402198956812,
+          "hypothetical_independent_pair_mc_variance": 0.09899365977876427,
+          "cross_pair_covariance_variance_contribution": 0.05205036221080385,
+          "variance_ratio_covariance_aware_to_independent": 1.5257949077458948,
+          "finite_mc_heterogeneity_correction": 0.07641890850510188,
+          "corrected_fixed_pair_heterogeneity_variance": 2.6394488532017255,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 0.15901367036272,
+            "seed_main": 0.14401619223726425,
+            "interaction": 0.08578262267113508,
+            "total": 0.38881248527111806
+          }
+        }
+      }
+    },
+    "matched_reencoded": {
+      "mean_slope": {
+        "pooled": {
+          "mean_gap": 0.019982654642840443,
+          "seed_sd": 0.003368213854472585,
+          "full_seed_range": [
+            0.014528802791139734,
+            0.026442110426209857
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 18,
+          "single_schedule_mc_variance": 1.1344864569461069e-05,
+          "hypothetical_independent_pair_mc_variance": 1.0323016530276574e-05,
+          "cross_pair_covariance_variance_contribution": 1.0218480391844952e-06,
+          "variance_ratio_covariance_aware_to_independent": 1.0989873489195234,
+          "finite_mc_heterogeneity_correction": 1.6464085904484606e-05,
+          "corrected_fixed_pair_heterogeneity_variance": 0.0012296579121123285,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 3.7172352192443614e-05,
+            "seed_main": 1.0722050084345247e-05,
+            "interaction": 9.138248702254308e-06,
+            "total": 5.7032650979043246e-05
+          }
+        },
+        "wikip": {
+          "mean_gap": 0.01995067907047241,
+          "seed_sd": 0.003959500478508038,
+          "full_seed_range": [
+            0.015533271166682405,
+            0.031754216464482114
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 9,
+          "single_schedule_mc_variance": 1.5677644039305382e-05,
+          "hypothetical_independent_pair_mc_variance": 2.452531401980791e-05,
+          "cross_pair_covariance_variance_contribution": -8.84766998050253e-06,
+          "variance_ratio_covariance_aware_to_independent": 0.6392433559318876,
+          "finite_mc_heterogeneity_correction": 2.0092126948139795e-05,
+          "corrected_fixed_pair_heterogeneity_variance": 0.0011562727604814093,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 6.919875614425948e-05,
+            "seed_main": 1.4911583975874685e-05,
+            "interaction": 2.2504812981212163e-05,
+            "total": 0.00010661515310134637
+          }
+        },
+        "reddit": {
+          "mean_gap": 0.020014630215208475,
+          "seed_sd": 0.005081199048169758,
+          "full_seed_range": [
+            0.011816899984666972,
+            0.030939061133620965
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 9,
+          "single_schedule_mc_variance": 2.581858376712125e-05,
+          "hypothetical_independent_pair_mc_variance": 1.676675210129839e-05,
+          "cross_pair_covariance_variance_contribution": 9.05183166582286e-06,
+          "variance_ratio_covariance_aware_to_independent": 1.5398679249943643,
+          "finite_mc_heterogeneity_correction": 1.2930637325528159e-05,
+          "corrected_fixed_pair_heterogeneity_variance": 0.0013860210899469163,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 8.058117948404349e-05,
+            "seed_main": 2.4340373920627772e-05,
+            "interaction": 1.4377995172140114e-05,
+            "total": 0.00011929954857681127
+          }
+        }
+      },
+      "dimension": {
+        "pooled": {
+          "mean_gap": 1.0657773338309315,
+          "seed_sd": 0.5530762244659385,
+          "full_seed_range": [
+            -0.5604047283135931,
+            1.707519076028398
+          ],
+          "negative_seed_means": 1,
+          "pairs_with_seed_sign_variation": 18,
+          "single_schedule_mc_variance": 0.3058933100694973,
+          "hypothetical_independent_pair_mc_variance": 0.20210646412110478,
+          "cross_pair_covariance_variance_contribution": 0.10378684594839255,
+          "variance_ratio_covariance_aware_to_independent": 1.513525613343085,
+          "finite_mc_heterogeneity_correction": 0.3180136021577217,
+          "corrected_fixed_pair_heterogeneity_variance": 6.74388753591861,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 0.208901122988431,
+            "seed_main": 0.2835610722475527,
+            "interaction": 0.176520072348052,
+            "total": 0.6689822675840356
+          }
+        },
+        "wikip": {
+          "mean_gap": 0.9504177051451167,
+          "seed_sd": 0.5082606432455572,
+          "full_seed_range": [
+            0.0767507292070817,
+            1.927494614234644
+          ],
+          "negative_seed_means": 0,
+          "pairs_with_seed_sign_variation": 9,
+          "single_schedule_mc_variance": 0.25832888147238753,
+          "hypothetical_independent_pair_mc_variance": 0.33120661080091374,
+          "cross_pair_covariance_variance_contribution": -0.07287772932852621,
+          "variance_ratio_covariance_aware_to_independent": 0.7799629386856274,
+          "finite_mc_heterogeneity_correction": 0.2688521008715856,
+          "corrected_fixed_pair_heterogeneity_variance": 5.49521975400691,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 0.33654573827262985,
+            "seed_main": 0.24657212286598776,
+            "interaction": 0.300960938702348,
+            "total": 0.8840787998409655
+          }
+        },
+        "reddit": {
+          "mean_gap": 1.1811369625167463,
+          "seed_sd": 0.7772489661757597,
+          "full_seed_range": [
+            -1.2844646835151945,
+            2.3691147058469353
+          ],
+          "negative_seed_means": 1,
+          "pairs_with_seed_sign_variation": 9,
+          "single_schedule_mc_variance": 0.6041159554212876,
+          "hypothetical_independent_pair_mc_variance": 0.4772192456835055,
+          "cross_pair_covariance_variance_contribution": 0.1268967097377821,
+          "variance_ratio_covariance_aware_to_independent": 1.2659086172353173,
+          "finite_mc_heterogeneity_correction": 0.37500757202745605,
+          "corrected_fixed_pair_heterogeneity_variance": 8.427126191400001,
+          "empirical_variance_decomposition": {
+            "pair_composition_main": 0.5054556739317667,
+            "seed_main": 0.5571145728041076,
+            "interaction": 0.41231698195242855,
+            "total": 1.4748872286883008
+          }
+        }
+      }
+    }
+  },
+  "arithmetic_check_counts": {
+    "upstream OLS arithmetic replay": 7680,
+    "independent centered OLS replay": 7680,
+    "saved centered OLS replay": 7680,
+    "individual reciprocal replay": 7680,
+    "intercept replay": 7680,
+    "fit diagnostic replay": 7680,
+    "distribution scalar replay": 2120,
+    "distribution quantile replay": 424,
+    "pole distance replay": 128,
+    "scale span replay": 128,
+    "transform order replay": 128,
+    "delta method replay": 128,
+    "delta ratio replay": 128,
+    "cohort mean replay": 12,
+    "cohort seed mean replay": 12,
+    "covariance and heterogeneity replay": 72,
+    "cohort variance identity": 12,
+    "private paired evidence replay": 256,
+    "private paired scalar replay": 1024,
+    "exact variance decomposition identity": 12,
+    "zero interaction column means": 12,
+    "zero interaction row means": 12,
+    "empirical variance component replay": 48,
+    "variance fraction replay": 36,
+    "empirical range replay": 36,
+    "length correlation replay": 72,
+    "CSV scalar replay": 1280,
+    "CSV distribution replay": 1152,
+    "summary integrity check replay": 11,
+    "released within-text aggregate replay": 12,
+    "released value range replay": 4,
+    "released delta ratio replay": 6,
+    "released transform order replay": 2
+  },
+  "limits": [
+    "This audit verifies saved cloud-hash correspondence and encoder hash-checking code, not newly materialized cloud bytes; no re-encoding was authorized or done.",
+    "Stored hashes verify current content identity. Chronology, absence of unrecorded earlier runs, and original resource/network history rely on retained run records and inspected code, not external attestation.",
+    "Only the exposed fixed cohort and declared schedules are covered. Seed spread and empirical composition ranges are not population confidence intervals or a calibrated reversal probability.",
+    "The twenty-schedule MC variance division and finite-MC correction use the declared random-schedule model; twenty schedules do not establish rare-tail or finite-moment behavior.",
+    "Equal-length re-encoding changes context as well as N. Finite-N bias and encoder, generator, source and domain shifts are not identified.",
+    "The public aggregate-only bundle cannot reconstruct withheld per-text measurements by itself."
+  ]
+}

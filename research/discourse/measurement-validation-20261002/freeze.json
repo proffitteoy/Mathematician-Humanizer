@@ -1,0 +1,18 @@
+{
+  "definition_version": "native-rs3-view-v1",
+  "freeze_utc_from_clock_tool": "2026-10-02T01:55:15Z",
+  "executor_timestamp": "2026-10-02T01:55:29Z",
+  "clock_note": "Authoritative session time is clock tool; executor clock may differ. Freeze is before any test source download. Prior work inspected only test metadata headers.",
+  "sha256": {
+    "PROTOCOL.md": "b3dfa62ec26abe367bf45563b74fbb857a89f2e01619b094cb5ecee0e9d22031",
+    "evaluate.py": "db99a1ac2443339eccb541a8c926aa08c8f64739ca0f6d8a42b6ac30c1e55f10",
+    "fetch_phase.py": "187d270fe9acbdd994437d2d0e0ceb62ebee7c484959eccab1e4513e96487246",
+    "test_synthetic.py": "bcc0fc809efa41e3cf77e230bb58e9eda24cfa07916b26dd2a7403180a1dddc6"
+  },
+  "development_documents": 5,
+  "test_bodies_accessed_before_freeze": 0,
+  "dev_edus": 1145,
+  "dev_source_paragraphs": 127,
+  "synthetic_tests_passed": 12,
+  "run_policy": "One frozen test evaluation; no silent retuning. All consumed docs exposed thereafter."
+}

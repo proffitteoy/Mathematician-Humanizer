@@ -1,0 +1,92 @@
+{
+  "scope": "Aggregate-only release; no remote writes performed",
+  "file_allowlist": [
+    "README.md",
+    "RELEASE_MANIFEST.json",
+    "STABILITY_PROTOCOL.md",
+    "STABILITY_REPORT.md",
+    "aggregate-results.json",
+    "analyze_stability.py",
+    "audit_saved_results.py",
+    "prepare_aggregate_release.py",
+    "run-manifest.json",
+    "run_stability.py",
+    "verification.json"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2101,
+      "sha256": "2365a4c97a3a8641fc43064464b22edc89f14ddede9893b364fe1121d3d7d4fa"
+    },
+    {
+      "path": "STABILITY_PROTOCOL.md",
+      "bytes": 8192,
+      "sha256": "2636a1371c5454512e3f13e0cfd3313804e4ab0faf4adda62a0773d59e4eaaf9"
+    },
+    {
+      "path": "STABILITY_REPORT.md",
+      "bytes": 14772,
+      "sha256": "f3257c1ec971ed048bc07202fa82560f1a662260df27f46d4a71a6f41dc6fc1c"
+    },
+    {
+      "path": "aggregate-results.json",
+      "bytes": 87106,
+      "sha256": "ceb46785f4ba1031aeffc0e028666c1835988a402d100d6f1f6521f92bc07d51"
+    },
+    {
+      "path": "analyze_stability.py",
+      "bytes": 10477,
+      "sha256": "9159a9aba19619018a13142f32f0a095d673b6e9b443e748987c3dfdb3fb114f"
+    },
+    {
+      "path": "audit_saved_results.py",
+      "bytes": 4280,
+      "sha256": "1de569f683e3670bef95517804727994815f127a2f17936d9acaf0e117b63ecf"
+    },
+    {
+      "path": "prepare_aggregate_release.py",
+      "bytes": 5239,
+      "sha256": "d6a18f11355c1817893da7000f35998dd8032e83627af339f3a53b24b5b2b133"
+    },
+    {
+      "path": "run-manifest.json",
+      "bytes": 2474,
+      "sha256": "bff24c5316472d4aa00b30b8bfe2eaebd49dd7fd0dae30ca48addbfe4a56c39f"
+    },
+    {
+      "path": "run_stability.py",
+      "bytes": 12334,
+      "sha256": "1ea77995f42530f9275e7197b21fe10fd3ff3e7427914936e319ac7b292d6d87"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 593,
+      "sha256": "c7420408f8cba8d02ede71409061a0e003e6b84161ff00e35fef41d412bf57af"
+    }
+  ],
+  "excluded_local_files": [
+    "measurements.jsonl",
+    "stability-summary.json",
+    "per-text-stability.csv",
+    "pilot-baseline-hashes.json",
+    "execution.log"
+  ],
+  "excluded_categories": [
+    "raw source texts",
+    "source archives",
+    "embeddings",
+    "model files",
+    "per-text/per-seed numerical evidence",
+    "per-pair contrasts",
+    "source indices and individual cloud hashes"
+  ],
+  "release_checks": {
+    "aggregate_json_contains_no_per_sample_rows": true,
+    "all_published_results_aggregate_only": true,
+    "frozen_protocol_and_run_code_hashes_preserved": true,
+    "private_row_key_scan_passed": true
+  },
+  "derived_directory_bytes_after_report": 9848051,
+  "release_file_count": 11
+}

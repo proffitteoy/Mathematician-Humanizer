@@ -1,0 +1,82 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-02T01:59:37.550686+00:00",
+  "protocol_sha256": "2636a1371c5454512e3f13e0cfd3313804e4ab0faf4adda62a0773d59e4eaaf9",
+  "selection_sha256": "a4b31b5982c5107adab88a2fca25989c19df4e3b193ceedea50ba946cce5f1b5",
+  "seeds": [
+    20261010,
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029
+  ],
+  "script_hashes": {
+    "run_stability.py": "1ea77995f42530f9275e7197b21fe10fd3ff3e7427914936e319ac7b292d6d87",
+    "analyze_stability.py": "9159a9aba19619018a13142f32f0a095d673b6e9b443e748987c3dfdb3fb114f"
+  },
+  "limits": {
+    "wall_seconds": 1800,
+    "rss_bytes": 3221225472,
+    "new_disk_bytes": 524288000,
+    "total_working_bytes": 3000000000,
+    "cpu_count": 2
+  },
+  "cpu_affinity": [
+    0,
+    1
+  ],
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "1.26.4",
+    "scipy": "1.17.0",
+    "torch": "2.3.1+cpu",
+    "transformers": "4.41.2"
+  },
+  "new_network_requests": 0,
+  "new_model_or_data_downloads": 0,
+  "baseline_working_bytes": 1433506117,
+  "completed_cells": 128,
+  "computed_distinct_clouds": 102,
+  "reused_cells": 26,
+  "synthetic_checks": {
+    "synthetic_energy_exact_parity": true,
+    "synthetic_slope_parity_atol": 1e-12,
+    "singular_and_negative_transform_checks": true
+  },
+  "model_revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+  "elapsed_seconds": 164.65189678499883,
+  "peak_rss_kib": 1339944,
+  "new_derived_bytes": 9689130,
+  "all_128_cloud_hashes_match_pilot": true,
+  "analysis": {
+    "distinct_cloud_hashes": 102,
+    "all_duplicate_cloud_reports_equal": true,
+    "maximum_upstream_vs_centered_slope_absolute_error": 1.2754242106893798e-12,
+    "total_cloud_seed_reports": 2560,
+    "distinct_cloud_seed_reports": 2040,
+    "total_rerun_slopes_with_duplicate_conditions": 7680,
+    "undefined_dimensions_with_duplicate_conditions": 0,
+    "negative_dimensions_with_duplicate_conditions": 0,
+    "out_of_0_1_mean_slopes_with_duplicate_conditions": 0,
+    "out_of_0_1_rerun_slopes_with_duplicate_conditions": 20,
+    "dimensions_outside_2_18_with_duplicate_conditions": 22
+  },
+  "original_pilot_artifacts_unchanged": true,
+  "verified_original_file_count": 47,
+  "ended_utc": "2026-10-02T02:02:18.882287+00:00"
+}
