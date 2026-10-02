@@ -1,0 +1,15 @@
+test_aggregate_exact_arithmetic (__main__.Tests.test_aggregate_exact_arithmetic) ... ok
+test_all_spans_cover_original_bytes (__main__.Tests.test_all_spans_cover_original_bytes) ... ok
+test_bibliographic_labels_not_prose (__main__.Tests.test_bibliographic_labels_not_prose) ... ok
+test_html_math_reference_are_separate (__main__.Tests.test_html_math_reference_are_separate) ... ok
+test_list_continuations_and_boundaries (__main__.Tests.test_list_continuations_and_boundaries) ... ok
+test_longer_fence_is_not_closed_by_shorter_fence (__main__.Tests.test_longer_fence_is_not_closed_by_shorter_fence) ... ok
+test_original_13_frozen_unchanged (__main__.Tests.test_original_13_frozen_unchanged) ... ok
+test_original_denominator_identities_and_no_replacements (__main__.Tests.test_original_denominator_identities_and_no_replacements) ... ok
+test_preserved_first_pass_and_authorized_retry (__main__.Tests.test_preserved_first_pass_and_authorized_retry) ... ok
+test_resource_and_publication_boundaries (__main__.Tests.test_resource_and_publication_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.064s
+
+OK

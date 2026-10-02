@@ -1,0 +1,69 @@
+{
+  "documents_measured": 13,
+  "source_repositories": 3,
+  "declared_blog_bylines": 2,
+  "named_interview_respondent_units": 3,
+  "declared_production_units_total": 5,
+  "respondents_are_not_verified_authors_of_all_words": true,
+  "source_text_bytes": 133637,
+  "all_git_blobs_verified": true,
+  "prose_candidate_han_total": 37183,
+  "prose_candidate_han_min_median_max": [
+    1125,
+    2437,
+    4789
+  ],
+  "prose_candidate_block_min_median_max": [
+    9,
+    15,
+    32
+  ],
+  "longform_screen_count": 13,
+  "longform_definition": "at least 1000 Han characters in prose/list-continuation candidates and 8 such contiguous paragraph-like blocks; operational diagnostic, not linguistic gold",
+  "genre_counts_provisional": {
+    "elicited_interview": 3,
+    "argumentative_essay": 5,
+    "personal_narrative": 2,
+    "reflective_essay": 2,
+    "experiential_advice": 1
+  },
+  "unit_by_genre_counts_provisional": {
+    "hb": {
+      "elicited_interview": 1
+    },
+    "Sofish": {
+      "elicited_interview": 1
+    },
+    "ZachSaw": {
+      "elicited_interview": 1
+    },
+    "Yihui Xie / 谢益辉": {
+      "argumentative_essay": 2,
+      "personal_narrative": 2
+    },
+    "Miao Yu / 于淼": {
+      "reflective_essay": 2,
+      "experiential_advice": 1,
+      "argumentative_essay": 3
+    }
+  },
+  "documents_per_unit": {
+    "hb": 1,
+    "Sofish": 1,
+    "ZachSaw": 1,
+    "Yihui Xie / 谢益辉": 4,
+    "Miao Yu / 于淼": 6
+  },
+  "effective_units_document_weight_hhi": 3.0727272727272728,
+  "assistance_verified_unassisted_documents": 0,
+  "model_admitted_documents": 0,
+  "raw_corpus_redistributed": false,
+  "parser_limitations": [
+    "line/block scanner, not complete Markdown renderer",
+    "keeps list continuations distinct; does not flatten them through removed headings or quotes",
+    "inline reported speech, indirect quotations, footnotes and book paraphrases are not fully attributed",
+    "question/prose labels are single-reviewer source-format diagnostics",
+    "no cross-source near-duplicate corpus search or population inference"
+  ],
+  "exact_source_duplicate_groups": 0
+}

@@ -1,0 +1,739 @@
+{
+  "schema": "pinned-longform-aggregate-audit/2.0",
+  "original_candidate_denominator": 221,
+  "acquired_verified_measured": 221,
+  "failed_or_unattempted": 0,
+  "overall": {
+    "documents": 221,
+    "raw_source_bytes": 2790922,
+    "source_unicode_characters": {
+      "total": 1064318,
+      "min": 2108,
+      "median": 3542,
+      "max": 33817
+    },
+    "source_han_characters": {
+      "total": 795206,
+      "min": 1350,
+      "median": 2802,
+      "max": 29903
+    },
+    "prose_candidate_unicode_characters": {
+      "total": 782707,
+      "min": 0,
+      "median": 3060,
+      "max": 30096
+    },
+    "prose_candidate_han_characters": {
+      "total": 661981,
+      "min": 0,
+      "median": 2567,
+      "max": 27359
+    },
+    "prose_candidate_paragraph_like_blocks": {
+      "total": 4104,
+      "min": 0,
+      "median": 12,
+      "max": 215
+    },
+    "longform_screen_ge1000han_ge8blocks": 191,
+    "legacy_sample_scanner_longform_count": 191,
+    "longform_legacy_v2_disagreement_count": 0,
+    "script_diagnostic_counts": {
+      "Han-dominant": 219,
+      "mixed-Han-Latin": 1,
+      "no-eligible-prose-letters": 1
+    },
+    "whole_source_script_diagnostic_counts": {
+      "Han-dominant": 212,
+      "mixed-or-Latin-heavy": 9
+    },
+    "role_totals": {
+      "bibliographic_or_contributor_label": {
+        "utf8_bytes": 51147,
+        "unicode_characters": 42588,
+        "han_characters": 3276,
+        "ascii_latin_letters": 25478,
+        "blocks": 985
+      },
+      "blank": {
+        "utf8_bytes": 7457,
+        "unicode_characters": 7457,
+        "han_characters": 0,
+        "ascii_latin_letters": 0,
+        "blocks": 7253
+      },
+      "display_math": {
+        "utf8_bytes": 1851,
+        "unicode_characters": 1563,
+        "han_characters": 125,
+        "ascii_latin_letters": 381,
+        "blocks": 42
+      },
+      "fenced_code": {
+        "utf8_bytes": 27491,
+        "unicode_characters": 24029,
+        "han_characters": 1713,
+        "ascii_latin_letters": 9999,
+        "blocks": 90
+      },
+      "frontmatter": {
+        "utf8_bytes": 21587,
+        "unicode_characters": 18857,
+        "han_characters": 1317,
+        "ascii_latin_letters": 8650,
+        "blocks": 221
+      },
+      "heading": {
+        "utf8_bytes": 9283,
+        "unicode_characters": 4609,
+        "han_characters": 2271,
+        "ascii_latin_letters": 224,
+        "blocks": 436
+      },
+      "html_block": {
+        "utf8_bytes": 25193,
+        "unicode_characters": 8651,
+        "han_characters": 7243,
+        "ascii_latin_letters": 94,
+        "blocks": 16
+      },
+      "image_reference": {
+        "utf8_bytes": 11109,
+        "unicode_characters": 10495,
+        "han_characters": 276,
+        "ascii_latin_letters": 6459,
+        "blocks": 140
+      },
+      "indented_ambiguous": {
+        "utf8_bytes": 414,
+        "unicode_characters": 168,
+        "han_characters": 114,
+        "ascii_latin_letters": 32,
+        "blocks": 1
+      },
+      "list_continuation_prose": {
+        "utf8_bytes": 32840,
+        "unicode_characters": 12706,
+        "han_characters": 9105,
+        "ascii_latin_letters": 1355,
+        "blocks": 85
+      },
+      "list_item": {
+        "utf8_bytes": 251794,
+        "unicode_characters": 96416,
+        "han_characters": 71811,
+        "ascii_latin_letters": 9482,
+        "blocks": 1316
+      },
+      "marked_quote": {
+        "utf8_bytes": 165100,
+        "unicode_characters": 66124,
+        "han_characters": 44959,
+        "ascii_latin_letters": 10902,
+        "blocks": 654
+      },
+      "prose_candidate": {
+        "utf8_bytes": 2184752,
+        "unicode_characters": 770001,
+        "han_characters": 652876,
+        "ascii_latin_letters": 34699,
+        "blocks": 4019
+      },
+      "standalone_url": {
+        "utf8_bytes": 147,
+        "unicode_characters": 147,
+        "han_characters": 0,
+        "ascii_latin_letters": 75,
+        "blocks": 1
+      },
+      "table_candidate": {
+        "utf8_bytes": 662,
+        "unicode_characters": 412,
+        "han_characters": 120,
+        "ascii_latin_letters": 27,
+        "blocks": 3
+      },
+      "thematic_break": {
+        "utf8_bytes": 95,
+        "unicode_characters": 95,
+        "han_characters": 0,
+        "ascii_latin_letters": 0,
+        "blocks": 17
+      }
+    },
+    "documents_with_role": {
+      "frontmatter": 221,
+      "blank": 221,
+      "prose_candidate": 219,
+      "image_reference": 35,
+      "marked_quote": 46,
+      "list_item": 64,
+      "list_continuation_prose": 6,
+      "thematic_break": 6,
+      "fenced_code": 11,
+      "indented_ambiguous": 1,
+      "table_candidate": 3,
+      "heading": 55,
+      "html_block": 7,
+      "display_math": 12,
+      "bibliographic_or_contributor_label": 7,
+      "standalone_url": 1
+    },
+    "lexical_review_flag_document_counts": {
+      "marked_quotation": 46,
+      "inline_quote_opening_mark": 145,
+      "minor_family_terms": 95,
+      "email_like_string": 2,
+      "administrative_call_terms": 59,
+      "reprint_translation_rights_terms": 32,
+      "repeated_named_contributor_pattern": 7
+    },
+    "unclosed_syntax_document_counts": {}
+  },
+  "screen_positive_subset": {
+    "documents": 191,
+    "raw_source_bytes": 2412977,
+    "source_unicode_characters": {
+      "total": 896403,
+      "min": 2108,
+      "median": 3622,
+      "max": 33817
+    },
+    "source_han_characters": {
+      "total": 698569,
+      "min": 1350,
+      "median": 2849,
+      "max": 29903
+    },
+    "prose_candidate_unicode_characters": {
+      "total": 738729,
+      "min": 1342,
+      "median": 3287,
+      "max": 30096
+    },
+    "prose_candidate_han_characters": {
+      "total": 624634,
+      "min": 1047,
+      "median": 2789,
+      "max": 27359
+    },
+    "prose_candidate_paragraph_like_blocks": {
+      "total": 3954,
+      "min": 8,
+      "median": 13,
+      "max": 215
+    },
+    "longform_screen_ge1000han_ge8blocks": 191,
+    "legacy_sample_scanner_longform_count": 191,
+    "longform_legacy_v2_disagreement_count": 0,
+    "script_diagnostic_counts": {
+      "Han-dominant": 191
+    },
+    "whole_source_script_diagnostic_counts": {
+      "Han-dominant": 187,
+      "mixed-or-Latin-heavy": 4
+    },
+    "role_totals": {
+      "blank": {
+        "utf8_bytes": 5666,
+        "unicode_characters": 5666,
+        "han_characters": 0,
+        "ascii_latin_letters": 0,
+        "blocks": 5510
+      },
+      "display_math": {
+        "utf8_bytes": 1851,
+        "unicode_characters": 1563,
+        "han_characters": 125,
+        "ascii_latin_letters": 381,
+        "blocks": 42
+      },
+      "fenced_code": {
+        "utf8_bytes": 20016,
+        "unicode_characters": 17882,
+        "han_characters": 1049,
+        "ascii_latin_letters": 7899,
+        "blocks": 84
+      },
+      "frontmatter": {
+        "utf8_bytes": 18486,
+        "unicode_characters": 16116,
+        "han_characters": 1139,
+        "ascii_latin_letters": 7389,
+        "blocks": 191
+      },
+      "heading": {
+        "utf8_bytes": 7972,
+        "unicode_characters": 3874,
+        "han_characters": 1983,
+        "ascii_latin_letters": 224,
+        "blocks": 344
+      },
+      "html_block": {
+        "utf8_bytes": 25193,
+        "unicode_characters": 8651,
+        "han_characters": 7243,
+        "ascii_latin_letters": 94,
+        "blocks": 16
+      },
+      "image_reference": {
+        "utf8_bytes": 10938,
+        "unicode_characters": 10324,
+        "han_characters": 276,
+        "ascii_latin_letters": 6333,
+        "blocks": 137
+      },
+      "indented_ambiguous": {
+        "utf8_bytes": 414,
+        "unicode_characters": 168,
+        "han_characters": 114,
+        "ascii_latin_letters": 32,
+        "blocks": 1
+      },
+      "list_continuation_prose": {
+        "utf8_bytes": 31203,
+        "unicode_characters": 12109,
+        "han_characters": 8647,
+        "ascii_latin_letters": 1344,
+        "blocks": 79
+      },
+      "list_item": {
+        "utf8_bytes": 73167,
+        "unicode_characters": 31810,
+        "han_characters": 18943,
+        "ascii_latin_letters": 5959,
+        "blocks": 547
+      },
+      "marked_quote": {
+        "utf8_bytes": 155531,
+        "unicode_characters": 61159,
+        "han_characters": 42943,
+        "ascii_latin_letters": 8793,
+        "blocks": 635
+      },
+      "prose_candidate": {
+        "utf8_bytes": 2061829,
+        "unicode_characters": 726620,
+        "han_characters": 615987,
+        "ascii_latin_letters": 32457,
+        "blocks": 3875
+      },
+      "table_candidate": {
+        "utf8_bytes": 662,
+        "unicode_characters": 412,
+        "han_characters": 120,
+        "ascii_latin_letters": 27,
+        "blocks": 3
+      },
+      "thematic_break": {
+        "utf8_bytes": 49,
+        "unicode_characters": 49,
+        "han_characters": 0,
+        "ascii_latin_letters": 0,
+        "blocks": 8
+      }
+    },
+    "documents_with_role": {
+      "frontmatter": 191,
+      "blank": 191,
+      "prose_candidate": 190,
+      "image_reference": 34,
+      "marked_quote": 41,
+      "list_item": 45,
+      "thematic_break": 4,
+      "fenced_code": 10,
+      "indented_ambiguous": 1,
+      "list_continuation_prose": 5,
+      "table_candidate": 3,
+      "heading": 44,
+      "html_block": 7,
+      "display_math": 12
+    },
+    "lexical_review_flag_document_counts": {
+      "marked_quotation": 41,
+      "inline_quote_opening_mark": 123,
+      "minor_family_terms": 81,
+      "email_like_string": 2,
+      "administrative_call_terms": 50,
+      "reprint_translation_rights_terms": 28
+    },
+    "unclosed_syntax_document_counts": {}
+  },
+  "frontmatter_author_field_counts": {
+    "yihui": {
+      "absent": 49
+    },
+    "yufree": {
+      "absent": 31,
+      "explicit_empty": 108,
+      "explicit_nonempty": 33
+    }
+  },
+  "by_source": {
+    "yihui": {
+      "documents": 49,
+      "raw_source_bytes": 761628,
+      "source_unicode_characters": {
+        "total": 291513,
+        "min": 2232,
+        "median": 3792,
+        "max": 21680
+      },
+      "source_han_characters": {
+        "total": 213025,
+        "min": 1350,
+        "median": 2539,
+        "max": 18711
+      },
+      "prose_candidate_unicode_characters": {
+        "total": 180375,
+        "min": 356,
+        "median": 2612,
+        "max": 21314
+      },
+      "prose_candidate_han_characters": {
+        "total": 139817,
+        "min": 110,
+        "median": 2023,
+        "max": 18625
+      },
+      "prose_candidate_paragraph_like_blocks": {
+        "total": 1280,
+        "min": 1,
+        "median": 13,
+        "max": 158
+      },
+      "longform_screen_ge1000han_ge8blocks": 44,
+      "legacy_sample_scanner_longform_count": 44,
+      "longform_legacy_v2_disagreement_count": 0,
+      "script_diagnostic_counts": {
+        "Han-dominant": 48,
+        "mixed-Han-Latin": 1
+      },
+      "whole_source_script_diagnostic_counts": {
+        "Han-dominant": 48,
+        "mixed-or-Latin-heavy": 1
+      },
+      "role_totals": {
+        "blank": {
+          "utf8_bytes": 2376,
+          "unicode_characters": 2376,
+          "han_characters": 0,
+          "ascii_latin_letters": 0,
+          "blocks": 2192
+        },
+        "fenced_code": {
+          "utf8_bytes": 3293,
+          "unicode_characters": 3269,
+          "han_characters": 12,
+          "ascii_latin_letters": 1561,
+          "blocks": 18
+        },
+        "frontmatter": {
+          "utf8_bytes": 3763,
+          "unicode_characters": 3077,
+          "han_characters": 317,
+          "ascii_latin_letters": 1248,
+          "blocks": 49
+        },
+        "heading": {
+          "utf8_bytes": 4564,
+          "unicode_characters": 2060,
+          "han_characters": 1200,
+          "ascii_latin_letters": 21,
+          "blocks": 155
+        },
+        "html_block": {
+          "utf8_bytes": 25193,
+          "unicode_characters": 8651,
+          "han_characters": 7243,
+          "ascii_latin_letters": 94,
+          "blocks": 16
+        },
+        "image_reference": {
+          "utf8_bytes": 4017,
+          "unicode_characters": 3403,
+          "han_characters": 276,
+          "ascii_latin_letters": 1544,
+          "blocks": 32
+        },
+        "indented_ambiguous": {
+          "utf8_bytes": 414,
+          "unicode_characters": 168,
+          "han_characters": 114,
+          "ascii_latin_letters": 32,
+          "blocks": 1
+        },
+        "list_continuation_prose": {
+          "utf8_bytes": 32840,
+          "unicode_characters": 12706,
+          "han_characters": 9105,
+          "ascii_latin_letters": 1355,
+          "blocks": 85
+        },
+        "list_item": {
+          "utf8_bytes": 75264,
+          "unicode_characters": 30517,
+          "han_characters": 20172,
+          "ascii_latin_letters": 4516,
+          "blocks": 165
+        },
+        "marked_quote": {
+          "utf8_bytes": 153490,
+          "unicode_characters": 57210,
+          "han_characters": 43754,
+          "ascii_latin_letters": 4990,
+          "blocks": 599
+        },
+        "prose_candidate": {
+          "utf8_bytes": 455757,
+          "unicode_characters": 167669,
+          "han_characters": 130712,
+          "ascii_latin_letters": 12606,
+          "blocks": 1195
+        },
+        "table_candidate": {
+          "utf8_bytes": 633,
+          "unicode_characters": 383,
+          "han_characters": 120,
+          "ascii_latin_letters": 27,
+          "blocks": 2
+        },
+        "thematic_break": {
+          "utf8_bytes": 24,
+          "unicode_characters": 24,
+          "han_characters": 0,
+          "ascii_latin_letters": 0,
+          "blocks": 6
+        }
+      },
+      "documents_with_role": {
+        "frontmatter": 49,
+        "blank": 49,
+        "prose_candidate": 48,
+        "image_reference": 9,
+        "marked_quote": 34,
+        "list_item": 17,
+        "list_continuation_prose": 6,
+        "thematic_break": 3,
+        "fenced_code": 4,
+        "indented_ambiguous": 1,
+        "table_candidate": 2,
+        "heading": 12,
+        "html_block": 7
+      },
+      "lexical_review_flag_document_counts": {
+        "marked_quotation": 34,
+        "inline_quote_opening_mark": 41,
+        "minor_family_terms": 29,
+        "email_like_string": 1,
+        "administrative_call_terms": 11,
+        "reprint_translation_rights_terms": 8
+      },
+      "unclosed_syntax_document_counts": {}
+    },
+    "yufree": {
+      "documents": 172,
+      "raw_source_bytes": 2029294,
+      "source_unicode_characters": {
+        "total": 772805,
+        "min": 2108,
+        "median": 3535.5,
+        "max": 33817
+      },
+      "source_han_characters": {
+        "total": 582181,
+        "min": 1521,
+        "median": 2939.5,
+        "max": 29903
+      },
+      "prose_candidate_unicode_characters": {
+        "total": 602332,
+        "min": 0,
+        "median": 3195.5,
+        "max": 30096
+      },
+      "prose_candidate_han_characters": {
+        "total": 522164,
+        "min": 0,
+        "median": 2715.5,
+        "max": 27359
+      },
+      "prose_candidate_paragraph_like_blocks": {
+        "total": 2824,
+        "min": 0,
+        "median": 12.0,
+        "max": 215
+      },
+      "longform_screen_ge1000han_ge8blocks": 147,
+      "legacy_sample_scanner_longform_count": 147,
+      "longform_legacy_v2_disagreement_count": 0,
+      "script_diagnostic_counts": {
+        "Han-dominant": 171,
+        "no-eligible-prose-letters": 1
+      },
+      "whole_source_script_diagnostic_counts": {
+        "Han-dominant": 164,
+        "mixed-or-Latin-heavy": 8
+      },
+      "role_totals": {
+        "bibliographic_or_contributor_label": {
+          "utf8_bytes": 51147,
+          "unicode_characters": 42588,
+          "han_characters": 3276,
+          "ascii_latin_letters": 25478,
+          "blocks": 985
+        },
+        "blank": {
+          "utf8_bytes": 5081,
+          "unicode_characters": 5081,
+          "han_characters": 0,
+          "ascii_latin_letters": 0,
+          "blocks": 5061
+        },
+        "display_math": {
+          "utf8_bytes": 1851,
+          "unicode_characters": 1563,
+          "han_characters": 125,
+          "ascii_latin_letters": 381,
+          "blocks": 42
+        },
+        "fenced_code": {
+          "utf8_bytes": 24198,
+          "unicode_characters": 20760,
+          "han_characters": 1701,
+          "ascii_latin_letters": 8438,
+          "blocks": 72
+        },
+        "frontmatter": {
+          "utf8_bytes": 17824,
+          "unicode_characters": 15780,
+          "han_characters": 1000,
+          "ascii_latin_letters": 7402,
+          "blocks": 172
+        },
+        "heading": {
+          "utf8_bytes": 4719,
+          "unicode_characters": 2549,
+          "han_characters": 1071,
+          "ascii_latin_letters": 203,
+          "blocks": 281
+        },
+        "image_reference": {
+          "utf8_bytes": 7092,
+          "unicode_characters": 7092,
+          "han_characters": 0,
+          "ascii_latin_letters": 4915,
+          "blocks": 108
+        },
+        "list_item": {
+          "utf8_bytes": 176530,
+          "unicode_characters": 65899,
+          "han_characters": 51639,
+          "ascii_latin_letters": 4966,
+          "blocks": 1151
+        },
+        "marked_quote": {
+          "utf8_bytes": 11610,
+          "unicode_characters": 8914,
+          "han_characters": 1205,
+          "ascii_latin_letters": 5912,
+          "blocks": 55
+        },
+        "prose_candidate": {
+          "utf8_bytes": 1728995,
+          "unicode_characters": 602332,
+          "han_characters": 522164,
+          "ascii_latin_letters": 22093,
+          "blocks": 2824
+        },
+        "standalone_url": {
+          "utf8_bytes": 147,
+          "unicode_characters": 147,
+          "han_characters": 0,
+          "ascii_latin_letters": 75,
+          "blocks": 1
+        },
+        "table_candidate": {
+          "utf8_bytes": 29,
+          "unicode_characters": 29,
+          "han_characters": 0,
+          "ascii_latin_letters": 0,
+          "blocks": 1
+        },
+        "thematic_break": {
+          "utf8_bytes": 71,
+          "unicode_characters": 71,
+          "han_characters": 0,
+          "ascii_latin_letters": 0,
+          "blocks": 11
+        }
+      },
+      "documents_with_role": {
+        "frontmatter": 172,
+        "blank": 172,
+        "prose_candidate": 171,
+        "table_candidate": 1,
+        "display_math": 12,
+        "image_reference": 26,
+        "heading": 43,
+        "list_item": 47,
+        "fenced_code": 7,
+        "marked_quote": 12,
+        "bibliographic_or_contributor_label": 7,
+        "thematic_break": 3,
+        "standalone_url": 1
+      },
+      "lexical_review_flag_document_counts": {
+        "email_like_string": 1,
+        "minor_family_terms": 66,
+        "marked_quotation": 12,
+        "inline_quote_opening_mark": 104,
+        "reprint_translation_rights_terms": 24,
+        "administrative_call_terms": 48,
+        "repeated_named_contributor_pattern": 7
+      },
+      "unclosed_syntax_document_counts": {}
+    }
+  },
+  "longform_definition": "At least 1000 Han codepoints and 8 contiguous prose/list-continuation blocks; operational diagnostic only. Inline quotes, Markdown/link syntax, and unresolved indirect borrowing can remain.",
+  "language_method": "Script proxy only: Han/(Han+ASCII Latin letters) in prose-role spans; >=.5 Han-dominant, >=.1 mixed, else Latin-heavy/other, or no eligible letters. Whole-source proxy also reported; excludes no roles and is influenced by code and citations. Not a validated language ID or a human-origin detector.",
+  "characters_definition": "Unicode codepoints of original source spans, including syntax and whitespace. Han count uses U+3400-4DBF and U+4E00-9FFF, not Chinese words.",
+  "paragraph_definition": "Contiguous same-role source lines separated by blanks/role changes; not gold linguistic paragraphs. Lists excluded except continuation prose.",
+  "duplication": {
+    "scope": "Verified new batch plus previous 13 locally held sample files; no search outside this collected set",
+    "comparison_documents": 234,
+    "exact_raw_duplicate_groups": 0,
+    "normalized_body_duplicate_groups": 0,
+    "normalized_body_method": "NFKC, Unicode whitespace removal, casefold; omit frontmatter; do not strip source content roles",
+    "repeated_long_prose_paragraph_groups": 0,
+    "documents_in_repeated_long_prose_paragraph_groups": 0,
+    "paragraph_method": "Only whole prose/list-continuation spans >=100 source codepoints and >=40 Han; NFKC, whitespace removal, casefold. Cross-document matches only.",
+    "exhaustive_document_pairs_compared": 27183,
+    "high_overlap_pairs": 13,
+    "high_overlap_cross_source_pairs": 0,
+    "high_overlap_including_prior_sample_pairs": 0,
+    "high_overlap_method": "Exact sets of normalized 5-codepoint shingles inside each prose span only. Flag Jaccard >=.8 OR smaller-set containment >=.8 with >=200 shared shingles. A flag is review evidence, not plagiarism proof; absence does not rule out paraphrase or shared sources."
+  },
+  "prior_13_same_scanner_reproductions_passed": 13,
+  "raw_redistributed": false,
+  "verified_unaided_human_documents": 0,
+  "model_admitted_documents": 0,
+  "additional_declared_blog_bylines": 0,
+  "declared_blog_bylines_reused": 2,
+  "source_rights": "CC BY-NC-SA 4.0 primary-source notices; noncommercial research only, subject to embedded third-party content and other rights.",
+  "limitations": [
+    "Convenience stratum enriched by source-byte length, two technical-adjacent blog bylines, 2015–2021; not representative of human writing",
+    "Scanner is not a complete CommonMark parser; lazy blockquotes, nested lists, inline code/quotes, footnotes and indirect quotations may be ambiguous",
+    "Lexical flags are review triage, not validated privacy/rights/translation labels; no document has full privacy or author-role clearance",
+    "No genres assigned from byte length or automatic keywords; no clean author-only prose claim",
+    "Dates and bylines are source declarations and repository history, not independent evidence of human composition or no AI assistance"
+  ],
+  "resources": {
+    "max_rss_kib": 163608,
+    "elapsed_seconds": 2.557,
+    "memory_limit_bytes": 536870912,
+    "wall_limit_seconds": 590
+  }
+}

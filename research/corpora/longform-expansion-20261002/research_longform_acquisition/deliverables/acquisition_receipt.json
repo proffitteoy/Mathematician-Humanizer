@@ -1,0 +1,13 @@
+{
+  "raw_source_text_bytes": 133637,
+  "successful_http_response_bytes": 197197,
+  "connector_metadata_response_bytes": 1022124,
+  "preliminary_or_repeat_metadata_allowance_bytes": 65536,
+  "conservative_accounted_primary_payload_bytes": 1284857,
+  "cap_bytes": 20971520,
+  "basis": "Logical response bodies; not TLS/HTTP on-wire transport bytes. HTTP receipts plus captured connector response sizes; additional 64KiB allowance covers small preliminary/retry repository metadata reads and unretained tiny metadata responses. Search/web rendered lookup transport is not corpus transfer.",
+  "single_acquisition_worker": "Sequential stdlib urllib; no archives or executables; parser RLIMIT_AS=512MiB",
+  "downloaded_images": 0,
+  "downloaded_archives": 0,
+  "raw_published": false
+}

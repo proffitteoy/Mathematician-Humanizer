@@ -1,0 +1,13 @@
+PUBLICATION_ALLOWLIST.txt
+REPORT.md
+SHA256SUMS
+acquire_pinned.py
+acquisition_receipt.json
+aggregate_audit.json
+artifact_receipt.json
+audit_pinned.py
+final_acquisition_receipt.json
+retry_timeouts.py
+source_provenance.json
+verification.txt
+verify_pinned.py
