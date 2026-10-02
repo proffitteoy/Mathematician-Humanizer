@@ -1,0 +1,24 @@
+{
+  "verified_at_utc": "2026-10-02T04:34:43.907575+00:00",
+  "checks": {
+    "selected_guava_identities_complete": true,
+    "selected_einfo_identities_complete": true,
+    "unique_selected_urls": true,
+    "all_original_response_hashes_match": true,
+    "guava_dates_agree": true,
+    "guava_all_article_license_notice": true,
+    "ten_new_guava_authors_four_sole_bylines_each": true,
+    "one_coauthored_row_kept_separate": true,
+    "einfo_two_reporters_three_pieces_each": true,
+    "einfo_all_pre2022_claims": true,
+    "all_body_receipts_present": true,
+    "all_body_nonempty_han_1000": true,
+    "direct_http_payload_plus_unlogged_initial_probe_under_20mib": true,
+    "articles_under_200": true,
+    "block_fixture_order_no_duplicates": true,
+    "block_fixture_quote_and_caption_roles": true,
+    "div_prose_case_recovered": true
+  },
+  "passed": true,
+  "check_count": 17
+}
