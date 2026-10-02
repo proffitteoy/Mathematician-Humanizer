@@ -1,0 +1,15 @@
+{
+  "phase": "verification",
+  "affinity_cores": [
+    0,
+    1
+  ],
+  "elapsed_seconds": 54.563207598999725,
+  "peak_process_tree_rss_bytes_sampled_100ms": 181178368,
+  "cpu_seconds_sampled": 53.36,
+  "exit_code": 0,
+  "stopped_reason": null,
+  "rss_limit_bytes": 2147483648,
+  "wall_limit_seconds": 1200.0,
+  "derived_bytes_sampled": 407758548
+}
