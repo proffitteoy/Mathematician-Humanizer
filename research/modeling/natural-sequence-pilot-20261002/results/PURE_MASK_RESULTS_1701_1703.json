@@ -1,0 +1,93 @@
+{
+  "study": "Chinese next-unit measurement prediction",
+  "split": "DEV",
+  "metric": "TRAIN-standardized, registered hierarchy-weighted mean squared error",
+  "lower_is_better": true,
+  "prespecified_seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "pure_mask_completed_seeds": [
+    1701,
+    1703
+  ],
+  "pure_mask_seed1702_outcome": "unknown; no score reconstructed or substituted",
+  "eligible_targets_identical": true,
+  "eligible_target_count": 67,
+  "eligible_linguistic_target_count": 65,
+  "eligible_structural_length_target_count": 2,
+  "TRAIN_joint_questions": 1686,
+  "DEV_joint_questions": 559,
+  "DEV_scored_documents": 1120,
+  "DEV_scored_next_unit_targets": 10348,
+  "parameters_after_target_pruning": {
+    "pure_mask_F4": 355715,
+    "full_F4": 616675
+  },
+  "fixed_training_definition": {
+    "maximum_epochs": 100,
+    "DEV_early_stopping_patience": 10
+  },
+  "analytic_F0_DEV_loss": 1.1170967398312224,
+  "rows": [
+    {
+      "seed": 1701,
+      "pure_mask_status": "completed",
+      "pure_mask_selected_epoch": 13,
+      "pure_mask_selected_DEV_loss": 1.0999479305098165,
+      "full_F4_selected_epoch": 12,
+      "full_F4_selected_DEV_loss": 1.037625253147841,
+      "pure_mask_minus_same_seed_full_F4": 0.06232267736197561
+    },
+    {
+      "seed": 1702,
+      "pure_mask_status": "prior_attempt_outcome_unknown",
+      "pure_mask_selected_epoch": null,
+      "pure_mask_selected_DEV_loss": null,
+      "full_F4_selected_epoch": 38,
+      "full_F4_selected_DEV_loss": 1.0289221020907084,
+      "pure_mask_minus_same_seed_full_F4": null
+    },
+    {
+      "seed": 1703,
+      "pure_mask_status": "completed",
+      "pure_mask_selected_epoch": 10,
+      "pure_mask_selected_DEV_loss": 1.1001536773453005,
+      "full_F4_selected_epoch": 22,
+      "full_F4_selected_DEV_loss": 1.0287759823039269,
+      "pure_mask_minus_same_seed_full_F4": 0.07137769504137359
+    }
+  ],
+  "pure_mask_seed1703_minus_seed1701_DEV_loss": 0.00020574683548391093,
+  "completed_registered_fits": 30,
+  "remaining_without_verified_completion": 42,
+  "known_pending_registered_fits": 41,
+  "prior_attempts_with_unknown_outcome": 1,
+  "registered_core_fits": 72,
+  "optional_permutation_fits_outside_core72": 24,
+  "measurement_transition": {
+    "seed1703_inputs": "reconstructed TRAIN/DEV features using the unchanged pinned instrument and extraction protocol",
+    "published_support_and_failure_aggregates_reproduced": true,
+    "normalization_fitted_on_TRAIN_only": true,
+    "deterministic_transform_replay_verified": true,
+    "historical_transform_byte_identity_verified": false,
+    "limitation": "Original private transform hashes and feature caches were unavailable; scientific support/failure agreement and deterministic replay do not establish byte identity with the historical private transforms."
+  },
+  "limitations": [
+    "DEV selects epochs; these are not unbiased held-out test estimates.",
+    "Two completed prespecified pure-mask seeds do not establish the missing seed1702 result or a three-seed conclusion.",
+    "Different input dimensions and parameter counts prevent unique causal attribution of score differences to information content.",
+    "Shared data and reconstructed measurement artifacts limit any inference from similar scores; no confidence interval or significance claim is made.",
+    "The measurement instrument has not been validated for full style, authorship or text rewriting."
+  ],
+  "instrument_status": "candidate_unvalidated",
+  "comparison_eligible": false,
+  "TEST_evaluated": false,
+  "davinci_evaluated": false,
+  "text_rewriting_validated": false,
+  "public_source_files": [
+    "NUISANCE_CONTROL_RESULTS_1701.json",
+    "CORE_DEV_RESULTS_1701_1703.json"
+  ]
+}
