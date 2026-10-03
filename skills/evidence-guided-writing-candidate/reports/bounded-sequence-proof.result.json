@@ -1,0 +1,654 @@
+{
+  "schema_version": "evidence-guided-writing-result/0.1",
+  "job_id": "bounded-sequence-proof",
+  "status": "reviewed_candidate_for_user_test",
+  "selection_basis": "Prefer only if independent review finds all source commitments intact; source-grounded clarity, never proxy optimization.",
+  "original_text": "要说明收敛序列一定有界，我们首先需要从收敛的定义出发。设实数序列 $a_n$ 收敛到 $L$。取误差为1，就存在一个正整数 $N$，使得所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。由三角不等式，这些项满足 $|a_n|<|L|+1$。需要注意，这个估计目前只控制了尾部，不能直接拿来说明前面的项也满足同一界限。\n\n不过，尾部之前只剩有限多项，所以可以把这些项的绝对值和 $|L|+1$ 一起取最大值，记为 $M$。如果前面没有项，就只取后一个数。这样，前面的有限项不超过 $M$，尾部各项也不超过这个数，于是整个序列有界。这里并没有声称所有项都落在极限附近；有界只是说存在一个统一的有限上界来控制各项的绝对值。",
+  "diagnosis": {
+    "status": "descriptive_diagnosis_with_provisional_interventions",
+    "observations": {
+      "counts": {
+        "source_codepoints": 311,
+        "source_content_chars": 239,
+        "target_codepoints": 311,
+        "excluded_codepoints": 0,
+        "target_content_chars": 239,
+        "excluded_content_chars": 0,
+        "target_interval_count": 1,
+        "target_connected_components": 1,
+        "source_paragraphs": 2,
+        "source_sentences": 9,
+        "complete_target_paragraphs": 2,
+        "clipped_target_paragraphs": 0,
+        "complete_target_sentences": 9,
+        "clipped_target_sentences": 0,
+        "source_adjacent_pairs": 8,
+        "source_pairs_with_complete_target_endpoints": 8,
+        "eligible_adjacent_pairs": 8,
+        "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+        "source_pairs_without_complete_target_endpoints": 0
+      },
+      "sentence_content_lengths": [
+        25,
+        11,
+        30,
+        15,
+        35,
+        36,
+        14,
+        31,
+        42
+      ],
+      "surface_values": {
+        "F002": 8.368200836820083,
+        "F003": 0.0,
+        "F013": 30.0,
+        "F014": 20.0,
+        "F015": 37.2,
+        "F016": 0.2,
+        "F024": 0.49583333333333335,
+        "F025": 0.047619047619047616
+      },
+      "linguistic_status": "unavailable",
+      "linguistic_values": {},
+      "missing": {}
+    },
+    "ordered_source_units": [
+      {
+        "index": 0,
+        "start": 0,
+        "end": 27,
+        "text": "要说明收敛序列一定有界，我们首先需要从收敛的定义出发。",
+        "content_chars": 25,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 1,
+        "start": 27,
+        "end": 47,
+        "text": "设实数序列 $a_n$ 收敛到 $L$。",
+        "content_chars": 11,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 2,
+        "start": 47,
+        "end": 96,
+        "text": "取误差为1，就存在一个正整数 $N$，使得所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。",
+        "content_chars": 30,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 3,
+        "start": 96,
+        "end": 123,
+        "text": "由三角不等式，这些项满足 $|a_n|<|L|+1$。",
+        "content_chars": 15,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 4,
+        "start": 123,
+        "end": 161,
+        "text": "需要注意，这个估计目前只控制了尾部，不能直接拿来说明前面的项也满足同一界限。",
+        "content_chars": 35,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 5,
+        "start": 163,
+        "end": 213,
+        "text": "不过，尾部之前只剩有限多项，所以可以把这些项的绝对值和 $|L|+1$ 一起取最大值，记为 $M$。",
+        "content_chars": 36,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 6,
+        "start": 213,
+        "end": 229,
+        "text": "如果前面没有项，就只取后一个数。",
+        "content_chars": 14,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 7,
+        "start": 229,
+        "end": 267,
+        "text": "这样，前面的有限项不超过 $M$，尾部各项也不超过这个数，于是整个序列有界。",
+        "content_chars": 31,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 8,
+        "start": 267,
+        "end": 311,
+        "text": "这里并没有声称所有项都落在极限附近；有界只是说存在一个统一的有限上界来控制各项的绝对值。",
+        "content_chars": 42,
+        "local_linguistic_observations": null
+      }
+    ],
+    "linguistic_sequence_available": false,
+    "attention_sites": [
+      {
+        "source_sentence_index": 8,
+        "source_evidence": "这里并没有声称所有项都落在极限附近；有界只是说存在一个统一的有限上界来控制各项的绝对值。",
+        "basis": "one of the longest operational units in this input; length alone does not establish a defect",
+        "question": "Does this unit contain distinct logical steps whose ordering or scope is hard to follow? Keep it intact if splitting weakens the reasoning."
+      },
+      {
+        "source_sentence_index": 5,
+        "source_evidence": "不过，尾部之前只剩有限多项，所以可以把这些项的绝对值和 $|L|+1$ 一起取最大值，记为 $M$。",
+        "basis": "one of the longest operational units in this input; length alone does not establish a defect",
+        "question": "Does this unit contain distinct logical steps whose ordering or scope is hard to follow? Keep it intact if splitting weakens the reasoning."
+      }
+    ],
+    "genre_path_hypothesis": "hypothesis → construction → quantifier/tail argument → conclusion",
+    "provisional_plan": [
+      "Keep the hypothesis and every quantified dependency attached to the inference that uses it; distinguish one witness from all later terms.",
+      "Inspect adjacent units for premise/conclusion and referent continuity using their actual words. A low content-word overlap is only a prompt to inspect, not a continuity diagnosis.",
+      "Inspect parser subordination, nominal modifier size and dependency span at the exact sentence. Only intervene if manual reading identifies an attachment or packing problem.",
+      "Draft a light edit and a structural alternative. Every moved/deleted claim must remain in the claim ledger; reject unsupported additions.",
+      "Re-measure candidates to describe what changed, not to maximize a feature score. Select for source fidelity, genre fit and readability; keep the original if no candidate is better."
+    ],
+    "unvalidated_assumptions": [
+      "Separating inferential steps can make some texts easier to follow",
+      "Making explicit the original mechanism and its limits may help readers",
+      "These effects were not learned or estimated from the feature vectors or a human reference distribution"
+    ],
+    "missing_learned_components": [
+      "trained joint linguistic/sequence/discourse style model",
+      "learned intervention policy",
+      "calibrated semantic verifier",
+      "held-out human preference or indistinguishability evidence"
+    ],
+    "not_used": "12-descriptor condition classifier; it predicts its training condition, not human-like quality"
+  },
+  "intervention_plan": null,
+  "claim_ledger": [
+    {
+      "id": "c1",
+      "commitment": "实数序列收敛到给定实数极限",
+      "source_evidence": "设实数序列 $a_n$ 收敛到 $L$"
+    },
+    {
+      "id": "c2",
+      "commitment": "误差1给出同一N控制所有尾部项，量词依赖不能交换",
+      "source_evidence": "取误差为1，就存在一个正整数 $N$，使得所有满足 $n≥N$ 的项都有 $|a_n-L|<1$"
+    },
+    {
+      "id": "c3",
+      "commitment": "三角不等式推出尾部绝对值上界",
+      "source_evidence": "由三角不等式，这些项满足 $|a_n|<|L|+1$"
+    },
+    {
+      "id": "c4",
+      "commitment": "尾部估计不能未经处理推广到前项",
+      "source_evidence": "这个估计目前只控制了尾部，不能直接拿来说明前面的项也满足同一界限"
+    },
+    {
+      "id": "c5",
+      "commitment": "有限前项绝对值与尾部界共同取最大，空前缀取后者",
+      "source_evidence": "尾部之前只剩有限多项，所以可以把这些项的绝对值和 $|L|+1$ 一起取最大值，记为 $M$。如果前面没有项，就只取后一个数"
+    },
+    {
+      "id": "c6",
+      "commitment": "同一最大值控制全序列，得到有界",
+      "source_evidence": "前面的有限项不超过 $M$，尾部各项也不超过这个数，于是整个序列有界"
+    },
+    {
+      "id": "c7",
+      "commitment": "有界是统一绝对值界，不声称全部项接近极限",
+      "source_evidence": "这里并没有声称所有项都落在极限附近；有界只是说存在一个统一的有限上界来控制各项的绝对值"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "minimal",
+      "text": "设实数序列 $a_n$ 收敛到 $L$。从定义里取误差1：存在正整数 $N$，所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。三角不等式便给出 $|a_n|<|L|+1$。\n\n但这个界只管尾部，前面的项还没有处理。好在它们只有有限多个：把它们的绝对值与 $|L|+1$ 放在一起取最大值，记为 $M$。若前面没有项，就只取后一个数。\n\n前面的项不超过 $M$，尾部的项也不超过这个数，所以整个序列有界。要证明的是存在一个统一的有限上界，控制所有项的绝对值；这不等于说所有项都已经靠近极限。",
+      "intent": "Clarify the original reasoning and reduce repeated framing; evidence-card linkage will be recorded after real TRAIN evidence is available.",
+      "mechanical_checks": {
+        "status": "pass",
+        "issues": [],
+        "length_ratio": 0.797427652733119,
+        "scope": "exact span, numeric token inventory, URL, anecdote-cue and length checks only; passing is not semantic validation"
+      },
+      "semantic_review": {
+        "status": "pass",
+        "issues": [],
+        "reviewer_type": "independent_language_model",
+        "scope": "Records the reviewer’s judgment and exact supporting excerpts; software cannot prove entailment or authenticate an independent reviewer"
+      },
+      "eligible_for_user_test": true,
+      "measurements_after": {
+        "counts": {
+          "source_codepoints": 248,
+          "source_content_chars": 179,
+          "target_codepoints": 248,
+          "excluded_codepoints": 0,
+          "target_content_chars": 179,
+          "excluded_content_chars": 0,
+          "target_interval_count": 1,
+          "target_connected_components": 1,
+          "source_paragraphs": 3,
+          "source_sentences": 8,
+          "complete_target_paragraphs": 3,
+          "clipped_target_paragraphs": 0,
+          "complete_target_sentences": 8,
+          "clipped_target_sentences": 0,
+          "source_adjacent_pairs": 7,
+          "source_pairs_with_complete_target_endpoints": 7,
+          "eligible_adjacent_pairs": 7,
+          "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+          "source_pairs_without_complete_target_endpoints": 0
+        },
+        "sentence_content_lengths": [
+          11,
+          28,
+          12,
+          17,
+          31,
+          13,
+          27,
+          40
+        ],
+        "surface_values": {
+          "F002": 16.75977653631285,
+          "F003": 0.0,
+          "F013": 22.0,
+          "F014": 16.0,
+          "F015": 33.699999999999996,
+          "F016": 0.4090909090909091,
+          "F024": 0.6298701298701299,
+          "F025": -0.35714285714285715
+        },
+        "linguistic_status": "unavailable",
+        "linguistic_values": {},
+        "missing": {}
+      },
+      "observed_deltas": {
+        "surface_values": {
+          "F002": 8.391575699492765,
+          "F003": 0.0,
+          "F013": -8.0,
+          "F014": -4.0,
+          "F015": -3.500000000000007,
+          "F016": 0.2090909090909091,
+          "F024": 0.13403679653679657,
+          "F025": -0.40476190476190477
+        },
+        "linguistic_values": {}
+      },
+      "diff": [
+        "--- original",
+        "+++ minimal",
+        "@@ -1,3 +1,5 @@",
+        "-要说明收敛序列一定有界，我们首先需要从收敛的定义出发。设实数序列 $a_n$ 收敛到 $L$。取误差为1，就存在一个正整数 $N$，使得所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。由三角不等式，这些项满足 $|a_n|<|L|+1$。需要注意，这个估计目前只控制了尾部，不能直接拿来说明前面的项也满足同一界限。",
+        "+设实数序列 $a_n$ 收敛到 $L$。从定义里取误差1：存在正整数 $N$，所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。三角不等式便给出 $|a_n|<|L|+1$。",
+        " ",
+        "-不过，尾部之前只剩有限多项，所以可以把这些项的绝对值和 $|L|+1$ 一起取最大值，记为 $M$。如果前面没有项，就只取后一个数。这样，前面的有限项不超过 $M$，尾部各项也不超过这个数，于是整个序列有界。这里并没有声称所有项都落在极限附近；有界只是说存在一个统一的有限上界来控制各项的绝对值。",
+        "+但这个界只管尾部，前面的项还没有处理。好在它们只有有限多个：把它们的绝对值与 $|L|+1$ 放在一起取最大值，记为 $M$。若前面没有项，就只取后一个数。",
+        "+",
+        "+前面的项不超过 $M$，尾部的项也不超过这个数，所以整个序列有界。要证明的是存在一个统一的有限上界，控制所有项的绝对值；这不等于说所有项都已经靠近极限。"
+      ],
+      "strict_checks": {
+        "status": "pass",
+        "issues": [],
+        "warning": "Role swaps with the same numeric tokens can pass mechanical checks; independent review is still required"
+      },
+      "evidence_card_ids": [],
+      "source_problem_evidence": null,
+      "style_observations": [
+        {
+          "feature_id": "F013",
+          "source": 30.0,
+          "candidate": 22.0,
+          "raw_delta": -8.0,
+          "change_in_distance_to_train_human_median": 6.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F014",
+          "source": 20.0,
+          "candidate": 16.0,
+          "raw_delta": -4.0,
+          "change_in_distance_to_train_human_median": 1.5,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F015",
+          "source": 37.2,
+          "candidate": 33.699999999999996,
+          "raw_delta": -3.500000000000007,
+          "change_in_distance_to_train_human_median": 3.500000000000007,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F024",
+          "source": 0.49583333333333335,
+          "candidate": 0.6298701298701299,
+          "raw_delta": 0.13403679653679657,
+          "change_in_distance_to_train_human_median": -0.13403679653679657,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F025",
+          "source": 0.047619047619047616,
+          "candidate": -0.35714285714285715,
+          "raw_delta": -0.40476190476190477,
+          "change_in_distance_to_train_human_median": -0.09047619047619049,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        }
+      ],
+      "review_provenance": "independent_language_model"
+    },
+    {
+      "id": "scope_failure",
+      "text": "设实数序列 $a_n$ 收敛到 $L$。从定义里取误差1：存在正整数 $N$，所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。三角不等式便给出 $|a_n|<|L|+1$。\n\n但这个界只管尾部，前面的项还没有处理。好在它们只有有限多个：把它们的绝对值与 $|L|+1$ 放在一起取最大值，记为 $M$。若前面没有项，就只取后一个数。\n\n前面的项不超过 $M$，尾部的项也不超过这个数，所以整个序列有界。要证明的是存在一个统一的有限上界，控制所有项的绝对值；这也说明所有项都已经靠近极限。",
+      "intent": "Deliberately retained semantic negative control, not an acceptable rewrite",
+      "mechanical_checks": {
+        "status": "pass",
+        "issues": [],
+        "length_ratio": 0.7942122186495176,
+        "scope": "exact span, numeric token inventory, URL, anecdote-cue and length checks only; passing is not semantic validation"
+      },
+      "semantic_review": {
+        "status": "fail",
+        "issues": [
+          "review rejected or uncertain",
+          "unresolved semantic issues or added claims",
+          "claim not preserved: c7"
+        ],
+        "reviewer_type": "independent_language_model",
+        "scope": "Records the reviewer’s judgment and exact supporting excerpts; software cannot prove entailment or authenticate an independent reviewer"
+      },
+      "eligible_for_user_test": false,
+      "measurements_after": {
+        "counts": {
+          "source_codepoints": 247,
+          "source_content_chars": 178,
+          "target_codepoints": 247,
+          "excluded_codepoints": 0,
+          "target_content_chars": 178,
+          "excluded_content_chars": 0,
+          "target_interval_count": 1,
+          "target_connected_components": 1,
+          "source_paragraphs": 3,
+          "source_sentences": 8,
+          "complete_target_paragraphs": 3,
+          "clipped_target_paragraphs": 0,
+          "complete_target_sentences": 8,
+          "clipped_target_sentences": 0,
+          "source_adjacent_pairs": 7,
+          "source_pairs_with_complete_target_endpoints": 7,
+          "eligible_adjacent_pairs": 7,
+          "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+          "source_pairs_without_complete_target_endpoints": 0
+        },
+        "sentence_content_lengths": [
+          11,
+          28,
+          12,
+          17,
+          31,
+          13,
+          27,
+          39
+        ],
+        "surface_values": {
+          "F002": 16.853932584269664,
+          "F003": 0.0,
+          "F013": 22.0,
+          "F014": 16.0,
+          "F015": 33.4,
+          "F016": 0.4090909090909091,
+          "F024": 0.6233766233766234,
+          "F025": -0.35714285714285715
+        },
+        "linguistic_status": "unavailable",
+        "linguistic_values": {},
+        "missing": {}
+      },
+      "observed_deltas": {
+        "surface_values": {
+          "F002": 8.48573174744958,
+          "F003": 0.0,
+          "F013": -8.0,
+          "F014": -4.0,
+          "F015": -3.8000000000000043,
+          "F016": 0.2090909090909091,
+          "F024": 0.12754329004329001,
+          "F025": -0.40476190476190477
+        },
+        "linguistic_values": {}
+      },
+      "diff": [
+        "--- original",
+        "+++ scope_failure",
+        "@@ -1,3 +1,5 @@",
+        "-要说明收敛序列一定有界，我们首先需要从收敛的定义出发。设实数序列 $a_n$ 收敛到 $L$。取误差为1，就存在一个正整数 $N$，使得所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。由三角不等式，这些项满足 $|a_n|<|L|+1$。需要注意，这个估计目前只控制了尾部，不能直接拿来说明前面的项也满足同一界限。",
+        "+设实数序列 $a_n$ 收敛到 $L$。从定义里取误差1：存在正整数 $N$，所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。三角不等式便给出 $|a_n|<|L|+1$。",
+        " ",
+        "-不过，尾部之前只剩有限多项，所以可以把这些项的绝对值和 $|L|+1$ 一起取最大值，记为 $M$。如果前面没有项，就只取后一个数。这样，前面的有限项不超过 $M$，尾部各项也不超过这个数，于是整个序列有界。这里并没有声称所有项都落在极限附近；有界只是说存在一个统一的有限上界来控制各项的绝对值。",
+        "+但这个界只管尾部，前面的项还没有处理。好在它们只有有限多个：把它们的绝对值与 $|L|+1$ 放在一起取最大值，记为 $M$。若前面没有项，就只取后一个数。",
+        "+",
+        "+前面的项不超过 $M$，尾部的项也不超过这个数，所以整个序列有界。要证明的是存在一个统一的有限上界，控制所有项的绝对值；这也说明所有项都已经靠近极限。"
+      ],
+      "strict_checks": {
+        "status": "fail",
+        "issues": [
+          {
+            "code": "relations_and_scope_not_reviewed"
+          }
+        ],
+        "warning": "Role swaps with the same numeric tokens can pass mechanical checks; independent review is still required"
+      },
+      "evidence_card_ids": [],
+      "source_problem_evidence": null,
+      "style_observations": [
+        {
+          "feature_id": "F013",
+          "source": 30.0,
+          "candidate": 22.0,
+          "raw_delta": -8.0,
+          "change_in_distance_to_train_human_median": 6.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F014",
+          "source": 20.0,
+          "candidate": 16.0,
+          "raw_delta": -4.0,
+          "change_in_distance_to_train_human_median": 1.5,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F015",
+          "source": 37.2,
+          "candidate": 33.4,
+          "raw_delta": -3.8000000000000043,
+          "change_in_distance_to_train_human_median": 3.8000000000000043,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F024",
+          "source": 0.49583333333333335,
+          "candidate": 0.6233766233766234,
+          "raw_delta": 0.12754329004329001,
+          "change_in_distance_to_train_human_median": -0.12754329004329001,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F025",
+          "source": 0.047619047619047616,
+          "candidate": -0.35714285714285715,
+          "raw_delta": -0.40476190476190477,
+          "change_in_distance_to_train_human_median": -0.09047619047619049,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        }
+      ],
+      "review_provenance": "independent_language_model"
+    }
+  ],
+  "selected_candidate_id": "minimal",
+  "final_text": "设实数序列 $a_n$ 收敛到 $L$。从定义里取误差1：存在正整数 $N$，所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。三角不等式便给出 $|a_n|<|L|+1$。\n\n但这个界只管尾部，前面的项还没有处理。好在它们只有有限多个：把它们的绝对值与 $|L|+1$ 放在一起取最大值，记为 $M$。若前面没有项，就只取后一个数。\n\n前面的项不超过 $M$，尾部的项也不超过这个数，所以整个序列有界。要证明的是存在一个统一的有限上界，控制所有项的绝对值；这不等于说所有项都已经靠近极限。",
+  "abstention_reason": null,
+  "rollback_text": "要说明收敛序列一定有界，我们首先需要从收敛的定义出发。设实数序列 $a_n$ 收敛到 $L$。取误差为1，就存在一个正整数 $N$，使得所有满足 $n≥N$ 的项都有 $|a_n-L|<1$。由三角不等式，这些项满足 $|a_n|<|L|+1$。需要注意，这个估计目前只控制了尾部，不能直接拿来说明前面的项也满足同一界限。\n\n不过，尾部之前只剩有限多项，所以可以把这些项的绝对值和 $|L|+1$ 一起取最大值，记为 $M$。如果前面没有项，就只取后一个数。这样，前面的有限项不超过 $M$，尾部各项也不超过这个数，于是整个序列有界。这里并没有声称所有项都落在极限附近；有界只是说存在一个统一的有限上界来控制各项的绝对值。",
+  "acceptance": "Not accepted; owner judgment pending. No claim of human indistinguishability.",
+  "quality_score": null,
+  "limitations": [
+    "Synthetic development demonstration",
+    "Not a blind reader study",
+    "No personal data",
+    "No trained text generator"
+  ],
+  "evidence_sha256": "a9a93c9345505b52ad7b02811d4983fad6ae7dce000b3795f3daa0fdaa50263c",
+  "evidence_cards": [
+    {
+      "feature_id": "F002",
+      "observed": 8.368200836820083,
+      "train_human_median": 5.58659217877095,
+      "paired_human_minus_ai": -8.307037274843482,
+      "train_human_q10_q90": [
+        5.241113254340038,
+        7.7400119260584415
+      ],
+      "dev_direction_reproduced": false,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": false,
+      "unavailable_reason": "unsupported_domain_direction_or_missing_value",
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F003",
+      "observed": 0.0,
+      "train_human_median": 0.0,
+      "paired_human_minus_ai": -0.08550531600110252,
+      "train_human_q10_q90": [
+        0.0,
+        0.0
+      ],
+      "dev_direction_reproduced": false,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": false,
+      "unavailable_reason": "unsupported_domain_direction_or_missing_value",
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F013",
+      "observed": 30.0,
+      "train_human_median": 29.0,
+      "paired_human_minus_ai": 9.298501872659177,
+      "train_human_q10_q90": [
+        15.5,
+        89.40000000000003
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F014",
+      "observed": 20.0,
+      "train_human_median": 18.75,
+      "paired_human_minus_ai": 1.4552902621722847,
+      "train_human_q10_q90": [
+        5.0,
+        43.95000000000002
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F015",
+      "observed": 37.2,
+      "train_human_median": 54.5,
+      "paired_human_minus_ai": 17.448913857677905,
+      "train_human_q10_q90": [
+        32.720000000000006,
+        117.48
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F016",
+      "observed": 0.2,
+      "train_human_median": 0.35,
+      "paired_human_minus_ai": 0.014306210428142379,
+      "train_human_q10_q90": [
+        0.06290322580645162,
+        0.6814545454545455
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": false,
+      "unavailable_reason": "unsupported_domain_direction_or_missing_value",
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F024",
+      "observed": 0.49583333333333335,
+      "train_human_median": 0.7765136823960354,
+      "paired_human_minus_ai": 0.372273680552004,
+      "train_human_q10_q90": [
+        0.4016187790116928,
+        1.781982392228294
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F025",
+      "observed": 0.047619047619047616,
+      "train_human_median": -0.2,
+      "paired_human_minus_ai": 0.07262790134230471,
+      "train_human_q10_q90": [
+        -0.797980362684063,
+        0.5
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    }
+  ],
+  "evidence_role": "observational_train_dev",
+  "instrument_implementation_verified": true,
+  "reference_applicability": {
+    "status": "unvalidated_transport_hypothesis",
+    "reason": "Synthetic technical/math development prose is not a member of the web corpus. Web is an exploratory reference choice, not verified in-domain support."
+  },
+  "candidate_timing": "Initial minimal/scope_failure and cache repaired drafts preceded real evidence cards; only subsequent evidence_inspected candidate follows them.",
+  "generation_method": "Host language model; no project-trained generator",
+  "semantic_equivalence": "provisionally reviewed, not proved",
+  "style_benefit": "unvalidated; feature change is not reader judgment",
+  "personal_stage_enabled": false
+}

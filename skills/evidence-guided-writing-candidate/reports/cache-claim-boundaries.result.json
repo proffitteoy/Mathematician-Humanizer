@@ -1,0 +1,982 @@
+{
+  "schema_version": "evidence-guided-writing-result/0.1",
+  "job_id": "cache-claim-boundaries",
+  "status": "reviewed_candidate_for_user_test",
+  "selection_basis": "If independently faithful, prefer evidence_inspected because it keeps the original mechanism and uncertainty rationale connected. Numeric direction does not establish preference or compensate for meaning loss.",
+  "original_text": "在讨论缓存是否能够改善接口体验时，有必要先交代这次观察的范围。这次观察只来自内部测试环境，并不包含线上用户。我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms。请求内容和并发配置保持不变，但是数据库负载没有被固定。因此，这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的。\n\n在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上。另外，缓存中的数据可能暂时过期，而失效策略还没有完成测试。若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求。下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用。",
+  "diagnosis": {
+    "status": "descriptive_diagnosis_with_provisional_interventions",
+    "observations": {
+      "counts": {
+        "source_codepoints": 359,
+        "source_content_chars": 331,
+        "target_codepoints": 359,
+        "excluded_codepoints": 0,
+        "target_content_chars": 331,
+        "excluded_content_chars": 0,
+        "target_interval_count": 1,
+        "target_connected_components": 1,
+        "source_paragraphs": 2,
+        "source_sentences": 10,
+        "complete_target_paragraphs": 2,
+        "clipped_target_paragraphs": 0,
+        "complete_target_sentences": 10,
+        "clipped_target_sentences": 0,
+        "source_adjacent_pairs": 9,
+        "source_pairs_with_complete_target_endpoints": 9,
+        "eligible_adjacent_pairs": 9,
+        "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+        "source_pairs_without_complete_target_endpoints": 0
+      },
+      "sentence_content_lengths": [
+        29,
+        21,
+        41,
+        25,
+        38,
+        37,
+        31,
+        26,
+        33,
+        50
+      ],
+      "surface_values": {
+        "F002": 6.042296072507553,
+        "F003": 0.0,
+        "F013": 32.0,
+        "F014": 11.0,
+        "F015": 41.9,
+        "F016": 0.1875,
+        "F024": 0.3229166666666667,
+        "F025": -0.35
+      },
+      "linguistic_status": "unavailable",
+      "linguistic_values": {},
+      "missing": {}
+    },
+    "ordered_source_units": [
+      {
+        "index": 0,
+        "start": 0,
+        "end": 31,
+        "text": "在讨论缓存是否能够改善接口体验时，有必要先交代这次观察的范围。",
+        "content_chars": 29,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 1,
+        "start": 31,
+        "end": 54,
+        "text": "这次观察只来自内部测试环境，并不包含线上用户。",
+        "content_chars": 21,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 2,
+        "start": 54,
+        "end": 98,
+        "text": "我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms。",
+        "content_chars": 41,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 3,
+        "start": 98,
+        "end": 125,
+        "text": "请求内容和并发配置保持不变，但是数据库负载没有被固定。",
+        "content_chars": 25,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 4,
+        "start": 125,
+        "end": 166,
+        "text": "因此，这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的。",
+        "content_chars": 38,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 5,
+        "start": 168,
+        "end": 208,
+        "text": "在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。",
+        "content_chars": 37,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 6,
+        "start": 208,
+        "end": 241,
+        "text": "这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上。",
+        "content_chars": 31,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 7,
+        "start": 241,
+        "end": 270,
+        "text": "另外，缓存中的数据可能暂时过期，而失效策略还没有完成测试。",
+        "content_chars": 26,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 8,
+        "start": 270,
+        "end": 305,
+        "text": "若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求。",
+        "content_chars": 33,
+        "local_linguistic_observations": null
+      },
+      {
+        "index": 9,
+        "start": 305,
+        "end": 359,
+        "text": "下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用。",
+        "content_chars": 50,
+        "local_linguistic_observations": null
+      }
+    ],
+    "linguistic_sequence_available": false,
+    "attention_sites": [
+      {
+        "source_sentence_index": 9,
+        "source_evidence": "下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用。",
+        "basis": "one of the longest operational units in this input; length alone does not establish a defect",
+        "question": "Does this unit contain distinct logical steps whose ordering or scope is hard to follow? Keep it intact if splitting weakens the reasoning."
+      },
+      {
+        "source_sentence_index": 2,
+        "source_evidence": "我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms。",
+        "basis": "one of the longest operational units in this input; length alone does not establish a defect",
+        "question": "Does this unit contain distinct logical steps whose ordering or scope is hard to follow? Keep it intact if splitting weakens the reasoning."
+      }
+    ],
+    "genre_path_hypothesis": "failure scenario → mechanism → preconditions → guarantee boundary",
+    "provisional_plan": [
+      "Make the state transition and guarantee boundary explicit; never replace an association, atomicity condition or modal claim with a vague verb.",
+      "Inspect adjacent units for premise/conclusion and referent continuity using their actual words. A low content-word overlap is only a prompt to inspect, not a continuity diagnosis.",
+      "Inspect parser subordination, nominal modifier size and dependency span at the exact sentence. Only intervene if manual reading identifies an attachment or packing problem.",
+      "Draft a light edit and a structural alternative. Every moved/deleted claim must remain in the claim ledger; reject unsupported additions.",
+      "Re-measure candidates to describe what changed, not to maximize a feature score. Select for source fidelity, genre fit and readability; keep the original if no candidate is better."
+    ],
+    "unvalidated_assumptions": [
+      "Separating inferential steps can make some texts easier to follow",
+      "Making explicit the original mechanism and its limits may help readers",
+      "These effects were not learned or estimated from the feature vectors or a human reference distribution"
+    ],
+    "missing_learned_components": [
+      "trained joint linguistic/sequence/discourse style model",
+      "learned intervention policy",
+      "calibrated semantic verifier",
+      "held-out human preference or indistinguishability evidence"
+    ],
+    "not_used": "12-descriptor condition classifier; it predicts its training condition, not human-like quality"
+  },
+  "intervention_plan": null,
+  "claim_ledger": [
+    {
+      "id": "c1",
+      "commitment": "观察仅限内部环境，不涉及线上用户",
+      "source_evidence": "这次观察只来自内部测试环境，并不包含线上用户"
+    },
+    {
+      "id": "c2",
+      "commitment": "测试次数、每次请求数、接口和p95前后数值须全部保留",
+      "source_evidence": "我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms"
+    },
+    {
+      "id": "c3",
+      "commitment": "请求内容和并发不变，但数据库负载未控制",
+      "source_evidence": "请求内容和并发配置保持不变，但是数据库负载没有被固定"
+    },
+    {
+      "id": "c4",
+      "commitment": "结果支持进一步检查，但不能单凭此认定缓存因果效果",
+      "source_evidence": "这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的"
+    },
+    {
+      "id": "c5",
+      "commitment": "命中跳过一次查询，未命中仍访问数据库",
+      "source_evidence": "缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库"
+    },
+    {
+      "id": "c6",
+      "commitment": "未测命中率，不能判断收益集中程度",
+      "source_evidence": "这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上"
+    },
+    {
+      "id": "c7",
+      "commitment": "数据可能暂时过期且失效策略测试未完成",
+      "source_evidence": "缓存中的数据可能暂时过期，而失效策略还没有完成测试"
+    },
+    {
+      "id": "c8",
+      "commitment": "立即反映写入的接口不能假定方案满足要求",
+      "source_evidence": "若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求"
+    },
+    {
+      "id": "c9",
+      "commitment": "下一步控制负载重做对照并记命中率和过期响应，之后才讨论扩大",
+      "source_evidence": "下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "minimal",
+      "text": "这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。\n\n缓存命中会跳过一次数据库查询；未命中仍要访问数据库。命中率还没测，收益是否只落在少量请求上，现在无法判断。\n\n另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。\n\n下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+      "intent": "Clarify the original reasoning and reduce repeated framing; evidence-card linkage will be recorded after real TRAIN evidence is available.",
+      "mechanical_checks": {
+        "status": "pass",
+        "issues": [],
+        "length_ratio": 0.8105849582172702,
+        "scope": "exact span, numeric token inventory, URL, anecdote-cue and length checks only; passing is not semantic validation"
+      },
+      "semantic_review": {
+        "status": "fail",
+        "issues": [
+          "review rejected or uncertain",
+          "unresolved semantic issues or added claims",
+          "claim not preserved: c5"
+        ],
+        "reviewer_type": "independent_language_model",
+        "scope": "Records the reviewer’s judgment and exact supporting excerpts; software cannot prove entailment or authenticate an independent reviewer"
+      },
+      "eligible_for_user_test": false,
+      "measurements_after": {
+        "counts": {
+          "source_codepoints": 291,
+          "source_content_chars": 260,
+          "target_codepoints": 291,
+          "excluded_codepoints": 0,
+          "target_content_chars": 260,
+          "excluded_content_chars": 0,
+          "target_interval_count": 1,
+          "target_connected_components": 1,
+          "source_paragraphs": 4,
+          "source_sentences": 11,
+          "complete_target_paragraphs": 4,
+          "clipped_target_paragraphs": 0,
+          "complete_target_sentences": 11,
+          "clipped_target_sentences": 0,
+          "source_adjacent_pairs": 10,
+          "source_pairs_with_complete_target_endpoints": 10,
+          "eligible_adjacent_pairs": 10,
+          "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+          "source_pairs_without_complete_target_endpoints": 0
+        },
+        "sentence_content_lengths": [
+          21,
+          41,
+          20,
+          25,
+          24,
+          24,
+          13,
+          21,
+          28,
+          27,
+          16
+        ],
+        "surface_values": {
+          "F002": 15.384615384615385,
+          "F003": 0.0,
+          "F013": 24.0,
+          "F014": 5.5,
+          "F015": 28.0,
+          "F016": 0.125,
+          "F024": 0.3541666666666667,
+          "F025": -0.3149861823589428
+        },
+        "linguistic_status": "unavailable",
+        "linguistic_values": {},
+        "missing": {}
+      },
+      "observed_deltas": {
+        "surface_values": {
+          "F002": 9.342319312107833,
+          "F003": 0.0,
+          "F013": -8.0,
+          "F014": -5.5,
+          "F015": -13.899999999999999,
+          "F016": -0.0625,
+          "F024": 0.03125,
+          "F025": 0.035013817641057154
+        },
+        "linguistic_values": {}
+      },
+      "diff": [
+        "--- original",
+        "+++ minimal",
+        "@@ -1,3 +1,7 @@",
+        "-在讨论缓存是否能够改善接口体验时，有必要先交代这次观察的范围。这次观察只来自内部测试环境，并不包含线上用户。我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms。请求内容和并发配置保持不变，但是数据库负载没有被固定。因此，这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的。",
+        "+这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。",
+        " ",
+        "-在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上。另外，缓存中的数据可能暂时过期，而失效策略还没有完成测试。若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求。下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用。",
+        "+缓存命中会跳过一次数据库查询；未命中仍要访问数据库。命中率还没测，收益是否只落在少量请求上，现在无法判断。",
+        "+",
+        "+另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。",
+        "+",
+        "+下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。"
+      ],
+      "strict_checks": {
+        "status": "fail",
+        "issues": [
+          {
+            "code": "relations_and_scope_not_reviewed"
+          }
+        ],
+        "warning": "Role swaps with the same numeric tokens can pass mechanical checks; independent review is still required"
+      },
+      "evidence_card_ids": [],
+      "source_problem_evidence": null,
+      "style_observations": [
+        {
+          "feature_id": "F013",
+          "source": 32.0,
+          "candidate": 24.0,
+          "raw_delta": -8.0,
+          "change_in_distance_to_train_human_median": 2.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F014",
+          "source": 11.0,
+          "candidate": 5.5,
+          "raw_delta": -5.5,
+          "change_in_distance_to_train_human_median": 5.5,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F015",
+          "source": 41.9,
+          "candidate": 28.0,
+          "raw_delta": -13.899999999999999,
+          "change_in_distance_to_train_human_median": 13.899999999999999,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F024",
+          "source": 0.3229166666666667,
+          "candidate": 0.3541666666666667,
+          "raw_delta": 0.03125,
+          "change_in_distance_to_train_human_median": -0.03125,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F025",
+          "source": -0.35,
+          "candidate": -0.3149861823589428,
+          "raw_delta": 0.035013817641057154,
+          "change_in_distance_to_train_human_median": -0.035013817641057154,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        }
+      ],
+      "review_provenance": "independent_language_model"
+    },
+    {
+      "id": "scope_failure",
+      "text": "这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，已经证明是缓存让延迟降了下来。\n\n缓存命中会跳过一次数据库查询；未命中仍要访问数据库。命中率还没测，收益是否只落在少量请求上，现在无法判断。\n\n另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。\n\n下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+      "intent": "Deliberately retained semantic negative control, not an acceptable rewrite",
+      "mechanical_checks": {
+        "status": "pass",
+        "issues": [],
+        "length_ratio": 0.7994428969359332,
+        "scope": "exact span, numeric token inventory, URL, anecdote-cue and length checks only; passing is not semantic validation"
+      },
+      "semantic_review": {
+        "status": "fail",
+        "issues": [
+          "review rejected or uncertain",
+          "unresolved semantic issues or added claims",
+          "claim not preserved: c4",
+          "claim not preserved: c5"
+        ],
+        "reviewer_type": "independent_language_model",
+        "scope": "Records the reviewer’s judgment and exact supporting excerpts; software cannot prove entailment or authenticate an independent reviewer"
+      },
+      "eligible_for_user_test": false,
+      "measurements_after": {
+        "counts": {
+          "source_codepoints": 287,
+          "source_content_chars": 256,
+          "target_codepoints": 287,
+          "excluded_codepoints": 0,
+          "target_content_chars": 256,
+          "excluded_content_chars": 0,
+          "target_interval_count": 1,
+          "target_connected_components": 1,
+          "source_paragraphs": 4,
+          "source_sentences": 11,
+          "complete_target_paragraphs": 4,
+          "clipped_target_paragraphs": 0,
+          "complete_target_sentences": 11,
+          "clipped_target_sentences": 0,
+          "source_adjacent_pairs": 10,
+          "source_pairs_with_complete_target_endpoints": 10,
+          "eligible_adjacent_pairs": 10,
+          "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+          "source_pairs_without_complete_target_endpoints": 0
+        },
+        "sentence_content_lengths": [
+          21,
+          41,
+          20,
+          21,
+          24,
+          24,
+          13,
+          21,
+          28,
+          27,
+          16
+        ],
+        "surface_values": {
+          "F002": 15.625,
+          "F003": 0.0,
+          "F013": 21.0,
+          "F014": 5.0,
+          "F015": 28.0,
+          "F016": 0.14285714285714285,
+          "F024": 0.3952380952380953,
+          "F025": -0.2507848110878979
+        },
+        "linguistic_status": "unavailable",
+        "linguistic_values": {},
+        "missing": {}
+      },
+      "observed_deltas": {
+        "surface_values": {
+          "F002": 9.582703927492446,
+          "F003": 0.0,
+          "F013": -11.0,
+          "F014": -6.0,
+          "F015": -13.899999999999999,
+          "F016": -0.04464285714285715,
+          "F024": 0.07232142857142859,
+          "F025": 0.09921518891210207
+        },
+        "linguistic_values": {}
+      },
+      "diff": [
+        "--- original",
+        "+++ scope_failure",
+        "@@ -1,3 +1,7 @@",
+        "-在讨论缓存是否能够改善接口体验时，有必要先交代这次观察的范围。这次观察只来自内部测试环境，并不包含线上用户。我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms。请求内容和并发配置保持不变，但是数据库负载没有被固定。因此，这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的。",
+        "+这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，已经证明是缓存让延迟降了下来。",
+        " ",
+        "-在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上。另外，缓存中的数据可能暂时过期，而失效策略还没有完成测试。若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求。下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用。",
+        "+缓存命中会跳过一次数据库查询；未命中仍要访问数据库。命中率还没测，收益是否只落在少量请求上，现在无法判断。",
+        "+",
+        "+另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。",
+        "+",
+        "+下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。"
+      ],
+      "strict_checks": {
+        "status": "fail",
+        "issues": [
+          {
+            "code": "relations_and_scope_not_reviewed"
+          }
+        ],
+        "warning": "Role swaps with the same numeric tokens can pass mechanical checks; independent review is still required"
+      },
+      "evidence_card_ids": [],
+      "source_problem_evidence": null,
+      "style_observations": [
+        {
+          "feature_id": "F013",
+          "source": 32.0,
+          "candidate": 21.0,
+          "raw_delta": -11.0,
+          "change_in_distance_to_train_human_median": 5.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F014",
+          "source": 11.0,
+          "candidate": 5.0,
+          "raw_delta": -6.0,
+          "change_in_distance_to_train_human_median": 6.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F015",
+          "source": 41.9,
+          "candidate": 28.0,
+          "raw_delta": -13.899999999999999,
+          "change_in_distance_to_train_human_median": 13.899999999999999,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F024",
+          "source": 0.3229166666666667,
+          "candidate": 0.3952380952380953,
+          "raw_delta": 0.07232142857142859,
+          "change_in_distance_to_train_human_median": -0.07232142857142859,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F025",
+          "source": -0.35,
+          "candidate": -0.2507848110878979,
+          "raw_delta": 0.09921518891210207,
+          "change_in_distance_to_train_human_median": -0.09921518891210207,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        }
+      ],
+      "review_provenance": "independent_language_model"
+    },
+    {
+      "id": "repaired",
+      "text": "这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。\n\n缓存命中时可以跳过一次数据库查询；未命中仍要访问数据库。命中率还没测，收益是否只落在少量请求上，现在无法判断。\n\n另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。\n\n下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+      "intent": "Preserve source capability modality after independent review rejected an unintended strengthening in minimal",
+      "mechanical_checks": {
+        "status": "pass",
+        "issues": [],
+        "length_ratio": 0.8161559888579387,
+        "scope": "exact span, numeric token inventory, URL, anecdote-cue and length checks only; passing is not semantic validation"
+      },
+      "semantic_review": {
+        "status": "pass",
+        "issues": [],
+        "reviewer_type": "independent_language_model",
+        "scope": "Records the reviewer’s judgment and exact supporting excerpts; software cannot prove entailment or authenticate an independent reviewer"
+      },
+      "eligible_for_user_test": true,
+      "measurements_after": {
+        "counts": {
+          "source_codepoints": 293,
+          "source_content_chars": 262,
+          "target_codepoints": 293,
+          "excluded_codepoints": 0,
+          "target_content_chars": 262,
+          "excluded_content_chars": 0,
+          "target_interval_count": 1,
+          "target_connected_components": 1,
+          "source_paragraphs": 4,
+          "source_sentences": 11,
+          "complete_target_paragraphs": 4,
+          "clipped_target_paragraphs": 0,
+          "complete_target_sentences": 11,
+          "clipped_target_sentences": 0,
+          "source_adjacent_pairs": 10,
+          "source_pairs_with_complete_target_endpoints": 10,
+          "eligible_adjacent_pairs": 10,
+          "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+          "source_pairs_without_complete_target_endpoints": 0
+        },
+        "sentence_content_lengths": [
+          21,
+          41,
+          20,
+          25,
+          26,
+          24,
+          13,
+          21,
+          28,
+          27,
+          16
+        ],
+        "surface_values": {
+          "F002": 15.267175572519085,
+          "F003": 0.0,
+          "F013": 24.0,
+          "F014": 6.0,
+          "F015": 28.0,
+          "F016": 0.125,
+          "F024": 0.3625,
+          "F025": -0.24316221747202582
+        },
+        "linguistic_status": "unavailable",
+        "linguistic_values": {},
+        "missing": {}
+      },
+      "observed_deltas": {
+        "surface_values": {
+          "F002": 9.224879500011532,
+          "F003": 0.0,
+          "F013": -8.0,
+          "F014": -5.0,
+          "F015": -13.899999999999999,
+          "F016": -0.0625,
+          "F024": 0.039583333333333304,
+          "F025": 0.10683778252797416
+        },
+        "linguistic_values": {}
+      },
+      "diff": [
+        "--- original",
+        "+++ repaired",
+        "@@ -1,3 +1,7 @@",
+        "-在讨论缓存是否能够改善接口体验时，有必要先交代这次观察的范围。这次观察只来自内部测试环境，并不包含线上用户。我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms。请求内容和并发配置保持不变，但是数据库负载没有被固定。因此，这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的。",
+        "+这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。",
+        " ",
+        "-在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上。另外，缓存中的数据可能暂时过期，而失效策略还没有完成测试。若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求。下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用。",
+        "+缓存命中时可以跳过一次数据库查询；未命中仍要访问数据库。命中率还没测，收益是否只落在少量请求上，现在无法判断。",
+        "+",
+        "+另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。",
+        "+",
+        "+下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。"
+      ],
+      "strict_checks": {
+        "status": "pass",
+        "issues": [],
+        "warning": "Role swaps with the same numeric tokens can pass mechanical checks; independent review is still required"
+      },
+      "evidence_card_ids": [],
+      "source_problem_evidence": null,
+      "style_observations": [
+        {
+          "feature_id": "F013",
+          "source": 32.0,
+          "candidate": 24.0,
+          "raw_delta": -8.0,
+          "change_in_distance_to_train_human_median": 2.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F014",
+          "source": 11.0,
+          "candidate": 6.0,
+          "raw_delta": -5.0,
+          "change_in_distance_to_train_human_median": 5.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F015",
+          "source": 41.9,
+          "candidate": 28.0,
+          "raw_delta": -13.899999999999999,
+          "change_in_distance_to_train_human_median": 13.899999999999999,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F024",
+          "source": 0.3229166666666667,
+          "candidate": 0.3625,
+          "raw_delta": 0.039583333333333304,
+          "change_in_distance_to_train_human_median": -0.039583333333333304,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F025",
+          "source": -0.35,
+          "candidate": -0.24316221747202582,
+          "raw_delta": 0.10683778252797416,
+          "change_in_distance_to_train_human_median": -0.10683778252797416,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        }
+      ],
+      "review_provenance": "independent_language_model"
+    },
+    {
+      "id": "evidence_inspected",
+      "text": "这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。\n\n缓存命中时可以跳过一次数据库查询，未命中时仍要访问数据库；命中率还没测，所以现在无法判断收益是否只集中在少量请求上。\n\n另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。\n\n下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+      "intent": "After inspecting the longer HUMAN-labeled sentence median/p90 contrast, check whether the earlier shortening separated a mechanism from its uncertainty. Retain their explicit original link in one connected passage while removing only generic framing. This is an editorial application hypothesis, not optimization to a human length target.",
+      "mechanical_checks": {
+        "status": "pass",
+        "issues": [],
+        "length_ratio": 0.8245125348189415,
+        "scope": "exact span, numeric token inventory, URL, anecdote-cue and length checks only; passing is not semantic validation"
+      },
+      "semantic_review": {
+        "status": "pass",
+        "issues": [],
+        "reviewer_type": "independent_language_model",
+        "scope": "Records the reviewer’s judgment and exact supporting excerpts; software cannot prove entailment or authenticate an independent reviewer"
+      },
+      "eligible_for_user_test": true,
+      "measurements_after": {
+        "counts": {
+          "source_codepoints": 296,
+          "source_content_chars": 266,
+          "target_codepoints": 296,
+          "excluded_codepoints": 0,
+          "target_content_chars": 266,
+          "excluded_content_chars": 0,
+          "target_interval_count": 1,
+          "target_connected_components": 1,
+          "source_paragraphs": 4,
+          "source_sentences": 10,
+          "complete_target_paragraphs": 4,
+          "clipped_target_paragraphs": 0,
+          "complete_target_sentences": 10,
+          "clipped_target_sentences": 0,
+          "source_adjacent_pairs": 9,
+          "source_pairs_with_complete_target_endpoints": 9,
+          "eligible_adjacent_pairs": 9,
+          "endpoint_complete_pairs_blocked_by_excluded_gap": 0,
+          "source_pairs_without_complete_target_endpoints": 0
+        },
+        "sentence_content_lengths": [
+          21,
+          41,
+          20,
+          25,
+          54,
+          13,
+          21,
+          28,
+          27,
+          16
+        ],
+        "surface_values": {
+          "F002": 15.037593984962406,
+          "F003": 0.25,
+          "F013": 23.0,
+          "F014": 7.5,
+          "F015": 42.3,
+          "F016": 0.1956521739130435,
+          "F024": 0.6908212560386474,
+          "F025": -0.4435185266405332
+        },
+        "linguistic_status": "unavailable",
+        "linguistic_values": {},
+        "missing": {}
+      },
+      "observed_deltas": {
+        "surface_values": {
+          "F002": 8.995297912454852,
+          "F003": 0.25,
+          "F013": -9.0,
+          "F014": -3.5,
+          "F015": 0.3999999999999986,
+          "F016": 0.008152173913043487,
+          "F024": 0.36790458937198073,
+          "F025": -0.09351852664053323
+        },
+        "linguistic_values": {}
+      },
+      "diff": [
+        "--- original",
+        "+++ evidence_inspected",
+        "@@ -1,3 +1,7 @@",
+        "-在讨论缓存是否能够改善接口体验时，有必要先交代这次观察的范围。这次观察只来自内部测试环境，并不包含线上用户。我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms。请求内容和并发配置保持不变，但是数据库负载没有被固定。因此，这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的。",
+        "+这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。",
+        " ",
+        "-在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上。另外，缓存中的数据可能暂时过期，而失效策略还没有完成测试。若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求。下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用。",
+        "+缓存命中时可以跳过一次数据库查询，未命中时仍要访问数据库；命中率还没测，所以现在无法判断收益是否只集中在少量请求上。",
+        "+",
+        "+另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。",
+        "+",
+        "+下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。"
+      ],
+      "strict_checks": {
+        "status": "pass",
+        "issues": [],
+        "warning": "Role swaps with the same numeric tokens can pass mechanical checks; independent review is still required"
+      },
+      "evidence_card_ids": [
+        "F013",
+        "F015"
+      ],
+      "source_problem_evidence": "在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上",
+      "style_observations": [
+        {
+          "feature_id": "F013",
+          "source": 32.0,
+          "candidate": 23.0,
+          "raw_delta": -9.0,
+          "change_in_distance_to_train_human_median": 3.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F014",
+          "source": 11.0,
+          "candidate": 7.5,
+          "raw_delta": -3.5,
+          "change_in_distance_to_train_human_median": 3.5,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F015",
+          "source": 41.9,
+          "candidate": 42.3,
+          "raw_delta": 0.3999999999999986,
+          "change_in_distance_to_train_human_median": -0.3999999999999986,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F024",
+          "source": 0.3229166666666667,
+          "candidate": 0.6908212560386474,
+          "raw_delta": 0.36790458937198073,
+          "change_in_distance_to_train_human_median": -0.36790458937198073,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F025",
+          "source": -0.35,
+          "candidate": -0.4435185266405332,
+          "raw_delta": -0.09351852664053323,
+          "change_in_distance_to_train_human_median": 0.09351852664053323,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        }
+      ],
+      "review_provenance": "independent_language_model"
+    }
+  ],
+  "selected_candidate_id": "evidence_inspected",
+  "final_text": "这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。\n\n缓存命中时可以跳过一次数据库查询，未命中时仍要访问数据库；命中率还没测，所以现在无法判断收益是否只集中在少量请求上。\n\n另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。\n\n下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+  "abstention_reason": null,
+  "rollback_text": "在讨论缓存是否能够改善接口体验时，有必要先交代这次观察的范围。这次观察只来自内部测试环境，并不包含线上用户。我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms。请求内容和并发配置保持不变，但是数据库负载没有被固定。因此，这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的。\n\n在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上。另外，缓存中的数据可能暂时过期，而失效策略还没有完成测试。若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求。下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用。",
+  "acceptance": "Not accepted; owner judgment pending. No claim of human indistinguishability.",
+  "quality_score": null,
+  "limitations": [
+    "Synthetic development demonstration",
+    "Not a blind reader study",
+    "No personal data",
+    "No trained text generator"
+  ],
+  "evidence_sha256": "a9a93c9345505b52ad7b02811d4983fad6ae7dce000b3795f3daa0fdaa50263c",
+  "evidence_cards": [
+    {
+      "feature_id": "F002",
+      "observed": 6.042296072507553,
+      "train_human_median": 5.58659217877095,
+      "paired_human_minus_ai": -8.307037274843482,
+      "train_human_q10_q90": [
+        5.241113254340038,
+        7.7400119260584415
+      ],
+      "dev_direction_reproduced": false,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": false,
+      "unavailable_reason": "unsupported_domain_direction_or_missing_value",
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F003",
+      "observed": 0.0,
+      "train_human_median": 0.0,
+      "paired_human_minus_ai": -0.08550531600110252,
+      "train_human_q10_q90": [
+        0.0,
+        0.0
+      ],
+      "dev_direction_reproduced": false,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": false,
+      "unavailable_reason": "unsupported_domain_direction_or_missing_value",
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F013",
+      "observed": 32.0,
+      "train_human_median": 29.0,
+      "paired_human_minus_ai": 9.298501872659177,
+      "train_human_q10_q90": [
+        15.5,
+        89.40000000000003
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F014",
+      "observed": 11.0,
+      "train_human_median": 18.75,
+      "paired_human_minus_ai": 1.4552902621722847,
+      "train_human_q10_q90": [
+        5.0,
+        43.95000000000002
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F015",
+      "observed": 41.9,
+      "train_human_median": 54.5,
+      "paired_human_minus_ai": 17.448913857677905,
+      "train_human_q10_q90": [
+        32.720000000000006,
+        117.48
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F016",
+      "observed": 0.1875,
+      "train_human_median": 0.35,
+      "paired_human_minus_ai": 0.014306210428142379,
+      "train_human_q10_q90": [
+        0.06290322580645162,
+        0.6814545454545455
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": false,
+      "unavailable_reason": "unsupported_domain_direction_or_missing_value",
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F024",
+      "observed": 0.3229166666666667,
+      "train_human_median": 0.7765136823960354,
+      "paired_human_minus_ai": 0.372273680552004,
+      "train_human_q10_q90": [
+        0.4016187790116928,
+        1.781982392228294
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    },
+    {
+      "feature_id": "F025",
+      "observed": -0.35,
+      "train_human_median": -0.2,
+      "paired_human_minus_ai": 0.07262790134230471,
+      "train_human_q10_q90": [
+        -0.797980362684063,
+        0.5
+      ],
+      "dev_direction_reproduced": true,
+      "instrument_comparison_eligible": false,
+      "comparison_status": "Exploratory inspection only; instrument validation is not established",
+      "input_transport_validated": false,
+      "available_for_inspection": true,
+      "unavailable_reason": null,
+      "instruction": "Inspect this source choice in context; preserve it unless a concrete, source-grounded writing problem is found. Do not optimize toward a number."
+    }
+  ],
+  "evidence_role": "observational_train_dev",
+  "instrument_implementation_verified": true,
+  "reference_applicability": {
+    "status": "unvalidated_transport_hypothesis",
+    "reason": "Synthetic technical/math development prose is not a member of the web corpus. Web is an exploratory reference choice, not verified in-domain support."
+  },
+  "candidate_timing": "Initial minimal/scope_failure and cache repaired drafts preceded real evidence cards; only subsequent evidence_inspected candidate follows them.",
+  "generation_method": "Host language model; no project-trained generator",
+  "semantic_equivalence": "provisionally reviewed, not proved",
+  "style_benefit": "unvalidated; feature change is not reader judgment",
+  "personal_stage_enabled": false
+}

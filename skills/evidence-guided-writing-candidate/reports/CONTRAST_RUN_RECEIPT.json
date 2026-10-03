@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "input_sha256": "077c951465ddc14b95d7826238090a6131182e9bf7e47b8398d552e4b5377f7c",
+  "input_rows": 4814,
+  "features": 8,
+  "supported_inspections": [
+    "F013",
+    "F014",
+    "F015",
+    "F024",
+    "F025"
+  ],
+  "cpu_seconds": 5.80288323,
+  "wall_seconds": 5.80462543899921,
+  "peak_rss_bytes": 113684480,
+  "rss_cap_bytes": 805306368,
+  "cpu_cap_seconds": 180,
+  "core": 7,
+  "output_sha256": "a77352b9afcc3d90bc1db4eddb6b2f0cf626167e84864130051edd331793f56f",
+  "test_opened": false,
+  "role": "exploratory_observational_contrast_not_rewrite_effect"
+}

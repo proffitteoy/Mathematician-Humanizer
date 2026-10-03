@@ -1,0 +1,319 @@
+{
+  "schema_version": "development-demonstration/0.1",
+  "role": "synthetic_development_demonstration_not_blind_human_validation",
+  "evidence_sha256": "a9a93c9345505b52ad7b02811d4983fad6ae7dce000b3795f3daa0fdaa50263c",
+  "results": [
+    {
+      "id": "bounded-sequence-proof",
+      "status": "reviewed_candidate_for_user_test",
+      "selected": "minimal",
+      "candidates": [
+        {
+          "id": "minimal",
+          "mechanical": "pass",
+          "semantic_review": "pass",
+          "strict_checks": "pass",
+          "eligible_for_user_test": true,
+          "style_observations": [
+            {
+              "feature_id": "F013",
+              "source": 30.0,
+              "candidate": 22.0,
+              "raw_delta": -8.0,
+              "change_in_distance_to_train_human_median": 6.0,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F014",
+              "source": 20.0,
+              "candidate": 16.0,
+              "raw_delta": -4.0,
+              "change_in_distance_to_train_human_median": 1.5,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F015",
+              "source": 37.2,
+              "candidate": 33.699999999999996,
+              "raw_delta": -3.500000000000007,
+              "change_in_distance_to_train_human_median": 3.500000000000007,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F024",
+              "source": 0.49583333333333335,
+              "candidate": 0.6298701298701299,
+              "raw_delta": 0.13403679653679657,
+              "change_in_distance_to_train_human_median": -0.13403679653679657,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F025",
+              "source": 0.047619047619047616,
+              "candidate": -0.35714285714285715,
+              "raw_delta": -0.40476190476190477,
+              "change_in_distance_to_train_human_median": -0.09047619047619049,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            }
+          ]
+        },
+        {
+          "id": "scope_failure",
+          "mechanical": "pass",
+          "semantic_review": "fail",
+          "strict_checks": "fail",
+          "eligible_for_user_test": false,
+          "style_observations": [
+            {
+              "feature_id": "F013",
+              "source": 30.0,
+              "candidate": 22.0,
+              "raw_delta": -8.0,
+              "change_in_distance_to_train_human_median": 6.0,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F014",
+              "source": 20.0,
+              "candidate": 16.0,
+              "raw_delta": -4.0,
+              "change_in_distance_to_train_human_median": 1.5,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F015",
+              "source": 37.2,
+              "candidate": 33.4,
+              "raw_delta": -3.8000000000000043,
+              "change_in_distance_to_train_human_median": 3.8000000000000043,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F024",
+              "source": 0.49583333333333335,
+              "candidate": 0.6233766233766234,
+              "raw_delta": 0.12754329004329001,
+              "change_in_distance_to_train_human_median": -0.12754329004329001,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F025",
+              "source": 0.047619047619047616,
+              "candidate": -0.35714285714285715,
+              "raw_delta": -0.40476190476190477,
+              "change_in_distance_to_train_human_median": -0.09047619047619049,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cache-claim-boundaries",
+      "status": "reviewed_candidate_for_user_test",
+      "selected": "evidence_inspected",
+      "candidates": [
+        {
+          "id": "minimal",
+          "mechanical": "pass",
+          "semantic_review": "fail",
+          "strict_checks": "fail",
+          "eligible_for_user_test": false,
+          "style_observations": [
+            {
+              "feature_id": "F013",
+              "source": 32.0,
+              "candidate": 24.0,
+              "raw_delta": -8.0,
+              "change_in_distance_to_train_human_median": 2.0,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F014",
+              "source": 11.0,
+              "candidate": 5.5,
+              "raw_delta": -5.5,
+              "change_in_distance_to_train_human_median": 5.5,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F015",
+              "source": 41.9,
+              "candidate": 28.0,
+              "raw_delta": -13.899999999999999,
+              "change_in_distance_to_train_human_median": 13.899999999999999,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F024",
+              "source": 0.3229166666666667,
+              "candidate": 0.3541666666666667,
+              "raw_delta": 0.03125,
+              "change_in_distance_to_train_human_median": -0.03125,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F025",
+              "source": -0.35,
+              "candidate": -0.3149861823589428,
+              "raw_delta": 0.035013817641057154,
+              "change_in_distance_to_train_human_median": -0.035013817641057154,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            }
+          ]
+        },
+        {
+          "id": "scope_failure",
+          "mechanical": "pass",
+          "semantic_review": "fail",
+          "strict_checks": "fail",
+          "eligible_for_user_test": false,
+          "style_observations": [
+            {
+              "feature_id": "F013",
+              "source": 32.0,
+              "candidate": 21.0,
+              "raw_delta": -11.0,
+              "change_in_distance_to_train_human_median": 5.0,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F014",
+              "source": 11.0,
+              "candidate": 5.0,
+              "raw_delta": -6.0,
+              "change_in_distance_to_train_human_median": 6.0,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F015",
+              "source": 41.9,
+              "candidate": 28.0,
+              "raw_delta": -13.899999999999999,
+              "change_in_distance_to_train_human_median": 13.899999999999999,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F024",
+              "source": 0.3229166666666667,
+              "candidate": 0.3952380952380953,
+              "raw_delta": 0.07232142857142859,
+              "change_in_distance_to_train_human_median": -0.07232142857142859,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F025",
+              "source": -0.35,
+              "candidate": -0.2507848110878979,
+              "raw_delta": 0.09921518891210207,
+              "change_in_distance_to_train_human_median": -0.09921518891210207,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            }
+          ]
+        },
+        {
+          "id": "repaired",
+          "mechanical": "pass",
+          "semantic_review": "pass",
+          "strict_checks": "pass",
+          "eligible_for_user_test": true,
+          "style_observations": [
+            {
+              "feature_id": "F013",
+              "source": 32.0,
+              "candidate": 24.0,
+              "raw_delta": -8.0,
+              "change_in_distance_to_train_human_median": 2.0,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F014",
+              "source": 11.0,
+              "candidate": 6.0,
+              "raw_delta": -5.0,
+              "change_in_distance_to_train_human_median": 5.0,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F015",
+              "source": 41.9,
+              "candidate": 28.0,
+              "raw_delta": -13.899999999999999,
+              "change_in_distance_to_train_human_median": 13.899999999999999,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F024",
+              "source": 0.3229166666666667,
+              "candidate": 0.3625,
+              "raw_delta": 0.039583333333333304,
+              "change_in_distance_to_train_human_median": -0.039583333333333304,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F025",
+              "source": -0.35,
+              "candidate": -0.24316221747202582,
+              "raw_delta": 0.10683778252797416,
+              "change_in_distance_to_train_human_median": -0.10683778252797416,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            }
+          ]
+        },
+        {
+          "id": "evidence_inspected",
+          "mechanical": "pass",
+          "semantic_review": "pass",
+          "strict_checks": "pass",
+          "eligible_for_user_test": true,
+          "style_observations": [
+            {
+              "feature_id": "F013",
+              "source": 32.0,
+              "candidate": 23.0,
+              "raw_delta": -9.0,
+              "change_in_distance_to_train_human_median": 3.0,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F014",
+              "source": 11.0,
+              "candidate": 7.5,
+              "raw_delta": -3.5,
+              "change_in_distance_to_train_human_median": 3.5,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F015",
+              "source": 41.9,
+              "candidate": 42.3,
+              "raw_delta": 0.3999999999999986,
+              "change_in_distance_to_train_human_median": -0.3999999999999986,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F024",
+              "source": 0.3229166666666667,
+              "candidate": 0.6908212560386474,
+              "raw_delta": 0.36790458937198073,
+              "change_in_distance_to_train_human_median": -0.36790458937198073,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            },
+            {
+              "feature_id": "F025",
+              "source": -0.35,
+              "candidate": -0.4435185266405332,
+              "raw_delta": -0.09351852664053323,
+              "change_in_distance_to_train_human_median": 0.09351852664053323,
+              "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "training_or_test_data_rewritten": false,
+  "paid_generation_calls": 0,
+  "learned_generator_used": false,
+  "acceptance": "owner judgment pending"
+}

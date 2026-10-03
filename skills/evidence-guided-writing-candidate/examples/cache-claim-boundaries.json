@@ -1,0 +1,397 @@
+{
+  "schema_version": "writing-job/0.1",
+  "id": "cache-claim-boundaries",
+  "genre": "technical_commentary",
+  "original": "在讨论缓存是否能够改善接口体验时，有必要先交代这次观察的范围。这次观察只来自内部测试环境，并不包含线上用户。我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms。请求内容和并发配置保持不变，但是数据库负载没有被固定。因此，这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的。\n\n在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上。另外，缓存中的数据可能暂时过期，而失效策略还没有完成测试。若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求。下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用。",
+  "source_declaration": "synthetic_development_input_authored_for_this_candidate; not human corpus or held-out evaluation",
+  "claims": [
+    {
+      "id": "c1",
+      "commitment": "观察仅限内部环境，不涉及线上用户",
+      "source_evidence": "这次观察只来自内部测试环境，并不包含线上用户"
+    },
+    {
+      "id": "c2",
+      "commitment": "测试次数、每次请求数、接口和p95前后数值须全部保留",
+      "source_evidence": "我们重复了3次测试，每次发送200个请求，接口A的p95延迟从240ms降到150ms"
+    },
+    {
+      "id": "c3",
+      "commitment": "请求内容和并发不变，但数据库负载未控制",
+      "source_evidence": "请求内容和并发配置保持不变，但是数据库负载没有被固定"
+    },
+    {
+      "id": "c4",
+      "commitment": "结果支持进一步检查，但不能单凭此认定缓存因果效果",
+      "source_evidence": "这组结果可以支持继续检查缓存方案，却还不能单凭它认定延迟下降就是缓存造成的"
+    },
+    {
+      "id": "c5",
+      "commitment": "命中跳过一次查询，未命中仍访问数据库",
+      "source_evidence": "缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库"
+    },
+    {
+      "id": "c6",
+      "commitment": "未测命中率，不能判断收益集中程度",
+      "source_evidence": "这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上"
+    },
+    {
+      "id": "c7",
+      "commitment": "数据可能暂时过期且失效策略测试未完成",
+      "source_evidence": "缓存中的数据可能暂时过期，而失效策略还没有完成测试"
+    },
+    {
+      "id": "c8",
+      "commitment": "立即反映写入的接口不能假定方案满足要求",
+      "source_evidence": "若接口返回的内容需要立即反映写入结果，就不能直接假定当前方案满足要求"
+    },
+    {
+      "id": "c9",
+      "commitment": "下一步控制负载重做对照并记命中率和过期响应，之后才讨论扩大",
+      "source_evidence": "下一步应在固定数据库负载的条件下重做对照，并同时记录命中率和过期响应；只有看过这些结果，才讨论是否扩大试用"
+    }
+  ],
+  "protected": [
+    "接口A",
+    "p95",
+    "240ms",
+    "150ms"
+  ],
+  "candidates": [
+    {
+      "id": "minimal",
+      "text": "这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。\n\n缓存命中会跳过一次数据库查询；未命中仍要访问数据库。命中率还没测，收益是否只落在少量请求上，现在无法判断。\n\n另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。\n\n下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+      "intent": "Clarify the original reasoning and reduce repeated framing; evidence-card linkage will be recorded after real TRAIN evidence is available.",
+      "evidence_card_ids": [],
+      "review": {
+        "reviewer_type": "independent_language_model",
+        "binding_sha256": "6ce790a84894270333f761defc6e6fd64868c8831e7a6d8a5b13cf50a9d1a92d",
+        "verdict": "fail",
+        "claims": [
+          {
+            "id": "c1",
+            "status": "preserved",
+            "candidate_evidence": "这次缓存观察只来自内部测试环境，没有线上用户。",
+            "explanation": "Retains internal-test-only scope and exclusion of online users."
+          },
+          {
+            "id": "c2",
+            "status": "preserved",
+            "candidate_evidence": "我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。",
+            "explanation": "Retains three runs, 200 requests per run, endpoint A, p95 and 240ms to 150ms. No claim of statistical certainty added here."
+          },
+          {
+            "id": "c3",
+            "status": "preserved",
+            "candidate_evidence": "请求内容、并发配置没变，数据库负载却没有固定。",
+            "explanation": "Retains unchanged request/concurrency settings and uncontrolled database load."
+          },
+          {
+            "id": "c4",
+            "status": "preserved",
+            "candidate_evidence": "这值得继续检查，但还不能据此认定是缓存让延迟降了下来。",
+            "explanation": "Retains encouragement to investigate and explicit refusal to infer cache causation from these results alone."
+          },
+          {
+            "id": "c5",
+            "status": "changed",
+            "candidate_evidence": "缓存命中会跳过一次数据库查询；未命中仍要访问数据库。",
+            "explanation": "Source says a hit CAN bypass a query; candidate asserts it WILL. This strengthens capability to behavior without source support. The miss condition is preserved."
+          },
+          {
+            "id": "c6",
+            "status": "preserved",
+            "candidate_evidence": "命中率还没测，收益是否只落在少量请求上，现在无法判断。",
+            "explanation": "Retains unmeasured hit rate and unknown concentration of benefit."
+          },
+          {
+            "id": "c7",
+            "status": "preserved",
+            "candidate_evidence": "缓存中的数据可能暂时过期，失效策略也还没测完。",
+            "explanation": "Retains possible temporary staleness and incomplete invalidation testing."
+          },
+          {
+            "id": "c8",
+            "status": "preserved",
+            "candidate_evidence": "如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。",
+            "explanation": "Retains immediate read-after-write requirement as a conditional reason not to assume adequacy."
+          },
+          {
+            "id": "c9",
+            "status": "preserved",
+            "candidate_evidence": "下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+            "explanation": "Retains controlled-load comparison, both required measurements, and requirement to inspect results before discussing expansion; it does not authorize expansion."
+          }
+        ],
+        "added_claims": [],
+        "issues": [
+          {
+            "blocking": true,
+            "claim_id": "c5",
+            "explanation": "Source says a hit CAN bypass a query; candidate asserts it WILL. This strengthens capability to behavior without source support. The miss condition is preserved."
+          }
+        ],
+        "ledger_completeness": "checked_no_omissions",
+        "relations_and_scope": "changed",
+        "reviewed_candidate_sha256": "1d98ef46e0bd3062549bdc37927004fb92ad4449b1eba5e21753ad18deefbbf7",
+        "style_quality_judgment": "Not established. Independent model review is not human acceptance or blinded preference evidence."
+      }
+    },
+    {
+      "id": "scope_failure",
+      "text": "这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，已经证明是缓存让延迟降了下来。\n\n缓存命中会跳过一次数据库查询；未命中仍要访问数据库。命中率还没测，收益是否只落在少量请求上，现在无法判断。\n\n另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。\n\n下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+      "intent": "Deliberately retained semantic negative control, not an acceptable rewrite",
+      "evidence_card_ids": [],
+      "review": {
+        "reviewer_type": "independent_language_model",
+        "binding_sha256": "be1e5454abc621352d54b4239e7bc1e26891faa466b0d3dc55f6469782051668",
+        "verdict": "fail",
+        "claims": [
+          {
+            "id": "c1",
+            "status": "preserved",
+            "candidate_evidence": "这次缓存观察只来自内部测试环境，没有线上用户。",
+            "explanation": "Retains internal-test-only scope and exclusion of online users."
+          },
+          {
+            "id": "c2",
+            "status": "preserved",
+            "candidate_evidence": "我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。",
+            "explanation": "Retains three runs, 200 requests per run, endpoint A, p95 and 240ms to 150ms. No claim of statistical certainty added here."
+          },
+          {
+            "id": "c3",
+            "status": "preserved",
+            "candidate_evidence": "请求内容、并发配置没变，数据库负载却没有固定。",
+            "explanation": "Retains unchanged request/concurrency settings and uncontrolled database load."
+          },
+          {
+            "id": "c4",
+            "status": "changed",
+            "candidate_evidence": "这值得继续检查，已经证明是缓存让延迟降了下来。",
+            "explanation": "Reverses the explicit causal limitation and asserts proof of causation despite uncontrolled database load."
+          },
+          {
+            "id": "c5",
+            "status": "changed",
+            "candidate_evidence": "缓存命中会跳过一次数据库查询；未命中仍要访问数据库。",
+            "explanation": "Source says a hit CAN bypass a query; candidate asserts it WILL. This strengthens capability to behavior without source support. The miss condition is preserved."
+          },
+          {
+            "id": "c6",
+            "status": "preserved",
+            "candidate_evidence": "命中率还没测，收益是否只落在少量请求上，现在无法判断。",
+            "explanation": "Retains unmeasured hit rate and unknown concentration of benefit."
+          },
+          {
+            "id": "c7",
+            "status": "preserved",
+            "candidate_evidence": "缓存中的数据可能暂时过期，失效策略也还没测完。",
+            "explanation": "Retains possible temporary staleness and incomplete invalidation testing."
+          },
+          {
+            "id": "c8",
+            "status": "preserved",
+            "candidate_evidence": "如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。",
+            "explanation": "Retains immediate read-after-write requirement as a conditional reason not to assume adequacy."
+          },
+          {
+            "id": "c9",
+            "status": "preserved",
+            "candidate_evidence": "下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+            "explanation": "Retains controlled-load comparison, both required measurements, and requirement to inspect results before discussing expansion; it does not authorize expansion."
+          }
+        ],
+        "added_claims": [],
+        "issues": [
+          {
+            "blocking": true,
+            "claim_id": "c4",
+            "explanation": "Reverses the explicit causal limitation and asserts proof of causation despite uncontrolled database load."
+          },
+          {
+            "blocking": true,
+            "claim_id": "c5",
+            "explanation": "Source says a hit CAN bypass a query; candidate asserts it WILL. This strengthens capability to behavior without source support. The miss condition is preserved."
+          }
+        ],
+        "ledger_completeness": "checked_no_omissions",
+        "relations_and_scope": "changed",
+        "reviewed_candidate_sha256": "92e05a62e7e2016b25a83730ede0c470914230fec91fcd3eaf6ddf1af3c2ac75",
+        "style_quality_judgment": "Not established. Independent model review is not human acceptance or blinded preference evidence."
+      }
+    },
+    {
+      "id": "repaired",
+      "text": "这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。\n\n缓存命中时可以跳过一次数据库查询；未命中仍要访问数据库。命中率还没测，收益是否只落在少量请求上，现在无法判断。\n\n另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。\n\n下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+      "intent": "Preserve source capability modality after independent review rejected an unintended strengthening in minimal",
+      "evidence_card_ids": [],
+      "review": {
+        "reviewer_type": "independent_language_model",
+        "binding_sha256": "ede19a1f0e2185e46eca69cc17dcde8fc2c08e515a12279ac0c0094d1c17f8af",
+        "verdict": "pass",
+        "claims": [
+          {
+            "id": "c1",
+            "status": "preserved",
+            "candidate_evidence": "这次缓存观察只来自内部测试环境，没有线上用户。",
+            "explanation": "Retains internal-test-only scope and exclusion of online users."
+          },
+          {
+            "id": "c2",
+            "status": "preserved",
+            "candidate_evidence": "我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。",
+            "explanation": "Retains three runs, 200 requests per run, endpoint A, p95 and 240ms to 150ms. No claim of statistical certainty added here."
+          },
+          {
+            "id": "c3",
+            "status": "preserved",
+            "candidate_evidence": "请求内容、并发配置没变，数据库负载却没有固定。",
+            "explanation": "Retains unchanged request/concurrency settings and uncontrolled database load."
+          },
+          {
+            "id": "c4",
+            "status": "preserved",
+            "candidate_evidence": "这值得继续检查，但还不能据此认定是缓存让延迟降了下来。",
+            "explanation": "Retains encouragement to investigate and explicit refusal to infer cache causation from these results alone."
+          },
+          {
+            "id": "c5",
+            "status": "preserved",
+            "candidate_evidence": "缓存命中时可以跳过一次数据库查询；未命中仍要访问数据库。",
+            "explanation": "The repair restores capability wording 可以 and preserves the miss condition and one-query scope."
+          },
+          {
+            "id": "c6",
+            "status": "preserved",
+            "candidate_evidence": "命中率还没测，收益是否只落在少量请求上，现在无法判断。",
+            "explanation": "Retains unmeasured hit rate and unknown concentration of benefit."
+          },
+          {
+            "id": "c7",
+            "status": "preserved",
+            "candidate_evidence": "缓存中的数据可能暂时过期，失效策略也还没测完。",
+            "explanation": "Retains possible temporary staleness and incomplete invalidation testing."
+          },
+          {
+            "id": "c8",
+            "status": "preserved",
+            "candidate_evidence": "如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。",
+            "explanation": "Retains immediate read-after-write requirement as a conditional reason not to assume adequacy."
+          },
+          {
+            "id": "c9",
+            "status": "preserved",
+            "candidate_evidence": "下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+            "explanation": "Retains controlled-load comparison, both required measurements, and requirement to inspect results before discussing expansion; it does not authorize expansion."
+          }
+        ],
+        "added_claims": [],
+        "issues": [],
+        "ledger_completeness": "checked_no_omissions",
+        "relations_and_scope": "checked_preserved",
+        "reviewed_candidate_sha256": "340bd11e77de1f549898dd6e64610ddbd8ff7fb7ea29a5c22d900986aa81fc96",
+        "style_quality_judgment": "Not established. Independent model review is not human acceptance or blinded preference evidence."
+      }
+    },
+    {
+      "id": "evidence_inspected",
+      "text": "这次缓存观察只来自内部测试环境，没有线上用户。我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。请求内容、并发配置没变，数据库负载却没有固定。这值得继续检查，但还不能据此认定是缓存让延迟降了下来。\n\n缓存命中时可以跳过一次数据库查询，未命中时仍要访问数据库；命中率还没测，所以现在无法判断收益是否只集中在少量请求上。\n\n另一个待查的问题是过期数据。缓存中的数据可能暂时过期，失效策略也还没测完。如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。\n\n下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+      "intent": "After inspecting the longer HUMAN-labeled sentence median/p90 contrast, check whether the earlier shortening separated a mechanism from its uncertainty. Retain their explicit original link in one connected passage while removing only generic framing. This is an editorial application hypothesis, not optimization to a human length target.",
+      "evidence_card_ids": [
+        "F013",
+        "F015"
+      ],
+      "source_problem_evidence": "在具体机制方面，缓存命中时可以跳过一次数据库查询，但未命中时仍然需要访问数据库。这里的命中率尚未测量，所以现在无法判断收益是否只集中在少量请求上",
+      "review": {
+        "reviewer_type": "independent_language_model",
+        "binding_sha256": "c6006660ee4eacd6527d4989fd9029998878a58188baf3c9fa0feab43145c747",
+        "verdict": "pass",
+        "claims": [
+          {
+            "id": "c1",
+            "status": "preserved",
+            "candidate_evidence": "这次缓存观察只来自内部测试环境，没有线上用户。",
+            "explanation": "Retains internal-test-only scope and exclusion of online users."
+          },
+          {
+            "id": "c2",
+            "status": "preserved",
+            "candidate_evidence": "我们重复了3次测试，每次发送200个请求：接口A的p95延迟从240ms降到150ms。",
+            "explanation": "Retains three runs, 200 requests per run, endpoint A, p95 and 240ms to 150ms. No claim of statistical certainty added here."
+          },
+          {
+            "id": "c3",
+            "status": "preserved",
+            "candidate_evidence": "请求内容、并发配置没变，数据库负载却没有固定。",
+            "explanation": "Retains unchanged request/concurrency settings and uncontrolled database load."
+          },
+          {
+            "id": "c4",
+            "status": "preserved",
+            "candidate_evidence": "这值得继续检查，但还不能据此认定是缓存让延迟降了下来。",
+            "explanation": "Retains encouragement to investigate and explicit refusal to infer cache causation from these results alone."
+          },
+          {
+            "id": "c5",
+            "status": "preserved",
+            "candidate_evidence": "缓存命中时可以跳过一次数据库查询，未命中时仍要访问数据库；",
+            "explanation": "Retains possibility/capability 可以 for a hit, one-query scope, and the database access required on a miss. Clause joining does not strengthen the guarantee."
+          },
+          {
+            "id": "c6",
+            "status": "preserved",
+            "candidate_evidence": "命中率还没测，所以现在无法判断收益是否只集中在少量请求上。",
+            "explanation": "Retains the unmeasured hit rate, the resulting lack of knowledge about concentrated benefit, and the explicit causal/reasoning connection stated in the source."
+          },
+          {
+            "id": "c7",
+            "status": "preserved",
+            "candidate_evidence": "缓存中的数据可能暂时过期，失效策略也还没测完。",
+            "explanation": "Retains possible temporary staleness and incomplete invalidation testing."
+          },
+          {
+            "id": "c8",
+            "status": "preserved",
+            "candidate_evidence": "如果接口必须立即反映写入结果，就不能先认定当前方案已经够用。",
+            "explanation": "Retains immediate read-after-write requirement as a conditional reason not to assume adequacy."
+          },
+          {
+            "id": "c9",
+            "status": "preserved",
+            "candidate_evidence": "下一步应固定数据库负载，重做对照，同时记录命中率和过期响应。看过这些结果后，再讨论是否扩大试用。",
+            "explanation": "Retains controlled-load comparison, both required measurements, and requirement to inspect results before discussing expansion; it does not authorize expansion."
+          }
+        ],
+        "added_claims": [],
+        "issues": [],
+        "ledger_completeness": "checked_no_omissions",
+        "relations_and_scope": "checked_preserved",
+        "reviewed_candidate_sha256": "0246128db0fc7177c8bfce0b10b6bf332db129c68f50eb65f9dbe2b34746c8da",
+        "style_quality_judgment": "Not established. Independent model review is not human acceptance or blinded preference evidence."
+      }
+    }
+  ],
+  "selection_preference": [
+    "evidence_inspected",
+    "repaired"
+  ],
+  "selection_rationale": "If independently faithful, prefer evidence_inspected because it keeps the original mechanism and uncertainty rationale connected. Numeric direction does not establish preference or compensate for meaning loss.",
+  "length_ratio_bounds": [
+    0.4,
+    1.8
+  ],
+  "limitations": [
+    "Synthetic development demonstration",
+    "Not a blind reader study",
+    "No personal data",
+    "No trained text generator"
+  ],
+  "evidence_sha256": "a9a93c9345505b52ad7b02811d4983fad6ae7dce000b3795f3daa0fdaa50263c",
+  "evidence_domain": "web",
+  "reference_applicability": {
+    "status": "unvalidated_transport_hypothesis",
+    "reason": "Synthetic technical/math development prose is not a member of the web corpus. Web is an exploratory reference choice, not verified in-domain support."
+  },
+  "initial_candidate_timing": "Initial minimal/scope_failure and cache repaired drafts preceded real evidence cards; only subsequent evidence_inspected candidate follows them."
+}

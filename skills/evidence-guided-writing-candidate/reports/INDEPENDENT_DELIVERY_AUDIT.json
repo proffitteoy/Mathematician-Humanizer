@@ -1,0 +1,179 @@
+{
+  "schema_version": "independent-final-delivery-audit/1",
+  "status": "pass_for_provisional_research_delivery_only",
+  "checks": {
+    "evidence_file_matches_contrast_receipt": true,
+    "export_file_matches_both_receipts": true,
+    "only_exposed_arms_and_splits": true,
+    "no_text_fields_in_export_rows": true,
+    "train_rows_digest_matches_model": true,
+    "dev_rows_digest_matches_audit": true,
+    "model_digest_matches_dev_audit": true,
+    "profile_matches_export": true,
+    "provenance_matches_export": true,
+    "declared_no_test_evaluation": true,
+    "instrument_hash:research/surface/adapter.py": true,
+    "instrument_hash:src/style_compiler/contracts.py": true,
+    "instrument_hash:src/style_compiler/features.py": true,
+    "instrument_hash:src/style_compiler/segmentation.py": true,
+    "replay_exact:bounded-sequence-proof": true,
+    "job_evidence_digest:bounded-sequence-proof": true,
+    "actual_independent_review:bounded-sequence-proof:minimal": true,
+    "review_binding:bounded-sequence-proof:minimal": true,
+    "review_exact_spans:bounded-sequence-proof:minimal": true,
+    "card_citations_supported:bounded-sequence-proof:minimal": true,
+    "actual_independent_review:bounded-sequence-proof:scope_failure": true,
+    "review_binding:bounded-sequence-proof:scope_failure": true,
+    "review_exact_spans:bounded-sequence-proof:scope_failure": true,
+    "card_citations_supported:bounded-sequence-proof:scope_failure": true,
+    "no_false_quality_claim:bounded-sequence-proof": true,
+    "domain_transport_disclosed:bounded-sequence-proof": true,
+    "final_text_matches_selected:bounded-sequence-proof": true,
+    "replay_exact:cache-claim-boundaries": true,
+    "job_evidence_digest:cache-claim-boundaries": true,
+    "actual_independent_review:cache-claim-boundaries:minimal": true,
+    "review_binding:cache-claim-boundaries:minimal": true,
+    "review_exact_spans:cache-claim-boundaries:minimal": true,
+    "card_citations_supported:cache-claim-boundaries:minimal": true,
+    "actual_independent_review:cache-claim-boundaries:scope_failure": true,
+    "review_binding:cache-claim-boundaries:scope_failure": true,
+    "review_exact_spans:cache-claim-boundaries:scope_failure": true,
+    "card_citations_supported:cache-claim-boundaries:scope_failure": true,
+    "actual_independent_review:cache-claim-boundaries:repaired": true,
+    "review_binding:cache-claim-boundaries:repaired": true,
+    "review_exact_spans:cache-claim-boundaries:repaired": true,
+    "card_citations_supported:cache-claim-boundaries:repaired": true,
+    "actual_independent_review:cache-claim-boundaries:evidence_inspected": true,
+    "review_binding:cache-claim-boundaries:evidence_inspected": true,
+    "review_exact_spans:cache-claim-boundaries:evidence_inspected": true,
+    "card_citations_supported:cache-claim-boundaries:evidence_inspected": true,
+    "exact_original_problem:cache-claim-boundaries:evidence_inspected": true,
+    "no_false_quality_claim:cache-claim-boundaries": true,
+    "domain_transport_disclosed:cache-claim-boundaries": true,
+    "final_text_matches_selected:cache-claim-boundaries": true
+  },
+  "check_count": 49,
+  "input_counts": {
+    "TRAIN:CHATGPT": 1816,
+    "TRAIN:HUMAN": 1816,
+    "DEV:CHATGPT": 591,
+    "DEV:HUMAN": 591
+  },
+  "evidence_file_sha256": "a77352b9afcc3d90bc1db4eddb6b2f0cf626167e84864130051edd331793f56f",
+  "export_file_sha256": "077c951465ddc14b95d7826238090a6131182e9bf7e47b8398d552e4b5377f7c",
+  "evidence_canonical_digest": "a9a93c9345505b52ad7b02811d4983fad6ae7dce000b3795f3daa0fdaa50263c",
+  "trained_object": "Exploratory paired TRAIN surface-feature contrasts/reference summaries with separate DEV direction audit. No learned rewrite policy or text generator.",
+  "semantic_review": "Separate language-model evaluator; exact source/claim/candidate review, not authenticated human review or formal equivalence.",
+  "acceptance": "Stage-one owner acceptance not established; personal stage remains disabled.",
+  "evaluation_type": "Two synthetic development demonstrations, six retained versions; not a blind preference trial or natural held-out writing-quality evaluation.",
+  "raw_or_test_davinci_content_read": false,
+  "natural_model_training_by_evaluator": false,
+  "results": [
+    {
+      "job_id": "bounded-sequence-proof",
+      "selected_candidate": "minimal",
+      "source_characters": 311,
+      "selected_characters": 248,
+      "candidate_review_outcomes": {
+        "minimal": "pass",
+        "scope_failure": "fail"
+      },
+      "selected_style_observations": [
+        {
+          "feature_id": "F013",
+          "source": 30.0,
+          "candidate": 22.0,
+          "raw_delta": -8.0,
+          "change_in_distance_to_train_human_median": 6.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F014",
+          "source": 20.0,
+          "candidate": 16.0,
+          "raw_delta": -4.0,
+          "change_in_distance_to_train_human_median": 1.5,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F015",
+          "source": 37.2,
+          "candidate": 33.699999999999996,
+          "raw_delta": -3.500000000000007,
+          "change_in_distance_to_train_human_median": 3.500000000000007,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F024",
+          "source": 0.49583333333333335,
+          "candidate": 0.6298701298701299,
+          "raw_delta": 0.13403679653679657,
+          "change_in_distance_to_train_human_median": -0.13403679653679657,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F025",
+          "source": 0.047619047619047616,
+          "candidate": -0.35714285714285715,
+          "raw_delta": -0.40476190476190477,
+          "change_in_distance_to_train_human_median": -0.09047619047619049,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        }
+      ]
+    },
+    {
+      "job_id": "cache-claim-boundaries",
+      "selected_candidate": "evidence_inspected",
+      "source_characters": 359,
+      "selected_characters": 296,
+      "candidate_review_outcomes": {
+        "minimal": "fail",
+        "scope_failure": "fail",
+        "repaired": "pass",
+        "evidence_inspected": "pass"
+      },
+      "selected_style_observations": [
+        {
+          "feature_id": "F013",
+          "source": 32.0,
+          "candidate": 23.0,
+          "raw_delta": -9.0,
+          "change_in_distance_to_train_human_median": 3.0,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F014",
+          "source": 11.0,
+          "candidate": 7.5,
+          "raw_delta": -3.5,
+          "change_in_distance_to_train_human_median": 3.5,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F015",
+          "source": 41.9,
+          "candidate": 42.3,
+          "raw_delta": 0.3999999999999986,
+          "change_in_distance_to_train_human_median": -0.3999999999999986,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F024",
+          "source": 0.3229166666666667,
+          "candidate": 0.6908212560386474,
+          "raw_delta": 0.36790458937198073,
+          "change_in_distance_to_train_human_median": -0.36790458937198073,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        },
+        {
+          "feature_id": "F025",
+          "source": -0.35,
+          "candidate": -0.4435185266405332,
+          "raw_delta": -0.09351852664053323,
+          "change_in_distance_to_train_human_median": 0.09351852664053323,
+          "interpretation": "Descriptive movement only, not benefit, identity probability, or semantic credit"
+        }
+      ]
+    }
+  ]
+}
