@@ -1,0 +1,95 @@
+{
+  "study": "Chinese next-unit measurement prediction",
+  "split": "DEV",
+  "metric": "TRAIN-standardized, registered hierarchy-weighted mean squared error",
+  "lower_is_better": true,
+  "seed": 1701,
+  "newly_completed_models": [
+    "F1",
+    "F2"
+  ],
+  "previously_reported_model": "F4",
+  "input_view": "mask_opportunity; measurement values removed, registered masks/support and opportunity information retained",
+  "eligible_targets_identical": true,
+  "eligible_target_count": 67,
+  "eligible_linguistic_target_count": 65,
+  "eligible_structural_length_target_count": 2,
+  "TRAIN_joint_questions": 1686,
+  "DEV_joint_questions": 559,
+  "DEV_scored_documents": 1120,
+  "DEV_scored_next_unit_targets": 10348,
+  "fixed_training_definition": {
+    "maximum_epochs": 100,
+    "DEV_early_stopping_patience": 10
+  },
+  "analytic_F0_DEV_loss": 1.1170967398312224,
+  "rows": [
+    {
+      "model": "F1",
+      "seed": 1701,
+      "mask_opportunity_selected_epoch": 17,
+      "mask_opportunity_selected_DEV_loss": 1.0973217414831828,
+      "mask_opportunity_parameters": 332611,
+      "full_selected_epoch": 20,
+      "full_selected_DEV_loss": 1.0583186313224555,
+      "full_parameters": 493891,
+      "mask_opportunity_minus_same_model_full": 0.03900311016072733
+    },
+    {
+      "model": "F2",
+      "seed": 1701,
+      "mask_opportunity_selected_epoch": 1,
+      "mask_opportunity_selected_DEV_loss": 1.103735580916294,
+      "mask_opportunity_parameters": 342467,
+      "full_selected_epoch": 9,
+      "full_selected_DEV_loss": 1.0415955878012146,
+      "full_parameters": 585507,
+      "mask_opportunity_minus_same_model_full": 0.06213999311507945
+    },
+    {
+      "model": "F4",
+      "seed": 1701,
+      "mask_opportunity_selected_epoch": 15,
+      "mask_opportunity_selected_DEV_loss": 1.095632037724611,
+      "mask_opportunity_parameters": 366915,
+      "full_selected_epoch": 12,
+      "full_selected_DEV_loss": 1.037625253147841,
+      "full_parameters": 616675,
+      "mask_opportunity_minus_same_model_full": 0.05800678457677
+    }
+  ],
+  "completed_registered_fits": 32,
+  "remaining_without_verified_completion": 40,
+  "known_pending_registered_fits": 39,
+  "prior_attempts_with_unknown_outcome": 1,
+  "unknown_prior_attempt": "pooled.pure_mask.F4.1702",
+  "registered_core_fits": 72,
+  "optional_permutation_fits_outside_core72": 24,
+  "measurement_transition": {
+    "new_F1_F2_inputs": "reconstructed TRAIN/DEV features using the unchanged pinned instrument and extraction protocol",
+    "same_reconstructed_feature_population_and_frozen_TRAIN_transform_for_new_F1_F2": true,
+    "published_support_and_failure_aggregates_reproduced": true,
+    "normalization_fitted_on_TRAIN_only": true,
+    "deterministic_transform_replay_verified": true,
+    "historical_transform_byte_identity_verified": false,
+    "limitation": "Original private feature caches and transform hashes were unavailable; exact historical transform byte identity is not established."
+  },
+  "limitations": [
+    "One prespecified initialization seed; no three-seed model-control conclusion.",
+    "DEV selects epochs; these are not unbiased held-out test estimates.",
+    "Input dimensions and parameter counts differ between full and mask/opportunity views, preventing unique causal attribution to information content.",
+    "Scores shared across data and measured instruments are descriptive; no significance or component-level confidence interval is claimed.",
+    "Reconstructed vs historical measurement artifacts add a cross-phase comparison limitation.",
+    "Instrument validity for full style, authorship or text rewriting remains unestablished."
+  ],
+  "instrument_status": "candidate_unvalidated",
+  "comparison_eligible": false,
+  "TEST_evaluated": false,
+  "davinci_evaluated": false,
+  "text_rewriting_validated": false,
+  "public_source_files": [
+    "CORE_DEV_RESULTS_1701_1703.json",
+    "NUISANCE_CONTROL_RESULTS_1701.json",
+    "PURE_MASK_RESULTS_1701_1703.json"
+  ]
+}
