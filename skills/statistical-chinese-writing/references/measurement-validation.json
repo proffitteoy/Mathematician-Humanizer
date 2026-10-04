@@ -1,0 +1,16 @@
+{
+  "schema": "public-skill-validation/1",
+  "date_utc": "2026-10-04",
+  "scope": "Public-source unit tests; synthetic fixtures only. No parser inference, training, corpus parsing or quality validation.",
+  "command": "python -m unittest discover -s skills/statistical-chinese-writing/tests -v",
+  "tests": {
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0
+  },
+  "publication_changes": [
+    "Excluded private task inputs and rewrite receipts",
+    "Replaced optional private frozen regression with synthetic reuse test"
+  ],
+  "historical_measurements": "Aggregate cards and fictional owned-example measurements retain their original frozen instrument provenance. Unit test success is not new empirical style validation."
+}

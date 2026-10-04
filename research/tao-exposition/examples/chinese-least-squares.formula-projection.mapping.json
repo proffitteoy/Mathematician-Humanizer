@@ -1,0 +1,211 @@
+{
+  "original_sha256": "e30ca667a4858e7a575803744d390331954e20ac0b6f7d14760febc33fb68a4e",
+  "projection_sha256": "b1cbbfab08c0e8144e29fc8e3d9d4e2bc36de6188aba086f16639e283c2b7a90",
+  "transform": "Each dollar-delimited formula replaced with 〔公式〕; diagnostic only, not prose revision.",
+  "spans": [
+    {
+      "start_codepoint": 26,
+      "end_codepoint": 29,
+      "original": "$A$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 33,
+      "end_codepoint": 44,
+      "original": "$m\\times n$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 48,
+      "end_codepoint": 65,
+      "original": "$b\\in\\mathbb R^m$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 73,
+      "end_codepoint": 90,
+      "original": "$x\\in\\mathbb R^n$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 96,
+      "end_codepoint": 110,
+      "original": "$\\|Ax-b\\|_2^2$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 140,
+      "end_codepoint": 143,
+      "original": "$x$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 151,
+      "end_codepoint": 155,
+      "original": "$Ax$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 186,
+      "end_codepoint": 192,
+      "original": "$y=Ax$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 197,
+      "end_codepoint": 200,
+      "original": "$y$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 209,
+      "end_codepoint": 231,
+      "original": "$M=\\operatorname{im}A$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 240,
+      "end_codepoint": 243,
+      "original": "$M$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 248,
+      "end_codepoint": 251,
+      "original": "$b$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 286,
+      "end_codepoint": 291,
+      "original": "$y_*$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 294,
+      "end_codepoint": 301,
+      "original": "$b-y_*$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 304,
+      "end_codepoint": 307,
+      "original": "$M$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 315,
+      "end_codepoint": 323,
+      "original": "$y\\in M$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 332,
+      "end_codepoint": 373,
+      "original": "$\\|b-y\\|_2^2=\\|b-y_*\\|_2^2+\\|y-y_*\\|_2^2$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 385,
+      "end_codepoint": 392,
+      "original": "$y=y_*$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 447,
+      "end_codepoint": 457,
+      "original": "$Ax_*=y_*$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 474,
+      "end_codepoint": 486,
+      "original": "$x_*+\\ker A$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 526,
+      "end_codepoint": 531,
+      "original": "$y_*$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 552,
+      "end_codepoint": 566,
+      "original": "$\\ker A=\\{0\\}$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 571,
+      "end_codepoint": 574,
+      "original": "$A$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 589,
+      "end_codepoint": 613,
+      "original": "$\\operatorname{rank}A<n$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 655,
+      "end_codepoint": 695,
+      "original": "$A=\\begin{pmatrix}1&1\\\\0&0\\end{pmatrix}$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 696,
+      "end_codepoint": 707,
+      "original": "$b=(2,1)^T$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 714,
+      "end_codepoint": 731,
+      "original": "$(x_1+x_2-2)^2+1$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 743,
+      "end_codepoint": 754,
+      "original": "$x_1+x_2=2$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 765,
+      "end_codepoint": 774,
+      "original": "$(2,0)^T$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 777,
+      "end_codepoint": 786,
+      "original": "$(1,1)^T$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 799,
+      "end_codepoint": 808,
+      "original": "$(2,0)^T$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 847,
+      "end_codepoint": 859,
+      "original": "$A^TAx=A^Tb$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 875,
+      "end_codepoint": 881,
+      "original": "$A^TA$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 926,
+      "end_codepoint": 935,
+      "original": "$(1,1)^T$",
+      "replacement": "〔公式〕"
+    }
+  ]
+}

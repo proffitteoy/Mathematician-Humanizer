@@ -1,0 +1,151 @@
+{
+  "original_sha256": "82952cdf988071a85ed197344987f6d9d4764978d81891c95320e25764075c00",
+  "projection_sha256": "e28ed435417f42e6faa9feb2909c017cfaa254a049afef96f085eb2ba18e9f4f",
+  "transform": "Each dollar-delimited formula replaced with 〔公式〕; diagnostic only, not prose revision.",
+  "spans": [
+    {
+      "start_codepoint": 55,
+      "end_codepoint": 76,
+      "original": "$\\mu_n\\Rightarrow\\mu$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 90,
+      "end_codepoint": 115,
+      "original": "$f:\\mathbb R\\to\\mathbb R$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 119,
+      "end_codepoint": 150,
+      "original": "$\\int f\\,d\\mu_n\\to\\int f\\,d\\mu$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 166,
+      "end_codepoint": 169,
+      "original": "$n$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 198,
+      "end_codepoint": 218,
+      "original": "$\\mu_n=\\delta_{1/n}$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 221,
+      "end_codepoint": 235,
+      "original": "$\\mu=\\delta_0$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 239,
+      "end_codepoint": 249,
+      "original": "$\\delta_x$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 257,
+      "end_codepoint": 260,
+      "original": "$x$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 278,
+      "end_codepoint": 281,
+      "original": "$f$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 290,
+      "end_codepoint": 298,
+      "original": "$f(1/n)$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 301,
+      "end_codepoint": 307,
+      "original": "$f(0)$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 425,
+      "end_codepoint": 444,
+      "original": "$\\|f\\|_\\infty\\leq1$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 456,
+      "end_codepoint": 477,
+      "original": "$f_n(x)=\\min(1,n|x|)$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 481,
+      "end_codepoint": 486,
+      "original": "$f_n$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 498,
+      "end_codepoint": 510,
+      "original": "$f_n(1/n)=1$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 511,
+      "end_codepoint": 521,
+      "original": "$f_n(0)=0$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 633,
+      "end_codepoint": 647,
+      "original": "$B=(0,\\infty)$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 650,
+      "end_codepoint": 662,
+      "original": "$\\mu_n(B)=1$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 665,
+      "end_codepoint": 675,
+      "original": "$\\mu(B)=0$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 680,
+      "end_codepoint": 685,
+      "original": "$1/n$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 752,
+      "end_codepoint": 759,
+      "original": "$\\{0\\}$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 803,
+      "end_codepoint": 825,
+      "original": "$|f(x)-f(y)|\\leq|x-y|$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 842,
+      "end_codepoint": 847,
+      "original": "$1/n$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 884,
+      "end_codepoint": 889,
+      "original": "$f_n$",
+      "replacement": "〔公式〕"
+    }
+  ]
+}

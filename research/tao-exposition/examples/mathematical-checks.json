@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "text_sha256": {
+    "english-max-cut": "49c327f57d0244298f5e0f13ca2bbef339d5c7bc4f1cf2cdc807a96f2ac59c5b",
+    "chinese-least-squares": "e30ca667a4858e7a575803744d390331954e20ac0b6f7d14760febc33fb68a4e",
+    "chinese-tower-property": "40a5169a23716f9f442fd99252b7ac34891d32791c6746b3ea46726eaed10aa2",
+    "chinese-weak-convergence": "82952cdf988071a85ed197344987f6d9d4764978d81891c95320e25764075c00"
+  },
+  "graph_enumeration": {
+    "labelled_simple_graphs": 1100,
+    "vertex_counts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "other_checks": [
+    "tower exercise exact rational weighted average",
+    "21 least-squares points on minimizer line",
+    "100 exact rational weak-convergence test-function evaluations"
+  ],
+  "limits": "Bounded numerical checks supplement, but do not prove, general mathematical statements. Manual proof review is separate from language statistics."
+}

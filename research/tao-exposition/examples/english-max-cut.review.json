@@ -1,0 +1,31 @@
+{
+  "mode": "exposition",
+  "text_sha256": "49c327f57d0244298f5e0f13ca2bbef339d5c7bc4f1cf2cdc807a96f2ac59c5b",
+  "checks": {
+    "goal": {
+      "status": "pass",
+      "quote": "We will show that every finite simple undirected graph has a cut containing at least half of its edges.",
+      "reason": "开头直接给出对象、量词和目标；初等图论读者只需理解两侧分组。"
+    },
+    "assumptions": {
+      "status": "pass",
+      "quote": "There is no requirement that the two groups have equal size.",
+      "reason": "有限、简单、无向图在首段声明；不加入平衡割约束。简单图无自环，单边交叉概率确为一半；空边集另行覆盖。"
+    },
+    "reasoning": {
+      "status": "pass",
+      "quote": "Linearity of expectation gives",
+      "reason": "每条边的两个顶点有四种等概率赋值，两种交叉。有限求和线性性不要求边指标联合独立。有限平均不超过最大值，所以存在至少m/2条边的割，整数性给出向上取整。局部改进终止后逐点跨边数至少度数一半，求和得到2X至少m。"
+    },
+    "boundary": {
+      "status": "pass",
+      "quote": "Its expectation is one half, but that is not even a possible cut size.",
+      "reason": "单边随机割分布为0与1各半，区分期望和单次结果；三角形最多2条交叉，二部图全部边可交叉，说明下界不总等于最大割。"
+    },
+    "originality": {
+      "status": "pass",
+      "quote": "A useful way around this difficulty is to begin with a partition chosen without trying to make it good.",
+      "reason": "依据通用概率方法独立撰写，未复制博客原句。仅读取技能公开统计与讲解卡，未读取留出或私有语料；不声称全库逐句排重或作者相似度已证实。"
+    }
+  }
+}
