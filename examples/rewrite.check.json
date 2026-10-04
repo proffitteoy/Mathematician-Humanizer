@@ -1,0 +1,48 @@
+{
+  "schema": "prose-lint/1",
+  "original_sha256": "c075b015927375a218b12301bce8f4f20545412e7ddf72d228b276d7b101a8b8",
+  "candidate_sha256": "0aea284e788f978c79144336eac558f5333cce13ada673bbbe70f3d82af428ab",
+  "status": "REVIEW_REQUIRED",
+  "blockers": [],
+  "warnings": [
+    {
+      "id": "logic_or_uncertainty_changed",
+      "removed": {
+        "不": 1,
+        "未": 1
+      },
+      "added": {},
+      "requires": "semantic review; lexical differences do not prove changed meaning, equality does not prove preservation"
+    }
+  ],
+  "surface_summary": {
+    "sentence_proxy_lengths": [
+      23,
+      15,
+      15,
+      16,
+      1,
+      31,
+      22,
+      5,
+      30,
+      9,
+      22,
+      9,
+      34,
+      14,
+      34,
+      19
+    ],
+    "paragraph_proxy_lengths": [
+      53,
+      114,
+      79,
+      53
+    ],
+    "note": "Surface counts mix Han characters and word tokens; NOT the fixed Chinese parser, no reference threshold or pass band."
+  },
+  "semantic_equivalence_proven": false,
+  "quality_or_authorship_score": null,
+  "limits": "No script can establish factual preservation, writer identity, reader knowledge, proof validity or prose quality. This tool never rewrites or normalizes text."
+}

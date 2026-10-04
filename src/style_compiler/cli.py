@@ -1,72 +1,104 @@
-"""Local-only JSON CLI. Never downloads text, models, or sends generation calls."""
-from __future__ import annotations
+"""Local measurement, statistical summaries and skill reference compilation."""
 import argparse
-from dataclasses import replace
+import importlib.metadata
 import json
 from pathlib import Path
 import sys
-from .contracts import Document
+
+from .contracts import Context, Document, Leakage, Provenance, text_hash
 from .features import extract
-from .leakage import Partition, split_documents
-from .model import fit_population_model
-from .planner import propose_paragraph_break, apply_reviewed_plan
+from .editorial import lint
+from .profiles import compile_profiles
+from .statistics import summarize
 
 
-def _read(path: str):
-    return json.loads(Path(path).read_text(encoding="utf-8"))
+def _read_json(path):
+    return json.loads(Path(path).read_text(encoding="utf-8-sig"))
 
 
-def _write(value, output: str | None):
+def _write(value, output):
     rendered = json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
     if output:
-        Path(output).write_text(rendered, encoding="utf-8")
+        with Path(output).open("x", encoding="utf-8", newline="\n") as handle:
+            handle.write(rendered)
     else:
         sys.stdout.write(rendered)
 
 
-def main(argv: list[str] | None = None) -> int:
+def analyze(path: Path, models: Path | None = None):
+    raw = path.read_bytes()
+    text = raw.decode("utf-8")  # Preserve BOM and CRLF in offsets and hashes.
+    identity = text_hash(text)
+    document = Document(identity, text, Context("zh", "unknown", "unknown", "analysis"),
+                        Provenance("unknown", str(path), "caller-supplied local file", False, False),
+                        Leakage(identity, identity, identity, identity))
+    result = {"schema": "style-analysis/1", "surface": extract(document),
+              "linguistic": {"status": "unavailable", "reason": "Supply --models for the pinned local Chinese parser"}}
+    if models is not None:
+        from .surface import SourceObservation, SourceView, Interval, make_projection
+        from .linguistic.adapter import measure
+        from .linguistic.stanza_local import LocalStanza
+
+        observation = SourceObservation(SourceView(identity, path.name, 0, 0,
+            "local-file/1", 0, "", "unclassified", identity, len(text)), text)
+        projection = make_projection(observation.source,
+            (Interval(0, len(text)),) if text else (), annotation_profile="whole-local-file/1")
+        parsed = LocalStanza(models).parse(observation)
+        result["linguistic"] = measure(observation, projection, parsed)
+    return result
+
+
+def main(argv=None):
+    # Redirected Windows streams can default to a legacy code page. JSON is UTF-8.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
-    sub = parser.add_subparsers(dest="command", required=True)
-    for command, help_text in (("extract", "Measure one document JSON"),
-                               ("split", "Create a leakage-screened partition of document JSONL"),
-                               ("fit", "Fit a real-data-gated experimental population model"),
-                               ("plan", "Propose one review-gated paragraph-boundary edit"),
-                               ("apply", "Apply the exact reviewed structural candidate")):
-        cmd = sub.add_parser(command, help=help_text)
-        cmd.add_argument("input", help="Local input path")
-        cmd.add_argument("-o", "--output")
-        if command == "split":
-            cmd.add_argument("--holdout-axes", default="author,prompt")
-            cmd.add_argument("--seed", default="style-compiler-v1")
-        if command == "fit":
-            cmd.add_argument("--partition", required=True)
-            cmd.add_argument("--cohort", required=True, choices=["H_G", "A_G", "A_H", "A_C"])
-        if command == "plan":
-            cmd.add_argument("--max-sentences", type=int, required=True)
-            cmd.add_argument("--protect", action="append", default=[])
-        if command == "apply":
-            cmd.add_argument("--plan", required=True)
-            cmd.add_argument("--semantic-review-approved", action="store_true")
+    commands = parser.add_subparsers(dest="command", required=True)
+    command = commands.add_parser("analyze", help="Measure an unchanged UTF-8 Chinese text file")
+    command.add_argument("input", type=Path)
+    command.add_argument("--models", type=Path, help="Existing pinned Stanza model directory")
+    command.add_argument("-o", "--output", type=Path)
+    command = commands.add_parser("summarize", help="Summarize measured TRAIN/DEV JSONL, grouped by source and component")
+    command.add_argument("input", type=Path)
+    command.add_argument("--bootstrap-draws", type=int, default=400)
+    command.add_argument("--seed", type=int, default=0)
+    command.add_argument("-o", "--output", type=Path)
+    command = commands.add_parser("compile", help="Rebuild the Mathematician Humanizer style cards from frozen research summaries")
+    command.add_argument("--research", type=Path, default=Path("research"))
+    command.add_argument("--skill", type=Path, default=Path("."), help="Skill directory containing SKILL.md (default: current directory)")
+    command = commands.add_parser("check", help="Compare original and candidate; protect code, formulas and explicit locks")
+    command.add_argument("original", type=Path)
+    command.add_argument("candidate", type=Path)
+    command.add_argument("--locks", type=Path, help="JSON array of exact immutable strings")
+    command.add_argument("-o", "--output", type=Path)
     args = parser.parse_args(argv)
     try:
-        if args.command in {"split", "fit"}:
-            documents = [Document.from_dict(json.loads(line)) for line in Path(args.input).read_text(encoding="utf-8").splitlines() if line.strip()]
-            if args.command == "split":
-                result = split_documents(documents, holdout_axes=tuple(a for a in args.holdout_axes.split(",") if a), seed=args.seed).to_dict()
-            else:
-                raw = _read(args.partition)
-                partition = Partition(**raw)
-                result = fit_population_model(documents, partition, cohort=args.cohort)
+        if getattr(args, "output", None) and args.output.exists():
+            raise ValueError("Output already exists; choose a new receipt path")
+        if args.command == "analyze":
+            result = analyze(args.input, args.models)
+        elif args.command == "summarize":
+            records = []
+            for number, line in enumerate(args.input.read_text(encoding="utf-8-sig").splitlines(), 1):
+                if line.strip():
+                    try:
+                        records.append(json.loads(line))
+                    except ValueError as exc:
+                        raise ValueError(f"Invalid JSON on line {number}: {exc}") from exc
+            result = summarize(records, bootstrap_draws=args.bootstrap_draws, seed=args.seed)
+        elif args.command == "compile":
+            result = compile_profiles(args.research, args.skill)
         else:
-            document = Document.from_dict(_read(args.input))
-            if args.command == "extract":
-                result = extract(document)
-            elif args.command == "plan":
-                result = propose_paragraph_break(document, max_sentences=args.max_sentences, protected_strings=tuple(args.protect))
-            else:
-                result = replace(document, text=apply_reviewed_plan(document, _read(args.plan),
-                                 semantic_review_approved=args.semantic_review_approved)).to_dict()
-        _write(result, args.output)
-    except (TypeError, ValueError, RuntimeError, OSError, json.JSONDecodeError) as exc:
+            locks = _read_json(args.locks) if args.locks else []
+            if not isinstance(locks, list):
+                raise ValueError("Locks must be a JSON array")
+            result = lint(args.original.read_bytes(), args.candidate.read_bytes(), locks)
+        _write(result, getattr(args, "output", None))
+        return 2 if args.command == "check" and result["blockers"] else 0
+    except (TypeError, ValueError, KeyError, RuntimeError, OSError, ImportError, importlib.metadata.PackageNotFoundError) as exc:
         parser.exit(2, f"style-compiler: {exc}\n")
-    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

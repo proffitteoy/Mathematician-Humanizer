@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Frozen input bytes are bound by research/manifest.json.
+research/**/*.json -text
+examples/**/*.json -text

@@ -1,4 +1,4 @@
-"""Eight preregisterable character-level measurements; no fitted references.
+"""Eight operational character-level measurements; no reference applied here.
 
 These are operational character/segmentation measures, not validated constructs
 of cognition, naturalness, quality, author identity, or model origin.
@@ -118,8 +118,8 @@ def extract(document: Document) -> dict:
         "pos_dependency": "No versioned POS/dependency model configured or domain validation supplied",
         "embeddings": "No versioned embedding model configured; no vectors fabricated",
         "discourse_stance": "No validated annotation model or manual annotations supplied",
-        "reference_distribution": "No eligible reference corpus fitted",
-        "personalization": "Disabled until explicit final-personalization authorization and a separate implementation",
+        "reference_distribution": "No reference distribution is applied by this measurement call",
+        "personalization": "This instrument performs no personal voice inference",
     }
     return {
         "schema_version": BUNDLE_VERSION,

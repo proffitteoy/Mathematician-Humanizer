@@ -1,6 +1,0 @@
-{
-  "test_command": "python -m unittest discover -s . -p test_loader.py -v",
-  "tests_run": 16,
-  "passed": true,
-  "scope": "Synthetic software contract tests; no empirical style claim"
-}

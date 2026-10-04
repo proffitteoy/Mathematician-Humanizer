@@ -1,0 +1,78 @@
+{
+  "schema": "style-research-manifest/2",
+  "origin_repository": "https://github.com/proffitteoy/style-compiler",
+  "origin_commit": "62b31458185e20d4ba88a667adbc6b7c0f14b14f",
+  "snapshot_date": "2026-10-04",
+  "inputs": {
+    "general/paired-surface.json": {
+      "sha256": "a77352b9afcc3d90bc1db4eddb6b2f0cf626167e84864130051edd331793f56f",
+      "historical_path": "skills/evidence-guided-writing-candidate/references/paired-surface-evidence.json"
+    },
+    "general/joint-reference.json": {
+      "sha256": "e9b5c98fa2655b897c296af985fe1dc32a13c2b92bc6146e26685ea87929fb27",
+      "historical_path": "skills/statistical-chinese-writing/references/human-joint-reference.json"
+    },
+    "general/historical-runtime.json": {
+      "sha256": "6639fc69c174c2276f3f523ff8020590d04c32a7421b5e7437e6b32afa9ed078",
+      "historical_path": "skills/statistical-chinese-writing/references/runtime-manifest.json"
+    },
+    "general/parser-profile.json": {
+      "sha256": "8d7cb663dbb119b9177cf85e79543d08b417f91889ffbd0409c4cab457d07ef5",
+      "historical_path": "research/linguistic/parser-profile.json"
+    },
+    "mathematician/development-profiles.json": {
+      "sha256": "913e00061dac340524f70a285f7e96aeeaf3c43e00e66cbd32a94d1e7354493f",
+      "source_sha256": "534be32dbe0b3fdd9d258a4d243504b5f73a356a08b8985a430af8af58412f66",
+      "transformation": {
+        "operation": "author-anonymization/1",
+        "fields": [
+          "interpretation"
+        ],
+        "numerical_values_changed": false,
+        "measurement_parameters_changed": false
+      },
+      "historical_path_sha256": "db0664d331772de580d8301991648b4e7aed568a419dd2d6ef26e6fcdfe6d748"
+    },
+    "mathematician/summary.json": {
+      "sha256": "b541377c686a8fcfd826139cca15775df83fb9590e9c3a2d6d31bf0a52be5fb2",
+      "source_locator_sha256": "7cbb6b19b396cfd5c437eb6d8ff44cd04ac72efd17193830192514f8e2907049",
+      "source_sha256": "418a1ac9f17f85cfede7096041818dbee07bb68b045043e7dfcc2accb25a86a2",
+      "transformation": {
+        "operation": "author-anonymization/1",
+        "fields": [
+          "source"
+        ],
+        "numerical_values_changed": false,
+        "measurement_parameters_changed": false
+      },
+      "historical_path_sha256": "aa1def60aaa1673c4466ed4eecef4bbabda4b0ef09c5f0eda983afb9c1cf0681"
+    },
+    "mathematician/measurement-contract.json": {
+      "sha256": "cbf0627156cbe5c7f6356c6856e01a88dcd707a9c126297ac07edd9983c186b6",
+      "source_sha256": "e45ef1c93ece07a4bc823e0bd38dc2556c1e7f2192a69f665b2875f6eeb56d0c",
+      "transformation": {
+        "operation": "author-anonymization/1",
+        "fields": [
+          "version"
+        ],
+        "numerical_values_changed": false,
+        "measurement_parameters_changed": false
+      },
+      "historical_path_sha256": "a4959be08d45bf3c854b26c46b6ef1ac0af22e5330e0d5b3197ef4c3ed5d2133"
+    }
+  },
+  "humanizer": {
+    "repository": "https://github.com/blader/humanizer",
+    "commit": "225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8",
+    "skill_blob": "19fc634208e8cc6ae55d4ff287152583216fd244",
+    "version": "3.1.0",
+    "license": "MIT"
+  },
+  "status": "Historical aggregates; three author-identifying metadata fields were anonymized. Source and current hashes are separate. No numerical remeasurement.",
+  "author_reference": {
+    "label": "one of the mathematicians",
+    "source_alias": "public-mathematics-blog/1",
+    "policy": "Author names and identifying URLs are omitted from the current delivery.",
+    "new_corpus_measurement": false
+  }
+}

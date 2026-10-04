@@ -1,105 +1,106 @@
-# Style Compiler
+# Mathematician Humanizer
 
-把可测量的写作选择，转成受语义约束、可复测、可回退的编辑操作。
+一个从 **one of the mathematicians** 的公开博客中提炼论证习惯的改写 skill。围绕具体问题展开，解释关键步骤的动机，让读者能跟随推演；用 [Humanizer](https://github.com/blader/humanizer) 的编辑规则清理模板化表达，保留事实、数学条件与结论。
 
-**当前状态：研究原型，尚未经文体效果验证。** 已有八个字级/句段序列指标，另有[71维语言学候选模块](research/linguistic/README.zh.md)与实际可运行的本地中文解析。学习型多视图原型和拓扑分支已完成合成机制测试；尚无真实总体/作者模型拟合、校准概率或改写效果结论。
+**改前：**
 
-[来源登记](research/source-registry.json)现涵盖WikiConv年度快照、39个固定版本开放许可博客文件及6份学术全文试点。版本、内容角色、辅助生产证据和测量覆盖分别审计；这些数量不等同独立作者或已验证人类参考，原文不入仓库。
+> 最小二乘不仅是寻找答案的工具，更是理解唯一性的窗口。拟合向量唯一，但系数的唯一性需要满列秩。这一点至关重要。
 
-The statistical core and research protocol are separate: executable code establishes reproducible measurements and explicit failure states; only future, rights-checked experiments can establish construct validity or writing benefits.
+**改后：**
 
-## Active model and execution
+> 最小二乘的答案是否唯一，取决于我们把什么看作答案。先看拟合向量：正交投影保证它唯一。再问同一个拟合向量能否来自不同系数；沿着矩阵的核移动系数不会改变拟合结果，所以系数唯一还需要满列秩。
 
-The final model is the learned **Sparse Multi-view Hierarchical Style Dynamics Model**: global observables, linguistic sequences and discourse graphs, with stable/context representations and conditional dynamics. The present statistical code is a baseline. See the [learned-model architecture](docs/design/learned-style-dynamics-v0.1.zh.md) and [active execution plan](docs/EXECUTION_PLAN.zh.md). The [trainable mechanics prototype](research/learned/README.md) now connects global, causal sequence, typed graph and optional topology branches, with synthetic-only gradient/leakage tests. The [topology replication track](research/topology/README.md) includes a pinned local encoder and reproducible synthetic Chinese extraction. Neither establishes natural-text validity or held-out incremental value.
+这是原创演示。完整[原稿、终稿与内容复核](examples/rewrite.md)展开了投影与核各自承担的作用；这个例子没有接受独立的模仿效果评价。
 
-## Run locally
+## 使用
 
-Python 3.11+. Extraction, partitioning and constrained editing use only the standard library. NumPy is optional and used only for the experimental model.
+让助手读取根目录 [SKILL.md](SKILL.md)，然后给出原稿；已经安装的环境可直接调用：
 
-```sh
-python -m pip install -e .
+```text
+$mathematician-humanizer
+
+按参考数学博客的风格改写下面的文字。保留事实、数学条件和结论。
+[粘贴原稿]
+```
+
+改写文件：
+
+```text
+用 mathematician-humanizer 改写 docs/article.md 的正文。
+读者熟悉线性代数，但不熟悉这个证明。保留公式、引用与链接。
+```
+
+默认返回完整终稿。指定文件时只修改正文，再简述改动；需要修改说明或审计时可以明确要求。普通改写无需安装 Python、运行统计程序或下载模型。
+
+## 本地安装
+
+技能包只有根目录的 `SKILL.md`、`references/` 和 `agents/`。把它们复制到目标工具的 `mathematician-humanizer` 技能目录即可。Codex 用户可在本仓库根目录运行以下 PowerShell 命令，安装到用户级目录：
+
+```powershell
+$skillTarget = Join-Path $HOME ".agents/skills/mathematician-humanizer"
+New-Item -ItemType Directory -Force $skillTarget | Out-Null
+Copy-Item .\SKILL.md -Destination $skillTarget
+Copy-Item .\references -Destination $skillTarget -Recurse -Force
+Copy-Item .\agents -Destination $skillTarget -Recurse -Force
+```
+
+其他支持 `SKILL.md` 的工具使用各自的技能目录。重启或刷新技能后调用 `$mathematician-humanizer`；具体发现方式以工具为准。这里提供本地文件安装，未配置插件市场。
+
+## 改写怎样推进
+
+正文给出完整工作流：读原稿和保护内容 → 按问题重组 → 清理表达 → 复核条件与推导 → 交付终稿。
+
+六项论证习惯贯穿全文：
+
+1. 从对象和具体问题进入。
+2. 让关键选择有动机。
+3. 有用时逐步加强结论。
+4. 把篇幅给决定性机制。
+5. 把条件和结论一起说清楚。
+6. 回到问题，说明实际所得。
+
+Humanizer 的 26 项规则覆盖强调、节奏、虚饰、版式、写作残留和读者背景。每项都有原创前后例子。必要的对比、限定、教学回顾和证明细节要保留，不靠禁词、固定段落或长短句交替制造风格。
+
+本 skill 使用同一份匿名化参考风格。数学说明、讲义、札记和技术文章共享这套底色，按读者困难决定展开程度。中文迁移参考博客的论证和表达习惯；没有参考作者亲笔中文语料，不把英语统计阈值搬到中文。
+
+## 仓库结构
+
+参考 Humanizer 的根目录单一技能入口，维护说明与技能正文分开；研究工具支持这个 skill。
+
+| 位置 | 用途 |
+|---|---|
+| [SKILL.md](SKILL.md) | 唯一技能正文，包含工作流、六项论证习惯、26 项规则与交付要求 |
+| `references/` | 已生成的博客风格卡、中文统计补充和上游 MIT 通知 |
+| `agents/openai.yaml` | 技能显示名称和默认调用提示 |
+| [CHANGELOG.md](CHANGELOG.md) | 行为与结构变更记录 |
+| `src/style_compiler/` | 测量、分组汇总、风格卡生成和改稿检查 |
+| `research/`、`build.json` | 冻结研究证据、来源绑定与风格卡构建指纹 |
+| `examples/`、`tests/` | 原创改写、历史失败证据和可执行检查 |
+| `docs/`、`AGENT.md` | 研究协议、适用范围、验收条件和维护约定 |
+
+## 更新统计卡与运行检查
+
+研究主线为 **文本统计 → 风格总结 → Mathematician Humanizer → 实际改稿与内容复核**。Python 3.11+，默认只用标准库；从仓库根目录运行：
+
+```powershell
+$env:PYTHONPATH = "src"
 python -m unittest discover -s tests -v
-style-compiler --help
+python -m style_compiler --help
+python -m style_compiler compile
+python -m style_compiler analyze examples/mathematician/chinese-least-squares.txt
+python -m style_compiler check examples/rewrite.original.txt examples/rewrite.final.txt
 ```
 
-Without installing anything:
+也可在已有 Python 环境运行 `python -m pip install -e .`，使用 `style-compiler` 命令。`compile` 核对冻结输入指纹，只更新两张统计卡和 `build.json`，不改写 `SKILL.md`。
 
-```sh
-PYTHONPATH=src python -m unittest discover -s tests -v
-PYTHONPATH=src python -m style_compiler --help
-```
+`summarize observations.jsonl -o summary.json` 汇总实际测量的 TRAIN/DEV 导出，保留来源分组、分量等权、配对差值和缺失。输入协议、`--skill` 输出目录、可选本地解析与命令范围见[架构与协议](docs/architecture.md)。这些工具不会生成文章，词面检查也不能认证数学证明。
 
-A document must explicitly provide the [versioned JSON contract](schemas/document.schema.json). Supply a local document file; extraction does not fetch a corpus, install a model, or call a language-model service.
+## 证据与范围
 
-```sh
-style-compiler extract document.json -o measurement.json
-style-compiler split corpus.jsonl -o partition.json
-style-compiler fit corpus.jsonl --partition partition.json --cohort H_G -o population-model.json
-style-compiler plan document.json --max-sentences 4 --protect '约三人' -o plan.json
-```
+中文 TRAIN/DEV 汇总支持检查句长变化和衔接；段落密度随来源改变方向，不能写成统一处方。参考博客的历史快照登记 1,234 个记录，测量 1,114 份，开发侧 1,040 份，另有 74 份年份/文章级留出。
 
-`fit` returns an explicit unavailable result unless declared non-synthetic, non-personal training data and a leakage-screened partition meet the support policy. The H_G gate checks declared metadata, including a nonempty author ID and an unassisted label. Rights/provenance flags record an external review claim; the code does not independently verify identity, production history, or the absence of assistance. Install `.[model]` to enable the optional numerical dependency. No fitted artifacts are included.
+本次沿用冻结汇总，没有重新解析语料。涉及作者的名称、目录和来源定位统一匿名化；[来源清单](research/manifest.json)分别保留原始指纹、当前文件指纹和转换字段，统计数值与测量参数保持原样。统计观察与博客阅读总结的论证习惯分开记录；真人偏好、风格保持程度和跨主题效果仍需实际改稿评价。见[研究证据](docs/research.md)与[验收条件](docs/ACCEPTANCE.zh.md)。
 
-`plan` proposes one paragraph break for an explicitly supplied structural constraint. It reports exact candidate deltas, never learned causal effects. Applying an inspected candidate requires a separate deliberate action:
+Humanizer 参考版本为 [3.1.0 的固定提交](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8)。保留其 [MIT 通知](references/upstream-LICENSE.txt)，Unicode 数据保留原通知，其他项目代码没有额外声明统一授权。不分发参考博客全文、原始语料和模型权重。
 
-```sh
-style-compiler apply document.json --plan plan.json --semantic-review-approved -o revised-document.json
-```
-
-The flag records the caller's approval; the software cannot verify that a human actually reviewed meaning. Keep the original document for rollback. A repeated `plan` call is needed for any further edit.
-
-## What exists
-
-- Eight legacy operational metrics: paragraph density, single-sentence paragraph share, sentence-length median/IQR/p90/normalized MAD, adjacent length change, and lag-1 rank correlation
-- Unchanged-input offsets and ordered sentence/paragraph sequences; empty, short, constant and dependency-missing cases remain distinguishable
-- Hard work/lineage/content/near-duplicate grouping; explicit author/prompt/source/topic/generator holdout axes, lexical duplicate screening and infeasibility reporting
-- Experimental regularized conditional mean and pooled residual covariance code, using language/genre/topic/task strata and continuous log length, with training-only transforms and out-of-support abstention
-- An experimental paragraph-boundary plan with protected-content checks, mandatory semantic review and stale/tampered-plan rejection
-- A separate 71-channel POS/dependency/lexical candidate vector, sentence sequences and typed syntax graph; these are correlated sensors, not a validated combined79-channel model
-- Separate synthetic-only trainable multi-view mechanics and pinned local Chinese-encoder topology extraction; see their research READMEs for dependencies and scope
-- Synthetic unit tests that verify software behavior, **not empirical evidence about writing**
-
-## What remains unavailable
-
-Validated Chinese segmentation and POS/dependency accuracy, discourse and stance annotation, empirical embeddings/topology validity, measurement error, fitted hierarchical effects, cluster-aware intervals, calibration, learned intervention effects, and a general semantic rewrite engine. Installing a parser alone would not validate its outputs in the target genre.
-
-Personal voice compilation is deliberately disabled. Personal writings and `proffitteoy/nothing-new` are excluded until explicit final-personalization authorization and a separately reviewed implementation. Do not use a “human style” target to overwrite individual choices.
-
-## Read next
-
-- [Architecture and exact measurement definitions](docs/architecture.md)
-- [Research protocol, hypotheses and promotion gates](docs/research-protocol.md)
-- [Primary-source audit](docs/evidence-audit.md)
-- [Optional skill entrypoint](.agents/skills/style-compiler/SKILL.md)
-
-No raw corpus, third-party implementation, pretrained model or fitted result is committed. The repository currently makes no software-license grant; decide licensing before redistribution.
-
-Research detail: [100-candidate registry](docs/design/feature-schema-100.zh.json), [measurement conventions](docs/design/feature-schema-guide.zh.md), [proposed preregistration](docs/design/research-preregister.zh.md), [statistical design](docs/design/statistical-model.zh.md), [topology evidence](docs/topology-component.md), [corpus provenance](docs/corpus-provenance.md), and [restricted-corpus addendum](docs/corpus-admission-addendum.md). The catalogue is not an implementation checklist: the legacy core exposes eight metrics, and the separate research module implements 71 candidate channels; neither count establishes validated style dimensions.
-
-## Modeling research notes
-
-These are research contracts and hypotheses, not fitted models or validated features.
-
-- [Competing models and identifiability](docs/design/modeling-dossier-v0.1.zh.md)
-- [Chinese construct diagnostics](docs/design/diagnostic-construct-map-v0.1.zh.md)
-- [Dispersion and mixture composition](docs/design/dispersion-mixtures-v0.1.zh.md)
-- [Referential continuity measurement contracts](docs/design/referential-continuity-contract-v0.1.zh.md)
-- [Production provenance and reader perception](docs/design/provenance-perception-register-v0.1.zh.md)
-- [Observational references and partial identification](docs/design/observational-reference-admission-v0.1.zh.md)
-
-The [2017 annual-view census](research/audits/wikiconv-2017-execution.zh.md) records 525,984 source records, including 178,894 nonempty explicit nonheaders. These are structural source counts, not verified human samples or validated linguistic observations.
-
-
-## 当前验收与测量证据
-
-[两阶段验收条件](docs/ACCEPTANCE.zh.md)由项目所有者最终判断，模型分数不能代替验收；个人阶段按该文档的条件授权启动。
-
-[固定PUD64解析测量试点](research/parser_error/PUBLICATION_STATUS.zh.md)已独立复算；生产分词及标注约定造成明显的测量差异。请同时阅读冻结方法、复审和已知缺字段健壮性缺陷，不将本次结果当作通用文体模型验证。
-
-
-[测量识别与联合观测模型](docs/design/measurement-identification/MEASUREMENT_IDENTIFICATION_DRAFT_ZH.md)及[独立复核](docs/design/measurement-identification/FINAL_RECHECK_ZH.md)明确区分回顾解析与前缀预测，处理相关仪器、机会、失败和桥接选择。它们是尚未拟合的数学接口；不会因架构更复杂而自动恢复真实文体。技能入口已同步现有71通道、本地解析与拓扑能力，未宣称最终编译器完成。
-
-
-## 首轮真实观测模型结果
-
-[十五次train/dev拟合与独立复核](research/observed_sequence/results/train-dev-v01/README.zh.md)已完成：固定160条来源、2480单元、68项局部输入；目标是下一操作单元的观测POS组成。顺序GRU相对DeepSets的开发收益很小且种子方向不一致，不能据此宣称稳定文体动力学。测试仍按冻结流程单独评估。该窄实验不等于完整风格模型或写作技能验收。
+旧模型、拓扑、动力学、历史探索脚本和其他写作 skills 可从重建前提交 `62b31458185e20d4ba88a667adbc6b7c0f14b14f` 追溯。

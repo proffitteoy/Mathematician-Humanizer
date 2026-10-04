@@ -1,64 +1,89 @@
-# Architecture and contracts
+# 结构与运行协议
 
-## Implemented path
+## 一条研究链，一个写作入口
 
-`Document → extract → MeasurementBundle → explicit goal → candidate plan → semantic review → apply → remeasure`
+`本地文本/冻结测量 → 统计汇总 → 可解释的风格卡 → mathematician-humanizer 改稿 → 内容复核`
 
-The optional population branch is `rights/provenance review → leakage groups → frozen partition → training-only extraction/design/scaling → experimental ridge residual reference → support-gated assessment`. It does not set editing targets or run a detector. All operations are local; nothing downloads models, text, or sends API generation calls.
+根目录 `SKILL.md` 是唯一技能正文，包含完整的参考数学家改写工作流、六项论证习惯与 Humanizer 26 项清理规则。`references/` 中的两张生成卡供核对研究范围与体裁差异。普通写作直接使用技能正文；分析工具用于研究更新、示例评估或用户明确要求的核验。
 
-- `contracts.py`: strict, versioned metadata and null semantics; personal cohort gate
-- `segmentation.py`: reproducible punctuation-based spans with unchanged source offsets
-- `features.py`: the initial eight measures; explicit unavailable dependencies
-- `leakage.py`: derivative/duplicate components and declared holdout axes
-- `model.py`: guarded population-only conditional baseline; no author model
-- `planner.py`: one small structural candidate, checks and review-gated execution
-- `cli.py`: JSON/JSONL local interface
+最小安装内容为 `SKILL.md`、`references/` 与 `agents/openai.yaml`。不需要复制 `src/`、`research/` 或安装 Python。根目录单一入口、技能元数据与具体前后例子的写法参考 Humanizer；本项目不承诺未经验证的平台插件兼容性。
 
-## Frozen projection and segmentation
+## 代码职责
 
-`all_input_unicode_LN/1.0.0` counts Unicode categories L (letters) and N (numbers) as content characters. This is not Chinese word segmentation or a grapheme count. Combining marks, symbols, emoji and punctuation are excluded; fullwidth digits count. No normalization occurs in measurement. Only duplicate screening uses NFKC, case folding and whitespace removal.
+| 文件 | 职责 |
+|---|---|
+| `segmentation.py`、`features.py` | 原始码点跨度、8 项字级/句段测量与缺失原因 |
+| `contracts.py`、`surface.py` | 不变文本、来源身份和保留缺口的投影；内部研究合同 |
+| `linguistic/` | 71 项 POS/依存/词汇观测；可选固定本地 Stanza 适配器 |
+| `statistics.py` | 文档先在分量内合并，再对分量等权；来源内配对与探索性区间 |
+| `profiles.py` | 核对冻结输入，编译参考博客风格卡与中文统计补充 |
+| `editorial.py` | 不修改文本的差异与内容保护检查 |
+| `english.py` | 可选的固定英语量测，与参考博客英语条件参考比较 |
+| `cli.py` | 四个研究命令：analyze、summarize、compile、check |
 
-`punctuation-lines/1.0.0` treats each nonempty physical line with content characters as a paragraph. It detects terminals `。！？!?．` and selected ASCII full stops, retaining closing quotes. Decimal points and single-letter ASCII initials receive narrow guards. Headings, quotations, abbreviations, lists and mixed-language boundaries are not reliably understood. All input is measured: authorial versus quoted prose attribution is unavailable. Adjacency refers to the resulting ordered input sequence, including paragraph transitions; it must not be described as validated authorial-prose dynamics.
+依赖方向为 `contracts/segmentation → features/surface → linguistic`；统计与风格卡生成不用解析器。无模型、语料或联网操作发生在 import 时。
 
-Offsets are half-open Python Unicode code-point positions `[start,end)` into the unchanged input. JavaScript consumers must convert from UTF-16 indexing before using these offsets. Ordered sentence and paragraph records retain content length, paragraph membership and original position. Text itself is not echoed in a measurement bundle.
+## analyze
 
-## Eight initial measures
+```sh
+style-compiler analyze input.txt -o measurement.json
+style-compiler analyze input.txt --models /existing/stanza-models -o parsed.json
+```
 
-Let C be content characters, P eligible paragraphs, L the ordered positive sentence lengths, and n their count. Quantiles use linear interpolation at `(n−1)q`.
+输入为 UTF-8 原文件；保留 BOM、CRLF、空白和公式，SHA-256 绑定实际字节，偏移为 Python Unicode 码点半开区间。JSON 包含表层量及可选语言学量；无解析器时明确返回 unavailable。自然测量结果可能包含原跨度和来源信息，研究时保存在本地。
 
-| ID | Definition | Raw mathematical support | Provisional comparison support |
-|---|---|---|---|
-| F002 | 1000P/C | C>0 | P≥5, C≥200 |
-| F003 | single-sentence paragraphs/P | P>0 | P≥5, C≥200 |
-| F013 | median(L) | n≥1 | n≥10, C≥200 |
-| F014 | Q.75(L)−Q.25(L) | n≥1 | n≥10, C≥200 |
-| F015 | Q.90(L) | n≥1 | n≥20, C≥200 |
-| F016 | median(abs(L−median(L)))/median(L) | n≥1 | n≥10, C≥200 |
-| F024 | mean(abs(diff(L)))/median(L) | n≥2 | 19 adjacent pairs, C≥200 |
-| F025 | Spearman(L[:-1],L[1:]), average tied ranks | ≥3 pairs and nonconstant ranks | 19 pairs, C≥200 |
+8 项字级指标沿用 `character-core/1.0.0` 与 `punctuation-lines/1.0.0`：F002 段落密度、F003 单句段占比、F013 句长中位数、F014 四分位距、F015 90 分位数、F016 归一 MAD、F024 相邻句长变化、F025 相邻句长秩相关。内容字符是 Unicode L/N 类别；每个含内容的物理行算操作段，标点形成操作句。它们不是词数、语义段落或质量指标。
 
-These gates are provisional engineering policy, not validated power calculations. Raw values from little support are retained but marked ineligible for comparison. Zero variation is an observed zero; correlation of constant vectors is undefined and remains null. No absent dependency is zero-filled. No percentage, source verdict or “normal human” range is invented.
+71 项语言学量保留固定通道、原文身份、机会数、零/缺失区别、句级行和基本依存图；共享分母和相关分量不构成 71 个独立风格维度。依存图也不是论证图。公式集中在 `linguistic/schema.py`。
 
-Each measurement has raw numerator/denominator where algebraically relevant, unit, eligible count, status, comparison eligibility, missing reason, dependency version, uncertainty fields and references. Sequence references locate evidence; corpus-derived reference fields remain null. Exact arithmetic does not remove boundary/construct uncertainty. Per-feature measurement-error and reference prediction intervals are different quantities, and neither is currently estimated.
+## summarize
 
-## Data and leakage
+每行声明一条文档全局测量，示例（数值仅为合成协议示范）：
 
-Every input has context (language, genre, topic, task), provenance, rights declaration, assistance status, and work/lineage/content/near-duplicate identifiers. Metadata flags are reviewed declarations, not machine-certified truth. See `schemas/document.schema.json`. Store source/license URLs, timestamps, original revision, sampling settings and quote/template annotations in provenance metadata pending a later dedicated collection contract.
+```json
+{"schema":"style-observation/1","id":"example-1","component_id":"work-1","source":"web","condition":"HUMAN","split":"TRAIN","profile":"explicit-instrument-identity","units":{"F013":"content_chars"},"features":{"F013":28}}
+```
 
-Hard groups always bind versions, excerpts, translations, rewrites, same-brief derivatives and supplied near-duplicate clusters. The local O(n²) lexical screen additionally catches normalized exact copies and high-overlap five-character shingles; semantic near-duplicate review remains required. It is a pilot algorithm, not a web-scale deduplicator.
+`id` 唯一。`component_id` 表示调用方已审查的版本、复制或衍生分量；代码检查已声明分量是否跨划分，不能自动发现漏标的近重复。所有记录必须有相同仪器 profile、特征集与单位。缺失写 `null`，不补零；每项报告缺失文档和不可用分量。
 
-The default split declares author and prompt-family holdout simultaneously; source/topic/generator are optional explicit stress-test axes. If these links collapse a crossed dataset into one component, splitting fails. Do not silently drop an axis to obtain a flattering benchmark. Separate research questions may legitimately use separate preregistered designs; report what each split tests. Topic is not indiscriminately unioned with every other axis.
+在每个 TRAIN/DEV、来源、条件、分量中先平均有效文档值，再等权汇总分量；这是文档描述子汇总，不是把不同机会的计数直接混成词元概率。只在同来源、同划分、同分量内计算 HUMAN − CHATGPT 的配对差值。标签由调用方提供，不认证作者身份。
 
-## Population baseline limits
+默认 400 次固定种子的分量重抽样，返回探索性区间；不能解释成多重比较校正、因果效应或改写成功率。重复调用相同输入得到相同输出。TEST 导出拒绝进入此命令。
 
-Only H_G, A_G, A_H or A_C can be fitted, one cohort at a time. Synthetic tests, uncertain/unverified provenance and rights, personal cohorts, and insufficient feature support are ineligible. H_G requires declared unassisted authorship and an author ID; generated cohorts require a generator snapshot and prompt family. No corpus ships in this repository, and no model has been empirically fitted or evaluated.
+## compile
 
-The executable model uses exact joint language/genre/topic/task dummy variables plus standardized log(1+C), training-only feature scaling, ridge regression and a fixed diagonal shrinkage of pooled residual covariance. Each leakage component has total fitting weight one. It is a deliberately simple experimental baseline, not the proposed hierarchical count/proportion model. Fixed shrinkage and sample gates are declared in ModelSpec and require prospective validation; shrinkage makes a matrix better conditioned, not the evidence more abundant.
+```sh
+style-compiler compile
+```
 
-No missing-value imputation, feature selection, testing-set transforms, per-author covariance or author profile is performed. Constant dimensions, no length variation, sparse context support and out-of-range assessment cause abstention. Any available residual distance uses a frozen feature subspace and is uncalibrated; no chi-square or authorship-probability interpretation is permitted. Calibration, bootstrap uncertainty, hierarchical effects, distributional diagnostics and model selection remain unimplemented.
+读取 `research/manifest.json` 绑定的四份汇总，核对实际文件 SHA 后生成：
 
-## Editing boundaries
+- `references/statistical-style.md`
+- `references/mathematician-style.md`
+- 根目录 `build.json`，记录输入与输出指纹
 
-Only insertion of one newline at an existing sentence boundary is executable. The caller supplies the paragraph sentence cap; it is not a learned human norm. Unbalanced quotations/brackets and locked spans trigger abstention. Non-whitespace code points and locked-string occurrence counts must be unchanged. The review flag is an acknowledgment, not a semantic oracle.
+从仓库根目录运行。`--research` 指定冻结证据目录，`--skill` 指定单个 skill 的输出目录，默认分别为 `research` 和当前目录。编译不生成或覆盖 `SKILL.md`；正文与例子人工维护。
 
-Candidate deltas are deterministic remeasurements on that single candidate. `expected_feature_changes` remains null, `evidence_status` remains proposed, and semantic equivalence remains unverified. Structural emphasis, scope and argument can still change without altering words. The original hash, exact insertion and candidate hash prevent accidental application to a stale or edited source; keep the original for rollback.
+这一步可以重建受管理的风格卡；普通 measurement/check 输出拒绝覆盖已有文件。统计到编辑建议的映射在 `profiles.py`，明确标为解释性建议，没有用观察差值声称干预效果。新研究导出先独立检查再登记，不能靠更新指纹把旧数据改名成新证据。
+
+## check
+
+```sh
+style-compiler check original.txt final.txt --locks locks.json -o review.json
+```
+
+`locks.json` 是必须保持出现次数的字符串列表。工具比较代码、公式、块引文、URL 与锁定字符串；数量、否定/限定、数学符号和部分模板表达变化产生复核提示。它不自动改稿；相同词频也不证明施受关系或语义相同。受保护内容改变时退出 2；其他情况的退出 0 只表示检查完成，不能代替内容审查。
+
+## 可选解析
+
+中文：Stanza 1.10.1，zh-hans GSDSimp nocharlm，固定模型提交 `82f2856d1cf4f933738a8a84b5ad959d156040a0`。`LocalStanza` 核对已有模型及资源哈希，逐源句解析，禁用下载。权重来源和各自许可记录在 `research/general/parser-profile.json`；71 通道聚合还有明确的 Unicode 15.0.0 和跨度要求，不匹配时拒绝。
+
+英语使用已有、与 `research/mathematician/measurement-contract.json` 完全匹配的环境和权重：
+
+```sh
+style-compiler-english input.txt --models /existing/en-models --contract research/mathematician/measurement-contract.json --profile research/mathematician/development-profiles.json --genre math_exposition --out english.json
+```
+
+公式投影和短块排除会影响分母；英语数值不移植到中文。历史记录保留原仪器哈希；迁移后的源码有新的字节身份，不能冒充原实验重跑。
+
+旧版本的 extract/split/fit/plan/apply 已退出当前接口。旧数据和代码可从重建前 Git 提交追溯，不在当前目录保留另一套运行路径。

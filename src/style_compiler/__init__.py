@@ -1,3 +1,3 @@
-"""Measured writing choices, with explicit limits on what the evidence supports."""
+"""Statistical analysis and reusable writing guidance."""
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

@@ -10,3 +10,5 @@ artifacts/
 *.npy
 *.npz
 .env
+
+language-experiment-corpus-bundle.zip

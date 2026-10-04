@@ -1,0 +1,44 @@
+{
+  "version": "mathematician-archive-english-2",
+  "word_denominator": "Stanza words minus PUNCT,SYM,X,MATHEXPR,CODEEXPR",
+  "dependency_span": "original word ID distance, only both lexical endpoints",
+  "paragraph_parse": "independent complete paragraphs; no clipping",
+  "lexical_diversity": "lower-case surface MATTR window100; all included lexical words, sentence boundaries allowed",
+  "cue_lexicon": [
+    "for example",
+    "for instance",
+    "in particular",
+    "on the other hand",
+    "roughly speaking",
+    "it turns out",
+    "we now",
+    "we first",
+    "we can",
+    "note that",
+    "however",
+    "therefore"
+  ],
+  "model_versions": {
+    "stanza": "1.10.1",
+    "torch": "2.3.1+cpu",
+    "python": "3.12.14"
+  },
+  "model_sha256": {
+    "en/tokenize/ewt.pt": "fc2fed0cd74dbaef1620bd3e776141ae76c4e28eb5aeff369b2715c31cc73cba",
+    "en/depparse/ewt_nocharlm.pt": "326d2e35debafb65b4983ac81b02c7f7a78d45fc6a0c49ea71cbab1729350940",
+    "en/pos/ewt_nocharlm.pt": "67038ce603f183942006466f30dec5a2999490b52d143a55c52d231e8dd2c25c",
+    "en/mwt/ewt.pt": "73411a30da7638bbda2ebd9490e017d78feb4e029e90c9f5c9f37e5433292eb0",
+    "en/lemma/ewt_nocharlm.pt": "fca3403dd003390e40e3cdcb2d9c737a334fd3ec8db905e24b16959b484bfa8b",
+    "en/pretrain/conll17.pt": "edde4c195f91ba45aab3f3a6254202011f284559da8a5ead5e62ce522f819c5e"
+  },
+  "processors": {
+    "tokenize": "ewt",
+    "mwt": "ewt",
+    "pos": "ewt_nocharlm",
+    "lemma": "ewt_nocharlm",
+    "depparse": "ewt_nocharlm"
+  },
+  "measurement_code_sha256": "0d95e5458226325d8c649d4260e4c4de07ff8d2fcde3f80c5aff62d8e7ce39b8",
+  "parser_identity_sha256": "ecdba478b9eb5f1b365eb2fd245d9e2080b7518193198591841121e4ed70d275",
+  "contract_sha256": "6ecc24480ee01dc137402d3c1ad1ce7e7a6d47d57f93761b419cd818d25f029f"
+}

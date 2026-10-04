@@ -1,4 +1,4 @@
-"""Subprocess smoke tests, entirely on synthetic fixtures in temporary folders."""
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -6,47 +6,66 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from helpers import document
 
 
 class CliTests(unittest.TestCase):
     def run_cli(self, *args):
         root = Path(__file__).resolve().parents[1]
-        env = os.environ | {'PYTHONPATH': str(root / 'src')}
-        return subprocess.run([sys.executable, '-m', 'style_compiler', *map(str, args)],
-                              capture_output=True, text=True, env=env, check=False)
+        return subprocess.run([sys.executable, "-m", "style_compiler", *map(str, args)],
+            env=os.environ | {"PYTHONPATH": str(root / "src"), "PYTHONIOENCODING": "gbk"},
+            capture_output=True, encoding="utf-8", check=False)
 
-    def test_synthetic_extract_plan_apply_roundtrip(self):
+    def test_plain_file_preserves_bytes_hash_and_offsets(self):
         with tempfile.TemporaryDirectory() as folder:
-            folder = Path(folder)
-            source, plan, output = (folder / name for name in ('source.json', 'plan.json', 'output.json'))
-            d = document()
-            source.write_text(json.dumps(d.to_dict()), encoding='utf-8')
-            measured = self.run_cli('extract', source)
-            self.assertEqual(measured.returncode, 0, measured.stderr)
-            self.assertTrue(json.loads(measured.stdout)['provenance']['is_synthetic'])
-            proposed = self.run_cli('plan', source, '--max-sentences', 1, '-o', plan)
-            self.assertEqual(proposed.returncode, 0, proposed.stderr)
-            denied = self.run_cli('apply', source, '--plan', plan, '-o', output)
-            self.assertEqual(denied.returncode, 2)
-            self.assertFalse(output.exists())
-            applied = self.run_cli('apply', source, '--plan', plan, '--semantic-review-approved', '-o', output)
-            self.assertEqual(applied.returncode, 0, applied.stderr)
-            self.assertEqual(json.loads(output.read_text())['text'].replace('\n', ''), d.text)
+            path = Path(folder) / "source.txt"
+            raw = "\ufeff甲。\r\n乙乙。".encode()
+            path.write_bytes(raw)
+            run = self.run_cli("analyze", path)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            result = json.loads(run.stdout)
+            self.assertEqual(result["surface"]["text_sha256"], hashlib.sha256(raw).hexdigest())
+            self.assertEqual(result["surface"]["sentences"][1]["start"], 5)
+            self.assertEqual(result["linguistic"]["status"], "unavailable")
 
-    def test_malformed_document_no_traceback(self):
+    def test_protected_formula_drift_exits_two(self):
         with tempfile.TemporaryDirectory() as folder:
-            path = Path(folder) / 'bad.json'
-            path.write_text('[]')
-            result = self.run_cli('extract', path)
-            self.assertEqual(result.returncode, 2)
-            self.assertNotIn('Traceback', result.stderr)
+            original, final = Path(folder) / "a.txt", Path(folder) / "b.txt"
+            original.write_text("若 $x>0$，结论成立。", encoding="utf-8")
+            final.write_text("若 $x>=0$，结论成立。", encoding="utf-8")
+            run = self.run_cli("check", original, final)
+            self.assertEqual(run.returncode, 2, run.stderr)
+            self.assertTrue(json.loads(run.stdout)["blockers"])
 
-    def test_malformed_partition_no_traceback(self):
+    def test_no_overwrite(self):
         with tempfile.TemporaryDirectory() as folder:
-            source, part = Path(folder) / 'docs.jsonl', Path(folder) / 'partition.json'
-            source.write_text(json.dumps(document().to_dict()) + '\n')
-            part.write_text('{}')
-            result = self.run_cli('fit', source, '--partition', part, '--cohort', 'H_G')
-            self.assertEqual(result.returncode, 2)
-            self.assertNotIn('Traceback', result.stderr)
+            source, out = Path(folder) / "source.txt", Path(folder) / "out.json"
+            source.write_text("甲。", encoding="utf-8")
+            out.write_bytes(b"keep")
+            self.assertEqual(self.run_cli("analyze", source, "-o", out).returncode, 2)
+            self.assertEqual(out.read_bytes(), b"keep")
+
+    def test_compile_targets_one_skill_and_preserves_its_body(self):
+        root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as folder:
+            target = Path(folder) / "mathematician-humanizer"
+            target.mkdir()
+            body = target / "SKILL.md"
+            body.write_bytes(b"keep skill body")
+            run = self.run_cli("compile", "--research", root / "research", "--skill", target)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            result = json.loads(run.stdout)
+            for path in result["outputs"]:
+                self.assertTrue((target / path).is_file())
+            self.assertEqual(body.read_bytes(), b"keep skill body")
+            self.assertFalse((target / "mathematician-humanizer").exists())
+
+    def test_missing_model_or_invalid_input_has_clean_error(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "input.txt"
+            path.write_text("甲。", encoding="utf-8")
+            calls = [("analyze", path, "--models", Path(folder) / "missing"), ("summarize", path)]
+            for args in calls:
+                run = self.run_cli(*args)
+                self.assertEqual(run.returncode, 2)
+                self.assertNotIn("Traceback", run.stderr)
+                self.assertFalse((Path(folder) / "missing").exists())

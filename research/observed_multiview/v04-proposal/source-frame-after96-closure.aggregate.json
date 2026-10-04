@@ -1,9 +1,0 @@
-{
-  "schema_version": "style-v04-post96-closure-dialogue-capacity/1",
-  "length_eligible_records": 1982,
-  "known_components_after96_copy_closure": 586,
-  "known_components_not_in_old_or96_exposure_closure": 435,
-  "source_role_admitted": false,
-  "copy_readback_sha256": "4b126a515d6bd6b289a5d460cc4f3d9669b55d804da5d762b8f388af74a23662",
-  "frame_rule": "old_structural_dialogue_frame_plus200..20000CP; metadata_only_capacity_ceiling"
-}

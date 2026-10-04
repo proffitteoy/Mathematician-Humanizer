@@ -1,8 +1,0 @@
-{
-  "source_prose_scan_passed": true,
-  "scan_rule": "No verbatim nontrivial source unit >=80 codepoints appears in public files",
-  "private_body_files_in_allowlist": 0,
-  "private_intake_records_materialized": 47,
-  "private_intake_contains_source_text": true,
-  "private_intake_published": false
-}

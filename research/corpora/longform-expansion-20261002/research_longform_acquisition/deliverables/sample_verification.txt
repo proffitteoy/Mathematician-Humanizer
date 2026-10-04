@@ -1,3 +1,0 @@
-Bounded structural/source audit: 7 tests passed.
-Checks: exact source partitions and hashes; question separation; ordered-list continuation prose; frontmatter/quote roles; administrative tail; excluded repositories; per-document identities and long-form screen.
-No conformant Markdown or linguistic gold validation claimed.

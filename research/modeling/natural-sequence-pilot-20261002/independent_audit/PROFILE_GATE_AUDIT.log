@@ -1,8 +1,0 @@
-test_frozen_component_selection_is_order_and_arm_independent (__main__.ProfileGate.test_frozen_component_selection_is_order_and_arm_independent) ... ok
-test_prerequisites_require_every_gate (__main__.ProfileGate.test_prerequisites_require_every_gate) ... ok
-
-----------------------------------------------------------------------
-Ran 2 tests in 0.002s
-
-OK
-{"kind": "synthetic_profile_gate_audit_after_reconstruction", "tests_run": 2, "failures": 0, "errors": 0, "success": true, "natural_body_reads": 0, "profile_executed": false, "source_sha256": "847c74ad3e3ff43d84fa0b76997cfdf13c48ca88b7cc6da1b368d271feb45c66"}

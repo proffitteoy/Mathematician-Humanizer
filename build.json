@@ -1,0 +1,22 @@
+{
+  "schema": "style-cards-build/1",
+  "research_inputs": {
+    "general/paired-surface.json": "a77352b9afcc3d90bc1db4eddb6b2f0cf626167e84864130051edd331793f56f",
+    "general/joint-reference.json": "e9b5c98fa2655b897c296af985fe1dc32a13c2b92bc6146e26685ea87929fb27",
+    "mathematician/development-profiles.json": "913e00061dac340524f70a285f7e96aeeaf3c43e00e66cbd32a94d1e7354493f",
+    "mathematician/summary.json": "b541377c686a8fcfd826139cca15775df83fb9590e9c3a2d6d31bf0a52be5fb2"
+  },
+  "supported_surface_observations": [
+    "F013",
+    "F014",
+    "F015",
+    "F024",
+    "F025"
+  ],
+  "outputs": {
+    "references/statistical-style.md": "7bc47542955990f296eeb731391b2d39e8e0a90fc4e8a2073f199e47bc31fd67",
+    "references/mathematician-style.md": "55c5ff9cc3910bccf53a923c31a48e504814396eb2a7fb85df81841bb966432b"
+  },
+  "new_corpus_measurement": false,
+  "quality_or_similarity_score": null
+}
