@@ -1,0 +1,254 @@
+{
+  "status": "MEASURED",
+  "lexical_words": 707,
+  "lexical_sentences": 46,
+  "paragraphs": 12,
+  "features": {
+    "punctuation_tokens_per_100_words": 11.173974540311175,
+    "sentence_words_mean": 15.369565217391305,
+    "paragraph_words_mean": 58.916666666666664,
+    "dependency_span_mean": 2.496087636932707,
+    "dependency_depth_mean": 2.2248939179632248,
+    "mattr100": 0.7156743421052632,
+    "question_sentence_share": 0.0,
+    "modal_per_100_words": 1.9801980198019802,
+    "first_person_per_100_words": 0.7072135785007072,
+    "subordinate_arcs_per_100_words": 6.789250353606789,
+    "upos_NOUN": 0.24893917963224893,
+    "upos_VERB": 0.13578500707213578,
+    "upos_ADJ": 0.09476661951909476,
+    "upos_ADV": 0.05799151343705799,
+    "upos_PRON": 0.04950495049504951,
+    "upos_SCONJ": 0.033946251768033946,
+    "upos_CCONJ": 0.018387553041018388,
+    "upos_AUX": 0.0594059405940594,
+    "cue_for_example": 0.0,
+    "cue_for_instance": 1.4144271570014144,
+    "cue_in_particular": 0.0,
+    "cue_on_the_other_hand": 0.0,
+    "cue_roughly_speaking": 0.0,
+    "cue_it_turns_out": 0.0,
+    "cue_we_now": 0.0,
+    "cue_we_first": 0.0,
+    "cue_we_can": 1.4144271570014144,
+    "cue_note_that": 0.0,
+    "cue_however": 0.0,
+    "cue_therefore": 0.0
+  },
+  "upos_counts": {
+    "VERB": 96,
+    "DET": 107,
+    "NOUN": 176,
+    "ADP": 67,
+    "AUX": 42,
+    "CCONJ": 13,
+    "PRON": 35,
+    "PART": 13,
+    "NUM": 26,
+    "SCONJ": 24,
+    "ADJ": 67,
+    "ADV": 41
+  },
+  "coverage": {
+    "parsed_sentences_total": 46,
+    "zero_lexical_sentences": 0,
+    "math_tokens": 16,
+    "code_tokens": 0,
+    "incomplete_dependency_sentences": []
+  },
+  "quality_or_authorship_score": null,
+  "text_sha256": "49c327f57d0244298f5e0f13ca2bbef339d5c7bc4f1cf2cdc807a96f2ac59c5b",
+  "measured_projection_sha256": "e97f78de88432ea862f2b1907481bec6b7f80bb6df18355101facf0044b56fe5",
+  "excluded_short_paragraph_indices": [],
+  "instrument_sha256": "884b1e647cfb0ebe17182943b4c8d1bb24fd858ac74f393650437d2d7cf1eabd",
+  "reference_contract_sha256": "6ecc24480ee01dc137402d3c1ad1ce7e7a6d47d57f93761b419cd818d25f029f",
+  "interpretation": "Same-language marginal diagnostics, not authorship similarity or quality. Currency is retained; explicit dollar math is elided. Original text remains unchanged.",
+  "comparison": {
+    "stratum": "genre_length/math_exposition/501-2000",
+    "reference_articles": 136,
+    "features": {
+      "punctuation_tokens_per_100_words": {
+        "value": 11.173974540311175,
+        "q10": 13.85,
+        "q90": 19.207813347802496,
+        "within_marginal_interval": false
+      },
+      "sentence_words_mean": {
+        "value": 15.369565217391305,
+        "q10": 14.35064935064935,
+        "q90": 24,
+        "within_marginal_interval": true
+      },
+      "paragraph_words_mean": {
+        "value": 58.916666666666664,
+        "q10": 26.135135135135137,
+        "q90": 61.04545454545455,
+        "within_marginal_interval": true
+      },
+      "dependency_span_mean": {
+        "value": 2.496087636932707,
+        "q10": 2.973239436619718,
+        "q90": 3.4453488372093024,
+        "within_marginal_interval": false
+      },
+      "dependency_depth_mean": {
+        "value": 2.2248939179632248,
+        "q10": 2.3626543209876543,
+        "q90": 3.0406905055487052,
+        "within_marginal_interval": false
+      },
+      "mattr100": {
+        "value": 0.7156743421052632,
+        "q10": 0.6203125,
+        "q90": 0.6815542857142857,
+        "within_marginal_interval": false
+      },
+      "question_sentence_share": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 0.015873015873015872,
+        "within_marginal_interval": true
+      },
+      "modal_per_100_words": {
+        "value": 1.9801980198019802,
+        "q10": 1.0309278350515463,
+        "q90": 2.1656050955414012,
+        "within_marginal_interval": true
+      },
+      "first_person_per_100_words": {
+        "value": 0.7072135785007072,
+        "q10": 0.9482129832239241,
+        "q90": 3.2074126870990733,
+        "within_marginal_interval": false
+      },
+      "subordinate_arcs_per_100_words": {
+        "value": 6.789250353606789,
+        "q10": 4.890738813735692,
+        "q90": 7.343124165554072,
+        "within_marginal_interval": true
+      },
+      "upos_NOUN": {
+        "value": 0.24893917963224893,
+        "q10": 0.18394886363636365,
+        "q90": 0.24893162393162394,
+        "within_marginal_interval": false
+      },
+      "upos_VERB": {
+        "value": 0.13578500707213578,
+        "q10": 0.09552599758162031,
+        "q90": 0.12566137566137567,
+        "within_marginal_interval": false
+      },
+      "upos_ADJ": {
+        "value": 0.09476661951909476,
+        "q10": 0.08028335301062574,
+        "q90": 0.12192982456140351,
+        "within_marginal_interval": true
+      },
+      "upos_ADV": {
+        "value": 0.05799151343705799,
+        "q10": 0.054602184087363496,
+        "q90": 0.0792186652197504,
+        "within_marginal_interval": true
+      },
+      "upos_PRON": {
+        "value": 0.04950495049504951,
+        "q10": 0.04139900071377588,
+        "q90": 0.06800348735832606,
+        "within_marginal_interval": true
+      },
+      "upos_SCONJ": {
+        "value": 0.033946251768033946,
+        "q10": 0.019927536231884056,
+        "q90": 0.03680203045685279,
+        "within_marginal_interval": true
+      },
+      "upos_CCONJ": {
+        "value": 0.018387553041018388,
+        "q10": 0.02171945701357466,
+        "q90": 0.037927350427350424,
+        "within_marginal_interval": false
+      },
+      "upos_AUX": {
+        "value": 0.0594059405940594,
+        "q10": 0.05194805194805195,
+        "q90": 0.07450738916256158,
+        "within_marginal_interval": true
+      },
+      "cue_for_example": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 0.0,
+        "within_marginal_interval": true
+      },
+      "cue_for_instance": {
+        "value": 1.4144271570014144,
+        "q10": 0.0,
+        "q90": 4.32152117545376,
+        "within_marginal_interval": true
+      },
+      "cue_in_particular": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 3.3783783783783785,
+        "within_marginal_interval": true
+      },
+      "cue_on_the_other_hand": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 1.5384615384615385,
+        "within_marginal_interval": true
+      },
+      "cue_roughly_speaking": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 0.8025682182985554,
+        "within_marginal_interval": true
+      },
+      "cue_it_turns_out": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 1.187648456057007,
+        "within_marginal_interval": true
+      },
+      "cue_we_now": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 1.1273957158962795,
+        "within_marginal_interval": true
+      },
+      "cue_we_first": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 0.779423226812159,
+        "within_marginal_interval": true
+      },
+      "cue_we_can": {
+        "value": 1.4144271570014144,
+        "q10": 0.0,
+        "q90": 4.2270531400966185,
+        "within_marginal_interval": true
+      },
+      "cue_note_that": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 1.6207455429497568,
+        "within_marginal_interval": true
+      },
+      "cue_however": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 2.4390243902439024,
+        "within_marginal_interval": true
+      },
+      "cue_therefore": {
+        "value": 0.0,
+        "q10": 0.0,
+        "q90": 0.5630630630630631,
+        "within_marginal_interval": true
+      }
+    },
+    "joint_acceptance": null,
+    "interpretation": "Review differences; do not rewrite correct mathematics just to satisfy marginal intervals."
+  }
+}

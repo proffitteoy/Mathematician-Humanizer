@@ -1,0 +1,4 @@
+interface:
+  display_name: "数学表达：Tao统计参考"
+  short_description: "基于全量博客统计的数学讲解、课程讲义与学习札记写作和自查"
+  default_prompt: "用 $tao-inspired-math-exposition 写一篇数学说明，并完成对应语言的统计与内容自查。"

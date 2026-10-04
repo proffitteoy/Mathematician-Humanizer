@@ -1,0 +1,71 @@
+{
+  "english": {
+    "text_sha256": "49c327f57d0244298f5e0f13ca2bbef339d5c7bc4f1cf2cdc807a96f2ac59c5b",
+    "measurement_sha256": "6a92641c271b4988497ab66c11dcc0b8305f1a5a056bfa9d99ceb65665fba0b5",
+    "lexical_words": 707,
+    "sentences": 46,
+    "paragraphs": 12
+  },
+  "chinese": {
+    "chinese-least-squares": {
+      "text_sha256": "e30ca667a4858e7a575803744d390331954e20ac0b6f7d14760febc33fb68a4e",
+      "han_chars": 607,
+      "measurement_sha256": "a8220b9aa5a8f008db50002d09d486354125b66dccf5e7468da6236e7c3f7362",
+      "status": "MEASURED",
+      "coverage": {
+        "source_sentences": 29,
+        "complete_target_sentences": 29,
+        "clipped_target_sentences": 0,
+        "excluded_sentences": 0,
+        "complete_parse_failures": 0,
+        "complete_pos_only": 0,
+        "clipped_source_sentence_indices": []
+      },
+      "noun_numerator": 110,
+      "tokens_denominator": 468,
+      "noun_ratio": 0.23504273504273504,
+      "verb_ratio": 0.15598290598290598,
+      "formula_projection_noun_ratio": 0.34679334916864607
+    },
+    "chinese-tower-property": {
+      "text_sha256": "40a5169a23716f9f442fd99252b7ac34891d32791c6746b3ea46726eaed10aa2",
+      "han_chars": 631,
+      "measurement_sha256": "ffa357760d82b0e993fafb38a3576431f0fc208e1d50cc14920c2cb8c16b5caa",
+      "status": "MEASURED",
+      "coverage": {
+        "source_sentences": 27,
+        "complete_target_sentences": 27,
+        "clipped_target_sentences": 0,
+        "excluded_sentences": 0,
+        "complete_parse_failures": 0,
+        "complete_pos_only": 0,
+        "clipped_source_sentence_indices": []
+      },
+      "noun_numerator": 130,
+      "tokens_denominator": 501,
+      "noun_ratio": 0.25948103792415167,
+      "verb_ratio": 0.18163672654690619,
+      "formula_projection_noun_ratio": 0.33405639913232105
+    },
+    "chinese-weak-convergence": {
+      "text_sha256": "82952cdf988071a85ed197344987f6d9d4764978d81891c95320e25764075c00",
+      "han_chars": 651,
+      "measurement_sha256": "6d179e5b58905001648c05bce0a764a32d3b12d90f799fd564306cca27b41d73",
+      "status": "MEASURED",
+      "coverage": {
+        "source_sentences": 25,
+        "complete_target_sentences": 25,
+        "clipped_target_sentences": 0,
+        "excluded_sentences": 0,
+        "complete_parse_failures": 0,
+        "complete_pos_only": 0,
+        "clipped_source_sentence_indices": []
+      },
+      "noun_numerator": 118,
+      "tokens_denominator": 454,
+      "noun_ratio": 0.2599118942731278,
+      "verb_ratio": 0.19162995594713655,
+      "formula_projection_noun_ratio": 0.3225806451612903
+    }
+  }
+}

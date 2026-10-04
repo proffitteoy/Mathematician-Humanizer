@@ -1,0 +1,157 @@
+{
+  "original_sha256": "40a5169a23716f9f442fd99252b7ac34891d32791c6746b3ea46726eaed10aa2",
+  "projection_sha256": "e5a0d08bffb16c73310426f011b9c541fa4d38cee4960e9945cd354674623cc6",
+  "transform": "Each dollar-delimited formula replaced with 〔公式〕; diagnostic only, not prose revision.",
+  "spans": [
+    {
+      "start_codepoint": 103,
+      "end_codepoint": 111,
+      "original": "$\\Omega$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 125,
+      "end_codepoint": 147,
+      "original": "$X:\\Omega\\to\\mathbb R$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 150,
+      "end_codepoint": 181,
+      "original": "$\\mathcal G\\subseteq\\mathcal H$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 187,
+      "end_codepoint": 195,
+      "original": "$\\sigma$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 244,
+      "end_codepoint": 256,
+      "original": "$\\mathcal G$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 265,
+      "end_codepoint": 277,
+      "original": "$\\mathcal H$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 287,
+      "end_codepoint": 299,
+      "original": "$\\mathcal H$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 305,
+      "end_codepoint": 335,
+      "original": "$Y=\\mathbb E[X\\mid\\mathcal H]$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 340,
+      "end_codepoint": 343,
+      "original": "$B$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 349,
+      "end_codepoint": 412,
+      "original": "$\\sum_{\\omega\\in B}X(\\omega)\\mathbb P(\\{\\omega\\})/\\mathbb P(B)$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 421,
+      "end_codepoint": 476,
+      "original": "$\\mathbb E[Y\\mid\\mathcal G]=\\mathbb E[X\\mid\\mathcal G]$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 511,
+      "end_codepoint": 523,
+      "original": "$\\mathcal G$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 527,
+      "end_codepoint": 530,
+      "original": "$C$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 546,
+      "end_codepoint": 571,
+      "original": "$C=B_1\\cup\\cdots\\cup B_r$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 574,
+      "end_codepoint": 577,
+      "original": "$C$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 586,
+      "end_codepoint": 633,
+      "original": "$\\mathbb P(C)^{-1}\\sum_j\\mathbb P(B_j)Y|_{B_j}$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 645,
+      "end_codepoint": 661,
+      "original": "$\\mathbb P(B_j)$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 675,
+      "end_codepoint": 742,
+      "original": "$\\mathbb P(C)^{-1}\\sum_{\\omega\\in C}X(\\omega)\\mathbb P(\\{\\omega\\})$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 903,
+      "end_codepoint": 910,
+      "original": "$a,b,c$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 913,
+      "end_codepoint": 916,
+      "original": "$X$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 923,
+      "end_codepoint": 931,
+      "original": "$0,2,10$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 937,
+      "end_codepoint": 952,
+      "original": "$\\{a,b\\},\\{c\\}$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 1016,
+      "end_codepoint": 1019,
+      "original": "$Y$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 1029,
+      "end_codepoint": 1037,
+      "original": "$1,1,10$",
+      "replacement": "〔公式〕"
+    },
+    {
+      "start_codepoint": 1051,
+      "end_codepoint": 1054,
+      "original": "$X$",
+      "replacement": "〔公式〕"
+    }
+  ]
+}

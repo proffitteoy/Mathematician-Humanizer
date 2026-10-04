@@ -1,0 +1,122 @@
+{
+  "schema": "statistical-writing-runtime/1",
+  "measurement_profile_sha256": "221323897ea20205d0801383537558b4411cb47eb945c2deac51e24ccb2549a3",
+  "reference_sha256": "e9b5c98fa2655b897c296af985fe1dc32a13c2b92bc6146e26685ea87929fb27",
+  "python": "3.12.14",
+  "unicode": "15.0.0",
+  "package_versions": {
+    "stanza": "1.10.1",
+    "torch": "2.3.1+cpu",
+    "numpy": "1.26.4",
+    "networkx": "3.3",
+    "tqdm": "4.67.1",
+    "emoji": "2.14.1",
+    "protobuf": "6.32.1",
+    "requests": "2.32.5",
+    "urllib3": "2.5.0",
+    "charset-normalizer": "3.4.3",
+    "idna": "3.10",
+    "certifi": "2025.8.3"
+  },
+  "threads": 2,
+  "device": "cpu",
+  "source_files_sha256": {
+    "scripts/vendor/research/surface/__init__.py": "309ce741571dd193a528d5910a8e0d2403ade832e2cff5b5d12afb81b2d27f99",
+    "scripts/vendor/research/surface/adapter.py": "f10676ad4aa3d9503275443a311749050f55e9ee90369d21a0e87dbd2930e20a",
+    "scripts/vendor/research/linguistic/__init__.py": "96093de1d5099c93edfee1307b396fc63a98932836d818e09631b196594b485e",
+    "scripts/vendor/research/linguistic/adapter.py": "0b7422e896acae703bc896cb9731d7462489bea91d50bcf88ff37ab7519da556",
+    "scripts/vendor/research/linguistic/contracts.py": "79691f63e81ac384ab8ff47e1c7b6b7765394653825efbd55d8f221ef09bee7c",
+    "scripts/vendor/research/linguistic/schema.py": "505046329782ac2dbf77cfc25e2bffe6a382b8ea08a3596cfb9cfaff9d1118fa",
+    "scripts/vendor/research/linguistic/stanza_local.py": "7d7e089d346043c2182c44e7ed9ca57be04ed3a21d802052dc0357e3a8349102",
+    "scripts/vendor/research/linguistic/unicode_scripts.py": "2da9eb8e6162e67c3b4b468c538e0a75251feb6f2bc6f9c9d446969e80c309a4",
+    "scripts/vendor/research/linguistic/UNICODE-LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "scripts/vendor/style_compiler/__init__.py": "3abca6126fe4bf76145bfa1cd2da5b48cde44735affb2335c07a87223f139aa9",
+    "scripts/vendor/style_compiler/contracts.py": "db0a61250becd56e2834eb71a81b93e32b93376d5d8896b4b74fabbbfad3a2c5",
+    "scripts/vendor/style_compiler/features.py": "4c595ae4883dea30a3137c2152535052807db26a54a0680ed70e16678ad1f9c6",
+    "scripts/vendor/style_compiler/segmentation.py": "be78057bc27f9d8480c37c1e6160b5cc466385803fb094e1e0878e1171a288e8"
+  },
+  "model_repository": {
+    "id": "stanfordnlp/stanza-zh-hans",
+    "revision": "v1.10.0",
+    "commit": "82f2856d1cf4f933738a8a84b5ad959d156040a0",
+    "public": true,
+    "gated": false,
+    "metadata_url": "https://huggingface.co/api/models/stanfordnlp/stanza-zh-hans/revision/v1.10.0",
+    "file_inventory_url": "https://huggingface.co/api/models/stanfordnlp/stanza-zh-hans/tree/v1.10.0/models?recursive=true&expand=false"
+  },
+  "models": [
+    {
+      "path": "tokenize/gsdsimp.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/82f2856d1cf4f933738a8a84b5ad959d156040a0/models/tokenize/gsdsimp.pt",
+      "bytes": 1383326,
+      "sha256": "962f2578e2a3dabeb4671053372eb1bd092357921904233556c8d77a46440882"
+    },
+    {
+      "path": "pos/gsdsimp_nocharlm.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/82f2856d1cf4f933738a8a84b5ad959d156040a0/models/pos/gsdsimp_nocharlm.pt",
+      "bytes": 21285503,
+      "sha256": "0dea6b43c267b408fc7c353e41b449a06bff309a93ba75fa63db32bf9f388cb7"
+    },
+    {
+      "path": "lemma/gsdsimp_nocharlm.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/82f2856d1cf4f933738a8a84b5ad959d156040a0/models/lemma/gsdsimp_nocharlm.pt",
+      "bytes": 6592066,
+      "sha256": "8fe38f6b081d939662a4e78a4350a2253f879c41004327ac6fb78d7078bdeea2"
+    },
+    {
+      "path": "depparse/gsdsimp_nocharlm.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/82f2856d1cf4f933738a8a84b5ad959d156040a0/models/depparse/gsdsimp_nocharlm.pt",
+      "bytes": 103928202,
+      "sha256": "7a3f038233a772c50372a58b58a05ca0c3b0be9c88d6ed7b2664373c0ef741f6"
+    },
+    {
+      "path": "pretrain/fasttext157.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/82f2856d1cf4f933738a8a84b5ad959d156040a0/models/pretrain/fasttext157.pt",
+      "bytes": 306614467,
+      "sha256": "630daf461d1dc6f49642ee534102bf08783866949f7f046cf2df3667dcc5e112"
+    }
+  ],
+  "resources_manifest": {
+    "url": "https://raw.githubusercontent.com/stanfordnlp/stanza-resources/main/resources_1.10.0.json",
+    "bytes": 434061,
+    "sha256": "3efb2833a67c0184fac2ea9986c04f9585bfb89fb943a4ab1a6bcbed641d6be0",
+    "note": "URL contains a moving main branch; require this content digest or an independently verified immutable equivalent."
+  },
+  "licenses": [
+    {
+      "component": "Stanza software",
+      "license": "Apache-2.0",
+      "url": "https://github.com/stanfordnlp/stanza/blob/v1.10.1/LICENSE"
+    },
+    {
+      "component": "HF model card declaration",
+      "license": "Apache-2.0",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/blob/v1.10.0/README.md",
+      "caveat": "Do not use this card label as a blanket license for all upstream data and vectors."
+    },
+    {
+      "component": "Stanford-held model-pack rights",
+      "license": "ODC-By-1.0",
+      "url": "https://stanfordnlp.github.io/stanza/performance.html",
+      "caveat": "Official page explicitly notes uncertainty in licenses for models built from UD data and scopes its grant to Stanford-held rights."
+    },
+    {
+      "component": "UD Chinese-GSDSimp annotations",
+      "license": "CC-BY-SA-4.0",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-GSDSimp/r2.15/README.md",
+      "caveat": "README scopes removal of the historical NC restriction to UD annotations, not underlying content Google does not own."
+    },
+    {
+      "component": "Upstream fastText 157-language vectors",
+      "license": "CC-BY-SA-3.0",
+      "url": "https://fasttext.cc/docs/en/crawl-vectors",
+      "caveat": "Preserve attribution and upstream provenance for pretrain/fasttext157.pt; no uniformly Apache/permissive claim."
+    }
+  ],
+  "installation_sources": {
+    "python": "https://www.python.org/downloads/release/python-31214/",
+    "packages": "https://pypi.org/",
+    "pytorch_cpu": "https://download.pytorch.org/whl/cpu"
+  },
+  "note": "Runtime versions are the actual restored parity runtime, not the older installation receipt. Profile checks include Python, torch, numpy and 2 threads. No weights or third-party Python packages are bundled."
+}

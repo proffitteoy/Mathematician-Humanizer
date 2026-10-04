@@ -23,7 +23,10 @@ Run from the repository root:
 
 ```sh
 python -m unittest discover -s skills/statistical-chinese-writing/tests -v
-python -m unittest discover -s skills/tao-inspired-math-exposition/scripts -p 'test_*.py' -v
+python skills/tao-inspired-math-exposition/scripts/test_audit.py
+python research/tao-exposition/examples/build_reviews.py
 ```
 
 The public Chinese subset passes 41 tests with no skips, including fail-closed instrumentation/profile checks, malformed/partial receipts, protected spans, editorial review and synthetic receipt reuse. Tests use synthetic fixtures and do not establish writing quality or rerun full-corpus parsing. Existing aggregate cards retain their original provenance. Live statistical measurement still needs the external pinned runtime and model files; missing dependencies must produce an explicit unavailable result rather than a fabricated score.
+
+The Tao evidence-contract script passes 6 positive/negative cases. Four original-example audit receipts and bounded mathematical checks were rebuilt successfully in the public layout. Linguistic receipts are preserved historical measurements; they were not relabeled as newly executed NLP results.
