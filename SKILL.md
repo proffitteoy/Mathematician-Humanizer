@@ -11,9 +11,9 @@ metadata:
 
 # Mathematician Humanizer
 
-本技能基于 [blader/humanizer 3.1.0](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8) 改编：26/26 项清理规则的主题、编号与 A–F 分组来自上游，工作流与内容保护要求也由上游改编。上游版权通知为 `Copyright (c) 2025 Siqi Chen`，完整 [MIT 许可与版权通知](references/upstream-LICENSE.txt)随技能分发。六项正向论证习惯、统计补充及这里的示例由本项目增补。
-
 本 skill 从 one of the mathematicians 的公开博客中提炼固定的参考风格，贯穿全文：读者知道正在解决什么问题，为什么走这一步，这一步如何成立，以及所得结论能用到哪里。保留原稿的事实、数学内容和立场。
+
+改编自 [blader/humanizer 3.1.0](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8)：26 项清理规则、编号与分组来自上游，工作流与内容保护要求也据此调整；本项目增补六项论证习惯与示例。保留 Siqi Chen（2025）的完整 [MIT 版权通知](references/upstream-LICENSE.txt)。
 
 这里的风格重点是组织解释和共同推演。删掉几个热词还不足以完成任务；需要围绕原稿的理解障碍重新安排段落，把重要性评价改成实际解释。所有改动以内容正确为边界。
 
@@ -359,13 +359,11 @@ metadata:
 
 内部复核要完成，但不在正文后例行附检测清单、研究过程或改写分数。
 
-## 统计卡与可选核验
+## 补充参考
 
-核心改写直接按本文件完成，不依赖 Python、解析器或联网。需要核对统计范围、体裁差异或来源时，读 [参考博客风格卡](references/mathematician-style.md)；需要检查中文节奏时，读 [中文统计补充](references/statistical-style.md)。
+直接按本文件完成改写。需要额外参考时，读 [参考博客风格卡](references/mathematician-style.md)或[中文统计补充](references/statistical-style.md)；它们提供描述性参考，不要求句长、词性或段落密度达到固定值。
 
-统计是描述性参考，不能要求句长、词性或段落密度达到固定值。没有参考数学家亲笔中文语料；中文迁移论证与表达习惯，不把英语阈值当成中文标准。不输出真人概率、作者相似度或写作质量分。
-
-研究仓库提供 `style-compiler analyze` 和 `style-compiler check original.txt final.txt --locks locks.json`。用户要求核验、且工具确实可用时再运行；程序不能认证语义或数学证明。只有 skill 文件时照常完成改写，不虚报检查结果。
+中文迁移论证与表达习惯，不把英语阈值当成中文标准。不输出真人概率、作者相似度或写作质量分，不虚报未运行的检查。
 
 ## 来源
 

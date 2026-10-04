@@ -2,7 +2,7 @@
 
 默认中文。修改前读 README、docs/architecture.md 与 docs/research.md。
 
-主线只有一条：统计分析 → 风格总结 → 用参考数学家的博客风格增补改写 Humanizer → 实际改稿与复核。根目录 `SKILL.md` 是唯一 skill 正文，名称为 `mathematician-humanizer`。
+仓库交付一个固定参考风格的 skill，名称为 `mathematician-humanizer`，根目录 `SKILL.md` 是唯一技能正文。README 优先说明用途、调用、安装和成品示例；研究路线、数据与维护工具在 docs 中说明，通过首页末尾链接访问。统计分析 → 风格总结 → 增补改写 Humanizer → 实际改稿与复核是技能的研究依据。
 
 - 不重新引入通用写作 skill、作者检测、模型动力学训练或以指标数量定义的路线。
 - 参考作者统一用 `one of the mathematicians` 或中性中文代称；技能名称、目录、正文和来源标识均不使用姓名。匿名化转换保留原始与当前指纹，不改统计数值或测量参数。

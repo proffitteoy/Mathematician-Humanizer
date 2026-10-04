@@ -1,12 +1,25 @@
 # 结构与运行协议
 
-## 一条研究链，一个写作入口
-
-`本地文本/冻结测量 → 统计汇总 → 可解释的风格卡 → mathematician-humanizer 改稿 → 内容复核`
+## 技能交付与可选维护工具
 
 根目录 `SKILL.md` 是唯一技能正文，包含完整的参考数学家改写工作流、六项论证习惯与 Humanizer 26 项清理规则。`references/` 中的两张生成卡供核对研究范围与体裁差异。普通写作直接使用技能正文；分析工具用于研究更新、示例评估或用户明确要求的核验。
 
 最小安装内容为 `SKILL.md`、`references/` 与 `agents/openai.yaml`。不需要复制 `src/`、`research/` 或安装 Python。根目录单一入口、技能元数据与具体前后例子的写法参考 Humanizer；本项目不承诺未经验证的平台插件兼容性。
+
+### 维护环境与检查
+
+以下命令供维护者更新统计卡和检查仓库使用。Python 3.11+，默认只用标准库；从仓库根目录运行：
+
+```powershell
+$env:PYTHONPATH = "src"
+python -m unittest discover -s tests -v
+python -m style_compiler --help
+python -m style_compiler compile
+python -m style_compiler analyze examples/rewrite.final.txt
+python -m style_compiler check examples/rewrite.original.txt examples/rewrite.final.txt
+```
+
+也可在已有 Python 环境运行 `python -m pip install -e .`，使用 `style-compiler` 命令。写作由调用 skill 的语言模型完成；这些工具用于测量、参考卡更新和内容检查，不生成文章。研究路线、冻结结果与验证边界见[研究说明](research.md)。
 
 ## 代码职责
 
