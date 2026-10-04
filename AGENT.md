@@ -8,6 +8,7 @@
 - 参考作者统一用 `one of the mathematicians` 或中性中文代称；技能名称、目录、正文和来源标识均不使用姓名。匿名化转换保留原始与当前指纹，不改统计数值或测量参数。
 - 代码服务于统计和规则总结；写作由调用 skill 的语言模型完成。不要把分析器叫成改写生成器。
 - `SKILL.md` 自身包含完整工作流与规则，普通改写不要求安装 Python。保持 README 使用说明、`agents/openai.yaml` 与 skill 一致；行为改变时更新 CHANGELOG。
+- README 与 SKILL 开头保留 Humanizer 的改编声明；26 项主题、编号与分组全部来自上游，工作流和通用内容保护也有上游来源。更新时区分改编与本项目增补，保持固定版本、逐条对应和随技能分发的完整 MIT 版权通知；参考数学家的匿名约定不替代上游版权归属。
 - `references/{statistical-style,mathematician-style}.md` 由 `style-compiler compile` 生成。改其解释规则时修改 `src/style_compiler/profiles.py`，然后重新生成；构建回执默认输出到 stdout，按需保存到被忽略的 `artifacts/`。
 - `docs/research.md` 说明问题、测量方法、最终结果、规则转换与验证状态。`research/` 只保留最终结果、来源清单与实际测量合同；历史探索、全量分层导出和旧示例回执通过清单中的 Git 提交追溯，不堆回当前目录。
 - `research/manifest.json` 绑定现有冻结证据。更新研究结果必须保留来源、测量口径、划分与失败；不能只改哈希使旧结果变成新实验。

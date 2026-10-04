@@ -11,6 +11,8 @@ metadata:
 
 # Mathematician Humanizer
 
+本技能基于 [blader/humanizer 3.1.0](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8) 改编：26/26 项清理规则的主题、编号与 A–F 分组来自上游，工作流与内容保护要求也由上游改编。上游版权通知为 `Copyright (c) 2025 Siqi Chen`，完整 [MIT 许可与版权通知](references/upstream-LICENSE.txt)随技能分发。六项正向论证习惯、统计补充及这里的示例由本项目增补。
+
 本 skill 从 one of the mathematicians 的公开博客中提炼固定的参考风格，贯穿全文：读者知道正在解决什么问题，为什么走这一步，这一步如何成立，以及所得结论能用到哪里。保留原稿的事实、数学内容和立场。
 
 这里的风格重点是组织解释和共同推演。删掉几个热词还不足以完成任务；需要围绕原稿的理解障碍重新安排段落，把重要性评价改成实际解释。所有改动以内容正确为边界。
@@ -367,6 +369,10 @@ metadata:
 
 ## 来源
 
-26 项清理规则改编自 [blader/humanizer 3.1.0](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8)，编号沿用上游，保留 [MIT 通知](references/upstream-LICENSE.txt)。工作流、规则示例与根目录单一入口的组织方式也参考该版本。这里的正向目标、中文例子和数学内容保护要求围绕参考博客风格重写。
+清理规则的直接来源是 [blader/humanizer 的 SKILL.md](https://github.com/blader/humanizer/blob/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8/SKILL.md)，固定提交为 `225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8`，版本 3.1.0。26 项主题、编号与六组分类全部沿用，说明和例子按本项目目标重写。通读、保义、禁止编造、复核和文件正文保护要求也改编自上游；根目录单一入口和规则解释、改前/改后的形式参考该仓库。分发或再改编时保留 [MIT 许可与版权通知](references/upstream-LICENSE.txt)。
+
+本项目增补六项正向论证习惯、中文统计与博客体裁参考，以及量词、条件、公式和证明依赖的复核要求；允许有用的破折号插话，按中文规范处理引号，并把粘贴文本的默认输出改为终稿。这些是针对固定参考风格的调整。示例在本项目编写，未照搬上游示例。
+
+上游将其规则来源说明为 Wikipedia 的 [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)、WikiProject AI Cleanup 和相关文本审阅；本项目直接改编的是上述 Humanizer 固定版本。
 
 参考数学家的博客阅读来源、统计范围和局限见风格卡。上述原创例子与工程检查不证明模仿保真度或真人偏好。

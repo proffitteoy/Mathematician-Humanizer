@@ -1,6 +1,21 @@
 # Mathematician Humanizer
 
-一个从 **one of the mathematicians** 的公开博客中提炼论证习惯的改写 skill。围绕具体问题展开，解释关键步骤的动机，让读者能跟随推演；用 [Humanizer](https://github.com/blader/humanizer) 的编辑规则清理模板化表达，保留事实、数学条件与结论。
+**本技能基于 [blader/humanizer 3.1.0](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8) 改编。26 项清理规则全部来自上游，编号与 A–F 六组分类沿用上游。** 上游版权通知为 `Copyright (c) 2025 Siqi Chen`，完整 [MIT 许可与版权通知](references/upstream-LICENSE.txt)随技能分发。
+
+本项目从 **one of the mathematicians** 的公开博客中提炼论证习惯，用统计与阅读总结增补这套规则，形成一个固定参考风格的改写 skill：围绕具体问题展开，解释关键步骤的动机，让读者能跟随推演，同时保留事实、数学条件与结论。
+
+## 来源与改编范围
+
+| 部分 | 与 Humanizer 的关系 |
+|---|---|
+| 26 项清理规则 | 26/26 项主题、编号与分组沿用；规则说明按中文和数学写作重述，调整适用边界 |
+| 工作流、内容保护与交付 | 改编上游的通读、改写、复核、终稿流程和保义要求；加入按问题重组，默认只交付终稿 |
+| 规则示例形式 | 沿用规则解释与改前/改后形式；示例在本项目编写，未照搬上游示例 |
+| 技能组织 | 参考根目录 `SKILL.md`、维护文档与 `agents/openai.yaml` 的组织方式 |
+| 六项正向论证习惯、统计结果与研究工具 | 本项目依据匿名参考博客和中文对照研究增补；数学条件复核与中文适用说明也在此基础上扩展 |
+| 上游许可文件 | 完整保留 Humanizer 的 MIT 许可与版权通知 |
+
+这是规则体系和工作方法的改编，不能仅称为版式参考。26/26 是清理条目的来源计数，不是全文复制比例。固定来源与[逐条对应、具体调整](docs/research.md)可供核对；本项目的例子和研究结果不沿用上游的效果声明。
 
 **改前：**
 
@@ -113,6 +128,6 @@ python -m style_compiler check examples/rewrite.original.txt examples/rewrite.fi
 
 当前汇总从冻结结果精确选取，没有重新解析语料。涉及作者的名称、目录和来源定位统一匿名化；[来源清单](research/manifest.json)保留当前文件指纹、历史来源和转换范围。完整分层表、旧运行时清单和历史示例回执退出当前目录，保存在已提交的 Git 历史中。统计观察与博客阅读总结的论证习惯分开记录；真人偏好、风格保持程度和跨主题效果仍需实际改稿评价。见[研究路线与结果](docs/research.md)与[验收条件](docs/ACCEPTANCE.zh.md)。
 
-Humanizer 参考版本为 [3.1.0 的固定提交](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8)。保留其 [MIT 通知](references/upstream-LICENSE.txt)，Unicode 数据保留原通知，其他项目代码没有额外声明统一授权。不分发参考博客全文、原始语料和模型权重。
+上游来源与改编范围见本页开头；固定提交、版本与技能文件指纹登记在[来源清单](research/manifest.json)。上游 MIT 通知随最小技能包保留；Unicode 数据保留原通知，其他项目代码没有额外声明统一授权。不分发参考博客全文、原始语料和模型权重。
 
 旧模型、拓扑、动力学、历史探索脚本和其他写作 skills 可从重建前提交 `62b31458185e20d4ba88a667adbc6b7c0f14b14f` 追溯。

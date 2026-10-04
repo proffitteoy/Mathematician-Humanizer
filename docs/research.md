@@ -110,7 +110,48 @@ F002 段落密度的来源方向相反：Baike 的 TRAIN/DEV 差值为 +4.769/+8
 
 ## 4. 把结论增补进 Humanizer
 
-采用 [Humanizer 3.1.0 的固定提交](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8) 的单一技能入口、规则示例、复核流程和 26 项清理规则。它的上游效果声明不作为本项目的验证证据。
+直接改编来源是 [blader/humanizer 3.1.0 的 SKILL.md](https://github.com/blader/humanizer/blob/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8/SKILL.md)，固定提交 `225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8`，技能文件 Git blob 为 `19fc634208e8cc6ae55d4ff287152583216fd244`。上游版权通知为 `Copyright (c) 2025 Siqi Chen`；完整 [MIT 许可与版权通知](../references/upstream-LICENSE.txt)保留在仓库和最小技能包内。匿名参考数学家与 Humanizer 的版权归属分别说明，作者代指不会替代上游版权通知。
+
+### 改编范围与逐条对应
+
+26 项清理规则全部由上游改编，主题、编号和 A–F 六组分类一一对应。工作流、内容保护、文件/嵌入交付模式及不机械删除真实表达的要求也从上游改编；规则解释与改前/改后形式、根目录单一技能入口借鉴其组织。这里重述了规则，重新编写示例，并围绕数学说明增加条件、量词、公式与证明依赖检查。
+
+| 编号 | Humanizer 3.1.0 原标题 | 本项目对应标题 |
+|---|---|---|
+| 1 | Not X but Y | 空泛否定对比 |
+| 2 | One-line closers and dramatic fragments | 单行总结与戏剧化碎句 |
+| 3 | Sayings that sound deep | 装成深刻的警句 |
+| 4 | Staged run-up before the point | 铺垫式开场 |
+| 5 | Arguing with no one | 回答不存在的反对意见 |
+| 6 | Forced triads | 强凑三项 |
+| 7 | Repeated sentence openings | 句首机械重复 |
+| 8 | Dashes as the universal connector | 破折号包办连接 |
+| 9 | Stacked qualifiers | 限定词堆叠 |
+| 10 | Hyphenated pairs everywhere | 英语连字符搭配 |
+| 11 | Passive voice and missing subjects | 被动和缺失主体 |
+| 12 | Overused AI words | 成簇热词 |
+| 13 | Inflated significance | 夸大意义 |
+| 14 | Vague connection or association | 含糊关系 |
+| 15 | Shallow -ing riders | 附带式意义拔高 |
+| 16 | Sales language | 宣传用语 |
+| 17 | Borrowed authority | 借权威压结论 |
+| 18 | Avoiding is, are, and has | 绕开简单动词 |
+| 19 | Bold as decoration | 装饰性粗体 |
+| 20 | Decorative headings | 装饰性标题 |
+| 21 | Curly quotation marks | 引号格式 |
+| 22 | Chatbot residue | 聊天外壳 |
+| 23 | Knowledge-limit disclaimers and guesses | 知识截止话术与猜测 |
+| 24 | A heading repeated in the first sentence | 标题的首句复读 |
+| 25 | Writing about the document instead of its subject | 谈文章而不谈对象 |
+| 26 | Re-explaining what the reader knows | 重教读者已知背景 |
+
+A–F 的规则范围分别为 1–5、6–11、12–18、19–21、22–25、26。26/26 是条目来源计数，不是全文复制率；本项目没有用文本相似度推算原创比例。
+
+具体调整包括：上游第 8 项在没有作者样稿许可时要求去除破折号，本项目允许有用的插话；第 21 项按中文规范使用中文引号；粘贴文本从上游默认的草稿、短批评、终稿改为只交付终稿。六项正向论证习惯、两张统计卡、冻结研究结果与测量工具由本项目增补；这里的示例未照搬上游示例。通用保义要求有上游来源，数学条件保护是在此基础上的扩展。
+
+上游的来源节还署明 Wikipedia 的 [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)、WikiProject AI Cleanup 和相关文本审阅。本项目直接改编上述 Humanizer 版本，未以这些间接来源冒充独立研究；Humanizer 的效果声明不作为本项目的验证证据。
+
+### 研究结果怎样进入规则
 
 研究进入技能的方式如下：
 
