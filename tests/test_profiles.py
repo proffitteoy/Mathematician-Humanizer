@@ -28,23 +28,23 @@ class ProfileTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             folder = Path(folder)
             shutil.copytree(ROOT / "research", folder / "research")
-            path = folder / "research/general/paired-surface.json"
+            path = folder / "research/results.json"
             path.write_bytes(path.read_bytes() + b" ")
             with self.assertRaisesRegex(ValueError, "changed"):
                 compile_profiles(folder / "research", folder / "skills")
             self.assertFalse((folder / "skills").exists())
 
     def test_development_failure_is_not_compiled_as_supported(self):
-        paired = json.loads((ROOT / "research/general/paired-surface.json").read_text(encoding="utf-8"))
-        joint = json.loads((ROOT / "research/general/joint-reference.json").read_text(encoding="utf-8"))
+        results = json.loads((ROOT / "research/results.json").read_text(encoding="utf-8"))
+        paired, joint = results["chinese_surface"], results["chinese_lexical"]
         altered = copy.deepcopy(paired)
         next(row for row in altered["development_audit"]["features"] if row["feature_id"] == "F013")["inspection_supported"] = False
         _, supported = general_card(altered, joint)
         self.assertNotIn("F013", supported)
 
     def test_forged_replicated_direction_rejected(self):
-        paired = json.loads((ROOT / "research/general/paired-surface.json").read_text(encoding="utf-8"))
-        joint = json.loads((ROOT / "research/general/joint-reference.json").read_text(encoding="utf-8"))
+        results = json.loads((ROOT / "research/results.json").read_text(encoding="utf-8"))
+        paired, joint = results["chinese_surface"], results["chinese_lexical"]
         next(row for row in paired["development_audit"]["features"] if row["feature_id"] == "F013")["dev"]["human_minus_ai"] = -1
         with self.assertRaisesRegex(ValueError, "inconsistent"):
             general_card(paired, joint)

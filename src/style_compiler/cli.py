@@ -67,6 +67,7 @@ def main(argv=None):
     command = commands.add_parser("compile", help="Rebuild the Mathematician Humanizer style cards from frozen research summaries")
     command.add_argument("--research", type=Path, default=Path("research"))
     command.add_argument("--skill", type=Path, default=Path("."), help="Skill directory containing SKILL.md (default: current directory)")
+    command.add_argument("-o", "--output", type=Path, help="Optional build receipt; defaults to stdout")
     command = commands.add_parser("check", help="Compare original and candidate; protect code, formulas and explicit locks")
     command.add_argument("original", type=Path)
     command.add_argument("candidate", type=Path)

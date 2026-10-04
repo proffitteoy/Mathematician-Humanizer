@@ -6,7 +6,7 @@ description: |
   展开决定性机制，保持条件与术语，再清理 Humanizer 所列的模板化表达。
   用户要求数学博客式改写、参考博客风格或 mathematician-humanizer 时使用。
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # Mathematician Humanizer

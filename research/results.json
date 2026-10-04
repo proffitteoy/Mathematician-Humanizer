@@ -1,0 +1,2090 @@
+{
+  "schema": "style-study-results/1",
+  "scope": "Published descriptive results used by one mathematician-humanizer skill; selected from frozen historical aggregates, not a new measurement.",
+  "chinese_surface": {
+    "model": {
+      "fit_split": "TRAIN",
+      "bootstrap_draws": 400,
+      "measurement_identity": "surface-source-units-gap-safe/0.1.0",
+      "measurement_profile_sha256": "6b520a4fe678d9d4336efa3046d6e2174306062eb40cd04791b62944c2b8a270",
+      "provenance": {
+        "cache_set_sha256": "5b17c7b414fa18a7498f755966009e724326de9578a19fd7d7e6f89160ac902f",
+        "cohort_manifest_sha256": "caab83530f309622cbafe95b92e648fc59936435b170f7ef3f38abf23cf3a1ca",
+        "component_split_sha256": "835e6521559b29349570d99b25bc96d353837d8383e002e0b3dadf507a3579b0",
+        "corpus_revision": "628bf0fcb2e8c6b7ffa71fd1af6be413aced8f7d",
+        "davinci_evaluation": false,
+        "implementation_identity": "frozen-structural-statistics-replay/0.1.0",
+        "instrument_source_sha256": {
+          "research/surface/adapter.py": "f10676ad4aa3d9503275443a311749050f55e9ee90369d21a0e87dbd2930e20a",
+          "src/style_compiler/contracts.py": "db0a61250becd56e2834eb71a81b93e32b93376d5d8896b4b74fabbbfad3a2c5",
+          "src/style_compiler/features.py": "4c595ae4883dea30a3137c2152535052807db26a54a0680ed70e16678ad1f9c6",
+          "src/style_compiler/segmentation.py": "be78057bc27f9d8480c37c1e6160b5cc466385803fb094e1e0878e1171a288e8"
+        },
+        "limitations": [
+          "candidate_unvalidated descriptive instrumentation",
+          "HUMAN label is source condition, not verified unassisted authorship",
+          "paired question controls do not identify causation or rewrite utility",
+          "new exploratory use of existing exposed TRAIN/DEV; no TEST quality evidence",
+          "linguistic parser failures do not invalidate pre-parser surface sufficient statistics"
+        ],
+        "measurement_method": "exact whole-source surface formulas replayed over cached original-segmenter physical-line and sentence sufficient statistics",
+        "no_raw_text_read": true,
+        "paragraph_semantics": "nonempty physical lines; not rhetorical writer paragraphs",
+        "profile_identity_basis": "whole-source formulas identical to pinned surface adapter; exported via sufficient-statistic replay, not direct raw-text measurement",
+        "projection": "original entire unchanged HUMAN/CHATGPT answer; no excluded gaps",
+        "reducer_source_sha256": "f80534e6f262076d7ff98650f85c23b8985eba9a48ae4e2a98812061e7584291",
+        "surface_measurement_profile": {
+          "normalization": "none",
+          "offset_unit": "unicode_codepoint",
+          "operational_feature_version": "character-core/1.0.0",
+          "pair_policy": "original_consecutive_sentences_in_one_target_component",
+          "segmenter_version": "punctuation-lines/1.0.0",
+          "unicode_version": "15.0.0",
+          "unit_policy": "segment_full_source_then_select_complete_units",
+          "version": "source-units-gap-safe/0.1.0"
+        },
+        "surface_measurement_profile_sha256": "6b520a4fe678d9d4336efa3046d6e2174306062eb40cd04791b62944c2b8a270",
+        "synthetic_equivalence": {
+          "exact_feature_metadata_equality": true,
+          "fixtures": 12,
+          "test_scope": "synthetic_only_full_source_projection"
+        },
+        "test_evaluation": false,
+        "upstream_profile": "m4-zh-train-dev-extraction/1.0.0"
+      },
+      "features": [
+        {
+          "feature_id": "F002",
+          "train": {
+            "pairs": 1816,
+            "components": 1771,
+            "human_minus_ai": -1.793340374074606,
+            "ci95": [
+              -2.743625895171103,
+              -0.8420446116842286
+            ],
+            "human_median": 6.93842672828808,
+            "human_q10_q90": [
+              5.2631578947368425,
+              34.75241545893719
+            ],
+            "human_sd": 18.31897615744773
+          },
+          "train_domains": {
+            "baike": {
+              "pairs": 913,
+              "components": 882,
+              "human_minus_ai": 4.769429778951449,
+              "ci95": [
+                2.994104270952344,
+                6.593718292756469
+              ],
+              "human_median": 16.75977653631285,
+              "human_q10_q90": [
+                5.46448087431694,
+                50.47598285008358
+              ],
+              "human_sd": 22.57292687722333
+            },
+            "web": {
+              "pairs": 903,
+              "components": 890,
+              "human_minus_ai": -8.307037274843482,
+              "ci95": [
+                -8.896082903692339,
+                -7.811193250098662
+              ],
+              "human_median": 5.58659217877095,
+              "human_q10_q90": [
+                5.241113254340038,
+                7.7400119260584415
+              ],
+              "human_sd": 1.7892415109360293
+            }
+          },
+          "direction": -1,
+          "train_inspection_eligible": false,
+          "eligibility_note": "Engineering screening rule, not multiplicity-adjusted confirmatory inference or an editing-effect estimate"
+        },
+        {
+          "feature_id": "F003",
+          "train": {
+            "pairs": 1816,
+            "components": 1771,
+            "human_minus_ai": 0.14166477655371085,
+            "ci95": [
+              0.12224206370265853,
+              0.16166402185344286
+            ],
+            "human_median": 0.0,
+            "human_q10_q90": [
+              0.0,
+              1.0
+            ],
+            "human_sd": 0.4158498123751219
+          },
+          "train_domains": {
+            "baike": {
+              "pairs": 913,
+              "components": 882,
+              "human_minus_ai": 0.37073475115374505,
+              "ci95": [
+                0.3399955099686763,
+                0.40055947712167456
+              ],
+              "human_median": 0.6666666666666666,
+              "human_q10_q90": [
+                0.0,
+                1.0
+              ],
+              "human_sd": 0.3954932067249126
+            },
+            "web": {
+              "pairs": 903,
+              "components": 890,
+              "human_minus_ai": -0.08550531600110252,
+              "ci95": [
+                -0.10809860234568801,
+                -0.06364865529289687
+              ],
+              "human_median": 0.0,
+              "human_q10_q90": [
+                0.0,
+                0.0
+              ],
+              "human_sd": 0.2530152502936384
+            }
+          },
+          "direction": 1,
+          "train_inspection_eligible": false,
+          "eligibility_note": "Engineering screening rule, not multiplicity-adjusted confirmatory inference or an editing-effect estimate"
+        },
+        {
+          "feature_id": "F013",
+          "train": {
+            "pairs": 1816,
+            "components": 1771,
+            "human_minus_ai": 10.740626764539808,
+            "ci95": [
+              7.073623658949747,
+              17.116734895539242
+            ],
+            "human_median": 28.5,
+            "human_q10_q90": [
+              14.0,
+              79.0
+            ],
+            "human_sd": 106.07732458542192
+          },
+          "train_domains": {
+            "baike": {
+              "pairs": 913,
+              "components": 882,
+              "human_minus_ai": 12.180820105820105,
+              "ci95": [
+                5.710499811035525,
+                24.99613520408163
+              ],
+              "human_median": 28.0,
+              "human_q10_q90": [
+                12.5,
+                69.90000000000003
+              ],
+              "human_sd": 144.15363686250032
+            },
+            "web": {
+              "pairs": 903,
+              "components": 890,
+              "human_minus_ai": 9.298501872659177,
+              "ci95": [
+                6.509754213483147,
+                11.95944288389513
+              ],
+              "human_median": 29.0,
+              "human_q10_q90": [
+                15.5,
+                89.40000000000003
+              ],
+              "human_sd": 40.37945902139261
+            }
+          },
+          "direction": 1,
+          "train_inspection_eligible": true,
+          "eligibility_note": "Engineering screening rule, not multiplicity-adjusted confirmatory inference or an editing-effect estimate"
+        },
+        {
+          "feature_id": "F014",
+          "train": {
+            "pairs": 1816,
+            "components": 1771,
+            "human_minus_ai": 2.7961415396198004,
+            "ci95": [
+              1.7283245106342933,
+              3.8640210333145113
+            ],
+            "human_median": 18.5,
+            "human_q10_q90": [
+              4.0,
+              43.75
+            ],
+            "human_sd": 18.421839131541294
+          },
+          "train_domains": {
+            "baike": {
+              "pairs": 913,
+              "components": 882,
+              "human_minus_ai": 4.116789493575208,
+              "ci95": [
+                2.583390022675737,
+                5.92672902494331
+              ],
+              "human_median": 18.0,
+              "human_q10_q90": [
+                4.0,
+                43.5
+              ],
+              "human_sd": 20.604693138620746
+            },
+            "web": {
+              "pairs": 903,
+              "components": 890,
+              "human_minus_ai": 1.4552902621722847,
+              "ci95": [
+                0.18211025280898877,
+                2.827339653558052
+              ],
+              "human_median": 18.75,
+              "human_q10_q90": [
+                5.0,
+                43.95000000000002
+              ],
+              "human_sd": 15.921136085518416
+            }
+          },
+          "direction": 1,
+          "train_inspection_eligible": true,
+          "eligibility_note": "Engineering screening rule, not multiplicity-adjusted confirmatory inference or an editing-effect estimate"
+        },
+        {
+          "feature_id": "F015",
+          "train": {
+            "pairs": 1816,
+            "components": 1771,
+            "human_minus_ai": 19.904297007340485,
+            "ci95": [
+              16.056510257858086,
+              26.279609542631277
+            ],
+            "human_median": 54.0,
+            "human_q10_q90": [
+              28.69999999999999,
+              112.0
+            ],
+            "human_sd": 106.33011436639889
+          },
+          "train_domains": {
+            "baike": {
+              "pairs": 913,
+              "components": 882,
+              "human_minus_ai": 22.363749055177628,
+              "ci95": [
+                15.782565476190477,
+                36.80585270219199
+              ],
+              "human_median": 53.5,
+              "human_q10_q90": [
+                25.0,
+                104.48000000000003
+              ],
+              "human_sd": 144.83478465499536
+            },
+            "web": {
+              "pairs": 903,
+              "components": 890,
+              "human_minus_ai": 17.448913857677905,
+              "ci95": [
+                14.981566011235955,
+                20.0006329588015
+              ],
+              "human_median": 54.5,
+              "human_q10_q90": [
+                32.720000000000006,
+                117.48
+              ],
+              "human_sd": 39.247322802830574
+            }
+          },
+          "direction": 1,
+          "train_inspection_eligible": true,
+          "eligibility_note": "Engineering screening rule, not multiplicity-adjusted confirmatory inference or an editing-effect estimate"
+        },
+        {
+          "feature_id": "F016",
+          "train": {
+            "pairs": 1816,
+            "components": 1771,
+            "human_minus_ai": 0.008848261842690061,
+            "ci95": [
+              -0.0061223750324400795,
+              0.024073887393282818
+            ],
+            "human_median": 0.35555555555555557,
+            "human_q10_q90": [
+              0.0625,
+              0.6844965675057209
+            ],
+            "human_sd": 0.22658298731978588
+          },
+          "train_domains": {
+            "baike": {
+              "pairs": 913,
+              "components": 882,
+              "human_minus_ai": 0.002753369905428479,
+              "ci95": [
+                -0.021250160381041088,
+                0.025880087760993035
+              ],
+              "human_median": 0.37209302325581395,
+              "human_q10_q90": [
+                0.06290322580645162,
+                0.6886111111111112
+              ],
+              "human_sd": 0.2267581154384091
+            },
+            "web": {
+              "pairs": 903,
+              "components": 890,
+              "human_minus_ai": 0.014306210428142379,
+              "ci95": [
+                -0.0074065646371086254,
+                0.035685319324547944
+              ],
+              "human_median": 0.35,
+              "human_q10_q90": [
+                0.06290322580645162,
+                0.6814545454545455
+              ],
+              "human_sd": 0.22627975035641207
+            }
+          },
+          "direction": 1,
+          "train_inspection_eligible": false,
+          "eligibility_note": "Engineering screening rule, not multiplicity-adjusted confirmatory inference or an editing-effect estimate"
+        },
+        {
+          "feature_id": "F024",
+          "train": {
+            "pairs": 1694,
+            "components": 1652,
+            "human_minus_ai": 0.3002030770898529,
+            "ci95": [
+              0.23458274552946798,
+              0.3608588671317305
+            ],
+            "human_median": 0.7816811909949165,
+            "human_q10_q90": [
+              0.37853669319186567,
+              1.7622105263157897
+            ],
+            "human_sd": 1.0352384421530583
+          },
+          "train_domains": {
+            "baike": {
+              "pairs": 854,
+              "components": 824,
+              "human_minus_ai": 0.22724555374147326,
+              "ci95": [
+                0.16040214455915944,
+                0.2896761586423211
+              ],
+              "human_median": 0.786853448275862,
+              "human_q10_q90": [
+                0.34147727272727274,
+                1.75
+              ],
+              "human_sd": 0.8505222139509787
+            },
+            "web": {
+              "pairs": 840,
+              "components": 829,
+              "human_minus_ai": 0.372273680552004,
+              "ci95": [
+                0.27219208742393364,
+                0.47897578928813095
+              ],
+              "human_median": 0.7765136823960354,
+              "human_q10_q90": [
+                0.4016187790116928,
+                1.781982392228294
+              ],
+              "human_sd": 1.1926621748343225
+            }
+          },
+          "direction": 1,
+          "train_inspection_eligible": true,
+          "eligibility_note": "Engineering screening rule, not multiplicity-adjusted confirmatory inference or an editing-effect estimate"
+        },
+        {
+          "feature_id": "F025",
+          "train": {
+            "pairs": 1266,
+            "components": 1235,
+            "human_minus_ai": 0.0982439746162683,
+            "ci95": [
+              0.06472923541385739,
+              0.12492371407108517
+            ],
+            "human_median": -0.16894715703995256,
+            "human_q10_q90": [
+              -0.7,
+              0.4376322870253815
+            ],
+            "human_sd": 0.43406005735097486
+          },
+          "train_domains": {
+            "baike": {
+              "pairs": 617,
+              "components": 594,
+              "human_minus_ai": 0.1250447888669213,
+              "ci95": [
+                0.08407212668351838,
+                0.16983309500985513
+              ],
+              "human_median": -0.1,
+              "human_q10_q90": [
+                -0.6252496798975673,
+                0.39338361783776626
+              ],
+              "human_sd": 0.3923481508774714
+            },
+            "web": {
+              "pairs": 649,
+              "components": 642,
+              "human_minus_ai": 0.07262790134230471,
+              "ci95": [
+                0.02904197837380905,
+                0.12558106769454463
+              ],
+              "human_median": -0.2,
+              "human_q10_q90": [
+                -0.797980362684063,
+                0.5
+              ],
+              "human_sd": 0.47008823725811927
+            }
+          },
+          "direction": 1,
+          "train_inspection_eligible": true,
+          "eligibility_note": "Engineering screening rule, not multiplicity-adjusted confirmatory inference or an editing-effect estimate"
+        }
+      ],
+      "limitations": [
+        "Dataset human label is not independently verified unassisted authorship",
+        "All coordinates are exploratory; correlated features and multiple inspection are uncorrected",
+        "Prompt, length, genre and collection can explain contrasts; they are not causal style effects",
+        "Moving a candidate toward a human median does not establish writing benefit"
+      ]
+    },
+    "development_audit": {
+      "schema_version": "paired-style-dev-audit/0.1",
+      "model_sha256": "ce4637afaea07241c9a51510ce1cdd54bb384a422ebcf23852e9a9e0cbf42f45",
+      "dev_sha256": "33f2bfe0fd359333c60b5e39db1094e1c2461e65ccccd1233b987932068d35a7",
+      "features": [
+        {
+          "feature_id": "F002",
+          "dev": {
+            "pairs": 591,
+            "components": 590,
+            "human_minus_ai": 0.17256611494758634,
+            "ci95": null,
+            "human_median": 6.5359477124183005,
+            "human_q10_q90": [
+              5.291005291005291,
+              43.32129963898917
+            ],
+            "human_sd": 22.510361035974604
+          },
+          "dev_domains": {
+            "baike": {
+              "pairs": 293,
+              "components": 293,
+              "human_minus_ai": 8.459118524707234,
+              "ci95": null,
+              "human_median": 19.083969465648856,
+              "human_q10_q90": [
+                5.393971443680592,
+                57.29703685858829
+              ],
+              "human_sd": 28.152687961968468
+            },
+            "web": {
+              "pairs": 298,
+              "components": 297,
+              "human_minus_ai": -8.00238289535402,
+              "ci95": null,
+              "human_median": 5.58659217877095,
+              "human_q10_q90": [
+                5.291005291005291,
+                7.238805970149258
+              ],
+              "human_sd": 1.778447537642048
+            }
+          },
+          "dev_direction_reproduced": false,
+          "inspection_supported": false
+        },
+        {
+          "feature_id": "F003",
+          "dev": {
+            "pairs": 591,
+            "components": 590,
+            "human_minus_ai": 0.13509548330878576,
+            "ci95": null,
+            "human_median": 0.0,
+            "human_q10_q90": [
+              0.0,
+              1.0
+            ],
+            "human_sd": 0.41575638318378555
+          },
+          "dev_domains": {
+            "baike": {
+              "pairs": 293,
+              "components": 293,
+              "human_minus_ai": 0.3789817616904176,
+              "ci95": null,
+              "human_median": 0.6666666666666666,
+              "human_q10_q90": [
+                0.0,
+                1.0
+              ],
+              "human_sd": 0.4031123541115352
+            },
+            "web": {
+              "pairs": 298,
+              "components": 297,
+              "human_minus_ai": -0.10550613139093853,
+              "ci95": null,
+              "human_median": 0.0,
+              "human_q10_q90": [
+                0.0,
+                0.0
+              ],
+              "human_sd": 0.21900422364939173
+            }
+          },
+          "dev_direction_reproduced": false,
+          "inspection_supported": false
+        },
+        {
+          "feature_id": "F013",
+          "dev": {
+            "pairs": 591,
+            "components": 590,
+            "human_minus_ai": 5.892372881355932,
+            "ci95": null,
+            "human_median": 28.0,
+            "human_q10_q90": [
+              13.0,
+              74.0
+            ],
+            "human_sd": 39.56962588484807
+          },
+          "dev_domains": {
+            "baike": {
+              "pairs": 293,
+              "components": 293,
+              "human_minus_ai": 6.373720136518771,
+              "ci95": null,
+              "human_median": 27.0,
+              "human_q10_q90": [
+                12.100000000000001,
+                66.80000000000007
+              ],
+              "human_sd": 43.6283679868665
+            },
+            "web": {
+              "pairs": 298,
+              "components": 297,
+              "human_minus_ai": 5.417508417508418,
+              "ci95": null,
+              "human_median": 29.0,
+              "human_q10_q90": [
+                14.350000000000001,
+                85.95000000000002
+              ],
+              "human_sd": 35.141655772639425
+            }
+          },
+          "dev_direction_reproduced": true,
+          "inspection_supported": true
+        },
+        {
+          "feature_id": "F014",
+          "dev": {
+            "pairs": 591,
+            "components": 590,
+            "human_minus_ai": 3.583898305084746,
+            "ci95": null,
+            "human_median": 19.25,
+            "human_q10_q90": [
+              4.5,
+              45.0
+            ],
+            "human_sd": 16.610995981200315
+          },
+          "dev_domains": {
+            "baike": {
+              "pairs": 293,
+              "components": 293,
+              "human_minus_ai": 3.916382252559727,
+              "ci95": null,
+              "human_median": 18.75,
+              "human_q10_q90": [
+                4.0,
+                43.900000000000006
+              ],
+              "human_sd": 16.687760876877046
+            },
+            "web": {
+              "pairs": 298,
+              "components": 297,
+              "human_minus_ai": 3.255892255892256,
+              "ci95": null,
+              "human_median": 19.75,
+              "human_q10_q90": [
+                6.0,
+                46.80000000000001
+              ],
+              "human_sd": 16.522616589693452
+            }
+          },
+          "dev_direction_reproduced": true,
+          "inspection_supported": true
+        },
+        {
+          "feature_id": "F015",
+          "dev": {
+            "pairs": 591,
+            "components": 590,
+            "human_minus_ai": 14.955254237288136,
+            "ci95": null,
+            "human_median": 54.2,
+            "human_q10_q90": [
+              26.700000000000003,
+              110.0
+            ],
+            "human_sd": 42.18501423926819
+          },
+          "dev_domains": {
+            "baike": {
+              "pairs": 293,
+              "components": 293,
+              "human_minus_ai": 15.517064846416384,
+              "ci95": null,
+              "human_median": 52.599999999999994,
+              "human_q10_q90": [
+                25.000000000000004,
+                103.0
+              ],
+              "human_sd": 46.582828340584165
+            },
+            "web": {
+              "pairs": 298,
+              "components": 297,
+              "human_minus_ai": 14.401010101010101,
+              "ci95": null,
+              "human_median": 55.80000000000001,
+              "human_q10_q90": [
+                30.650000000000006,
+                117.23000000000002
+              ],
+              "human_sd": 37.32548731586774
+            }
+          },
+          "dev_direction_reproduced": true,
+          "inspection_supported": true
+        },
+        {
+          "feature_id": "F016",
+          "dev": {
+            "pairs": 591,
+            "components": 590,
+            "human_minus_ai": 0.031944060419812084,
+            "ci95": null,
+            "human_median": 0.3793103448275862,
+            "human_q10_q90": [
+              0.08391608391608392,
+              0.7083333333333334
+            ],
+            "human_sd": 0.22679079174326303
+          },
+          "dev_domains": {
+            "baike": {
+              "pairs": 293,
+              "components": 293,
+              "human_minus_ai": 0.01320068477603032,
+              "ci95": null,
+              "human_median": 0.37681159420289856,
+              "human_q10_q90": [
+                0.07055702917771886,
+                0.707843137254902
+              ],
+              "human_sd": 0.22939567740096
+            },
+            "web": {
+              "pairs": 298,
+              "components": 297,
+              "human_minus_ai": 0.050435000027987356,
+              "ci95": null,
+              "human_median": 0.38278388278388276,
+              "human_q10_q90": [
+                0.1045253320216429,
+                0.7042857142857144
+              ],
+              "human_sd": 0.22425123154001875
+            }
+          },
+          "dev_direction_reproduced": true,
+          "inspection_supported": false
+        },
+        {
+          "feature_id": "F024",
+          "dev": {
+            "pairs": 560,
+            "components": 559,
+            "human_minus_ai": 0.32850394380163295,
+            "ci95": null,
+            "human_median": 0.7645691190299926,
+            "human_q10_q90": [
+              0.3616117216117216,
+              1.7701428571428572
+            ],
+            "human_sd": 1.4308325055917932
+          },
+          "dev_domains": {
+            "baike": {
+              "pairs": 277,
+              "components": 277,
+              "human_minus_ai": 0.24479279219835878,
+              "ci95": null,
+              "human_median": 0.7624434389140272,
+              "human_q10_q90": [
+                0.33333333333333337,
+                1.7476923076923079
+              ],
+              "human_sd": 0.8257196521425143
+            },
+            "web": {
+              "pairs": 283,
+              "components": 282,
+              "human_minus_ai": 0.41073085512825336,
+              "ci95": null,
+              "human_median": 0.7862068965517242,
+              "human_q10_q90": [
+                0.3989189189189189,
+                1.7711428571428571
+              ],
+              "human_sd": 1.8384456928616701
+            }
+          },
+          "dev_direction_reproduced": true,
+          "inspection_supported": true
+        },
+        {
+          "feature_id": "F025",
+          "dev": {
+            "pairs": 404,
+            "components": 404,
+            "human_minus_ai": 0.13405207003351394,
+            "ci95": null,
+            "human_median": -0.14970030466058817,
+            "human_q10_q90": [
+              -0.7108193662707608,
+              0.4252040419743489
+            ],
+            "human_sd": 0.426092308992346
+          },
+          "dev_domains": {
+            "baike": {
+              "pairs": 189,
+              "components": 189,
+              "human_minus_ai": 0.2320007228818728,
+              "ci95": null,
+              "human_median": -0.047619047619047616,
+              "human_q10_q90": [
+                -0.5714304749174678,
+                0.44101531023368296
+              ],
+              "human_sd": 0.3866362191111557
+            },
+            "web": {
+              "pairs": 215,
+              "components": 215,
+              "human_minus_ai": 0.0479483705528636,
+              "ci95": null,
+              "human_median": -0.2571428571428571,
+              "human_q10_q90": [
+                -0.7976470588235294,
+                0.4
+              ],
+              "human_sd": 0.45103880103975785
+            }
+          },
+          "dev_direction_reproduced": true,
+          "inspection_supported": true
+        }
+      ],
+      "test_opened": false,
+      "status": "exploratory_development_audit",
+      "selection_warning": "Any subsequent use is development-adapted, not held-out confirmation"
+    }
+  },
+  "chinese_lexical": {
+    "features": [
+      {
+        "id": "zh:upos.NOUN",
+        "label_zh": "名词词元占比",
+        "unit": "ratio",
+        "formula": "count(UPOS=NOUN) / T",
+        "opportunity": "nonpunctuation nonwhitespace model tokens T"
+      },
+      {
+        "id": "zh:upos.VERB",
+        "label_zh": "动词词元占比",
+        "unit": "ratio",
+        "formula": "count(UPOS=VERB) / T",
+        "opportunity": "nonpunctuation nonwhitespace model tokens T"
+      },
+      {
+        "id": "zh:upos.ADJ",
+        "label_zh": "形容词词元占比",
+        "unit": "ratio",
+        "formula": "count(UPOS=ADJ) / T",
+        "opportunity": "nonpunctuation nonwhitespace model tokens T"
+      },
+      {
+        "id": "zh:upos.ADV",
+        "label_zh": "副词词元占比",
+        "unit": "ratio",
+        "formula": "count(UPOS=ADV) / T",
+        "opportunity": "nonpunctuation nonwhitespace model tokens T"
+      },
+      {
+        "id": "zh:word_length.mean",
+        "label_zh": "平均词元码点长度",
+        "unit": "codepoints_per_token",
+        "formula": "sum(nonspace non-P-category codepoints of tokens)/T",
+        "opportunity": "T"
+      },
+      {
+        "id": "zh:word.single_han",
+        "label_zh": "单汉字词元占比",
+        "unit": "ratio",
+        "formula": "count(token exactly one Unicode15 Script=Han codepoint)/T",
+        "opportunity": "T"
+      },
+      {
+        "id": "zh:cue.pronoun_first",
+        "label_zh": "第一人称形式词元占比",
+        "unit": "ratio",
+        "formula": "count(exact form in ('我', '我们', '我們') and UPOS=PRON)/T",
+        "opportunity": "T"
+      },
+      {
+        "id": "zh:cue.pronoun_second",
+        "label_zh": "第二人称形式词元占比",
+        "unit": "ratio",
+        "formula": "count(exact form in ('你', '妳', '您', '你们', '你們', '妳們', '您们', '您們') and UPOS=PRON)/T",
+        "opportunity": "T"
+      },
+      {
+        "id": "zh:cue.negator",
+        "label_zh": "否定形式词元占比",
+        "unit": "ratio",
+        "formula": "count(exact form in ('不', '未', '没', '沒', '别', '別', '无', '無') and UPOS=ADV)/T",
+        "opportunity": "T"
+      },
+      {
+        "id": "zh:dependency.span_mean",
+        "label_zh": "平均依存跨度（非标点词位）",
+        "unit": "nonpunctuation_token_rank_distance",
+        "formula": "sum(abs(rank_dep-rank_head))/A",
+        "opportunity": "A"
+      }
+    ],
+    "provenance": {
+      "input_numeric_projection_sha256": "3ce236990e4ba8f228d81ac2dc73d6f03d66036178181368dfe8a3b55b589c5f",
+      "core_difference_aggregate_sha256": "6103981dd75f2e0674644bf48e0135b542eb0eb25fdf08091b90d7fae046ff9c",
+      "measurement_profile_sha256": "221323897ea20205d0801383537558b4411cb47eb945c2deac51e24ccb2549a3",
+      "split": "TRAIN",
+      "condition": "stored HUMAN source label, not independently verified unassisted authorship"
+    },
+    "sources": {
+      "baike": {
+        "source_label": "baike",
+        "original_human_documents": 913,
+        "joint_available_human_documents": 899,
+        "joint_available_components": 868,
+        "reference": {
+          "components": 868,
+          "mean": [
+            0.2857604884153218,
+            0.20542077271940015,
+            0.04621432085038367,
+            0.04791045192292465,
+            1.641164403978039,
+            0.43402142764004786,
+            0.006183752912209043,
+            0.013582615645379529,
+            0.006941343266783105,
+            3.3466233680479327
+          ],
+          "q10": [
+            0.1809258186033034,
+            0.13333333333333333,
+            0.011723666210670315,
+            0.012937062937062939,
+            1.436012218243101,
+            0.31805170020818874,
+            0.0,
+            0.0,
+            0.0,
+            2.3817543859649124
+          ],
+          "q25": [
+            0.23107940446650124,
+            0.17460901797501777,
+            0.025439901669038686,
+            0.027777777777777776,
+            1.5083340965289862,
+            0.3748793436293436,
+            0.0,
+            0.0,
+            0.0,
+            2.777333333333333
+          ],
+          "median": [
+            0.2837719298245614,
+            0.20891625423794863,
+            0.04477611940298507,
+            0.044963259593328406,
+            1.582235130917288,
+            0.4384925584102436,
+            0.0,
+            0.004750835063645391,
+            0.0035051166598444533,
+            3.1869812145041503
+          ],
+          "q75": [
+            0.3419043753103546,
+            0.2443172179813401,
+            0.0625,
+            0.06593406593406594,
+            1.663022226795637,
+            0.49555277168806766,
+            0.007782457425379967,
+            0.0188857918810749,
+            0.011904761904761904,
+            3.6334498834498836
+          ],
+          "q90": [
+            0.3983813151114597,
+            0.2765076974237594,
+            0.08235294117647059,
+            0.08485394879192212,
+            1.8238390092879257,
+            0.5588246104087033,
+            0.021451612903225812,
+            0.041515544041450796,
+            0.01818181818181818,
+            4.226766332172845
+          ],
+          "standard_deviation": [
+            0.0874514622572231,
+            0.06088081523953433,
+            0.02842288788322151,
+            0.028524853363761146,
+            0.32455432387305383,
+            0.1035381614455814,
+            0.01246997242875682,
+            0.02046697594812665,
+            0.009185778275334606,
+            1.7622128493591087
+          ]
+        }
+      },
+      "web": {
+        "source_label": "web",
+        "original_human_documents": 903,
+        "joint_available_human_documents": 903,
+        "joint_available_components": 890,
+        "reference": {
+          "components": 890,
+          "mean": [
+            0.26399078826006056,
+            0.20797872008293422,
+            0.04396358480334539,
+            0.06025770434880408,
+            1.5781693509680625,
+            0.490193031481419,
+            0.017849997606833982,
+            0.009034941139326222,
+            0.009575561017125728,
+            3.4074810944529
+          ],
+          "q10": [
+            0.19161764705882353,
+            0.14850711633663366,
+            0.015372871403405756,
+            0.025210084033613446,
+            1.411764705882353,
+            0.3872451398767188,
+            0.0,
+            0.0,
+            0.0,
+            2.619467889908257
+          ],
+          "q25": [
+            0.21929824561403508,
+            0.1791396789636722,
+            0.02569628647214854,
+            0.04065040650406504,
+            1.4673453199365416,
+            0.4375,
+            0.0,
+            0.0,
+            0.0,
+            2.8598130841121496
+          ],
+          "median": [
+            0.2629348795718109,
+            0.2085144927536232,
+            0.040983606557377046,
+            0.057692307692307696,
+            1.5336158192090394,
+            0.4918032786885246,
+            0.00980392156862745,
+            0.0,
+            0.00847457627118644,
+            3.1922268907563027
+          ],
+          "q75": [
+            0.3025210084033613,
+            0.23799765807962528,
+            0.058823529411764705,
+            0.07811312790206838,
+            1.6043956043956045,
+            0.552,
+            0.02564102564102564,
+            0.012740384615384615,
+            0.01639344262295082,
+            3.7033976124885215
+          ],
+          "q90": [
+            0.3422084623323014,
+            0.26722966881048266,
+            0.07758620689655173,
+            0.09760879961740795,
+            1.7238775510204083,
+            0.5973039215686274,
+            0.04918032786885246,
+            0.03152105986751656,
+            0.02459016393442623,
+            4.4471638655462185
+          ],
+          "standard_deviation": [
+            0.06255098848315903,
+            0.047023435699984246,
+            0.025475349323046494,
+            0.028803815549533353,
+            0.3308812703894762,
+            0.08722352751712098,
+            0.021723965316340015,
+            0.014987503523076021,
+            0.010159405263698585,
+            0.8452564453504084
+          ]
+        }
+      }
+    },
+    "limitations": [
+      "Conditional moments/quantiles/covariation summarize real joint observations; not a full probability density",
+      "No individual corpus rows, texts, identifiers or cache contents distributed",
+      "Human-only joint-available support differs from paired H-A contrast support",
+      "Not all humans share one style; source/bands are references, not universal targets",
+      "Do not force every dimension toward a mean or invent pronouns/claims to match numbers",
+      "Style/quality causality and independent human preference unvalidated; no detector success claim"
+    ]
+  },
+  "reference_blog": {
+    "summary": {
+      "snapshot_date": "2026-10-04",
+      "source": "public-mathematics-blog/1",
+      "public_records": 1234,
+      "posts": 1130,
+      "pages": 104,
+      "eligible_measured_articles": 1114,
+      "lexical_words": 2381354,
+      "lexical_sentences": 121607,
+      "development_articles": 1040,
+      "heldout_articles": 74,
+      "conditional_groups": 104,
+      "heldout_marginal_coverage": {
+        "sentence_mean": [
+          55,
+          74
+        ],
+        "paragraph_mean": [
+          48,
+          74
+        ],
+        "noun_share": [
+          54,
+          74
+        ],
+        "verb_share": [
+          52,
+          74
+        ],
+        "dependency_span": [
+          55,
+          74
+        ],
+        "mattr100": [
+          57,
+          72
+        ]
+      },
+      "limitations": [
+        "Descriptive marginal statistics, not authorship classification or a quality score.",
+        "No control-author experiment; genres are heuristic.",
+        "English thresholds must not be transferred to Chinese.",
+        "No source full text, per-article lexical forms or raw parses are distributed."
+      ]
+    },
+    "development_profiles": {
+      "development_articles": 1040,
+      "groups": {
+        "genre/math_exposition": {
+          "article_count": 311,
+          "families": 309,
+          "total_lexical_words": 840946,
+          "features": {
+            "cue_for_example": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_for_instance": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 1.5151515151515151,
+              "family_weighted_q90": 3.8917089678510997
+            },
+            "cue_however": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.7342143906020558,
+              "family_weighted_q90": 2.165283291230603
+            },
+            "cue_in_particular": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 1.2511729746637472,
+              "family_weighted_q90": 2.790014684287812
+            },
+            "cue_it_turns_out": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.8547008547008547
+            },
+            "cue_note_that": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.40584415584415584,
+              "family_weighted_q90": 1.3635588886995058
+            },
+            "cue_on_the_other_hand": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.3052503052503053,
+              "family_weighted_q90": 1.3268465280849182
+            },
+            "cue_roughly_speaking": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.6061524473405061
+            },
+            "cue_therefore": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.352112676056338
+            },
+            "cue_we_can": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 1.6891891891891893,
+              "family_weighted_q90": 3.9761431411530817
+            },
+            "cue_we_first": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.5120327700972862
+            },
+            "cue_we_now": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.8718395815170009
+            },
+            "dependency_depth_mean": {
+              "articles": 311,
+              "family_weighted_q10": 2.4445324881141044,
+              "family_weighted_median": 2.7363636363636363,
+              "family_weighted_q90": 3.0954545454545452
+            },
+            "dependency_span_mean": {
+              "articles": 311,
+              "family_weighted_q10": 3.0116402116402115,
+              "family_weighted_median": 3.221912720519963,
+              "family_weighted_q90": 3.4526077097505667
+            },
+            "example_cues_per_1000_words": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 1.5408320493066257,
+              "family_weighted_q90": 4.143646408839779
+            },
+            "exercise_markers_per_1000_words": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "first_person_per_100_words": {
+              "articles": 311,
+              "family_weighted_q10": 0.9259259259259259,
+              "family_weighted_median": 1.8455560951918406,
+              "family_weighted_q90": 3.025936599423631
+            },
+            "formula_paragraph_share": {
+              "articles": 311,
+              "family_weighted_q10": 0.5348837209302325,
+              "family_weighted_median": 0.782608695652174,
+              "family_weighted_q90": 0.8958333333333334
+            },
+            "mattr100": {
+              "articles": 310,
+              "family_weighted_q10": 0.6177782012195122,
+              "family_weighted_median": 0.6530434782608696,
+              "family_weighted_q90": 0.6838044164037855
+            },
+            "modal_per_100_words": {
+              "articles": 311,
+              "family_weighted_q10": 1.062573789846517,
+              "family_weighted_median": 1.632882882882883,
+              "family_weighted_q90": 2.175925925925926
+            },
+            "paragraph_words_mean": {
+              "articles": 311,
+              "family_weighted_q10": 28.1,
+              "family_weighted_median": 44.5,
+              "family_weighted_q90": 84.2
+            },
+            "proof_markers_per_1000_words": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 1.9723865877712032
+            },
+            "punctuation_tokens_per_100_words": {
+              "articles": 311,
+              "family_weighted_q10": 14.01673640167364,
+              "family_weighted_median": 16.076294277929154,
+              "family_weighted_q90": 18.84728649558267
+            },
+            "question_sentence_share": {
+              "articles": 311,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.017241379310344827
+            },
+            "sentence_words_mean": {
+              "articles": 311,
+              "family_weighted_q10": 15.138297872340425,
+              "family_weighted_median": 19.517241379310345,
+              "family_weighted_q90": 27.114754098360656
+            },
+            "subordinate_arcs_per_100_words": {
+              "articles": 311,
+              "family_weighted_q10": 5.101302460202605,
+              "family_weighted_median": 6.22568093385214,
+              "family_weighted_q90": 7.343124165554072
+            },
+            "upos_ADJ": {
+              "articles": 311,
+              "family_weighted_q10": 0.08085317460317461,
+              "family_weighted_median": 0.10138248847926268,
+              "family_weighted_q90": 0.12262615301139447
+            },
+            "upos_ADV": {
+              "articles": 311,
+              "family_weighted_q10": 0.056842105263157895,
+              "family_weighted_median": 0.0678062678062678,
+              "family_weighted_q90": 0.07927300850734725
+            },
+            "upos_AUX": {
+              "articles": 311,
+              "family_weighted_q10": 0.053416579951439475,
+              "family_weighted_median": 0.06321243523316063,
+              "family_weighted_q90": 0.07394727832933927
+            },
+            "upos_CCONJ": {
+              "articles": 311,
+              "family_weighted_q10": 0.02342786683107275,
+              "family_weighted_median": 0.029996571820363388,
+              "family_weighted_q90": 0.03729281767955801
+            },
+            "upos_NOUN": {
+              "articles": 311,
+              "family_weighted_q10": 0.18460441910192446,
+              "family_weighted_median": 0.21196581196581196,
+              "family_weighted_q90": 0.24707740916271723
+            },
+            "upos_PRON": {
+              "articles": 311,
+              "family_weighted_q10": 0.042709867452135494,
+              "family_weighted_median": 0.05453690644099671,
+              "family_weighted_q90": 0.06644067796610169
+            },
+            "upos_SCONJ": {
+              "articles": 311,
+              "family_weighted_q10": 0.020108275328692964,
+              "family_weighted_median": 0.028186088801333536,
+              "family_weighted_q90": 0.03621938599517075
+            },
+            "upos_VERB": {
+              "articles": 311,
+              "family_weighted_q10": 0.09344490934449093,
+              "family_weighted_median": 0.10846153846153846,
+              "family_weighted_q90": 0.12514792899408284
+            }
+          }
+        },
+        "genre/lecture_notes": {
+          "article_count": 146,
+          "families": 146,
+          "total_lexical_words": 849126,
+          "features": {
+            "cue_for_example": {
+              "articles": 146,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_for_instance": {
+              "articles": 146,
+              "family_weighted_q10": 0.3988831272437176,
+              "family_weighted_median": 1.2596221133659902,
+              "family_weighted_q90": 2.5597269624573378
+            },
+            "cue_however": {
+              "articles": 146,
+              "family_weighted_q10": 0.25839793281653745,
+              "family_weighted_median": 0.8484162895927602,
+              "family_weighted_q90": 1.2868172719473834
+            },
+            "cue_in_particular": {
+              "articles": 146,
+              "family_weighted_q10": 0.726480203414457,
+              "family_weighted_median": 1.5507883173946757,
+              "family_weighted_q90": 2.4323502584372148
+            },
+            "cue_it_turns_out": {
+              "articles": 146,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.21110407430863415,
+              "family_weighted_q90": 0.6553079947575361
+            },
+            "cue_note_that": {
+              "articles": 146,
+              "family_weighted_q10": 0.1642845408247084,
+              "family_weighted_median": 0.6631299734748011,
+              "family_weighted_q90": 1.1252813203300824
+            },
+            "cue_on_the_other_hand": {
+              "articles": 146,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.3872966692486445,
+              "family_weighted_q90": 0.9458948164964056
+            },
+            "cue_roughly_speaking": {
+              "articles": 146,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.3967466772465781
+            },
+            "cue_therefore": {
+              "articles": 146,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.2578981302385558
+            },
+            "cue_we_can": {
+              "articles": 146,
+              "family_weighted_q10": 0.7442322004465394,
+              "family_weighted_median": 1.812191103789127,
+              "family_weighted_q90": 3.0404378230465188
+            },
+            "cue_we_first": {
+              "articles": 146,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.1693623507494284,
+              "family_weighted_q90": 0.4721435316336166
+            },
+            "cue_we_now": {
+              "articles": 146,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.44642857142857145,
+              "family_weighted_q90": 0.9259259259259259
+            },
+            "dependency_depth_mean": {
+              "articles": 146,
+              "family_weighted_q10": 2.4869565217391303,
+              "family_weighted_median": 2.6413972500929024,
+              "family_weighted_q90": 2.8565599897998215
+            },
+            "dependency_span_mean": {
+              "articles": 146,
+              "family_weighted_q10": 3.038545059717698,
+              "family_weighted_median": 3.1823399558498897,
+              "family_weighted_q90": 3.356693903205531
+            },
+            "example_cues_per_1000_words": {
+              "articles": 146,
+              "family_weighted_q10": 0.3988831272437176,
+              "family_weighted_median": 1.2622278321236984,
+              "family_weighted_q90": 2.5597269624573378
+            },
+            "exercise_markers_per_1000_words": {
+              "articles": 146,
+              "family_weighted_q10": 0.9121313469139556,
+              "family_weighted_median": 2.510197678067148,
+              "family_weighted_q90": 4.876219054763691
+            },
+            "first_person_per_100_words": {
+              "articles": 146,
+              "family_weighted_q10": 1.3117283950617284,
+              "family_weighted_median": 1.9394773039889959,
+              "family_weighted_q90": 2.6603830951657037
+            },
+            "formula_paragraph_share": {
+              "articles": 146,
+              "family_weighted_q10": 0.7012987012987013,
+              "family_weighted_median": 0.8021108179419525,
+              "family_weighted_q90": 0.8734177215189873
+            },
+            "mattr100": {
+              "articles": 146,
+              "family_weighted_q10": 0.6101561048132318,
+              "family_weighted_median": 0.645400466562986,
+              "family_weighted_q90": 0.67098769771529
+            },
+            "modal_per_100_words": {
+              "articles": 146,
+              "family_weighted_q10": 1.0583941605839415,
+              "family_weighted_median": 1.4450867052023122,
+              "family_weighted_q90": 1.741654571843251
+            },
+            "paragraph_words_mean": {
+              "articles": 146,
+              "family_weighted_q10": 30.031496062992126,
+              "family_weighted_median": 38.30434782608695,
+              "family_weighted_q90": 53.48235294117647
+            },
+            "proof_markers_per_1000_words": {
+              "articles": 146,
+              "family_weighted_q10": 0.09587727708533078,
+              "family_weighted_median": 0.825218682950982,
+              "family_weighted_q90": 1.7883755588673622
+            },
+            "punctuation_tokens_per_100_words": {
+              "articles": 146,
+              "family_weighted_q10": 15.715579710144928,
+              "family_weighted_median": 17.01513067400275,
+              "family_weighted_q90": 18.379305416607117
+            },
+            "question_sentence_share": {
+              "articles": 146,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.002061855670103093,
+              "family_weighted_q90": 0.009146341463414634
+            },
+            "sentence_words_mean": {
+              "articles": 146,
+              "family_weighted_q10": 14.710176991150442,
+              "family_weighted_median": 16.996610169491525,
+              "family_weighted_q90": 20.170731707317074
+            },
+            "subordinate_arcs_per_100_words": {
+              "articles": 146,
+              "family_weighted_q10": 5.48962691027064,
+              "family_weighted_median": 6.265984654731458,
+              "family_weighted_q90": 6.815203145478375
+            },
+            "upos_ADJ": {
+              "articles": 146,
+              "family_weighted_q10": 0.08421750663129973,
+              "family_weighted_median": 0.10282538212135248,
+              "family_weighted_q90": 0.125
+            },
+            "upos_ADV": {
+              "articles": 146,
+              "family_weighted_q10": 0.054899523513569505,
+              "family_weighted_median": 0.0631346578366446,
+              "family_weighted_q90": 0.07392706524435624
+            },
+            "upos_AUX": {
+              "articles": 146,
+              "family_weighted_q10": 0.0531896987039219,
+              "family_weighted_median": 0.0630984707731885,
+              "family_weighted_q90": 0.07337526205450734
+            },
+            "upos_CCONJ": {
+              "articles": 146,
+              "family_weighted_q10": 0.02525967894239849,
+              "family_weighted_median": 0.030291970802919708,
+              "family_weighted_q90": 0.03498385360602799
+            },
+            "upos_NOUN": {
+              "articles": 146,
+              "family_weighted_q10": 0.19472817133443163,
+              "family_weighted_median": 0.21677704194260486,
+              "family_weighted_q90": 0.24488054607508533
+            },
+            "upos_PRON": {
+              "articles": 146,
+              "family_weighted_q10": 0.042489189697311525,
+              "family_weighted_median": 0.05064737242955065,
+              "family_weighted_q90": 0.06020066889632107
+            },
+            "upos_SCONJ": {
+              "articles": 146,
+              "family_weighted_q10": 0.025064599483204133,
+              "family_weighted_median": 0.030828516377649325,
+              "family_weighted_q90": 0.03771890435563539
+            },
+            "upos_VERB": {
+              "articles": 146,
+              "family_weighted_q10": 0.09601310759148006,
+              "family_weighted_median": 0.1130883301096067,
+              "family_weighted_q90": 0.12294889826535396
+            }
+          }
+        },
+        "genre/learning_advice": {
+          "article_count": 29,
+          "families": 29,
+          "total_lexical_words": 13900,
+          "features": {
+            "cue_for_example": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_for_instance": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 5.2356020942408374
+            },
+            "cue_however": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 4.184100418410042
+            },
+            "cue_in_particular": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 3.656307129798903
+            },
+            "cue_it_turns_out": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_note_that": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.999000999000999
+            },
+            "cue_on_the_other_hand": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_roughly_speaking": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_therefore": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_we_can": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_we_first": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_we_now": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "dependency_depth_mean": {
+              "articles": 29,
+              "family_weighted_q10": 2.6551724137931036,
+              "family_weighted_median": 3.1402439024390243,
+              "family_weighted_q90": 3.8481675392670156
+            },
+            "dependency_span_mean": {
+              "articles": 29,
+              "family_weighted_q10": 2.789237668161435,
+              "family_weighted_median": 3.161578555472822,
+              "family_weighted_q90": 3.5356415478615073
+            },
+            "example_cues_per_1000_words": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 5.2356020942408374
+            },
+            "exercise_markers_per_1000_words": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "first_person_per_100_words": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.3246753246753247,
+              "family_weighted_q90": 2.3976023976023977
+            },
+            "formula_paragraph_share": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "mattr100": {
+              "articles": 29,
+              "family_weighted_q10": 0.6647297297297298,
+              "family_weighted_median": 0.7111375947995666,
+              "family_weighted_q90": 0.7529515418502203
+            },
+            "modal_per_100_words": {
+              "articles": 29,
+              "family_weighted_q10": 1.392757660167131,
+              "family_weighted_median": 1.9801980198019802,
+              "family_weighted_q90": 3.341288782816229
+            },
+            "paragraph_words_mean": {
+              "articles": 29,
+              "family_weighted_q10": 25.3,
+              "family_weighted_median": 70.2,
+              "family_weighted_q90": 95.5
+            },
+            "proof_markers_per_1000_words": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "punctuation_tokens_per_100_words": {
+              "articles": 29,
+              "family_weighted_q10": 10.471204188481675,
+              "family_weighted_median": 15.337423312883436,
+              "family_weighted_q90": 17.573221757322177
+            },
+            "question_sentence_share": {
+              "articles": 29,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.45454545454545453
+            },
+            "sentence_words_mean": {
+              "articles": 29,
+              "family_weighted_q10": 21.757142857142856,
+              "family_weighted_median": 33.083333333333336,
+              "family_weighted_q90": 40.04
+            },
+            "subordinate_arcs_per_100_words": {
+              "articles": 29,
+              "family_weighted_q10": 6.093189964157706,
+              "family_weighted_median": 7.961783439490445,
+              "family_weighted_q90": 10.276679841897232
+            },
+            "upos_ADJ": {
+              "articles": 29,
+              "family_weighted_q10": 0.08524590163934426,
+              "family_weighted_median": 0.10297029702970296,
+              "family_weighted_q90": 0.12552301255230125
+            },
+            "upos_ADV": {
+              "articles": 29,
+              "family_weighted_q10": 0.04878048780487805,
+              "family_weighted_median": 0.07540983606557378,
+              "family_weighted_q90": 0.10736196319018405
+            },
+            "upos_AUX": {
+              "articles": 29,
+              "family_weighted_q10": 0.04878048780487805,
+              "family_weighted_median": 0.07036247334754797,
+              "family_weighted_q90": 0.0847457627118644
+            },
+            "upos_CCONJ": {
+              "articles": 29,
+              "family_weighted_q10": 0.029556650246305417,
+              "family_weighted_median": 0.0423728813559322,
+              "family_weighted_q90": 0.057279236276849645
+            },
+            "upos_NOUN": {
+              "articles": 29,
+              "family_weighted_q10": 0.16883116883116883,
+              "family_weighted_median": 0.21330724070450097,
+              "family_weighted_q90": 0.23983739837398374
+            },
+            "upos_PRON": {
+              "articles": 29,
+              "family_weighted_q10": 0.0584958217270195,
+              "family_weighted_median": 0.08781362007168458,
+              "family_weighted_q90": 0.13333333333333333
+            },
+            "upos_SCONJ": {
+              "articles": 29,
+              "family_weighted_q10": 0.01948051948051948,
+              "family_weighted_median": 0.02617801047120419,
+              "family_weighted_q90": 0.04433497536945813
+            },
+            "upos_VERB": {
+              "articles": 29,
+              "family_weighted_q10": 0.1026252983293556,
+              "family_weighted_median": 0.11822660098522167,
+              "family_weighted_q90": 0.15019762845849802
+            }
+          }
+        },
+        "genre/writing_advice": {
+          "article_count": 16,
+          "families": 16,
+          "total_lexical_words": 12109,
+          "features": {
+            "cue_for_example": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_for_instance": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 3.1570639305445933,
+              "family_weighted_q90": 7.343124165554072
+            },
+            "cue_however": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 1.615508885298869
+            },
+            "cue_in_particular": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 3.3783783783783785
+            },
+            "cue_it_turns_out": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_note_that": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 3.4246575342465753
+            },
+            "cue_on_the_other_hand": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 1.6835016835016836
+            },
+            "cue_roughly_speaking": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_therefore": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 1.1173184357541899
+            },
+            "cue_we_can": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_we_first": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "cue_we_now": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "dependency_depth_mean": {
+              "articles": 16,
+              "family_weighted_q10": 2.4022346368715084,
+              "family_weighted_median": 2.9818731117824773,
+              "family_weighted_q90": 3.612794612794613
+            },
+            "dependency_span_mean": {
+              "articles": 16,
+              "family_weighted_q10": 2.987386124737211,
+              "family_weighted_median": 3.132404181184669,
+              "family_weighted_q90": 3.4781954887218047
+            },
+            "example_cues_per_1000_words": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 3.1570639305445933,
+              "family_weighted_q90": 7.343124165554072
+            },
+            "exercise_markers_per_1000_words": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "first_person_per_100_words": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.33519553072625696,
+              "family_weighted_q90": 1.0070493454179255
+            },
+            "formula_paragraph_share": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.14285714285714285
+            },
+            "mattr100": {
+              "articles": 16,
+              "family_weighted_q10": 0.6234939759036144,
+              "family_weighted_median": 0.675,
+              "family_weighted_q90": 0.7545714285714286
+            },
+            "modal_per_100_words": {
+              "articles": 16,
+              "family_weighted_q10": 1.7123287671232876,
+              "family_weighted_median": 2.215508559919436,
+              "family_weighted_q90": 3.3472803347280333
+            },
+            "paragraph_words_mean": {
+              "articles": 16,
+              "family_weighted_q10": 26.323529411764707,
+              "family_weighted_median": 58.4,
+              "family_weighted_q90": 90.5
+            },
+            "proof_markers_per_1000_words": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.0
+            },
+            "punctuation_tokens_per_100_words": {
+              "articles": 16,
+              "family_weighted_q10": 11.39240506329114,
+              "family_weighted_median": 14.135702746365105,
+              "family_weighted_q90": 23.430962343096233
+            },
+            "question_sentence_share": {
+              "articles": 16,
+              "family_weighted_q10": 0.0,
+              "family_weighted_median": 0.0,
+              "family_weighted_q90": 0.03333333333333333
+            },
+            "sentence_words_mean": {
+              "articles": 16,
+              "family_weighted_q10": 17.391304347826086,
+              "family_weighted_median": 32.333333333333336,
+              "family_weighted_q90": 39.6
+            },
+            "subordinate_arcs_per_100_words": {
+              "articles": 16,
+              "family_weighted_q10": 6.0,
+              "family_weighted_median": 7.191780821917808,
+              "family_weighted_q90": 8.664898320070733
+            },
+            "upos_ADJ": {
+              "articles": 16,
+              "family_weighted_q10": 0.07754442649434572,
+              "family_weighted_median": 0.0981012658227848,
+              "family_weighted_q90": 0.1232876712328767
+            },
+            "upos_ADV": {
+              "articles": 16,
+              "family_weighted_q10": 0.05941255006675567,
+              "family_weighted_median": 0.08052708638360176,
+              "family_weighted_q90": 0.09549071618037135
+            },
+            "upos_AUX": {
+              "articles": 16,
+              "family_weighted_q10": 0.060810810810810814,
+              "family_weighted_median": 0.07576953433307025,
+              "family_weighted_q90": 0.0949367088607595
+            },
+            "upos_CCONJ": {
+              "articles": 16,
+              "family_weighted_q10": 0.03296703296703297,
+              "family_weighted_median": 0.045454545454545456,
+              "family_weighted_q90": 0.054982817869415807
+            },
+            "upos_NOUN": {
+              "articles": 16,
+              "family_weighted_q10": 0.19540229885057472,
+              "family_weighted_median": 0.21338912133891214,
+              "family_weighted_q90": 0.24324324324324326
+            },
+            "upos_PRON": {
+              "articles": 16,
+              "family_weighted_q10": 0.04581005586592179,
+              "family_weighted_median": 0.054380664652567974,
+              "family_weighted_q90": 0.0821917808219178
+            },
+            "upos_SCONJ": {
+              "articles": 16,
+              "family_weighted_q10": 0.02027027027027027,
+              "family_weighted_median": 0.03260146373918829,
+              "family_weighted_q90": 0.04395604395604396
+            },
+            "upos_VERB": {
+              "articles": 16,
+              "family_weighted_q10": 0.09162011173184358,
+              "family_weighted_median": 0.11177644710578842,
+              "family_weighted_q90": 0.12837837837837837
+            }
+          }
+        }
+      }
+    }
+  },
+  "editing_counterexample": {
+    "schema": "owned-example-actual-measurement/1",
+    "actual_origin": "AI_generated_fiction_no_corpus_text",
+    "examples_file_sha256": "b04c8b1ecda1347f9808cc8752e9eda742525b5d82a342e5e7ab89f7feb2f5b7",
+    "reference_card_sha256": "e9b5c98fa2655b897c296af985fe1dc32a13c2b92bc6146e26685ea87929fb27",
+    "measurement_profile_sha256": "221323897ea20205d0801383537558b4411cb47eb945c2deac51e24ccb2549a3",
+    "measurement_status": "candidate_unvalidated",
+    "results": [
+      {
+        "id": "baike-guided-v1",
+        "text_sha256": "ec09b948dee0344539467b44a83d9cb69282d6d54b9c62971cdcfa2b2750a422",
+        "guidance": "baike",
+        "values": {
+          "zh:upos.NOUN": 0.4142857142857143,
+          "zh:upos.VERB": 0.17142857142857143,
+          "zh:upos.ADJ": 0.014285714285714285,
+          "zh:upos.ADV": 0.014285714285714285,
+          "zh:word_length.mean": 1.5714285714285714,
+          "zh:word.single_han": 0.4857142857142857,
+          "zh:cue.pronoun_first": 0.0,
+          "zh:cue.pronoun_second": 0.0,
+          "zh:cue.negator": 0.0,
+          "zh:dependency.span_mean": 3.0
+        },
+        "successful_operational_units": 4,
+        "failed_operational_units": 0,
+        "window_100_measures_available": false
+      },
+      {
+        "id": "web-guided-v1",
+        "text_sha256": "a5bb2953ea93dac5f4af48592d30b00ff40aef4e9b9f1670541fbaec5bfdb707",
+        "guidance": "web",
+        "values": {
+          "zh:upos.NOUN": 0.34328358208955223,
+          "zh:upos.VERB": 0.1791044776119403,
+          "zh:upos.ADJ": 0.029850746268656716,
+          "zh:upos.ADV": 0.029850746268656716,
+          "zh:word_length.mean": 1.626865671641791,
+          "zh:word.single_han": 0.417910447761194,
+          "zh:cue.pronoun_first": 0.0,
+          "zh:cue.pronoun_second": 0.0,
+          "zh:cue.negator": 0.0,
+          "zh:dependency.span_mean": 2.9344262295081966
+        },
+        "successful_operational_units": 6,
+        "failed_operational_units": 0,
+        "window_100_measures_available": false
+      }
+    ],
+    "interpretation": {
+      "same_content_ledger_facts": 8,
+      "directional_successes": [
+        "lowerNOUN",
+        "higherVERB",
+        "higherADV forwebv1vsbaikev1"
+      ],
+      "directional_misses": [
+        "singleHantokensharelowerinwebv1",
+        "meanwordlengthhigherinwebv1"
+      ],
+      "unchanged_by_fact_preservation": [
+        "firstperson0",
+        "secondperson0",
+        "negatorcue0"
+      ],
+      "semantic_review": "author and coordinator AI checks, not independent human validation",
+      "no_quality_preference_or_detector_effect_measured": true,
+      "not_joint_band_membership_proof": true,
+      "other_source_mean_direction_differences": [
+        "ADJ rises in webv1 though Web HUMAN source mean is lower",
+        "dependency span falls in webv1 though Web HUMAN source mean is higher; neither was a compulsory per-example target"
+      ]
+    }
+  }
+}

@@ -58,6 +58,7 @@ class CliTests(unittest.TestCase):
                 self.assertTrue((target / path).is_file())
             self.assertEqual(body.read_bytes(), b"keep skill body")
             self.assertFalse((target / "mathematician-humanizer").exists())
+            self.assertFalse((target / "build.json").exists())
 
     def test_missing_model_or_invalid_input_has_clean_error(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -69,3 +70,20 @@ class CliTests(unittest.TestCase):
                 self.assertEqual(run.returncode, 2)
                 self.assertNotIn("Traceback", run.stderr)
                 self.assertFalse((Path(folder) / "missing").exists())
+
+    def test_compile_receipt_is_optional_and_existing_receipt_stops_before_writes(self):
+        root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as folder:
+            folder = Path(folder)
+            receipt = folder / "build-receipt.json"
+            run = self.run_cli("compile", "--research", root / "research",
+                               "--skill", folder / "skill", "-o", receipt)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            data = json.loads(receipt.read_text(encoding="utf-8"))
+            self.assertEqual(data["schema"], "style-cards-build/2")
+            before = receipt.read_bytes()
+            run = self.run_cli("compile", "--research", root / "research",
+                               "--skill", folder / "blocked", "-o", receipt)
+            self.assertEqual(run.returncode, 2)
+            self.assertEqual(receipt.read_bytes(), before)
+            self.assertFalse((folder / "blocked").exists())

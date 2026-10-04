@@ -56,11 +56,12 @@ style-compiler analyze input.txt --models /existing/stanza-models -o parsed.json
 style-compiler compile
 ```
 
-读取 `research/manifest.json` 绑定的四份汇总，核对实际文件 SHA 后生成：
+读取 `research/manifest.json` 绑定的最终结果与两份测量合同，核对实际文件 SHA。`research/results.json` 提供中文表层、词汇、博客体裁和留出结果；该文件保留当前规则使用的字段，历史完整导出通过清单追溯。生成：
 
 - `references/statistical-style.md`
 - `references/mathematician-style.md`
-- 根目录 `build.json`，记录输入与输出指纹
+
+构建回执默认输出到 stdout，不在源码目录新增文件。需要保存时使用 `style-compiler compile -o artifacts/style-cards-build.json`；指定的回执文件必须尚不存在。
 
 从仓库根目录运行。`--research` 指定冻结证据目录，`--skill` 指定单个 skill 的输出目录，默认分别为 `research` 和当前目录。编译不生成或覆盖 `SKILL.md`；正文与例子人工维护。
 
@@ -76,14 +77,14 @@ style-compiler check original.txt final.txt --locks locks.json -o review.json
 
 ## 可选解析
 
-中文：Stanza 1.10.1，zh-hans GSDSimp nocharlm，固定模型提交 `82f2856d1cf4f933738a8a84b5ad959d156040a0`。`LocalStanza` 核对已有模型及资源哈希，逐源句解析，禁用下载。权重来源和各自许可记录在 `research/general/parser-profile.json`；71 通道聚合还有明确的 Unicode 15.0.0 和跨度要求，不匹配时拒绝。
+中文：Stanza 1.10.1，zh-hans GSDSimp nocharlm，固定模型提交 `82f2856d1cf4f933738a8a84b5ad959d156040a0`。`LocalStanza` 核对已有模型及资源哈希，逐源句解析，禁用下载。权重来源和各自许可记录在 `research/chinese-parser.json`；71 通道聚合还有明确的 Unicode 15.0.0 和跨度要求，不匹配时拒绝。
 
-英语使用已有、与 `research/mathematician/measurement-contract.json` 完全匹配的环境和权重：
+英语使用已有、与 `research/english-contract.json` 完全匹配的环境和权重：
 
 ```sh
-style-compiler-english input.txt --models /existing/en-models --contract research/mathematician/measurement-contract.json --profile research/mathematician/development-profiles.json --genre math_exposition --out english.json
+style-compiler-english input.txt --models /existing/en-models --contract research/english-contract.json --profile research/results.json --genre math_exposition --out english.json
 ```
 
-公式投影和短块排除会影响分母；英语数值不移植到中文。历史记录保留原仪器哈希；迁移后的源码有新的字节身份，不能冒充原实验重跑。
+当前结果包含四类体裁的参考，按体裁的 q10/q90 检查边际差异。历史长度、时期和主题分层已退出当前目录；传入历史 profile 时仍可使用其已有长度分层。公式投影和短块排除会影响分母；英语数值不移植到中文。合同的 `contract_sha256` 保留匿名化前的历史仪器身份，当前合同字节由清单绑定；迁移后的源码有新的字节身份，不能冒充原实验重跑。
 
 旧版本的 extract/split/fit/plan/apply 已退出当前接口。旧数据和代码可从重建前 Git 提交追溯，不在当前目录保留另一套运行路径。

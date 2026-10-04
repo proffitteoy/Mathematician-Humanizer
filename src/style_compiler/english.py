@@ -58,7 +58,9 @@ def _run():
  paras,excluded=prepare(text);nlp=stanza.Pipeline('en',dir=a.models,processors=contract['processors'],package=None,download_method=None,use_gpu=False,verbose=False)
  out=compute([nlp(p) for p in paras],paras);out.update({'text_sha256':hashlib.sha256(raw).hexdigest(),'measured_projection_sha256':hashlib.sha256('\n\n'.join(paras).encode()).hexdigest(),'excluded_short_paragraph_indices':excluded,'instrument_sha256':hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest(),'reference_contract_sha256':contract['contract_sha256'],'interpretation':'Same-language marginal diagnostics, not authorship similarity or quality. Currency is retained; explicit dollar math is elided. Original text remains unchanged.'})
  if a.profile:
-  pr=json.loads(pathlib.Path(a.profile).read_text(encoding='utf-8'));n=out['lexical_words'];band='<=500' if n<=500 else '501-2000' if n<=2000 else '2001-5000' if n<=5000 else '>5000';key='genre_length/'+a.genre+'/'+band;ref=pr['groups'].get(key)
+  pr=json.loads(pathlib.Path(a.profile).read_text(encoding='utf-8'))
+  if pr.get('schema')=='style-study-results/1':pr=pr['reference_blog']['development_profiles']
+  n=out['lexical_words'];band='<=500' if n<=500 else '501-2000' if n<=2000 else '2001-5000' if n<=5000 else '>5000';key='genre_length/'+a.genre+'/'+band;ref=pr['groups'].get(key)
   if not ref or ref['article_count']<10:key='genre/'+a.genre;ref=pr['groups'].get(key)
   ds={}
   if ref:

@@ -20,11 +20,10 @@ class DeliveryTests(unittest.TestCase):
         self.assertFalse((ROOT / "skills").exists())
 
     def test_committed_cards_match_rebuild(self):
-        actual = json.loads((ROOT / "build.json").read_text(encoding="utf-8"))
         with tempfile.TemporaryDirectory() as folder:
             rebuilt = compile_profiles(ROOT / "research", Path(folder))
-        self.assertEqual(actual, rebuilt)
-        for name, digest in actual["outputs"].items():
+            self.assertFalse((Path(folder) / "build.json").exists())
+        for name, digest in rebuilt["outputs"].items():
             self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), digest)
 
     def test_minimal_install_has_every_skill_reference_without_runtime(self):
@@ -55,15 +54,13 @@ class DeliveryTests(unittest.TestCase):
             with self.subTest(file=path, target=target):
                 self.assertTrue((path.parent / target.split("#")[0]).exists())
 
-    def test_historical_mathematician_receipts_bind_the_actual_example_bytes(self):
-        for path in (ROOT / "examples/mathematician").glob("*.txt"):
-            digest = hashlib.sha256(path.read_bytes()).hexdigest()
-            review = json.loads(path.with_suffix(".review.json").read_text(encoding="utf-8"))
-            suffix = ".measurement.json" if path.name.startswith("english") else ".zh-measurement.json"
-            measurement = json.loads(path.with_suffix(suffix).read_text(encoding="utf-8"))
-            with self.subTest(example=path.name):
-                self.assertEqual(review["text_sha256"], digest)
-                self.assertEqual(measurement["text_sha256"], digest)
+    def test_research_contains_only_bound_results_and_measurement_contracts(self):
+        manifest = json.loads((ROOT / "research/manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual({path.name for path in (ROOT / "research").iterdir()},
+                         {"manifest.json", "results.json", "chinese-parser.json", "english-contract.json"})
+        for name, entry in manifest["inputs"].items():
+            with self.subTest(input=name):
+                self.assertEqual(hashlib.sha256((ROOT / "research" / name).read_bytes()).hexdigest(), entry["sha256"])
 
     def test_markdown_local_links_exist(self):
         paths = [ROOT / "README.md", ROOT / "SKILL.md", *(ROOT / "docs").glob("*.md"),

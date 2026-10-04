@@ -1,0 +1,110 @@
+{
+  "parser": {
+    "name": "stanza",
+    "version": "1.10.1",
+    "resources_version": "1.10.0",
+    "language": "zh-hans",
+    "treebank": "UD_Chinese-GSDSimp",
+    "treebank_release": "r2.15",
+    "resources_version_source": "https://raw.githubusercontent.com/stanfordnlp/stanza/v1.10.1/stanza/_version.py",
+    "release_source": "https://stanfordnlp.github.io/stanza/release_history.html",
+    "processors": {
+      "tokenize": "gsdsimp",
+      "pos": "gsdsimp_nocharlm",
+      "lemma": "gsdsimp_nocharlm",
+      "depparse": "gsdsimp_nocharlm"
+    },
+    "model_dependency": {
+      "pretrain": "fasttext157"
+    },
+    "package": null,
+    "use_gpu": false,
+    "exclude_automatic_downloads": [
+      "default.zip",
+      "ner",
+      "sentiment",
+      "constituency",
+      "charlm",
+      "transformers"
+    ]
+  },
+  "model_repository": {
+    "id": "stanfordnlp/stanza-zh-hans",
+    "revision": "v1.10.0",
+    "commit": "82f2856d1cf4f933738a8a84b5ad959d156040a0",
+    "public": true,
+    "gated": false,
+    "metadata_url": "https://huggingface.co/api/models/stanfordnlp/stanza-zh-hans/revision/v1.10.0",
+    "file_inventory_url": "https://huggingface.co/api/models/stanfordnlp/stanza-zh-hans/tree/v1.10.0/models?recursive=true&expand=false"
+  },
+  "models": [
+    {
+      "path": "tokenize/gsdsimp.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/tokenize/gsdsimp.pt",
+      "bytes": 1383326,
+      "sha256": "962f2578e2a3dabeb4671053372eb1bd092357921904233556c8d77a46440882"
+    },
+    {
+      "path": "pos/gsdsimp_nocharlm.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/pos/gsdsimp_nocharlm.pt",
+      "bytes": 21285503,
+      "sha256": "0dea6b43c267b408fc7c353e41b449a06bff309a93ba75fa63db32bf9f388cb7"
+    },
+    {
+      "path": "lemma/gsdsimp_nocharlm.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/lemma/gsdsimp_nocharlm.pt",
+      "bytes": 6592066,
+      "sha256": "8fe38f6b081d939662a4e78a4350a2253f879c41004327ac6fb78d7078bdeea2"
+    },
+    {
+      "path": "depparse/gsdsimp_nocharlm.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/depparse/gsdsimp_nocharlm.pt",
+      "bytes": 103928202,
+      "sha256": "7a3f038233a772c50372a58b58a05ca0c3b0be9c88d6ed7b2664373c0ef741f6"
+    },
+    {
+      "path": "pretrain/fasttext157.pt",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/resolve/v1.10.0/models/pretrain/fasttext157.pt",
+      "bytes": 306614467,
+      "sha256": "630daf461d1dc6f49642ee534102bf08783866949f7f046cf2df3667dcc5e112"
+    }
+  ],
+  "resources_manifest": {
+    "url": "https://raw.githubusercontent.com/stanfordnlp/stanza-resources/main/resources_1.10.0.json",
+    "bytes": 434061,
+    "sha256": "3efb2833a67c0184fac2ea9986c04f9585bfb89fb943a4ab1a6bcbed641d6be0",
+    "note": "URL contains a moving main branch; require this content digest or an independently verified immutable equivalent."
+  },
+  "licenses": [
+    {
+      "component": "Stanza software",
+      "license": "Apache-2.0",
+      "url": "https://github.com/stanfordnlp/stanza/blob/v1.10.1/LICENSE"
+    },
+    {
+      "component": "HF model card declaration",
+      "license": "Apache-2.0",
+      "url": "https://huggingface.co/stanfordnlp/stanza-zh-hans/blob/v1.10.0/README.md",
+      "caveat": "Do not use this card label as a blanket license for all upstream data and vectors."
+    },
+    {
+      "component": "Stanford-held model-pack rights",
+      "license": "ODC-By-1.0",
+      "url": "https://stanfordnlp.github.io/stanza/performance.html",
+      "caveat": "Official page explicitly notes uncertainty in licenses for models built from UD data and scopes its grant to Stanford-held rights."
+    },
+    {
+      "component": "UD Chinese-GSDSimp annotations",
+      "license": "CC-BY-SA-4.0",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-GSDSimp/r2.15/README.md",
+      "caveat": "README scopes removal of the historical NC restriction to UD annotations, not underlying content Google does not own."
+    },
+    {
+      "component": "Upstream fastText 157-language vectors",
+      "license": "CC-BY-SA-3.0",
+      "url": "https://fasttext.cc/docs/en/crawl-vectors",
+      "caveat": "Preserve attribution and upstream provenance for pretrain/fasttext157.pt; no uniformly Apache/permissive claim."
+    }
+  ],
+  "schema": "chinese-parser-contract/1"
+}

@@ -12,6 +12,18 @@
 
 这是原创演示。完整[原稿、终稿与内容复核](examples/rewrite.md)展开了投影与核各自承担的作用；这个例子没有接受独立的模仿效果评价。
 
+## 研究路线
+
+我们先完成统计分析，再总结固定的参考风格，最后增补改写 Humanizer，交付一个 skill：
+
+1. **测量中文对照材料。** 按 Baike/Web 来源、TRAIN/DEV 划分和版本分量比较句长、衔接、词汇与句法，保留缺失和来源差异。
+2. **把统计结果转成编辑问题。** 五项句长/衔接观察通过现有开发检查；段落密度方向随来源反转，短词改写也未保证更短词元，所以不设统一指标目标。
+3. **学习匿名参考数学博客。** 用体裁统计了解节奏，用篇目阅读总结问题意识、步骤动机、关键机制、术语与条件。中文迁移论证习惯，英语阈值保留在英语范围。
+4. **增补改写 Humanizer。** 六项正向论证习惯与 26 项表达清理规则合成唯一的 `mathematician-humanizer`，内容正确性优先。
+5. **用同稿前后对比验证。** 当前有一个完整原创演示；独立内容审核、读者评价与跨主题效果尚未完成，工程测试不代替这一阶段。
+
+完整[研究路线与结果](docs/research.md)说明每阶段的材料、方法、具体结果、规则依据和验证状态。[最终结果](research/results.json)集中保留当前使用的数据；中间导出与旧回执通过[来源清单](research/manifest.json)指向的 Git 历史追溯。
+
 ## 使用
 
 让助手读取根目录 [SKILL.md](SKILL.md)，然后给出原稿；已经安装的环境可直接调用：
@@ -74,8 +86,8 @@ Humanizer 的 26 项规则覆盖强调、节奏、虚饰、版式、写作残留
 | `agents/openai.yaml` | 技能显示名称和默认调用提示 |
 | [CHANGELOG.md](CHANGELOG.md) | 行为与结构变更记录 |
 | `src/style_compiler/` | 测量、分组汇总、风格卡生成和改稿检查 |
-| `research/`、`build.json` | 冻结研究证据、来源绑定与风格卡构建指纹 |
-| `examples/`、`tests/` | 原创改写、历史失败证据和可执行检查 |
+| `research/` | 最终结果、来源清单与中英文测量合同，共四个文件 |
+| `examples/`、`tests/` | 当前完整改写对比与可执行检查 |
 | `docs/`、`AGENT.md` | 研究协议、适用范围、验收条件和维护约定 |
 
 ## 更新统计卡与运行检查
@@ -87,11 +99,11 @@ $env:PYTHONPATH = "src"
 python -m unittest discover -s tests -v
 python -m style_compiler --help
 python -m style_compiler compile
-python -m style_compiler analyze examples/mathematician/chinese-least-squares.txt
+python -m style_compiler analyze examples/rewrite.final.txt
 python -m style_compiler check examples/rewrite.original.txt examples/rewrite.final.txt
 ```
 
-也可在已有 Python 环境运行 `python -m pip install -e .`，使用 `style-compiler` 命令。`compile` 核对冻结输入指纹，只更新两张统计卡和 `build.json`，不改写 `SKILL.md`。
+也可在已有 Python 环境运行 `python -m pip install -e .`，使用 `style-compiler` 命令。`compile` 核对最终输入指纹，只更新两张统计卡，不改写 `SKILL.md`；构建回执默认输出到 stdout，按需通过 `-o artifacts/style-cards-build.json` 留存在本地。
 
 `summarize observations.jsonl -o summary.json` 汇总实际测量的 TRAIN/DEV 导出，保留来源分组、分量等权、配对差值和缺失。输入协议、`--skill` 输出目录、可选本地解析与命令范围见[架构与协议](docs/architecture.md)。这些工具不会生成文章，词面检查也不能认证数学证明。
 
@@ -99,7 +111,7 @@ python -m style_compiler check examples/rewrite.original.txt examples/rewrite.fi
 
 中文 TRAIN/DEV 汇总支持检查句长变化和衔接；段落密度随来源改变方向，不能写成统一处方。参考博客的历史快照登记 1,234 个记录，测量 1,114 份，开发侧 1,040 份，另有 74 份年份/文章级留出。
 
-本次沿用冻结汇总，没有重新解析语料。涉及作者的名称、目录和来源定位统一匿名化；[来源清单](research/manifest.json)分别保留原始指纹、当前文件指纹和转换字段，统计数值与测量参数保持原样。统计观察与博客阅读总结的论证习惯分开记录；真人偏好、风格保持程度和跨主题效果仍需实际改稿评价。见[研究证据](docs/research.md)与[验收条件](docs/ACCEPTANCE.zh.md)。
+当前汇总从冻结结果精确选取，没有重新解析语料。涉及作者的名称、目录和来源定位统一匿名化；[来源清单](research/manifest.json)保留当前文件指纹、历史来源和转换范围。完整分层表、旧运行时清单和历史示例回执退出当前目录，保存在已提交的 Git 历史中。统计观察与博客阅读总结的论证习惯分开记录；真人偏好、风格保持程度和跨主题效果仍需实际改稿评价。见[研究路线与结果](docs/research.md)与[验收条件](docs/ACCEPTANCE.zh.md)。
 
 Humanizer 参考版本为 [3.1.0 的固定提交](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8)。保留其 [MIT 通知](references/upstream-LICENSE.txt)，Unicode 数据保留原通知，其他项目代码没有额外声明统一授权。不分发参考博客全文、原始语料和模型权重。
 

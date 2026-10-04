@@ -46,4 +46,4 @@
 
 表层仪器 profile：`6b520a4fe678d9d4336efa3046d6e2174306062eb40cd04791b62944c2b8a270`。语言学 profile：`221323897ea20205d0801383537558b4411cb47eb945c2deac51e24ccb2549a3`。两者是不同仪器，不混成质量分。
 
-完整统计与原始范围说明见研究仓库的 `research/general/`；数据哈希与历史来源由 `research/manifest.json` 和根目录 `build.json` 绑定。
+交付所用统计和失败结果见研究仓库的 `research/results.json`；当前文件指纹和历史来源由 `research/manifest.json` 绑定，研究路线见 `docs/research.md`。

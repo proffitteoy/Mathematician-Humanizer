@@ -70,14 +70,14 @@ def general_card(paired, joint):
               "## 写作时怎么用", "",
               "先确认具体阅读问题，再考虑这张卡支持哪项编辑。内容、读者和作者声音优先。普通改写直接使用这些总结；只在研究评估或用户要求时重新量测原稿和终稿。", "",
               f"表层仪器 profile：`{model['measurement_profile_sha256']}`。语言学 profile：`{joint['provenance']['measurement_profile_sha256']}`。两者是不同仪器，不混成质量分。", "",
-              "完整统计与原始范围说明见研究仓库的 `research/general/`；数据哈希与历史来源由 `research/manifest.json` 和根目录 `build.json` 绑定。", ""]
+              "交付所用统计和失败结果见研究仓库的 `research/results.json`；当前文件指纹和历史来源由 `research/manifest.json` 绑定，研究路线见 `docs/research.md`。", ""]
     return "\n".join(lines), supported
 
 
 def mathematician_card(profiles, summary):
     if profiles["development_articles"] != summary["development_articles"]:
         raise ValueError("Reference profile/summary development counts disagree")
-    lines = ["#参考数学家的博客风格：固定底色，按体裁展开", "",
+    lines = ["# 参考数学博客的风格：固定底色，按体裁展开", "",
         f"官方公开博客快照登记 {summary['public_records']} 个记录，纳入测量 {summary['eligible_measured_articles']} 份；规则使用 {summary['development_articles']} 份开发文章。另有 {summary['heldout_articles']} 份年份/文章级留出，已有冻结规则的描述性覆盖检查。这里重新编译汇总，没有重新解析博客。", "",
         "## 始终保持的风格", "",
         "- 围绕一个明确对象或理解障碍推进；开头给读者进入问题所需的最少背景。",
@@ -113,14 +113,13 @@ def mathematician_card(profiles, summary):
               "- Learn and relearn your field：围绕已知引理重新提问。",
               "- Give appropriate amounts of detail：按读者知识与关键步骤配置细节。", "",
               "快照覆盖 2007—2026 年。客座作者、索引/勘误混合页、过短目录等先分流；保留文章仍可能有合作叙述或引文。体裁由启发式路由；没有对照作者实验，也没有模仿保真度或真人偏好结论。", "",
-              "完整条件统计与英语测量合同见研究仓库的 `research/mathematician/`。`research/manifest.json` 分别保留匿名化前的来源字节指纹、当前文件指纹及转换字段；统计数值和测量参数没有改变。", ""]
+              "当前交付的四类体裁统计和留出结果见研究仓库的 `research/results.json`；英语仪器合同见 `research/english-contract.json`。完整历史分层表通过 `research/manifest.json` 指向的 Git 提交追溯，保留原始指纹与匿名化说明。", ""]
     return "\n".join(lines)
 
 
 def compile_profiles(research: Path, skill: Path):
     manifest = json.loads((research / "manifest.json").read_text(encoding="utf-8"))
-    names = ("general/paired-surface.json", "general/joint-reference.json",
-             "mathematician/development-profiles.json", "mathematician/summary.json")
+    names = ("results.json", "chinese-parser.json", "english-contract.json")
     inputs = {}
     for name in names:
         raw = (research / name).read_bytes()
@@ -128,8 +127,12 @@ def compile_profiles(research: Path, skill: Path):
         if digest != manifest["inputs"][name]["sha256"]:
             raise ValueError("Frozen research input changed: " + name)
         inputs[name] = json.loads(raw)
-    general, supported = general_card(inputs[names[0]], inputs[names[1]])
-    mathematician = mathematician_card(inputs[names[2]], inputs[names[3]])
+    results = inputs["results.json"]
+    if results["schema"] != "style-study-results/1":
+        raise ValueError("Unsupported published research result schema")
+    general, supported = general_card(results["chinese_surface"], results["chinese_lexical"])
+    blog = results["reference_blog"]
+    mathematician = mathematician_card(blog["development_profiles"], blog["summary"])
     outputs = {"references/statistical-style.md": general,
                "references/mathematician-style.md": mathematician}
     hashes = {}
@@ -138,10 +141,8 @@ def compile_profiles(research: Path, skill: Path):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(content.encode("utf-8"))
         hashes[name] = hashlib.sha256(content.encode("utf-8")).hexdigest()
-    receipt = {"schema": "style-cards-build/1", "research_inputs": {
+    receipt = {"schema": "style-cards-build/2", "research_inputs": {
         name: manifest["inputs"][name]["sha256"] for name in names},
         "supported_surface_observations": supported, "outputs": hashes,
         "new_corpus_measurement": False, "quality_or_similarity_score": None}
-    skill.mkdir(parents=True, exist_ok=True)
-    (skill / "build.json").write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     return receipt
