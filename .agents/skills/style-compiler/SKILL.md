@@ -25,3 +25,9 @@ For an ordinary rewrite or generation request beyond that operation, disclose th
 Use `docs/research-protocol.md` and the current learned-model design for real-data admission, lawful source use, work/lineage splits and held-out evaluation. Do not silently tune on a published diagnostic slice. No external generation spend, model download, raw-text upload or remote repository mutation occurs as a side effect of invoking this skill.
 
 The project owner has conditionally authorized personal-stage work once the generic stage is defensibly ready for acceptance; the exact current condition is in `docs/ACCEPTANCE.zh.md`. This does not itself assert that the condition has been met or that a personal implementation exists. Before reading the owner's writings, check the recorded stage decision and a reviewed personal-data implementation. Preserve unknowns and content, including mathematical hypotheses and logical scope. Final acceptance remains the owner's decision.
+
+
+## Integrated writing skills
+
+For Chinese drafting or revision, use [statistical-chinese-writing](../../../skills/statistical-chinese-writing/SKILL.md): source-conditioned aggregate references, pinned measurement and explicit semantic/editorial review. For mathematical exposition and learning notes, use [tao-inspired-math-exposition](../../../skills/tao-inspired-math-exposition/SKILL.md), preserving its language and corpus limitations. Neither skill is a trained rewriting policy, quality validator, authorship detector, or personal voice model. See [publication scope and checks](../../../docs/writing-skills-publication-20261004.md).
+

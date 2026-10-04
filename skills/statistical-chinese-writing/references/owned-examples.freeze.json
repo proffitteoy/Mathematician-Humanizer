@@ -1,0 +1,22 @@
+{
+  "schema": "style-compiler-example-freeze/1",
+  "input_filename": "owned-examples.json",
+  "input_sha256": "b04c8b1ecda1347f9808cc8752e9eda742525b5d82a342e5e7ab89f7feb2f5b7",
+  "checks": "Exact literals and stated ledger IDs only; not semantic equivalence, truth, quality, or human validation.",
+  "examples": [
+    {
+      "id": "baike-guided-v1",
+      "source_condition": "baike",
+      "text_sha256": "ec09b948dee0344539467b44a83d9cb69282d6d54b9c62971cdcfa2b2750a422",
+      "utf8_bytes": 325,
+      "unicode_codepoints": 121
+    },
+    {
+      "id": "web-guided-v1",
+      "source_condition": "web",
+      "text_sha256": "a5bb2953ea93dac5f4af48592d30b00ff40aef4e9b9f1670541fbaec5bfdb707",
+      "utf8_bytes": 331,
+      "unicode_codepoints": 123
+    }
+  ]
+}
