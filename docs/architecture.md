@@ -6,6 +6,14 @@
 
 最小安装内容为 `SKILL.md`、`references/` 与 `agents/openai.yaml`。不需要复制 `src/`、`research/` 或安装 Python。根目录单一入口、技能元数据与具体前后例子的写法参考 Humanizer；本项目不承诺未经验证的平台插件兼容性。
 
+### 托管 MCP
+
+[README 的 MCP 连接入口](../README.md#通过-mcp-使用)提供显式选择的远程用法。适配服务在 Sites 独立维护和部署，本仓库的 Python 工具不启动 MCP；本地 skill 安装仍不涉及远程调用。
+
+当前服务使用 Streamable HTTP 与公开 No Auth，固定加载本仓库 `3b8bdeddb1a2d19149deab5e0ab4be2ec0fa420b` 的 skill 0.2.1、参考卡、示例及上游 MIT 通知。`get_writing_guide` 和 `get_reference` 提供这些文档；`prepare_mathematical_rewrite` 接收调用者当次提交的原稿并返回完整改写任务。终稿由调用模型生成，服务不调用第二个模型、不保存稿件，也不执行 Python 统计分析或验证数学证明。
+
+MCP 适配层的构建与协议测试、ChatGPT 的工具扫描与实际调用分别验证；统计工具的测试不代表远程 MCP 已连接。更新 skill 时须另行更新和部署托管服务，并同步 README 的来源提交；不得将固定版本描述为实时同步。
+
 ### 维护环境与检查
 
 以下命令供维护者更新统计卡和检查仓库使用。Python 3.11+，默认只用标准库；从仓库根目录运行：

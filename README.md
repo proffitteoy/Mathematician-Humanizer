@@ -6,6 +6,8 @@
 
 ## 快速使用
 
+ChatGPT 用户可直接连接[在线 MCP](#通过-mcp-使用)。支持本地 skill 的助手可按下面的方式调用。
+
 让助手读取 [SKILL.md](SKILL.md)，或者在安装后直接调用：
 
 ```text
@@ -27,7 +29,52 @@ $mathematician-humanizer
 
 默认返回完整终稿。改写文件时只修改正文，再简述改动；需要修改说明或展示过程时，可以明确要求。
 
-## 安装
+## 通过 MCP 使用
+
+已在 Sites 发布[在线服务](https://mathematician-humanizer.proffitteoy.chatgpt.site/)，可直接连接以下公网 HTTPS 地址：
+
+```text
+https://mathematician-humanizer.proffitteoy.chatgpt.site/mcp
+```
+
+传输协议为 **Streamable HTTP**，认证选择 **No Auth / 无身份验证**。无需在本机启动服务器，也无需另配模型 API 密钥。
+
+### ChatGPT
+
+1. 在设置的 Apps / Plugins 中添加自定义远程 MCP；若账号需要，先开启 Developer mode。
+2. 填入上述地址，认证选 **No Auth**，点击 **Scan Tools**。
+3. 确认发现下面的三个工具，安装后在对话中启用该插件。
+4. 先调用 `get_writing_guide` 检查连接，再提交原稿：
+
+```text
+使用 Mathematician Humanizer，调用 prepare_mathematical_rewrite 改写下面的文章。
+读者熟悉线性代数，但不熟悉这个证明。
+保留事实、数学条件、公式和结论，给出完整终稿。
+
+[粘贴原稿]
+```
+
+### Codex
+
+在本机终端添加远程服务，然后重新打开对话：
+
+```powershell
+codex mcp add mathematician-humanizer-online --url https://mathematician-humanizer.proffitteoy.chatgpt.site/mcp
+```
+
+### 工具与使用边界
+
+| 工具 | 用途 |
+|---|---|
+| `get_writing_guide` | 读取完整 skill，包括六项论证习惯和 26 项清理规则 |
+| `prepare_mathematical_rewrite` | 提交 `text`，返回完整规则和改写任务；由调用它的 GPT 生成终稿 |
+| `get_reference` | 读取 style、statistics、example 或 license 参考文档 |
+
+原稿最多 30,000 个 Unicode 码点。稿件会发送到远程 MCP 服务，应用不保存稿件；客户端和托管平台按各自策略处理请求。服务不认证数学证明或作者身份，终稿仍需内容复核。
+
+当前托管服务固定使用 skill 0.2.1，来源提交为 [`3b8bded`](https://github.com/proffitteoy/Mathematician-Humanizer/tree/3b8bdeddb1a2d19149deab5e0ab4be2ec0fa420b)，不会自动同步仓库后续更新。连接入口因账号界面而异；浏览器直接打开 `/mcp` 的 GET 405 属于正常协议行为，实际连接以工具扫描和调用结果为准。
+
+## 本地 skill 安装
 
 下载或克隆本仓库，将 `SKILL.md`、`references/` 和 `agents/` 复制到目标工具的 `mathematician-humanizer` 技能目录。普通改写直接使用这些文件，无需安装 Python 或下载模型。
 
