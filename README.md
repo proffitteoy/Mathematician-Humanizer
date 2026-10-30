@@ -76,19 +76,74 @@ codex mcp add mathematician-humanizer-online --url https://mathematician-humaniz
 
 ## 本地 skill 安装
 
-下载或克隆本仓库，将 `SKILL.md`、`references/` 和 `agents/` 复制到目标工具的 `mathematician-humanizer` 技能目录。普通改写直接使用这些文件，无需安装 Python 或下载模型。
+普通改写需要一个支持 `SKILL.md` 的 AI 助手；无需安装 Python、依赖包或下载模型。下面以 Codex 为例。
 
-Codex 用户可在仓库根目录运行：
+### 1. 获取仓库
+
+已安装 Git 时，运行：
+
+```sh
+git clone https://github.com/proffitteoy/style-compiler.git
+cd style-compiler
+```
+
+也可以在 [GitHub 仓库页面](https://github.com/proffitteoy/style-compiler)选择 **Code → Download ZIP**，解压后在包含 `SKILL.md` 的目录打开终端。以下安装命令都从这个目录运行。
+
+### 2. 安装到 Codex
+
+以下安装到当前用户的技能目录 `~/.agents/skills/mathematician-humanizer/`，供该用户的项目使用。
+
+**Windows（PowerShell）：**
 
 ```powershell
 $skillTarget = Join-Path $HOME ".agents/skills/mathematician-humanizer"
-New-Item -ItemType Directory -Force $skillTarget | Out-Null
-Copy-Item .\SKILL.md -Destination $skillTarget
-Copy-Item .\references -Destination $skillTarget -Recurse -Force
-Copy-Item .\agents -Destination $skillTarget -Recurse -Force
+New-Item -ItemType Directory -Force $skillTarget, "$skillTarget/references", "$skillTarget/agents" | Out-Null
+Copy-Item .\SKILL.md -Destination $skillTarget -Force
+Copy-Item .\references\* -Destination "$skillTarget/references" -Recurse -Force
+Copy-Item .\agents\* -Destination "$skillTarget/agents" -Recurse -Force
 ```
 
-重启或刷新技能后调用 `$mathematician-humanizer`。其他支持 `SKILL.md` 的工具使用各自的技能目录。
+**macOS / Linux（终端）：**
+
+```sh
+skill_target="$HOME/.agents/skills/mathematician-humanizer"
+mkdir -p "$skill_target"
+cp SKILL.md "$skill_target/"
+cp -R references agents "$skill_target/"
+```
+
+只想在单个项目中使用时，将上面的目标路径改为该项目根目录下的 `.agents/skills/mathematician-humanizer/`。
+
+手动安装或使用其他支持 `SKILL.md` 的工具时，将以下内容复制到该工具的技能目录，保留目录结构和上游许可文件：
+
+```text
+mathematician-humanizer/
+├── SKILL.md
+├── references/    # 完整复制，包含风格卡和 upstream-LICENSE.txt
+└── agents/        # 包含 Codex 的 openai.yaml
+```
+
+其他工具的技能目录与调用方式以其文档为准。
+
+### 3. 确认安装并调用
+
+确认目标目录下直接包含 `SKILL.md`，而不是多嵌套一层仓库目录。Windows 可在同一 PowerShell 窗口运行：
+
+```powershell
+Test-Path (Join-Path $skillTarget "SKILL.md")
+Test-Path (Join-Path $skillTarget "references/upstream-LICENSE.txt")
+Test-Path (Join-Path $skillTarget "agents/openai.yaml")
+```
+
+三项都应返回 `True`。macOS / Linux 可用 `ls "$skill_target" "$skill_target/references" "$skill_target/agents"` 查看文件。
+
+重启 Codex，再按上面的[快速使用](#快速使用)调用 `$mathematician-humanizer`，粘贴一段原稿试用。若仍未识别，检查安装路径、文件层级，以及当前项目是否使用了所安装的技能目录；也可以直接让助手读取本仓库的 [SKILL.md](SKILL.md) 完成改写。
+
+### 更新已安装的技能
+
+通过 Git 获取仓库时，在仓库根目录运行 `git pull --ff-only`；通过 ZIP 获取时，重新下载并解压。然后重新执行对应系统的复制命令，再重启 Codex。
+
+复制命令会覆盖目标目录中的同名文件。若手动修改过已安装的技能，请先备份这些修改。
 
 ## 改写示例
 
@@ -113,6 +168,8 @@ Copy-Item .\agents -Destination $skillTarget -Recurse -Force
 完整工作流、六项论证习惯和逐项例子都在 [SKILL.md](SKILL.md)。
 
 ## 进一步阅读
+
+需要运行统计、重建风格卡或检查原稿与终稿时，另备 Python 3.11+，在仓库根目录用 `python -m pip install -e .` 安装可选维护工具。安装后运行 `style-compiler --help` 查看命令；完整环境与使用说明见下方运行协议。普通改写无需这一步。
 
 - [研究与来源说明](docs/research.md)：研究路线、规则依据、上游 26 项对应与验证范围。
 - [维护工具与运行协议](docs/architecture.md)：可选统计、风格卡更新和内容检查。
