@@ -116,3 +116,10 @@ style-compiler-english input.txt --models /existing/en-models --contract researc
 `math_reader.document.parse_document` 保留全文、Unicode 码点偏移、章节与编号引用候选；`read_document` 支持本地 UTF-8 文件与可选 PDF 页码提取。PDF 需安装 `.[pdf]`，不执行 OCR、宏展开或隐式下载。
 
 `math_reader.graph.reconstruct` 检查模型标注的依赖边、精确引文、MAR、阅读覆盖与动机归属，计算主定理的前置知识闭包和拓扑序。引用候选不自动成为证明边；程序不认证数学正确性。此模块提供 Python API，CLI 与分阶段讲解在后续模块接入。
+
+
+## 分阶段数学讲解与真实统计反馈
+
+`math_exposition.prompts` 保存版本化总控与七个阶段 Prompt；`workflow` 按源文证据与证明图准备任务，分别执行数学审查回执、内容保护和当前稿实际测量。修订后旧稿和旧图回执失效，数学缺口阻止最终润色。
+
+CLI 新增 `read-paper`、`reconstruct`、`prepare-explanation`、`audit-exposition`；完整输入、产物和完成门槛见 [Prompt 工程](prompt-engineering.md)，实际调用见 [小型论证示例](../examples/argument.md)。没有运行三篇真实论文的独立理解评价。
