@@ -11,6 +11,7 @@ dependencies = []
 
 [project.optional-dependencies]
 parser = ["stanza==1.10.1"]
+pdf = ["pypdf>=5,<7"]
 
 [project.scripts]
 style-compiler = "style_compiler.cli:main"
