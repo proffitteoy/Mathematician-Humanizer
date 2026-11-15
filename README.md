@@ -1,23 +1,26 @@
-# Mathematician Humanizer
+# Mathematician Humanizer v2
 
-把中文或英文的数学说明、学习札记、讲义和技术文章，改写为 **one of the mathematicians** 公开博客中的解释风格：从具体问题进入，说明关键选择的动机，展开决定性步骤，并交代结论的适用范围。
+当前版本：**v2（2.0.0）**。
 
-基于 [blader/humanizer 3.1.0](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8) 改编：26 项清理规则及其编号、分组来自上游，工作流与内容保护要求也据此调整。上游版权为 Siqi Chen（2025），保留完整 [MIT 通知](references/upstream-LICENSE.txt)；本项目增补固定参考风格的六项论证习惯与示例。
+帮助 GPT 阅读、重建和解释数学论证：以主定理为目标建立带原文证据的证明依赖，分析数学障碍与方法选择，再生成连贯讲解并实际测量表达。**数学理解是核心，讲解是输出，Humanizer 是表达辅助。**
+
+表达部分基于 [blader/humanizer 3.1.0](https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8) 改编：26 项规则及编号、分组来自上游，保留 Siqi Chen（2025）的完整 [MIT 通知](references/upstream-LICENSE.txt)。本项目增补数学理解协议和从 **one of the mathematicians** 博客提炼的六项论证习惯。
 
 ## 快速使用
 
-ChatGPT 用户可直接连接[在线 MCP](#通过-mcp-使用)。支持本地 skill 的助手可按下面的方式调用。
+支持本地 skill 的助手可直接读取 [SKILL.md](SKILL.md)。完整计算工作流使用下方[本地工具与 MCP](#本地工具与-mcp)。已有[公网 MCP](#通过-mcp-使用)仍为旧版改写服务，尚不包含 2.0.0 的理解与审核工具。
 
 让助手读取 [SKILL.md](SKILL.md)，或者在安装后直接调用：
 
 ```text
 $mathematician-humanizer
 
-按参考数学博客的风格改写下面的文字。
-读者熟悉线性代数，但不熟悉这个证明。
-保留事实、数学条件、公式和结论。
+阅读这篇论文，先准确记录主要定理的条件与结论，重建证明依赖，
+解释关键引理解决的障碍及数学方法为什么有效，再生成连贯讲解。
+读者熟悉线性代数，不熟悉代数拓扑；只补目标定理需要的背景。
+区分作者明说的动机、数学重建和未核实联系。
 
-[粘贴原稿]
+[附论文或可解析原文]
 ```
 
 也可以指定文件：
@@ -27,11 +30,45 @@ $mathematician-humanizer
 保留公式、引用与链接。
 ```
 
-默认返回完整终稿。改写文件时只修改正文，再简述改动；需要修改说明或展示过程时，可以明确要求。
+也保留中英文短文改写：按参考博客的论证习惯组织说明，再用 Humanizer 清理空泛表达。默认返回完整终稿，内部保存证据材料；重大数学缺口明确说明。
+
+## 本地工具与 MCP
+
+Python 3.11+，从仓库根目录安装；核心 CLI 只用标准库，PDF 和 MCP 为可选依赖：
+
+```sh
+python -m pip install -e ".[mcp,pdf]"
+style-compiler read-paper examples/argument.tex -o paper.json
+style-compiler reconstruct paper.json examples/argument.annotations.json
+style-compiler prepare-explanation motivation paper.json --annotations examples/argument.annotations.json
+mathematician-humanizer-mcp --resources .
+```
+
+`paper.json` 等回执拒绝覆盖已有文件。示例是原创小型最小二乘论证，用于检查协议，不是三篇真实论文的效果实验。完整步骤见[可重放例子](examples/argument.md)。
+
+Codex 可连接本地 stdio 服务，路径替换为实际仓库位置；此命令只供用户选择运行：
+
+```sh
+codex mcp add mathematician-humanizer-local -- mathematician-humanizer-mcp --resources /absolute/path/to/style-compiler
+```
+
+也可运行 `mathematician-humanizer-mcp --resources . --transport streamable-http`，端点为 `http://127.0.0.1:8765/mcp`。本地服务仅绑定回环地址，不自动部署或上传论文。
+
+| 新工具 | 实际执行的工作 |
+|---|---|
+| `analyze_paper` / `upload_paper_chunk` | 保留全文，提取数学环境、编号与引用候选；分块按索引精确拼接 |
+| `read_paper_source` | 按原始 Unicode 码点位置重读证据窗口 |
+| `query_proof_dependencies` | 校验引文、环路、覆盖与 MAR，计算目标定理前置知识闭包 |
+| `prepare_explanation_task` | 返回版本化阶段 Prompt 和实际图分析，执行写作/审核门槛 |
+| `audit_mathematical_exposition` | 分别返回数学审查记录、内容保护和当前正文真实统计 |
+
+保留 `get_writing_guide`、`get_reference`、`prepare_mathematical_rewrite` 兼容入口。新本地服务最多在进程内保留 64 份文档，每份上限 2,000,000 码点；长文可分块提交并分页读取。进程退出后材料清除，不在后台调用其他模型。PDF 用本地 CLI 提取，核对公式后提交提取文本；远程工具不任意读取服务端文件。
+
+证明依赖由模型根据原文标注，程序不会从引用编号自动推断数学关系，也不认证数学正确性。**数学审核未记录或存在缺口时，不进入最终语言修订。** 详细 MAR、门槛和 Prompt 设计见[架构](docs/architecture.md)与[Prompt 工程](docs/prompt-engineering.md)。
 
 ## 通过 MCP 使用
 
-已在 Sites 发布[在线服务](https://mathematician-humanizer.proffitteoy.chatgpt.site/)，可直接连接以下公网 HTTPS 地址：
+此前在 Sites 发布的[在线服务](https://mathematician-humanizer.proffitteoy.chatgpt.site/)固定为旧版 skill 0.2.1，仅支持下列三个改写参考工具，尚未部署本次新能力。原连接地址：
 
 ```text
 https://mathematician-humanizer.proffitteoy.chatgpt.site/mcp
@@ -169,10 +206,11 @@ Test-Path (Join-Path $skillTarget "agents/openai.yaml")
 
 ## 进一步阅读
 
-需要运行统计、重建风格卡或检查原稿与终稿时，另备 Python 3.11+，在仓库根目录用 `python -m pip install -e .` 安装可选维护工具。安装后运行 `style-compiler --help` 查看命令；完整环境与使用说明见下方运行协议。普通改写无需这一步。
+需要数学结构与审核工具或统计测量时，另备 Python 3.11+，在仓库根目录用 `python -m pip install -e .` 安装；MCP/PDF 按上方安装可选依赖。独立 skill 仍可不安装 Python，但不能因此声称执行了自动解析和测量。
 
 - [研究与来源说明](docs/research.md)：研究路线、规则依据、上游 26 项对应与验证范围。
 - [维护工具与运行协议](docs/architecture.md)：可选统计、风格卡更新和内容检查。
 - [验收条件](docs/ACCEPTANCE.zh.md)与[变更记录](CHANGELOG.md)。
+- [Prompt 工程与评价方案](docs/prompt-engineering.md)：分阶段合同、动机重建、失败案例和待执行消融实验。
 
 上游许可适用于其沿用和改编内容；其他项目代码没有额外声明统一授权。

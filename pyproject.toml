@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "style-compiler"
-version = "0.2.1"
-description = "Statistical analysis and evidence compilation for the Mathematician Humanizer writing skill"
+version = "2.0.0"
+description = "Evidence-bound mathematical argument reconstruction, exposition protocols and statistical feedback"
 requires-python = ">=3.11"
 dependencies = []
 
