@@ -1,4 +1,4 @@
 interface:
-  display_name: "Mathematician Humanizer"
-  short_description: "按参考数学博客的论证习惯改写中英文，解释动机、展开关键步骤并保留内容"
-  default_prompt: "用 $mathematician-humanizer 按一位数学家的博客风格改写这段文字，保留事实、数学条件和结论。"
+  display_name: "Mathematician Humanizer v2"
+  short_description: "从主定理重建带证据的证明依赖与数学动机，再生成并审核读者能跟随的数学讲解"
+  default_prompt: "用 $mathematician-humanizer 阅读这篇数学论文，先重建主要定理的证明依赖和数学动机，再面向我的知识背景生成准确讲解。"
