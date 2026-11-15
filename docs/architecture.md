@@ -2,17 +2,27 @@
 
 ## 技能交付与可选维护工具
 
-根目录 `SKILL.md` 是唯一技能正文，包含完整的参考数学家改写工作流、六项论证习惯与 Humanizer 26 项清理规则。`references/` 中的两张生成卡供核对研究范围与体裁差异。普通写作直接使用技能正文；分析工具用于研究更新、示例评估或用户明确要求的核验。
+根目录 `SKILL.md` 是唯一技能正文，包含数学理解工作流、六项论证习惯与 Humanizer 26 项表达规则。`references/mathematical-understanding.md` 给出 MAR 与阶段合同；两张生成卡保留描述性研究依据。独立 skill 可不安装运行时；完整工具闭环需要 Python 和实际调用。
 
 最小安装内容为 `SKILL.md`、`references/` 与 `agents/openai.yaml`。不需要复制 `src/`、`research/` 或安装 Python。根目录单一入口、技能元数据与具体前后例子的写法参考 Humanizer；本项目不承诺未经验证的平台插件兼容性。
 
 ### 托管 MCP
 
-[README 的 MCP 连接入口](../README.md#通过-mcp-使用)提供显式选择的远程用法。适配服务在 Sites 独立维护和部署，本仓库的 Python 工具不启动 MCP；本地 skill 安装仍不涉及远程调用。
+[README 的旧版 MCP 连接入口](../README.md#通过-mcp-使用)提供显式选择的远程用法。该服务在 Sites 独立维护和部署，尚未同步下述 2.0.0 本地实现。本地 skill 安装仍不涉及远程调用。
 
-当前服务使用 Streamable HTTP 与公开 No Auth，固定加载本仓库 `3b8bdeddb1a2d19149deab5e0ab4be2ec0fa420b` 的 skill 0.2.1、参考卡、示例及上游 MIT 通知。`get_writing_guide` 和 `get_reference` 提供这些文档；`prepare_mathematical_rewrite` 接收调用者当次提交的原稿并返回完整改写任务。终稿由调用模型生成，服务不调用第二个模型、不保存稿件，也不执行 Python 统计分析或验证数学证明。
+旧服务使用 Streamable HTTP 与公开 No Auth，固定加载本仓库 `3b8bdeddb1a2d19149deab5e0ab4be2ec0fa420b` 的 skill 0.2.1、参考卡、示例及上游 MIT 通知。它只提供旧版文档与改写任务，不执行下述分析；此处不表示已重新验证其线上可用性。
 
 MCP 适配层的构建与协议测试、ChatGPT 的工具扫描与实际调用分别验证；统计工具的测试不代表远程 MCP 已连接。更新 skill 时须另行更新和部署托管服务，并同步 README 的来源提交；不得将固定版本描述为实时同步。
+
+### 2.0.0 本地 MCP
+
+安装 `.[mcp]` 后运行 `mathematician-humanizer-mcp --resources .`，默认 stdio；`--transport streamable-http` 仅监听 `127.0.0.1:8765/mcp`。资源根固定由启动者指定，参考工具仅允许四个命名资源，不暴露任意文件读取。PDF 提取另装 `.[pdf]`，用 CLI 在本地执行，不通过 MCP 读取任意服务端路径。
+
+`analyze_paper` 接收原文并在进程内建立索引；`upload_paper_chunk` 支持 0 起始索引、乱序传输和一致重试，拼接不加换行。最多 16 个未完成上传、64 份文档、每份 2,000,000 码点；超限明确拒绝，不静默截断。重启清空内存，没有自动远端上传或落盘。HTTP 部署到公网仍需单独设计认证、隔离和资源限制，本实现不自动做该部署。
+
+`read_paper_source` 返回最多 20,000 码点的原文窗口、准确起止与后续游标；`query_proof_dependencies` 实际检查注释与源文，返回闭包、拓扑序、缺口和归属问题。外部来源先用同样工具提交，注释可用 `external_document_ids` 引用本进程已登记文档；CLI 则使用 `external_sources` 内嵌文档。
+
+`prepare_explanation_task` 载入版本化 Prompt 并执行对应门槛；`audit_mathematical_exposition` 执行图、内容保护与实际统计。原来的三个入口仍保留，兼容改写入口现在返回真实表层量，但不会由短文改写自动产生论文图。
 
 ### 维护环境与检查
 
@@ -33,6 +43,11 @@ python -m style_compiler check examples/rewrite.original.txt examples/rewrite.fi
 
 | 文件 | 职责 |
 |---|---|
+| `math_reader/document.py` | 原文身份、数学环境/标题、编号引用候选、可选 PDF 页码 |
+| `math_reader/graph.py` | 精确证据、DAG、必要闭包、阅读覆盖、MAR 与归属检查 |
+| `math_exposition/prompts.py` | 总控与七个可独立调用的阶段 Prompt，显式版本 |
+| `math_exposition/workflow.py` | 任务门槛、数学审查回执、真实统计反馈与保护审核 |
+| `math_exposition/mcp.py` | 本地 MCP 传输、内存原文与分块接口 |
 | `segmentation.py`、`features.py` | 原始码点跨度、8 项字级/句段测量与缺失原因 |
 | `contracts.py`、`surface.py` | 不变文本、来源身份和保留缺口的投影；内部研究合同 |
 | `linguistic/` | 71 项 POS/依存/词汇观测；可选固定本地 Stanza 适配器 |
@@ -40,9 +55,34 @@ python -m style_compiler check examples/rewrite.original.txt examples/rewrite.fi
 | `profiles.py` | 核对冻结输入，编译参考博客风格卡与中文统计补充 |
 | `editorial.py` | 不修改文本的差异与内容保护检查 |
 | `english.py` | 可选的固定英语量测，与参考博客英语条件参考比较 |
-| `cli.py` | 四个研究命令：analyze、summarize、compile、check |
+| `style_compiler/cli.py` | 保留四个统计命令，增加 read-paper、reconstruct、prepare-explanation、audit-exposition |
 
 依赖方向为 `contracts/segmentation → features/surface → linguistic`；统计与风格卡生成不用解析器。无模型、语料或联网操作发生在 import 时。
+
+理解层的依赖方向为 `document → graph → workflow → mcp/cli`。workflow 复用现有 features/editorial，统计模块不反向依赖数学理解。无需为每个 Prompt 新建模型类型、调度器或数据库。
+
+## 数学理解 CLI 与回执
+
+```sh
+style-compiler read-paper examples/argument.tex -o paper.json
+style-compiler reconstruct paper.json examples/argument.annotations.json
+style-compiler prepare-explanation motivation paper.json --annotations examples/argument.annotations.json
+style-compiler audit-exposition paper.json examples/argument.annotations.json examples/argument.exposition.txt examples/argument.exposition.txt
+```
+
+最后一项没有数学 review 回执，按约定返回 JSON 并退出 2，表示还不能润色。`reconstruct` 发现未读区间、MAR 缺失、proof gap、assumed 外部条件或归属未核实时，也返回 findings 并退出 2；引文错误和图环路作为无效输入直接拒绝。退出 0 只表示当前机械检查无阻塞，不是证明有效。
+
+schema 为 `math-document/1`、`proof-reconstruction/1`、`mathematical-task/1`、`exposition-audit/1`。详细字段在随 skill 分发的[数学理解协议](../references/mathematical-understanding.md)。所有文件输出拒绝覆盖，原文和注释由使用者显式保存。
+
+### 门槛与审查边界
+
+structure/proof 可以在未完成的材料上准备任务；motivation/literature 可以收到缺口用于修复。exposition/editorial 要求目标闭包有 MAR 和 coverage，全文已读覆盖无空洞，图与归属 findings 清空。coverage 是模型或审阅者的声明，工具只检查这些声明的源文绑定，不证明人或模型真正阅读理解了内容。
+
+数学审核独立记录 hypotheses、dependencies、mechanisms、attribution、scope 五类实际检查，包含候选片段、理由和原文证据。候选 SHA、源文 ID 与 reconstruction_sha256 必须匹配；证明图/MAR 改变也使旧审核失效。只要存在 fail/unresolved、图 findings 或受保护内容改变，就不允许进入语言修订。回执可以由模型提交，不能称为独立专家审查。
+
+统计审核对当前候选实际运行八项字级量并返回句级位置。显式选择 `--reference-source baike/web` 时核验冻结结果指纹，只比较研究支持的特征；短稿未满足比较支持门时不产生区间判断。该来源不是论文讲解体裁的已验证目标。默认不选参考，不将所有体裁挤进一个数值分布。英文无固定本地仪器时返回 unavailable，沿用下文单独的英语命令。
+
+baseline 指本轮开始时已核对的讲解草稿；整篇论文与解释稿的公式序列本来可能不同，不应直接用论文全文当保护基线。授权的公式更正需要明确核查并建立新基线。程序没有自动证明语义保留。
 
 ## analyze
 
@@ -109,17 +149,3 @@ style-compiler-english input.txt --models /existing/en-models --contract researc
 当前结果包含四类体裁的参考，按体裁的 q10/q90 检查边际差异。历史长度、时期和主题分层已退出当前目录；传入历史 profile 时仍可使用其已有长度分层。公式投影和短块排除会影响分母；英语数值不移植到中文。合同的 `contract_sha256` 保留匿名化前的历史仪器身份，当前合同字节由清单绑定；迁移后的源码有新的字节身份，不能冒充原实验重跑。
 
 旧版本的 extract/split/fit/plan/apply 已退出当前接口。旧数据和代码可从重建前 Git 提交追溯，不在当前目录保留另一套运行路径。
-
-
-## 数学原文与证明依赖模块
-
-`math_reader.document.parse_document` 保留全文、Unicode 码点偏移、章节与编号引用候选；`read_document` 支持本地 UTF-8 文件与可选 PDF 页码提取。PDF 需安装 `.[pdf]`，不执行 OCR、宏展开或隐式下载。
-
-`math_reader.graph.reconstruct` 检查模型标注的依赖边、精确引文、MAR、阅读覆盖与动机归属，计算主定理的前置知识闭包和拓扑序。引用候选不自动成为证明边；程序不认证数学正确性。此模块提供 Python API，CLI 与分阶段讲解在后续模块接入。
-
-
-## 分阶段数学讲解与真实统计反馈
-
-`math_exposition.prompts` 保存版本化总控与七个阶段 Prompt；`workflow` 按源文证据与证明图准备任务，分别执行数学审查回执、内容保护和当前稿实际测量。修订后旧稿和旧图回执失效，数学缺口阻止最终润色。
-
-CLI 新增 `read-paper`、`reconstruct`、`prepare-explanation`、`audit-exposition`；完整输入、产物和完成门槛见 [Prompt 工程](prompt-engineering.md)，实际调用见 [小型论证示例](../examples/argument.md)。没有运行三篇真实论文的独立理解评价。
