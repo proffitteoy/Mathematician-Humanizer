@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mathematician Humanizer v2 · 数学理解与讲解</title>
+  <meta name="description" content="从主定理重建证明依赖与数学动机，保留原文证据，生成连贯讲解并实际测量表达。">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    :root{color-scheme:light;--paper:#f5f3ed;--ink:#26362f;--muted:#66736a;--line:#d8ded4;--green:#315b48;--white:#fffefa}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.8 ui-sans-serif,system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}a{color:var(--green);text-underline-offset:4px}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #92b29a;outline-offset:4px}header,main,footer{max-width:1100px;margin:auto;padding:0 32px}header{display:flex;justify-content:space-between;align-items:center;padding-top:27px;padding-bottom:24px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.02em}.mark{display:grid;place-items:center;background:var(--ink);color:var(--paper);width:36px;height:36px;border-radius:8px;font:28px Georgia,serif}header a{font-size:13px;text-decoration:none}.tag{display:inline-flex;align-items:center;gap:7px;font-size:12px;letter-spacing:.08em;color:var(--green)}.dot{width:6px;height:6px;background:var(--green);border-radius:50%}.intro{padding:42px 0 27px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}h1{font-size:clamp(27px,3.5vw,40px);line-height:1.3;font-weight:600;letter-spacing:-.035em;margin:8px 0 12px}p{margin:0 0 14px}.muted{color:var(--muted)}.intro p{margin:0;max-width:650px}.version{text-align:right;font:12px/1.8 ui-monospace,monospace;color:var(--muted);white-space:nowrap}.grid{display:grid;grid-template-columns:1.3fr .9fr;gap:22px;align-items:start}.panel{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden}.panel-head{padding:23px 25px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.panel-head h2{font-size:18px;margin:0;font-weight:600}.pill{border:1px solid var(--line);color:var(--muted);font-size:11px;border-radius:20px;padding:2px 10px}.body{padding:23px 25px}.label{font-size:12px;font-weight:600;color:var(--muted);margin-bottom:8px}.endpoint{font:12px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;background:#edf1e9;padding:14px;border-radius:6px;overflow-wrap:anywhere;user-select:all}.actions{display:flex;gap:10px;margin:14px 0 21px;align-items:center}.primary,.secondary{padding:8px 15px;border-radius:6px;border:1px solid var(--green)}.primary{color:white;background:var(--green)}.secondary{color:var(--green);background:transparent}.status{font-size:12px;color:var(--green);min-height:22px}ol{padding-left:23px;margin:0}li{padding-left:5px;margin:0 0 12px}.small{font-size:13px}.tool{padding:18px 25px;border-bottom:1px solid var(--line)}.tool:last-child{border:0}.tool code{font:12px ui-monospace,Consolas,monospace;color:var(--green);overflow-wrap:anywhere}.tool h3{font-size:15px;margin:5px 0 4px}.tool p{font-size:13px;color:var(--muted);margin:0}.note{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:17px;margin-top:19px}.example{margin:28px 0 34px}.example h2{font-size:18px;margin:0 0 15px}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:24px}.comparison article{padding:21px 23px;border-left:2px solid #b8c5b8;background:#eef0e8}.comparison article:last-child{border-left-color:var(--green);background:#e7ede3}.comparison p{margin:0;font-family:Georgia,"Noto Serif SC",serif;line-height:2}.comparison .label{font-family:ui-sans-serif,system-ui,sans-serif;letter-spacing:.12em}details{border:1px solid var(--line);border-radius:8px;padding:14px 20px;margin-bottom:20px;background:var(--white)}summary{cursor:pointer;font-size:14px;font-weight:600}details p{margin:13px 0 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.8 ui-monospace,Consolas,monospace;background:#edf1e9;border-radius:6px;padding:16px}.attribution{font-size:12px;color:var(--muted);padding:20px 0 28px;border-top:1px solid var(--line)}footer{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);padding-top:18px;padding-bottom:26px;border-top:1px solid var(--line)}footer a{text-decoration:none}@media(max-width:750px){header,main,footer{padding-left:20px;padding-right:20px}.grid,.comparison{grid-template-columns:1fr}.intro{padding-top:30px}.version{display:none}.body,.panel-head,.tool{padding-left:20px;padding-right:20px}header .brand{font-size:13px}.comparison{gap:12px}footer{gap:10px;flex-wrap:wrap}}@media(prefers-reduced-motion:no-preference){button{transition:background .15s}.primary:hover{background:#234936}.secondary:hover{background:#edf1e9}}
+  </style>
+</head>
+<body>
+  <header><div class="brand"><span class="mark" aria-hidden="true">∑</span>Mathematician Humanizer</div><a href="https://github.com/proffitteoy/Mathematician-Humanizer" target="_blank" rel="noopener noreferrer">GitHub ↗</a></header>
+  <main>
+    <div class="intro"><div><span class="tag"><span class="dot"></span>MCP · STREAMABLE HTTP</span><h1>从证明结构理解数学</h1><p class="muted">从主要定理反向追踪必要背景，解释关键引理解决的障碍，再组织连贯讲解。证据检查与真实统计分别进行，数学内容优先。</p></div><div class="version">v2 · 2.0.0<br>证明依赖 · 数学动机 · 双重审核</div></div>
+    <div class="grid">
+      <section class="panel" aria-labelledby="connect-title"><div class="panel-head"><h2 id="connect-title">连接到 GPT</h2><span class="pill">公开 · No Auth</span></div><div class="body">
+        <div class="label">MCP 服务器地址</div><div id="endpoint" class="endpoint"></div>
+        <div class="actions"><button class="primary" id="copy-url" type="button">复制 MCP 地址</button><span id="url-status" class="status" role="status"></span></div>
+        <ol class="small"><li>在 ChatGPT 的自定义 MCP 配置中填入上方公网地址，认证选择 <strong>No Auth / 无身份验证</strong>，然后扫描工具。其他 MCP 客户端选择 Streamable HTTP 和同一地址。</li><li>安装并在对话中启用 <strong>Mathematician Humanizer</strong>，提交论文原文或有序分块，并说明目标读者。</li><li>先用 <code>analyze_paper</code> 解析，再按阶段重建依赖、分析动机、生成讲解和审核。短文仍可使用原改写入口。</li></ol>
+        <button class="secondary" id="copy-prompt" type="button">复制调用示例</button> <span id="prompt-status" class="status" role="status"></span>
+        <div class="actions"><button class="secondary" id="check-service" type="button">检查服务</button><span id="check-status" class="status" role="status"></span></div>
+        <p class="note">任何人都可以连接，无需登录或 API 密钥。改写由当前 GPT 完成；服务器实际解析、检查证据并测量当前稿，不保存论文，不在后台生成文章。每次论文调用携带同一原文或有序分块；单篇最多 2,000,000 码点，请求最多 8 MiB。PDF 先本地提取并核对公式。ChatGPT 中自定义 MCP 入口的名称与可用性取决于账号及工作区设置。</p>
+      </div></section>
+      <section class="panel" aria-labelledby="tools-title"><div class="panel-head"><h2 id="tools-title">GPT 可调用的工具</h2><span class="pill">9 个只读工具</span></div>
+        <div class="tool"><code>prepare_mathematical_rewrite</code><h3>准备改写</h3><p>接收原稿、读者背景和输出语言，返回完整规则与任务；GPT 随后完成终稿。</p></div>
+        <div class="tool"><code>get_writing_guide</code><h3>读取完整规则</h3><p>返回完整 v2 SKILL.md，包含数学理解流程、论证习惯、26 项规则和证据要求。</p></div>
+        <div class="tool"><code>get_reference</code><h3>查阅参考材料</h3><p>按需读取博客风格卡、统计参考、完整改写示例或 MIT 许可。</p></div>
+<div class="tool"><code>analyze_paper / read_paper_source</code><h3>解析与重读原文</h3><p>保留公式、编号、引用候选和 Unicode 位置，按准确区间重读证据。</p></div><div class="tool"><code>query_proof_dependencies</code><h3>重建证明依赖</h3><p>检查引文、环路、阅读缺口和 MAR，追踪主定理真正需要的前置知识。</p></div><div class="tool"><code>prepare_explanation_task</code><h3>分阶段理解与讲解</h3><p>总控与七个阶段，围绕具体障碍、技术选择、机制和数学思想推进。</p></div><div class="tool"><code>audit_mathematical_exposition / measure_exposition</code><h3>数学与统计分别审核</h3><p>核对绑定当前正文与证明图的审查回执，实际测量八项表层量。数学缺口阻止最终润色。</p></div>
+      </section>
+    </div>
+    <section class="example" aria-labelledby="example-title"><h2 id="example-title">一个改写示例</h2><div class="comparison"><article><div class="label">原稿</div><p>最小二乘不仅是寻找答案的工具，更是理解唯一性的窗口。拟合向量唯一，但系数的唯一性需要满列秩。这一点至关重要。</p></article><article><div class="label">终稿</div><p>最小二乘的答案是否唯一，取决于我们把什么看作答案。先看拟合向量：正交投影保证它唯一。再问同一个拟合向量能否来自不同系数；沿着矩阵的核移动系数不会改变拟合结果，所以系数唯一还需要满列秩。</p></article></div></section>
+    <details><summary>调用示例与使用边界</summary><pre id="prompt-example"></pre><p class="small muted">支持中文、英文及原语言输出。数学条件、量词、否定、定义域、事实、公式和引用优先于风格。工具不验证证明，不提供真人概率、作者相似度或写作质量分。发现重大数学问题时，GPT 应说明待核问题。</p></details>
+    <div class="attribution">发布自 <a href="https://github.com/proffitteoy/Mathematician-Humanizer/tree/__SOURCE_SHA__" target="_blank" rel="noopener noreferrer">Mathematician-Humanizer v2 · __SOURCE_SHORT__</a>。26 项清理规则、编号和 A–F 分组改编自 <a href="https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8" target="_blank" rel="noopener noreferrer">blader/humanizer 3.1.0</a>；本项目增补数学理解协议、六项论证习惯与示例。上游版权 © 2025 Siqi Chen，完整 MIT 通知随服务分发，可通过 <code>get_reference(document="license")</code> 读取。</div>
+  </main>
+  <footer><span>Mathematician Humanizer v2 · 数学理解与讲解</span><a href="https://github.com/proffitteoy/Mathematician-Humanizer/blob/__SOURCE_SHA__/SKILL.md" target="_blank" rel="noopener noreferrer">查看 skill 原文 ↗</a></footer>
+  <script>
+    const endpoint = window.location.origin + '/mcp';
+    const prompt = "请使用 Mathematician Humanizer v2 阅读附上的数学论文。先调用 analyze_paper，再用 prepare_explanation_task 分阶段准确记录主要定理、重建依赖和数学动机，最后生成连贯讲解并调用 audit_mathematical_exposition。读者熟悉线性代数。区分作者明说、数学重建与未核实联系；每次调用携带同一原文或有序分块，不宣称工具证明了定理。";
+    document.getElementById('endpoint').textContent = endpoint;
+    document.getElementById('prompt-example').textContent = prompt;
+    async function copy(value, status) { try { await navigator.clipboard.writeText(value); status.textContent = '已复制'; } catch { status.textContent = '请选中文字后复制'; } }
+    document.getElementById('copy-url').addEventListener('click', () => copy(endpoint, document.getElementById('url-status')));
+    document.getElementById('copy-prompt').addEventListener('click', () => copy(prompt, document.getElementById('prompt-status')));
+    document.getElementById('check-service').addEventListener('click', async () => {
+      const button = document.getElementById('check-service');
+      const status = document.getElementById('check-status');
+      button.disabled = true; status.textContent = '检查中…'; let id = 1;
+      async function call(method, params) {
+        const res = await fetch('/mcp', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' }, body: JSON.stringify({ jsonrpc: '2.0', id: id++, method, params }), signal: AbortSignal.timeout(15000) });
+        if (!res.ok) throw new Error('服务返回 HTTP ' + res.status);
+        const message = await res.json();
+        if (message.error || message.result?.isError) throw new Error(message.error?.message || '工具调用失败');
+        return message.result;
+      }
+      try {
+        await call('initialize', { protocolVersion: '2025-11-25', clientInfo: { name: 'site-connection-check', version: '1.0' }, capabilities: {} });
+        const list = await call('tools/list', {});
+        if (list.tools?.length !== 9) throw new Error('工具发现不完整');
+        const guide = await call('tools/call', { name: 'get_writing_guide', arguments: {} });
+        if (!guide.content?.[0]?.text.includes('### 26.')) throw new Error('写作规则不完整');
+        const task = await call('tools/call', { name: 'prepare_mathematical_rewrite', arguments: { text: '若 A 满列秩，则最小二乘系数唯一。', language: 'zh' } });
+        if (!task.content?.[0]?.text.includes('perform the rewrite NOW')) throw new Error('改写任务不完整');
+        const measured = await call('tools/call', { name: 'measure_exposition', arguments: { text: '投影确定拟合向量，核描述系数自由度。' } });
+        if (JSON.parse(measured.content[0].text).status !== 'measured') throw new Error('统计测量未执行');
+        status.textContent = '已通过：初始化、9 个工具、v2 规则、真实测量';
+      } catch (error) { status.textContent = error.message || '检查失败，请稍后重试'; }
+      finally { button.disabled = false; }
+    });
+  </script>
+</body>
+</html>

@@ -24,6 +24,16 @@ MCP 适配层的构建与协议测试、ChatGPT 的工具扫描与实际调用�
 
 `prepare_explanation_task` 载入版本化 Prompt 并执行对应门槛；`audit_mathematical_exposition` 执行图、内容保护与实际统计。原来的三个入口仍保留，兼容改写入口现在返回真实表层量，但不会由短文改写自动产生论文图。
 
+### v2 托管 Worker 适配
+
+`site/worker.mjs` 实现 Cloudflare Worker 的无状态版本，`site/build.py` 从当前 Git 提交导出完整 skill、阶段 Prompt、许可、冻结参考及 Unicode 15.0 测量表，不调用其他模型或下载资料。构建需要 Python 3.12（Unicode 15.0.0）和 Node；运行时不需要 Python。`python site/build.py` 与 `node --test site/test.mjs` 核对解析、图、规范哈希及八项量测与 Python 合成基准的一致性，不代表任意论文的数学语义验证。
+
+公网工具每次接收 `paper={text,format,source}` 或 `paper={chunks,format,source}`，不会用不可靠的 Worker 内存假装持久保存论文。chunks 按给定数组顺序精确拼接，不额外插入字符。单篇上限 2,000,000 码点，请求另受 8 MiB 限制；数学节点最多 50,000，测量最多 20,000 个操作段和 50,000 个操作句，超限明确拒绝，不静默截断。原文读取也是无状态的，需要再次携带 paper。
+
+托管服务提供九个工具：保留三个旧入口，增加 analyze_paper、read_paper_source、query_proof_dependencies、prepare_explanation_task、audit_mathematical_exposition 和 measure_exposition。本地版用 upload_paper_chunk 管理进程内上传，公网版用有序 chunks 和单独测量工具；两种接口不能混用。PDF 和固定语言学解析器仅在本地使用，公网只处理已核对的提取文本与八项字级量测。
+
+托管保护器检查公式、代码、引文和 URL 的准确序列，并将正文变化统一标为待复核；本地 check 还提供更细的词面和 Unicode 诊断。两者都不证明语义保留。发布前将导出结果写入既有 Sites 检出，使用官方 source workflow 推送、保存和部署；不能把 GitHub 合并或本地构建写成线上发布成功。
+
 ### 维护环境与检查
 
 以下命令供维护者更新统计卡和检查仓库使用。Python 3.11+，默认只用标准库；从仓库根目录运行：
