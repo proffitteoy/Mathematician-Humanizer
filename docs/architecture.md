@@ -109,3 +109,10 @@ style-compiler-english input.txt --models /existing/en-models --contract researc
 当前结果包含四类体裁的参考，按体裁的 q10/q90 检查边际差异。历史长度、时期和主题分层已退出当前目录；传入历史 profile 时仍可使用其已有长度分层。公式投影和短块排除会影响分母；英语数值不移植到中文。合同的 `contract_sha256` 保留匿名化前的历史仪器身份，当前合同字节由清单绑定；迁移后的源码有新的字节身份，不能冒充原实验重跑。
 
 旧版本的 extract/split/fit/plan/apply 已退出当前接口。旧数据和代码可从重建前 Git 提交追溯，不在当前目录保留另一套运行路径。
+
+
+## 数学原文与证明依赖模块
+
+`math_reader.document.parse_document` 保留全文、Unicode 码点偏移、章节与编号引用候选；`read_document` 支持本地 UTF-8 文件与可选 PDF 页码提取。PDF 需安装 `.[pdf]`，不执行 OCR、宏展开或隐式下载。
+
+`math_reader.graph.reconstruct` 检查模型标注的依赖边、精确引文、MAR、阅读覆盖与动机归属，计算主定理的前置知识闭包和拓扑序。引用候选不自动成为证明边；程序不认证数学正确性。此模块提供 Python API，CLI 与分阶段讲解在后续模块接入。
