@@ -1,0 +1,5 @@
+dist/
+goldens.json
+source-manifest.json
+.openai/
+upstream/
