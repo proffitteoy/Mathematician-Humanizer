@@ -8,6 +8,8 @@ import tempfile
 import unittest
 
 from style_compiler.profiles import compile_profiles
+from math_reader.document import read_document
+from math_reader.graph import reconstruct
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -68,3 +70,11 @@ class DeliveryTests(unittest.TestCase):
                  *(ROOT / "examples").rglob("*.md")]
         for path in paths:
             self.assert_local_links(path)
+
+    def test_argument_example_is_replayable_and_source_bound(self):
+        doc = read_document(ROOT / "examples/argument.tex")
+        annotations = json.loads((ROOT / "examples/argument.annotations.json").read_text(encoding="utf-8"))
+        graph = reconstruct(doc, annotations)
+        self.assertFalse(graph["findings"])
+        self.assertEqual(graph["prerequisite_order"], ["n1", "n2", "n4", "n6"])
+        self.assertEqual(graph["mathematical_validity"], "not_certified")

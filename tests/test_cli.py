@@ -87,3 +87,44 @@ class CliTests(unittest.TestCase):
             self.assertEqual(run.returncode, 2)
             self.assertEqual(receipt.read_bytes(), before)
             self.assertFalse((folder / "blocked").exists())
+
+    def test_paper_reconstruction_stage_and_audit_roundtrip(self):
+        from math_reader.document import parse_document
+        from test_math_reader import PAPER, annotations
+        from test_exposition import DRAFT, review
+        with tempfile.TemporaryDirectory() as folder:
+            folder = Path(folder)
+            source, docpath, annpath = folder / "paper.tex", folder / "paper.json", folder / "annotations.json"
+            draftpath, reviewpath = folder / "draft.txt", folder / "review.json"
+            source.write_bytes(PAPER.encode())
+            doc = parse_document(PAPER, source=str(source))
+            data = annotations(doc)
+            annpath.write_text(json.dumps(data), encoding="utf-8")
+            draftpath.write_text(DRAFT, encoding="utf-8")
+            reviewpath.write_text(json.dumps(review(doc)), encoding="utf-8")
+            run = self.run_cli("read-paper", source, "-o", docpath)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            run = self.run_cli("reconstruct", docpath, annpath)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            self.assertEqual(json.loads(run.stdout)["prerequisite_order"], ["n1", "n2", "n4", "n6"])
+            run = self.run_cli("prepare-explanation", "exposition", docpath, "--annotations", annpath)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            run = self.run_cli("audit-exposition", docpath, annpath, draftpath, draftpath)
+            self.assertEqual(run.returncode, 2, run.stderr)
+            self.assertFalse(json.loads(run.stdout)["editorial_revision_allowed"])
+            run = self.run_cli("audit-exposition", docpath, annpath, draftpath, draftpath, "--review", reviewpath)
+            self.assertEqual(run.returncode, 0, run.stderr)
+
+    def test_invalid_annotation_is_a_clean_error(self):
+        from math_reader.document import parse_document
+        from test_math_reader import PAPER, annotations
+        with tempfile.TemporaryDirectory() as folder:
+            folder = Path(folder)
+            doc = parse_document(PAPER)
+            data = annotations(doc)
+            data["edges"][0]["evidence"][0]["quote"] = "invented evidence"
+            for name, value in (("doc.json", doc), ("ann.json", data)):
+                (folder / name).write_text(json.dumps(value), encoding="utf-8")
+            run = self.run_cli("reconstruct", folder / "doc.json", folder / "ann.json")
+            self.assertEqual(run.returncode, 2)
+            self.assertNotIn("Traceback", run.stderr)

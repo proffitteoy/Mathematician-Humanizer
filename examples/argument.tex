@@ -1,0 +1,9 @@
+\section{Least squares}
+\begin{definition}\label{d}Let $A\in\mathbb R^{m\times n}$, $b\in\mathbb R^m$ and $M=\operatorname{im}A$.\end{definition}
+\begin{lemma}\label{p}There is a unique closest vector $y_*\in M$ to $b$.\end{lemma}
+\begin{proof}Orthogonal decomposition gives $\|b-y\|^2=\|b-y_*\|^2+\|y-y_*\|^2$.\end{proof}
+\begin{lemma}\label{k}If $Ax_*=y_*$, then $Ax=y_*$ iff $x-x_*\in\ker A$.\end{lemma}
+\begin{proof}Subtract $Ax_*$ from $Ax$ and use linearity.\end{proof}
+\begin{theorem}\label{t}The least-squares minimizers are $x_*+\ker A$.\end{theorem}
+\begin{proof}Use Lemmas \ref{p} and \ref{k}.\end{proof}
+\begin{remark}This unrelated remark is not a prerequisite.\end{remark}

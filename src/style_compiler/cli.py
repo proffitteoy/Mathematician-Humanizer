@@ -73,6 +73,38 @@ def main(argv=None):
     command.add_argument("candidate", type=Path)
     command.add_argument("--locks", type=Path, help="JSON array of exact immutable strings")
     command.add_argument("-o", "--output", type=Path)
+    command = commands.add_parser("read-paper", help="Extract unchanged mathematical statements and reference candidates")
+    command.add_argument("input", type=Path)
+    command.add_argument("--format", choices=("auto", "latex", "markdown", "text", "pdf"), default="auto")
+    command.add_argument("-o", "--output", type=Path)
+    command = commands.add_parser("reconstruct", help="Check evidence-bound proof annotations and compute prerequisites")
+    command.add_argument("document", type=Path)
+    command.add_argument("annotations", type=Path)
+    command.add_argument("--target", action="append", help="Result node id; repeat for multiple targets")
+    command.add_argument("-o", "--output", type=Path)
+    command = commands.add_parser("prepare-explanation", help="Prepare a versioned mathematical understanding stage")
+    command.add_argument("stage", choices=("structure", "proof", "motivation", "literature", "exposition", "mathematical_audit", "editorial"))
+    command.add_argument("document", type=Path)
+    command.add_argument("--annotations", type=Path)
+    command.add_argument("--reader", default="unspecified")
+    command.add_argument("--known-node", action="append")
+    command.add_argument("--baseline", type=Path)
+    command.add_argument("--candidate", type=Path)
+    command.add_argument("--audit", type=Path)
+    command.add_argument("--research", type=Path, default=Path("research"))
+    command.add_argument("-o", "--output", type=Path)
+    command = commands.add_parser("audit-exposition", help="Run separate mathematical-record, protection and statistical audits")
+    command.add_argument("document", type=Path)
+    command.add_argument("annotations", type=Path)
+    command.add_argument("baseline", type=Path)
+    command.add_argument("candidate", type=Path)
+    command.add_argument("--review", type=Path)
+    command.add_argument("--language", choices=("zh", "en"), default="zh")
+    command.add_argument("--genre", default="math_exposition")
+    command.add_argument("--reader", default="unspecified")
+    command.add_argument("--research", type=Path, default=Path("research"))
+    command.add_argument("--reference-source", choices=("baike", "web"))
+    command.add_argument("-o", "--output", type=Path)
     args = parser.parse_args(argv)
     try:
         if getattr(args, "output", None) and args.output.exists():
@@ -90,13 +122,38 @@ def main(argv=None):
             result = summarize(records, bootstrap_draws=args.bootstrap_draws, seed=args.seed)
         elif args.command == "compile":
             result = compile_profiles(args.research, args.skill)
+        elif args.command == "read-paper":
+            from math_reader.document import read_document
+            result = read_document(args.input, args.format)
+        elif args.command == "reconstruct":
+            from math_reader.graph import reconstruct
+            result = reconstruct(_read_json(args.document), _read_json(args.annotations), args.target)
+        elif args.command == "prepare-explanation":
+            from math_exposition.workflow import prepare_stage
+            result = prepare_stage(args.stage, _read_json(args.document),
+                _read_json(args.annotations) if args.annotations else None, args.reader, args.known_node,
+                args.baseline.read_bytes().decode("utf-8") if args.baseline else None,
+                args.candidate.read_bytes().decode("utf-8") if args.candidate else None,
+                _read_json(args.audit) if args.audit else None, args.research)
+        elif args.command == "audit-exposition":
+            from math_exposition.workflow import audit_exposition
+            result = audit_exposition(_read_json(args.document), _read_json(args.annotations),
+                args.baseline.read_bytes().decode("utf-8"), args.candidate.read_bytes().decode("utf-8"),
+                args.language, args.genre, args.reader, args.research, args.reference_source,
+                _read_json(args.review) if args.review else None)
         else:
             locks = _read_json(args.locks) if args.locks else []
             if not isinstance(locks, list):
                 raise ValueError("Locks must be a JSON array")
             result = lint(args.original.read_bytes(), args.candidate.read_bytes(), locks)
         _write(result, getattr(args, "output", None))
-        return 2 if args.command == "check" and result["blockers"] else 0
+        if args.command == "check" and result["blockers"]:
+            return 2
+        if args.command == "audit-exposition" and not result["editorial_revision_allowed"]:
+            return 2
+        if args.command == "reconstruct" and result["findings"]:
+            return 2
+        return 0
     except (TypeError, ValueError, KeyError, RuntimeError, OSError, ImportError, importlib.metadata.PackageNotFoundError) as exc:
         parser.exit(2, f"style-compiler: {exc}\n")
 

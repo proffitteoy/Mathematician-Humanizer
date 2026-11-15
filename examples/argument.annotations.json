@@ -1,0 +1,279 @@
+{
+  "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+  "main_theorems": [
+    "n6"
+  ],
+  "nodes": [],
+  "reading_coverage": [
+    {
+      "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+      "start": 0,
+      "end": 687,
+      "quote": "\\section{Least squares}\n\\begin{definition}\\label{d}Let $A\\in\\mathbb R^{m\\times n}$, $b\\in\\mathbb R^m$ and $M=\\operatorname{im}A$.\\end{definition}\n\\begin{lemma}\\label{p}There is a unique closest vector $y_*\\in M$ to $b$.\\end{lemma}\n\\begin{proof}Orthogonal decomposition gives $\\|b-y\\|^2=\\|b-y_*\\|^2+\\|y-y_*\\|^2$.\\end{proof}\n\\begin{lemma}\\label{k}If $Ax_*=y_*$, then $Ax=y_*$ iff $x-x_*\\in\\ker A$.\\end{lemma}\n\\begin{proof}Subtract $Ax_*$ from $Ax$ and use linearity.\\end{proof}\n\\begin{theorem}\\label{t}The least-squares minimizers are $x_*+\\ker A$.\\end{theorem}\n\\begin{proof}Use Lemmas \\ref{p} and \\ref{k}.\\end{proof}\n\\begin{remark}This unrelated remark is not a prerequisite.\\end{remark}\n"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2",
+      "kind": "definition",
+      "role": "The image is a finite dimensional subspace",
+      "basis": "reconstruction",
+      "evidence": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 24,
+          "end": 145,
+          "quote": "\\begin{definition}\\label{d}Let $A\\in\\mathbb R^{m\\times n}$, $b\\in\\mathbb R^m$ and $M=\\operatorname{im}A$.\\end{definition}"
+        },
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 231,
+          "end": 322,
+          "quote": "\\begin{proof}Orthogonal decomposition gives $\\|b-y\\|^2=\\|b-y_*\\|^2+\\|y-y_*\\|^2$.\\end{proof}"
+        }
+      ]
+    },
+    {
+      "from": "n1",
+      "to": "n4",
+      "kind": "definition",
+      "role": "Linearity gives the kernel identity",
+      "basis": "reconstruction",
+      "evidence": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 24,
+          "end": 145,
+          "quote": "\\begin{definition}\\label{d}Let $A\\in\\mathbb R^{m\\times n}$, $b\\in\\mathbb R^m$ and $M=\\operatorname{im}A$.\\end{definition}"
+        },
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 407,
+          "end": 475,
+          "quote": "\\begin{proof}Subtract $Ax_*$ from $Ax$ and use linearity.\\end{proof}"
+        }
+      ]
+    },
+    {
+      "from": "n2",
+      "to": "n6",
+      "kind": "reduction",
+      "role": "All optimal coefficients must map to the unique projection",
+      "basis": "reconstruction",
+      "evidence": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 146,
+          "end": 230,
+          "quote": "\\begin{lemma}\\label{p}There is a unique closest vector $y_*\\in M$ to $b$.\\end{lemma}"
+        },
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 560,
+          "end": 615,
+          "quote": "\\begin{proof}Use Lemmas \\ref{p} and \\ref{k}.\\end{proof}"
+        }
+      ]
+    },
+    {
+      "from": "n4",
+      "to": "n6",
+      "kind": "construction",
+      "role": "The fiber over the projection is a translate of the kernel",
+      "basis": "reconstruction",
+      "evidence": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 323,
+          "end": 406,
+          "quote": "\\begin{lemma}\\label{k}If $Ax_*=y_*$, then $Ax=y_*$ iff $x-x_*\\in\\ker A$.\\end{lemma}"
+        },
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 560,
+          "end": 615,
+          "quote": "\\begin{proof}Use Lemmas \\ref{p} and \\ref{k}.\\end{proof}"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "kind": "mathematical_motivation",
+      "text": "Separate the optimal image from its coefficient fiber",
+      "nodes": [
+        "n2",
+        "n4",
+        "n6"
+      ],
+      "basis": "reconstruction",
+      "evidence": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 231,
+          "end": 322,
+          "quote": "\\begin{proof}Orthogonal decomposition gives $\\|b-y\\|^2=\\|b-y_*\\|^2+\\|y-y_*\\|^2$.\\end{proof}"
+        },
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 407,
+          "end": 475,
+          "quote": "\\begin{proof}Subtract $Ax_*$ from $Ax$ and use linearity.\\end{proof}"
+        },
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 560,
+          "end": 615,
+          "quote": "\\begin{proof}Use Lemmas \\ref{p} and \\ref{k}.\\end{proof}"
+        }
+      ]
+    }
+  ],
+  "arguments": {
+    "n6": {
+      "statement": {
+        "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+        "start": 476,
+        "end": 559,
+        "quote": "\\begin{theorem}\\label{t}The least-squares minimizers are $x_*+\\ker A$.\\end{theorem}"
+      },
+      "hypotheses": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 24,
+          "end": 145,
+          "quote": "\\begin{definition}\\label{d}Let $A\\in\\mathbb R^{m\\times n}$, $b\\in\\mathbb R^m$ and $M=\\operatorname{im}A$.\\end{definition}"
+        }
+      ],
+      "conclusion": {
+        "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+        "start": 500,
+        "end": 546,
+        "quote": "The least-squares minimizers are $x_*+\\ker A$."
+      },
+      "obstruction": {
+        "text": "The optimal vector need not specify unique coefficients",
+        "evidence": [
+          {
+            "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+            "start": 323,
+            "end": 406,
+            "quote": "\\begin{lemma}\\label{k}If $Ax_*=y_*$, then $Ax=y_*$ iff $x-x_*\\in\\ker A$.\\end{lemma}"
+          },
+          {
+            "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+            "start": 476,
+            "end": 559,
+            "quote": "\\begin{theorem}\\label{t}The least-squares minimizers are $x_*+\\ker A$.\\end{theorem}"
+          }
+        ]
+      },
+      "mechanism": {
+        "text": "Project onto the image and then compute the fiber",
+        "evidence": [
+          {
+            "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+            "start": 231,
+            "end": 322,
+            "quote": "\\begin{proof}Orthogonal decomposition gives $\\|b-y\\|^2=\\|b-y_*\\|^2+\\|y-y_*\\|^2$.\\end{proof}"
+          },
+          {
+            "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+            "start": 407,
+            "end": 475,
+            "quote": "\\begin{proof}Subtract $Ax_*$ from $Ax$ and use linearity.\\end{proof}"
+          },
+          {
+            "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+            "start": 560,
+            "end": 615,
+            "quote": "\\begin{proof}Use Lemmas \\ref{p} and \\ref{k}.\\end{proof}"
+          }
+        ]
+      },
+      "idea": {
+        "text": "Separate optimization in the image from kernel freedom",
+        "evidence": [
+          {
+            "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+            "start": 231,
+            "end": 322,
+            "quote": "\\begin{proof}Orthogonal decomposition gives $\\|b-y\\|^2=\\|b-y_*\\|^2+\\|y-y_*\\|^2$.\\end{proof}"
+          },
+          {
+            "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+            "start": 407,
+            "end": 475,
+            "quote": "\\begin{proof}Subtract $Ax_*$ from $Ax$ and use linearity.\\end{proof}"
+          }
+        ]
+      },
+      "status": "reviewed"
+    }
+  },
+  "coverage": {
+    "n1": {
+      "status": "reviewed",
+      "evidence": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 24,
+          "end": 145,
+          "quote": "\\begin{definition}\\label{d}Let $A\\in\\mathbb R^{m\\times n}$, $b\\in\\mathbb R^m$ and $M=\\operatorname{im}A$.\\end{definition}"
+        }
+      ]
+    },
+    "n2": {
+      "status": "reviewed",
+      "evidence": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 146,
+          "end": 230,
+          "quote": "\\begin{lemma}\\label{p}There is a unique closest vector $y_*\\in M$ to $b$.\\end{lemma}"
+        },
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 231,
+          "end": 322,
+          "quote": "\\begin{proof}Orthogonal decomposition gives $\\|b-y\\|^2=\\|b-y_*\\|^2+\\|y-y_*\\|^2$.\\end{proof}"
+        }
+      ]
+    },
+    "n4": {
+      "status": "reviewed",
+      "evidence": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 323,
+          "end": 406,
+          "quote": "\\begin{lemma}\\label{k}If $Ax_*=y_*$, then $Ax=y_*$ iff $x-x_*\\in\\ker A$.\\end{lemma}"
+        },
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 407,
+          "end": 475,
+          "quote": "\\begin{proof}Subtract $Ax_*$ from $Ax$ and use linearity.\\end{proof}"
+        }
+      ]
+    },
+    "n6": {
+      "status": "reviewed",
+      "evidence": [
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 476,
+          "end": 559,
+          "quote": "\\begin{theorem}\\label{t}The least-squares minimizers are $x_*+\\ker A$.\\end{theorem}"
+        },
+        {
+          "document_id": "99c709b77879fb62643e132440d1b65ff0e8ca0e96b614dcff5f956332a8c04e",
+          "start": 560,
+          "end": 615,
+          "quote": "\\begin{proof}Use Lemmas \\ref{p} and \\ref{k}.\\end{proof}"
+        }
+      ]
+    }
+  }
+}
