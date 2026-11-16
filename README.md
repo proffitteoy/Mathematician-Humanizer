@@ -8,7 +8,7 @@
 
 ## 快速使用
 
-支持本地 skill 的助手可直接读取 [SKILL.md](SKILL.md)。完整计算工作流使用下方[本地工具与 MCP](#本地工具与-mcp)。已有[公网 MCP](#通过-mcp-使用)仍为旧版改写服务，尚不包含 2.0.0 的理解与审核工具。
+支持本地 skill 的助手可直接读取 [SKILL.md](SKILL.md)。完整计算工作流使用下方[本地工具与 MCP](#本地工具与-mcp)。[公网站点与 MCP](#通过-mcp-使用)已更新至 v2，提供数学结构、证据依赖、阶段任务和真实测量工具。
 
 让助手读取 [SKILL.md](SKILL.md)，或者在安装后直接调用：
 
@@ -68,48 +68,59 @@ codex mcp add mathematician-humanizer-local -- mathematician-humanizer-mcp --res
 
 ## 通过 MCP 使用
 
-此前在 Sites 发布的[在线服务](https://mathematician-humanizer.proffitteoy.chatgpt.site/)固定为旧版 skill 0.2.1，仅支持下列三个改写参考工具，尚未部署本次新能力。原连接地址：
+[在线服务](https://mathematician-humanizer.proffitteoy.chatgpt.site/)已发布 **Mathematician Humanizer v2（2.0.0）**。优先使用 Sites 为该站点创建的同名个人插件，已有连接无需更换站点地址。公网 MCP 端点：
 
 ```text
 https://mathematician-humanizer.proffitteoy.chatgpt.site/mcp
 ```
 
-传输协议为 **Streamable HTTP**，认证选择 **No Auth / 无身份验证**。无需在本机启动服务器，也无需另配模型 API 密钥。
+传输协议为 **Streamable HTTP**。Sites 负责 MCP 连接的 **OAuth 身份验证**；无需另配模型 API 密钥。站点网页公开不等于 MCP 允许匿名直连：未认证请求返回 401，并提供 OAuth 资源发现地址。旧版文档中的 No Auth 配置不再适用于当前站点。
 
 ### ChatGPT
 
-1. 在设置的 Apps / Plugins 中添加自定义远程 MCP；若账号需要，先开启 Developer mode。
-2. 填入上述地址，认证选 **No Auth**，点击 **Scan Tools**。
-3. 确认发现下面的三个工具，安装后在对话中启用该插件。
-4. 先调用 `get_writing_guide` 检查连接，再提交原稿：
+1. 在 Plugins / Apps 的个人或 Created by you 列表中启用 **Mathematician Humanizer v2**。已连接者继续使用原插件。
+2. 发布时会刷新站点工具；若当前聊天仍只显示旧版三个入口，重新打开聊天或重新扫描工具以加载新增工具。
+3. 先调用 `get_writing_guide`，确认返回 skill 2.0.0，再按阶段提交论文。手动添加自定义远程 MCP 时，使用支持 OAuth 自动发现的连接方式完成登录。
 
 ```text
-使用 Mathematician Humanizer，调用 prepare_mathematical_rewrite 改写下面的文章。
-读者熟悉线性代数，但不熟悉这个证明。
-保留事实、数学条件、公式和结论，给出完整终稿。
+使用 Mathematician Humanizer v2 阅读附上的论文。
+先 analyze_paper，再分阶段重建主要定理的依赖、数学障碍和方法动机，
+生成连贯讲解，最后分别审核数学内容与实际统计。
+读者熟悉线性代数。保留条件、公式和来源，区分数学解释与作者明说的动机。
 
-[粘贴原稿]
+[附论文或可解析原文]
 ```
 
 ### Codex
 
-在本机终端添加远程服务，然后重新打开对话：
+在 Codex 中直接启用该站点已有的个人插件即可，平台负责连接身份验证。
+
+使用独立 CLI 手动配置远程 MCP 时，添加端点并完成 OAuth 登录，再重新打开对话：
 
 ```powershell
 codex mcp add mathematician-humanizer-online --url https://mathematician-humanizer.proffitteoy.chatgpt.site/mcp
+codex mcp login mathematician-humanizer-online
 ```
 
 ### 工具与使用边界
 
 | 工具 | 用途 |
 |---|---|
-| `get_writing_guide` | 读取完整 skill，包括六项论证习惯和 26 项清理规则 |
-| `prepare_mathematical_rewrite` | 提交 `text`，返回完整规则和改写任务；由调用它的 GPT 生成终稿 |
-| `get_reference` | 读取 style、statistics、example 或 license 参考文档 |
+| `get_writing_guide` | 读取完整 v2 数学理解工作流、六项习惯和 26 项规则 |
+| `prepare_mathematical_rewrite` | 保留短文改写入口，并返回原文的真实表层测量 |
+| `get_reference` | 读取 style、statistics、example、understanding 或 license |
+| `analyze_paper` | 实际解析数学环境、章节、编号和引用候选 |
+| `read_paper_source` | 按 Unicode 码点位置重读原文证据 |
+| `query_proof_dependencies` | 检查证据、DAG、阅读覆盖、MAR 和归属，计算目标闭包 |
+| `prepare_explanation_task` | 准备七阶段任务并执行写作/审核门槛 |
+| `audit_mathematical_exposition` | 分别执行数学审查回执、内容保护和当前稿测量 |
+| `measure_exposition` | 单独测量八项中文表层特征，按需返回描述性参考 |
 
-原稿最多 30,000 个 Unicode 码点。稿件会发送到远程 MCP 服务，应用不保存稿件；客户端和托管平台按各自策略处理请求。服务不认证数学证明或作者身份，终稿仍需内容复核。
+公网论文工具使用 `paper={"text":"原文","format":"latex","source":"来源标识"}`，也可把 text 替换为有序的 chunks 字符串数组。每次调用都携带同一原文，服务不保存论文，也不把文档 ID 当成持久存储。单篇最多 2,000,000 码点，请求另受 8 MiB 限制，超限明确拒绝。旧短文改写入口仍限 30,000 码点。
 
-当前托管服务固定使用 skill 0.2.1，来源提交为 [`3b8bded`](https://github.com/proffitteoy/Mathematician-Humanizer/tree/3b8bdeddb1a2d19149deab5e0ab4be2ec0fa420b)，不会自动同步仓库后续更新。连接入口因账号界面而异；浏览器直接打开 `/mcp` 的 GET 405 属于正常协议行为，实际连接以工具扫描和调用结果为准。
+稿件会发送到远程服务；应用不落盘保存，客户端和托管平台按各自策略处理请求。PDF、固定语言学解析器及更细的词面诊断在本地使用。服务不认证数学证明、作者身份或写作质量，统计不代替数学审核。
+
+每次托管发布都固定到一个 Git 提交，不会自动同步后续仓库变更。当前版本、九个工具及实际 `source_commit` 可查看[服务状态](https://mathematician-humanizer.proffitteoy.chatgpt.site/health)。已在线验证站点版本、现有插件的完整 v2 规则和八项实际测量；新增工具的解析、图和测量已通过 Worker/Python 对照测试。三篇真实论文的独立理解效果评价仍未完成。
 
 ## 本地 skill 安装
 
@@ -120,11 +131,11 @@ codex mcp add mathematician-humanizer-online --url https://mathematician-humaniz
 已安装 Git 时，运行：
 
 ```sh
-git clone https://github.com/proffitteoy/style-compiler.git
-cd style-compiler
+git clone https://github.com/proffitteoy/Mathematician-Humanizer.git
+cd Mathematician-Humanizer
 ```
 
-也可以在 [GitHub 仓库页面](https://github.com/proffitteoy/style-compiler)选择 **Code → Download ZIP**，解压后在包含 `SKILL.md` 的目录打开终端。以下安装命令都从这个目录运行。
+也可以在 [GitHub 仓库页面](https://github.com/proffitteoy/Mathematician-Humanizer)选择 **Code → Download ZIP**，解压后在包含 `SKILL.md` 的目录打开终端。以下安装命令都从这个目录运行。
 
 ### 2. 安装到 Codex
 

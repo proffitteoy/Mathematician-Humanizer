@@ -8,9 +8,9 @@
 
 ### 托管 MCP
 
-[README 的旧版 MCP 连接入口](../README.md#通过-mcp-使用)提供显式选择的远程用法。该服务在 Sites 独立维护和部署，尚未同步下述 2.0.0 本地实现。本地 skill 安装仍不涉及远程调用。
+[README 的 MCP 连接入口](../README.md#通过-mcp-使用)提供显式选择的远程用法。Sites 站点已同步 v2（2.0.0）Worker；本地 skill 安装仍不涉及远程调用。
 
-旧服务使用 Streamable HTTP 与公开 No Auth，固定加载本仓库 `3b8bdeddb1a2d19149deab5e0ab4be2ec0fa420b` 的 skill 0.2.1、参考卡、示例及上游 MIT 通知。它只提供旧版文档与改写任务，不执行下述分析；此处不表示已重新验证其线上可用性。
+托管服务保留固定 Git 来源和全部许可，提供九个工具。当前 source_commit 由 `/health` 实际返回，仓库变更不会自动部署。Sites 为 `/mcp` 做 OAuth 身份验证，现有个人插件复用原连接；匿名直连返回带资源发现地址的 401。早期 0.2.1 的 No Auth 说明已由实际连接结果取代，不改变站点公开访问范围。
 
 MCP 适配层的构建与协议测试、ChatGPT 的工具扫描与实际调用分别验证；统计工具的测试不代表远程 MCP 已连接。更新 skill 时须另行更新和部署托管服务，并同步 README 的来源提交；不得将固定版本描述为实时同步。
 
@@ -32,7 +32,7 @@ MCP 适配层的构建与协议测试、ChatGPT 的工具扫描与实际调用�
 
 托管服务提供九个工具：保留三个旧入口，增加 analyze_paper、read_paper_source、query_proof_dependencies、prepare_explanation_task、audit_mathematical_exposition 和 measure_exposition。本地版用 upload_paper_chunk 管理进程内上传，公网版用有序 chunks 和单独测量工具；两种接口不能混用。PDF 和固定语言学解析器仅在本地使用，公网只处理已核对的提取文本与八项字级量测。
 
-托管保护器检查公式、代码、引文和 URL 的准确序列，并将正文变化统一标为待复核；本地 check 还提供更细的词面和 Unicode 诊断。两者都不证明语义保留。发布前将导出结果写入既有 Sites 检出，使用官方 source workflow 推送、保存和部署；不能把 GitHub 合并或本地构建写成线上发布成功。
+托管保护器检查公式、代码、引文和 URL 的准确序列，并将正文变化统一标为待复核；本地 check 还提供更细的词面和 Unicode 诊断。两者都不证明语义保留。发布前将导出结果写入既有 Sites 检出，使用官方 source workflow 推送、保存和部署；Windows 检出用 `/upstream/** -text` 保留上游文件原始字节，防止 Git 换行转换破坏固定来源指纹。不能把 GitHub 合并或本地构建写成线上发布成功。
 
 ### 维护环境与检查
 

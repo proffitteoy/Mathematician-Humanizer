@@ -15,13 +15,13 @@
   <main>
     <div class="intro"><div><span class="tag"><span class="dot"></span>MCP · STREAMABLE HTTP</span><h1>从证明结构理解数学</h1><p class="muted">从主要定理反向追踪必要背景，解释关键引理解决的障碍，再组织连贯讲解。证据检查与真实统计分别进行，数学内容优先。</p></div><div class="version">v2 · 2.0.0<br>证明依赖 · 数学动机 · 双重审核</div></div>
     <div class="grid">
-      <section class="panel" aria-labelledby="connect-title"><div class="panel-head"><h2 id="connect-title">连接到 GPT</h2><span class="pill">公开 · No Auth</span></div><div class="body">
+      <section class="panel" aria-labelledby="connect-title"><div class="panel-head"><h2 id="connect-title">连接到 GPT</h2><span class="pill">公开站点 · 插件连接</span></div><div class="body">
         <div class="label">MCP 服务器地址</div><div id="endpoint" class="endpoint"></div>
         <div class="actions"><button class="primary" id="copy-url" type="button">复制 MCP 地址</button><span id="url-status" class="status" role="status"></span></div>
-        <ol class="small"><li>在 ChatGPT 的自定义 MCP 配置中填入上方公网地址，认证选择 <strong>No Auth / 无身份验证</strong>，然后扫描工具。其他 MCP 客户端选择 Streamable HTTP 和同一地址。</li><li>安装并在对话中启用 <strong>Mathematician Humanizer</strong>，提交论文原文或有序分块，并说明目标读者。</li><li>先用 <code>analyze_paper</code> 解析，再按阶段重建依赖、分析动机、生成讲解和审核。短文仍可使用原改写入口。</li></ol>
+        <ol class="small"><li>在个人或 Created by you 插件列表中启用 <strong>Mathematician Humanizer v2</strong>。已有连接继续使用原插件；其他 Streamable HTTP 客户端通过 OAuth 自动发现完成登录。</li><li>安装并在对话中启用 <strong>Mathematician Humanizer</strong>，提交论文原文或有序分块，并说明目标读者。</li><li>先用 <code>analyze_paper</code> 解析，再按阶段重建依赖、分析动机、生成讲解和审核。短文仍可使用原改写入口。</li></ol>
         <button class="secondary" id="copy-prompt" type="button">复制调用示例</button> <span id="prompt-status" class="status" role="status"></span>
-        <div class="actions"><button class="secondary" id="check-service" type="button">检查服务</button><span id="check-status" class="status" role="status"></span></div>
-        <p class="note">任何人都可以连接，无需登录或 API 密钥。改写由当前 GPT 完成；服务器实际解析、检查证据并测量当前稿，不保存论文，不在后台生成文章。每次论文调用携带同一原文或有序分块；单篇最多 2,000,000 码点，请求最多 8 MiB。PDF 先本地提取并核对公式。ChatGPT 中自定义 MCP 入口的名称与可用性取决于账号及工作区设置。</p>
+        <div class="actions"><button class="secondary" id="check-service" type="button">检查发布版本</button><span id="check-status" class="status" role="status"></span></div>
+        <p class="note">站点网页公开；MCP 连接由 Sites 验证身份，无需另配模型 API 密钥。改写由当前 GPT 完成；服务器实际解析、检查证据并测量当前稿，不保存论文，不在后台生成文章。每次论文调用携带同一原文或有序分块；单篇最多 2,000,000 码点，请求最多 8 MiB。PDF 先本地提取并核对公式。ChatGPT 中自定义 MCP 入口的名称与可用性取决于账号及工作区设置。</p>
       </div></section>
       <section class="panel" aria-labelledby="tools-title"><div class="panel-head"><h2 id="tools-title">GPT 可调用的工具</h2><span class="pill">9 个只读工具</span></div>
         <div class="tool"><code>prepare_mathematical_rewrite</code><h3>准备改写</h3><p>接收原稿、读者背景和输出语言，返回完整规则与任务；GPT 随后完成终稿。</p></div>
@@ -46,25 +46,13 @@
     document.getElementById('check-service').addEventListener('click', async () => {
       const button = document.getElementById('check-service');
       const status = document.getElementById('check-status');
-      button.disabled = true; status.textContent = '检查中…'; let id = 1;
-      async function call(method, params) {
-        const res = await fetch('/mcp', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' }, body: JSON.stringify({ jsonrpc: '2.0', id: id++, method, params }), signal: AbortSignal.timeout(15000) });
-        if (!res.ok) throw new Error('服务返回 HTTP ' + res.status);
-        const message = await res.json();
-        if (message.error || message.result?.isError) throw new Error(message.error?.message || '工具调用失败');
-        return message.result;
-      }
+      button.disabled = true; status.textContent = '检查中…';
       try {
-        await call('initialize', { protocolVersion: '2025-11-25', clientInfo: { name: 'site-connection-check', version: '1.0' }, capabilities: {} });
-        const list = await call('tools/list', {});
-        if (list.tools?.length !== 9) throw new Error('工具发现不完整');
-        const guide = await call('tools/call', { name: 'get_writing_guide', arguments: {} });
-        if (!guide.content?.[0]?.text.includes('### 26.')) throw new Error('写作规则不完整');
-        const task = await call('tools/call', { name: 'prepare_mathematical_rewrite', arguments: { text: '若 A 满列秩，则最小二乘系数唯一。', language: 'zh' } });
-        if (!task.content?.[0]?.text.includes('perform the rewrite NOW')) throw new Error('改写任务不完整');
-        const measured = await call('tools/call', { name: 'measure_exposition', arguments: { text: '投影确定拟合向量，核描述系数自由度。' } });
-        if (JSON.parse(measured.content[0].text).status !== 'measured') throw new Error('统计测量未执行');
-        status.textContent = '已通过：初始化、9 个工具、v2 规则、真实测量';
+        const response = await fetch('/health', { signal: AbortSignal.timeout(15000) });
+        if (!response.ok) throw new Error('状态接口 HTTP ' + response.status);
+        const health = await response.json();
+        if (health.server_version !== '2.0.0' || health.tools?.length !== 9) throw new Error('部署版本或工具数量不匹配');
+        status.textContent = 'v2 已部署 · 9 个工具 · 来源 ' + health.source_commit.slice(0, 7) + '；MCP 请用插件或 OAuth 连接';
       } catch (error) { status.textContent = error.message || '检查失败，请稍后重试'; }
       finally { button.disabled = false; }
     });
