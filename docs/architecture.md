@@ -1,20 +1,64 @@
-# 结构与运行协议
+# 安装与运行协议
 
-## 技能交付与可选维护工具
+## 安装方式
 
 根目录 `SKILL.md` 是唯一技能正文，包含数学理解工作流、六项论证习惯与 Humanizer 26 项表达规则。`references/mathematical-understanding.md` 给出 MAR 与阶段合同；两张生成卡保留描述性研究依据。独立 skill 可不安装运行时；完整工具闭环需要 Python 和实际调用。
 
 最小安装内容为 `SKILL.md`、`references/` 与 `agents/openai.yaml`。不需要复制 `src/`、`research/` 或安装 Python。根目录单一入口、技能元数据与具体前后例子的写法参考 Humanizer；本项目不承诺未经验证的平台插件兼容性。
 
+### 本地 skill 安装
+
+获取仓库后，从包含 `SKILL.md` 的根目录运行。以下命令安装到当前用户的 Codex 技能目录，保留参考文档和完整上游许可。
+
+Windows PowerShell：
+
+```powershell
+$skillTarget = Join-Path $HOME ".agents/skills/mathematician-humanizer"
+New-Item -ItemType Directory -Force $skillTarget, "$skillTarget/references", "$skillTarget/agents" | Out-Null
+Copy-Item .\SKILL.md -Destination $skillTarget -Force
+Copy-Item .\references\* -Destination "$skillTarget/references" -Recurse -Force
+Copy-Item .\agents\* -Destination "$skillTarget/agents" -Recurse -Force
+```
+
+macOS / Linux：
+
+```sh
+skill_target="$HOME/.agents/skills/mathematician-humanizer"
+mkdir -p "$skill_target"
+cp SKILL.md "$skill_target/"
+cp -R references agents "$skill_target/"
+```
+
+安装目录应直接包含 `SKILL.md`，重启助手后调用 `$mathematician-humanizer`。单项目安装可将目标改为项目的 `.agents/skills/mathematician-humanizer/`。更新时先 `git pull --ff-only`，再复制同一组文件；复制会覆盖同名文件，手动修改过的安装内容应先保留。
+
+Python 工具安装使用 `python -m pip install -e .`；需要 PDF 与 MCP 时使用 `python -m pip install -e ".[pdf,mcp]"`。核心命令需要 Python 3.11+，固定仪器和托管构建另有下文的版本要求。
+
+## 工具与输入
+
+| 工具 | 本地输入与行为 | 公网输入与行为 |
+|---|---|---|
+| `get_writing_guide` | 读取资源目录的完整 skill | 读取固定提交的完整 skill |
+| `get_reference` | `name` 选择 style/statistics/example/license/understanding | `document` 或 `name` 选择同组参考 |
+| `prepare_mathematical_rewrite` | `text`、`language`、`reader`，返回规则与真实反馈 | 另兼容 `audience`、`explain_changes`；短稿上限 30,000 码点 |
+| `analyze_paper` | `text`、`format`、`source`，返回进程内文档 ID 与目录 | `paper` 内提供 text 或有序 chunks；默认返回目录，可用 include_text 返回完整结构 |
+| `upload_paper_chunk` | 分块索引、总数与 upload_id，精确拼接 | 使用 paper.chunks；公网不保留上传状态 |
+| `read_paper_source` | `document_id`、`start`、`max_chars` | 每次携带 paper，再指定窗口 |
+| `query_proof_dependencies` | 文档 ID、annotations、可选 targets | paper、annotations、可选 targets |
+| `prepare_explanation_task` | 文档 ID、stage、相应材料 | paper、stage、相应材料 |
+| `audit_mathematical_exposition` | 源文档、标注、baseline、candidate、可选 review | 同类材料；每次携带 paper |
+| `measure_exposition` | 由 analyze / audit 等接口返回测量 | 独立接收 text 与语言、体裁、读者、参考来源 |
+
+两种 MCP 各有九个工具：本地含上传接口，公网含独立测量接口。原文位置为 Unicode 码点半开区间；分块不能丢失、插入或归一化字符，不能将文档 ID 当作公网持久存储。
+
 ### 托管 MCP
 
-[README 的 MCP 连接入口](../README.md#通过-mcp-使用)提供显式选择的远程用法。Sites 站点已同步 v2（2.0.0）Worker；本地 skill 安装仍不涉及远程调用。
+[README 的 MCP 连接入口](../README.md#公网-mcp)提供显式选择的远程用法。Sites 站点已同步 v2（2.0.1）Worker；本地 skill 安装仍不涉及远程调用。
 
 托管服务保留固定 Git 来源和全部许可，提供九个工具。当前 source_commit 由 `/health` 实际返回，仓库变更不会自动部署。Sites 为 `/mcp` 做 OAuth 身份验证，现有个人插件复用原连接；匿名直连返回带资源发现地址的 401。早期 0.2.1 的 No Auth 说明已由实际连接结果取代，不改变站点公开访问范围。
 
 MCP 适配层的构建与协议测试、ChatGPT 的工具扫描与实际调用分别验证；统计工具的测试不代表远程 MCP 已连接。更新 skill 时须另行更新和部署托管服务，并同步 README 的来源提交；不得将固定版本描述为实时同步。
 
-### 2.0.0 本地 MCP
+### 本地 MCP
 
 安装 `.[mcp]` 后运行 `mathematician-humanizer-mcp --resources .`，默认 stdio；`--transport streamable-http` 仅监听 `127.0.0.1:8765/mcp`。资源根固定由启动者指定，参考工具仅允许四个命名资源，不暴露任意文件读取。PDF 提取另装 `.[pdf]`，用 CLI 在本地执行，不通过 MCP 读取任意服务端路径。
 
@@ -34,7 +78,7 @@ MCP 适配层的构建与协议测试、ChatGPT 的工具扫描与实际调用�
 
 托管保护器检查公式、代码、引文和 URL 的准确序列，并将正文变化统一标为待复核；本地 check 还提供更细的词面和 Unicode 诊断。两者都不证明语义保留。发布前将导出结果写入既有 Sites 检出，使用官方 source workflow 推送、保存和部署；Windows 检出用 `/upstream/** -text` 保留上游文件原始字节，防止 Git 换行转换破坏固定来源指纹。不能把 GitHub 合并或本地构建写成线上发布成功。
 
-### 维护环境与检查
+## 维护与发布
 
 以下命令供维护者更新统计卡和检查仓库使用。Python 3.11+，默认只用标准库；从仓库根目录运行：
 
@@ -49,9 +93,16 @@ python -m style_compiler check examples/rewrite.original.txt examples/rewrite.fi
 
 也可在已有 Python 环境运行 `python -m pip install -e .`，使用 `style-compiler` 命令。写作由调用 skill 的语言模型完成；这些工具用于测量、参考卡更新和内容检查，不生成文章。研究路线、冻结结果与验证边界见[研究说明](research.md)。
 
-## 表达与版式反馈
+表达规则变更后同时核对 `SKILL.md`、阶段 Prompt、生成卡、示例和网页。`profiles.py` 的说明变更后运行 `compile`；研究文件及其冻结指纹保留原值。`check` 的 `presentation` 返回独立公式实际数量与位置、相邻堆叠及待复核句型，默认预算为 3 块。
 
-当前稿的 presentation 与八项统计分开报告：独立公式默认最多 3 块，并给出实际计数、位置、相邻堆叠及需复核句型。正文采用直接陈述；真实问题、实质数学对比和受保护公式需结合上下文处理。数学审核通过只允许进入编辑阶段，表达检查仍需独立完成。
+托管构建需要 Python 3.12（Unicode 15.0.0）和 Node：
+
+```sh
+python site/build.py
+node --test site/test.mjs
+```
+
+构建的分发文档来自当前 HEAD 的 Git blob，发布前先完成源码提交，再生成产物。导出到既有 Sites 检出使用 `python site/build.py --output /absolute/site/checkout`；在那里运行 `node build.mjs` 与 `node --test test.mjs`，再通过 Sites 官方流程推送、保存和部署。服务状态中的 source_commit 应与此次导出提交一致。
 
 ## 代码职责
 
@@ -93,6 +144,8 @@ schema 为 `math-document/1`、`proof-reconstruction/1`、`mathematical-task/1`�
 structure/proof 可以在未完成的材料上准备任务；motivation/literature 可以收到缺口用于修复。exposition/editorial 要求目标闭包有 MAR 和 coverage，全文已读覆盖无空洞，图与归属 findings 清空。coverage 是模型或审阅者的声明，工具只检查这些声明的源文绑定，不证明人或模型真正阅读理解了内容。
 
 数学审核独立记录 hypotheses、dependencies、mechanisms、attribution、scope 五类实际检查，包含候选片段、理由和原文证据。候选 SHA、源文 ID 与 reconstruction_sha256 必须匹配；证明图/MAR 改变也使旧审核失效。只要存在 fail/unresolved、图 findings 或受保护内容改变，就不允许进入语言修订。回执可以由模型提交，不能称为独立专家审查。
+
+`editorial_revision_allowed` 只表示数学材料已满足进入编辑阶段的条件。`presentation_review_required` 单独指出表达与版式仍待复核；不能将前一个布尔值当成正文已满足全部排版要求。默认最多 3 个独立公式块，短等式优先行内。真实问题、实质对比和受保护公式按上下文处理，工具不自动删改文本。
 
 统计审核对当前候选实际运行八项字级量并返回句级位置。显式选择 `--reference-source baike/web` 时核验冻结结果指纹，只比较研究支持的特征；短稿未满足比较支持门时不产生区间判断。该来源不是论文讲解体裁的已验证目标。默认不选参考，不将所有体裁挤进一个数值分布。英文无固定本地仪器时返回 unavailable，沿用下文单独的英语命令。
 
