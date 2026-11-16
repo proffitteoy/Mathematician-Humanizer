@@ -121,7 +121,8 @@ def prepare_stage(stage, document, annotations=None, reader="unspecified", known
         if annotations.get("document_id") != document["document_id"]:
             raise ValueError("Starting annotations belong to another document")
         result["starting_annotations"] = annotations
-    if stage in {"motivation", "literature", "exposition", "mathematical_audit", "editorial"}:
+    # Initial literature work precedes the proof graph; later visits can inspect its gaps.
+    if stage in {"motivation", "exposition", "mathematical_audit", "editorial"} or (stage == "literature" and annotations is not None):
         if annotations is None:
             raise ValueError("This stage requires evidence-bound proof annotations")
         graph = reconstruct(document, annotations)

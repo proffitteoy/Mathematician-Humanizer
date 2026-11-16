@@ -110,6 +110,7 @@ def main():
             "Run `node build.mjs` then `node --test test.mjs`. The build verifies pinned upstream hashes and does not fetch source.\n\n"
             "Nine tools cover source parsing, exact source windows, evidence-bound DAG/MAR, staged tasks, separate audits, actual surface measurement and the three compatibility entries. Paper calls must carry original text or ordered chunks; manuscripts are not stored.\n\n"
             "Presentation feedback counts standalone math blocks (default limit: 3) and flags staged questions or habitual not-X-but-Y turns. Inline equations are preferred; real questions, substantive contrasts and protected mathematics require contextual review.\n\n"
+            "Literature tasks can start before proof annotations and revisit evidence gaps. The calling assistant performs actual search and reading, deduplicates works, and compares mechanisms and limits; the Worker does not contain a search engine. Proof plans explain subgoals and interfaces, and prose paragraphs follow complete units of argument.\n\n"
             "No proof certification, background model calls or author/quality scores. PDF and fixed linguistic parsers remain local. Full upstream MIT notice is preserved under upstream/references/.\n", encoding="utf-8", newline="\n")
     print(json.dumps({"output": str(output), "version": data["version"], "source_commit": commit, "documents": len(paths)}))
 

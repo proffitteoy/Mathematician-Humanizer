@@ -20,12 +20,15 @@ flowchart TD
 python -m pip install -e .
 mkdir artifacts
 style-compiler read-paper examples/argument.tex -o artifacts/argument.document.json
+style-compiler prepare-explanation literature artifacts/argument.document.json --reader "核查正交投影定理的适用条件"
 style-compiler reconstruct artifacts/argument.document.json examples/argument.annotations.json
 style-compiler prepare-explanation motivation artifacts/argument.document.json --annotations examples/argument.annotations.json --reader "熟悉线性代数，不熟悉该证明"
 style-compiler prepare-explanation exposition artifacts/argument.document.json --annotations examples/argument.annotations.json --known-node n1
 ```
 
 `reconstruct` 应返回 `prerequisite_order=[n1,n2,n4,n6]`、空 findings 和 `mathematical_validity=not_certified`。已知 n1 只减少背景讲解，不从图中删除它。原文和讲解的公式可能重排，保护基线使用本轮讲解草稿。
+
+literature 命令在没有 annotations 时也能准备任务，调用助手还需使用实际搜索工具读取来源；这条命令本身不会联网。子目标计划可另记为：先在像空间取得唯一最优向量，再在原空间描述其全部纤维；前一步的输出成为后一步的目标值。原始研究与更完整的 Cauchy 定理机制、条件变化案例见 [研究报告](../docs/proof-understanding-research.md)。
 
 ```sh
 style-compiler audit-exposition artifacts/argument.document.json examples/argument.annotations.json examples/argument.exposition.txt examples/argument.exposition.txt

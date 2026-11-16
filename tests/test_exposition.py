@@ -41,6 +41,18 @@ class ExpositionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             prepare_stage("exposition", self.doc, self.data)
 
+    def test_initial_literature_precedes_graph_and_later_visits_receive_gaps(self):
+        initial = prepare_stage("literature", self.doc)
+        self.assertEqual(initial["document_id"], self.doc["document_id"])
+        self.assertTrue(initial["source_index"])
+        self.assertNotIn("reconstruction", initial)
+        self.data["coverage"]["n4"]["status"] = "gap"
+        later = prepare_stage("literature", self.doc, self.data)
+        self.assertTrue(later["reconstruction"]["findings"])
+        wrong = dict(self.data, document_id="another-source")
+        with self.assertRaises(ValueError):
+            prepare_stage("literature", self.doc, wrong)
+
     def test_measured_statistics_bind_exact_text_and_locations(self):
         result = statistical_feedback(DRAFT, research=ROOT / "research", reference_source="web")
         self.assertEqual(result["measurement"]["text_sha256"], text_hash(DRAFT))

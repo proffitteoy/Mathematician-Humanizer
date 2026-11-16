@@ -320,7 +320,7 @@ async function prepareTask(args, document) {
     source_access: 'Stateless service: supply the same original paper on each call; read exact spans with read_paper_source. An index is not proof of reading.' };
   if (['exposition', 'editorial'].includes(stage)) result.presentation_policy = { max_display_math_blocks: DATA.display_math_limit, prefer_inline_math: true, invented_reader_questions: false, default_prose: 'Direct mathematical statements and causal connections; no staged question-answer sequence or habitual not-X-but-Y turns' };
   if (['structure', 'proof'].includes(stage) && annotations) { if (annotations.document_id !== document.document_id) throw Error('Starting annotations belong to another document'); result.starting_annotations = annotations; }
-  if (!['structure', 'proof'].includes(stage)) {
+  if (['motivation', 'exposition', 'mathematical_audit', 'editorial'].includes(stage) || (stage === 'literature' && annotations != null)) {
     if (!annotations) throw Error('This stage requires evidence-bound annotations');
     const graph = await reconstruct(document, annotations), known = new Set(known_nodes);
     if ([...known].some(k => !graph.nodes.some(n => n.id === k))) throw Error('Reader knowledge refers to unknown nodes');

@@ -32,14 +32,14 @@ test('v2 discovery and every supported initialization protocol', async () => {
   const discovered = await rpc('server/discover'); assert.deepEqual(discovered.body.result.supportedVersions, ['2026-07-28']);
   for (const protocolVersion of ['2024-11-05', '2025-03-26', '2025-06-18', '2025-11-25', '2026-07-28']) {
     const { body } = await rpc('initialize', { protocolVersion, capabilities: {}, clientInfo: { name: 'test' } });
-    assert.equal(body.result.serverInfo.version, '2.0.1'); assert.equal(body.result.protocolVersion, protocolVersion);
+    assert.equal(body.result.serverInfo.version, '2.0.2'); assert.equal(body.result.protocolVersion, protocolVersion);
   }
   const list = await rpc('tools/list'); assert.equal(list.body.result.tools.length, 9);
   for (const tool of list.body.result.tools) { assert.equal(tool.inputSchema.additionalProperties, false); assert.equal(tool.annotations.readOnlyHint, true); }
 });
 
 test('full v2 skill, all 26 rules and upstream license remain available', async () => {
-  const guide = await call('get_writing_guide'); assert.ok(guide.endsWith(original)); assert.match(guide, /Skill version: 2\.0\.1/);
+  const guide = await call('get_writing_guide'); assert.ok(guide.endsWith(original)); assert.match(guide, /Skill version: 2\.0\.2/);
   assert.equal((original.match(/^### \d+\./gm) ?? []).length, 26);
   assert.match(await call('get_reference', { document: 'license' }), /Siqi Chen/);
   assert.match(await call('get_reference', { name: 'understanding' }), /MAR/);
@@ -58,7 +58,7 @@ test('source-bound graph, prerequisites and canonical reconstruction hash match 
   assert.deepEqual(await reconstruct(doc, example.annotations), example.graph);
   const task = await call('prepare_explanation_task', { paper: example.paper, stage: 'exposition', annotations: example.annotations, known_nodes: ['n1'] });
   assert.deepEqual(task.explanation_order, ['n2', 'n4', 'n6']); assert.ok(task.reconstruction.prerequisite_order.includes('n1'));
-  assert.equal(task.prompt_version, '2.0.1'); assert.ok(task.writing_guide.includes('### 26.'));
+  assert.equal(task.prompt_version, '2.0.2'); assert.ok(task.writing_guide.includes('### 26.'));
 });
 
 test('long ordered chunks and exact source windows exceed old 30,000-character cap', async () => {
@@ -69,6 +69,19 @@ test('long ordered chunks and exact source windows exceed old 30,000-character c
   assert.equal(read.quote, Array.from(text).slice(2, 22).join(''));
   const unknown = await rpc('tools/call', { name: 'read_paper_source', arguments: { document_id: index.document_id } });
   assert.equal(unknown.body.result.isError, true); // IDs do not pretend to provide persistent Worker storage.
+});
+
+test('literature can start before annotations and revisit graph gaps with source binding', async () => {
+  const initial = await call('prepare_explanation_task', { paper: example.paper, stage: 'literature' });
+  assert.equal(initial.document_id, example.document.document_id);
+  assert.ok(initial.source_index.length); assert.equal(initial.reconstruction, undefined);
+  const data = structuredClone(example.annotations);
+  data.coverage.n6.status = 'gap';
+  const later = await call('prepare_explanation_task', { paper: example.paper, stage: 'literature', annotations: data });
+  assert.ok(later.reconstruction.findings.length);
+  data.document_id = 'another-source';
+  const wrong = await rpc('tools/call', { name: 'prepare_explanation_task', arguments: { paper: example.paper, stage: 'literature', annotations: data } });
+  assert.equal(wrong.body.result.isError, true);
 });
 
 test('fabricated evidence, cycles and unsupported attribution fail or block writing', async () => {
