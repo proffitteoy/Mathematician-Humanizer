@@ -37,7 +37,7 @@
   <footer><span>Mathematician Humanizer v2 · 数学理解与讲解</span><a href="https://github.com/proffitteoy/Mathematician-Humanizer/blob/__SOURCE_SHA__/SKILL.md" target="_blank" rel="noopener noreferrer">查看 skill 原文 ↗</a></footer>
   <script>
     const endpoint = window.location.origin + '/mcp';
-    const prompt = "请使用 Mathematician Humanizer v2 阅读附上的数学论文。先调用 analyze_paper，再用 prepare_explanation_task 分阶段准确记录主要定理、重建依赖和数学动机，最后生成连贯讲解并调用 audit_mathematical_exposition。读者熟悉线性代数。区分作者明说、数学重建与未核实联系；每次调用携带同一原文或有序分块，不宣称工具证明了定理。";
+    const prompt = "请使用 Mathematician Humanizer v2 阅读附上的数学论文。先调用 analyze_paper 并准备 literature 任务，使用实际检索工具阅读相关原始资料，按独立作品比较方法、条件与限制。再用 prepare_explanation_task 准确记录主要定理、重建依赖、子目标计划和数学动机，按完整论证组织连贯段落，并调用 audit_mathematical_exposition。读者熟悉线性代数。区分作者明说、数学重建与未核实联系；每次调用携带同一原文或有序分块，不宣称工具证明了定理。";
     document.getElementById('endpoint').textContent = endpoint;
     document.getElementById('prompt-example').textContent = prompt;
     async function copy(value, status) { try { await navigator.clipboard.writeText(value); status.textContent = '已复制'; } catch { status.textContent = '请选中文字后复制'; } }

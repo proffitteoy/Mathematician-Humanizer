@@ -1,6 +1,6 @@
 # 数学理解与讲解的 Prompt 工程
 
-当前 Prompt 版本为 `2.0.1`，可执行正文位于 [prompts.py](../src/math_exposition/prompts.py)。这里说明设计依据、数据合同、交接门槛、实例与评价。每次调用只准备一个阶段，携带所需的数学结构与原文证据。
+当前 Prompt 版本为 `2.0.2`，可执行正文位于 [prompts.py](../src/math_exposition/prompts.py)。这里说明设计依据、数据合同、交接门槛、实例与评价；[研究报告](proof-understanding-research.md)记录实际正文阅读、比较、限制和数学案例。每次调用只准备一个阶段，携带所需的数学结构与原文证据。
 
 ## 目标、职责与可验证范围
 
@@ -8,14 +8,17 @@
 
 Python 提供文本结构、身份、证据核对、图运算、任务门槛和测量。调用模型负责数学解释，外部检索工具负责实际取得文献，人类审阅者负责重要数学判断的独立检查。没有自动证明器、隐式联网、第二模型调用或已经验证的能力提升。
 
-本版采用一个总控、四个理解阶段、一个表达阶段和两个审核阶段。同一个模型可按顺序执行，不以多模型数量作为设计目标。
+本版采用一个总控、四个理解阶段、一个表达阶段和两个审核阶段。literature 可在没有证明图时启动，并在有缺口处重入；用户明确要求调研时必须先实际检索和读取资料。同一个模型可执行这些阶段，不以多模型数量作为设计目标。
 
 ```mermaid
 flowchart TD
-  S[structure: 原文与准确结果] --> P[proof: 依赖与 MAR]
+  L0[literature: 用户要求时先查资料] --> S[structure: 原文与准确结果]
+  S --> P[proof: 依赖、计划与 MAR]
   P --> M[motivation: 障碍、选择、机制、思想]
-  M --> L[literature: 针对性来源核查]
-  L --> E[exposition: 读者适配的连贯讲解]
+  P -->|证据缺口| L[literature: 针对性来源核查]
+  M -->|证据缺口| L
+  L --> P
+  M --> E[exposition: 读者适配的连贯讲解]
   E --> A[mathematical_audit: 五类内容检查]
   A -->|未解决| P
   A -->|回执有效且无阻塞| R[editorial: 实际测量与局部修改]
@@ -48,14 +51,14 @@ MAR 的九类内容是完整 Statement、Hypotheses、Conclusion、Dependencies�
 | 阶段 | 最小输入 | 产物 | 程序检查与后续门槛 |
 |---|---|---|---|
 | structure | 原文、警告、指定范围、读者背景 | 主要结果、全局假设、notation、reading_coverage、source_gaps | 原文身份和节点偏移可重建；下一步仍需模型核对提取边界 |
-| proof | 准确结果、完整证明、外部条件 | 方向明确的 edges、局部步骤、coverage、初步 arguments | 证据逐字相等；已知节点；无重复/自环/环路；计算必要闭包 |
+| proof | 准确结果、完整证明、外部条件 | 方向明确的 edges、局部步骤、coverage、初步 arguments；另附 proof_plan | 证据逐字相等；已知节点；无重复/自环/环路；计算必要闭包 |
 | motivation | 图、关键构造原文、缺口 | obstruction/mechanism/idea、分类 claims、待核问题 | 缺失 MAR、unresolved 与错误归属形成 findings |
-| literature | 关键来源问题、本文引文 | 实读 external_sources、方法比较与检索账本 | 历史来源无外部正文时阻塞；不声称程序已联网检索 |
+| literature | 用户资料要求与目录；已有时再带图和待核问题 | 实读 external_sources、作品去重、方法比较与检索账本 | 可无 annotations 启动；回查时保留图 findings；不声称程序已联网检索 |
 | exposition | 已完成 MAR、依赖顺序、读者知识 | article、claim_map、删去背景的理由、open_issues | 图 findings 不为空时拒绝准备正文任务 |
 | mathematical_audit | 正文、原文、MAR、baseline | 五类审查 checks、候选哈希、原文 evidence | 区间/源文/哈希匹配；缺项、fail、unresolved 不进入润色 |
 | editorial | 当前审核回执、真实测量、风格规则 | article、局部 changes、保留异常的理由 | 重新计算审核门槛和测量，不接受伪造成功布尔值或过期回执 |
 
-structure 的 source_gaps、notation、exposition 的 claim_map 和 editorial 的 changes 是模型工作材料，目前没有全面语义验证器。不得把 JSON 字段存在描述为论证已核实。
+structure 的 source_gaps、notation、proof_plan、来源账本、exposition 的 claim_map 和 editorial 的 changes 是模型工作材料，目前没有全面语义验证器。proof_plan 和账本另附，不增加 annotations 的必需字段；不得把 JSON 字段存在描述为论证已核实。
 
 ## Proof Reconstruction 的操作细节
 
@@ -64,6 +67,8 @@ structure 的 source_gaps、notation、exposition 的 claim_map 和 editorial �
 对每条边必须回答三个可核查问题：前提给出的事实、目标的使用位置、事实如何跨过当前障碍。不要把 role 写成“为定理提供基础”。例如“投影引理把最优系数的像限定到唯一的 y*，纤维引理再描述全部原像”具有可检查的接口。
 
 同时保存两层关系：论文层的定义/引理/主结果，局部层的关键推导。局部步骤可用手工 proof 节点表示；检查量词见证、反证假设解除、交换极限和积分、局部拼接、参数一致性等真正决定结论的步骤。
+
+另附 proof_plan 说明目标、子目标、各步的输入/输出、执行顺序和选择理由，连接相应节点及证据。依赖边回答使用了什么，计划还需解释怎样完成目标；在决定性步骤给出实际推导，写清条件的使用点。合理的反向规划是数学重建，不能写成作者真实发现过程。
 
 常见误判与修复：
 
@@ -82,6 +87,8 @@ structure 的 source_gaps、notation、exposition 的 claim_map 和 editorial �
 正文采用连贯的数学陈述，不把内部核查问题复制成“为什么”“你可能会问”或“先问、再问”。用户提出的实际疑问可以直接回答；作者的原话保留来源，模型不为读者补写心理活动。
 
 段落衔接以具体用途、条件与因果为主。习惯性的“不是……而是……”容易在没有真实分歧时制造转折，应改为明确判断。纠正原文中的错误、必要条件比较和反例仍需保留相应关系。
+
+每段围绕完整论证单元展开，把当前障碍、使用条件、构造和结果连起来，下段承接已经取得的事实。按对象、子目标或推理层次变化分段；不按句号分段，不把内部字段逐项排成正文，也不机械规定每段句数。编辑时通读相邻段的连接，物理行数不承担段落连贯性的测量。
 
 默认全文最多 3 个独立公式块。短符号和等式放在句内，独立位置用于主结果、关键等式或确需引用的推导，每块前后有实质说明。不能连续堆式或把不相关公式塞进大型 aligned 压缩计数。用户明确的完整逐步推导要求、受保护原文形成的例外需要登记实际预算与理由，数学内容不能为凑数而删去。
 
@@ -114,7 +121,7 @@ structure 的 source_gaps、notation、exposition 的 claim_map 和 editorial �
 
 思想迁移也有完成门槛：新对象是否满足定义域要求，构造是否良定义，存在/唯一/相容性是否保持。没有完成这些检查的推广只能列为待核联系。
 
-## 来源归属与检索预算
+## 来源归属与实际检索
 
 | 判断 | 允许的记录 | 不允许的跳跃 |
 |---|---|---|
@@ -123,13 +130,17 @@ structure 的 source_gaps、notation、exposition 的 claim_map 和 editorial �
 | 思想联系尚未证实 | unverified，保留具体待核项 | 不能改成“借鉴”“首次”“受到启发” |
 | 思想/方法来源 | historical_origin，本文与已读原始来源 | 有引文或相似词汇不等于最早发现 |
 
-检索服务于一个已经定位的问题。先读本文引文，再查原始工作；建议每问题最多两轮针对性补检，仍未解决就记录 unanswered。这个预算是避免无目标扩展的建议，不是支持断言的证据。
+检索可在解释前启动，也可针对证明中的新缺口补检。用户明确要求查资料时，先实际查询并取得原始资料正文，再形成方案；不能以没有历史主张为由略过。按 DOI、arXiv ID 或题名/作者给作品标识，同文的镜像和不同版本合并登记，并保留实际读取版本。综述和方法比较需要不同工作的机制、条件及局限对照，单个外部定理则以合适来源核对，不凑篇数。
+
+账本连接 question/node、实际 tool/query、work_id/version/urls、read_sections、role、supports、limits、unread、access_failures、comparison、unanswered 与 next_needed。逐项核对断言、来源段落及本处适用条件；冲突保留对象和版本差别。按缺口决定补检或停止，不以固定两轮为完成标准。工具、时间或访问受限时缩小结论，不能虚构执行过程。
 
 本地 MCP 不包含搜索引擎。调用模型必须使用环境中实际可用的工具；没有工具就交付清楚的证据缺口，不虚构检索日志。历史来源检查可降级为不作历史断言，但不能只改 basis 名称掩盖未解决的数学问题。
 
 ## 审核、局部修订与失效规则
 
 数学审核先形成待核断言与独立问题，再回原文回答，最后修订。五类 checks 中每项都要有候选片段、理由、源文锚点和 pass/fail/unresolved。review 同时绑定 document_id、candidate_sha256 和程序返回的 reconstruction_sha256；即使正文没变，证明图或 MAR 改变也须重新审核。模型提交的回执仍是模型审查记录，不能冒充独立专家意见。
+
+同一上下文中仍可见草稿时，应如实称同上下文复核。文字上的“独立问题”没有实现草稿隔离、第二模型调用或专家审查；重复自评不增加外部证据。对重要疑点应回读原文、检查推导或反例，必要时交独立内容审阅。[研究报告](proof-understanding-research.md)同时记录 CoVe 的实际设置与无外部反馈自我纠错的负面结果，不把它们合成效果承诺。
 
 baseline 是本轮开始时已核对的讲解，不是论文全文。改写可以重排材料，整篇论文和讲解的公式序列本来不同；内容保护必须比较同轮草稿。明确授权的公式更正另行检查并更新基线。
 

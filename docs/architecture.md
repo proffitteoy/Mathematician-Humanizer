@@ -52,7 +52,7 @@ Python 工具安装使用 `python -m pip install -e .`；需要 PDF 与 MCP 时�
 
 ### 托管 MCP
 
-[README 的 MCP 连接入口](../README.md#公网-mcp)提供显式选择的远程用法。Sites 站点已同步 v2（2.0.1）Worker；本地 skill 安装仍不涉及远程调用。
+[README 的 MCP 连接入口](../README.md#公网-mcp)提供显式选择的远程用法。Sites 站点分发 v2（2.0.2）Worker；实际版本与来源以 `/health` 为准，本地 skill 安装仍不涉及远程调用。
 
 托管服务保留固定 Git 来源和全部许可，提供九个工具。当前 source_commit 由 `/health` 实际返回，仓库变更不会自动部署。Sites 为 `/mcp` 做 OAuth 身份验证，现有个人插件复用原连接；匿名直连返回带资源发现地址的 401。早期 0.2.1 的 No Auth 说明已由实际连接结果取代，不改变站点公开访问范围。
 
@@ -141,7 +141,7 @@ schema 为 `math-document/1`、`proof-reconstruction/1`、`mathematical-task/1`�
 
 ### 门槛与审查边界
 
-structure/proof 可以在未完成的材料上准备任务；motivation/literature 可以收到缺口用于修复。exposition/editorial 要求目标闭包有 MAR 和 coverage，全文已读覆盖无空洞，图与归属 findings 清空。coverage 是模型或审阅者的声明，工具只检查这些声明的源文绑定，不证明人或模型真正阅读理解了内容。
+structure/proof 可以在未完成的材料上准备任务；literature 可无 annotations 启动资料初检，有标注时接收实际图和缺口，motivation 同样可收到缺口用于修复。用户要求调研时，调用模型应先执行检索与正文读取；prepare_explanation_task 只准备任务，不包含搜索引擎。exposition/editorial 要求目标闭包有 MAR 和 coverage，全文已读覆盖无空洞，图与归属 findings 清空。coverage 是模型或审阅者的声明，工具只检查这些声明的源文绑定，不证明人或模型真正阅读理解了内容。
 
 数学审核独立记录 hypotheses、dependencies、mechanisms、attribution、scope 五类实际检查，包含候选片段、理由和原文证据。候选 SHA、源文 ID 与 reconstruction_sha256 必须匹配；证明图/MAR 改变也使旧审核失效。只要存在 fail/unresolved、图 findings 或受保护内容改变，就不允许进入语言修订。回执可以由模型提交，不能称为独立专家审查。
 
