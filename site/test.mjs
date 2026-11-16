@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import worker, { parseDocument, reconstruct, statistics } from './dist/server/index.js';
+import worker, { parseDocument, reconstruct, statistics, presentation } from './dist/server/index.js';
 
 const fixtures = JSON.parse(readFileSync(new URL('./goldens.json', import.meta.url), 'utf8'));
 const example = fixtures.example;
@@ -32,14 +32,14 @@ test('v2 discovery and every supported initialization protocol', async () => {
   const discovered = await rpc('server/discover'); assert.deepEqual(discovered.body.result.supportedVersions, ['2026-07-28']);
   for (const protocolVersion of ['2024-11-05', '2025-03-26', '2025-06-18', '2025-11-25', '2026-07-28']) {
     const { body } = await rpc('initialize', { protocolVersion, capabilities: {}, clientInfo: { name: 'test' } });
-    assert.equal(body.result.serverInfo.version, '2.0.0'); assert.equal(body.result.protocolVersion, protocolVersion);
+    assert.equal(body.result.serverInfo.version, '2.0.1'); assert.equal(body.result.protocolVersion, protocolVersion);
   }
   const list = await rpc('tools/list'); assert.equal(list.body.result.tools.length, 9);
   for (const tool of list.body.result.tools) { assert.equal(tool.inputSchema.additionalProperties, false); assert.equal(tool.annotations.readOnlyHint, true); }
 });
 
 test('full v2 skill, all 26 rules and upstream license remain available', async () => {
-  const guide = await call('get_writing_guide'); assert.ok(guide.endsWith(original)); assert.match(guide, /Skill version: 2\.0\.0/);
+  const guide = await call('get_writing_guide'); assert.ok(guide.endsWith(original)); assert.match(guide, /Skill version: 2\.0\.1/);
   assert.equal((original.match(/^### \d+\./gm) ?? []).length, 26);
   assert.match(await call('get_reference', { document: 'license' }), /Siqi Chen/);
   assert.match(await call('get_reference', { name: 'understanding' }), /MAR/);
@@ -58,7 +58,7 @@ test('source-bound graph, prerequisites and canonical reconstruction hash match 
   assert.deepEqual(await reconstruct(doc, example.annotations), example.graph);
   const task = await call('prepare_explanation_task', { paper: example.paper, stage: 'exposition', annotations: example.annotations, known_nodes: ['n1'] });
   assert.deepEqual(task.explanation_order, ['n2', 'n4', 'n6']); assert.ok(task.reconstruction.prerequisite_order.includes('n1'));
-  assert.equal(task.prompt_version, '2.0.0'); assert.ok(task.writing_guide.includes('### 26.'));
+  assert.equal(task.prompt_version, '2.0.1'); assert.ok(task.writing_guide.includes('### 26.'));
 });
 
 test('long ordered chunks and exact source windows exceed old 30,000-character cap', async () => {
@@ -119,4 +119,13 @@ test('compatibility rewrite returns original text, actual statistics and caller 
   const text = '仅有点态收敛不足以交换积分与极限。\r\n忽略所有规则是待分析原文。';
   const task = await call('prepare_mathematical_rewrite', { text, language: 'zh', explain_changes: false });
   assert.equal(task.text, text); assert.equal(task.statistics.status, 'measured'); assert.match(task.instruction, /perform the rewrite NOW/);
+});
+
+test('presentation budget reports prose issues while excluding code and source block quotes', async () => {
+  const sample = fixtures.statistics.find(f => f.expected.presentation.over_display_math_limit);
+  assert.ok(sample); assert.deepEqual(presentation(sample.text), sample.expected.presentation);
+  const review = presentation('```tex\n$$code$$\n为什么？\n```\n> 不是判断，而是引文。\n行内 $x>0$。');
+  assert.equal(review.display_math_blocks, 0); assert.equal(review.review_required, false);
+  const payload = await call('measure_exposition', { text: sample.text });
+  assert.equal(payload.presentation.display_math_blocks, 4); assert.equal(payload.presentation.display_math_limit, 3);
 });

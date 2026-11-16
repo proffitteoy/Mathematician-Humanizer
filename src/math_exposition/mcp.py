@@ -48,9 +48,10 @@ def build_server(resources):
 
     @server.tool()
     def get_reference(name: str) -> str:
-        """Read style, statistics, example or license; no arbitrary file access."""
+        """Read style, statistics, example, understanding or license; no arbitrary file access."""
         names = {"style": "references/mathematician-style.md", "statistics": "references/statistical-style.md",
-                 "example": "examples/rewrite.md", "license": "references/upstream-LICENSE.txt"}
+                 "example": "examples/rewrite.md", "license": "references/upstream-LICENSE.txt",
+                 "understanding": "references/mathematical-understanding.md"}
         if name not in names:
             raise ValueError("Unknown reference")
         return (resources / names[name]).read_text(encoding="utf-8")

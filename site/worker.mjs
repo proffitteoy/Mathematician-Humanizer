@@ -197,7 +197,7 @@ function lag(values) {
 }
 export async function statistics(text, language = 'zh', genre = 'math_exposition', reader = 'unspecified', reference_source = null) {
   if (!['zh', 'en'].includes(language) || ![null, 'baike', 'web'].includes(reference_source) || !nonempty(genre)) throw Error('Invalid language/genre/reference source');
-  const identity = await sha(text), result = { schema: 'editorial-feedback/1', text_sha256: identity, language, genre, reader, comparisons: [], reference_source, quality_score: null,
+  const identity = await sha(text), result = { schema: 'editorial-feedback/1', text_sha256: identity, language, genre, reader, comparisons: [], reference_source, presentation: presentation(text), quality_score: null,
     limits: 'Operational measurements locate review candidates; do not infer semantic paragraphs, missing conditions or prose quality' };
   if (language === 'en') return { ...result, status: 'unavailable', reason: 'Use style-compiler-english with pinned local models and its English contract; Chinese bands are not applicable' };
   const { paragraphs, sentences, chars } = segment(text), lengths = sentences.map(s => s.content_chars), n = lengths.length, p = paragraphs.length;
@@ -235,6 +235,27 @@ export async function statistics(text, language = 'zh', genre = 'math_exposition
 }
 
 function protectedPattern() { return new RegExp(DATA.protected_pattern.replace('(?ms)', '').replaceAll(/\(\?P<([^>]+)>/g, '(?<$1>').replaceAll(/\(\?P=([^\)]+)\)/g, '\\k<$1>'), 'gmsu'); }
+export function presentation(text) {
+  const offsets = indexed(text), displays = [];
+  const empty = value => cp(value).every(spaces);
+  for (const m of text.matchAll(protectedPattern())) {
+    const end = m.index + m[0].length, lineStart = text.lastIndexOf('\n', m.index - 1) + 1;
+    let lineEnd = text.indexOf('\n', end); if (lineEnd < 0) lineEnd = text.length;
+    const standalone = (m[0].startsWith('$') || m[0].startsWith('\\(')) && empty(text.slice(lineStart, m.index)) && empty(text.slice(end, lineEnd));
+    if (m[0].startsWith('$$') || m[0].startsWith('\\[') || standalone) displays.push({ start: offsets[m.index], end: offsets[end] });
+  }
+  let body = text.replace(protectedPattern(), m => ' '.repeat(m.length));
+  const env = () => new RegExp(DATA.display_env_pattern, 'gsu');
+  for (const m of body.matchAll(env())) displays.push({ start: offsets[m.index], end: offsets[m.index + m[0].length] });
+  body = body.replace(env(), m => ' '.repeat(m.length)); displays.sort((a, b) => a.start - b.start);
+  const findings = [], chars = cp(text);
+  if (displays.length > DATA.display_math_limit) findings.push({ id: 'display_math_budget_exceeded', count: displays.length, limit: DATA.display_math_limit });
+  for (let i = 1; i < displays.length; i++) if (empty(chars.slice(displays[i - 1].end, displays[i].start).join(''))) findings.push({ id: 'adjacent_display_math', start: displays[i - 1].start, end: displays[i].end });
+  for (const [id, pattern] of Object.entries(DATA.presentation_patterns)) for (const m of body.matchAll(new RegExp(pattern, 'giu'))) findings.push({ id, start: offsets[m.index], end: offsets[m.index + m[0].length], span: text.slice(m.index, m.index + m[0].length) });
+  return { schema: 'presentation-review/1', display_math_blocks: displays.length, display_math_limit: DATA.display_math_limit, over_display_math_limit: displays.length > DATA.display_math_limit,
+    display_math_spans: displays, review_required: !!findings.length, findings,
+    limits: 'Layout policy, not a learned quality threshold. Inspect real questions and substantive contrasts in context. Preserve protected mathematics; never delete proof content to satisfy the budget.' };
+}
 async function protect(baseline, candidate) {
   const protectedSpans = text => Array.from(text.matchAll(protectedPattern()), m => m[0]), blockers = [], warnings = [];
   if (!same(protectedSpans(baseline), protectedSpans(candidate))) blockers.push({ id: 'protected_content_changed', reason: 'Code, math, block quote or URL changed; inspect exact diff. Intentional edits require task-specific authorization and a fresh baseline.' });
@@ -254,8 +275,9 @@ async function audit(document, annotations, baseline, candidate, { language = 'z
     accepted = checks.every(c => c.status === 'pass');
   }
   const gate = accepted && !graph.findings.length && !protection.blockers.length;
+  const feedback = await statistics(candidate, language, genre, reader, reference_source);
   return { schema: 'exposition-audit/1', candidate_sha256: await sha(candidate), mathematics: { status: accepted ? 'review_recorded' : 'review_required', graph_findings: graph.findings, review, mathematical_validity: 'not_certified' },
-    content_protection: protection, statistics: await statistics(candidate, language, genre, reader, reference_source), editorial_revision_allowed: gate,
+    content_protection: protection, statistics: feedback, presentation_review_required: feedback.presentation.review_required, editorial_revision_allowed: gate,
     next_action: gate ? 'Inspect measurements and revise locally, then repeat both audits' : 'Resolve mathematical/source/protection findings before editorial revision', limits: 'A recorded model/human assessment is not independent mathematical certification' };
 }
 
@@ -296,6 +318,7 @@ async function prepareTask(args, document) {
   const result = { schema: 'mathematical-task/1', prompt_version: DATA.prompt_version, stage, controller: DATA.controller, instruction: DATA.prompts[stage], document_id: document.document_id, reader,
     source_index: document.nodes.map(n => Object.fromEntries(['id', 'kind', 'start', 'end', 'section'].map(k => [k, n[k]]))), sections: document.sections, source_warnings: document.warnings,
     source_access: 'Stateless service: supply the same original paper on each call; read exact spans with read_paper_source. An index is not proof of reading.' };
+  if (['exposition', 'editorial'].includes(stage)) result.presentation_policy = { max_display_math_blocks: DATA.display_math_limit, prefer_inline_math: true, invented_reader_questions: false, default_prose: 'Direct mathematical statements and causal connections; no staged question-answer sequence or habitual not-X-but-Y turns' };
   if (['structure', 'proof'].includes(stage) && annotations) { if (annotations.document_id !== document.document_id) throw Error('Starting annotations belong to another document'); result.starting_annotations = annotations; }
   if (!['structure', 'proof'].includes(stage)) {
     if (!annotations) throw Error('This stage requires evidence-bound annotations');
@@ -357,7 +380,7 @@ async function mcp(request) {
   if (method === 'server/discover') return rpcResult(id, { supportedVersions: ['2026-07-28'], capabilities: { tools: {} } });
   if (method === 'initialize') {
     if (!nonempty(params.protocolVersion) || !nonempty(params.clientInfo?.name) || !params.capabilities || typeof params.capabilities !== 'object') return rpcError(id, -32602, 'Missing initialization fields');
-    return rpcResult(id, { protocolVersion: versions.includes(params.protocolVersion) ? params.protocolVersion : versions.at(-1), capabilities: { tools: {}, resources: {}, prompts: {} }, serverInfo: { name: 'mathematician-humanizer', version: '2.0.0', title: 'Mathematician Humanizer v2' }, instructions: 'Read the v2 guide, parse exact source, reconstruct evidence-bound proofs and motivation, then write and audit. The calling GPT performs interpretation and writing. All paper calls are stateless and require the original text; no manuscripts are stored.' });
+    return rpcResult(id, { protocolVersion: versions.includes(params.protocolVersion) ? params.protocolVersion : versions.at(-1), capabilities: { tools: {}, resources: {}, prompts: {} }, serverInfo: { name: 'mathematician-humanizer', version: DATA.version, title: 'Mathematician Humanizer v2' }, instructions: 'Read the v2 guide, parse exact source, reconstruct evidence-bound proofs and motivation, then write and audit. Use direct prose, prefer inline math, and review actual presentation feedback. The calling GPT performs interpretation and writing. All paper calls are stateless and require the original text; no manuscripts are stored.' });
   }
   if (method === 'ping') return rpcResult(id, {});
   if (method === 'tools/list') return rpcResult(id, { tools });
@@ -374,7 +397,7 @@ export default {
   async fetch(request) {
     const path = new URL(request.url).pathname;
     if (path === '/mcp' || path === '/mcp/') return mcp(request);
-    if (path === '/health' && request.method === 'GET') return response({ status: 'ok', server: 'mathematician-humanizer', server_version: '2.0.0', skill_version: DATA.version, prompt_version: DATA.prompt_version, source_commit: DATA.commit, transport: 'streamable-http', stateless: true, manuscript_storage: false, tools: tools.map(t => t.name), instrument_unicode_version: '15.0.0' });
+    if (path === '/health' && request.method === 'GET') return response({ status: 'ok', server: 'mathematician-humanizer', server_version: DATA.version, skill_version: DATA.version, prompt_version: DATA.prompt_version, source_commit: DATA.commit, transport: 'streamable-http', stateless: true, manuscript_storage: false, tools: tools.map(t => t.name), instrument_unicode_version: '15.0.0' });
     if (path === '/' && ['GET', 'HEAD'].includes(request.method)) return new Response(request.method === 'HEAD' ? null : HTML, { headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin' } });
     if (path === '/favicon.svg') return new Response('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#283e36"/><text x="32" y="45" text-anchor="middle" font-size="42" fill="#f1eee6">∑</text></svg>', { headers: { 'Content-Type': 'image/svg+xml' } });
     return response({ error: 'Not found' }, 404);

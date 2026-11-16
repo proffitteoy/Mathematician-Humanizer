@@ -54,6 +54,17 @@ class ExpositionTests(unittest.TestCase):
         result = statistical_feedback("A mathematical explanation.", language="en")
         self.assertEqual(result["status"], "unavailable")
         self.assertEqual(result["comparisons"], [])
+        self.assertIn("presentation", result)
+
+    def test_presentation_review_is_separate_from_permission_to_revise(self):
+        candidate = DRAFT + '\n$$a=b$$\n$$c=d$$\n$$e=f$$\n$$g=h$$'
+        result = audit_exposition(self.doc, self.data, candidate, candidate, review=review(self.doc, candidate))
+        self.assertTrue(result["editorial_revision_allowed"])
+        self.assertTrue(result["presentation_review_required"])
+        self.assertEqual(result["statistics"]["presentation"]["display_math_blocks"], 4)
+        task = prepare_stage("editorial", self.doc, self.data, baseline=candidate, candidate=candidate, audit=result)
+        self.assertEqual(task["presentation_policy"]["max_display_math_blocks"], 3)
+        self.assertTrue(task["measured_feedback"]["presentation"]["over_display_math_limit"])
 
     def test_no_review_no_polishing_even_if_protection_passes(self):
         result = audit_exposition(self.doc, self.data, DRAFT, DRAFT)

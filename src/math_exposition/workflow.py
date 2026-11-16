@@ -6,7 +6,7 @@ from pathlib import Path
 from math_reader.document import validate_document
 from math_reader.graph import reconstruct, validate_evidence
 from style_compiler.contracts import Context, Document, Leakage, Provenance, text_hash
-from style_compiler.editorial import lint
+from style_compiler.editorial import DISPLAY_MATH_LIMIT, lint, presentation
 from style_compiler.features import extract
 
 
@@ -19,6 +19,7 @@ def statistical_feedback(text, language="zh", genre="math_exposition", reader="u
     result = {"schema": "editorial-feedback/1", "text_sha256": text_hash(text),
               "language": language, "genre": genre, "reader": reader, "comparisons": [],
               "reference_source": reference_source,
+              "presentation": presentation(text),
               "quality_score": None,
               "limits": "Operational measurements locate review candidates; do not infer semantic paragraphs, missing conditions or prose quality"}
     if language == "en":
@@ -89,9 +90,11 @@ def audit_exposition(document, annotations, baseline, candidate, language="zh", 
                    "graph_findings": graph["findings"], "review": review,
                    "mathematical_validity": "not_certified"}
     gate = accepted and not graph["findings"] and not protected["blockers"]
+    feedback = statistical_feedback(candidate, language, genre, reader, research, reference_source)
     return {"schema": "exposition-audit/1", "candidate_sha256": text_hash(candidate),
             "mathematics": mathematics, "content_protection": protected,
-            "statistics": statistical_feedback(candidate, language, genre, reader, research, reference_source),
+            "statistics": feedback,
+            "presentation_review_required": feedback["presentation"]["review_required"],
             "editorial_revision_allowed": gate,
             "next_action": "Inspect measurements and revise locally, then repeat both audits" if gate else "Resolve mathematical/source/protection findings before editorial revision",
             "limits": "A recorded model/human assessment is not independent mathematical certification"}
@@ -110,6 +113,10 @@ def prepare_stage(stage, document, annotations=None, reader="unspecified", known
               "sections": document["sections"],
               "source_warnings": document["warnings"],
               "source_access": "Re-read exact source spans; this index is not evidence of having read the full document"}
+    if stage in {"exposition", "editorial"}:
+        result["presentation_policy"] = {"max_display_math_blocks": DISPLAY_MATH_LIMIT,
+            "prefer_inline_math": True, "invented_reader_questions": False,
+            "default_prose": "Direct mathematical statements and causal connections; no staged question-answer sequence or habitual not-X-but-Y turns"}
     if stage in {"structure", "proof"} and annotations is not None:
         if annotations.get("document_id") != document["document_id"]:
             raise ValueError("Starting annotations belong to another document")

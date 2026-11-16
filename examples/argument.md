@@ -1,8 +1,10 @@
 # 可重放的论证结构示例
 
-这是本项目编写的有限维最小二乘小型论证片段，不是研究论文或效果实验。原文见 [argument.tex](argument.tex)，带原文锚点的标注见 [argument.annotations.json](argument.annotations.json)，讲解草稿见 [argument.exposition.txt](argument.exposition.txt)。标注是示例自查，不是独立专家金标。
+此例用有限维最小二乘演示原文锚点、证明依赖和审核门槛。原文见 [argument.tex](argument.tex)，标注见 [argument.annotations.json](argument.annotations.json)，讲解草稿见 [argument.exposition.txt](argument.exposition.txt)。材料为本项目编写的教学片段，标注来自示例自查。
 
 主结果为所有最优系数构成核的平移。内部结构区分两个用途：正交投影确定唯一最优拟合向量，核的纤维刻画全部最优系数。最后的 remark 不在主结果的必要闭包中。
+
+讲解采用直接陈述，符号与短等式行内展示，独立公式计数为 0。依赖图保留在工作材料中，正文按投影、纤维与结论的逻辑衔接展开。
 
 ```mermaid
 flowchart TD
@@ -29,7 +31,7 @@ style-compiler prepare-explanation exposition artifacts/argument.document.json -
 style-compiler audit-exposition artifacts/argument.document.json examples/argument.annotations.json examples/argument.exposition.txt examples/argument.exposition.txt
 ```
 
-这一步会真实测量草稿并返回 `editorial_revision_allowed=false`，退出码为 2：还没有提交五类数学审查回执。不得把“草稿没变化”和“保护检查通过”当成数学审核通过。
+这一步返回草稿的八项实际测量、`presentation` 计数和 `editorial_revision_allowed=false`，退出码为 2。原因是尚未提交五类数学审查回执；公式与句型的机械检查不能完成该审查。
 
 然后调用 `prepare-explanation mathematical_audit`，提供 `--baseline` 和 `--candidate` 为上述讲解草稿。按任务检查条件、依赖、机制、归属和范围，以 `review` 格式保存真实审查；再传给 `audit-exposition --review ...`。只有审查当前稿、五项 pass、无图 findings 和受保护内容变化，才能准备 editorial 任务。这里刻意不分发一份假装已经独立审核的 pass 文件。
 

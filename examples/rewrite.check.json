@@ -1,14 +1,14 @@
 {
   "schema": "prose-lint/1",
   "original_sha256": "c075b015927375a218b12301bce8f4f20545412e7ddf72d228b276d7b101a8b8",
-  "candidate_sha256": "0aea284e788f978c79144336eac558f5333cce13ada673bbbe70f3d82af428ab",
+  "candidate_sha256": "7ea1a260df9cb182829ab3b2ac9cbf09444467f17403c24d37c84e019081660a",
   "status": "REVIEW_REQUIRED",
   "blockers": [],
   "warnings": [
     {
       "id": "logic_or_uncertainty_changed",
       "removed": {
-        "不": 1,
+        "不": 3,
         "未": 1
       },
       "added": {},
@@ -17,8 +17,7 @@
   ],
   "surface_summary": {
     "sentence_proxy_lengths": [
-      23,
-      15,
+      19,
       15,
       16,
       1,
@@ -27,20 +26,30 @@
       5,
       30,
       9,
-      22,
+      18,
       9,
       34,
       14,
-      34,
+      22,
       19
     ],
     "paragraph_proxy_lengths": [
-      53,
+      34,
       114,
-      79,
-      53
+      75,
+      41
     ],
     "note": "Surface counts mix Han characters and word tokens; NOT the fixed Chinese parser, no reference threshold or pass band."
+  },
+  "presentation": {
+    "schema": "presentation-review/1",
+    "display_math_blocks": 0,
+    "display_math_limit": 3,
+    "over_display_math_limit": false,
+    "display_math_spans": [],
+    "review_required": false,
+    "findings": [],
+    "limits": "Layout policy, not a learned quality threshold. Inspect real questions and substantive contrasts in context. Preserve protected mathematics; never delete proof content to satisfy the budget."
   },
   "semantic_equivalence_proven": false,
   "quality_or_authorship_score": null,
