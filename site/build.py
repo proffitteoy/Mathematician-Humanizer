@@ -17,6 +17,11 @@ from math_exposition.workflow import statistical_feedback
 from style_compiler.editorial import PROTECTED
 
 
+def committed_bytes(commit, path):
+    return subprocess.run(["git", "show", f"{commit}:{path}"], cwd=ROOT,
+                          check=True, capture_output=True).stdout
+
+
 def ranges(predicate):
     result, start = [], None
     for cp in range(0x110001):
@@ -40,10 +45,11 @@ def main():
     paths = {"skill": "SKILL.md", "style": "references/mathematician-style.md",
              "statistics": "references/statistical-style.md", "license": "references/upstream-LICENSE.txt",
              "example": "examples/rewrite.md", "understanding": "references/mathematical-understanding.md"}
-    documents = {key: (ROOT / path).read_bytes().decode("utf-8") for key, path in paths.items()}
-    hashes = {path: hashlib.sha256((ROOT / path).read_bytes()).hexdigest() for path in paths.values()}
-    manifest = json.loads((ROOT / "research/manifest.json").read_text(encoding="utf-8"))
-    raw = (ROOT / "research/results.json").read_bytes()
+    pinned = {path: committed_bytes(commit, path) for path in paths.values()}
+    documents = {key: pinned[path].decode("utf-8") for key, path in paths.items()}
+    hashes = {path: hashlib.sha256(raw).hexdigest() for path, raw in pinned.items()}
+    manifest = json.loads(committed_bytes(commit, "research/manifest.json"))
+    raw = committed_bytes(commit, "research/results.json")
     if hashlib.sha256(raw).hexdigest() != manifest["inputs"]["results.json"]["sha256"]:
         raise ValueError("Frozen research identity changed")
     research = json.loads(raw)["chinese_surface"]
@@ -77,13 +83,13 @@ def main():
         for path in paths.values():
             dest = output / "upstream" / path
             dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_bytes((ROOT / path).read_bytes())
+            dest.write_bytes(pinned[path])
     provenance = {"repository": data["repository"], "commit": commit, "version": data["version"],
                   "prompt_version": PROMPT_VERSION, "unicode_version": unicodedata.unidata_version, "sha256": hashes}
     (output / "source-manifest.json").write_text(json.dumps(provenance, ensure_ascii=False, indent=2)+"\n", encoding="utf-8", newline="\n")
-    paper = {"text": (ROOT / "examples/argument.tex").read_bytes().decode(), "format": "latex", "source": "fixture"}
+    paper = {"text": committed_bytes(commit, "examples/argument.tex").decode(), "format": "latex", "source": "fixture"}
     doc = parse_document(**paper)
-    annotations = json.loads((ROOT / "examples/argument.annotations.json").read_text(encoding="utf-8"))
+    annotations = json.loads(committed_bytes(commit, "examples/argument.annotations.json"))
     fixtures = [{"text": text, "expected": statistical_feedback(text)} for text in ["", "\ufeff甲。\r\n乙乙。😀", "A. Smith has 3.14.\n甲乙！丙丙丙？", "\u001c甲。\n\U0002ebf0乙。", "。\n".join("甲" * (i+1) for i in range(25))]]
     goldens = {"statistics": fixtures, "example": {"paper": paper, "document": doc, "annotations": annotations, "graph": reconstruct(doc, annotations)},
                "parsing": [{"paper": {"text": text, "format": fmt, "source": "fixture"}, "expected": parse_document(text, fmt, "fixture")}

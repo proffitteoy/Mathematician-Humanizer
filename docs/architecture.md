@@ -26,7 +26,7 @@ MCP 适配层的构建与协议测试、ChatGPT 的工具扫描与实际调用�
 
 ### v2 托管 Worker 适配
 
-`site/worker.mjs` 实现 Cloudflare Worker 的无状态版本，`site/build.py` 从当前 Git 提交导出完整 skill、阶段 Prompt、许可、冻结参考及 Unicode 15.0 测量表，不调用其他模型或下载资料。构建需要 Python 3.12（Unicode 15.0.0）和 Node；运行时不需要 Python。`python site/build.py` 与 `node --test site/test.mjs` 核对解析、图、规范哈希及八项量测与 Python 合成基准的一致性，不代表任意论文的数学语义验证。
+`site/worker.mjs` 实现 Cloudflare Worker 的无状态版本，`site/build.py` 从当前 Git 提交导出完整 skill、阶段 Prompt、许可、冻结参考及 Unicode 15.0 测量表，不调用其他模型或下载资料。分发文档通过 `git show <commit>:<path>` 读取固定提交的 blob，避免 Windows 工作区换行转换冒充原始提交字节。构建需要 Python 3.12（Unicode 15.0.0）和 Node；运行时不需要 Python。`python site/build.py` 与 `node --test site/test.mjs` 核对解析、图、规范哈希及八项量测与 Python 合成基准的一致性，不代表任意论文的数学语义验证。
 
 公网工具每次接收 `paper={text,format,source}` 或 `paper={chunks,format,source}`，不会用不可靠的 Worker 内存假装持久保存论文。chunks 按给定数组顺序精确拼接，不额外插入字符。单篇上限 2,000,000 码点，请求另受 8 MiB 限制；数学节点最多 50,000，测量最多 20,000 个操作段和 50,000 个操作句，超限明确拒绝，不静默截断。原文读取也是无状态的，需要再次携带 paper。
 
