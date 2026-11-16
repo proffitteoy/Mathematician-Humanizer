@@ -49,6 +49,10 @@ python -m style_compiler check examples/rewrite.original.txt examples/rewrite.fi
 
 也可在已有 Python 环境运行 `python -m pip install -e .`，使用 `style-compiler` 命令。写作由调用 skill 的语言模型完成；这些工具用于测量、参考卡更新和内容检查，不生成文章。研究路线、冻结结果与验证边界见[研究说明](research.md)。
 
+## 表达与版式反馈
+
+当前稿的 presentation 与八项统计分开报告：独立公式默认最多 3 块，并给出实际计数、位置、相邻堆叠及需复核句型。正文采用直接陈述；真实问题、实质数学对比和受保护公式需结合上下文处理。数学审核通过只允许进入编辑阶段，表达检查仍需独立完成。
+
 ## 代码职责
 
 | 文件 | 职责 |

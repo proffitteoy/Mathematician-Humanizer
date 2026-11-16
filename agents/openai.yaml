@@ -1,4 +1,4 @@
 interface:
   display_name: "Mathematician Humanizer v2"
-  short_description: "从主定理重建带证据的证明依赖与数学动机，再生成并审核读者能跟随的数学讲解"
-  default_prompt: "用 $mathematician-humanizer 阅读这篇数学论文，先重建主要定理的证明依赖和数学动机，再面向我的知识背景生成准确讲解。"
+  short_description: "以证据重建数学论证，直接展开推导并控制问句、转折和独立公式密度"
+  default_prompt: "用 $mathematician-humanizer 阅读这篇数学论文，先重建主要定理的证明依赖和数学动机，再面向我的知识背景生成连贯讲解，直接陈述推导并优先使用行内公式。"

@@ -78,3 +78,12 @@ class DeliveryTests(unittest.TestCase):
         self.assertFalse(graph["findings"])
         self.assertEqual(graph["prerequisite_order"], ["n1", "n2", "n4", "n6"])
         self.assertEqual(graph["mathematical_validity"], "not_certified")
+
+    def test_rewrite_receipt_matches_current_original_candidate_and_layout(self):
+        from style_compiler.editorial import lint
+        original = (ROOT / "examples/rewrite.original.txt").read_bytes()
+        candidate = (ROOT / "examples/rewrite.final.txt").read_bytes()
+        receipt = json.loads((ROOT / "examples/rewrite.check.json").read_text(encoding="utf-8"))
+        self.assertEqual(receipt, lint(original, candidate))
+        self.assertEqual(receipt["presentation"]["display_math_blocks"], 0)
+        self.assertFalse(receipt["presentation"]["review_required"])

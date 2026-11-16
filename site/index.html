@@ -13,7 +13,7 @@
 <body>
   <header><div class="brand"><span class="mark" aria-hidden="true">∑</span>Mathematician Humanizer</div><a href="https://github.com/proffitteoy/Mathematician-Humanizer" target="_blank" rel="noopener noreferrer">GitHub ↗</a></header>
   <main>
-    <div class="intro"><div><span class="tag"><span class="dot"></span>MCP · STREAMABLE HTTP</span><h1>从证明结构理解数学</h1><p class="muted">从主要定理反向追踪必要背景，解释关键引理解决的障碍，再组织连贯讲解。证据检查与真实统计分别进行，数学内容优先。</p></div><div class="version">v2 · 2.0.0<br>证明依赖 · 数学动机 · 双重审核</div></div>
+    <div class="intro"><div><span class="tag"><span class="dot"></span>MCP · STREAMABLE HTTP</span><h1>从证明结构理解数学</h1><p class="muted">从主要定理反向追踪必要背景，解释关键引理解决的障碍，再组织连贯讲解。正文直接展开数学关系，优先使用行内公式；独立公式默认全文最多三块。</p></div><div class="version">v2 · __VERSION__<br>证明依赖 · 数学动机 · 双重审核</div></div>
     <div class="grid">
       <section class="panel" aria-labelledby="connect-title"><div class="panel-head"><h2 id="connect-title">连接到 GPT</h2><span class="pill">公开站点 · 插件连接</span></div><div class="body">
         <div class="label">MCP 服务器地址</div><div id="endpoint" class="endpoint"></div>
@@ -27,10 +27,10 @@
         <div class="tool"><code>prepare_mathematical_rewrite</code><h3>准备改写</h3><p>接收原稿、读者背景和输出语言，返回完整规则与任务；GPT 随后完成终稿。</p></div>
         <div class="tool"><code>get_writing_guide</code><h3>读取完整规则</h3><p>返回完整 v2 SKILL.md，包含数学理解流程、论证习惯、26 项规则和证据要求。</p></div>
         <div class="tool"><code>get_reference</code><h3>查阅参考材料</h3><p>按需读取博客风格卡、统计参考、完整改写示例或 MIT 许可。</p></div>
-<div class="tool"><code>analyze_paper / read_paper_source</code><h3>解析与重读原文</h3><p>保留公式、编号、引用候选和 Unicode 位置，按准确区间重读证据。</p></div><div class="tool"><code>query_proof_dependencies</code><h3>重建证明依赖</h3><p>检查引文、环路、阅读缺口和 MAR，追踪主定理真正需要的前置知识。</p></div><div class="tool"><code>prepare_explanation_task</code><h3>分阶段理解与讲解</h3><p>总控与七个阶段，围绕具体障碍、技术选择、机制和数学思想推进。</p></div><div class="tool"><code>audit_mathematical_exposition / measure_exposition</code><h3>数学与统计分别审核</h3><p>核对绑定当前正文与证明图的审查回执，实际测量八项表层量。数学缺口阻止最终润色。</p></div>
+<div class="tool"><code>analyze_paper / read_paper_source</code><h3>解析与重读原文</h3><p>保留公式、编号、引用候选和 Unicode 位置，按准确区间重读证据。</p></div><div class="tool"><code>query_proof_dependencies</code><h3>重建证明依赖</h3><p>检查引文、环路、阅读缺口和 MAR，追踪主定理真正需要的前置知识。</p></div><div class="tool"><code>prepare_explanation_task</code><h3>分阶段理解与讲解</h3><p>按阶段重建证明依赖和方法动机，再以连贯陈述组织讲解，避免预设读者问答与空泛否定转折。</p></div><div class="tool"><code>audit_mathematical_exposition / measure_exposition</code><h3>数学与统计分别审核</h3><p>核对绑定当前正文与证明图的审查回执，实际测量八项表层量，并报告独立公式计数、位置和需复核的句型。</p></div>
       </section>
     </div>
-    <section class="example" aria-labelledby="example-title"><h2 id="example-title">一个改写示例</h2><div class="comparison"><article><div class="label">原稿</div><p>最小二乘不仅是寻找答案的工具，更是理解唯一性的窗口。拟合向量唯一，但系数的唯一性需要满列秩。这一点至关重要。</p></article><article><div class="label">终稿</div><p>最小二乘的答案是否唯一，取决于我们把什么看作答案。先看拟合向量：正交投影保证它唯一。再问同一个拟合向量能否来自不同系数；沿着矩阵的核移动系数不会改变拟合结果，所以系数唯一还需要满列秩。</p></article></div></section>
+    <section class="example" aria-labelledby="example-title"><h2 id="example-title">一个改写示例</h2><div class="comparison"><article><div class="label">原稿</div><p>最小二乘不仅是寻找答案的工具，更是理解唯一性的窗口。拟合向量唯一，但系数的唯一性需要满列秩。这一点至关重要。</p></article><article><div class="label">终稿</div><p>最小二乘的拟合向量由正交投影唯一确定。恢复系数时，沿矩阵的核移动不会改变拟合结果；核为零时，系数也唯一。满列秩正好排除了这部分自由度。</p></article></div></section>
     <details><summary>调用示例与使用边界</summary><pre id="prompt-example"></pre><p class="small muted">支持中文、英文及原语言输出。数学条件、量词、否定、定义域、事实、公式和引用优先于风格。工具不验证证明，不提供真人概率、作者相似度或写作质量分。发现重大数学问题时，GPT 应说明待核问题。</p></details>
     <div class="attribution">发布自 <a href="https://github.com/proffitteoy/Mathematician-Humanizer/tree/__SOURCE_SHA__" target="_blank" rel="noopener noreferrer">Mathematician-Humanizer v2 · __SOURCE_SHORT__</a>。26 项清理规则、编号和 A–F 分组改编自 <a href="https://github.com/blader/humanizer/tree/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8" target="_blank" rel="noopener noreferrer">blader/humanizer 3.1.0</a>；本项目增补数学理解协议、六项论证习惯与示例。上游版权 © 2025 Siqi Chen，完整 MIT 通知随服务分发，可通过 <code>get_reference(document="license")</code> 读取。</div>
   </main>
@@ -51,7 +51,7 @@
         const response = await fetch('/health', { signal: AbortSignal.timeout(15000) });
         if (!response.ok) throw new Error('状态接口 HTTP ' + response.status);
         const health = await response.json();
-        if (health.server_version !== '2.0.0' || health.tools?.length !== 9) throw new Error('部署版本或工具数量不匹配');
+        if (health.server_version !== '__VERSION__' || health.tools?.length !== 9) throw new Error('部署版本或工具数量不匹配');
         status.textContent = 'v2 已部署 · 9 个工具 · 来源 ' + health.source_commit.slice(0, 7) + '；MCP 请用插件或 OAuth 连接';
       } catch (error) { status.textContent = error.message || '检查失败，请稍后重试'; }
       finally { button.disabled = false; }

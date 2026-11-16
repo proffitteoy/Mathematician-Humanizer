@@ -83,7 +83,7 @@ class McpTests(unittest.IsolatedAsyncioTestCase):
                 self.assertEqual(graph["prerequisite_order"], ["n1", "n2", "n4", "n6"])
                 self.assertFalse(graph["findings"])
                 task = await call("prepare_explanation_task", stage="motivation", document_id=identity, annotations=data)
-                self.assertEqual(task["prompt_version"], "2.0.0")
+                self.assertEqual(task["prompt_version"], "2.0.1")
                 audited = await call("audit_mathematical_exposition", document_id=identity, annotations=data,
                                      baseline=DRAFT, candidate=DRAFT, review=review(doc))
                 self.assertTrue(audited["editorial_revision_allowed"])

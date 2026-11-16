@@ -18,6 +18,46 @@ SOFT = {
  'balanced_template': r'不仅.{0,50}而且|不只是.{0,50}更是|虽然.{0,50}但是|not only.{0,60}but also',
  'citation_leak': r'contentReference\[|oaicite:|turn\d+(?:search|fetch)\d+|cite_start|\[INSERT [^\]]+\]',
 }
+DISPLAY_MATH_LIMIT = 3
+DISPLAY_ENV = re.compile(r'\\begin\{(equation\*?|align\*?|gather\*?|multline\*?|displaymath)\}.*?\\end\{\1\}', re.S)
+PRESENTATION_PATTERNS = {
+ 'presumed_reader_question': r'你(?:可能|也许|或许)会问|读者(?:可能|也许|往往|自然)?会问|不禁要问|再问(?:自己|一句)?|you (?:may|might) (?:ask|wonder)|one might ask',
+ 'staged_why_question': r'(?:为什么|为何)[^。！？?\n]{0,100}[？?]|(?<![A-Za-z])why(?![A-Za-z])[^.!?\n]{0,100}\?',
+ 'forced_reframing': r'不是[^。！？?\n]{0,100}而是|并非[^。！？?\n]{0,100}而是|(?<![A-Za-z])not(?![A-Za-z])[^.!?\n]{0,100}(?<![A-Za-z])but(?![A-Za-z])',
+}
+
+
+def presentation(text):
+    """Locate presentation issues without changing mathematics or rating prose."""
+    displays = []
+    for match in PROTECTED.finditer(text):
+        literal = match.group()
+        line_start = text.rfind('\n', 0, match.start()) + 1
+        line_end = text.find('\n', match.end())
+        line_end = len(text) if line_end < 0 else line_end
+        standalone_inline = (literal.startswith(('$', r'\('))
+            and not text[line_start:match.start()].strip() and not text[match.end():line_end].strip())
+        if literal.startswith(('$$', r'\[')) or standalone_inline:
+            displays.append({'start': match.start(), 'end': match.end()})
+    body = prose(text)
+    for match in DISPLAY_ENV.finditer(body):
+        displays.append({'start': match.start(), 'end': match.end()})
+    body = DISPLAY_ENV.sub(lambda m: ' ' * len(m.group()), body)
+    displays.sort(key=lambda span: span['start'])
+    findings = []
+    if len(displays) > DISPLAY_MATH_LIMIT:
+        findings.append({'id': 'display_math_budget_exceeded', 'count': len(displays), 'limit': DISPLAY_MATH_LIMIT})
+    for left, right in zip(displays, displays[1:]):
+        if not text[left['end']:right['start']].strip():
+            findings.append({'id': 'adjacent_display_math', 'start': left['start'], 'end': right['end']})
+    for kind, pattern in PRESENTATION_PATTERNS.items():
+        for match in re.finditer(pattern, body, re.I):
+            findings.append({'id': kind, 'start': match.start(), 'end': match.end(),
+                             'span': text[match.start():match.end()]})
+    return {'schema': 'presentation-review/1', 'display_math_blocks': len(displays),
+            'display_math_limit': DISPLAY_MATH_LIMIT, 'over_display_math_limit': len(displays) > DISPLAY_MATH_LIMIT,
+            'display_math_spans': displays, 'review_required': bool(findings), 'findings': findings,
+            'limits': 'Layout policy, not a learned quality threshold. Inspect real questions and substantive contrasts in context. Preserve protected mathematics; never delete proof content to satisfy the budget.'}
 
 def sha(raw): return hashlib.sha256(raw).hexdigest()
 def protected(text): return [m.group() for m in PROTECTED.finditer(text)]
@@ -53,8 +93,11 @@ def lint(original, candidate, locks=()):
     paragraphs = [s.strip() for s in re.split(r'\n\s*\n', body) if s.strip()]
     dupes = [s for s,n in Counter(paragraphs).items() if n > 1]
     if dupes: warnings.append({'id':'repeated_paragraph','spans':dupes,'requires':'check intentional refrain versus redundant restatement'})
+    layout = presentation(b)
+    warnings.extend(finding | {'requires': 'Review presentation in context; preserve mathematical content and exact source questions'}
+                    for finding in layout['findings'])
     return {'schema':'prose-lint/1','original_sha256':sha(original),'candidate_sha256':sha(candidate),
             'status':'BLOCKED_PROTECTED_CHANGE' if blockers else 'REVIEW_REQUIRED' if warnings else 'NO_MECHANICAL_FINDINGS',
-            'blockers':blockers,'warnings':warnings,'surface_summary':summary(b),
+            'blockers':blockers,'warnings':warnings,'surface_summary':summary(b),'presentation':layout,
             'semantic_equivalence_proven':False,'quality_or_authorship_score':None,
             'limits':'No script can establish factual preservation, writer identity, reader knowledge, proof validity or prose quality. This tool never rewrites or normalizes text.'}
