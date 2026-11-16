@@ -165,18 +165,11 @@ Editorial Review 先读取真实 presentation 反馈，再结合数学内容处�
 
 新增的数学错误、条件丢失和错误历史归属作为单独失败报告；不得由总体可读性分抵消。评价者与模型自查意见冲突时保留原始判断和复核依据。Prompt 修改后旧样本成为开发材料，不能重新叫作未见测试。
 
-## 研究线索与待核实状态
+## 研究依据与适用边界
 
-用户调研报告提及以下资料，作为设计线索保留；本次没有逐项取回原文核验，不沿用报告中的年份、数据规模或效果数值作为本项目证据：
+2026-11-16 已实际取回证明理解、计划重建、文献智能体、自我解释、审核及科学写作研究的方法段与案例。[研究报告](proof-understanding-research.md)逐项记录独立作品、实际版本、读取范围、访问失败和工程决定，并用 McKay 的 Cauchy 群定理原始短文展开证明机制与条件变化。同文镜像合并登记，不以网站数替代研究多样性。
 
-- [Proof Comprehension assessment](https://eric.ed.gov/?id=EJ948400)：局部、结构与方法理解的评价线索。
-- [Understanding in Mathematics: The Case of Mathematical Proofs](https://doi.org/10.1111/nous.12489)：高层组织与细节关系的线索。
-- [ProofFlow](https://proceedings.iclr.cc/paper_files/paper/2026/hash/5fce5198dbf92d5ff45f74504431e2ff-Abstract-Conference.html)、[Matlas](https://arxiv.org/abs/2604.17484)：依赖表示和前置知识检索的线索。
-- [PaperQA](https://github.com/Future-House/paper-qa)、[OpenScholar](https://www.nature.com/articles/s41586-025-10072-4)：针对性检索、来源支撑与修订的线索。
-- [Least-to-Most](https://arxiv.org/abs/2205.10625)、[Self-Explanation](https://eric.ed.gov/?id=EJ1028348)：阶段化与关系解释的线索；人类学习结果不直接证明 GPT 提升。
-- [Chain-of-Verification](https://aclanthology.org/2024.findings-acl.212/)、[Lost in the Middle](https://aclanthology.org/2024.tacl-1.9/)：独立核查问题与分块重读的线索；数学效果仍需本项目评价。
-
-Prompt 正文有显式版本；修改时同时记录行为变化、对应失败案例和回归结果。版本号、工程通过或文献链接数量都不代替真实论文与读者验证。
+这些研究要求把依赖、子目标计划、选择理由和局部推导一起说明，把搜索、证据获取和引用核查分开，并按完整论证组织段落。人类训练结果、形式化证明系统和科学文献问答各有任务边界；本项目不沿用它们的效果数字。具体规则的交付和数学理解效果仍需分别检验，版本号、工程通过及文献数量不能代替后者。
 
 ## 项目文档的阅读路径
 

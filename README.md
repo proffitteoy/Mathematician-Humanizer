@@ -86,6 +86,7 @@ https://mathematician-humanizer.proffitteoy.chatgpt.site/mcp
 | [数学理解协议](references/mathematical-understanding.md) | MAR、原文锚点与阶段交接 |
 | [安装与运行协议](docs/architecture.md) | 安装、工具参数、输入限制与维护命令 |
 | [Prompt 工程](docs/prompt-engineering.md) | 阶段合同、动机重建与评价方法 |
+| [数学理解的研究依据](docs/proof-understanding-research.md) | 独立原始资料、方法比较、限制及 Cauchy 定理案例 |
 | [研究与来源](docs/research.md) | 冻结统计、规则依据及证据范围 |
 | [验收条件](docs/ACCEPTANCE.zh.md) | 数学内容、表达与工程检查标准 |
 
